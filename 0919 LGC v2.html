@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0919 — Local Government Code (Parts 1, 2 &amp; 3)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1:first-of-type {
+  margin-top: 0;
+}
+
+h2 {
+  color: #1E3A8A;
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-bottom: 2px solid #CBD5E1;
+  padding-bottom: 0.35rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #E2E8F0;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+ul ul, ol ul, ul ol, ol ol {
+  padding-left: 1.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+th, td {
+  border: 1px solid #CBD5E1;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #F1F5F9;
+  color: #1E3A8A;
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: #F8FAFC;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Interactive Diagram Wrapper, Zoom & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: auto;
+  max-height: 70vh;
+  padding: 1.5rem;
+  display: flex;
+  background: #FFFFFF;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  margin: auto;
+  display: inline-block;
+  transform-origin: top center;
+  transition: transform 0.15s ease-in-out;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: MUNICIPAL TORT LIABILITY, PRESIDENTIAL GENERAL SUPERVISION, AND THE REGIONAL ADMINISTRATIVE HIERARCHY</option>
+      <option value="#part-1-overview">&nbsp;&nbsp;↳ Part 1 Overview &amp; Scope of Topics</option>
+      <option value="#sec-i-municipal-liability">I. MUNICIPAL LIABILITY FOR DAMAGES (SECS. 24, LGC; ART. 2189, CIVIL CODE)</option>
+      <option value="#dual-personality">&nbsp;&nbsp;↳ 1. The Dual Personality of Municipal Corporations</option>
+      <option value="#defective-public-works">&nbsp;&nbsp;↳ 2. Defective Public Works, Streets, and Infrastructures: Article 2189 of the Civil Code</option>
+      <option value="#jurisprudential-landmarks-tort">&nbsp;&nbsp;↳ 3. Jurisprudential Landmarks on Municipal Tort Liability</option>
+      <option value="#sec-ii-presidential-supervision">II. PRESIDENTIAL GENERAL SUPERVISION VS. EXECUTIVE CONTROL (SEC. 25, LGC; ART. X, SEC. 4, CONST.)</option>
+      <option value="#constitutional-division-executive">&nbsp;&nbsp;↳ 1. The Constitutional Division of Executive Authority</option>
+      <option value="#power-of-executive-control">&nbsp;&nbsp;↳ 2. The Power of Executive Control</option>
+      <option value="#power-of-general-supervision">&nbsp;&nbsp;↳ 3. The Power of General Supervision over LGUs</option>
+      <option value="#sec-iii-hierarchical-tiers">III. THE HIERARCHICAL TIERS OF NATIONAL AND REGIONAL SUPERVISION</option>
+      <option value="#direct-lines-supervision">&nbsp;&nbsp;↳ 1. Direct Lines of Presidential Supervision</option>
+      <option value="#sui-generis-pateros">&nbsp;&nbsp;↳ 2. The Sui Generis Status of the Municipality of Pateros</option>
+      <option value="#indirect-cascading-supervision">&nbsp;&nbsp;↳ 3. Indirect and Cascading Supervision Over Lower Tiers</option>
+      <option value="#sec-iv-special-autonomous-regions">IV. SPECIAL AUTONOMOUS REGIONS AND ADMINISTRATIVE REGIONS</option>
+      <option value="#constitutional-basis-autonomous">&nbsp;&nbsp;↳ 1. Constitutional Basis for Autonomous Regions</option>
+      <option value="#judicial-exclusion-sulu">&nbsp;&nbsp;↳ 2. The Judicial Exclusion of the Province of Sulu from BARMM</option>
+      <option value="#autonomous-vs-administrative-cordillera">&nbsp;&nbsp;↳ 3. Autonomous Regions vs. Administrative Regions: The Cordillera Experience</option>
+      <option value="#administrative-regions-not-political">&nbsp;&nbsp;↳ 4. Administrative Regions Are Not Political Subdivisions</option>
+      <option value="#part-2">PART 2: QUORUM DYNAMICS, ENVIRONMENTAL CONSULTATION, POLICE SUPERVISION, AND INTER-LOCAL RELATIONS</option>
+      <option value="#part-2-overview">&nbsp;&nbsp;↳ Part 2 Overview &amp; Scope of Topics</option>
+      <option value="#sec-v-constitutional-quorum">V. CONSTITUTIONAL QUORUM AND LEGISLATIVE MEMBERSHIP DYNAMICS (AVELINO V. CUENCO IN PERSPECTIVE)</option>
+      <option value="#legal-concept-quorum">&nbsp;&nbsp;↳ 1. The Legal Concept of Quorum</option>
+      <option value="#doctrine-avelino-cuenco">&nbsp;&nbsp;↳ 2. The Doctrine of Avelino v. Cuenco</option>
+      <option value="#application-detained-fugitive">&nbsp;&nbsp;↳ 3. Application to Detained, Fugitive, or Suspended Legislators</option>
+      <option value="#sec-vi-environmental-protection">VI. ENVIRONMENTAL PROTECTION AND MANDATORY PRIOR CONSULTATION (SECS. 26–27, LGC)</option>
+      <option value="#statutory-framework-26-27">&nbsp;&nbsp;↳ 1. The Statutory Framework: Sections 26 and 27</option>
+      <option value="#absolute-requirement-prior-consultation">&nbsp;&nbsp;↳ 2. The Absolute Requirement of Prior Consultation</option>
+      <option value="#jurisprudential-applications-26-27">&nbsp;&nbsp;↳ 3. Jurisprudential Applications of Sections 26 and 27</option>
+      <option value="#sec-vii-local-executive-police">VII. LOCAL EXECUTIVE AUTHORITY AND SUPERVISION OVER POLICE UNITS (SEC. 28, LGC; R.A. 6975)</option>
+      <option value="#evolution-police-system">&nbsp;&nbsp;↳ 1. Evolution of the Philippine Police System</option>
+      <option value="#civilian-character-ca">&nbsp;&nbsp;↳ 2. Civilian Character and the Scope of the Commission on Appointments</option>
+      <option value="#lce-napolcom-deputies">&nbsp;&nbsp;↳ 3. Local Chief Executives as NAPOLCOM Deputies</option>
+      <option value="#sec-viii-inter-local-relations">VIII. INTER-LOCAL GOVERNMENT RELATIONS AND SUPERVISORY MECHANISMS (SECS. 29–30, LGC)</option>
+      <option value="#provincial-supervision-component">&nbsp;&nbsp;↳ 1. Provincial Supervision over Component Cities and Municipalities</option>
+      <option value="#statutory-mechanics-review-eo">&nbsp;&nbsp;↳ 2. The Statutory Mechanics for the Review of Executive Orders</option>
+      <option value="#part-3">PART 3: LEGAL ADVISORY SYSTEMS, INTER-LGU COOPERATION, NGO ACCREDITATION, AND ELECTIVE QUALIFICATIONS</option>
+      <option value="#part-3-overview">&nbsp;&nbsp;↳ Part 3 Overview &amp; Scope of Topics</option>
+      <option value="#sec-ix-legal-opinions">IX. LEGAL OPINIONS, INTER-MUNICIPAL DISPUTES, AND MUNICIPAL-BARANGAY RELATIONS (SECS. 31–32, LGC)</option>
+      <option value="#statutory-hierarchy-legal-advisory">&nbsp;&nbsp;↳ 1. The Statutory Hierarchy of Legal Advisory Bodies</option>
+      <option value="#procedural-defects-bypassing">&nbsp;&nbsp;↳ 2. Procedural Defects: Bypassing the Statutory Channels</option>
+      <option value="#city-municipal-supervision-barangays">&nbsp;&nbsp;↳ 3. City and Municipal Supervision over Barangays</option>
+      <option value="#sec-x-cooperative-undertakings">X. COOPERATIVE UNDERTAKINGS AND EXTRA-TERRITORIAL APPROPRIATIONS (SEC. 33, LGC)</option>
+      <option value="#statutory-mandate-inter-local">&nbsp;&nbsp;↳ 1. The Statutory Mandate for Inter-Local Cooperation</option>
+      <option value="#exception-territorial-rule">&nbsp;&nbsp;↳ 2. The Exception to the Territorial Rule of Appropriations</option>
+      <option value="#sec-xi-relations-ngos-pos">XI. RELATIONS WITH NON-GOVERNMENTAL AND PEOPLE'S ORGANIZATIONS &amp; SPECIAL BODIES (SECS. 34–38, LGC)</option>
+      <option value="#role-ngos-pos-34-36">&nbsp;&nbsp;↳ 1. The Role of NGOs and POs: Sections 34, 35, and 36</option>
+      <option value="#local-bids-awards-committee">&nbsp;&nbsp;↳ 2. The Local Bids and Awards Committee (Sections 37 and 38; R.A. 9184)</option>
+      <option value="#sec-xii-qualifications-elective">XII. QUALIFICATIONS FOR LOCAL ELECTIVE OFFICIALS (SEC. 39, LGC; R.A. 9225; R.A. 10742)</option>
+      <option value="#general-statutory-qualifications">&nbsp;&nbsp;↳ 1. General Statutory Qualifications</option>
+      <option value="#dual-citizenship-renunciation">&nbsp;&nbsp;↳ 2. Dual Citizenship vs. Dual Allegiance: Renunciation Mandate</option>
+      <option value="#voter-registration-district">&nbsp;&nbsp;↳ 3. Voter Registration and District Representation</option>
+      <option value="#age-qualifications-election-day">&nbsp;&nbsp;↳ 4. Age Qualifications: The Election Day Rule</option>
+      <option value="#administrative-matters">Administrative Matters &amp; Professor's Asides</option>
+      <option value="#course-instructions-exam">&nbsp;&nbsp;↳ 1. Course Instructions &amp; Examination Architecture</option>
+      <option value="#practical-insights-asides">&nbsp;&nbsp;↳ 2. Practical Insights &amp; Classroom Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 id="doc-header">[<strong>0919</strong>]</h1>
+  <h1 id="part-1-link"><a href="https://share.gemini.google/lQhGEoWyHA8l" class="c-navy">PART 1: MUNICIPAL TORT LIABILITY, PRESIDENTIAL GENERAL SUPERVISION, AND THE REGIONAL ADMINISTRATIVE HIERARCHY</a></h1>
+  <h1 id="part-1">PART 1: MUNICIPAL TORT LIABILITY, PRESIDENTIAL GENERAL SUPERVISION, AND THE REGIONAL ADMINISTRATIVE HIERARCHY</h1>
+
+  <h3 id="part-1-overview" class="c-navy">Part 1 Overview &amp; Scope of Topics</h3>
+  <ul>
+    <li><strong>Section I: Municipal Liability for Damages</strong>
+      <ul>
+        <li>Statutory Basis: <span class="c-teal">Republic Act No. 7160 (Local Government Code of 1991), Section 24</span>; <span class="c-teal">Civil Code of the Philippines, Articles 2189 and 2176</span>.</li>
+        <li>Dual Character of Local Government Units: Governmental vs. Proprietary Functions.</li>
+        <li>Personal Liability of Public Officers vs. Corporate Entity Liability.</li>
+        <li>Comparative Analysis: <span class="c-burgundy"><em>Torio v. Fontanilla</em></span> vs. <span class="c-burgundy"><em>Guilatco v. City of Dagupan</em></span> and <span class="c-burgundy"><em>City of Manila v. Teotico</em></span>.</li>
+      </ul>
+    </li>
+    <li><strong>Section II: Presidential General Supervision vs. Executive Control</strong>
+      <ul>
+        <li>Constitutional Framework: <span class="c-teal">Article X, Section 4, 1987 Constitution</span>; <span class="c-teal">Section 25, Local Government Code of 1991</span>.</li>
+        <li>The Doctrine of Qualified Political Agency (The Alter Ego Principle) and Its Inapplicability to Local Autonomy.</li>
+        <li>Parameters of Presidential Supervisory Power: Oversight vs. Interference.</li>
+      </ul>
+    </li>
+    <li><strong>Section III: The Hierarchical Tiers of National and Regional Supervision</strong>
+      <ul>
+        <li>Direct Lines of Supervision: Provinces, Highly Urbanized Cities (HUCs), Independent Component Cities (ICCs).</li>
+        <li>The Special Sui Generis Status of the Municipality of Pateros (Metro Manila).</li>
+        <li>Indirect and Cascading Supervision: Provinces over Component Municipalities and Component Cities; Component Municipalities and Cities over Component Barangays.</li>
+        <li>Regional Supervision within the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM).</li>
+      </ul>
+    </li>
+    <li><strong>Section IV: Special Autonomous Regions and Administrative Regions</strong>
+      <ul>
+        <li>Constitutional Foundations of Regional Autonomy: <span class="c-teal">Article X, Sections 15–21, 1987 Constitution</span>.</li>
+        <li>The Exclusion of the Province of Sulu from BARMM (<span class="c-burgundy"><em>Province of Sulu v. Medialdea</em></span>).</li>
+        <li>Autonomous Regions vs. Administrative Regions: Doctrinal Analysis of <span class="c-burgundy"><em>Ordillo v. COMELEC</em></span>.</li>
+        <li>Plebiscite Requirements: Political Subdivisions vs. Regional Administrative Coordination.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-i-municipal-liability" class="c-navy">I. MUNICIPAL LIABILITY FOR DAMAGES (<span class="c-teal">SECS. 24, LGC</span>; <span class="c-teal">ART. 2189, CIVIL CODE</span>)</h3>
+
+  <h4 id="dual-personality" class="c-navy">1. The Dual Personality of Municipal Corporations</h4>
+
+  <p>Under Philippine administrative and municipal corporation law, local government units (LGUs) exercise a dual character:</p>
+
+  <ol>
+    <li><strong>Public or Governmental Character:</strong> The LGU acts as an agent and political subdivision of the State, exercising delegated sovereign attributes such as police power, eminent domain, and taxation to promote general welfare, health, public order, and safety.</li>
+    <li><strong>Private, Proprietary, or Corporate Character:</strong> The LGU acts as a separate legal personality exercising special corporate powers for its own private advantage, convenience, or utility, akin to a private business or utility corporation.</li>
+  </ol>
+
+  <p><span class="c-teal">Section 24 of Republic Act No. 7160 (The Local Government Code of 1991 [LGC])</span> explicitly governs liability:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Section 24. Liability for Damages.</strong></span> — <em>Local government units and their officials are not exempt from liability for death or injury to persons or damage to property.</em>
+  </blockquote>
+
+  <p>This codal rule codifies the doctrine that <span class="c-green"><strong><u>local autonomy does not confer sovereign immunity against tortious conduct or gross neglect</u></strong></span>. When an LGU exercises public or governmental functions, it generally incurs no tort liability at common law, except where a statute expressly waives that immunity. Conversely, when exercising corporate or proprietary functions, an LGU is held to the same standard of accountability and tort liability as any private corporation under the Civil Code.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Basis of Comparison</th>
+        <th>Governmental / Public Functions</th>
+        <th>Proprietary / Corporate Functions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Primary Objective</strong></td>
+        <td>Exercised for the general welfare, public safety, health, morals, and governance as a state agent.</td>
+        <td>Carried out for the private advantage, economic gain, or convenience of the locality.</td>
+      </tr>
+      <tr>
+        <td><strong>General Tort Liability</strong></td>
+        <td>Immune from suit for tortious acts of officers, unless an express statutory exception applies.</td>
+        <td>Liable for torts and damages under general rules of the <span class="c-teal">Civil Code (Articles 2176, 2180)</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Statutory Tort Exception</strong></td>
+        <td>Expressly liable under <span class="c-teal">Article 2189 of the Civil Code</span> for road and public works defects.</td>
+        <td>Liable under ordinary rules of quasi-delict and municipal proprietary responsibility.</td>
+      </tr>
+      <tr>
+        <td><strong>Personal Liability of Public Officials</strong></td>
+        <td><span class="c-rust"><strong><u>Personally liable if acting with malice, bad faith, or beyond the scope of legal authority.</u></strong></span></td>
+        <td><span class="c-rust"><strong><u>Personally liable if acting ultra vires, with bad faith, or outside lawful corporate authority.</u></strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  LGU["LOCAL GOVERNMENT UNIT (Sec. 24, R.A. 7160)"]
+  LGU --> GOV["Governmental / Public Functions<br/>(Agent of the State)"]
+  LGU --> PROP["Proprietary / Corporate Functions<br/>(Private Advantage / Utility)"]
+
+  GOV --> GOV_GEN["General Rule:<br/>State Immunity Applies"]
+  GOV --> GOV_EXC["Statutory Exception (Art. 2189, Civil Code):<br/>Defective Roads, Streets, Bridges & Public Works<br/>under LGU Control or Supervision"]
+  GOV_EXC --> LIAB_2189["LGU Liable (Ownership Irrelevant;<br/>Control/Supervision Governs)"]
+
+  PROP --> PROP_AUTH["Within Corporate Powers:<br/>LGU Liable under Civil Code (Arts. 2176, 2180)"]
+  PROP --> PROP_ULTRA["Ultra Vires / Bad Faith / Malice:<br/>Officials Personally Liable (Torio v. Fontanilla)"]
+
+  style LGU fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style GOV fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style PROP fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style GOV_EXC fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style LIAB_2189 fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style PROP_ULTRA fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="defective-public-works" class="c-navy">2. Defective Public Works, Streets, and Infrastructures: <span class="c-teal">Article 2189 of the Civil Code</span></h4>
+
+  <p>A critical statutory exception to governmental immunity is provided under <span class="c-teal">Article 2189 of the Civil Code of the Philippines</span>:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Article 2189.</strong></span> <em>Provinces, cities and municipalities shall be liable for damages for the death of, or injuries suffered by, any person by reason of the defective condition of roads, streets, bridges, public buildings, and other public works under their control or supervision.</em>
+  </blockquote>
+
+  <p>Under <span class="c-teal">Article 2189</span>, liability attaches by operation of law upon proof of two essential conditions:</p>
+
+  <ol>
+    <li>The road, street, bridge, public building, or public work had a <span class="c-green"><strong><u>defective, hazardous, or unrepaired condition</u></strong></span>.</li>
+    <li>The defective infrastructure was under the <span class="c-green"><strong><u>control or supervision</u></strong></span> of the LGU.</li>
+  </ol>
+
+  <p><span class="c-teal">Article 2189</span> does <span class="c-rust"><strong><u>not</u></strong></span> require that the LGU own the road, street, or structure. The operative legal standard is <span class="c-green"><strong><u>territorial jurisdiction, control, or the duty of supervision</u></strong></span>. Even if a thoroughfare is classified as a national road, the LGU that exercises territorial jurisdiction and supervision over the area is legally bound to repair hazards, erect warnings, or notify national authorities. <span class="c-rust"><strong><u>Failure to remedy the defect renders the LGU liable for quasi-delict.</u></strong></span></p>
+
+  <h4 id="jurisprudential-landmarks-tort" class="c-navy">3. Jurisprudential Landmarks on Municipal Tort Liability</h4>
+
+  <h4 id="torio-v-fontanilla"><span class="c-burgundy"><em>Torio v. Fontanilla (G.R. No. L-29993, October 23, 1978)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> The Municipal Council of Malasiqui, Pangasinan, organized a town fiesta celebration and constructed a temporary stage for a zarzuela presentation. During the performance, the stage collapsed, killing Vicente Fontanilla.</li>
+    <li><strong>Legal Issue:</strong> May the Municipality of Malasiqui and the individual members of the municipal council be held liable for damages arising from the collapse of the town fiesta stage?</li>
+    <li><strong>Doctrinal Holding:</strong> The Supreme Court held that holding and celebrating a town fiesta is primarily a <span class="c-green"><strong><u>proprietary, social, and recreational undertaking</u></strong></span>, rather than an essential governmental function. However, the Municipality itself was absolved from liability because holding this specific fiesta program was deemed an <span class="c-rust"><strong><u><em>ultra vires</em> act outside authorized municipal corporate powers</u></strong></span>. Instead, the municipal councilors and municipal officials who authorized, organized, and supervised the event were held <span class="c-rust"><strong><u>personally liable</u></strong></span> in their private capacities for negligence in constructing a defective stage.</li>
+  </ul>
+
+  <h4 id="guilatco-v-dagupan"><span class="c-burgundy"><em>Guilatco v. City of Dagupan (G.R. No. 61509, September 13, 1990)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> A woman fell into an uncovered, open manhole on Perez Boulevard within the territorial boundaries of Dagupan City, sustaining serious physical injuries. Dagupan City resisted liability by asserting that Perez Boulevard was classified as a national road maintained by the national government (DPWH), not by the city.</li>
+    <li><strong>Legal Issue:</strong> Is a city liable under <span class="c-teal">Article 2189 of the Civil Code</span> for damages sustained due to a defective manhole on a national road located within its territorial jurisdiction?</li>
+    <li><strong>Doctrinal Holding:</strong> Yes. The Supreme Court ruled that under <span class="c-teal">Article 2189</span>, <span class="c-green"><strong><u>actual ownership of the road is irrelevant</u></strong></span>. The statutory requisite is that the road is under the <span class="c-green"><strong><u>control or supervision</u></strong></span> of the city. Because the national road was located within its territorial boundaries, Dagupan City exercised supervisory authority and had the duty to regulate traffic, safeguard pedestrians, and remedy or cover hazardous openings. The City of Dagupan was held liable for damages.</li>
+  </ul>
+
+  <h4 id="manila-v-teotico"><span class="c-burgundy"><em>City of Manila v. Teotico (G.R. No. L-23052, January 29, 1968)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> Teotico fell into an uncovered catch basin on P. Burgos Avenue in Manila, suffering severe injuries. The City of Manila claimed immunity under Section 4 of its original city charter, which stated the city could not be held liable for damages arising from the failure of its officers to enforce laws or maintain streets.</li>
+    <li><strong>Legal Issue:</strong> Does the special charter provision exempting the City of Manila from liability prevail over <span class="c-teal">Article 2189 of the Civil Code</span>?</li>
+    <li><strong>Doctrinal Holding:</strong> No. <span class="c-teal">Article 2189 of the Civil Code</span> is a general, substantive codal provision creating civil liability for defective streets and works across all provinces, cities, and municipalities. <span class="c-green"><strong><u>The charter provision must yield to the Civil Code.</u></strong></span> Control or supervision over the road within the city's geographical limits is sufficient to establish tort liability.</li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> A deep excavation is dug on a national highway traversing a component municipality to install water pipelines. The national agency fails to cover the trench or post hazard lights. A motorcyclist falls into the excavation at night and suffers injuries. The municipality cannot avoid liability by asserting the road is a national highway. Because the hazard sat within its territorial jurisdiction, the municipality exercised concurrent control and supervision under <span class="c-teal">Article 2189 of the Civil Code</span>. It had the duty to install temporary barriers or alert motorists, making it civilly liable for damages.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-ii-presidential-supervision" class="c-navy">II. PRESIDENTIAL GENERAL SUPERVISION VS. EXECUTIVE CONTROL (<span class="c-teal">SEC. 25, LGC</span>; <span class="c-teal">ART. X, SEC. 4, CONST.</span>)</h3>
+
+  <h4 id="constitutional-division-executive" class="c-navy">1. The Constitutional Division of Executive Authority</h4>
+
+  <p>The Philippine legal system establishes a clean divide between two categories of administrative authority exercised by the President:</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  PRES["THE PRESIDENT OF THE PHILIPPINES"]
+  PRES --> CTRL["POWER OF CONTROL<br/>(Art. VII, Sec. 17, Const.)"]
+  PRES --> SUP["POWER OF GENERAL SUPERVISION<br/>(Art. X, Sec. 4, Const.; Sec. 25, LGC)"]
+
+  CTRL --> CTRL_TARGET["Exercised over Executive Departments,<br/>Bureaus, and National Agencies."]
+  CTRL_TARGET --> CTRL_RULES["- Can alter, modify, reverse, or nullify decisions of subordinates.<br/>- Can substitute judgment.<br/>- Subordinates act as alter egos."]
+
+  SUP --> SUP_TARGET["Exercised over Autonomous Local Government Units<br/>(Provinces, Cities, Municipalities, Barangays)."]
+  SUP_TARGET --> SUP_RULES["- Limited to seeing that laws are faithfully executed.<br/>- CANNOT substitute judgment or reverse discretionary acts of local officials."]
+
+  style PRES fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style CTRL fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style SUP fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style CTRL_RULES fill:#F8FAFC,color:#1F2937,stroke:#0F766E,stroke-width:2px
+  style SUP_RULES fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="power-of-executive-control" class="c-navy">2. The Power of Executive Control</h4>
+
+  <p>Under <span class="c-teal">Article VII, Section 17 of the 1987 Constitution</span>, the President has control over all executive departments, bureaus, and offices:</p>
+
+  <ul>
+    <li><strong>The Power of Control Defined:</strong> It is the <span class="c-green"><strong><u>power of an administrative superior to direct, manage, alter, modify, or nullify the acts and determinations of subordinate officers, and to substitute his own judgment for that of the subordinate</u></strong></span>.</li>
+    <li><strong>The Doctrine of Qualified Political Agency (Alter Ego Principle):</strong> Department secretaries act for and in behalf of the President in the regular course of business. Their official determinations are presumed to be the acts of the Chief Executive unless disapproved or repudiated by the President (<span class="c-burgundy"><em>Villena v. Secretary of the Interior</em></span>). If the Secretary of Justice renders an administrative ruling, the President may review, reverse, or modify it at will.</li>
+  </ul>
+
+  <h4 id="power-of-general-supervision" class="c-navy">3. The Power of General Supervision over LGUs</h4>
+
+  <p>Under <span class="c-teal">Article X, Section 4 of the 1987 Constitution</span> and <span class="c-teal">Section 25 of the Local Government Code</span>:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Section 25. National Supervision over Local Government Units.</strong></span> — <em>(a) Consistent with the basic policy on local autonomy, the President shall exercise general supervision over local government units to ensure that their acts are within the scope of their prescribed powers and functions.</em>
+  </blockquote>
+
+  <ul>
+    <li><strong>Supervision Defined:</strong> Supervision means <span class="c-green"><strong><u>overseeing or the power or authority of an officer to see that subordinate officers perform their duties</u></strong></span>. If they fail to do so, the supervising authority may take proper administrative or judicial steps to compel compliance (<span class="c-burgundy"><em>Mondano v. Silvosa</em></span>).</li>
+    <li><strong>Doctrinal Limits of Supervision:</strong> Supervision does <span class="c-rust"><strong><u>not</u></strong></span> include the power to direct, alter, modify, or reverse decisions made by local officials within the legitimate bounds of their discretion.</li>
+    <li><strong>Prohibition Against Substitution of Judgment:</strong> <span class="c-rust"><strong><u>The President cannot substitute his judgment for that of an elected local official, nor set aside an ordinance, resolution, or executive order validly enacted within statutory discretion</u></strong></span>, even if the President disagrees with the wisdom of the policy (<span class="c-burgundy"><em>Drilon v. Lim</em>, G.R. No. 112497</span>). The President's power is confined to checking whether the LGU acted <em>ultra vires</em> or violated the Constitution and laws.</li>
+    <li><strong>Inapplicability of Alter Ego Principle to LGUs:</strong> Local elective officials are <span class="c-rust"><strong><u>not</u></strong></span> alter egos of the President. They derive their authority directly from the electorate and statutory delegations of the legislature under the Constitution, enjoying constitutionally guaranteed local autonomy.</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Point of Distinction</th>
+        <th>Presidential Control</th>
+        <th>Presidential General Supervision</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Constitutional Source</strong></td>
+        <td><span class="c-teal">Article VII, Section 17, 1987 Constitution</span>.</td>
+        <td><span class="c-teal">Article X, Section 4, 1987 Constitution</span>; <span class="c-teal">Sec. 25, LGC</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Target Entities</strong></td>
+        <td>Executive departments, bureaus, commissions, national agencies.</td>
+        <td>Decentralized local government units (provinces, cities, towns).</td>
+      </tr>
+      <tr>
+        <td><strong>Nature of Authority</strong></td>
+        <td>Complete command: alter, nullify, reverse, and substitute judgment.</td>
+        <td>Overseeing: verify that officials keep within statutory authority.</td>
+      </tr>
+      <tr>
+        <td><strong>Discretionary Acts</strong></td>
+        <td>Superior may substitute personal discretion over subordinate acts.</td>
+        <td><span class="c-rust"><strong><u>Cannot disturb discretionary acts made within lawful jurisdiction.</u></strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Legal Relationship</strong></td>
+        <td>Principal-agent / qualified political agency (alter ego).</td>
+        <td>Overseer-autonomous unit; <span class="c-rust"><strong><u>no alter ego relationship</u></strong></span>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> A municipal mayor issues an executive order regulating traffic flows and banning certain public utility vehicles along municipal roads. The Secretary of the Interior and Local Government (DILG), acting on behalf of the President, cannot declare the order null and void merely because he disagrees with the traffic routing scheme. Because the mayor exercised discretionary authority within municipal police powers, the President’s authority is limited to general supervision. The executive order can only be nullified through proper judicial action showing an explicit violation of national law, not through administrative substitution of judgment.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-iii-hierarchical-tiers" class="c-navy">III. THE HIERARCHICAL TIERS OF NATIONAL AND REGIONAL SUPERVISION</h3>
+
+  <h4 id="direct-lines-supervision" class="c-navy">1. Direct Lines of Presidential Supervision</h4>
+
+  <p><span class="c-teal">Section 25 of the Local Government Code</span> establishes a stratified hierarchy through which the President executes supervisory powers. The President exercises <span class="c-green"><strong><u>direct</u></strong></span> general supervision exclusively over the following tiers:</p>
+
+  <ol>
+    <li><strong>Provinces;</strong></li>
+    <li><strong>Highly Urbanized Cities (HUCs):</strong> Cities with a minimum population of 200,000 inhabitants and an annual income of at least Fifty Million Pesos (₱50,000,000.00) based on 1991 constant prices (<span class="c-teal">Sec. 452, LGC</span>), which are legally independent of the province;</li>
+    <li><strong>Independent Component Cities (ICCs):</strong> Component cities whose charters expressly prohibit their voters from voting for provincial elective officials and which are independent of the province (<span class="c-teal">Sec. 451, LGC</span>);</li>
+    <li><strong>Autonomous Regional Governments:</strong> Specifically, the regional executive authority of the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM).</li>
+  </ol>
+
+  <h4 id="sui-generis-pateros" class="c-navy">2. The Sui Generis Status of the Municipality of Pateros</h4>
+
+  <p>There is a single statutory exception where the President exercises <span class="c-rust"><strong><u>direct</u></strong></span> general supervision over an ordinary municipality: <span class="c-rust"><strong><u>the Municipality of Pateros</u></strong></span> in Metro Manila.</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  PRES["PRESIDENTIAL SUPERVISION FLOW CHART"]
+  PRES --> PROV["PROVINCES"]
+  PRES --> HUC["HUCs / ICCs"]
+  PRES --> PAT["PATEROS (MUNICIPALITY)"]
+
+  PROV -->|"(Indirect via Province)"| COMP["COMPONENT CITIES &<br/>MUNICIPALITIES"]
+  COMP -->|"(Indirect via Municipality/City)"| BRGY_PROV["BARANGAYS"]
+
+  HUC -->|"(Direct over Barangays)"| BRGY_HUC["BARANGAYS"]
+  PAT -->|"(Direct - No Province)"| BRGY_PAT["BARANGAYS"]
+
+  style PRES fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style PROV fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style HUC fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style PAT fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
+  style COMP fill:#F8FAFC,color:#1F2937,stroke:#1E3A8A,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Rationale for Pateros' Direct Supervision:</strong> Pateros is the only municipality in Metro Manila that was not converted into a city. It does not belong to any province.</li>
+    <li><strong>The Nature of the MMDA:</strong> The Metropolitan Manila Development Authority (MMDA) is an administrative coordinating agency created to manage metro-wide services (such as transport, solid waste, and flood control). As ruled in <span class="c-burgundy"><em>MMDA v. Bel-Air Village Association</em> (G.R. No. 135962)</span>, the MMDA is <span class="c-rust"><strong><u>not</u></strong></span> a local government unit and possesses no sovereign legislative or police power. It is not an intermediate province. Consequently, because Pateros has no mother province to oversee it, the President supervises Pateros directly.</li>
+  </ul>
+
+  <h4 id="indirect-cascading-supervision" class="c-navy">3. Indirect and Cascading Supervision Over Lower Tiers</h4>
+
+  <p>To preserve local autonomy and administrative order, the President exercises supervision over lower-level units indirectly:</p>
+
+  <ul>
+    <li><strong>Over Component Cities and Municipalities:</strong> The President exercises indirect general supervision <span class="c-green"><strong><u>through the Province</u></strong></span>, headed by the Provincial Governor.</li>
+    <li><strong>Over Barangays:</strong>
+      <ul>
+        <li>In provinces: The President exercises supervision through the component cities and municipalities.</li>
+        <li>In HUCs and ICCs: The President exercises supervision directly through the Highly Urbanized City Mayor or Independent Component City Mayor over their respective component barangays.</li>
+      </ul>
+    </li>
+    <li><strong>Over Autonomous Regional Units:</strong> The President supervises the component provinces, cities, and municipalities of the BARMM through the Chief Minister of the Bangsamoro Autonomous Government.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-iv-special-autonomous-regions" class="c-navy">IV. SPECIAL AUTONOMOUS REGIONS AND ADMINISTRATIVE REGIONS</h3>
+
+  <h4 id="constitutional-basis-autonomous" class="c-navy">1. Constitutional Basis for Autonomous Regions</h4>
+
+  <p><span class="c-teal">Article X, Section 15 of the 1987 Constitution</span> mandates the creation of autonomous regions in Muslim Mindanao and in the Cordilleras, consisting of <span class="c-green"><strong><u>provinces, cities, municipalities, and geographical areas sharing common and distinctive historical and cultural heritage, economic and social structures, and other relevant characteristics</u></strong></span>.</p>
+
+  <p>The grant of regional autonomy allows these areas to establish distinct legislative and executive structures within the framework of national sovereignty and territorial integrity.</p>
+
+  <h4 id="judicial-exclusion-sulu" class="c-navy">2. The Judicial Exclusion of the Province of Sulu from BARMM</h4>
+
+  <p><span class="c-teal">Republic Act No. 11054, the Organic Law for the Bangsamoro Autonomous Region in Muslim Mindanao (BOL)</span>, led to a plebiscite to ratify the charter and determine the territorial composition of the new autonomous region.</p>
+
+  <h4 id="sulu-v-medialdea"><span class="c-burgundy"><em>Province of Sulu v. Medialdea (G.R. No. 242255, September 9, 2024)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> During the January 2019 plebiscite for the ratification of <span class="c-teal">R.A. 11054</span>, voters in the autonomous region were consulted. While the majority across the combined ARMM territory voted in favor of the BOL, a majority of voters in the <strong>Province of Sulu</strong> voted "No," rejecting the law. Despite this rejection, national authorities included Sulu within the newly constituted BARMM based on the rule that the existing ARMM provinces must be treated as a single geographic voting unit.</li>
+    <li><strong>Legal Issue:</strong> May an existing province be compelled to join a new autonomous region when a majority of its electorate voted against the Organic Act in the plebiscite?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court ruled that under <span class="c-teal">Article X, Section 18 of the 1987 Constitution</span>, <span class="c-green"><strong><u>the creation of an autonomous region is effective only when approved by a majority of the votes cast by the constituent units in a plebiscite called for that purpose</u></strong></span>. The term "constituent units" refers to the provinces, cities, and geographic units individually. <span class="c-rust"><strong><u>Because a majority of voters in the Province of Sulu rejected the Organic Law, Sulu cannot be bound by the majority vote of other provinces. Sulu was declared not part of the BARMM.</u></strong></span></li>
+  </ul>
+
+  <h4 id="autonomous-vs-administrative-cordillera" class="c-navy">3. Autonomous Regions vs. Administrative Regions: The Cordillera Experience</h4>
+
+  <p>The 1987 Constitution envisioned two autonomous regions: Muslim Mindanao and the Cordilleras. However, the Cordillera Autonomous Region failed to materialize due to plebiscite rejections.</p>
+
+  <h4 id="ordillo-v-comelec"><span class="c-burgundy"><em>Ordillo v. COMELEC (G.R. No. 93054, December 4, 1990)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> Congress enacted <span class="c-teal">Republic Act No. 6766</span> creating the Cordillera Autonomous Region. In the plebiscite, the Organic Act was rejected by five out of the six constituent provinces and cities, receiving an affirmative majority vote <strong>only in the Province of Ifugao</strong>. The Commission on Elections ruled that <span class="c-teal">R.A. 6766</span> remained in force and that the Province of Ifugao alone constituted the Cordillera Autonomous Region.</li>
+    <li><strong>Legal Issue:</strong> Can a single province constitute an autonomous region under <span class="c-teal">Article X, Section 15 of the Constitution</span>?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court nullified the COMELEC resolution. <span class="c-teal">Article X, Section 15</span> requires that an autonomous region consist of "provinces, cities, municipalities, and geographical areas" in the plural form. <span class="c-rust"><strong><u>A single province cannot legally constitute an autonomous region.</u></strong></span> The intent of the framers was to merge multiple local units sharing historical and cultural affinities. As a result, the proposed autonomous region never legally came into existence.</li>
+  </ul>
+
+  <h4 id="administrative-regions-not-political" class="c-navy">4. Administrative Regions Are Not Political Subdivisions</h4>
+
+  <p>Following the failure to establish an autonomous region, the President issued executive issuances maintaining the <strong>Cordillera Administrative Region (CAR)</strong>.</p>
+
+  <ul>
+    <li><strong>Nature of Administrative Regions:</strong> Administrative regions (such as Region I, Region II, Region III, or CAR) are <span class="c-rust"><strong><u>not</u></strong></span> local government units or political subdivisions. They have no separate corporate personality, no legislative bodies, no taxing powers, and no local executives elected by popular vote.</li>
+    <li><strong>No Plebiscite Required:</strong> Because an administrative region is established merely for executive coordination and administrative decentralization of national line agencies, <span class="c-green"><strong><u>its creation or alteration does not require a plebiscite under Article X, Section 10 of the Constitution</u></strong></span> (<span class="c-burgundy"><em>Chiongbian v. Orbos</em>, G.R. No. 96754</span>). It is established through executive orders issued pursuant to the President’s constitutional power of administrative reorganization.</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Autonomous Region</th>
+        <th>Administrative Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Legal Classification</strong></td>
+        <td>Public municipal corporation / full-fledged political unit (LGU).</td>
+        <td>Administrative coordinating unit of national government agencies.</td>
+      </tr>
+      <tr>
+        <td><strong>Source of Authority</strong></td>
+        <td>Organic Act enacted by Congress under <span class="c-teal">Article X of Constitution</span>.</td>
+        <td>Executive Order issued by the President under delegated powers.</td>
+      </tr>
+      <tr>
+        <td><strong>Plebiscite Requirement</strong></td>
+        <td><span class="c-green"><strong><u>Mandatory ratification by voters in each constituent unit.</u></strong></span></td>
+        <td><span class="c-rust"><strong><u>No plebiscite required; does not alter corporate boundaries.</u></strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Legislative Powers</strong></td>
+        <td>Possesses regional legislative assembly with delegated powers.</td>
+        <td>None; cannot pass ordinances, impose taxes, or exercise power.</td>
+      </tr>
+      <tr>
+        <td><strong>Legal Personality</strong></td>
+        <td>Exercises corporate rights, sues, is sued, and holds property.</td>
+        <td>No separate corporate existence; not a body politic.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> If the President issues an executive order transferring a province from Region I to the Cordillera Administrative Region (CAR) to balance regional development, registered voters of that province cannot challenge the transfer for lack of a plebiscite. An administrative region is not an LGU under <span class="c-teal">Article X of the Constitution</span>; it is an internal administrative division within the Executive Department. The President may reorganize administrative regions by executive order without popular ratification.
+  </blockquote>
+
+  <hr>
+  <p style="text-align: center; font-weight: 700; color: #1E3A8A;">==================== [SPLIT POINT: END OF PART 1 / START OF PART 2] ====================</p>
+  <hr>
+
+  <h1 id="part-2">PART 2: QUORUM DYNAMICS, ENVIRONMENTAL CONSULTATION, POLICE SUPERVISION, AND INTER-LOCAL RELATIONS</h1>
+
+  <h3 id="part-2-overview" class="c-navy">Part 2 Overview &amp; Scope of Topics</h3>
+  <ul>
+    <li><strong>Section V: Constitutional Quorum and Legislative Membership Dynamics</strong>
+      <ul>
+        <li>Quorum Rules in Legislative Bodies: <span class="c-teal">Article VI, Section 16(2) of the 1987 Constitution</span>.</li>
+        <li>The Doctrine of <span class="c-burgundy"><em>Avelino v. Cuenco</em></span>: Determining Quorum when Members are Outside the Jurisdiction or Involuntarily Restrained.</li>
+        <li>Application to Detained, Suspended, or Fugitive Legislators (<span class="c-burgundy"><em>People v. Jalosjos</em></span>, <span class="c-burgundy"><em>Trillanes v. Pimentel</em></span>).</li>
+        <li>Impeachment Conviction Thresholds: Two-Thirds Vote Requirements in Constitutional Adjudication.</li>
+      </ul>
+    </li>
+    <li><strong>Section VI: Environmental Protection and Mandatory Prior Consultation</strong>
+      <ul>
+        <li>Statutory Basis: <span class="c-teal">Republic Act No. 7160, Sections 26 and 27</span>.</li>
+        <li>The Dual Mandate: Maintenance of Ecological Balance and Prior Sanggunian Approval.</li>
+        <li>The Mandatory Timing of Consultations: Planning Phase vs. Post-Facto Ratification.</li>
+        <li>Jurisprudential Enforcement: <span class="c-burgundy"><em>PICOP Resources, Inc. v. Base Metals Mineral Resources Corp.</em></span> and the San Mateo Landfill Controversy (<span class="c-burgundy"><em>Province of Rizal v. Executive Secretary</em></span>).</li>
+      </ul>
+    </li>
+    <li><strong>Section VII: Local Executive Authority and Supervision over Police Units</strong>
+      <ul>
+        <li>Evolution of the Police System: From Municipal Police Forces and Philippine Constabulary to the Integrated PNP.</li>
+        <li>Statutory Framework: <span class="c-teal">Republic Act No. 6975 (DILG Act of 1990)</span> and <span class="c-teal">Republic Act No. 8551</span>.</li>
+        <li>Civilian Nature of the Police and the Philippine Coast Guard (PCG).</li>
+        <li>Exemption from Commission on Appointments Confirmation: <span class="c-burgundy"><em>Manalo v. Sistoza</em></span> and <span class="c-burgundy"><em>Soriano v. Lista</em></span>.</li>
+        <li>Local Chief Executives as Deputized Agents of NAPOLCOM: Operational Control, Revocation, and Reinstatement.</li>
+      </ul>
+    </li>
+    <li><strong>Section VIII: Inter-Local Government Relations and Supervisory Mechanisms</strong>
+      <ul>
+        <li>Statutory Framework: <span class="c-teal">Republic Act No. 7160, Sections 29 and 30</span>.</li>
+        <li>Provincial Supervisory Jurisdiction over Component Cities and Municipalities.</li>
+        <li>Supervisory Compulsion vs. Control: Enforcing National Directives and Administrative Sanctions.</li>
+        <li>Review of Executive Orders: The Dual Path of Executive Review (<span class="c-teal">Section 30</span>) vs. Sanggunian Review Powers.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-v-constitutional-quorum" class="c-navy">V. CONSTITUTIONAL QUORUM AND LEGISLATIVE MEMBERSHIP DYNAMICS (<span class="c-burgundy">AVELINO V. CUENCO</span> IN PERSPECTIVE)</h3>
+
+  <h4 id="legal-concept-quorum" class="c-navy">1. The Legal Concept of Quorum</h4>
+
+  <p>In both national and local legislative assemblies, a <span class="c-green"><strong><u>quorum is the minimum number of members who must be present in a deliberative body to legally transact official business</u></strong></span>. Under <span class="c-teal">Article VI, Section 16(2) of the 1987 Constitution</span>:</p>
+
+  <blockquote>
+    <em>"A majority of each House shall constitute a quorum to do business, but a smaller number may adjourn from day to day and may compel the attendance of absent Members in such manner, and under such penalties, as such House may provide."</em>
+  </blockquote>
+
+  <p>The core legal question is determining the <span class="c-green"><strong><u>baseline number</u></strong></span> from which a "majority" is calculated: does it mean a majority of all seats legally authorized, or a majority of the actual, qualified, and active sitting members within the jurisdiction?</p>
+
+  <h4 id="doctrine-avelino-cuenco" class="c-navy">2. The Doctrine of <span class="c-burgundy">Avelino v. Cuenco</span></h4>
+
+  <h4 id="avelino-v-cuenco-case"><span class="c-burgundy"><em>Avelino v. Cuenco (G.R. No. L-2821, March 4, 1949)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> The Philippine Senate had 24 authorized seats. During a session, 12 senators belonging to the faction of Senator Cuenco passed a resolution declaring the Senate Presidency vacant after Senate President Jose Avelino and his allied senators walked out of the chamber. At the time of the session, one senator was in the United States, and another was confined in a hospital. Avelino claimed the proceedings were void for lack of a quorum, arguing that 12 senators did not constitute a majority of 24.</li>
+    <li><strong>Legal Issue:</strong> In computing whether a legislative quorum exists, should members who are outside the territorial jurisdiction of the Philippines and beyond the coercive process of the Senate be included in the baseline total?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court held that <span class="c-green"><strong><u>members who are outside the country or otherwise incapacitated beyond the reach of the legislative body’s coercive processes are excluded in computing a quorum</u></strong></span>. With one senator in the United States, the total active membership within the jurisdiction was 23. A majority of 23 is 12. Because 12 senators were present and voting, a legal quorum existed, and the election of Senator Cuenco as Senate President was valid.</li>
+  </ul>
+
+  <h4 id="application-detained-fugitive" class="c-navy">3. Application to Detained, Fugitive, or Suspended Legislators</h4>
+
+  <p>The principle from <span class="c-burgundy"><em>Avelino v. Cuenco</em></span> provides a key analytical framework for assessing the active voting membership of legislative and judicial bodies:</p>
+
+  <ol>
+    <li><strong>Fugitive Legislators:</strong> A member of Congress who is a fugitive from justice (such as in <span class="c-burgundy"><em>People v. Jalosjos</em></span>) cannot exercise legislative functions or attend sessions. Being outside the physical reach of legislative processes, their absence affects the active base of the assembly.</li>
+    <li><strong>Detained Legislators:</strong> As settled in <span class="c-burgundy"><em>Trillanes v. Pimentel</em> (G.R. No. 179817)</span> and related cases, <span class="c-rust"><strong><u>legislators detained under valid criminal charges (whether non-bailable offenses or preventive detention) cannot leave detention to attend legislative debates or cast votes</u></strong></span>. Their detention temporarily strips them of the actual capacity to perform legislative duties, though they retain their title to office.</li>
+    <li><strong>The Impeachment Trial Baseline:</strong> Under <span class="c-teal">Article XI, Section 3(6) of the Constitution</span>, no person shall be convicted in an impeachment trial without the concurrence of <span class="c-green"><strong><u>two-thirds of all the Members of the Senate</u></strong></span>. A key constitutional debate centers on whether "all the Members" refers strictly to the theoretical 24 seats, or to the actual sitting members who are legally capable of attending, hearing evidence, and casting their votes as senator-judges.</li>
+  </ol>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Status of Member</th>
+        <th>Quorum Inclusion / Exclusion</th>
+        <th>Legal Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Active &amp; Present</strong></td>
+        <td>Counted toward quorum base and physical presence requirements.</td>
+        <td>Full capacity to deliberate, vote, and participate in sessions.</td>
+      </tr>
+      <tr>
+        <td><strong>Absent within the Country</strong></td>
+        <td>Counted in the total membership base, but absent from the floor.</td>
+        <td>Subject to coercive processes (arrest, compulsion under rules).</td>
+      </tr>
+      <tr>
+        <td><strong>Beyond Jurisdiction (Abroad / Asylum)</strong></td>
+        <td><span class="c-green"><strong><u>Excluded from the base total</u></strong></span> (<span class="c-burgundy"><em>Avelino v. Cuenco</em></span>).</td>
+        <td>Beyond physical reach of coercive legislative warrants and process.</td>
+      </tr>
+      <tr>
+        <td><strong>Detained under Lawful Criminal Charges</strong></td>
+        <td><span class="c-rust"><strong><u>Cannot participate in floor votes</u></strong></span> (<span class="c-burgundy"><em>Trillanes v. Pimentel</em></span>).</td>
+        <td>Deprived of actual physical capacity to exercise duties.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> A municipal sanggunian consists of 10 regular councilors, the vice mayor, and two ex-officio members, for a total membership of 13. Two councilors travel abroad on official study leaves, while another councilor is placed under preventive suspension by the Ombudsman. Under the rule in <span class="c-burgundy"><em>Avelino v. Cuenco</em></span>, members who are legally suspended or beyond the country's jurisdiction cannot be reached by legislative arrest warrants. They are excluded from the total base when determining a quorum. The baseline drops from 13 to 10, meaning 6 councilors present on the floor constitute a legal quorum.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-vi-environmental-protection" class="c-navy">VI. ENVIRONMENTAL PROTECTION AND MANDATORY PRIOR CONSULTATION (<span class="c-teal">SECS. 26–27, LGC</span>)</h3>
+
+  <h4 id="statutory-framework-26-27" class="c-navy">1. The Statutory Framework: <span class="c-teal">Sections 26 and 27</span></h4>
+
+  <p>The Local Government Code gives LGUs a central role in protecting the environment and balancing local ecosystems within their borders:</p>
+
+  <ul>
+    <li><strong><span class="c-teal">Section 26 (Duty of National Government Agencies in the Maintenance of Ecological Balance)</span>:</strong> It is the duty of every national department, bureau, or agency involved in the planning and implementation of any project or program that may cause pollution, climate change, depletion of non-renewable resources, or the displacement of communities to <span class="c-green"><strong><u>consult</u></strong></span> with the LGUs, non-governmental organizations (NGOs), and other affected sectors.</li>
+    <li><strong><span class="c-teal">Section 27 (Prior Consultations Required)</span>:</strong> No project or program shall be implemented by government authorities unless the consultations mentioned in <span class="c-teal">Sections 2(c) and 26</span> are conducted, and the <span class="c-green"><strong><u>prior approval of the Sanggunian concerned</u></strong></span> is obtained.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  START["STATUTORY CONSULTATION WORKFLOW"] --> PLAN["PLANNING PHASE OF PROPOSED PROJECT<br/>(National Agency / Proponent drafts engineering and environmental plans)"]
+  PLAN --> CONSULT["MANDATORY INTER-SECTORAL CONSULTATION<br/>(Public hearings conducted with LGU officials, NGOs, POs, and communities)"]
+  CONSULT --> SUBMIT["SUBMISSION TO LOCAL SANGGUNIAN CONCERNED<br/>(Detailed environmental, economic, and social impact assessments submitted)"]
+  SUBMIT --> DELIB["SANGGUNIAN DELIBERATION AND ACTION VIA ORDINANCE / RESO"]
+  DELIB --> APP["APPROVED<br/>(Project proceeds to implementation)"]
+  DELIB --> REJ["REJECTED<br/>(Project is legally barred;<br/>implementation is ultra vires)"]
+
+  style START fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style PLAN fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style CONSULT fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style SUBMIT fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style DELIB fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style APP fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style REJ fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="absolute-requirement-prior-consultation" class="c-navy">2. The Absolute Requirement of Prior Consultation</h4>
+
+  <p>Consultation must take place <span class="c-green"><strong><u>before</u></strong></span> a project begins:</p>
+
+  <ul>
+    <li><strong>Consultation Must Precede Implementation:</strong> The statute demands <em>prior</em> consultation. Presenting completed engineering plans or holding discussions when construction is halfway finished violates the statute. <span class="c-rust"><strong><u>Consultations held after contracts are awarded or construction has started are legally invalid and do not cure the defect.</u></strong></span></li>
+    <li><strong>The Sanggunian Endorsement Requirement:</strong> <span class="c-teal">Section 27</span> requires that the proponent secure the <span class="c-green"><strong><u>prior favorable endorsement or approval of the local Sanggunian</u></strong></span>. <span class="c-rust"><strong><u>A project carried out without an authorizing Sanggunian resolution or ordinance is illegal and subject to injunctive relief.</u></strong></span></li>
+  </ul>
+
+  <h4 id="jurisprudential-applications-26-27" class="c-navy">3. Jurisprudential Applications of <span class="c-teal">Sections 26 and 27</span></h4>
+
+  <h4 id="picop-v-base-metals"><span class="c-burgundy"><em>PICOP Resources, Inc. v. Base Metals Mineral Resources Corp. (G.R. No. 163509, February 9, 2011)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> Base Metals sought an area clearance for mining operations overlapping the concession area of PICOP Resources. The mining area spanned several municipalities and provinces, but Base Metals secured an endorsement from the Sanggunian of only one affected municipality, failing to consult or get endorsements from the other affected Sanggunians.</li>
+    <li><strong>Legal Issue:</strong> Did the mining project satisfy <span class="c-teal">Sections 26 and 27 of the Local Government Code</span> when endorsements were secured from only one among several affected LGUs?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court held that <span class="c-green"><strong><u>where a proposed project covers multiple local government units, the statutory requirements of prior consultation and Sanggunian approval apply to all affected LGUs</u></strong></span>. Obtaining an endorsement from one Sanggunian does not satisfy the requirement for other affected municipalities or provinces. <span class="c-rust"><strong><u>Failure to complete prior consultations with every affected LGU prevents the project from moving forward.</u></strong></span></li>
+  </ul>
+
+  <h4 id="rizal-v-exec-sec"><span class="c-burgundy"><em>Province of Rizal v. Executive Secretary (G.R. No. 129546, December 13, 2005)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> The national government, through the MMDA and the Office of the President, established and operated the San Mateo Landfill inside the territorial jurisdiction of the Province of Rizal, near water sources. This was done over the objections of the Sangguniang Panlalawigan and without securing prior Sanggunian approval.</li>
+    <li><strong>Legal Issue:</strong> May national government agencies implement a waste disposal site within an LGU’s territory without the prior consultation and approval required by <span class="c-teal">Sections 26 and 27</span>?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court ordered the permanent closure of the landfill. The court ruled that <span class="c-green"><strong><u>national agencies must comply with Sections 26 and 27 of the Local Government Code</u></strong></span>. Local autonomy requires that national agencies consult with host communities and secure the prior approval of the local Sanggunian before executing projects that affect the local environment, water sources, and ecological balance.</li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> The Department of Public Works and Highways (DPWH) designs an extensive concrete flood-control dike system along a major river traversing three municipalities. The agency awards the procurement contract and begins driving piles without conferring with local residents or securing endorsements from the municipal councils. When civil society groups protest near completion, the DPWH cannot cure the defect by holding a belated post-construction meeting. Because <span class="c-teal">Sections 26 and 27</span> require consultation during the planning phase, executing the project without prior Sanggunian approval violates the law and leaves the agency vulnerable to a writ of <em>mandamus</em> or injunction.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-vii-local-executive-police" class="c-navy">VII. LOCAL EXECUTIVE AUTHORITY AND SUPERVISION OVER POLICE UNITS (<span class="c-teal">SEC. 28, LGC</span>; <span class="c-teal">R.A. 6975</span>)</h3>
+
+  <h4 id="evolution-police-system" class="c-navy">1. Evolution of the Philippine Police System</h4>
+
+  <p>The legal relationship between local chief executives (governors and mayors) and the police has evolved through three distinct periods:</p>
+
+  <ol>
+    <li><strong>The Pre-Martial Law Local Police Era:</strong> Police forces were purely municipal and city entities. The local mayor recruited, appointed, disciplined, and removed local police officers. This structure often led to abuses, as police officers were used as private armed groups during elections.</li>
+    <li><strong>The Integrated National Police (INP) and Philippine Constabulary (PC) Era:</strong> Police forces were centralized under <span class="c-teal">Presidential Decree No. 765</span>. The INP was placed under the operational command of the Philippine Constabulary, a major branch of the Armed Forces of the Philippines (AFP), creating a militarized police structure.</li>
+    <li><strong>The 1987 Constitutional and Statutory Era:</strong> <span class="c-teal">Article XVI, Section 6 of the 1987 Constitution</span> mandated the creation of <span class="c-green"><strong><u>one police force, national in scope and civilian in character</u></strong></span>, administered by a National Police Commission (NAPOLCOM). This was executed through <span class="c-teal">Republic Act No. 6975 (the DILG Act of 1990)</span> and <span class="c-teal">Republic Act No. 8551 (the PNP Reform and Reorganization Act of 1998)</span>.</li>
+  </ol>
+
+  <h4 id="civilian-character-ca" class="c-navy">2. Civilian Character and the Scope of the Commission on Appointments</h4>
+
+  <p>The 1987 Constitution established clear lines between civilian law enforcement bodies and the military:</p>
+
+  <ul>
+    <li><strong>The Civilian Character of the PNP:</strong> Under <span class="c-teal">R.A. 6975</span>, the Philippine National Police is a civilian agency under the Department of the Interior and Local Government. It is not part of the Armed Forces of the Philippines.</li>
+    <li><strong>The Civilian Nature of the Philippine Coast Guard (PCG):</strong> Formerly a unit of the Philippine Navy under the AFP, the Coast Guard was transferred to the Department of Transportation (DOTr) pursuant to <span class="c-teal">Republic Act No. 9993</span>. It operates as an armed, civilian maritime service.</li>
+  </ul>
+
+  <h4 id="manalo-soriano-ca">The Rule on Appointments and Confirmations: <span class="c-burgundy"><em>Manalo v. Sistoza</em></span> &amp; <span class="c-burgundy"><em>Soriano v. Lista</em></span></h4>
+
+  <p>Under <span class="c-teal">Article VII, Section 16 of the Constitution</span>, the President appoints officers of the Armed Forces from the rank of colonel or naval captain, subject to confirmation by the Commission on Appointments (CA).</p>
+
+  <ul>
+    <li>In <span class="c-burgundy"><em>Manalo v. Sistoza</em> (G.R. No. 107369)</span>, the Supreme Court ruled that because the PNP is civilian, <span class="c-green"><strong><u>police officers holding the rank of Police Brigadier General or higher are not covered by the constitutional enumeration requiring CA confirmation</u></strong></span>.</li>
+    <li>In <span class="c-burgundy"><em>Soriano v. Lista</em> (G.R. No. 153881)</span>, the Supreme Court held that <span class="c-green"><strong><u>promotions of PCG flag officers (Commodores and Admirals) do not require CA confirmation</u></strong></span>, as the PCG is a civilian maritime service under the DOTr, not a military branch.</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Armed Forces of the Philippines</th>
+        <th>Philippine National Police / PCG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Constitutional Status</strong></td>
+        <td>Military arm of the State under the Department of National Defense</td>
+        <td>Civilian law enforcement and maritime agency (DILG / DOTr).</td>
+      </tr>
+      <tr>
+        <td><strong>Status under CA Review (<span class="c-teal">Art. VII, Sec. 16</span>)</strong></td>
+        <td>Promotions to Colonel / Captain require mandatory CA confirmation.</td>
+        <td><span class="c-green"><strong><u>Promotions to General or Admiral DO NOT require CA confirmation.</u></strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Relationship to Mayors</strong></td>
+        <td>No operational supervision; obeys national military command chain.</td>
+        <td>Mayors exercise operational supervision as NAPOLCOM deputies.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="lce-napolcom-deputies" class="c-navy">3. Local Chief Executives as NAPOLCOM Deputies</h4>
+
+  <p>Under <span class="c-teal">Section 28 of the Local Government Code</span> and <span class="c-teal">Section 51 of R.A. 6975</span>, local chief executives act as <span class="c-green"><strong><u>deputies</u></strong></span> of NAPOLCOM within their jurisdictions:</p>
+
+  <ul>
+    <li><strong>Powers of Operational Supervision:</strong> Provincial governors, city mayors, and municipal mayors exercise operational supervision and day-to-day oversight over local PNP units. They may deploy forces, inspect stations, and recommend appointments.</li>
+    <li><strong>Authority to Select the Chief of Police:</strong> Mayors choose the City or Municipal Chief of Police from a <span class="c-green"><strong><u>list of five qualified eligibles recommended by the PNP Provincial Director</u></strong></span>.</li>
+    <li><strong>Revocation and Withdrawal of Deputation:</strong> The authority exercised by local chief executives over the police is a delegated, statutory authority. <span class="c-rust"><strong><u>NAPOLCOM may suspend or permanently withdraw an LCE's deputation on specific statutory grounds</u></strong></span>, including:
+      <ol>
+        <li>Frequent unauthorized absences;</li>
+        <li>Abuse of authority;</li>
+        <li>Providing material support to criminal elements; or</li>
+        <li>Involvement in illegal drugs, corruption, or acts against national security.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <p>When NAPOLCOM withdraws deputation (such as in the case of former Mayor Rolando Espinosa), <span class="c-rust"><strong><u>the local executive loses all operational control, deployment authority, and supervisory rights over the local police force</u></strong></span>. Command reverts to the national chain of command through the PNP and NAPOLCOM.</p>
+
+  <hr>
+
+  <h3 id="sec-viii-inter-local-relations" class="c-navy">VIII. INTER-LOCAL GOVERNMENT RELATIONS AND SUPERVISORY MECHANISMS (<span class="c-teal">SECS. 29–30, LGC</span>)</h3>
+
+  <h4 id="provincial-supervision-component" class="c-navy">1. Provincial Supervision over Component Cities and Municipalities</h4>
+
+  <p>Under <span class="c-teal">Section 29 of the Local Government Code</span>:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Section 29. Provincial Relations with Component Cities and Municipalities.</strong></span> — <em>The province, through the provincial governor, shall exercise general supervision over component cities and municipalities of the province to ensure that every component city and municipality acts within the scope of its prescribed powers and functions.</em>
+  </blockquote>
+
+  <ul>
+    <li><strong>The Supervisory Limit:</strong> The Provincial Governor exercises general supervision on behalf of the President. <span class="c-rust"><strong><u>The Governor cannot exercise the power of control. A governor cannot revoke an executive order issued by a municipal mayor within that mayor's statutory powers, nor substitute their own judgment on municipal matters.</u></strong></span></li>
+    <li><strong>Compelling the Enforcement of Laws:</strong> Supervision includes the authority to see that subordinate officials faithfully execute the law. When a provincial governor or DILG Secretary issues directives ordering local chief executives to enforce anti-gambling, anti-illegal drug, or environmental laws under threat of administrative sanctions, this constitutes a <span class="c-green"><strong><u>valid exercise of supervisory authority</u></strong></span> (<span class="c-burgundy"><em>Ganzon v. Court of Appeals</em></span>). It reminds subordinate officials of their mandatory legal duties, rather than imposing unlawful administrative control.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  TOP["THE TWO AVENUES FOR REVIEWING EXECUTIVE ORDERS"]
+  TOP --> AV1["[AVENUE 1: EXECUTIVE ROUTE]<br/>(Section 30, Local Government Code)"]
+  TOP --> AV2["[AVENUE 2: SANGGUNIAN LEGISLATIVE ROUTE]<br/>(Sections 447, 458, 468, Local Government Code)"]
+
+  AV1 --> AV1_1["* Component City / Municipal Mayors submit all promulgated EOs<br/>directly to the PROVINCIAL GOVERNOR."]
+  AV1_1 --> AV1_2["* Punong Barangays submit all promulgated EOs<br/>directly to the CITY / MUNICIPAL MAYOR."]
+  AV1_2 --> AV1_3["* Standard of Review: Legality. If an EO is ultra vires or violates the law,<br/>the reviewing Chief Executive invalidates it."]
+
+  AV2 --> AV2_1["* Executive Orders with regulatory, fiscal, or policy implications<br/>are forwarded to the SANGGUNIAN CONCERNED."]
+  AV2_1 --> AV2_2["* Provincial / City / Municipal Sanggunian reviews orders to confirm<br/>compatibility with existing ordinances and enabling statutes."]
+  AV2_2 --> AV2_3["* Standard of Review: Policy harmony and statutory consistency.<br/>Sanggunian alerts the executive of legal or fiscal conflicts."]
+
+  style TOP fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style AV1 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style AV2 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style AV1_3 fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+  style AV2_3 fill:#F8FAFC,color:#166534,stroke:#166534,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="statutory-mechanics-review-eo" class="c-navy">2. The Statutory Mechanics for the Review of Executive Orders</h4>
+
+  <p><span class="c-teal">Section 30</span> establishes the procedure for executive review of administrative orders:</p>
+
+  <ol>
+    <li><strong>Submission Requirement:</strong> Component city and municipal mayors must forward copies of all executive orders they issue to the Provincial Governor <span class="c-green"><strong><u>within three (3) days of issuance</u></strong></span>. Punong barangays must likewise submit their executive orders to the city or municipal mayor.</li>
+    <li><strong>Reviewing Authority:</strong> The Provincial Governor reviews municipal and component city orders to confirm they remain within the scope of the mayor's statutory authority. The city or municipal mayor performs the same review over barangay executive orders.</li>
+    <li><strong>Harmonizing with Sanggunian Review Powers:</strong> The Code also gives the Sangguniang Panlalawigan authority to review matters affecting municipal governance. In practice, provinces avoid jurisdictional conflicts by having the Provincial Governor's legal office and the Sanggunian harmonize their reviews, ensuring the province adopts a single, unified position on the validity of the municipal order.</li>
+  </ol>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> A municipal mayor issues an executive order prohibiting trucks from traveling along a municipal road between 6:00 AM and 9:00 AM to relieve school traffic. Within three days, the mayor submits the order to the provincial governor under <span class="c-teal">Section 30</span>. The provincial governor cannot strike down the order simply because he prefers a different schedule. Because the order represents a valid exercise of delegated police power that does not violate any national law, the governor's supervisory review is complete. The governor can set aside the executive order only if it clearly conflicts with a national traffic statute.
+  </blockquote>
+
+  <hr>
+  <p style="text-align: center; font-weight: 700; color: #1E3A8A;">==================== [SPLIT POINT: END OF PART 2/ START OF PART 3] ====================</p>
+  <hr>
+
+  <h1 id="part-3">PART 3: LEGAL ADVISORY SYSTEMS, INTER-LGU COOPERATION, NGO ACCREDITATION, AND ELECTIVE QUALIFICATIONS</h1>
+
+  <h3 id="part-3-overview" class="c-navy">Part 3 Overview &amp; Scope of Topics</h3>
+  <ul>
+    <li><strong>Section IX: Legal Opinions, Inter-Municipal Disputes, and Municipal-Barangay Relations</strong>
+      <ul>
+        <li>Statutory Hierarchy of Legal Advisory Channels: <span class="c-teal">Republic Act No. 7160, Section 31</span>.</li>
+        <li>Allocation of Legal Responsibilities: City Legal Officer vs. City Prosecutor; Provincial Legal Officer vs. Provincial Prosecutor.</li>
+        <li>Procedural Errors in Bypassing Statutory Channels (The Bacnotan Referral Experience).</li>
+        <li>Scope of Supervisory Authority Exercised by Cities and Municipalities over Component Barangays (<span class="c-teal">Section 32</span>).</li>
+      </ul>
+    </li>
+    <li><strong>Section X: Cooperative Undertakings and Extra-Territorial Appropriations</strong>
+      <ul>
+        <li>Statutory Authorization: <span class="c-teal">Republic Act No. 7160, Section 33</span>.</li>
+        <li>Inter-Local Agreements for Joint Services: Regional Sanitary Landfills and Bulk Infrastructure.</li>
+        <li>The Doctrinal Exception to the Territorial Principle in Municipal Appropriations.</li>
+      </ul>
+    </li>
+    <li><strong>Section XI: Relations with Non-Governmental and People's Organizations &amp; Special Bodies</strong>
+      <ul>
+        <li>Statutory Basis: <span class="c-teal">Republic Act No. 7160, Sections 34, 35, and 36</span>.</li>
+        <li>Accreditation Processes: Roles of NGOs and POs in Local Development Councils and Special Bodies.</li>
+        <li>Financial Assistance and Public Purpose Requirements: Loans, Grants, and the Lessons of Public Lending Programs.</li>
+        <li>Statutory Composition of Local Bids and Awards Committees (PBAC/BAC): <span class="c-teal">Sections 37 and 38</span>; Prohibition Against Unauthorized Alterations.</li>
+      </ul>
+    </li>
+    <li><strong>Section XII: Qualifications for Local Elective Officials</strong>
+      <ul>
+        <li>Statutory Enumeration: <span class="c-teal">Republic Act No. 7160, Section 39</span>.</li>
+        <li>Dual Citizenship vs. Dual Allegiance: <span class="c-teal">Republic Act No. 9225</span> and Mandatory Renunciation (<span class="c-burgundy"><em>Sobejana-Condon v. COMELEC</em></span>).</li>
+        <li>Residence and Registration Mandates: At-Large vs. District Candidacies.</li>
+        <li>The Strict Temporal Anchor for Age Requirements: Election Day Rule vs. The Ninoy Aquino Historical Precedent.</li>
+        <li>The Comprehensive Age Matrix Across Local Elective Offices.</li>
+      </ul>
+    </li>
+    <li><strong>Administrative Matters &amp; Professor's Asides</strong>
+      <ul>
+        <li>Forthcoming Exam Coverage: <span class="c-teal">Sections 40 to 59</span> (Disqualifications, Vacancies, and Local Legislation).</li>
+        <li>Administrative Mechanics: Blue Book Examination vs. Digital Modalities.</li>
+        <li>Course Observations on Electoral Machinery, Political Dynasties, and Practical Governance.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-ix-legal-opinions" class="c-navy">IX. LEGAL OPINIONS, INTER-MUNICIPAL DISPUTES, AND MUNICIPAL-BARANGAY RELATIONS (<span class="c-teal">SECS. 31–32, LGC</span>)</h3>
+
+  <h4 id="statutory-hierarchy-legal-advisory" class="c-navy">1. The Statutory Hierarchy of Legal Advisory Bodies</h4>
+
+  <p><span class="c-teal">Section 31</span> establishes the proper legal advisory channels for local government units:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Section 31. Submission of Municipal Questions to the Provincial Legal Officer or Prosecutor.</strong></span> — <em>In the absence of a municipal legal officer, the municipal government may refer legal questions and problems to the provincial legal officer or, in his absence or disqualification, to the provincial prosecutor.</em>
+  </blockquote>
+
+  <p>To prevent administrative confusion, the law specifies which legal officers may issue binding legal opinions to LGUs:</p>
+
+  <ul>
+    <li><strong>For Independent Component Cities and Component Cities:</strong> Component cities maintain their own City Legal Officer. All requests for legal interpretations, ordinance drafting, and formal legal opinions must be directed to the <span class="c-green"><strong><u>City Legal Officer</u></strong></span>. If the post is vacant, queries must be referred to the <span class="c-green"><strong><u>City Prosecutor</u></strong></span>, <span class="c-rust"><strong><u>not the provincial prosecutor</u></strong></span>.</li>
+    <li><strong>For Component Municipalities:</strong> Most component municipalities do not maintain an independent municipal legal officer. By express statutory mandate, the municipal leadership must direct its legal questions to the <span class="c-green"><strong><u>Provincial Legal Officer</u></strong></span>. If the Provincial Legal Officer is absent, disqualified, or the office is vacant, the question may then be submitted to the <span class="c-green"><strong><u>Provincial Prosecutor</u></strong></span>.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  TOP["STATUTORY ROUTING FOR LEGAL OPINIONS"]
+  TOP --> CC["COMPONENT CITIES"]
+  TOP --> CM["COMPONENT MUNICIPALITIES"]
+
+  CC --> CLO["CITY LEGAL OFFICER"]
+  CLO -->|"(If absent or vacant)"| CPROC["CITY PROSECUTOR"]
+
+  CM --> MLO["MUNICIPAL LEGAL OFFICER"]
+  MLO -->|"(If none exists)"| PLO["PROVINCIAL LEGAL OFFICER"]
+  PLO -->|"(If absent or vacant)"| PPROC["PROVINCIAL PROSECUTOR"]
+
+  style TOP fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style CC fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style CM fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style CLO fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style PLO fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="procedural-defects-bypassing" class="c-navy">2. Procedural Defects: Bypassing the Statutory Channels</h4>
+
+  <p><span class="c-rust"><strong><u>Municipal officials make a serious procedural mistake when they bypass the Provincial Legal Officer and send local legal queries directly to the national headquarters of the DILG.</u></strong></span></p>
+
+  <p>The DILG Central Office will routinely decline direct requests for legal opinions from component municipalities if the query has not first been reviewed by the Provincial Legal Officer. Under the principle of local autonomy, local legal questions should be settled first at the provincial level. <span class="c-rust"><strong><u>Jumping straight to the central DILG undermines the supervisory authority of the provincial government and violates Section 31 of the Code.</u></strong></span></p>
+
+  <h4 id="city-municipal-supervision-barangays" class="c-navy">3. City and Municipal Supervision over Barangays</h4>
+
+  <p>Under <span class="c-teal">Section 32</span>:</p>
+
+  <ul>
+    <li><strong>Supervisory Scope:</strong> Cities and municipalities supervise their component barangays to ensure the Punong Barangay and the Sangguniang Barangay act within their statutory powers.</li>
+    <li><strong>Prohibition Against Overreaching:</strong> <span class="c-rust"><strong><u>A city or municipal mayor cannot arbitrarily dismiss a Punong Barangay, overturn barangay executive orders that comply with the law, or substitute their own discretion for that of the barangay leadership.</u></strong></span> If a Punong Barangay commits misconduct, the mayor cannot summarily remove the official; disciplinary actions must follow the formal administrative procedures set forth in <span class="c-teal">Sections 60 through 68 of the Code</span>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-x-cooperative-undertakings" class="c-navy">X. COOPERATIVE UNDERTAKINGS AND EXTRA-TERRITORIAL APPROPRIATIONS (<span class="c-teal">SEC. 33, LGC</span>)</h3>
+
+  <h4 id="statutory-mandate-inter-local" class="c-navy">1. The Statutory Mandate for Inter-Local Cooperation</h4>
+
+  <p><span class="c-teal">Section 33</span> authorizes local government units to pool their resources for shared initiatives:</p>
+
+  <blockquote>
+    <span class="c-teal"><strong>Section 33. Cooperative Undertakings Among Local Government Units.</strong></span> — <em>Local government units may, through appropriate ordinances, group themselves, consolidate, or coordinate their efforts, services, and resources for purposes commonly beneficial to them.</em>
+  </blockquote>
+
+  <p>Inter-local cooperation allows neighboring LGUs to address complex problems that cross political boundaries—such as solid waste disposal, flood management, water supply, and joint law enforcement—by sharing costs and infrastructure.</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  TOP["INTER-LOCAL COOPERATIVE FRAMEWORK<br/>(Section 33, Local Government Code)"]
+  TOP --> MUNA["MUNICIPALITY A<br/>Enacts Inter-Local Cooperation Ordinance"]
+  TOP --> MUNB["MUNICIPALITY B<br/>Enacts Inter-Local Cooperation Ordinance"]
+  TOP --> CITYC["COMPONENT CITY C<br/>Enacts Inter-Local Cooperation Ordinance"]
+
+  MUNA --> MOA["JOINT MEMORANDUM OF AGREEMENT (MOA)<br/>(Defines cost-sharing, management, and use)"]
+  MUNB --> MOA
+  CITYC --> MOA
+
+  MOA --> PROJ["CENTRALIZED COMMON INFRASTRUCTURE PROJECT<br/>(e.g., Regional Sanitary Landfill in City C)"]
+
+  PROJ --> TERR["TERRITORIAL APPROPRIATION<br/>(City C appropriates funds for<br/>landfill located inside its borders)"]
+  PROJ --> EXTRATERR["EXTRA-TERRITORIAL APPROPRIATIONS<br/>(Municipalities A & B appropriate funds<br/>spent OUTSIDE their geographic borders)"]
+
+  style TOP fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style MUNA fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style MUNB fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style CITYC fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style MOA fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style PROJ fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style EXTRATERR fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="exception-territorial-rule" class="c-navy">2. The Exception to the Territorial Rule of Appropriations</h4>
+
+  <p><span class="c-teal">Section 33</span> provides a major exception to general public finance principles:</p>
+
+  <ul>
+    <li><strong>The General Territorial Rule:</strong> A local government unit may only appropriate and disburse public funds for projects, services, and public works located within its own territorial boundaries. <span class="c-rust"><strong><u>Appropriating municipal money for construction outside the town's borders is generally <em>ultra vires</em> and misapplies public funds.</u></strong></span></li>
+    <li><strong>The <span class="c-teal">Section 33</span> Statutory Exception:</strong> When neighboring LGUs enter into a joint cooperative agreement—such as partnering with an adjacent city to build and operate a shared sanitary landfill—<span class="c-green"><strong><u>the participating municipalities may legally appropriate municipal funds to build and maintain facilities located outside their territorial borders</u></strong></span>. This joint cooperative purpose makes the extra-territorial expenditure legal and valid under <span class="c-teal">Section 33</span>.</li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> Three adjacent municipalities face severe waste management problems and lack the capital to build separate, modern sanitary landfills. Under <span class="c-teal">Section 33</span>, all three enact matching ordinances authorizing a joint solid-waste undertaking, agreeing to place a single, modern landfill inside Municipality X. Municipalities Y and Z may legally appropriate funds from their annual municipal budgets and remit those monies to Municipality X to help maintain the facility. Even though the landfill is physically located outside the borders of Municipalities Y and Z, these extra-territorial appropriations are valid under <span class="c-teal">Section 33</span>.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-xi-relations-ngos-pos" class="c-navy">XI. RELATIONS WITH NON-GOVERNMENTAL AND PEOPLE'S ORGANIZATIONS &amp; SPECIAL BODIES (<span class="c-teal">SECS. 34–38, LGC</span>)</h3>
+
+  <h4 id="role-ngos-pos-34-36" class="c-navy">1. The Role of NGOs and POs: <span class="c-teal">Sections 34, 35, and 36</span></h4>
+
+  <p>Under <span class="c-teal">Sections 34 through 36 of the Local Government Code</span>, LGUs are mandated to promote the establishment and operation of people's organizations (POs) and non-governmental organizations (NGOs) as active partners in local governance:</p>
+
+  <ul>
+    <li><strong>Accreditation as a Prerequisite:</strong> <span class="c-green"><strong><u>An NGO, PO, or cooperative must be formally accredited by the local Sanggunian before it can participate in local governance or seek representation on local special bodies.</u></strong></span></li>
+    <li><strong>Mandatory Representation in Local Special Bodies:</strong> Once accredited, civil society representatives serve as voting members on key statutory bodies, including:
+      <ol>
+        <li>The Local Development Council (LDCs);</li>
+        <li>The Local Health Board;</li>
+        <li>The Local School Board;</li>
+        <li>The Local Peace and Order Council;</li>
+        <li>The Local Bids and Awards Committee (PBAC/BAC).</li>
+      </ol>
+    </li>
+    <li><strong>Financial and Material Assistance (<span class="c-teal">Section 36</span>):</strong> An LGU may provide financial or material assistance to accredited NGOs and POs for economic, social, or environmental projects that serve public purposes. However, public funds loaned to cooperatives must be safeguarded with clear terms for repayment. <span class="c-rust"><strong><u>When an LGU provides credit assistance without adequate recovery systems, it violates auditing rules against the unauthorized disbursement or waste of public funds.</u></strong></span></li>
+  </ul>
+
+  <h4 id="local-bids-awards-committee" class="c-navy">2. The Local Bids and Awards Committee (<span class="c-teal">Sections 37 and 38</span>; <span class="c-teal">R.A. 9184</span>)</h4>
+
+  <p><span class="c-teal">Sections 37 and 38</span> establish the structure for local procurement bodies, now harmonized with <span class="c-teal">Republic Act No. 9184 (The Government Procurement Reform Act)</span>:</p>
+
+  <ul>
+    <li><strong>Strict Statutory Membership:</strong> The composition of the Bids and Awards Committee (BAC) is set by statute. <span class="c-rust"><strong><u>The local chief executive cannot unilaterally add or remove members beyond the positions designated by law.</u></strong></span></li>
+    <li><strong>Prohibition Against Executive Alteration:</strong> <span class="c-rust"><strong><u>Executive orders that modify the composition of statutory committees by adding political appointees or non-designated officials are invalid. Any procurement or bidding conducted by an improperly constituted BAC is voidable for failure to comply with mandatory statutory requirements.</u></strong></span></li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-xii-qualifications-elective" class="c-navy">XII. QUALIFICATIONS FOR LOCAL ELECTIVE OFFICIALS (<span class="c-teal">SEC. 39, LGC</span>; <span class="c-teal">R.A. 9225</span>; <span class="c-teal">R.A. 10742</span>)</h3>
+
+  <h4 id="general-statutory-qualifications" class="c-navy">1. General Statutory Qualifications</h4>
+
+  <p>Under <span class="c-teal">Section 39 of the Local Government Code</span>:</p>
+
+  <ol>
+    <li><strong>Citizenship:</strong> Must be a <span class="c-green"><strong><u>citizen of the Philippines</u></strong></span>.</li>
+    <li><strong>Electoral Registration:</strong> Must be a <span class="c-green"><strong><u>registered voter</u></strong></span> in the barangay, municipality, city, province, or district where the candidate intends to run.</li>
+    <li><strong>Residency Requirement:</strong> Must be a <span class="c-green"><strong><u>resident of the locality for at least one (1) year immediately preceding the day of the election</u></strong></span>.</li>
+    <li><strong>Literacy:</strong> Must be <span class="c-green"><strong><u>able to read and write Filipino or any other local language or dialect</u></strong></span>.</li>
+  </ol>
+
+  <h4 id="dual-citizenship-renunciation" class="c-navy">2. Dual Citizenship vs. Dual Allegiance: Renunciation Mandate</h4>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  TOP["CITIZENSHIP COMPLIANCE PIPELINE<br/>(Under R.A. 9225 and Section 39, Local Government Code)"]
+  TOP --> STEP1["FILIPINO CITIZEN ACQUIRES FOREIGN CITIZENSHIP<br/>(Dual Citizen Status)"]
+  STEP1 --> STEP2["REACQUIRES PHILIPPINE CITIZENSHIP VIA R.A. 9225<br/>(Takes Oath of Allegiance to the Philippines)"]
+  STEP2 --> STEP3["INTENDS TO RUN FOR LOCAL ELECTIVE OFFICE"]
+  STEP3 --> STEP4["MANDATORY PERSONAL AND SWORN RENUNCIATION OF<br/>ALL FOREIGN CITIZENSHIPS<br/>(Must be executed BEFORE or AT THE TIME of filing the COC)"]
+
+  STEP4 --> TIMELY["TIMELY FILED<br/>(Personal Renunciation done<br/>prior to COC filing)"]
+  STEP4 --> FAILED["FAILED TO FILE<br/>(No formal, sworn renunciation<br/>made prior to COC filing)"]
+
+  TIMELY --> QUAL["QUALIFIED AS CANDIDATE<br/>(Sobejana-Condon v. COMELEC)"]
+  FAILED --> DISQ["DISQUALIFIED FROM OFFICE<br/>(Ultra vires candidacy)"]
+
+  style TOP fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style STEP1 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style STEP2 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style STEP3 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
+  style STEP4 fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style QUAL fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
+  style DISQ fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p><span class="c-teal">Article II, Section 5 of the Constitution</span> provides that "dual allegiance of citizens is inimical to the national interest and shall be dealt with by law."</p>
+
+  <ul>
+    <li><strong>Dual Citizenship under <span class="c-teal">R.A. 9225</span>:</strong> <span class="c-teal">Republic Act No. 9225</span> allows natural-born Filipinos who lost their citizenship through foreign naturalization to reacquire or retain their Philippine citizenship.</li>
+    <li><strong>The Mandatory Requirement of Formal Renunciation:</strong> Reacquiring Philippine citizenship under <span class="c-teal">R.A. 9225</span> is <span class="c-rust"><strong><u>not enough</u></strong></span> on its own to qualify a person to run for local elective office. <span class="c-teal">Section 5(2) of R.A. 9225</span> requires that candidates with dual citizenship explicitly execute a <span class="c-green"><strong><u>sworn, personal renunciation of any and all foreign citizenships before or at the time they file their Certificate of Candidacy (COC)</u></strong></span>.</li>
+  </ul>
+
+  <h4 id="sobejana-condon-v-comelec"><span class="c-burgundy"><em>Sobejana-Condon v. COMELEC (G.R. No. 198742, August 10, 2012)</em></span></h4>
+  <ul>
+    <li><strong>Material Facts:</strong> Sobejana-Condon, a natural-born Filipino, acquired Australian citizenship through marriage. She later reacquired her Philippine citizenship under <span class="c-teal">R.A. 9225</span> and ran for Vice Mayor of Caba, La Union, winning the election. However, she failed to execute a separate, personal, sworn renunciation of her Australian citizenship before filing her certificate of candidacy.</li>
+    <li><strong>Legal Issue:</strong> Does the oath of allegiance taken under <span class="c-teal">R.A. 9225</span> satisfy the requirement to renounce foreign citizenship when running for elective local office?</li>
+    <li><strong>Doctrinal Holding:</strong> No. The Supreme Court ruled that <span class="c-rust"><strong><u>taking the standard oath of allegiance under R.A. 9225 does not satisfy the requirement to renounce foreign citizenship</u></strong></span>. To qualify for elective public office, a dual citizen must execute a <span class="c-green"><strong><u>separate, sworn, and unambiguous renunciation of their foreign citizenship at or before the filing of the COC</u></strong></span>. <span class="c-rust"><strong><u>Failure to make this timely renunciation disqualifies the candidate, making their election void.</u></strong></span></li>
+  </ul>
+
+  <h4 id="voter-registration-district" class="c-navy">3. Voter Registration and District Representation</h4>
+
+  <ul>
+    <li><strong>Barangay Officials:</strong> Must be registered voters in the specific barangay where they run.</li>
+    <li><strong>Municipal and City Officials:</strong> Must be registered voters within the municipality or city.</li>
+    <li><strong>Legislative District Councilors and Provincial Board Members:</strong> When a city, municipality, or province is divided into legislative districts (such as the First and Second Districts of La Union), candidates for the Sanggunian must be registered voters <span class="c-green"><strong><u>within the specific district</u></strong></span> they seek to represent. <span class="c-rust"><strong><u>A registered voter in the First District cannot run for Sangguniang Panlalawigan member in the Second District.</u></strong></span></li>
+    <li><strong>Provincial Governors and Vice-Governors:</strong> May be registered voters anywhere within the territorial boundaries of the province.</li>
+  </ul>
+
+  <h4 id="age-qualifications-election-day" class="c-navy">4. Age Qualifications: The Election Day Rule</h4>
+
+  <p>Under <span class="c-teal">Section 39</span>, age requirements are measured strictly on <span class="c-green"><strong><u>election day</u></strong></span>, not on the date the COC is filed or the date the official assumes office:</p>
+
+  <ul>
+    <li><strong>The Historical Ninoy Aquino Precedent:</strong> Under the 1935 Constitution, candidates for the Senate had to be at least 35 years old. Benigno "Ninoy" Aquino, Jr. ran for the Senate when he was 34 years old on election day, turning 35 only on the day he took his oath of office. Because the prior constitutional text was unclear on whether the age requirement applied to the election or to taking office, his qualification was challenged.</li>
+    <li><strong>The Current Codal Standard:</strong> To prevent similar disputes, the Local Government Code clearly states that the candidate must meet the required age <span class="c-green"><strong><u>on the day of the election</u></strong></span>. <span class="c-rust"><strong><u>Meeting the age requirement on the day of taking office or the date of filing the COC is irrelevant; age is determined by the candidate's exact age on election day.</u></strong></span></li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Local Elective Office</th>
+        <th>Minimum Age Rule</th>
+        <th>Codal &amp; Statutory Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Governor, Vice-Governor, Member of the Sangguniang Panlalawigan</strong></td>
+        <td><span class="c-green"><strong><u>At least 23 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(a), Local Government Code</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Mayor, Vice-Mayor, Member of the Sangguniang Panlungsod of Highly Urbanized Cities (HUCs)</strong></td>
+        <td><span class="c-green"><strong><u>At least 23 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(a), Local Government Code</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Mayor, Vice-Mayor of Independent Component Cities, Component Cities, and Municipalities</strong></td>
+        <td><span class="c-green"><strong><u>At least 21 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(b), Local Government Code</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Member of the Sangguniang Bayan or Sangguniang Panlungsod of Component Cities</strong></td>
+        <td><span class="c-green"><strong><u>At least 18 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(c), Local Government Code</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Punong Barangay and Member of the Sangguniang Barangay</strong></td>
+        <td><span class="c-green"><strong><u>At least 18 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(d), Local Government Code</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Sangguniang Kabataan (SK) Officials (Chairman and Kagawad)</strong></td>
+        <td><span class="c-green"><strong><u>At least 15 but not more than 30 years of age on ELECTION DAY.</u></strong></span></td>
+        <td><span class="c-teal">Section 39(e), LGC</span>; as amended by <span class="c-teal">Republic Act No. 10742 (SK Reform Act of 2015)</span>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration:</strong> An individual born on May 10, 2004 runs for Sangguniang Bayan member in an election held on May 9, 2022. The candidate was 17 years and 364 days old on election day, turning 18 the following day. Although the candidate was 18 years old when the canvass finished and when the term of office began on June 30, the candidate was not qualified. Because <span class="c-teal">Section 39(c)</span> requires candidates to be at least 18 years old on the day of the election, the candidate was disqualified, and their election is void.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="administrative-matters" class="c-navy">Administrative Matters &amp; Professor's Asides</h3>
+
+  <h4 id="course-instructions-exam" class="c-navy">1. Course Instructions &amp; Examination Architecture</h4>
+
+  <ul>
+    <li><strong>Upcoming Assessment Schedule:</strong> A 20-question objective examination or a formal 15-point oral recitation will be conducted next meeting, covering <span class="c-teal"><strong>Sections 40 through 59</strong> of the Local Government Code of 1991</span>.</li>
+    <li><strong>Scope of Examination (<span class="c-teal">Sections 40 to 59</span>):</strong>
+      <ul>
+        <li><strong><span class="c-teal">Section 40</span>:</strong> Grounds for Disqualification of Elective Local Officials (including fugitive status, dual citizenship, final criminal convictions, and dual allegiance).</li>
+        <li><strong><span class="c-teal">Sections 41–43</span>:</strong> Elective Local Officials, Term of Office, and the Three-Term Limit Rule.</li>
+        <li><strong><span class="c-teal">Sections 44–47</span>:</strong> Permanent and Temporary Vacancies, Succession Rules for Local Executives, and Appointments to Sanggunian Vacancies.</li>
+        <li><strong><span class="c-teal">Sections 48–59</span>:</strong> Local Legislation, Approval Mechanisms, Veto Powers of Local Chief Executives, Review of Ordinances by Higher-Level Sanggunians, and the Enforcement of Ultra Vires Sanctions.</li>
+      </ul>
+    </li>
+    <li><strong>Examination Mechanics:</strong> The examination will be administered <strong>face-to-face</strong> using traditional <strong>Blue Books</strong>. Students must bring standard blue books; digital examination platforms (such as Google Forms or ExamSoft) will not be used for this assessment.</li>
+  </ul>
+
+  <h4 id="practical-insights-asides" class="c-navy">2. Practical Insights &amp; Classroom Asides</h4>
+
+  <ul>
+    <li><strong>The Reality of Local Campaigns:</strong> The professor highlighted the sharp difference between running for single-seat executive posts (Governor, Mayor) and multi-seat legislative posts (Sangguniang Panlalawigan, Sangguniang Bayan). Executive races demand extensive personal campaign machinery, significant private resources, and strong local coalitions.</li>
+    <li><strong>The Sangguniang Kabataan as a Political Stepping Stone:</strong> The SK system often serves as a farm system for national politics. Former SK Federation Presidents who became ex-officio members of local municipal councils or provincial boards have used that foundation to advance to city hall, the provincial capitol, and the House of Representatives.</li>
+    <li><strong>Civic Responsibility and Legal Accountability:</strong> Drawing on experiences as an OIC Municipal Mayor and Provincial Legal Officer, the professor emphasized that young attorneys must hold public office with integrity. Good governance requires mastering both administrative law and the statutory procedures of the Local Government Code to safeguard public funds, prevent ultra vires actions, and protect local autonomy.</li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 4.0);
+    container.dataset.scale = scale;
+    container.style.transformOrigin = scale > 1 ? 'top left' : 'top center';
+    container.style.transform = `scale(${scale})`;
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.style.transformOrigin = 'top center';
+    container.style.transform = 'scale(1)';
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+</script>
+</body>
+</html>
