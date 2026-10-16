@@ -84,12 +84,15 @@ Every document must begin with a sleek, sticky navigation bar pinned to the top 
 
 ---
 
-### OUTPUT FORMAT: DIRECT HTML FILE GENERATION (ZERO CHAT CODE DUMPS)
+### OUTPUT FORMAT: DIRECT HTML FILE GENERATION & AUTOMATIC GITHUB PAGES PUBLISHING (ZERO CHAT CODE DUMPS)
 
 - **FASTEST WORKFLOW RULE (CRITICAL):**
   - **NEVER** output raw HTML code blocks, markdown fences, or massive walls of code into the chat conversation. Streaming hundreds of lines of code into chat wastes valuable time.
-  - **ALWAYS write the complete standalone HTML document directly to a `.html` file** in the project directory using file write tools (e.g., `c:\Users\IP Gaming 3\Desktop\HTML-izer\<filename>.html`, naming it appropriately based on the topic like `local-government-code.html`, `civil-code-art-33.html`, or `reviewer.html`).
-  - In the chat response, provide **ONLY a concise confirmation** with a clickable link to the generated file (e.g., `Done! Saved to [local-government-code.html](file:///c:/Users/IP%20Gaming%203/Desktop/HTML-izer/local-government-code.html)`).
+  - **ALWAYS write the complete standalone HTML document directly to a `.html` file** in the project directory using file write tools (e.g., `c:\Users\IP Gaming 3\Desktop\HTML-izer\<filename>.html`, naming it appropriately in lowercase kebab-case based on the topic like `local-government-code.html`, `civil-code-art-33.html`, or `reviewer.html`).
+  - **AUTOMATIC GITHUB PAGES DEPLOYMENT:** Immediately after writing or updating the `.html` file, run `git add <filename>.html && git commit -m "Publish <filename>.html" && git push` in `c:\Users\IP Gaming 3\Desktop\HTML-izer` so the note is automatically published to GitHub Pages.
+  - In the chat response, provide **ONLY a concise confirmation** with:
+    1. A clickable local file link (e.g., `[<filename>.html](file:///c:/Users/IP%20Gaming%203/Desktop/HTML-izer/<filename>.html)`)
+    2. The live shareable GitHub Pages URL: `https://gabrielgalamiton-sketch.github.io/HTML-izer/<filename>.html`
 - **HTML Specifications for the Output File:**
   - Standard, complete HTML5 document (`<!DOCTYPE html><html>...</html>`).
   - Do NOT use raw Markdown markers (`#`, `**`, `*`, `---`) inside the HTML body—use valid semantic HTML tags (`<h1>`, `<h3>`, `<h4>`, `<ul>`, `<ol>`, `<li>`, `<strong>`, `<u>`, `<em>`, `<blockquote>`, `<hr>`).
