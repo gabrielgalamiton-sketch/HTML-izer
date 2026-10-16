@@ -88,31 +88,6 @@ li {
   margin-bottom: 0.4rem;
 }
 
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.92rem;
-}
-
-th, td {
-  border: 1px solid #CBD5E1;
-  padding: 0.7rem 0.9rem;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background-color: #F1F5F9;
-  color: #1E3A8A;
-  font-weight: 700;
-}
-
-tr:nth-child(even) {
-  background-color: #F8FAFC;
-}
-
 /* Sticky Topic Navigation */
 .sticky-nav {
   position: sticky;
@@ -161,7 +136,139 @@ blockquote {
   font-style: italic;
 }
 
-/* Interactive Diagram Wrapper, Zoom & Fullscreen Toolbar */
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
 .diagram-wrapper {
   margin: 2rem 0;
   border: 1px solid #CBD5E1;
@@ -190,12 +297,19 @@ blockquote {
   background: #F8FAFC;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
 }
 .diagram-label {
   font-size: 0.75rem;
   font-weight: 700;
   color: #1E3A8A;
   letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
 }
 .diagram-controls {
   display: flex;
@@ -222,11 +336,20 @@ blockquote {
   border-color: #1E3A8A;
 }
 .diagram-viewport {
-  overflow: auto;
-  max-height: 70vh;
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
   padding: 1.5rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
 }
 .diagram-wrapper.is-fullscreen .diagram-viewport {
   flex: 1;
@@ -235,10 +358,13 @@ blockquote {
   padding: 2rem;
 }
 .diagram-container {
-  margin: auto;
   display: inline-block;
-  transform-origin: top center;
-  transition: transform 0.15s ease-in-out;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
 }
 .diagram-wrapper.is-fullscreen .diagram-container svg {
   max-width: none !important;
@@ -315,8 +441,33 @@ blockquote {
 <div class="document-container">
 
   <h1 id="doc-header">[<strong>0919</strong>]</h1>
-  <h1 id="part-1-link"><a href="https://share.gemini.google/lQhGEoWyHA8l" class="c-navy">PART 1: MUNICIPAL TORT LIABILITY, PRESIDENTIAL GENERAL SUPERVISION, AND THE REGIONAL ADMINISTRATIVE HIERARCHY</a></h1>
   <h1 id="part-1">PART 1: MUNICIPAL TORT LIABILITY, PRESIDENTIAL GENERAL SUPERVISION, AND THE REGIONAL ADMINISTRATIVE HIERARCHY</h1>
+
+  <!-- Part 1 Section Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">TORT LIABILITY</div>
+        <div class="ui-sub">Sec. 24, LGC &amp; Art. 2189, Civil Code</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">SUPERVISION VS. CONTROL</div>
+        <div class="ui-sub">Sec. 25, LGC &amp; Art. X, Sec. 4, Const.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">SUPERVISORY TIERS</div>
+        <div class="ui-sub">Direct, Indirect &amp; Sui Generis Pateros</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">REGIONAL AUTONOMY</div>
+        <div class="ui-sub">Autonomous vs. Administrative Regions</div>
+      </div>
+    </div>
+  </div>
 
   <h3 id="part-1-overview" class="c-navy">Part 1 Overview &amp; Scope of Topics</h3>
   <ul>
@@ -361,6 +512,21 @@ blockquote {
 
   <p>Under Philippine administrative and municipal corporation law, local government units (LGUs) exercise a dual character:</p>
 
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">Public / Governmental</div>
+        <div class="ui-sub">Agent of the State exercising sovereign powers (police power, eminent domain, taxation)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏢</div>
+        <div class="ui-title">Private / Proprietary</div>
+        <div class="ui-sub">Separate corporate personality acting for local convenience, utility, or economic advantage</div>
+      </div>
+    </div>
+  </div>
+
   <ol>
     <li><strong>Public or Governmental Character:</strong> The LGU acts as an agent and political subdivision of the State, exercising delegated sovereign attributes such as police power, eminent domain, and taxation to promote general welfare, health, public order, and safety.</li>
     <li><strong>Private, Proprietary, or Corporate Character:</strong> The LGU acts as a separate legal personality exercising special corporate powers for its own private advantage, convenience, or utility, akin to a private business or utility corporation.</li>
@@ -374,7 +540,7 @@ blockquote {
 
   <p>This codal rule codifies the doctrine that <span class="c-green"><strong><u>local autonomy does not confer sovereign immunity against tortious conduct or gross neglect</u></strong></span>. When an LGU exercises public or governmental functions, it generally incurs no tort liability at common law, except where a statute expressly waives that immunity. Conversely, when exercising corporate or proprietary functions, an LGU is held to the same standard of accountability and tort liability as any private corporation under the Civil Code.</p>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Basis of Comparison</th>
@@ -406,42 +572,6 @@ blockquote {
     </tbody>
   </table>
 
-  <div class="diagram-wrapper">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
-    </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  LGU["LOCAL GOVERNMENT UNIT (Sec. 24, R.A. 7160)"]
-  LGU --> GOV["Governmental / Public Functions<br/>(Agent of the State)"]
-  LGU --> PROP["Proprietary / Corporate Functions<br/>(Private Advantage / Utility)"]
-
-  GOV --> GOV_GEN["General Rule:<br/>State Immunity Applies"]
-  GOV --> GOV_EXC["Statutory Exception (Art. 2189, Civil Code):<br/>Defective Roads, Streets, Bridges & Public Works<br/>under LGU Control or Supervision"]
-  GOV_EXC --> LIAB_2189["LGU Liable (Ownership Irrelevant;<br/>Control/Supervision Governs)"]
-
-  PROP --> PROP_AUTH["Within Corporate Powers:<br/>LGU Liable under Civil Code (Arts. 2176, 2180)"]
-  PROP --> PROP_ULTRA["Ultra Vires / Bad Faith / Malice:<br/>Officials Personally Liable (Torio v. Fontanilla)"]
-
-  style LGU fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
-  style GOV fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style PROP fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style GOV_EXC fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
-  style LIAB_2189 fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
-  style PROP_ULTRA fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
-        </pre>
-      </div>
-    </div>
-  </div>
-
   <h4 id="defective-public-works" class="c-navy">2. Defective Public Works, Streets, and Infrastructures: <span class="c-teal">Article 2189 of the Civil Code</span></h4>
 
   <p>A critical statutory exception to governmental immunity is provided under <span class="c-teal">Article 2189 of the Civil Code of the Philippines</span>:</p>
@@ -451,6 +581,21 @@ flowchart TD
   </blockquote>
 
   <p>Under <span class="c-teal">Article 2189</span>, liability attaches by operation of law upon proof of two essential conditions:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚠️</div>
+        <div class="ui-title">Defective Condition</div>
+        <div class="ui-sub">Road, street, bridge, public building, or public work is hazardous or unrepaired</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">Control or Supervision</div>
+        <div class="ui-sub">Infrastructure is within LGU control/supervision (ownership is NOT required)</div>
+      </div>
+    </div>
+  </div>
 
   <ol>
     <li>The road, street, bridge, public building, or public work had a <span class="c-green"><strong><u>defective, hazardous, or unrepaired condition</u></strong></span>.</li>
@@ -496,11 +641,11 @@ flowchart TD
 
   <div class="diagram-wrapper">
     <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
       <div class="diagram-controls">
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
         <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
       </div>
     </div>
@@ -552,7 +697,7 @@ flowchart TD
     <li><strong>Inapplicability of Alter Ego Principle to LGUs:</strong> Local elective officials are <span class="c-rust"><strong><u>not</u></strong></span> alter egos of the President. They derive their authority directly from the electorate and statutory delegations of the legislature under the Constitution, enjoying constitutionally guaranteed local autonomy.</li>
   </ul>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Point of Distinction</th>
@@ -601,6 +746,31 @@ flowchart TD
 
   <p><span class="c-teal">Section 25 of the Local Government Code</span> establishes a stratified hierarchy through which the President executes supervisory powers. The President exercises <span class="c-green"><strong><u>direct</u></strong></span> general supervision exclusively over the following tiers:</p>
 
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🗺️</div>
+        <div class="ui-title">Provinces</div>
+        <div class="ui-sub">Direct Presidential supervision</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏙️</div>
+        <div class="ui-title">HUCs &amp; ICCs</div>
+        <div class="ui-sub">Independent of the province (Secs. 451–452, LGC)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">BARMM</div>
+        <div class="ui-sub">Autonomous Regional Executive Authority</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📍</div>
+        <div class="ui-title">Pateros</div>
+        <div class="ui-sub">Sui generis municipality (no mother province)</div>
+      </div>
+    </div>
+  </div>
+
   <ol>
     <li><strong>Provinces;</strong></li>
     <li><strong>Highly Urbanized Cities (HUCs):</strong> Cities with a minimum population of 200,000 inhabitants and an annual income of at least Fifty Million Pesos (₱50,000,000.00) based on 1991 constant prices (<span class="c-teal">Sec. 452, LGC</span>), which are legally independent of the province;</li>
@@ -614,11 +784,11 @@ flowchart TD
 
   <div class="diagram-wrapper">
     <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
       <div class="diagram-controls">
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
         <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
       </div>
     </div>
@@ -708,7 +878,7 @@ flowchart TD
     <li><strong>No Plebiscite Required:</strong> Because an administrative region is established merely for executive coordination and administrative decentralization of national line agencies, <span class="c-green"><strong><u>its creation or alteration does not require a plebiscite under Article X, Section 10 of the Constitution</u></strong></span> (<span class="c-burgundy"><em>Chiongbian v. Orbos</em>, G.R. No. 96754</span>). It is established through executive orders issued pursuant to the President’s constitutional power of administrative reorganization.</li>
   </ul>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Feature</th>
@@ -754,6 +924,32 @@ flowchart TD
   <hr>
 
   <h1 id="part-2">PART 2: QUORUM DYNAMICS, ENVIRONMENTAL CONSULTATION, POLICE SUPERVISION, AND INTER-LOCAL RELATIONS</h1>
+
+  <!-- Part 2 Section Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">QUORUM DYNAMICS</div>
+        <div class="ui-sub">Art. VI, Sec. 16(2) &amp; Avelino v. Cuenco</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">PRIOR CONSULTATION</div>
+        <div class="ui-sub">Secs. 26–27, LGC &amp; Sanggunian Approval</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">POLICE SUPERVISION</div>
+        <div class="ui-sub">Sec. 28, LGC &amp; NAPOLCOM Deputation</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">INTER-LOCAL REVIEW</div>
+        <div class="ui-sub">Secs. 29–30, LGC Executive Order Review</div>
+      </div>
+    </div>
+  </div>
 
   <h3 id="part-2-overview" class="c-navy">Part 2 Overview &amp; Scope of Topics</h3>
   <ul>
@@ -825,7 +1021,7 @@ flowchart TD
     <li><strong>The Impeachment Trial Baseline:</strong> Under <span class="c-teal">Article XI, Section 3(6) of the Constitution</span>, no person shall be convicted in an impeachment trial without the concurrence of <span class="c-green"><strong><u>two-thirds of all the Members of the Senate</u></strong></span>. A key constitutional debate centers on whether "all the Members" refers strictly to the theoretical 24 seats, or to the actual sitting members who are legally capable of attending, hearing evidence, and casting their votes as senator-judges.</li>
   </ol>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Status of Member</th>
@@ -874,35 +1070,41 @@ flowchart TD
     <li><strong><span class="c-teal">Section 27 (Prior Consultations Required)</span>:</strong> No project or program shall be implemented by government authorities unless the consultations mentioned in <span class="c-teal">Sections 2(c) and 26</span> are conducted, and the <span class="c-green"><strong><u>prior approval of the Sanggunian concerned</u></strong></span> is obtained.</li>
   </ul>
 
-  <div class="diagram-wrapper">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- Stacked Step-by-Step Workflow with Binary Split Outcome (Yes / No) -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker">STATUTORY CONSULTATION WORKFLOW</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  START["STATUTORY CONSULTATION WORKFLOW"] --> PLAN["PLANNING PHASE OF PROPOSED PROJECT<br/>(National Agency / Proponent drafts engineering and environmental plans)"]
-  PLAN --> CONSULT["MANDATORY INTER-SECTORAL CONSULTATION<br/>(Public hearings conducted with LGU officials, NGOs, POs, and communities)"]
-  CONSULT --> SUBMIT["SUBMISSION TO LOCAL SANGGUNIAN CONCERNED<br/>(Detailed environmental, economic, and social impact assessments submitted)"]
-  SUBMIT --> DELIB["SANGGUNIAN DELIBERATION AND ACTION VIA ORDINANCE / RESO"]
-  DELIB --> APP["APPROVED<br/>(Project proceeds to implementation)"]
-  DELIB --> REJ["REJECTED<br/>(Project is legally barred;<br/>implementation is ultra vires)"]
-
-  style START fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
-  style PLAN fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style CONSULT fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style SUBMIT fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style DELIB fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
-  style APP fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
-  style REJ fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
-        </pre>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">PLANNING PHASE OF PROPOSED PROJECT</div>
+      <div class="ui-sub">(National Agency / Proponent drafts engineering and environmental plans)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">MANDATORY INTER-SECTORAL CONSULTATION</div>
+      <div class="ui-sub">(Public hearings conducted with LGU officials, NGOs, POs, and communities)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">SUBMISSION TO LOCAL SANGGUNIAN CONCERNED</div>
+      <div class="ui-sub">(Detailed environmental, economic, and social impact assessments submitted)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">SANGGUNIAN DELIBERATION AND ACTION VIA ORDINANCE / RESO</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">APPROVED</div>
+        <div class="ui-sub">(Project proceeds to implementation)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">REJECTED</div>
+        <div class="ui-sub">(Project is legally barred; implementation is ultra vires)</div>
       </div>
     </div>
   </div>
@@ -968,7 +1170,7 @@ flowchart TD
     <li>In <span class="c-burgundy"><em>Soriano v. Lista</em> (G.R. No. 153881)</span>, the Supreme Court held that <span class="c-green"><strong><u>promotions of PCG flag officers (Commodores and Admirals) do not require CA confirmation</u></strong></span>, as the PCG is a civilian maritime service under the DOTr, not a military branch.</li>
   </ul>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Feature</th>
@@ -1033,11 +1235,11 @@ flowchart TD
 
   <div class="diagram-wrapper">
     <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
       <div class="diagram-controls">
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
         <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
       </div>
     </div>
@@ -1086,6 +1288,32 @@ flowchart TD
   <hr>
 
   <h1 id="part-3">PART 3: LEGAL ADVISORY SYSTEMS, INTER-LGU COOPERATION, NGO ACCREDITATION, AND ELECTIVE QUALIFICATIONS</h1>
+
+  <!-- Part 3 Section Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">LEGAL OPINIONS</div>
+        <div class="ui-sub">Secs. 31–32, LGC Advisory Hierarchy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">INTER-LGU COOPERATION</div>
+        <div class="ui-sub">Sec. 33, LGC Extra-Territorial Funds</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">NGOs &amp; SPECIAL BODIES</div>
+        <div class="ui-sub">Secs. 34–38, LGC Accreditation &amp; BAC</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XII</div>
+        <div class="ui-kicker">QUALIFICATIONS</div>
+        <div class="ui-sub">Sec. 39, LGC, R.A. 9225 &amp; Age Matrix</div>
+      </div>
+    </div>
+  </div>
 
   <h3 id="part-3-overview" class="c-navy">Part 3 Overview &amp; Scope of Topics</h3>
   <ul>
@@ -1151,11 +1379,11 @@ flowchart TD
 
   <div class="diagram-wrapper">
     <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
       <div class="diagram-controls">
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
         <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
       </div>
     </div>
@@ -1215,11 +1443,11 @@ flowchart TD
 
   <div class="diagram-wrapper">
     <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
       <div class="diagram-controls">
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
         <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
         <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
       </div>
     </div>
@@ -1305,6 +1533,31 @@ flowchart TD
 
   <p>Under <span class="c-teal">Section 39 of the Local Government Code</span>:</p>
 
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🇵🇭</div>
+        <div class="ui-title">Citizenship</div>
+        <div class="ui-sub">Citizen of the Philippines</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🗳️</div>
+        <div class="ui-title">Registered Voter</div>
+        <div class="ui-sub">In the locality or district where running</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏠</div>
+        <div class="ui-title">1-Year Residency</div>
+        <div class="ui-sub">Immediately preceding election day</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📖</div>
+        <div class="ui-title">Literacy</div>
+        <div class="ui-sub">Read &amp; write Filipino or local language/dialect</div>
+      </div>
+    </div>
+  </div>
+
   <ol>
     <li><strong>Citizenship:</strong> Must be a <span class="c-green"><strong><u>citizen of the Philippines</u></strong></span>.</li>
     <li><strong>Electoral Registration:</strong> Must be a <span class="c-green"><strong><u>registered voter</u></strong></span> in the barangay, municipality, city, province, or district where the candidate intends to run.</li>
@@ -1314,40 +1567,42 @@ flowchart TD
 
   <h4 id="dual-citizenship-renunciation" class="c-navy">2. Dual Citizenship vs. Dual Allegiance: Renunciation Mandate</h4>
 
-  <div class="diagram-wrapper">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM VIEW</span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- Stacked Step-by-Step Workflow with Binary Split Outcome (Yes / No) -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker">CITIZENSHIP COMPLIANCE PIPELINE</div>
+      <div class="ui-sub">(Under R.A. 9225 and Section 39, Local Government Code)</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  TOP["CITIZENSHIP COMPLIANCE PIPELINE<br/>(Under R.A. 9225 and Section 39, Local Government Code)"]
-  TOP --> STEP1["FILIPINO CITIZEN ACQUIRES FOREIGN CITIZENSHIP<br/>(Dual Citizen Status)"]
-  STEP1 --> STEP2["REACQUIRES PHILIPPINE CITIZENSHIP VIA R.A. 9225<br/>(Takes Oath of Allegiance to the Philippines)"]
-  STEP2 --> STEP3["INTENDS TO RUN FOR LOCAL ELECTIVE OFFICE"]
-  STEP3 --> STEP4["MANDATORY PERSONAL AND SWORN RENUNCIATION OF<br/>ALL FOREIGN CITIZENSHIPS<br/>(Must be executed BEFORE or AT THE TIME of filing the COC)"]
-
-  STEP4 --> TIMELY["TIMELY FILED<br/>(Personal Renunciation done<br/>prior to COC filing)"]
-  STEP4 --> FAILED["FAILED TO FILE<br/>(No formal, sworn renunciation<br/>made prior to COC filing)"]
-
-  TIMELY --> QUAL["QUALIFIED AS CANDIDATE<br/>(Sobejana-Condon v. COMELEC)"]
-  FAILED --> DISQ["DISQUALIFIED FROM OFFICE<br/>(Ultra vires candidacy)"]
-
-  style TOP fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
-  style STEP1 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style STEP2 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style STEP3 fill:#0F766E,color:#FFFFFF,stroke:#0F766E,stroke-width:2px
-  style STEP4 fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
-  style QUAL fill:#166534,color:#FFFFFF,stroke:#166534,stroke-width:2px
-  style DISQ fill:#C2410C,color:#FFFFFF,stroke:#C2410C,stroke-width:2px
-        </pre>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">FILIPINO CITIZEN ACQUIRES FOREIGN CITIZENSHIP</div>
+      <div class="ui-sub">(Dual Citizen Status)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">REACQUIRES PHILIPPINE CITIZENSHIP VIA R.A. 9225</div>
+      <div class="ui-sub">(Takes Oath of Allegiance to the Philippines)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">INTENDS TO RUN FOR LOCAL ELECTIVE OFFICE</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">MANDATORY PERSONAL AND SWORN RENUNCIATION OF ALL FOREIGN CITIZENSHIPS</div>
+      <div class="ui-sub">(Must be executed BEFORE or AT THE TIME of filing the COC)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">TIMELY FILED</div>
+        <div class="ui-sub">(Personal Renunciation done prior to COC filing) → <strong>QUALIFIED AS CANDIDATE</strong> (<em>Sobejana-Condon v. COMELEC</em>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">FAILED TO FILE</div>
+        <div class="ui-sub">(No formal, sworn renunciation made prior to COC filing) → <strong>DISQUALIFIED FROM OFFICE</strong> (<em>Ultra vires</em> candidacy)</div>
       </div>
     </div>
   </div>
@@ -1384,7 +1639,7 @@ flowchart TD
     <li><strong>The Current Codal Standard:</strong> To prevent similar disputes, the Local Government Code clearly states that the candidate must meet the required age <span class="c-green"><strong><u>on the day of the election</u></strong></span>. <span class="c-rust"><strong><u>Meeting the age requirement on the day of taking office or the date of filing the COC is irrelevant; age is determined by the candidate's exact age on election day.</u></strong></span></li>
   </ul>
 
-  <table>
+  <table class="ui-table">
     <thead>
       <tr>
         <th>Local Elective Office</th>
@@ -1474,30 +1729,45 @@ flowchart TD
   });
 </script>
 <script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
   function zoomDiagram(btn, delta) {
     const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
     let scale = parseFloat(container.dataset.scale || '1');
-    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 4.0);
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
     container.dataset.scale = scale;
-    container.style.transformOrigin = scale > 1 ? 'top left' : 'top center';
-    container.style.transform = `scale(${scale})`;
+    updateDiagramTransform(container);
   }
 
   function resetDiagramZoom(btn) {
     const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
     container.dataset.scale = '1';
-    container.style.transformOrigin = 'top center';
-    container.style.transform = 'scale(1)';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
   }
 
   function toggleDiagramFullscreen(btn) {
     const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
     const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
 
     wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
     btn.textContent = enteringFullscreen ? '✕' : '⛶';
     btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
     document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
 
     if (enteringFullscreen && wrapper.requestFullscreen) {
       wrapper.requestFullscreen().catch(() => {});
@@ -1509,6 +1779,12 @@ flowchart TD
   function exitAllDiagramFullscreens() {
     document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
       wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
       const btn = wrapper.querySelector('.fullscreen-btn');
       if (btn) {
         btn.textContent = '⛶';
@@ -1529,6 +1805,81 @@ flowchart TD
       exitAllDiagramFullscreens();
     }
   });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
 </script>
 </body>
 </html>
