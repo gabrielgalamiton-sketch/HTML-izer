@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOCAL GOVERNMENT CODE — CONSOLIDATED QUICK REVIEWER</title>
+  <style>
+    /* Document container and typography */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1F2937;
+      background-color: #F8FAFC;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .document-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #FFFFFF;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #1E3A8A;
+      text-transform: uppercase;
+      font-size: 1.75rem;
+      font-weight: 800;
+      border-bottom: 3px solid #1E3A8A;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0F766E;
+      margin-bottom: 0.25rem;
+    }
+    .meta-note {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #64748B;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: #1E3A8A;
+      font-size: 1.35rem;
+      font-weight: 700;
+      border-bottom: 2px solid #CBD5E1;
+      padding-bottom: 0.35rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #1E3A8A;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    h4 {
+      color: #1E3A8A;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #E2E8F0;
+      margin: 2rem 0;
+    }
+    ul, ol {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding-left: 1.75rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    /* Sticky Topic Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1E3A8A;
+      color: #FFFFFF;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nav-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .nav-dropdown {
+      flex-grow: 1;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      border: 1px solid #CBD5E1;
+      background-color: #FFFFFF;
+      color: #1F2937;
+    }
+    /* Color Classes */
+    .c-navy { color: #1E3A8A; }
+    .c-teal { color: #0F766E; }
+    .c-green { color: #166534; }
+    .c-burgundy { color: #991B1B; }
+    .c-rust { color: #C2410C; }
+    blockquote {
+      border-left: 4px solid #C2410C;
+      margin: 1.5rem 0;
+      padding: 0.8rem 1.2rem;
+      background: #FFF7ED;
+      font-style: italic;
+    }
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid #CBD5E1;
+      padding: 0.65rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #F1F5F9;
+      color: #1E3A8A;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background-color: #F8FAFC;
+    }
+    /* Interactive Diagram Wrapper & Zoom Toolbar */
+    .diagram-wrapper {
+      margin: 2rem 0;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      background: #FFFFFF;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .diagram-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #F8FAFC;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .diagram-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1E3A8A;
+      letter-spacing: 0.05em;
+    }
+    .diagram-controls {
+      display: flex;
+      gap: 0.35rem;
+    }
+    .zoom-btn {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #1E3A8A;
+      font-weight: bold;
+      font-size: 0.85rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .zoom-btn:hover {
+      background: #1E3A8A;
+      color: #FFFFFF;
+      border-color: #1E3A8A;
+    }
+    .diagram-viewport {
+      overflow: auto;
+      max-height: 70vh;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: #FFFFFF;
+    }
+    .diagram-container {
+      display: inline-block;
+      transform-origin: top center;
+      transition: transform 0.15s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#how-to-read-this-reviewer">HOW TO READ THIS REVIEWER (THE BIG PICTURE)</option>
+      <option value="#part-i-constitutional-foundations">PART I. CONSTITUTIONAL FOUNDATIONS</option>
+      <option value="#part-i-a">&nbsp;&nbsp;↳ A. Territorial and Political Subdivisions (Art. X, Sec. 1)</option>
+      <option value="#part-i-b">&nbsp;&nbsp;↳ B. Local Autonomy: Two Kinds of Decentralization</option>
+      <option value="#part-i-c">&nbsp;&nbsp;↳ C. Supervision vs. Control (Art. X, Sec. 4; Sec. 25, LGC)</option>
+      <option value="#part-i-d">&nbsp;&nbsp;↳ D. Autonomous Regions (Art. X, Secs. 15–21)</option>
+      <option value="#part-i-e">&nbsp;&nbsp;↳ E. Metropolitan Political Subdivisions (Art. X, Sec. 11)</option>
+      <option value="#part-ii-local-government-code">PART II. THE LOCAL GOVERNMENT CODE: ENACTMENT, POLICY, PRINCIPLES, SCOPE, AND CONSTRUCTION</option>
+      <option value="#part-ii-a">&nbsp;&nbsp;↳ A. Enactment and Effectivity</option>
+      <option value="#part-ii-b">&nbsp;&nbsp;↳ B. Declaration of Policy (Sec. 2)</option>
+      <option value="#part-ii-c">&nbsp;&nbsp;↳ C. The Thirteen Operative Principles of Decentralization (Sec. 3[a]–[m])</option>
+      <option value="#part-ii-d">&nbsp;&nbsp;↳ D. Scope of Application (Sec. 4)</option>
+      <option value="#part-ii-e">&nbsp;&nbsp;↳ E. Rules of Interpretation (Sec. 5)</option>
+      <option value="#part-iii-creation-conversion">PART III. CREATION, CONVERSION, DIVISION, MERGER, AND ABOLITION OF LGUs (Secs. 6–14)</option>
+      <option value="#part-iii-a">&nbsp;&nbsp;↳ A. Authority to Create (Sec. 6)</option>
+      <option value="#part-iii-b">&nbsp;&nbsp;↳ B. Procedure for Creation</option>
+      <option value="#part-iii-c">&nbsp;&nbsp;↳ C. Criteria for Creation (Sec. 7; Secs. 386, 442, 450, 461)</option>
+      <option value="#part-iii-d">&nbsp;&nbsp;↳ D. Classification of Cities</option>
+      <option value="#part-iii-e">&nbsp;&nbsp;↳ E. Division and Merger (Sec. 8); Abolition (Sec. 9)</option>
+      <option value="#part-iii-f">&nbsp;&nbsp;↳ F. Plebiscite Requirement (Art. X, Sec. 10; Sec. 10, LGC)</option>
+      <option value="#part-iii-g">&nbsp;&nbsp;↳ G. Seat of Government, Government Center, Naming (Secs. 11–13)</option>
+      <option value="#part-iii-h">&nbsp;&nbsp;↳ H. Beginning of Corporate Existence (Sec. 14)</option>
+      <option value="#part-iv-powers-of-lgus">PART IV. POWERS OF LGUs (Secs. 15–24)</option>
+      <option value="#part-iv-a">&nbsp;&nbsp;↳ A. Dual Nature of LGUs (Sec. 15)</option>
+      <option value="#part-iv-b">&nbsp;&nbsp;↳ B. Delegated Inherent Powers</option>
+      <option value="#part-iv-c">&nbsp;&nbsp;↳ C. General Welfare Clause (Sec. 16)</option>
+      <option value="#part-iv-d">&nbsp;&nbsp;↳ D. Basic Services and Facilities (Sec. 17)</option>
+      <option value="#part-iv-e">&nbsp;&nbsp;↳ E. Power to Generate and Apply Resources (Sec. 18)</option>
+      <option value="#part-iv-f">&nbsp;&nbsp;↳ F. Eminent Domain (Sec. 19)</option>
+      <option value="#part-iv-g">&nbsp;&nbsp;↳ G. Reclassification of Agricultural Lands (Sec. 20)</option>
+      <option value="#part-iv-h">&nbsp;&nbsp;↳ H. Closure and Opening of Roads (Sec. 21)</option>
+      <option value="#part-iv-i">&nbsp;&nbsp;↳ I. Corporate Powers (Sec. 22)</option>
+      <option value="#part-iv-j">&nbsp;&nbsp;↳ J. Liability for Damages (Sec. 24; Art. 2189, Civil Code)</option>
+      <option value="#part-v-intergovernmental-relations">PART V. INTERGOVERNMENTAL RELATIONS (Secs. 25–38)</option>
+      <option value="#part-v-a">&nbsp;&nbsp;↳ A. National Supervision (Sec. 25) — Tiers of Supervision</option>
+      <option value="#part-v-b">&nbsp;&nbsp;↳ B. Ecological Balance & Prior Consultation (Secs. 26–27)</option>
+      <option value="#part-v-c">&nbsp;&nbsp;↳ C. Local Chief Executives and the Police (Sec. 28; R.A. 6975; R.A. 8551)</option>
+      <option value="#part-v-d">&nbsp;&nbsp;↳ D. Provincial Supervision; Review of Executive Orders (Secs. 29–30)</option>
+      <option value="#part-v-e">&nbsp;&nbsp;↳ E. Legal Questions (Sec. 31); Barangay Supervision (Sec. 32)</option>
+      <option value="#part-v-f">&nbsp;&nbsp;↳ F. Cooperative Undertakings (Sec. 33)</option>
+      <option value="#part-v-g">&nbsp;&nbsp;↳ G. NGOs, POs, Local Special Bodies, BAC (Secs. 34–38)</option>
+      <option value="#part-vi-elective-officials">PART VI. ELECTIVE OFFICIALS (Secs. 39–47)</option>
+      <option value="#part-vi-a">&nbsp;&nbsp;↳ A. Qualifications (Sec. 39)</option>
+      <option value="#part-vi-b">&nbsp;&nbsp;↳ B. Disqualifications (Sec. 40)</option>
+      <option value="#part-vi-c">&nbsp;&nbsp;↳ C. Manner of Election (Sec. 41)</option>
+      <option value="#part-vi-d">&nbsp;&nbsp;↳ D. Date of Election and Term of Office (Secs. 42–43)</option>
+      <option value="#part-vi-e">&nbsp;&nbsp;↳ E. Permanent Vacancies in Executive Offices (Sec. 44)</option>
+      <option value="#part-vi-f">&nbsp;&nbsp;↳ F. Permanent Vacancies in the Sanggunian (Sec. 45)</option>
+      <option value="#part-vi-g">&nbsp;&nbsp;↳ G. Temporary Vacancy in the Office of the LCE (Sec. 46)</option>
+      <option value="#part-vi-h">&nbsp;&nbsp;↳ H. Leaves of Absence (Sec. 47)</option>
+      <option value="#part-vii-local-legislation">PART VII. LOCAL LEGISLATION (Secs. 48–59)</option>
+      <option value="#part-vii-a">&nbsp;&nbsp;↳ A. Local Legislative Power (Sec. 48)</option>
+      <option value="#part-vii-b">&nbsp;&nbsp;↳ B. Presiding Officer (Sec. 49) and the Barangay's Parliamentary Setup</option>
+      <option value="#part-vii-c">&nbsp;&nbsp;↳ C. Internal Rules of Procedure (Sec. 50)</option>
+      <option value="#part-vii-d">&nbsp;&nbsp;↳ D. Full Disclosure of Financial and Business Interests (Sec. 51)</option>
+      <option value="#part-vii-e">&nbsp;&nbsp;↳ E. Sessions (Sec. 52)</option>
+      <option value="#part-vii-f">&nbsp;&nbsp;↳ F. Quorum (Sec. 53)</option>
+      <option value="#part-vii-g">&nbsp;&nbsp;↳ G. Approval of Ordinances (Sec. 54)</option>
+      <option value="#part-vii-h">&nbsp;&nbsp;↳ H. Veto Power (Sec. 55)</option>
+      <option value="#part-vii-i">&nbsp;&nbsp;↳ I. Review by Higher Sanggunian (Secs. 56–58)</option>
+      <option value="#part-vii-j">&nbsp;&nbsp;↳ J. Effectivity (Sec. 59)</option>
+      <option value="#part-viii-direct-democracy">PART VIII. DIRECT DEMOCRACY: RECALL, INITIATIVE, REFERENDUM</option>
+      <option value="#part-viii-a">&nbsp;&nbsp;↳ A. Recall (Secs. 69–75)</option>
+      <option value="#part-viii-b">&nbsp;&nbsp;↳ B. Initiative</option>
+      <option value="#part-viii-c">&nbsp;&nbsp;↳ C. Referendum</option>
+      <option value="#part-viii-d">&nbsp;&nbsp;↳ D. Aside — Fabian v. Desierto (1998)</option>
+      <option value="#part-ix-cheat-sheet">PART IX. NUMBERS & PERIODS CHEAT SHEET</option>
+      <option value="#part-x-case-doctrine-index">PART X. CASE DOCTRINE INDEX (ONE-LINERS)</option>
+      <option value="#part-xi-points-to-verify">PART XI. POINTS TO VERIFY WITH THE PROFESSOR (INCONSISTENCIES IN THE NOTES)</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1>LOCAL GOVERNMENT CODE — CONSOLIDATED QUICK REVIEWER</h1>
+  <div class="subtitle"><span class="c-teal">1987 Constitution, Art. X & R.A. No. 7160 (Local Government Code of 1991), Secs. 1–59 + Related Provisions</span></div>
+  <div class="meta-note"><em>Consolidated from class notes: 08/22, 08/29, 09/05, 09/19, 09/26, 10/03</em></div>
+
+  <hr>
+
+  <h3 id="how-to-read-this-reviewer">HOW TO READ THIS REVIEWER (THE BIG PICTURE)</h3>
+  <p>The whole course follows one chain of logic. If you remember the chain, you can place every provision and case:</p>
+  <ol>
+    <li><strong>WHAT are LGUs?</strong> → Political subdivisions of a <em>unitary</em> State, enjoying <em>local autonomy</em> (Art. X) — <strong>Part I</strong></li>
+    <li><strong>WHAT law governs them?</strong> → R.A. 7160: policy, principles, scope, rules of construction (Secs. 1–5) — <strong>Part II</strong></li>
+    <li><strong>HOW are they born, changed, or killed?</strong> → Creation, conversion, division, merger, abolition + plebiscite (Secs. 6–14) — <strong>Part III</strong></li>
+    <li><strong>WHAT can they do?</strong> → Delegated police power, taxation, eminent domain + corporate powers + liability (Secs. 15–24) — <strong>Part IV</strong></li>
+    <li><strong>WHO watches over them?</strong> → General supervision (not control); inter-governmental relations (Secs. 25–38) — <strong>Part V</strong></li>
+    <li><strong>WHO runs them?</strong> → Elective officials: qualifications, disqualifications, terms, vacancies (Secs. 39–47) — <strong>Part VI</strong></li>
+    <li><strong>HOW do they make law?</strong> → Local legislation (Secs. 48–59) — <strong>Part VII</strong></li>
+    <li><strong>HOW do the people check them directly?</strong> → Recall, initiative, referendum — <strong>Part VIII</strong></li>
+  </ol>
+  <p>Then: <strong>Part IX</strong> (Numbers & Periods Cheat Sheet), <strong>Part X</strong> (Case Doctrine Index), <strong>Part XI</strong> (Points to Verify with the Professor).</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: THE COURSE CHAIN OF LOGIC</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.2)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.2)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart LR
+            P1["Part I: What are LGUs?<br/>(Art. X, Autonomy)"] --> P2["Part II: Governing Law<br/>(R.A. 7160, Secs. 1-5)"]
+            P2 --> P3["Part III: Birth / Change / Death<br/>(Secs. 6-14, Plebiscite)"]
+            P3 --> P4["Part IV: Powers & Liabilities<br/>(Secs. 15-24)"]
+            P4 --> P5["Part V: Supervision<br/>(Secs. 25-38)"]
+            P5 --> P6["Part VI: Elective Officials<br/>(Secs. 39-47)"]
+            P6 --> P7["Part VII: Legislation<br/>(Secs. 48-59)"]
+            P7 --> P8["Part VIII: Direct Democracy<br/>(Recall, Initiative)"]
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="part-i-constitutional-foundations">PART I. CONSTITUTIONAL FOUNDATIONS</h3>
+
+  <h4 id="part-i-a">A. Territorial and Political Subdivisions (Art. X, Sec. 1)</h4>
+  <ul>
+    <li>The territorial and political subdivisions of the Republic are:
+      <ul>
+        <li><strong>Provinces;</strong></li>
+        <li><strong>Cities;</strong></li>
+        <li><strong>Municipalities;</strong></li>
+        <li><strong>Barangays;</strong> and</li>
+        <li><strong>Autonomous regions</strong> in Muslim Mindanao and the Cordilleras.</li>
+      </ul>
+    </li>
+    <li>An LGU is a <span class="c-green"><strong><u>political subdivision constituted by law</u></strong></span>, possessing substantial control over local affairs and endowed with corporate powers to promote the general welfare.</li>
+    <li><strong>Unitary State Doctrine:</strong> The Philippines remains a unitary republic. Local autonomy does <span class="c-rust"><strong><u>not</u></strong></span> diminish the unitary character of the State. LGUs possess only such powers as are <span class="c-green"><strong><u>expressly granted</u></strong></span> by the Constitution or statute, or <span class="c-green"><strong><u>necessarily implied</u></strong></span> therefrom. LGUs are <em>intra-sovereign</em> units, not sovereign entities.</li>
+    <li><strong>Constitutional anchors (Art. X):</strong>
+      <ul>
+        <li><strong>Sec. 2</strong> — all territorial and political subdivisions shall enjoy local autonomy.</li>
+        <li><strong>Sec. 3</strong> — Congress shall enact a local government code providing for a more responsive and accountable local government structure through a system of decentralization.</li>
+        <li><strong>Sec. 4</strong> — the President exercises <span class="c-green"><strong><u>general supervision</u></strong></span> over local governments.</li>
+        <li><strong>Sec. 5</strong> — each LGU has the power to create its own sources of revenue and to levy taxes, fees, and charges (direct constitutional grant).</li>
+        <li><strong>Sec. 6</strong> — just share in the <span class="c-green"><strong><u>national taxes</u></strong></span>, automatically released.</li>
+        <li><strong>Sec. 7</strong> — equitable share in the proceeds of the utilization and development of the <span class="c-green"><strong><u>national wealth</u></strong></span> within their areas.</li>
+        <li><strong>Sec. 10</strong> — plebiscite requirement for creation, division, merger, abolition, or substantial alteration of boundaries.</li>
+        <li><strong>Sec. 11</strong> — metropolitan political subdivisions.</li>
+        <li><strong>Secs. 15–21</strong> — autonomous regions.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="part-i-b">B. Local Autonomy: Two Kinds of Decentralization</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Decentralization of Administration</th>
+        <th>Decentralization of Power</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nature</td>
+        <td>Central government delegates administrative powers to lower units/field offices to relieve congestion</td>
+        <td>Abdication of political power in favor of LGUs</td>
+      </tr>
+      <tr>
+        <td>Presidential authority</td>
+        <td><strong>Control</strong> (alter ego doctrine applies) — Art. VII, Sec. 17</td>
+        <td><strong>General supervision only</strong> — Art. X, Sec. 4</td>
+      </tr>
+      <tr>
+        <td>Character</td>
+        <td>Managerial/executive</td>
+        <td>Political/legislative</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th><strong>Deconcentration</strong> (Administrative)</th>
+        <th><strong>Devolution</strong> (Political)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Definition</td>
+        <td>Transfer of administrative functions from central offices to <strong>regional/field offices</strong> without relinquishing line command or policy control</td>
+        <td>Act by which the National Government <strong>confers power, authority, and resources</strong> upon LGUs to perform specific functions (Sec. 17) — with personnel, assets, liabilities, and records</td>
+      </tr>
+      <tr>
+        <td>Accountability</td>
+        <td>To the Cabinet Secretary (executive control)</td>
+        <td>To the local electorate (local autonomy)</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td>Regional/field offices of DENR, DILG, DPWH</td>
+        <td>Devolved health centers, local roads, agricultural extension</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>R.A. 7160 adopts devolution.</strong> As Sen. Pimentel put it: devolution transfers political responsibility and power to locally elected officials; deconcentration merely relocates central bureaucrats to the provinces.</li>
+  </ul>
+
+  <h4 id="part-i-c">C. Supervision vs. Control (Art. X, Sec. 4; Sec. 25, LGC)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Point</th>
+        <th><strong>Control</strong></th>
+        <th><strong>General Supervision</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Source</td>
+        <td>Art. VII, Sec. 17</td>
+        <td>Art. X, Sec. 4; Sec. 25, LGC</td>
+      </tr>
+      <tr>
+        <td>Over whom</td>
+        <td>Executive departments, bureaus, offices</td>
+        <td>LGUs</td>
+      </tr>
+      <tr>
+        <td>Scope</td>
+        <td>Power to <strong>alter, modify, nullify, or set aside</strong> what a subordinate has done and to <strong>substitute one's judgment</strong></td>
+        <td>Power to <strong>see to it that subordinates perform their duties according to law</strong>; if they fail, to take proper administrative or judicial steps (<span class="c-burgundy"><em>Mondano v. Silvosa</em></span>)</td>
+      </tr>
+      <tr>
+        <td>Discretionary acts</td>
+        <td>Superior may substitute judgment</td>
+        <td><strong>Cannot</strong> substitute judgment or disturb discretionary acts within lawful bounds (<span class="c-burgundy"><em>Drilon v. Lim</em></span>)</td>
+      </tr>
+      <tr>
+        <td>Relationship</td>
+        <td>Qualified political agency (alter ego)</td>
+        <td><strong>No alter ego relationship</strong> — local elective officials derive authority from the electorate and statute</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><span class="c-rust"><strong><u>Rule against substitution:</u></strong></span> The supervising authority may only check whether the LGU acted <em>ultra vires</em> or contrary to law — <strong>not</strong> the wisdom of the act.</li>
+    <li><strong>Alter ego doctrine</strong> (<span class="c-burgundy"><em>Villena v. Secretary of the Interior</em></span>) operates <strong>only within the executive department</strong>; it cannot be used to control LGUs.</li>
+    <li><span class="c-burgundy"><em>Pimentel v. Lina</em></span>: A DILG directive commanding local executives to enforce <strong>national anti-gambling laws</strong> under pain of administrative sanction is <strong>valid supervision</strong>, not control — it compels performance of a <strong>mandatory legal duty</strong>, not substitution of discretion.</li>
+    <li><span class="c-burgundy"><em>Ganzon v. CA</em></span>: Directives to enforce anti-gambling, anti-drug, or environmental laws under threat of administrative sanctions are a valid exercise of supervisory authority.</li>
+    <li><span class="c-burgundy"><em>Pimentel v. Aguirre</em></span>: Local autonomy does not place LGUs beyond national supervision.</li>
+  </ul>
+  <blockquote><strong>Illustration:</strong> The DILG cannot nullify a mayor's traffic-routing executive order merely because it disagrees with the scheme; nullification requires showing a violation of law, through proper (judicial) action.</blockquote>
+
+  <h4 id="part-i-d">D. Autonomous Regions (Art. X, Secs. 15–21)</h4>
+  <ul>
+    <li><strong>Only two</strong> autonomous regions may be created: <strong>Muslim Mindanao</strong> and <strong>the Cordilleras</strong> — consisting of provinces, cities, municipalities, and geographical areas sharing common and distinctive historical and cultural heritage, economic and social structures, and other relevant characteristics (Sec. 15).</li>
+    <li><strong>Creation requisite (Sec. 18):</strong> Organic act approved by a <span class="c-green"><strong><u>majority of the votes cast by the constituent units</u></strong></span> in a plebiscite; <span class="c-green"><strong><u>only provinces, cities, and geographic areas voting favorably</u></strong></span> shall be included.</li>
+    <li><strong>Muslim Mindanao evolution:</strong> ARMM (R.A. 6734, as amended by R.A. 9054) → <strong>BARMM</strong> (R.A. 11054, Bangsamoro Organic Law), a parliamentary form led by a <strong>Chief Minister</strong>; BARMM is now governed by its own <strong>Bangsamoro Local Governance Code</strong> (BAA No. 13).</li>
+    <li><span class="c-burgundy"><em>Province of Sulu v. Medialdea</em> (2024)</span>: Sulu voted "No" in the 2019 BOL plebiscite but was dragged in because the ARMM was tallied as a single unit. <strong>Held:</strong> "Constituent units" refers to each province/city individually; Sulu <span class="c-rust"><strong><u>cannot be compelled</u></strong></span> to join. Sulu is <strong>not part of BARMM</strong>.</li>
+    <li><span class="c-burgundy"><em>Ordillo v. COMELEC</em> (1990)</span>: Only <strong>Ifugao</strong> approved R.A. 6766 (Cordillera Autonomous Region). <strong>Held:</strong> A <span class="c-rust"><strong><u>single province cannot constitute an autonomous region</u></strong></span> — Sec. 15 uses the plural "provinces, cities, municipalities, and geographical areas."</li>
+    <li><span class="c-burgundy"><em>Sema v. COMELEC</em> (2008)</span>: The ARMM Regional Assembly <span class="c-rust"><strong><u>cannot create a province</u></strong></span> (Shariff Kabunsuan). Creating a province necessarily creates a <strong>legislative district</strong>, which <span class="c-green"><strong><u>only Congress</u></strong></span> may do (Art. VI, Sec. 5; Art. X, Sec. 19).</li>
+    <li><span class="c-burgundy"><em>Badua v. Cordillera Bodong Administration</em></span>: Tribal courts are <span class="c-rust"><strong><u>not part of the Judiciary</u></strong></span> (R.A. 6766 was rejected, so the proposed regional courts never came into existence). However, a voluntary customary settlement may be enforced as a <strong>compromise agreement</strong>.</li>
+  </ul>
+
+  <h4 id="autonomous-region-vs-administrative-region">Autonomous Region vs. Administrative Region</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Autonomous Region</th>
+        <th>Administrative Region (e.g., CAR, Region I)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nature</td>
+        <td>Political subdivision / LGU</td>
+        <td>Administrative coordinating unit of national agencies</td>
+      </tr>
+      <tr>
+        <td>Source</td>
+        <td>Organic Act of Congress</td>
+        <td>Executive Order (e.g., E.O. 220 for CAR)</td>
+      </tr>
+      <tr>
+        <td>Plebiscite</td>
+        <td><strong>Mandatory</strong></td>
+        <td><strong>Not required</strong> (<span class="c-burgundy"><em>Chiongbian v. Orbos</em></span>)</td>
+      </tr>
+      <tr>
+        <td>Legislative/taxing power</td>
+        <td>Yes (regional assembly)</td>
+        <td><strong>None</strong></td>
+      </tr>
+      <tr>
+        <td>Corporate personality</td>
+        <td>Yes</td>
+        <td><strong>None</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><span class="c-burgundy"><em>Cordillera Broad Coalition v. COA</em> (1990)</span>: CAR is <strong>not an LGU</strong>; it has no corporate charter, cannot levy taxes, and has no legislative power. It needs neither an organic act nor a plebiscite.</li>
+  </ul>
+  <blockquote><strong>Illustration:</strong> The President may transfer a province from Region I to CAR by executive order <strong>without a plebiscite</strong>.</blockquote>
+
+  <h4 id="part-i-e">E. Metropolitan Political Subdivisions (Art. X, Sec. 11)</h4>
+  <ul>
+    <li>Congress <strong>may</strong> create special metropolitan political subdivisions:
+      <ul>
+        <li>By <strong>law</strong>;</li>
+        <li>Subject to a <strong>plebiscite</strong> in the units directly affected;</li>
+        <li>Component LGUs <strong>retain their basic autonomy</strong> and their own executive and legislative bodies;</li>
+        <li>Jurisdiction limited to <strong>basic metropolitan services</strong> requiring coordination (traffic, solid waste, flood control).</li>
+      </ul>
+    </li>
+    <li><span class="c-burgundy"><em>MMDA v. Bel-Air Village Association</em> (2000)</span>: The MMDA is an <strong>administrative coordinating agency</strong>, <span class="c-rust"><strong><u>not an LGU</u></strong></span>. It has <span class="c-rust"><strong><u>no police power</u></strong></span> and <span class="c-rust"><strong><u>no ordinance-making power</u></strong></span>. It could not open a private subdivision road. Its head is a <strong>presidential appointee</strong>, not an elected official.</li>
+    <li>MMDA has <span class="c-rust"><strong><u>no review power</u></strong></span> over ordinances of Metro Manila LGUs.</li>
+  </ul>
+  <blockquote><strong>Historical illustration:</strong> The Metropolitan Manila Commission under Marcos was headed by an <em>appointed</em> Governor (Imelda Marcos) — an executive creation, not an LGU.</blockquote>
+
+  <hr>
+
+  <h3 id="part-ii-local-government-code">PART II. THE LOCAL GOVERNMENT CODE: ENACTMENT, POLICY, PRINCIPLES, SCOPE, AND CONSTRUCTION</h3>
+
+  <h4 id="part-ii-a">A. Enactment and Effectivity</h4>
+  <ul>
+    <li><strong>Principal author:</strong> Senate President <strong>Aquilino "Nene" Pimentel, Jr.</strong></li>
+    <li><strong>Title:</strong> "Local Government Code of 1991" (Sec. 1). (Do not confuse with R.A. 7653, the New Central Bank Act.)</li>
+    <li><strong>Approved:</strong> <strong>October 10, 1991</strong> (Pres. Corazon C. Aquino); published in <em>Malaya</em>.</li>
+    <li><strong>Effectivity (Sec. 536):</strong> <strong>January 1, 1992.</strong></li>
+    <li><strong>Interim law:</strong> Between Oct. 10, 1991 and Jan. 1, 1992, <strong>B.P. Blg. 337 (LGC of 1983)</strong> governed. R.A. 7160 is not retroactive.</li>
+  </ul>
+
+  <h4 id="part-ii-b">B. Declaration of Policy (Sec. 2)</h4>
+  <ul>
+    <li>LGUs shall enjoy <span class="c-green"><strong><u>genuine and meaningful local autonomy</u></strong></span> to enable them to attain their <strong>fullest development as self-reliant communities</strong> and make them more <strong>effective partners</strong> in the attainment of national goals.</li>
+    <li>National agencies must <strong>coordinate with</strong>, not control, LGUs.</li>
+    <li><strong>Sec. 2(c):</strong> national agencies must conduct <span class="c-green"><strong><u>periodic consultations</u></strong></span> with LGUs, NGOs, POs, and other concerned sectors before any project is implemented (see Secs. 26–27).</li>
+  </ul>
+
+  <h4 id="part-ii-c">C. The Thirteen Operative Principles of Decentralization (Sec. 3[a]–[m])</h4>
+  <ol>
+    <li><strong>(a) Allocation of powers, responsibilities, and resources</strong> among the tiers according to capacity (operationalized through Secs. 16, 17, 18, 19).</li>
+    <li><strong>(b) Accountable, efficient, and dynamic organizational structure</strong> responsive to community needs.</li>
+    <li><strong>(c) Merit and fitness</strong> in the appointment and discipline of local personnel (civil service laws; ban on nepotism; due process; security of tenure).</li>
+    <li><strong>(d) Fiscal autonomy</strong> — right to create own revenues, just share in national taxes (<span class="c-burgundy"><em>Mandanas</em></span>), equitable share in national wealth (<span class="c-burgundy"><em>Tiwi</em></span>).</li>
+    <li><strong>(e) Supervisory hierarchy</strong> — provinces over component cities/municipalities; cities/municipalities over barangays.</li>
+    <li><strong>(f) Inter-local cooperation</strong> — LGUs may group, consolidate, and coordinate efforts and resources (justifies <strong>extra-territorial expenditures</strong>; see Sec. 33).</li>
+    <li><strong>(g) Participation of municipalities and barangays</strong> in planning and implementing national programs (e.g., lack of local coordination in DPWH flood control projects).</li>
+    <li><strong>(h) Continuing mechanism</strong> to enhance local autonomy.</li>
+    <li><strong>(i) Shared responsibility for ecological balance</strong> — LGUs cannot treat environmental enforcement as solely DENR's duty.</li>
+    <li><strong>(j) Accountability of local officials</strong> — public office is a public trust (Sec. 60 discipline, Ombudsman, COA, recall).</li>
+    <li><strong>(k) National technical, financial, and material assistance</strong> (e.g., national intervention during COVID-19 despite devolved health services).</li>
+    <li><strong>(l) Participation of the private sector, NGOs, and POs</strong> — representation in local special bodies:
+      <ul>
+        <li>Local Health Board;</li>
+        <li>Local School Board;</li>
+        <li>Local Peace and Order Council;</li>
+        <li>Local Development Council.</li>
+      </ul>
+    </li>
+    <li><strong>(m) Sustained performance improvement</strong> — devolution cannot be an excuse for local failure.</li>
+  </ol>
+
+  <h4 id="part-ii-d">D. Scope of Application (Sec. 4)</h4>
+  <ul>
+    <li>Applies to:
+      <ul>
+        <li>All provinces, cities, municipalities, and barangays;</li>
+        <li>Other political subdivisions created by law; and</li>
+        <li>National government officials, offices, and agencies, <strong>to the extent provided</strong> in the Code.</li>
+      </ul>
+    </li>
+    <li><strong>Does not supersede organic acts</strong> of autonomous regions (e.g., BARMM), except where the organic act adopts its provisions.</li>
+    <li>National agencies (DPWH, DENR, DOH) are bound to <strong>coordinate and consult</strong> (Secs. 2[c], 26, 27).</li>
+  </ul>
+
+  <h4 id="part-ii-e">E. Rules of Interpretation (Sec. 5)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>5(a) Powers of LGUs</strong></td>
+        <td>Liberally interpreted <strong>in favor of the LGU</strong>; doubts resolved <strong>in favor of devolution</strong> and of the existence of the power.</td>
+      </tr>
+      <tr>
+        <td><strong>5(b) Tax ordinances/revenue measures</strong></td>
+        <td>Construed <strong>strictly against the LGU</strong> and <strong>liberally in favor of the taxpayer</strong>. Taxing powers are never presumed.</td>
+      </tr>
+      <tr>
+        <td><strong>5(c) General Welfare Clause</strong></td>
+        <td>Liberally interpreted to give more powers to LGUs to accelerate economic development and upgrade the quality of life.</td>
+      </tr>
+      <tr>
+        <td><strong>5(d) Customs and traditions</strong></td>
+        <td>In the absence of law or jurisprudence, the <strong>customs and traditions</strong> of the place where the controversy arose may be applied.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Limit on 5(a) — Ultra vires/Bill of Rights:</strong> Liberal construction does <span class="c-rust"><strong><u>not</u></strong></span> save an ordinance violating the Constitution, national policy, or constituting <strong>unreasonable restraint of trade</strong>.
+      <blockquote><em>Illustration:</em> San Juan, La Union ordinance banning sale of pottery made outside San Juan → <strong>unconstitutional</strong> (protectionist monopoly; restraint of trade).</blockquote>
+    </li>
+    <li><strong>Regulatory fee vs. revenue measure:</strong> A regulatory fee is valid only to the extent of the <span class="c-green"><strong><u>reasonable cost of regulation, inspection, and licensing</u></strong></span>. A "fee" without regulatory standards, inspection, or enforcement mechanisms is a <strong>disguised revenue measure</strong>.
+      <blockquote><em>Illustration:</em> ₱1.00/head "regulatory fee" on pigs and poultry with no animal health or inspection provisions → <strong>disapproved</strong> by the provincial board.</blockquote>
+    </li>
+    <li><strong>General welfare (liberal):</strong> Zoning ordinance ordering relocation of abaca warehouses/junk yards (fire hazards) out of residential areas → <strong>valid</strong>.</li>
+    <li><strong>Custom (5[d]):</strong>
+      <ul>
+        <li><strong>Definition:</strong> A rule of conduct formed by repetition of acts, uniformly observed as a social rule, legally binding and obligatory.</li>
+        <li><span class="c-green"><strong><u>Custom must be proved as a fact</u></strong></span> (Art. 12, Civil Code; <span class="c-burgundy"><em>Yao Kee v. Sy-Gonzales</em></span>) — it cannot be assumed.</li>
+        <li><em>Illustrations:</em> the <em>kutsero</em> custom of securing reins to the carriage while loading (negated negligence); the Bangar livestock custom (firstborn offspring belongs to the caretaker).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-iii-creation-conversion">PART III. CREATION, CONVERSION, DIVISION, MERGER, AND ABOLITION OF LGUs (Secs. 6–14)</h3>
+
+  <h4 id="part-iii-a">A. Authority to Create (Sec. 6)</h4>
+  <ul>
+    <li>An LGU may be created, divided, merged, abolished, or its boundaries substantially altered:
+      <ul>
+        <li><strong>By law enacted by Congress</strong> — for provinces, cities, municipalities, and other political subdivisions; or</li>
+        <li><strong>By ordinance</strong> of the <strong>Sangguniang Panlalawigan</strong> or <strong>Sangguniang Panlungsod</strong> — <strong>for barangays only</strong>.</li>
+        <li>The <span class="c-rust"><strong><u>Sangguniang Bayan has no power to create barangays</u></strong></span> (it may only recommend to the SP).</li>
+      </ul>
+    </li>
+    <li><strong>Always subject to the plebiscite requirement (Sec. 10)</strong> and the criteria of Sec. 7.</li>
+    <li><span class="c-burgundy"><em>Pelaez v. Auditor General</em> (1965)</span> & <span class="c-burgundy"><em>Municipality of Kapalong v. Moya</em> (1988)</span>: The power to create municipal corporations is <span class="c-green"><strong><u>purely legislative</u></strong></span>. Sec. 68 of the Revised Administrative Code (allowing the President to create municipalities by E.O.) was an <span class="c-rust"><strong><u>undue delegation of legislative power</u></strong></span>.</li>
+    <li><strong>Financial caveat on Sanggunian-created barangays:</strong> Funded from the <strong>creating LGU's own funds</strong>; not entitled to a direct NTA share unless recognized by Congress.
+      <blockquote><em>Illustration:</em> La Union SP created <strong>Barangay Antonino</strong> (Balaoan) out of Cabuaan — the province had to fund it; hence only one barangay has been so created.</blockquote>
+    </li>
+    <li><strong>Curative/Grandfather provisions:</strong>
+      <ul>
+        <li>LGUs created <strong>before</strong> the Code through defective means (e.g., executive orders) and <strong>actually functioning</strong> are deemed regular/de jure (curative effect, Sec. 442[d]).</li>
+        <li>The Sec. 442 thresholds apply <strong>prospectively</strong>; pre-1992 municipalities that fall short remain valid.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="part-iii-b">B. Procedure for Creation</h4>
+  <ol>
+    <li><strong>Petition</strong> — resolution of the Sanggunian concerned (IRR). → <strong>Procedural, NOT jurisdictional.</strong> Congress may create an LGU <em>motu proprio</em> without a petition.</li>
+    <li><strong>Mandatory certifications</strong> (cannot be dispensed with):
+      <ul>
+        <li><strong>Income</strong> — Department of Finance (DOF);</li>
+        <li><strong>Population</strong> — Philippine Statistics Authority (PSA, formerly NSO);</li>
+        <li><strong>Land area</strong> — Land Management Bureau (LMB-DENR);</li>
+        <li><strong>Boundary maps/metes and bounds</strong> — LMB with DPWH.</li>
+      </ul>
+    </li>
+    <li><strong>Enactment</strong> of the law (or ordinance, for barangays).</li>
+    <li><strong>Plebiscite</strong> conducted by COMELEC — approval by <span class="c-green"><strong><u>majority of votes cast</u></strong></span> in the units directly affected.</li>
+    <li><strong>Corporate existence begins</strong> (Sec. 14) — upon election and qualification of the chief executive and a majority of the sanggunian members.</li>
+  </ol>
+
+  <h4 id="part-iii-c">C. Criteria for Creation (Sec. 7; Secs. 386, 442, 450, 461)</h4>
+  <ul>
+    <li>The three indicators:
+      <ul>
+        <li><strong>Income</strong> — sufficient to provide for essential government facilities and services (certified by DOF);</li>
+        <li><strong>Population</strong> — total number of <strong>inhabitants</strong> (not registered voters; includes minors), certified by PSA;</li>
+        <li><strong>Land area</strong> — <strong>contiguous</strong>, unless comprising two or more islands or separated by an LGU independent of the others; sufficient for development; certified by LMB.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>LGU</th>
+        <th>Income</th>
+        <th>Population</th>
+        <th>Land Area</th>
+        <th>Rule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Province</strong> (Sec. 461)</td>
+        <td><strong>₱20M</strong> avg. annual income, 2 consecutive years (1991 constant prices)</td>
+        <td><strong>250,000</strong></td>
+        <td><strong>2,000 sq. km.</strong></td>
+        <td>Income <strong>AND</strong> either land area <strong>OR</strong> population</td>
+      </tr>
+      <tr>
+        <td><strong>Component City</strong> (Sec. 450, as amended by R.A. 9009)</td>
+        <td><strong>₱100M locally generated</strong>, 2 consecutive years</td>
+        <td><strong>150,000</strong></td>
+        <td><strong>100 sq. km.</strong></td>
+        <td>Income <strong>AND</strong> either land area <strong>OR</strong> population</td>
+      </tr>
+      <tr>
+        <td><strong>HUC</strong> (Sec. 452)</td>
+        <td><strong>₱50M</strong> (1991 constant prices)</td>
+        <td><strong>200,000</strong></td>
+        <td>—</td>
+        <td>Population <strong>AND</strong> income</td>
+      </tr>
+      <tr>
+        <td><strong>Municipality</strong> (Sec. 442)</td>
+        <td><strong>₱2.5M</strong>, 2 consecutive years</td>
+        <td><strong>25,000</strong></td>
+        <td><strong>50 sq. km.</strong></td>
+        <td>All three</td>
+      </tr>
+      <tr>
+        <td><strong>Barangay</strong> (Sec. 386)</td>
+        <td>None</td>
+        <td><strong>2,000</strong> (<strong>5,000</strong> in Metro Manila and HUCs)</td>
+        <td>Contiguous territory; no minimum</td>
+        <td>Population; may be waived for <strong>indigenous cultural communities</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>R.A. 9009:</strong> City income must be <span class="c-green"><strong><u>locally generated</u></strong></span> — an LGU cannot qualify for cityhood based on national tax transfers.</li>
+    <li><strong>Province:</strong> Income threshold is <strong>non-waivable</strong>; land area may be relaxed for island provinces.</li>
+  </ul>
+
+  <h4 id="land-area-doctrine">Land Area Doctrine</h4>
+  <ul>
+    <li><span class="c-burgundy"><em>Tan v. COMELEC</em> (1986) [Negros del Norte]</span>: Proponents counted marine waters to meet the 3,500 sq. km. requirement (B.P. 337) when actual land mass was ~2,856 sq. km. <strong>Held:</strong> "Territory" means <span class="c-green"><strong><u>land mass</u></strong></span>, not waters. B.P. 885 <span class="c-rust"><strong><u>void ab initio</u></strong></span>.</li>
+    <li><strong>"Territory" vs. "Land area":</strong>
+      <ul>
+        <li><em>Territory</em> — broader area of jurisdiction, including inland and municipal waters (up to 15 km, Fisheries Code).</li>
+        <li><em>Contiguous land area</em> — certified, dry terrestrial mass; this is the creation criterion. <span class="c-rust"><strong><u>Waters are excluded.</u></strong></span></li>
+      </ul>
+    </li>
+    <li><span class="c-burgundy"><em>Navarro v. Ermita</em> (2011) [Dinagat Islands]</span>: Land area requirement is <strong>waived for provinces composed of islands</strong> (Art. 9, IRR).</li>
+    <li><strong>Enclave exception:</strong> Benguet remains a valid province though Baguio City sits within it.</li>
+  </ul>
+  <blockquote><em>Illustration — Agoo:</em> Met income but failed <strong>both</strong> the 100 sq. km. land area and 150,000 population; coastal waters cannot be counted → cityhood stalled. A merger with Aringay ("Agoray") failed because Aringay insisted on its civic identity.</blockquote>
+
+  <h4 id="part-iii-d">D. Classification of Cities</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Classification</th>
+        <th>Definition</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Highly Urbanized City (HUC)</strong></td>
+        <td>≥ 200,000 inhabitants <strong>and</strong> ≥ ₱50M income</td>
+        <td>Independent of the province; voters <strong>cannot vote for provincial officials</strong>; ordinances <strong>not</strong> reviewed by SP; directly supervised by the President</td>
+      </tr>
+      <tr>
+        <td><strong>Independent Component City (ICC)</strong></td>
+        <td>Charter <strong>prohibits</strong> its voters from voting for provincial elective officials</td>
+        <td>Independent of the province; ordinances <strong>not</strong> reviewed by SP</td>
+      </tr>
+      <tr>
+        <td><strong>Component City</strong></td>
+        <td>Does not meet HUC/ICC criteria</td>
+        <td>Under the province; ordinances reviewed by SP; voters vote for provincial officials</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>All <strong>16 cities of NCR are HUCs</strong>.</li>
+  </ul>
+
+  <h4 id="part-iii-e">E. Division and Merger (Sec. 8); Abolition (Sec. 9)</h4>
+  <ul>
+    <li><strong>Division/Merger:</strong> Shall <span class="c-rust"><strong><u>not reduce</u></strong></span> the income, population, or land area of the LGUs concerned <strong>below</strong> the Sec. 7 minimums — both the new unit and the <strong>remaining parent unit</strong> must each comply.</li>
+    <li><strong>Abolition (Sec. 9):</strong> When income, population, or land area has been <strong>irreversibly reduced</strong> to less than the minimum, as certified by the national agencies.
+      <ul>
+        <li>Requires an <strong>Act of Congress</strong> (or ordinance, for barangays) and a plebiscite.</li>
+        <li>A Governor <span class="c-rust"><strong><u>cannot</u></strong></span> declare a municipality abolished.</li>
+        <li>The law must specify the LGU that will <strong>absorb</strong> the territory, assets, records, and liabilities.</li>
+      </ul>
+    </li>
+    <li><strong>Boundary disputes (Sec. 118):</strong> Settled amicably by the sanggunians concerned; municipalities of <strong>different provinces</strong> → <strong>jointly</strong> by the respective Sangguniang Panlalawigans.
+      <blockquote><em>Illustration (Pugo v. Tuba):</em> The professor, elected to the SP, refused to inhibit from the joint panel since his seat derived from his election.</blockquote>
+    </li>
+  </ul>
+
+  <h4 id="part-iii-f">F. Plebiscite Requirement (Art. X, Sec. 10; Sec. 10, LGC)</h4>
+  <ul>
+    <li><span class="c-rust"><strong><u>No</u></strong></span> creation, division, merger, abolition, or <strong>substantial alteration of boundaries</strong> without approval by a <span class="c-green"><strong><u>majority of the votes cast</u></strong></span> in a plebiscite in the <strong>political unit or units directly affected</strong>.</li>
+    <li>Conducted by <strong>COMELEC</strong>; a <span class="c-green"><strong><u>condition precedent</u></strong></span> — without it, the law is inchoate.</li>
+    <li><strong>"Units affected" doctrine:</strong> Includes the <span class="c-green"><strong><u>entire parent LGU</u></strong></span>, not just the area carved out (<span class="c-burgundy"><em>Tan v. COMELEC</em></span>; <span class="c-burgundy"><em>Padilla v. COMELEC</em></span>).
+      <blockquote><em><span class="c-burgundy">Novaliches Plebiscite</span> (R.A. 8535):</em> Plebiscite for creating Novaliches City out of 15 barangays had to include <strong>all of Quezon City</strong>; voters rejected it.</blockquote>
+    </li>
+    <li><span class="c-burgundy"><em>Miranda v. Aguirre</em> (1999) [Santiago City]</span>: <strong>Downgrading</strong> an ICC to a component city (R.A. 8528) <span class="c-green"><strong><u>requires a plebiscite</u></strong></span> — it substantially alters the political and economic rights of residents (provincial taxes, voting for provincial officials, provincial supervision). R.A. 8528 unconstitutional.</li>
+  </ul>
+
+  <h4 id="part-iii-g">G. Seat of Government, Government Center, Naming (Secs. 11–13)</h4>
+  <ul>
+    <li><strong>Sec. 11 — Site:</strong> Chosen for <strong>accessibility</strong> to the public, transportation, and room for expansion. <span class="c-rust"><strong><u>No requirement</u></strong></span> that it be in the <em>poblacion</em> (e.g., Urdaneta City Hall relocated to the highway; the La Union capitol relocation proposal).</li>
+    <li><strong>Sec. 12 — Government center:</strong> Per the notes, site of at least <strong>10,000 sq. m. (1 hectare)</strong> under the IRR.</li>
+    <li><strong>Sec. 13 — Naming:</strong></li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Authority</th>
+        <th>Coverage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Congress</strong></td>
+        <td>National roads, highways, national structures</td>
+      </tr>
+      <tr>
+        <td><strong>Sangguniang Panlalawigan</strong></td>
+        <td>Provincial roads, bridges, facilities</td>
+      </tr>
+      <tr>
+        <td><strong>Sangguniang Panlungsod / Bayan</strong></td>
+        <td>City/municipal roads, plazas, markets, structures</td>
+      </tr>
+      <tr>
+        <td><strong>Sangguniang Barangay</strong></td>
+        <td>Barangay roads and facilities</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Restrictions:</strong>
+      <ul>
+        <li>Public places may be named only after <strong>deceased persons</strong>; <span class="c-rust"><strong><u>naming after a living person is prohibited</u></strong></span>.</li>
+        <li>May be named after a <strong>family</strong> that contributed substantially to the community.</li>
+        <li>Exercise <strong>decency</strong> (do not name comfort rooms after historical leaders).</li>
+      </ul>
+    </li>
+  </ul>
+  <blockquote><em>Illustrations:</em> "Amparo Park" (San Juan, LU) — named after a <strong>living</strong> Vice Governor → ordinance repealed. Pennsylvania Ave. → "Joaquin 'Titing' Ortega Avenue" — a <strong>national road</strong>, so it required an <strong>Act of Congress</strong>; the sanggunian could only pass an endorsing resolution.</blockquote>
+
+  <h4 id="part-iii-h">H. Beginning of Corporate Existence (Sec. 14)</h4>
+  <ul>
+    <li>Corporate existence commences upon the <span class="c-green"><strong><u>election and qualification of its chief executive and a majority of the members of its sanggunian</u></strong></span>, unless some other time is fixed by the law or ordinance creating it.</li>
+    <li><strong>Rationale:</strong> A legislative body cannot transact business without a quorum.</li>
+    <li>If the Vice Mayor is not yet qualified but a majority of the council has qualified, corporate existence begins; the members present <strong>elect a temporary presiding officer</strong> (no automatic chair by the top vote-getter), unless a member has been formally designated <strong>acting vice mayor</strong>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-iv-powers-of-lgus">PART IV. POWERS OF LGUs (Secs. 15–24)</h3>
+
+  <h4 id="part-iv-a">A. Dual Nature of LGUs (Sec. 15)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Political / Governmental</th>
+        <th>Corporate / Proprietary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Agent/instrumentality of the State</td>
+        <td>Body politic and corporate with distinct juridical personality</td>
+      </tr>
+      <tr>
+        <td>Exercises <strong>delegated sovereign powers</strong> — police power (Sec. 16), taxation (Sec. 18), eminent domain (Sec. 19)</td>
+        <td>Acts for the <strong>special benefit of the locality</strong> — contracts, acquires/conveys property, operates utilities</td>
+      </tr>
+      <tr>
+        <td>Governmental, discretionary (peace and order, health, zoning, sanitation, quarantine)</td>
+        <td>Proprietary, ministerial (markets, cemeteries, leases)</td>
+      </tr>
+      <tr>
+        <td>Generally <strong>immune</strong> from tort liability (unless statute provides)</td>
+        <td><strong>Liable</strong> like a private corporation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="part-iv-b">B. Delegated Inherent Powers</h4>
+  <ul>
+    <li>LGUs have <span class="c-rust"><strong><u>no inherent</u></strong></span> sovereign powers. Police power, taxation, and eminent domain are exercised only by <strong>delegation</strong>.</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Power</th>
+        <th>Provision</th>
+        <th>Limit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Police power</td>
+        <td><strong>Sec. 16</strong> (General Welfare Clause)</td>
+        <td>Due process, equal protection, consistency with national law</td>
+      </tr>
+      <tr>
+        <td>Taxation</td>
+        <td><strong>Sec. 18</strong>; Secs. 128–196; <strong>Art. X, Sec. 5</strong> (direct constitutional grant)</td>
+        <td>Guidelines and limitations set by Congress</td>
+      </tr>
+      <tr>
+        <td>Eminent domain</td>
+        <td><strong>Sec. 19</strong></td>
+        <td>Ordinance, public use, just compensation, prior valid offer</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="part-iv-c">C. General Welfare Clause (Sec. 16)</h4>
+  <ul>
+    <li><strong>Two branches:</strong>
+      <ol>
+        <li><strong>General legislative power</strong> — to enact ordinances and regulations <strong>not repugnant to law</strong> necessary to carry into effect the powers and duties conferred by law.</li>
+        <li><strong>Police power proper</strong> — to enact ordinances necessary to promote <strong>health, safety, morals, peace, good order, comfort, convenience, and general welfare</strong> of the community and inhabitants.</li>
+      </ol>
+    </li>
+    <li><strong>Objectives the LGU must promote within its territory:</strong>
+      <ul>
+        <li>Preservation and enrichment of <strong>culture</strong>;</li>
+        <li>Promotion of <strong>health and safety</strong>;</li>
+        <li>Enhancement of the right of the people to a <strong>balanced ecology</strong>;</li>
+        <li>Development of <strong>self-reliant scientific and technological capabilities</strong>;</li>
+        <li>Improvement of <strong>public morals</strong>;</li>
+        <li>Enhancement of <strong>economic prosperity and social justice</strong>;</li>
+        <li>Promotion of <strong>full employment</strong>;</li>
+        <li>Maintenance of <strong>peace and order</strong>; and</li>
+        <li>Preservation of the <strong>comfort and convenience</strong> of inhabitants.</li>
+      </ul>
+    </li>
+    <li><strong>Tests of valid exercise (limits):</strong>
+      <ul>
+        <li><em>Lawful subject</em> — the interests of the <strong>public generally</strong>, as distinguished from those of a particular class, require interference;</li>
+        <li><em>Lawful means</em> — the means are <strong>reasonably necessary</strong> for the purpose and <strong>not unduly oppressive</strong> upon individuals;</li>
+        <li><em>Consistency with national law</em> — an ordinance cannot prohibit what a statute permits, nor permit what a statute prohibits;</li>
+        <li><em>Procedural due process</em> — notice and hearing, as a rule.</li>
+      </ul>
+    </li>
+    <li><strong>Summary abatement exception:</strong> A <span class="c-green"><strong><u>nuisance per se</u></strong></span> (e.g., a rabid dog loose on the street) may be summarily abated <strong>without notice and hearing</strong>.</li>
+    <li><span class="c-burgundy"><em>Batangas CATV v. CA</em> (2004)</span>: A city cannot fix cable TV rates under the General Welfare Clause — that power is vested by national law in the <strong>NTC</strong>. Delegated police power is <strong>subordinate to national law</strong>.</li>
+    <li><span class="c-burgundy"><em>MMDA v. Bel-Air</em></span>: Police power requires an <strong>express legislative grant</strong>; MMDA has none.</li>
+  </ul>
+  <blockquote><em>Illustration:</em> The professor's mandatory 14-day COVID-19 quarantine (despite a negative test on day 10) — valid police power; liberty yields to reasonable, non-discriminatory health measures.</blockquote>
+
+  <h4 id="part-iv-d">D. Basic Services and Facilities (Sec. 17)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>LGU</th>
+        <th>Devolved Services (core examples)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Barangay</strong></td>
+        <td>Agricultural support (seedling distribution); health and day-care centers; general sanitation and garbage collection; maintenance of barangay roads and bridges</td>
+      </tr>
+      <tr>
+        <td><strong>Municipality</strong></td>
+        <td>Agricultural extension and on-site research; primary health care, maternal and child care; solid waste disposal; communal irrigation; municipal buildings, public markets, slaughterhouses, cemeteries</td>
+      </tr>
+      <tr>
+        <td><strong>Province</strong></td>
+        <td>Provincial hospitals and tertiary health services; social welfare programs; inter-municipal roads and bridges; enforcement of forestry and mining laws</td>
+      </tr>
+      <tr>
+        <td><strong>City</strong></td>
+        <td><strong>All services of both the municipality and the province</strong>, plus adequate communication and transportation facilities and urban services</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>Coverage <strong>expands</strong> at each level; overlapping responsibilities require cooperation (province provides tertiary/technical support; municipalities and barangays deliver primary services).</li>
+  </ul>
+
+  <h4 id="part-iv-e">E. Power to Generate and Apply Resources (Sec. 18)</h4>
+  <ul>
+    <li><strong>Five facets:</strong>
+      <ol>
+        <li><strong>Establish an organization</strong> to be responsible for the efficient and effective implementation of development plans and programs;</li>
+        <li><strong>Create own sources of revenue</strong> and levy taxes, fees, and charges, which shall <strong>accrue exclusively</strong> to the LGU;</li>
+        <li><strong>Just share in national taxes</strong>, automatically and directly released;</li>
+        <li><strong>Equitable share in proceeds of national wealth</strong> within its territory; and</li>
+        <li><strong>Acquire, develop, lease, encumber, alienate, or dispose of real or personal property.</strong></li>
+      </ol>
+    </li>
+    <li><strong>Ordinance requirement (Secs. 18, 132):</strong> The power to impose a tax, fee, or charge is <span class="c-green"><strong><u>exercised only by the sanggunian through an ordinance</u></strong></span>.
+      <ul>
+        <li>An executive (Punong Barangay, Mayor, Governor) has <span class="c-rust"><strong><u>no authority</u></strong></span> to collect fees without an ordinance.</li>
+        <li><span class="c-rust"><strong><u>An official receipt does not cure</u></strong></span> the lack of an ordinance. Unauthorized collection = <strong>illegal exaction</strong>; possible liability under <strong>Sec. 3(e), R.A. 3019</strong>.</li>
+      </ul>
+      <blockquote><em>Illustration:</em> ₱200 barangay residency certificate fee, with O.R., but no barangay ordinance → <strong>unlawful</strong>.</blockquote>
+    </li>
+    <li><span class="c-burgundy"><em>Mandanas v. Ochoa</em> (2018; Res. 2019)</span>: Sec. 284 limiting the LGU share to "<strong>national internal revenue taxes</strong>" (BIR collections only) is <span class="c-rust"><strong><u>unconstitutional</u></strong></span>. Art. X, Sec. 6 says "<span class="c-green"><strong><u>national taxes</u></strong></span>" — which includes customs duties and other national taxes collected by the BOC and other agencies. The <strong>IRA</strong> became the <strong>National Tax Allotment (NTA)</strong>, to be <span class="c-green"><strong><u>automatically and directly released</u></strong></span>.</li>
+    <li><strong>Share in national wealth (Art. X, Sec. 7; Secs. 289–294):</strong>
+      <ul>
+        <li>Covers mineral, hydroelectric, timber, geothermal resources.</li>
+        <li><strong>Distribution among host units:</strong> <strong>Province 20% — Municipality 45% — Barangay 35%</strong>.</li>
+        <li><strong>80%</strong> of proceeds from energy resources is applied to <strong>lower the cost of electricity</strong> in the host LGU; the remainder goes to development and livelihood projects.</li>
+        <li><em><span class="c-burgundy">Tiwi, Albay</span>:</em> The host LGU has an <span class="c-green"><strong><u>enforceable right</u></strong></span> to its share. The Albay provincial officials (Governor, Vice Governor, SP members) who diverted Tiwi's share were <strong>dismissed</strong>. Tiwi's private counsel who recovered the share could compel, through <strong>mandamus</strong>, the Sanggunian to <strong>appropriate</strong> his fees — an LGU contracting in its <strong>corporate capacity</strong> cannot evade valid obligations.</li>
+      </ul>
+    </li>
+    <li><strong>Tax ordinance appeal (Sec. 187):</strong> Questions on the constitutionality or legality of tax ordinances go on appeal to the <strong>Secretary of Justice</strong>, at all levels including HUCs and provinces. <em>(See Part XI on the period.)</em></li>
+    <li><strong>Barangay compensation (Sec. 393):</strong> Honoraria minimum — <strong>Punong Barangay ₱1,000/month</strong>; <strong>Kagawads, Secretary, Treasurer ₱600/month</strong>. With greater fiscal capacity (post-<span class="c-burgundy"><em>Mandanas</em></span>), the Sangguniang Barangay may convert honoraria into salaries by <strong>appropriation ordinance</strong>, within the <strong>personal services ceilings (Sec. 325)</strong>. Public office remains a public trust.</li>
+  </ul>
+
+  <h4 id="part-iv-f">F. Eminent Domain (Sec. 19)</h4>
+  <ul>
+    <li><strong>Requisites:</strong>
+      <ol>
+        <li>An <span class="c-green"><strong><u>ordinance</u></strong></span> enacted by the sanggunian authorizing the local chief executive to exercise eminent domain — <span class="c-rust"><strong><u>a resolution is insufficient</u></strong></span> (<span class="c-burgundy"><em>Municipality of Parañaque v. V.M. Realty Corp.</em></span>);</li>
+        <li>For <span class="c-green"><strong><u>public use, purpose, or welfare</u></strong></span>, or for the benefit of the <strong>poor and the landless</strong>;</li>
+        <li>Payment of <span class="c-green"><strong><u>just compensation</u></strong></span>; and</li>
+        <li>A <span class="c-green"><strong><u>valid and definite offer</u></strong></span> previously made to the owner, and <strong>not accepted</strong>.</li>
+      </ol>
+    </li>
+    <li><span class="c-burgundy"><em>Noble v. City of Manila</em> (1938)</span>: Once the owner <strong>accepts</strong> the LGU's definite offer, a <strong>contract of sale is perfected</strong>; the LGU cannot abandon it and expropriate at a lower price.</li>
+    <li><strong>Immediate possession:</strong>
+      <ul>
+        <li><strong>LGU:</strong> deposit of <span class="c-green"><strong><u>15% of the fair market value</u></strong></span> based on the <strong>current tax declaration</strong>.</li>
+        <li><strong>National government (R.A. 8974 / R.A. 10752):</strong> <strong>100% of BIR zonal value</strong> plus replacement cost of improvements.</li>
+      </ul>
+    </li>
+    <li><strong>Just compensation</strong> is a <strong>judicial</strong> determination; computed as of the <span class="c-green"><strong><u>time of taking</u></strong></span>; requires <strong>prompt payment</strong> (<span class="c-burgundy"><em>City of Makati v. CA</em></span>).
+      <blockquote><em>Illustration (Tubao–Baguio road):</em> Land taken in the 1960s, paid only in 1994 at <strong>1960s values</strong> (time of taking).</blockquote>
+    </li>
+    <li><strong>Barangays may expropriate</strong> (Sec. 19 covers "LGUs," which include barangays) — via a <strong>barangay ordinance</strong>, not a resolution. The <strong>Punong Barangay has no veto</strong>, since he presides over and votes in the Sangguniang Barangay.</li>
+  </ul>
+
+  <h4 id="part-iv-g">G. Reclassification of Agricultural Lands (Sec. 20)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th><strong>Reclassification</strong></th>
+        <th><strong>Conversion</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nature</td>
+        <td><strong>Legislative</strong> act of the sanggunian (ordinance)</td>
+        <td><strong>Administrative</strong> act of the <strong>DAR</strong> (R.A. 6657)</td>
+      </tr>
+      <tr>
+        <td>Effect</td>
+        <td>Changes the permissible <strong>land use classification</strong> for planning</td>
+        <td>Changes the <strong>actual use</strong> from agricultural to non-agricultural</td>
+      </tr>
+      <tr>
+        <td>Construction</td>
+        <td>Does <strong>not</strong> authorize immediate construction</td>
+        <td>Authorizes physical development</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>Only <strong>agricultural lands</strong> may be reclassified — not forests, mineral lands, national parks.</li>
+    <li><strong>Public plazas</strong> are property for public use, <span class="c-rust"><strong><u>beyond the commerce of man</u></strong></span> — they cannot be reclassified or leased for private commercial use (<blockquote><em>Illustration:</em> Jollibee/McDonald's lease on the San Fernando plaza — <strong>not allowed</strong></blockquote>).</li>
+    <li><strong>Ceilings (% of agricultural land area):</strong>
+      <ul>
+        <li><strong>HUCs and ICCs — 15%;</strong></li>
+        <li><strong>Component cities and 1st–3rd class municipalities — 10%;</strong></li>
+        <li><strong>4th–6th class municipalities — 5%.</strong></li>
+      </ul>
+    </li>
+    <li>Lands <strong>distributed to agrarian reform beneficiaries</strong> under R.A. 6657 <span class="c-rust"><strong><u>cannot be affected</u></strong></span> by reclassification (Sec. 20[d]).</li>
+  </ul>
+
+  <h4 id="part-iv-h">H. Closure and Opening of Roads (Sec. 21)</h4>
+  <ul>
+    <li>An LGU may close or open only <strong>local roads, alleys, parks, or squares</strong> within its jurisdiction — <span class="c-rust"><strong><u>not national highways</u></strong></span> (DPWH).</li>
+    <li><strong>Permanent closure:</strong>
+      <ul>
+        <li>By <strong>ordinance</strong> approved by an extraordinary majority of the sanggunian;</li>
+        <li>Must provide an <span class="c-green"><strong><u>adequate substitute</u></strong></span> route;</li>
+        <li>The property, if no longer needed for public use, may be used or conveyed for any purpose for which other real property of the LGU may be lawfully used (reverts to the patrimonial property).</li>
+      </ul>
+    </li>
+    <li><strong>Temporary closure:</strong> for <strong>athletic, cultural, civic events, fiestas, public emergencies, or public works</strong> — must be temporary.</li>
+    <li><em>Aside:</em> San Juan, LU's municipal hall is called the <strong>"Presidencia"</strong> because mayors were once titled "Municipal Presidents."</li>
+  </ul>
+
+  <h4 id="part-iv-i">I. Corporate Powers (Sec. 22)</h4>
+  <ul>
+    <li>Every LGU, as a corporation, has the following powers:
+      <ol>
+        <li><strong>Continuous succession</strong> in its corporate name;</li>
+        <li>To <strong>sue and be sued</strong>;</li>
+        <li>To have and use a <strong>corporate seal</strong> (registered with the DILG);</li>
+        <li>To <strong>acquire and convey real or personal property</strong>;</li>
+        <li>To <strong>enter into contracts</strong> — through the local chief executive, <span class="c-green"><strong><u>with prior sanggunian authorization</u></strong></span>; and</li>
+        <li>To exercise such other powers as are granted to corporations, subject to the Code.</li>
+      </ol>
+    </li>
+    <li><strong>Property practices:</strong> Inter-LGU property exchanges (San Fernando–La Union); Sagayad resettlement (lots sold at historical cost); <strong>reversionary clauses</strong> in transfers to national agencies (NBI, Hall of Justice, Camp Florendo) — title reverts when the public purpose ceases.</li>
+  </ul>
+
+  <h4 id="part-iv-j">J. Liability for Damages (Sec. 24; Art. 2189, Civil Code)</h4>
+  <ul>
+    <li><strong>Sec. 24:</strong> "Local government units and their officials are <span class="c-rust"><strong><u>not exempt from liability</u></strong></span> for death or injury to persons or damage to property."</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Act</th>
+        <th>Rule</th>
+        <th>Case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Governmental function</strong></td>
+        <td>LGU <strong>immune</strong> (no liability for negligence of its agents), unless statute provides</td>
+        <td><span class="c-burgundy"><em>Municipality of San Fernando v. Firme</em></span> — municipal dump truck hauling gravel to repair roads; municipality <strong>not liable</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Proprietary function</strong></td>
+        <td>LGU <strong>liable</strong> like a private corporation (<em>respondeat superior</em>; Arts. 2176, 2180)</td>
+        <td><span class="c-burgundy"><em>City of Manila v. IAC</em></span> — premature exhumation in North Cemetery during a 50-year lease; city <strong>liable</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Defective public works</strong></td>
+        <td>LGU <strong>liable by statute</strong> (Art. 2189) — even when governmental</td>
+        <td><span class="c-burgundy"><em>Guilatco</em></span>; <span class="c-burgundy"><em>Teotico</em></span></td>
+      </tr>
+      <tr>
+        <td><strong>Ultra vires / bad faith acts of officials</strong></td>
+        <td>Officials <strong>personally liable</strong></td>
+        <td>Fiesta stage case (see caution below)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Art. 2189, Civil Code — requisites:</strong>
+      <ol>
+        <li><strong>Defective condition</strong> of roads, streets, bridges, public buildings, or other public works; and</li>
+        <li>The public work is under the <span class="c-green"><strong><u>control or supervision</u></strong></span> of the province, city, or municipality.</li>
+      </ol>
+      <em>Ownership is irrelevant.</em>
+    </li>
+    <li><span class="c-burgundy"><em>Guilatco v. City of Dagupan</em> (1990)</span>: Open manhole on a <strong>national road</strong> within the city → city <strong>liable</strong>; control or supervision suffices.</li>
+    <li><span class="c-burgundy"><em>City of Manila v. Teotico</em> (1968)</span>: Uncovered catch basin; the city charter's immunity clause <span class="c-rust"><strong><u>yields</u></strong></span> to Art. 2189.</li>
+  </ul>
+  <blockquote><em>Illustration:</em> Uncovered excavation by a national agency on a national highway in a municipality → municipality <strong>liable</strong> (it had the duty to post barriers/warnings).</blockquote>
+  <ul>
+    <li><span class="c-burgundy"><em>Torio v. Fontanilla</em> (1978)</span> — collapse of the town fiesta stage (Malasiqui, Pangasinan). <strong>As taught in the notes:</strong> holding a fiesta is proprietary; the municipality was absolved because the program was <em>ultra vires</em>, and the councilors who organized it were held <strong>personally liable</strong>. ⚠ <em>See Part XI — verify this ruling.</em></li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-v-intergovernmental-relations">PART V. INTERGOVERNMENTAL RELATIONS (Secs. 25–38)</h3>
+
+  <h4 id="part-v-a">A. National Supervision (Sec. 25) — Tiers of Supervision</h4>
+  <ul>
+    <li>The President exercises general supervision over LGUs to ensure that their acts are <span class="c-green"><strong><u>within the scope of their prescribed powers and functions</u></strong></span>.</li>
+    <li><strong>Direct presidential supervision over:</strong>
+      <ul>
+        <li><strong>Provinces;</strong></li>
+        <li><strong>HUCs;</strong></li>
+        <li><strong>ICCs;</strong></li>
+        <li><strong>Autonomous regions</strong> (BARMM); and</li>
+        <li><strong>Pateros</strong> — the only municipality in Metro Manila; belongs to <strong>no province</strong>, and the MMDA is not an intermediate LGU.</li>
+      </ul>
+    </li>
+    <li><strong>Indirect (cascading) supervision:</strong>
+      <ul>
+        <li>Over <strong>component cities and municipalities</strong> → <strong>through the province</strong> (Governor).</li>
+        <li>Over <strong>barangays</strong> → <strong>through the city or municipality</strong>.</li>
+        <li>Over BARMM component LGUs → through the regional government.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: TIERS OF PRESIDENTIAL AND LOCAL SUPERVISION</span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.2)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.2)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset Zoom">↺</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            Pres["PRESIDENT"]
+            AR["Autonomous Regions"]
+            Prov["Provinces"]
+            HUC["HUCs / ICCs"]
+            Pat["Pateros"]
+            CCM["Component Cities &amp; Municipalities"]
+            BgyHUC["Barangays"]
+            BgyPat["Barangays"]
+            BgyCCM["Barangays"]
+
+            Pres --> AR
+            Pres --> Prov
+            Pres --> HUC
+            Pres --> Pat
+
+            Prov --> CCM
+            CCM --> BgyCCM
+            HUC --> BgyHUC
+            Pat --> BgyPat
+
+            classDef navy fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A,font-weight:bold;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:1.5px,color:#0F766E;
+            class Pres,Prov,HUC,Pat,AR,CCM,BgyHUC,BgyPat,BgyCCM navy;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-v-b">B. Ecological Balance & Prior Consultation (Secs. 26–27)</h4>
+  <ul>
+    <li><strong>Sec. 26 — Duty of national agencies:</strong> Every national agency or GOCC involved in planning and implementing any project or program that may cause <strong>pollution, climate change, depletion of non-renewable resources, loss of crop land, rangeland, or forest cover, extinction of animal or plant species</strong>, or <strong>displacement of communities</strong> must <span class="c-green"><strong><u>consult</u></strong></span> with the LGUs, NGOs, and other sectors concerned and explain:
+      <ul>
+        <li>The <strong>goals and objectives</strong> of the project;</li>
+        <li>Its <strong>impact</strong> upon the people and the community in terms of environmental or ecological balance; and</li>
+        <li>The <strong>measures</strong> to be undertaken to prevent or minimize adverse effects.</li>
+      </ul>
+    </li>
+    <li><strong>Sec. 27 — Prior consultations required:</strong> No such project shall be implemented unless:
+      <ol>
+        <li>The <strong>consultations</strong> under Secs. 2(c) and 26 are complied with; <strong>and</strong></li>
+        <li><span class="c-green"><strong><u>Prior approval of the sanggunian concerned</u></strong></span> is obtained.</li>
+      </ol>
+    </li>
+    <li><strong>Timing:</strong> Consultation must be <strong>prior</strong> — during the <strong>planning phase</strong>. Post-construction or mid-construction consultation <span class="c-rust"><strong><u>does not cure</u></strong></span> the defect.</li>
+    <li><span class="c-burgundy"><em>PICOP Resources v. Base Metals</em> (2011)</span>: If a project covers several LGUs, consultation and sanggunian approval are required from <strong>all</strong> affected LGUs; one endorsement is not enough.</li>
+    <li><span class="c-burgundy"><em>Province of Rizal v. Executive Secretary</em> (2005)</span>: The <strong>San Mateo Landfill</strong>, established without prior consultation and SP approval → <span class="c-rust"><strong><u>ordered closed</u></strong></span>.</li>
+  </ul>
+  <blockquote><em>Illustration:</em> DPWH flood-control dike built across three municipalities without prior sanggunian approval → vulnerable to injunction/mandamus; a belated meeting does not cure it.</blockquote>
+
+  <h4 id="part-v-c">C. Local Chief Executives and the Police (Sec. 28; R.A. 6975; R.A. 8551)</h4>
+  <ul>
+    <li><strong>Evolution:</strong>
+      <ol>
+        <li><strong>Pre-martial law</strong> — local police under the mayor (abused as private armies);</li>
+        <li><strong>INP under the PC</strong> (P.D. 765) — militarized;</li>
+        <li><strong>1987 Constitution (Art. XVI, Sec. 6)</strong> — <span class="c-green"><strong><u>one police force, national in scope and civilian in character</u></strong></span>, administered by <strong>NAPOLCOM</strong> (R.A. 6975; R.A. 8551).</li>
+      </ol>
+    </li>
+    <li><strong>Civilian character:</strong> The PNP is under the DILG, not the AFP. The <strong>PCG</strong> is a civilian maritime service under the DOTr (R.A. 9993).
+      <ul>
+        <li><span class="c-burgundy"><em>Manalo v. Sistoza</em></span>: PNP senior officers do <span class="c-rust"><strong><u>not</u></strong></span> require Commission on Appointments confirmation.</li>
+        <li><span class="c-burgundy"><em>Soriano v. Lista</em></span>: PCG flag officers do <span class="c-rust"><strong><u>not</u></strong></span> require CA confirmation.</li>
+      </ul>
+    </li>
+    <li><strong>LCEs as NAPOLCOM deputies:</strong>
+      <ul>
+        <li>Exercise <strong>operational supervision and control</strong> over local PNP units (deploy, inspect, recommend);</li>
+        <li>Mayors choose the <strong>Chief of Police</strong> from a list of <strong>five eligibles</strong> recommended by the PNP Provincial Director.</li>
+      </ul>
+    </li>
+    <li><strong>Grounds for suspension/withdrawal of deputation by NAPOLCOM:</strong>
+      <ol>
+        <li>Frequent unauthorized absences;</li>
+        <li>Abuse of authority;</li>
+        <li>Providing material support to criminal elements; or</li>
+        <li>Engaging in acts inimical to national security or that negate the effectiveness of the peace and order campaign (e.g., illegal drugs, corruption).</li>
+      </ol>
+      <blockquote><em>Example:</em> Mayor Rolando Espinosa — upon withdrawal, the LCE loses all operational authority.</blockquote>
+    </li>
+  </ul>
+
+  <h4 id="part-v-d">D. Provincial Supervision; Review of Executive Orders (Secs. 29–30)</h4>
+  <ul>
+    <li><strong>Sec. 29:</strong> The province, <strong>through the governor</strong>, exercises general supervision over component cities and municipalities to ensure they act within their prescribed powers. The governor <span class="c-rust"><strong><u>cannot</u></strong></span> revoke a mayor's valid executive order or substitute judgment.</li>
+    <li><strong>Sec. 30 — Review of executive orders:</strong>
+      <ul>
+        <li><strong>Punong Barangay</strong> → copies of EOs to the <strong>city/municipal mayor</strong> within <strong>3 days</strong>;</li>
+        <li><strong>Component city/municipal mayor</strong> → copies of EOs to the <strong>provincial governor</strong> within <strong>3 days</strong>;</li>
+        <li><strong>Standard:</strong> whether the EO is <span class="c-green"><strong><u>within the powers</u></strong></span> conferred by law. If no action is taken within <strong>30 days</strong>, the EO is deemed consistent with law and valid.</li>
+      </ul>
+    </li>
+  </ul>
+  <blockquote><em>Illustration:</em> Mayor bans trucks on a municipal road 6–9 AM; the governor cannot strike it down merely because he prefers another schedule.</blockquote>
+
+  <h4 id="part-v-e">E. Legal Questions (Sec. 31); Barangay Supervision (Sec. 32)</h4>
+  <ul>
+    <li><strong>Sec. 31 — Routing of legal questions:</strong>
+      <ul>
+        <li><strong>Component municipality</strong> (no municipal legal officer) → <strong>Provincial Legal Officer</strong> → (if absent/disqualified) <strong>Provincial Prosecutor</strong>.</li>
+        <li><strong>Component city</strong> → <strong>City Legal Officer</strong> → (if vacant) <strong>City Prosecutor</strong>.</li>
+        <li>Bypassing the Provincial Legal Officer and going directly to the <strong>DILG Central Office</strong> is improper; the DILG routinely declines (<em>Bacnotan experience</em>).</li>
+      </ul>
+    </li>
+    <li><strong>Sec. 32:</strong> Cities and municipalities exercise general supervision over component barangays. A mayor <span class="c-rust"><strong><u>cannot summarily remove</u></strong></span> a Punong Barangay — discipline follows <strong>Secs. 60–68</strong>.</li>
+  </ul>
+
+  <h4 id="part-v-f">F. Cooperative Undertakings (Sec. 33)</h4>
+  <ul>
+    <li>LGUs may, <span class="c-green"><strong><u>through appropriate ordinances</u></strong></span>, group themselves, consolidate, or coordinate efforts, services, and resources for purposes <strong>commonly beneficial</strong> to them.</li>
+    <li><strong>General territorial rule:</strong> Public funds may be spent only within the LGU's territory.</li>
+    <li><strong>Sec. 33 exception:</strong> Under a joint cooperative agreement, an LGU may <span class="c-green"><strong><u>appropriate funds for facilities outside its territory</u></strong></span> (e.g., a shared sanitary landfill in San Fernando used by San Juan, Bacnotan, Bauang, Naguilian).</li>
+    <li><strong>Process:</strong> Each LGU enacts an ordinance → joint MOA (cost-sharing, management) → common project.</li>
+  </ul>
+
+  <h4 id="part-v-g">G. NGOs, POs, Local Special Bodies, BAC (Secs. 34–38)</h4>
+  <ul>
+    <li><strong>Secs. 34–35:</strong> LGUs shall promote the establishment and operation of POs and NGOs and may enter into <strong>joint ventures</strong> with them.</li>
+    <li><strong>Accreditation</strong> by the sanggunian is a prerequisite to representation in local special bodies:
+      <ul>
+        <li>Local Development Council;</li>
+        <li>Local Health Board;</li>
+        <li>Local School Board;</li>
+        <li>Local Peace and Order Council;</li>
+        <li>Bids and Awards Committee.</li>
+      </ul>
+    </li>
+    <li><strong>Sec. 36 — Assistance:</strong> An LGU may provide financial or material assistance for economic, socially-oriented, environmental, or cultural projects <strong>for public purpose</strong>; loans must have clear repayment terms (COA rules on waste of public funds).</li>
+    <li><strong>Secs. 37–38 (BAC; now R.A. 9184):</strong> Composition is <strong>fixed by statute</strong>. The LCE <span class="c-rust"><strong><u>cannot add or remove members</u></strong></span> by executive order; procurement by an improperly constituted BAC is defective.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-vi-elective-officials">PART VI. ELECTIVE OFFICIALS (Secs. 39–47)</h3>
+
+  <h4 id="part-vi-a">A. Qualifications (Sec. 39)</h4>
+  <ul>
+    <li><strong>Positive qualifications</strong> (Sec. 39) work with <strong>negative qualifications</strong> (Sec. 40). Qualifications are <span class="c-green"><strong><u>continuing requirements</u></strong></span> throughout incumbency.</li>
+    <li><strong>General qualifications:</strong>
+      <ul>
+        <li><strong>Citizen</strong> of the Philippines — <span class="c-green"><strong><u>naturalized citizens qualify</u></strong></span> (unlike members of Congress);</li>
+        <li><strong>Registered voter</strong> in the barangay, municipality, city, or province — or, for sanggunian members, in the <strong>district</strong> where he intends to be elected;</li>
+        <li><strong>Resident</strong> therein for at least <strong>one (1) year immediately preceding the day of the election</strong>; and</li>
+        <li><strong>Able to read and write Filipino</strong> or any other local language or dialect.</li>
+      </ul>
+    </li>
+    <li><span class="c-rust"><strong><u>No property qualification</u></strong></span> — residing in a rented house or with relatives suffices (<span class="c-burgundy"><em>Co v. HRET</em></span>; <span class="c-burgundy"><em>Maquera v. Borra</em></span>).</li>
+    <li><strong>Age — reckoned ON ELECTION DAY</strong> (not on filing of the COC, not on assumption). Purpose: avoid the ambiguity of the <strong>Ninoy Aquino</strong> precedent (34 on election day, 35 on oath-taking).</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Age (on election day)</th>
+        <th>Positions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>At least 23</strong></td>
+        <td>Governor, Vice Governor, SP member; Mayor, Vice Mayor, SP member of <strong>HUCs</strong></td>
+      </tr>
+      <tr>
+        <td><strong>At least 21</strong></td>
+        <td>Mayor, Vice Mayor of <strong>ICCs, component cities, municipalities</strong></td>
+      </tr>
+      <tr>
+        <td><strong>At least 18</strong></td>
+        <td>SP member of <strong>component cities</strong>; <strong>SB</strong> member; <strong>Punong Barangay</strong>; <strong>Sangguniang Barangay</strong> member</td>
+      </tr>
+      <tr>
+        <td><strong>SK officials</strong></td>
+        <td><strong>At least 18 but not more than 24</strong> (R.A. 10742); must be a <strong>KK member</strong>; <strong>anti-dynasty rule</strong> — not related within the <strong>2nd civil degree</strong> to any incumbent elected official in the locality. <em>(See Part XI.)</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><blockquote><em>Illustration:</em> Born May 10, 2004; election May 9, 2022 → 17 years and 364 days on election day → <strong>not qualified</strong> for SB, even if 18 on June 30.</blockquote></li>
+    <li><strong>District rule:</strong> An SP candidate must be a voter of the <strong>specific district</strong>; a Governor may be a voter anywhere in the province.</li>
+  </ul>
+
+  <h4 id="residence-domicile">Residence = Domicile</h4>
+  <ul>
+    <li>"Residence" in election law is synonymous with <span class="c-green"><strong><u>domicile</u></strong></span> — a fixed permanent residence to which, whenever absent, one has the intention of returning (<em><strong>animus revertendi</strong></em>) (<span class="c-burgundy"><em>Co v. HRET</em></span>; <span class="c-burgundy"><em>Ong Huan Tin</em></span>; <span class="c-burgundy"><em>Ujano</em></span>).</li>
+    <li>Absence for <strong>study, business, or profession</strong> does <span class="c-rust"><strong><u>not</u></strong></span> cause loss of domicile (<span class="c-burgundy"><em>Faypon v. Quirino</em></span>; <span class="c-burgundy"><em>Abella v. COMELEC</em></span>). Registering as a voter elsewhere for convenience does not by itself abandon domicile.</li>
+    <li>But establishing a <strong>permanent family home elsewhere</strong> without intent to return = <span class="c-rust"><strong><u>abandonment</u></strong></span> (<span class="c-burgundy"><em>Abella</em></span>).</li>
+    <li><strong>Requisites for change of domicile</strong> (<span class="c-burgundy"><em>Romualdez-Marcos</em></span>; <span class="c-burgundy"><em>Aquino</em></span>; <span class="c-burgundy"><em>Domino</em></span>; <span class="c-burgundy"><em>Dumpit-Michelena v. Boado</em></span>):
+      <ol>
+        <li><strong>Actual removal</strong> or change of domicile;</li>
+        <li><strong>Bona fide intention</strong> of abandoning the former residence and establishing a new one (<em>animus non revertendi</em> + <em>animus manendi</em>); and</li>
+        <li><strong>Definite acts</strong> corresponding with that purpose.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="part-vi-b">B. Disqualifications (Sec. 40)</h4>
+  <ul>
+    <li>The following are <span class="c-rust"><strong><u>disqualified</u></strong></span> from running for any elective local position:
+      <ol>
+        <li><strong>(a)</strong> Those sentenced by <span class="c-green"><strong><u>final judgment</u></strong></span> for an offense involving <strong>moral turpitude</strong> or for an offense punishable by <strong>one (1) year or more of imprisonment</strong>, <strong>within two (2) years after serving sentence</strong>;
+          <ul>
+            <li><em>Moral turpitude:</em> an act of baseness, vileness, or depravity contrary to justice, honesty, modesty, or good morals (<span class="c-burgundy"><em>In re Gutierrez</em></span>; <span class="c-burgundy"><em>Teves v. COMELEC</em></span>).</li>
+            <li><span class="c-burgundy"><em>Moreno v. COMELEC</em></span>: A <strong>probationer is not disqualified</strong> — he does not "serve sentence"; the 2-year period does not run; probation restores civil rights.</li>
+          </ul>
+        </li>
+        <li><strong>(b)</strong> Those <strong>removed from office as a result of an administrative case</strong> — removal <strong>on or after January 1, 1992</strong> (<span class="c-burgundy"><em>Grego v. COMELEC</em></span>); decision must be final.
+          <ul>
+            <li><span class="c-burgundy"><em>Carpio-Morales v. CA & Binay</em></span>: the <span class="c-rust"><strong><u>condonation doctrine is abandoned</u></strong></span> (re-election does not condone prior misconduct).</li>
+          </ul>
+        </li>
+        <li><strong>(c)</strong> Those convicted by final judgment for <strong>violating the oath of allegiance</strong> to the Republic;</li>
+        <li><strong>(d)</strong> Those with <strong>dual citizenship</strong> — construed as <span class="c-green"><strong><u>dual allegiance</u></strong></span> (<span class="c-burgundy"><em>Mercado v. Manzano</em></span>; <span class="c-burgundy"><em>Valles v. COMELEC</em></span>):
+          <ul>
+            <li><em>Dual citizenship</em> arises <strong>involuntarily</strong> (concurrent laws, e.g., <em>jus soli</em> + <em>jus sanguinis</em>) → <strong>not disqualified</strong>; filing a COC with the oath suffices.</li>
+            <li><em>Dual allegiance</em> arises from a <strong>voluntary act</strong> → disqualified unless compliant with <strong>R.A. 9225</strong>.</li>
+            <li><strong>R.A. 9225 twin requirements:</strong> (1) <strong>Oath of allegiance</strong>; <strong>and</strong> (2) <span class="c-green"><strong><u>personal and sworn renunciation of any and all foreign citizenship</u></strong></span> before an authorized officer, at or before filing the COC (<span class="c-burgundy"><em>Jacot v. Dal</em></span>).</li>
+            <li><span class="c-burgundy"><em>Sobejana-Condon v. COMELEC</em> (2012)</span>: The R.A. 9225 oath <span class="c-rust"><strong><u>is not</u></strong></span> a renunciation; failure to execute a separate sworn renunciation → <strong>disqualified</strong> (Vice Mayor of Caba, La Union).</li>
+            <li><span class="c-burgundy"><em>Maquiling v. COMELEC</em></span>: Use of a foreign passport after renunciation <strong>recants</strong> it.</li>
+          </ul>
+        </li>
+        <li><strong>(e)</strong> <strong>Fugitives from justice</strong> in criminal or non-political cases here or abroad — includes not only those who flee <strong>after conviction</strong>, but also those who, <strong>after being charged, flee to avoid prosecution</strong> (<span class="c-burgundy"><em>Marquez v. COMELEC</em></span>; <span class="c-burgundy"><em>Rodriguez v. COMELEC</em></span>). <strong>Intent to evade</strong> must be shown (charge or conviction already existing at time of flight).</li>
+        <li><strong>(f)</strong> <strong>Permanent residents in a foreign country</strong> or those who acquired the right to reside abroad and continue to avail of it after Jan. 1, 1992 (<strong>green card holders</strong>) — <span class="c-burgundy"><em>Caasi v. CA</em></span>: filing a COC is <strong>not</strong> a waiver; there must be an <span class="c-green"><strong><u>independent act of waiver prior</u></strong></span> to filing the COC.</li>
+        <li><strong>(g)</strong> The <strong>insane or feeble-minded</strong> (declared by competent authority).</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="part-vi-c">C. Manner of Election (Sec. 41)</h4>
+  <ul>
+    <li><strong>At large:</strong> Governor, Vice Governor, City/Municipal Mayor and Vice Mayor, Punong Barangay, Sangguniang Barangay members.</li>
+    <li><strong>By the KK:</strong> SK Chairperson and Kagawads.</li>
+    <li><strong>By district:</strong> Regular members of the SP, Sangguniang Panlungsod, and SB (R.A. 7166; <span class="c-burgundy"><em>De Guia v. COMELEC</em></span> — to reduce the number of candidates per ballot).
+      <ul>
+        <li><strong>SP seats:</strong> 1st & 2nd class provinces — <strong>10</strong>; 3rd & 4th class — <strong>8</strong>; 5th & 6th class — <strong>6</strong>; provinces with more than 5 legislative districts — <strong>2 per district</strong> (R.A. 8553).</li>
+      </ul>
+    </li>
+    <li><strong>Ex officio members</strong> — presidents of:
+      <ul>
+        <li>The <strong>League of Councilors</strong> (in the SP);</li>
+        <li>The <strong>Liga ng mga Barangay</strong>; and</li>
+        <li>The <strong>Pederasyon ng mga Sangguniang Kabataan</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>Sectoral representatives (3):</strong> one from <strong>women</strong>; one from <strong>workers</strong>; one from <strong>urban poor, indigenous cultural communities, disabled persons</strong>, or other sector as determined by the sanggunian.</li>
+  </ul>
+
+  <h4 id="part-vi-d">D. Date of Election and Term of Office (Secs. 42–43)</h4>
+  <ul>
+    <li><strong>Sec. 42:</strong> Every <strong>three (3) years</strong>, on the <strong>second Monday of May</strong>, unless otherwise provided by law.</li>
+    <li><strong>Sec. 43(a):</strong> Term of <strong>three (3) years</strong>, starting <strong>noon of June 30</strong> following the election (except barangay officials).</li>
+    <li><strong>Art. X, Sec. 8:</strong> The 3-year term of local officials (except barangay) is constitutional — Congress <span class="c-rust"><strong><u>cannot extend</u></strong></span> it, even by hold-over (<span class="c-burgundy"><em>Osmeña v. COMELEC</em></span>). Barangay terms are statutory.</li>
+    <li><strong>Term vs. tenure</strong> (<span class="c-burgundy"><em>Dimaporo v. Mitra</em></span>): <em>Term</em> is the period fixed by law during which an officer may claim to hold office as of right; <em>tenure</em> is the actual period the officer holds office. Shorter tenure does not alter the term.</li>
+    <li><span class="c-burgundy"><em>De Leon v. Esguerra</em></span>: Barangay officials enjoy <strong>security of tenure</strong> during their term.</li>
+  </ul>
+
+  <h4 id="three-term-limit">Three-Term Limit (Sec. 43[b])</h4>
+  <ul>
+    <li>No local elective official shall serve for <span class="c-rust"><strong><u>more than three consecutive terms</u></strong></span> in the same position.</li>
+    <li><strong>Requisites (both must concur)</strong> (<span class="c-burgundy"><em>Borja v. COMELEC</em></span>; <span class="c-burgundy"><em>Ong v. Alegre</em></span>):
+      <ol>
+        <li>The official has been <span class="c-green"><strong><u>elected</u></strong></span> for three consecutive terms in the <strong>same</strong> local government post; <strong>and</strong></li>
+        <li>He has <span class="c-green"><strong><u>fully served</u></strong></span> three consecutive terms.</li>
+      </ol>
+    </li>
+    <li><strong>Voluntary renunciation</strong> of office for any length of time is <span class="c-rust"><strong><u>not</u></strong></span> an interruption.</li>
+    <li><strong>Involuntary interruption</strong> (e.g., unseated by an election protest <strong>before</strong> the term expires) <span class="c-green"><strong><u>breaks</u></strong></span> continuity (<span class="c-burgundy"><em>Lonzanida</em></span>; <span class="c-burgundy"><em>Dizon</em></span>).</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th>Barred?</th>
+        <th>Case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vice Mayor <strong>succeeded</strong> to mayorship by law, then won 2 elections</td>
+        <td><strong>Not barred</strong> (succession is not election)</td>
+        <td><span class="c-burgundy"><em>Borja</em></span></td>
+      </tr>
+      <tr>
+        <td>Official <strong>resigns</strong> during 3rd term</td>
+        <td><strong>Barred</strong> (voluntary renunciation)</td>
+        <td>Sec. 43(b)</td>
+      </tr>
+      <tr>
+        <td>Proclamation voided and unseated <strong>before</strong> term ends</td>
+        <td><strong>Not barred</strong> (involuntary)</td>
+        <td><span class="c-burgundy"><em>Lonzanida</em></span>; <span class="c-burgundy"><em>Dizon</em></span></td>
+      </tr>
+      <tr>
+        <td>Served the <strong>entire term</strong>; protest decided <strong>after</strong> term ended</td>
+        <td><strong>Barred</strong> (full service)</td>
+        <td><span class="c-burgundy"><em>Ong v. Alegre</em></span></td>
+      </tr>
+      <tr>
+        <td><strong>Preventive suspension</strong> during term</td>
+        <td><strong>Barred</strong> (title retained; no interruption)</td>
+        <td><span class="c-burgundy"><em>Aldovino</em></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Barangay and SK officials (per 10/03 notes):</strong> Following <span class="c-burgundy"><em>Macalintal v. COMELEC</em> (2023)</span>, <strong>R.A. 12232 / R.A. 12326</strong> fixed the term at <strong>five (5) years</strong>. Barangay officials: max <strong>two consecutive</strong> terms; SK officials: <strong>one</strong> term. Next BSKE: <strong>2nd Monday of November 2028</strong>; assumption on <strong>December 1</strong>.</li>
+  </ul>
+
+  <h4 id="part-vi-e">E. Permanent Vacancies in Executive Offices (Sec. 44)</h4>
+  <ul>
+    <li><strong>Causes of permanent vacancy (Sec. 44[d]):</strong> When an elective local official:
+      <ol>
+        <li><strong>Fills a higher vacant office;</strong></li>
+        <li><strong>Refuses to assume</strong> office;</li>
+        <li><strong>Fails to qualify;</strong></li>
+        <li><strong>Dies;</strong></li>
+        <li>Is <strong>removed</strong> from office;</li>
+        <li><strong>Voluntarily resigns;</strong> or</li>
+        <li>Is otherwise <strong>permanently incapacitated</strong> to discharge the functions of his office.</li>
+      </ol>
+    </li>
+    <li><strong>Rules of succession:</strong>
+      <ul>
+        <li><strong>Governor/Mayor vacant</strong> → the <strong>Vice Governor/Vice Mayor</strong> becomes Governor/Mayor.</li>
+        <li><strong>Both</strong> Governor and Vice Governor (or Mayor and Vice Mayor) vacant → the <strong>highest-ranking sanggunian member</strong> becomes Governor/Mayor; the <strong>second highest-ranking</strong> becomes Vice Governor/Vice Mayor; subsequent vacancies filled by the next in rank.</li>
+        <li><strong>Punong Barangay vacant</strong> → the <strong>highest-ranking Sangguniang Barangay member</strong>.</li>
+        <li><strong>Ties</strong> → resolved by <strong>drawing of lots</strong>.</li>
+        <li>Successors serve only the <strong>unexpired term</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>Ranking:</strong> Based on the <span class="c-green"><strong><u>proportion of votes obtained</u></strong></span> by each winning candidate <strong>to the total number of registered voters</strong> in each district in the immediately preceding election (not the raw vote) (<span class="c-burgundy"><em>Victoria v. COMELEC</em></span>). Ex officio members are not in the line of executive succession.</li>
+    <li><span class="c-burgundy"><em>Menzon v. Petilla</em></span>: A vacancy exists when there is no person lawfully authorized to exercise the office. Where the Code is silent (temporary vacancy in the Vice Governor's office), the President, through the DILG, may make a temporary designation to avoid an interregnum.</li>
+    <li><span class="c-burgundy"><em>Unda v. COMELEC</em></span>: The Vice Mayor is next in line upon the death of the Mayor.</li>
+  </ul>
+
+  <h4 id="part-vi-f">F. Permanent Vacancies in the Sanggunian (Sec. 45)</h4>
+  <ul>
+    <li><strong>Appointing authority</strong> (where automatic succession does not apply):
+      <ul>
+        <li><strong>President</strong> (through the Executive Secretary) — <strong>SP</strong> and <strong>Sangguniang Panlungsod of HUCs and ICCs</strong>;</li>
+        <li><strong>Governor</strong> — <strong>Sangguniang Panlungsod of component cities</strong> and <strong>SB</strong>;</li>
+        <li><strong>City/Municipal Mayor</strong> — <strong>Sangguniang Barangay</strong>, upon <span class="c-green"><strong><u>recommendation of the Sangguniang Barangay</u></strong></span> concerned.</li>
+      </ul>
+    </li>
+    <li><strong>Party rule:</strong> Except for the Sangguniang Barangay, the appointee must come from the <strong>same political party</strong> as the member who caused the vacancy, and must have:
+      <ul>
+        <li>A <strong>nomination</strong>; and</li>
+        <li>A <strong>certificate of membership</strong> — both issued by the <strong>highest official of the political party</strong>.</li>
+      </ul>
+      These are <span class="c-rust"><strong><u>conditions <em>sine qua non</em></u></strong></span>; an appointment without them is <span class="c-rust"><strong><u>null and void <em>ab initio</em></u></strong></span> and a ground for administrative action against the appointing official.
+    </li>
+    <li><strong>Member belonging to no political party</strong> → the LCE appoints upon the <span class="c-green"><strong><u>recommendation of the sanggunian concerned</u></strong></span>.
+      <ul>
+        <li><span class="c-burgundy"><em>Fariñas v. Barba</em></span>: "Local chief executive" in Sec. 45(c) refers to the appointing authorities in Sec. 45(a); the sanggunian's <strong>recommendation</strong> is a condition <em>sine qua non</em>.</li>
+      </ul>
+    </li>
+    <li><strong>Party certificates NOT required when:</strong>
+      <ol>
+        <li>The vacating member was <strong>independent</strong> (no party);</li>
+        <li>The vacancy is in the <strong>Sangguniang Barangay</strong> (non-partisan);</li>
+        <li>The vacancy is in the <strong>youth (SK)</strong> representation; or</li>
+        <li>The vacancy is in the <strong>barangay (Liga)</strong> representation.</li>
+      </ol>
+    </li>
+    <li><strong>Youth and barangay representatives:</strong> filled automatically by the official <strong>next in rank</strong> of the organization concerned.</li>
+    <li><em>Per 10/03 notes (R.A. 12326):</em> vacancies in <strong>SK Kagawad</strong> seats are filled by appointment by the City/Municipal Mayor.</li>
+  </ul>
+
+  <h4 id="part-vi-g">G. Temporary Vacancy in the Office of the LCE (Sec. 46)</h4>
+  <ul>
+    <li><strong>Automatic assumption:</strong> When the Governor, Mayor, or Punong Barangay is <strong>temporarily incapacitated</strong> (physical or legal reasons — leave, travel abroad, suspension), the <strong>Vice Governor, Vice Mayor, or highest-ranking Sangguniang Barangay member</strong> automatically exercises the powers and duties of the office — <span class="c-green"><strong><u>no appointment needed</u></strong></span>.</li>
+    <li><strong>Withheld powers:</strong> The acting official <span class="c-rust"><strong><u>cannot appoint, suspend, or dismiss employees</u></strong></span>, unless the temporary incapacity <strong>exceeds thirty (30) working days</strong>.</li>
+    <li><span class="c-burgundy"><em>Gamboa v. Aguirre</em></span>: An acting LCE <span class="c-rust"><strong><u>cannot simultaneously preside</u></strong></span> over the sanggunian; the members elect a temporary presiding officer.</li>
+    <li><strong>Termination of temporary incapacity:</strong>
+      <ul>
+        <li><em>Physical causes</em> — upon submission to the sanggunian of a <strong>written declaration</strong> that he has reported back to office;</li>
+        <li><em>Legal causes</em> — upon submission of <strong>documents showing</strong> that the legal causes no longer exist.</li>
+      </ul>
+    </li>
+    <li><strong>Travel rules:</strong>
+      <ul>
+        <li><strong>Within the country, ≤ 3 consecutive days:</strong> the LCE <strong>may designate an OIC</strong> in writing, specifying powers (but <strong>not</strong> appoint, suspend, dismiss).</li>
+        <li><strong>If the LCE fails or refuses</strong> to designate → the Vice LCE/highest-ranking member assumes on the <strong>fourth (4th) day</strong> of absence.</li>
+        <li><strong>Except</strong> for such travel, the LCE <strong>shall in no case</strong> authorize any local official other than the Vice LCE/highest-ranking member to assume — this <span class="c-rust"><strong><u>bars designating secretaries/administrators/subordinates as OICs</u></strong></span>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="part-vi-h">H. Leaves of Absence (Sec. 47)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Official</th>
+        <th>Approving Authority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Governors; Mayors of <strong>HUCs and ICCs</strong></td>
+        <td><strong>President</strong> (or duly authorized representative)</td>
+      </tr>
+      <tr>
+        <td>Vice Governors; City/Municipal Vice Mayors</td>
+        <td><strong>Local chief executive</strong> concerned</td>
+      </tr>
+      <tr>
+        <td>Sanggunian members and employees (SP, SP, SB)</td>
+        <td><strong>Vice Governor / Vice Mayor</strong> concerned</td>
+      </tr>
+      <tr>
+        <td>Mayors of <strong>component cities and municipalities</strong></td>
+        <td><strong>Governor</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Punong Barangay</strong></td>
+        <td><strong>City/Municipal Mayor</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Sangguniang Barangay members</strong></td>
+        <td><strong>Punong Barangay</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><span class="c-green"><strong><u>Deemed approved</u></strong></span> if not acted upon within <strong>five (5) working days</strong> after receipt — to prevent harassment through inaction.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-vii-local-legislation">PART VII. LOCAL LEGISLATION (Secs. 48–59)</h3>
+
+  <h4 id="part-vii-a">A. Local Legislative Power (Sec. 48)</h4>
+  <ul>
+    <li>Exercised by:
+      <ul>
+        <li><strong>Sangguniang Panlalawigan</strong> — province (powers: Sec. 468);</li>
+        <li><strong>Sangguniang Panlungsod</strong> — city (Sec. 458);</li>
+        <li><strong>Sangguniang Bayan</strong> — municipality (Sec. 447);</li>
+        <li><strong>Sangguniang Barangay</strong> — barangay (Sec. 391).</li>
+      </ul>
+    </li>
+    <li><strong>Delegated, subordinate legislation</strong> — ordinances must conform to national statutes (<span class="c-burgundy"><em>Solicitor General v. MMA</em></span>). <strong>Exception:</strong> taxing power is granted <strong>directly by Art. X, Sec. 5</strong>.</li>
+    <li><span class="c-rust"><strong><u>No inherent contempt/subpoena power</u></strong></span> — sanggunians cannot punish non-members for contempt or issue compulsory subpoenas absent express grant (<span class="c-burgundy"><em>NORECO II v. Sangguniang Panlungsod of Dumaguete</em></span>).</li>
+    <li><strong>Presumption of constitutionality</strong> of ordinances (<span class="c-burgundy"><em>Tano v. Socrates</em></span>).</li>
+    <li><strong>Requisites of a valid ordinance</strong> (<span class="c-burgundy"><em>Lagcao v. Labra</em></span>; <span class="c-burgundy"><em>Magtajas v. Pryce Properties</em></span>) — it must:
+      <ol>
+        <li><span class="c-green"><strong><u>Not contravene the Constitution or any statute;</u></strong></span></li>
+        <li><span class="c-green"><strong><u>Not be unfair or oppressive;</u></strong></span></li>
+        <li><span class="c-green"><strong><u>Not be partial or discriminatory;</u></strong></span></li>
+        <li><span class="c-green"><strong><u>Not prohibit but may regulate trade;</u></strong></span></li>
+        <li><span class="c-green"><strong><u>Be general and consistent with public policy;</u></strong></span> and</li>
+        <li><span class="c-green"><strong><u>Not be unreasonable.</u></strong></span></li>
+      </ol>
+      Plus: it must be enacted within the <strong>corporate powers</strong> of the LGU and passed according to the <strong>procedure</strong> prescribed by law.
+    </li>
+  </ul>
+
+  <h4 id="part-vii-b">B. Presiding Officer (Sec. 49) and the Barangay's Parliamentary Setup</h4>
+  <ul>
+    <li><strong>Presiding officers:</strong>
+      <ul>
+        <li><strong>Vice Governor</strong> — SP;</li>
+        <li><strong>City Vice Mayor</strong> — Sangguniang Panlungsod;</li>
+        <li><strong>Municipal Vice Mayor</strong> — SB;</li>
+        <li><strong>Punong Barangay</strong> — Sangguniang Barangay.</li>
+      </ul>
+    </li>
+    <li>The presiding officer <span class="c-green"><strong><u>votes only to break a tie</u></strong></span>.</li>
+    <li><strong>Inability of the presiding officer</strong> → members present, <strong>constituting a quorum</strong>, <strong>elect a temporary presiding officer from among themselves</strong> (no automatic succession). He certifies measures enacted in that session within <strong>ten (10) days</strong>.</li>
+    <li><strong>Historical shift:</strong> Before R.A. 7160, Governors and Mayors presided over the local boards. The Code separated them, giving the LCE the <strong>veto</strong> as a check.</li>
+    <li><strong>Barangay = parliamentary form.</strong> The <strong>Punong Barangay</strong> is simultaneously:
+      <ul>
+        <li><strong>Chief executive</strong> of the barangay;</li>
+        <li><strong>Presiding officer</strong> of the Sangguniang Barangay (Sec. 390);</li>
+        <li><strong>Lupon chairman</strong> of the Katarungang Pambarangay (Sec. 399) — mediation and conciliation; and</li>
+        <li>Exercises direct operational supervision over <strong>barangay tanods</strong> (Sec. 389). (Mayors/Governors only have operational supervision over PNP units, which are national.)</li>
+      </ul>
+      <blockquote><em>Illustration:</em> The PB presides over the session enacting a curfew, signs it, enforces it that night through the tanods, and mediates the violation the next morning as Lupon chairman.</blockquote>
+    </li>
+  </ul>
+
+  <h4 id="composition-sangguniang-barangay">Composition of the Sangguniang Barangay (Sec. 390)</h4>
+  <ul>
+    <li><strong>Punong Barangay</strong> (presiding officer);</li>
+    <li><strong>Seven (7) regular members</strong> (elected at large); and</li>
+    <li><strong>SK Chairperson</strong> (ex officio).</li>
+    <li>The <strong>Barangay Secretary and Treasurer</strong> (Secs. 394–395) are <strong>appointive</strong> (by the PB with concurrence of the majority of all SB members) and are <span class="c-rust"><strong><u>not members</u></strong></span> — they cannot deliberate, move, or vote.
+      <blockquote><em>Illustration (Cotabato):</em> An ordinance passed with the votes of the Secretary and Treasurer to reach the majority → <span class="c-rust"><strong><u>void</u></strong></span>.</blockquote>
+    </li>
+  </ul>
+
+  <h4 id="part-vii-c">C. Internal Rules of Procedure (Sec. 50)</h4>
+  <ul>
+    <li>Adopted or updated on the <strong>first regular session</strong> following the election, <strong>within ninety (90) days</strong>.
+      <ul>
+        <li><span class="c-burgundy"><em>Malonzo v. Zamora</em></span>: The sanggunian need not finish its rules before legislating; passing an ordinance on <strong>all three readings in one day</strong> is allowed unless the rules prohibit it.</li>
+      </ul>
+    </li>
+    <li><strong>Rules shall provide for:</strong>
+      <ul>
+        <li>Organization, election of officers, creation of <strong>standing committees</strong>, including committees on:
+          <ol>
+            <li><strong>Appropriations;</strong></li>
+            <li><strong>Women and family;</strong></li>
+            <li><strong>Human rights;</strong></li>
+            <li><strong>Youth and sports development;</strong></li>
+            <li><strong>Environmental protection;</strong> and</li>
+            <li><strong>Cooperatives;</strong></li>
+          </ol>
+        </li>
+        <li>Order and <strong>calendar of business</strong>;</li>
+        <li>Legislative process;</li>
+        <li>Parliamentary procedures and conduct of members;</li>
+        <li><strong>Discipline of members</strong>; and</li>
+        <li>Other rules.</li>
+      </ul>
+    </li>
+    <li><strong>Calendar of business:</strong> Rules that delegate the preparation of the calendar/order of business <strong>exclusively to the Secretary to the Sanggunian</strong> are <span class="c-rust"><strong><u>defective</u></strong></span> — setting legislative priorities belongs to the <strong>members</strong> (Committee on Rules/floor leadership). The Secretary's duties (Sec. 469) are <strong>ministerial</strong>.</li>
+    <li><strong>Discipline:</strong>
+      <ul>
+        <li><strong>Grounds:</strong> (1) <strong>Disorderly behavior</strong>; (2) <strong>absence without justifiable cause for four (4) consecutive sessions</strong>.</li>
+        <li><strong>Penalties:</strong> <strong>censure, reprimand, exclusion from the session, suspension for not more than sixty (60) days, or expulsion</strong>.</li>
+        <li><strong>Suspension or expulsion</strong> requires <span class="c-green"><strong><u>2/3 vote of all members</u></strong></span>.</li>
+        <li><strong>Automatic expulsion:</strong> final conviction for a crime involving <strong>moral turpitude</strong> with imprisonment of <strong>at least one (1) year</strong>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="part-vii-d">D. Full Disclosure of Financial and Business Interests (Sec. 51)</h4>
+  <ul>
+    <li><strong>Upon assumption of office</strong> — full disclosure of business and financial interests.</li>
+    <li><strong>Transaction-specific</strong> — disclose any <strong>business, financial, or professional relationship</strong>, or relation by <strong>affinity or consanguinity within the fourth civil degree</strong>, which may result in a conflict of interest, including:
+      <ul>
+        <li>Ownership of stock or capital, or investment, in the entity or firm to which the ordinance/resolution may apply; and</li>
+        <li>Contracts or agreements with any person or entity that the ordinance/resolution under consideration may affect.</li>
+      </ul>
+    </li>
+    <li><strong>When:</strong> In writing, <strong>before participating in deliberations</strong>; if not participating, <strong>before voting</strong> on second/third reading; or when delivering a <strong>privilege speech</strong> on the matter.</li>
+    <li><strong>Filed with:</strong> the <strong>Secretary of the Sanggunian</strong> or the <strong>Secretary of the committee</strong> concerned.</li>
+  </ul>
+
+  <h4 id="part-vii-e">E. Sessions (Sec. 52)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Regular</th>
+        <th>Special</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fixed by</td>
+        <td>Resolution on the first day of session after election</td>
+        <td>Called by the <strong>LCE</strong> or a <strong>majority</strong> of members, when public interest demands</td>
+      </tr>
+      <tr>
+        <td>Frequency</td>
+        <td>SP, Panlungsod, SB: <strong>at least once a week</strong>; SBgy: <strong>at least twice a month</strong></td>
+        <td>As needed</td>
+      </tr>
+      <tr>
+        <td>Notice</td>
+        <td>Fixed schedule</td>
+        <td><strong>Written notice</strong>, served personally at the member's residence <strong>at least 24 hours</strong> before</td>
+      </tr>
+      <tr>
+        <td>Agenda</td>
+        <td>General calendar</td>
+        <td><strong>Only matters in the notice</strong>, unless <strong>2/3 of members present</strong> (there being a quorum) vote otherwise</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>Sessions are <strong>open to the public</strong>, unless a <strong>closed session</strong> is ordered by an affirmative vote of a <strong>majority of members present</strong> (there being a quorum), in the public interest or for reasons of security, decency, or morality.</li>
+    <li><span class="c-rust"><strong><u>No two sessions</u></strong></span> (regular or special) <strong>in a single day</strong>.</li>
+  </ul>
+
+  <h4 id="part-vii-f">F. Quorum (Sec. 53)</h4>
+  <ul>
+    <li><span class="c-green"><strong><u>A majority of all the members of the sanggunian who have been elected and qualified.</u></strong></span>
+      <ul>
+        <li>"Elected and qualified" = <strong>proclaimed and assumed office</strong>; unproclaimed contested seats are excluded.</li>
+        <li>The <strong>presiding officer is included</strong> in computing the quorum (<span class="c-burgundy"><em>La Carlota City v. Rojo</em></span>).</li>
+      </ul>
+    </li>
+    <li><span class="c-rust"><strong><u>Business without a quorum is void.</u></strong></span></li>
+    <li><strong>No quorum</strong> → the presiding officer may declare a recess until a quorum is constituted, or a majority of members present may <strong>adjourn from day to day</strong> and <strong>compel the immediate attendance</strong> of absent members — the majority present may <strong>arrest</strong> absent members (through a designated member, assisted by a peace officer) to compel their <strong>presence</strong> only.</li>
+    <li><span class="c-burgundy"><em>Avelino v. Cuenco</em> (1949) — application:</span> Members <strong>beyond the coercive process</strong> (abroad) are excluded from the base; 12 of 23 senators constituted a quorum.
+      <ul>
+        <li><em>Detained legislators</em> cannot attend or vote (<span class="c-burgundy"><em>People v. Jalosjos</em></span>; <span class="c-burgundy"><em>Trillanes v. Pimentel</em></span>).</li>
+        <li><em>Professor's illustration:</em> Sanggunian of 13; two members abroad and one preventively suspended → base of <strong>10</strong>; <strong>6</strong> present = quorum.</li>
+        <li><em>Impeachment conviction</em> requires 2/3 of "all the Members of the Senate" — debate on whether that means 24 seats or actual sitting members.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="part-vii-g">G. Approval of Ordinances (Sec. 54)</h4>
+  <ul>
+    <li>Every ordinance of the SP, Sangguniang Panlungsod, or SB is presented to the <strong>Governor or Mayor</strong>:
+      <ul>
+        <li><strong>Approval:</strong> by <span class="c-green"><strong><u>affixing his signature on each and every page</u></strong></span>;</li>
+        <li><strong>Veto:</strong> return it with his objections to the sanggunian.</li>
+      </ul>
+    </li>
+    <li><strong>Approval is discretionary, not ministerial</strong> (<span class="c-burgundy"><em>De los Reyes v. Sandiganbayan</em></span>).</li>
+    <li><span class="c-green"><strong><u>Deemed approved</u></strong></span> if not acted upon within:
+      <ul>
+        <li><strong>15 days</strong> (Governor);</li>
+        <li><strong>10 days</strong> (Mayor) — after receipt.</li>
+      </ul>
+    </li>
+    <li><strong>Three modes of approval:</strong> (1) <strong>signature</strong> on each page; (2) <strong>inaction</strong> within the period; (3) <strong>override</strong> by <strong>2/3 of all members</strong>.</li>
+    <li><strong>Barangay ordinances:</strong> Approved by a <strong>majority of all SBgy members</strong>, signed by the Punong Barangay — <span class="c-rust"><strong><u>no veto</u></strong></span>.</li>
+    <li><strong>Ordinance vs. resolution:</strong></li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Ordinance</th>
+        <th>Resolution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nature</td>
+        <td>Local <strong>law</strong> of general and permanent character</td>
+        <td>Declaration of <strong>sentiment or opinion</strong>; temporary character</td>
+      </tr>
+      <tr>
+        <td>Readings</td>
+        <td><strong>Third reading mandatory</strong></td>
+        <td>Third reading <strong>not required</strong> unless decided by majority (IRR Art. 107)</td>
+      </tr>
+      <tr>
+        <td>Eminent domain</td>
+        <td><strong>Valid</strong> basis</td>
+        <td><strong>Not</strong> a valid basis (<span class="c-burgundy"><em>Parañaque v. V.M. Realty</em></span>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>Courts take <strong>judicial notice</strong> of ordinances within their territorial jurisdiction (<span class="c-burgundy"><em>Gallego v. People</em></span>).</li>
+  </ul>
+
+  <h4 id="part-vii-h">H. Veto Power (Sec. 55)</h4>
+  <ul>
+    <li><strong>Who:</strong> Governor, City Mayor, Municipal Mayor. <span class="c-rust"><strong><u>The Punong Barangay has no veto.</u></strong></span></li>
+    <li><strong>Grounds:</strong>
+      <ol>
+        <li>The ordinance is <span class="c-rust"><strong><u>ultra vires</u></strong></span>; or</li>
+        <li>It is <span class="c-rust"><strong><u>prejudicial to the public welfare</u></strong></span> — stating his reasons in writing.</li>
+      </ol>
+    </li>
+    <li><strong>Item veto</strong> — on particular items of:
+      <ol>
+        <li><strong>Appropriation ordinances;</strong></li>
+        <li>Ordinances or resolutions adopting a <strong>local development plan and public investment program</strong>; and</li>
+        <li>Ordinances <strong>directing the payment of money or creating liability</strong>.</li>
+      </ol>
+      Effect of item veto on appropriations: the <span class="c-green"><strong><u>corresponding item of the previous year's appropriation ordinance is deemed reenacted</u></strong></span>.
+    </li>
+    <li><strong>Veto only once.</strong></li>
+    <li><strong>Override:</strong> <span class="c-green"><strong><u>2/3 vote of all members</u></strong></span> → the ordinance becomes effective without the LCE's approval.</li>
+  </ul>
+
+  <h4 id="part-vii-i">I. Review by Higher Sanggunian (Secs. 56–58)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th><strong>Sec. 56</strong> — Component city/municipal measures</th>
+        <th><strong>Sec. 57</strong> — Barangay ordinances</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Reviewing body</td>
+        <td><strong>Sangguniang Panlalawigan</strong> (not the Governor)</td>
+        <td><strong>Sangguniang Panlungsod / SB</strong></td>
+      </tr>
+      <tr>
+        <td>Submission</td>
+        <td>Within <strong>3 days</strong> after approval (by the Secretary to the sanggunian)</td>
+        <td>Within <strong>10 days</strong> after enactment</td>
+      </tr>
+      <tr>
+        <td>Review period</td>
+        <td><strong>30 days</strong> after receipt (may refer to the Provincial Attorney/Prosecutor, who comments within <strong>10 days</strong>)</td>
+        <td><strong>30 days</strong> after receipt</td>
+      </tr>
+      <tr>
+        <td>Inaction</td>
+        <td><strong>Presumed consistent with law and valid</strong></td>
+        <td><strong>Deemed approved</strong></td>
+      </tr>
+      <tr>
+        <td>Ground</td>
+        <td><strong>Sole ground: beyond the powers</strong> conferred upon the sanggunian or LCE (<em>ultra vires</em>)</td>
+        <td><strong>Inconsistent with law or city/municipal ordinances</strong></td>
+      </tr>
+      <tr>
+        <td>Effect</td>
+        <td>Declared <strong>invalid</strong> in whole or in part</td>
+        <td>Returned with comments for adjustment; <strong>effectivity suspended</strong> until revised</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><span class="c-burgundy"><em>Moday v. CA</em></span>: The SP <span class="c-rust"><strong><u>cannot invalidate</u></strong></span> a municipal measure on grounds of policy or wisdom — only <em>ultra vires</em>.</li>
+    <li><strong>Measures of HUCs and ICCs</strong> are <span class="c-rust"><strong><u>not reviewed</u></strong></span> by any provincial sanggunian.</li>
+    <li><strong>Pateros:</strong> No province and no SP in Metro Manila; the <strong>MMDA has no review power</strong> → Pateros ordinances are not reviewed by any higher sanggunian.</li>
+    <li><strong>Sec. 58:</strong> <span class="c-rust"><strong><u>Any attempt to enforce</u></strong></span> a disapproved ordinance or resolution is sufficient ground for <strong>suspension or dismissal</strong> of the official or employee concerned.</li>
+  </ul>
+
+  <h4 id="part-vii-j">J. Effectivity (Sec. 59)</h4>
+  <ul>
+    <li><strong>General rule:</strong> Ordinances take effect <span class="c-green"><strong><u>ten (10) days after posting</u></strong></span> (i.e., on the <strong>11th day</strong>), unless otherwise stated.</li>
+    <li><strong>Posting:</strong>
+      <ul>
+        <li>By the <strong>Secretary to the sanggunian</strong>, within <strong>five (5) days</strong> after approval;</li>
+        <li>At a <strong>bulletin board at the entrance</strong> of the capitol or city/municipal/barangay hall, <strong>and</strong> in at least <strong>two (2) other conspicuous places</strong>;</li>
+        <li>In <strong>Filipino or English</strong> and in the <strong>local language or dialect</strong> understood by the majority.</li>
+      </ul>
+    </li>
+    <li><strong>Penal ordinances:</strong> The <strong>gist</strong> must be <span class="c-green"><strong><u>published in a newspaper of general circulation</u></strong></span> within the province; if none, posting in <strong>all municipalities and cities</strong> of the province.</li>
+    <li><strong>HUCs and ICCs:</strong> <strong>Main features</strong> of ordinances published <strong>once</strong> in a local newspaper of general circulation within the city; absent such, posting in all barangays.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-viii-direct-democracy">PART VIII. DIRECT DEMOCRACY: RECALL, INITIATIVE, REFERENDUM</h3>
+
+  <h4 id="part-viii-a">A. Recall (Secs. 69–75)</h4>
+  <ul>
+    <li><strong>Definition:</strong> The termination of official relations of an elective local official, by the registered voters, <strong>before the end of his term</strong>.</li>
+    <li><strong>Sole ground:</strong> <span class="c-green"><strong><u>Loss of confidence.</u></strong></span></li>
+    <li><strong>Who may be recalled:</strong> <strong>Local</strong> elective officials (Governor down to Kagawad). <span class="c-rust"><strong><u>Members of Congress cannot be recalled</u></strong></span> — they are national officers.</li>
+    <li><strong>Loss of confidence is a political question</strong> — for the electorate, not the courts (<span class="c-burgundy"><em>Evardone v. COMELEC</em></span>).</li>
+    <li><strong>Initiation:</strong> Originally (a) petition of voters or (b) <strong>Preparatory Recall Assembly (PRA)</strong>. <span class="c-rust"><strong><u>R.A. 9244 abolished the PRA</u></strong></span> (abused by incumbents, e.g., the Angono Vice Mayor). Now: <span class="c-green"><strong><u>only by petition of registered voters</u></strong></span>.</li>
+  </ul>
+
+  <h4 id="part-viii-b">B. Initiative</h4>
+  <ul>
+    <li><strong>Definition:</strong> The legal process whereby the registered voters <span class="c-green"><strong><u>directly propose, enact, or amend</u></strong></span> ordinances or laws.</li>
+    <li><strong>Three kinds (R.A. 6735):</strong>
+      <ol>
+        <li><strong>On the Constitution</strong> (amendments);</li>
+        <li><strong>On statutes</strong> (national legislation); and</li>
+        <li><strong>On local legislation.</strong></li>
+      </ol>
+    </li>
+    <li>Legislative power is <strong>originally</strong> in the people; delegated to Congress and sanggunians; <strong>reserved</strong> through initiative and referendum (Art. VI, Sec. 1).</li>
+    <li><strong>Constitutional initiative — amendments only, never revisions:</strong>
+      <ul>
+        <li><span class="c-burgundy"><em>Defensor-Santiago v. COMELEC</em> (1997)</span>: R.A. 6735 is <span class="c-rust"><strong><u>inadequate</u></strong></span> for initiative on the Constitution.</li>
+        <li><span class="c-burgundy"><em>Lambino v. COMELEC</em> (2006)</span>: Shift from presidential to parliamentary = <strong>revision</strong> — only via <strong>Con-Ass or Con-Con</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>Local initiative:</strong> In a barangay, <strong>50 registered voters</strong> may file the petition (if the sanggunian refuses to act). Once approved, the measure is <strong>protected</strong> from repeal or amendment by the sanggunian for a period, and thereafter amendable only by a <strong>qualified vote</strong> of all members. <em>(See Part XI on the exact periods/votes.)</em></li>
+  </ul>
+
+  <h4 id="part-viii-c">C. Referendum</h4>
+  <ul>
+    <li><strong>Definition:</strong> Submission of an ordinance or resolution <strong>already passed</strong> by the sanggunian (or law passed by Congress) to the registered voters for <span class="c-green"><strong><u>approval or rejection</u></strong></span>.</li>
+    <li><strong>Initiative</strong> = citizen-proposed; <strong>Referendum</strong> = legislature-enacted, people-ratified.</li>
+  </ul>
+
+  <h4 id="part-viii-d">D. Aside — Fabian v. Desierto (1998)</h4>
+  <ul>
+    <li>Sec. 27, R.A. 6770 (appeals from Ombudsman administrative decisions directly to the SC) is <span class="c-rust"><strong><u>unconstitutional</u></strong></span> — Congress cannot increase the SC's appellate jurisdiction <span class="c-rust"><strong><u>without its advice and concurrence</u></strong></span> (Art. VI, Sec. 30). Appeals go to the <strong>CA under Rule 43</strong>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="part-ix-cheat-sheet">PART IX. NUMBERS & PERIODS CHEAT SHEET</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Rule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>24 hours</strong></td>
+        <td>Written notice of special session (Sec. 52)</td>
+      </tr>
+      <tr>
+        <td><strong>3 days</strong></td>
+        <td>Transmit component city/municipal ordinances to SP (Sec. 56); mayors/PBs submit EOs for review (Sec. 30)</td>
+      </tr>
+      <tr>
+        <td><strong>3 consecutive days</strong></td>
+        <td>Domestic travel — LCE may designate OIC (Sec. 46)</td>
+      </tr>
+      <tr>
+        <td><strong>4th day</strong></td>
+        <td>Vice LCE assumes if LCE fails/refuses to designate an OIC (Sec. 46)</td>
+      </tr>
+      <tr>
+        <td><strong>4 consecutive sessions</strong></td>
+        <td>Unexcused absences — ground for discipline (Sec. 50)</td>
+      </tr>
+      <tr>
+        <td><strong>5 days</strong></td>
+        <td>Posting of ordinances after approval (Sec. 59)</td>
+      </tr>
+      <tr>
+        <td><strong>5 working days</strong></td>
+        <td>Leave deemed approved (Sec. 47)</td>
+      </tr>
+      <tr>
+        <td><strong>10 days</strong></td>
+        <td>Mayor acts on ordinance (Sec. 54); barangay ordinances furnished to SP/SB (Sec. 57); temporary presiding officer certifies (Sec. 49); Provincial Attorney comments (Sec. 56); effectivity after posting (Sec. 59)</td>
+      </tr>
+      <tr>
+        <td><strong>15 days</strong></td>
+        <td>Governor acts on ordinance (Sec. 54)</td>
+      </tr>
+      <tr>
+        <td><strong>30 days</strong></td>
+        <td>SP review (Sec. 56); SP/SB review of barangay ordinances (Sec. 57); review of EOs (Sec. 30)</td>
+      </tr>
+      <tr>
+        <td><strong>30 working days</strong></td>
+        <td>Acting LCE may appoint/suspend/dismiss only if incapacity exceeds this (Sec. 46)</td>
+      </tr>
+      <tr>
+        <td><strong>60 days</strong></td>
+        <td>Maximum suspension of a sanggunian member (Sec. 50)</td>
+      </tr>
+      <tr>
+        <td><strong>90 days</strong></td>
+        <td>Adopt/update internal rules (Sec. 50)</td>
+      </tr>
+      <tr>
+        <td><strong>1 year</strong></td>
+        <td>Residence before election (Sec. 39); imprisonment threshold (Sec. 40[a]); automatic expulsion (Sec. 50)</td>
+      </tr>
+      <tr>
+        <td><strong>2 years</strong></td>
+        <td>Disqualification after serving sentence (Sec. 40[a])</td>
+      </tr>
+      <tr>
+        <td><strong>3 years / 3 terms</strong></td>
+        <td>Term; three-term limit (Sec. 43)</td>
+      </tr>
+      <tr>
+        <td><strong>2nd Monday of May; noon of June 30</strong></td>
+        <td>Local elections; start of term (Secs. 42–43)</td>
+      </tr>
+      <tr>
+        <td><strong>Jan. 1, 1992</strong></td>
+        <td>Effectivity of the Code; reckoning for Sec. 40(b) and (f)</td>
+      </tr>
+      <tr>
+        <td><strong>4th civil degree</strong></td>
+        <td>Disclosure of relationships (Sec. 51)</td>
+      </tr>
+      <tr>
+        <td><strong>2nd civil degree</strong></td>
+        <td>SK anti-dynasty rule (R.A. 10742)</td>
+      </tr>
+      <tr>
+        <td><strong>23 / 21 / 18 / 18–24</strong></td>
+        <td>Age qualifications (Sec. 39; R.A. 10742)</td>
+      </tr>
+      <tr>
+        <td><strong>Majority of all members</strong></td>
+        <td>Approval of barangay ordinances (Sec. 54); concurrence in appointment of barangay secretary/treasurer</td>
+      </tr>
+      <tr>
+        <td><strong>Majority of members present</strong></td>
+        <td>Closed session (Sec. 52)</td>
+      </tr>
+      <tr>
+        <td><strong>2/3 of members present</strong></td>
+        <td>Taking up matters not in the special session notice (Sec. 52)</td>
+      </tr>
+      <tr>
+        <td><strong>2/3 of all members</strong></td>
+        <td>Veto override (Sec. 55); suspension/expulsion of members (Sec. 50)</td>
+      </tr>
+      <tr>
+        <td><strong>15%</strong></td>
+        <td>LGU deposit for immediate possession (Sec. 19); reclassification ceiling for HUCs/ICCs (Sec. 20)</td>
+      </tr>
+      <tr>
+        <td><strong>10% / 5%</strong></td>
+        <td>Reclassification — component cities & 1st–3rd class municipalities / 4th–6th class (Sec. 20)</td>
+      </tr>
+      <tr>
+        <td><strong>20% / 45% / 35%</strong></td>
+        <td>Share in national wealth — province / municipality / barangay</td>
+      </tr>
+      <tr>
+        <td><strong>80%</strong></td>
+        <td>Energy-resource proceeds applied to lower electricity cost</td>
+      </tr>
+      <tr>
+        <td><strong>₱20M; 250,000; 2,000 sq. km.</strong></td>
+        <td>Province</td>
+      </tr>
+      <tr>
+        <td><strong>₱100M (locally generated); 150,000; 100 sq. km.</strong></td>
+        <td>Component city</td>
+      </tr>
+      <tr>
+        <td><strong>₱50M; 200,000</strong></td>
+        <td>HUC</td>
+      </tr>
+      <tr>
+        <td><strong>₱2.5M; 25,000; 50 sq. km.</strong></td>
+        <td>Municipality</td>
+      </tr>
+      <tr>
+        <td><strong>2,000 / 5,000</strong></td>
+        <td>Barangay (5,000 in Metro Manila & HUCs)</td>
+      </tr>
+      <tr>
+        <td><strong>7 + PB + SK Chair</strong></td>
+        <td>Sangguniang Barangay composition</td>
+      </tr>
+      <tr>
+        <td><strong>10 / 8 / 6</strong></td>
+        <td>SP regular seats by provincial class</td>
+      </tr>
+      <tr>
+        <td><strong>50 voters</strong></td>
+        <td>Petition for barangay initiative</td>
+      </tr>
+      <tr>
+        <td><strong>₱1,000 / ₱600</strong></td>
+        <td>Minimum honoraria — PB / Kagawad, Secretary, Treasurer (Sec. 393)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="part-x-case-doctrine-index">PART X. CASE DOCTRINE INDEX (ONE-LINERS)</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Case</th>
+        <th>Doctrine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="c-burgundy"><em>Ordillo v. COMELEC</em></span></td>
+        <td>A single province cannot constitute an autonomous region.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Province of Sulu v. Medialdea</em></span></td>
+        <td>Each constituent unit votes individually; Sulu, having rejected the BOL, is not part of BARMM.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Sema v. COMELEC</em></span></td>
+        <td>A regional assembly cannot create a province (it would create a legislative district).</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Cordillera Broad Coalition v. COA</em></span></td>
+        <td>CAR is an administrative region, not an LGU; no plebiscite needed.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Chiongbian v. Orbos</em></span></td>
+        <td>Administrative regions may be reorganized without a plebiscite.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Badua v. Cordillera Bodong</em></span></td>
+        <td>Tribal courts are not part of the Judiciary; voluntary settlements enforceable as compromise.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>MMDA v. Bel-Air</em></span></td>
+        <td>MMDA is not an LGU; no police power, no ordinance-making power.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Mondano v. Silvosa</em></span></td>
+        <td>Supervision = seeing that subordinates perform duties per law.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Drilon v. Lim</em></span></td>
+        <td>Supervision does not allow substitution of judgment.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Villena v. Sec. of Interior</em></span></td>
+        <td>Alter ego doctrine — applies within the executive, not to LGUs.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Pimentel v. Lina</em></span> / <span class="c-burgundy"><em>Ganzon v. CA</em></span></td>
+        <td>Directing LCEs to enforce national laws under pain of sanction = valid supervision.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Mandanas v. Ochoa</em></span></td>
+        <td>LGU share is based on all "national taxes"; IRA → NTA.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Tiwi, Albay</em></span></td>
+        <td>Host LGU entitled to share in national wealth; diverting officials dismissed; counsel's fees compelled.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Yao Kee v. Sy-Gonzales</em></span></td>
+        <td>Custom must be proved as a fact.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Pelaez v. Auditor General</em></span> / <span class="c-burgundy"><em>Kapalong v. Moya</em></span></td>
+        <td>Creation of municipalities is purely legislative; no creation by E.O.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Tan v. COMELEC</em></span></td>
+        <td>Land area excludes waters; Negros del Norte void.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Navarro v. Ermita</em></span></td>
+        <td>Island provinces exempt from land area requirement (Dinagat).</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Novaliches Plebiscite</em></span> / <span class="c-burgundy"><em>Padilla v. COMELEC</em></span></td>
+        <td>"Units affected" includes the entire parent LGU.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Miranda v. Aguirre</em></span></td>
+        <td>Downgrading ICC to component city requires plebiscite.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Batangas CATV v. CA</em></span></td>
+        <td>Police power is subordinate to national law; LGU cannot fix CATV rates (NTC).</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Parañaque v. V.M. Realty</em></span></td>
+        <td>Eminent domain requires an ordinance, not a resolution.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Noble v. City of Manila</em></span></td>
+        <td>Accepted offer = perfected sale; LGU cannot then expropriate.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>City of Makati v. CA</em></span></td>
+        <td>Just compensation requires prompt payment.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Mun. of San Fernando v. Firme</em></span></td>
+        <td>Governmental function (road repair) → LGU immune.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>City of Manila v. IAC</em></span></td>
+        <td>Proprietary function (cemetery) → LGU liable.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Guilatco v. Dagupan</em></span></td>
+        <td>Art. 2189: control/supervision, not ownership; national road within city → liable.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>City of Manila v. Teotico</em></span></td>
+        <td>Art. 2189 prevails over charter immunity.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Torio v. Fontanilla</em></span></td>
+        <td>Town fiesta stage collapse (see Part XI).</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>PICOP v. Base Metals</em></span></td>
+        <td>Prior consultation/approval needed from all affected LGUs.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Province of Rizal v. Exec. Sec.</em></span></td>
+        <td>San Mateo Landfill closed for lack of prior consultation/approval.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Manalo v. Sistoza</em></span></td>
+        <td>PNP senior officers need no CA confirmation.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Soriano v. Lista</em></span></td>
+        <td>PCG flag officers need no CA confirmation.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Co v. HRET</em></span></td>
+        <td>Residence = domicile; no property qualification.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Faypon v. Quirino</em></span> / <span class="c-burgundy"><em>Abella v. COMELEC</em></span></td>
+        <td>Absence for work/study ≠ loss of domicile; new permanent home without intent to return = loss.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Dumpit-Michelena v. Boado</em></span> / <span class="c-burgundy"><em>Romualdez-Marcos</em></span></td>
+        <td>Three requisites for change of domicile.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Moreno v. COMELEC</em></span></td>
+        <td>Probationer not disqualified under Sec. 40(a).</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Grego v. COMELEC</em></span></td>
+        <td>Sec. 40(b) applies to removals on/after Jan. 1, 1992.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Carpio-Morales v. CA</em></span></td>
+        <td>Condonation doctrine abandoned.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Mercado v. Manzano</em></span> / <span class="c-burgundy"><em>Valles</em></span></td>
+        <td>Sec. 40(d) "dual citizenship" = dual allegiance.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Sobejana-Condon v. COMELEC</em></span></td>
+        <td>R.A. 9225 oath ≠ renunciation; separate sworn renunciation required.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Jacot v. Dal</em></span></td>
+        <td>Personal and sworn renunciation required before running.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Maquiling v. COMELEC</em></span></td>
+        <td>Use of foreign passport after renunciation recants it.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Marquez</em></span> / <span class="c-burgundy"><em>Rodriguez v. COMELEC</em></span></td>
+        <td>Fugitive includes one who flees after being charged; intent to evade required.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Caasi v. CA</em></span></td>
+        <td>Green card holder must waive status by independent prior act.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>De Guia v. COMELEC</em></span></td>
+        <td>Election of sanggunian members by district upheld.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Borja v. COMELEC</em></span></td>
+        <td>Three-term limit: elected + fully served; succession is not election.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Lonzanida</em></span> / <span class="c-burgundy"><em>Dizon</em></span></td>
+        <td>Involuntary unseating before term ends breaks continuity.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Ong v. Alegre</em></span></td>
+        <td>Full service counts though protest lost after term.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Aldovino v. COMELEC</em></span></td>
+        <td>Preventive suspension does not interrupt the term.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Osmeña v. COMELEC</em></span></td>
+        <td>Terms cannot be extended by hold-over.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Dimaporo v. Mitra</em></span></td>
+        <td>Term vs. tenure.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Menzon v. Petilla</em></span></td>
+        <td>Vacancy defined; temporary designation where Code is silent.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Victoria v. COMELEC</em></span></td>
+        <td>Sanggunian ranking based on proportion of votes to registered voters.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Fariñas v. Barba</em></span></td>
+        <td>Sanggunian recommendation is sine qua non for replacing non-party member.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Gamboa v. Aguirre</em></span></td>
+        <td>Acting LCE cannot simultaneously preside over the sanggunian.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Solicitor General v. MMA</em></span></td>
+        <td>Ordinances cannot contravene statutes.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>NORECO II v. SP Dumaguete</em></span></td>
+        <td>No inherent contempt/subpoena power in sanggunians.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Lagcao v. Labra</em></span> / <span class="c-burgundy"><em>Magtajas v. Pryce</em></span></td>
+        <td>Six substantive requisites of a valid ordinance.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Tano v. Socrates</em></span></td>
+        <td>Ordinances presumed constitutional.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Malonzo v. Zamora</em></span></td>
+        <td>Rules need not be completed before legislating; 3 readings in one day allowed.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>La Carlota City v. Rojo</em></span></td>
+        <td>Presiding officer included in quorum.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Avelino v. Cuenco</em></span></td>
+        <td>Members beyond coercive process excluded from quorum base.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>De los Reyes v. Sandiganbayan</em></span></td>
+        <td>LCE approval of an ordinance is discretionary.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Moday v. CA</em></span></td>
+        <td>SP review limited to ultra vires, not wisdom.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Gallego v. People</em></span></td>
+        <td>Courts take judicial notice of local ordinances.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Evardone v. COMELEC</em></span></td>
+        <td>Loss of confidence is a political question.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Defensor-Santiago v. COMELEC</em></span></td>
+        <td>R.A. 6735 inadequate for constitutional initiative.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Lambino v. COMELEC</em></span></td>
+        <td>Presidential → parliamentary is a revision, not amendment.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Fabian v. Desierto</em></span></td>
+        <td>Congress cannot expand SC appellate jurisdiction without its concurrence.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="part-xi-points-to-verify">PART XI. POINTS TO VERIFY WITH THE PROFESSOR (INCONSISTENCIES IN THE NOTES)</h3>
+  <p>These are spots where your notes <strong>contradict each other</strong> or <strong>differ from the text of the Code/jurisprudence</strong>. Confirm which version your professor expects before the exam.</p>
+
+  <ol>
+    <li><span class="c-burgundy"><em>Torio v. Fontanilla</em></span> <strong>(fiesta stage).</strong> The notes (09/05, 09/19) say the municipality was <strong>absolved</strong> and the councilors were <strong>personally liable</strong>. In the reported decision, the Supreme Court held that the fiesta was a <strong>proprietary</strong> function, so the <strong>municipality was liable</strong>, and the <strong>councilors were not personally liable</strong>. Ask the professor which holding he wants.</li>
+    <li><strong>SK age.</strong> Three versions: 15 to below 18 (09/26 — the original LGC); <strong>18 to 24</strong> (10/03 — R.A. 10742, for SK <em>officials</em>); "15 to 30" (09/19 — that is the age range for <strong>KK membership</strong>, not for SK officials). This reviewer uses <strong>18–24</strong> for SK officials.</li>
+    <li><strong>Mandatory standing committees (Sec. 50).</strong> 09/26 lists <strong>five</strong> (combining "Environmental Protection and Cooperatives"); 10/03 lists <strong>six</strong>. The Code lists them separately, so this reviewer uses <strong>six</strong>.</li>
+    <li><strong>Tax ordinance appeal (Sec. 187).</strong> 08/22 says "within <strong>60 days from publication</strong>." Under the text of Sec. 187, the appeal is filed <strong>within 30 days from effectivity</strong>, and the Secretary of Justice decides <strong>within 60 days</strong> from receipt.</li>
+    <li><strong>Measures enacted through initiative.</strong> 08/22 says the sanggunian cannot touch them for <strong>1 year</strong>, and after that may amend them only by <strong>2/3</strong>. Under Sec. 125 of the LGC (and Sec. 16, R.A. 6735): <strong>not within 6 months</strong> of approval; then amendable <strong>within 3 years</strong> after that only by <strong>3/4 of all members</strong>.</li>
+    <li><strong>Temporary vacancy — the "4th day" rule (Sec. 46).</strong> 10/03 seems to apply the 4th-day rule to <em>all</em> domestic travel over 3 days. The Code applies it when the LCE <strong>fails or refuses to designate an OIC</strong>. For travel over 3 days or abroad, the Vice LCE takes over automatically (09/26).</li>
+    <li><strong>Price basis for provincial income.</strong> 08/29 says "1995 constant prices"; 09/05 and Sec. 461 say <strong>1991 constant prices</strong>.</li>
+    <li><strong>Dual personality — section number.</strong> 09/05 cites Sec. 14; dual nature is in <strong>Sec. 15</strong>. Sec. 14 is about the <strong>beginning of corporate existence</strong>.</li>
+    <li><strong>Barangay/SK 5-year term (R.A. 12232 / R.A. 12326).</strong> Only the 10/03 notes mention this. Confirm whether it is within exam coverage.</li>
+  </ol>
+
+  <hr>
+  <p><em>End of Reviewer. Study tip: Master Part I's supervision vs. control and Part III's creation requisites + plebiscite first. They are the conceptual spine. Then drill Parts VI–VII using the Part IX cheat sheet, because the exam on Secs. 40–59 is number-heavy.</em></p>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.4, scale + delta), 2.5);
+    container.dataset.scale = scale;
+    container.style.transform = `scale(${scale})`;
+    container.style.transformOrigin = 'top center';
+    container.style.transition = 'transform 0.15s ease-in-out';
+  }
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.style.transform = 'scale(1)';
+  }
+</script>
+</body>
+</html>
