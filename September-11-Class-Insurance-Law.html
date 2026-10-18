@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0911 CLASS - Insurance Law: Insurable Interest &amp; Transfers</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: #1E3A8A;
+  font-weight: 800;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.25rem 0;
+}
+
+ul, ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-general-theory-life-insurance">PART 1: General Theory of Insurable Interest and Insurable Interest in Life Insurance</option>
+      <option value="#i-doctrine-of-insurable-interest">&nbsp;&nbsp;↳ I. The Doctrine of Insurable Interest: General Concepts &amp; Public Policy</option>
+      <option value="#i-1-concept-and-legal-definition">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Concept and Legal Definition of Insurable Interest</option>
+      <option value="#i-2-life-insurance-exception-face-value">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. The Life Insurance Exception and the Nature of Policy Face Value</option>
+      <option value="#i-3-twin-legal-functions">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Twin Legal Functions of Insurable Interest</option>
+      <option value="#i-4-absence-wagering-contracts">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Effect of Absence of Insurable Interest: Wagering Contracts</option>
+      <option value="#ii-insurable-interest-life-health">&nbsp;&nbsp;↳ II. Insurable Interest in Life and Health Insurance: Family, Support, and Commercial Ties</option>
+      <option value="#ii-1-dual-classification">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Dual Classification of Life Insurance Policies</option>
+      <option value="#ii-2-sec-10a-oneself-spouse-children">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Section 10(a): Oneself, Spouse, and Children (Affection and Blood Alone)</option>
+      <option value="#ii-3-sec-10b-first-clause-dependency">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Section 10(b), First Clause: Dependency for Education or Support</option>
+      <option value="#ii-4-sec-10b-second-clause-pecuniary">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Section 10(b), Second Clause: Pecuniary Interest in Commercial Relations</option>
+      <option value="#ii-illustration-vice-ganda-ion-perez">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: Unmarried Partners and Directional Dependency (Vice Ganda &amp; Ion Perez)</option>
+      <option value="#iii-creditor-debtor-estate-dependent">&nbsp;&nbsp;↳ III. Creditor-Debtor and Estate-Dependent Life Insurance</option>
+      <option value="#iii-1-sec-10c-legal-obligation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Section 10(c): Legal Obligation for Payment of Money, Property, or Services</option>
+      <option value="#iii-2-ceiling-creditor-recovery">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Ceiling on Creditor's Recovery and Public Policy Rationale</option>
+      <option value="#iii-3-functional-reclassification">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Functional Reclassification as Property Insurance</option>
+      <option value="#iii-4-sec-10d-estate-or-interest">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Section 10(d): Estate or Interest Vested Dependent on Another's Life</option>
+      <option value="#iv-procurement-vs-beneficiary">&nbsp;&nbsp;↳ IV. Procurement of Life Insurance on Another vs. Designation of Beneficiaries</option>
+      <option value="#iv-1-fundamental-doctrinal-distinction">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Fundamental Doctrinal Distinction</option>
+      <option value="#iv-2-governing-regime-simple-donation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Governing Regime for Beneficiary Designation: Rules on Simple Donation</option>
+      <option value="#iv-3-comparative-summary">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Comparative Summary: Procuring Life Insurance on Another vs. Designating a Beneficiary</option>
+      <option value="#part-2-temporal-rules-property-insurance">PART 2: Temporal Rules in Life Insurance and Insurable Interest in Property Insurance</option>
+      <option value="#v-temporal-requirement-life-insurance">&nbsp;&nbsp;↳ V. Temporal Requirement of Insurable Interest in Life Insurance</option>
+      <option value="#v-1-general-single-point-rule">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. The General "Single-Point" Rule in Life Insurance</option>
+      <option value="#v-2-two-point-exception">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. The "Two-Point" Exception for Property-Nature Life Policies</option>
+      <option value="#v-3-essential-terminology-financial">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Essential Insurance Terminology and Financial Concepts</option>
+      <option value="#v-illustration-bea-alonzo-angel-locsin">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: The Creditor-Debtor Extinguishment Problem (Bea Alonzo &amp; Angel Locsin)</option>
+      <option value="#vi-insurable-interest-property-sources">&nbsp;&nbsp;↳ VI. Insurable Interest in Property Insurance: Statutory Sources</option>
+      <option value="#vi-1-core-test-statutory-foundation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Core Test and Statutory Foundation (Sections 13 &amp; 14)</option>
+      <option value="#vi-2-sec-14a-existing-interest">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Section 14(a): An Existing Interest (Legal Title vs. Equitable Title)</option>
+      <option value="#vi-3-sec-14b-inchoate-interest">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Section 14(b): An Inchoate Interest Founded on an Existing Interest</option>
+      <option value="#vi-4-sec-14c-expectancy">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Section 14(c): An Expectancy Coupled with an Existing Interest</option>
+      <option value="#vi-5-comparative-table-sec-14">&nbsp;&nbsp;&nbsp;&nbsp;↳ 5. Comparative Table: Modalities of Property Insurable Interest (Section 14)</option>
+      <option value="#vii-measure-beneficiary-temporal-property">&nbsp;&nbsp;↳ VII. Measure of Interest, Beneficiary Qualification, and Temporal Rules in Property Insurance</option>
+      <option value="#vii-1-measure-of-interest-sec-17">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Measure of Insurable Interest in Property (Section 17)</option>
+      <option value="#vii-2-beneficiary-qualification-sec-18">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Beneficiary Qualification in Property Insurance (Section 18)</option>
+      <option value="#vii-3-temporal-requirement-meantime-gap">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Temporal Requirement in Property Insurance &amp; The "Meantime Gap" Doctrine (Section 19)</option>
+      <option value="#vii-illustration-1-sale-without-assignment">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration 1: Sale of Insured Car Without Policy Assignment</option>
+      <option value="#vii-illustration-2-separation-anxiety">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration 2: The "Separation Anxiety" Repurchase (Meantime Gap)</option>
+      <option value="#viii-comprehensive-synthesis-mortgage">&nbsp;&nbsp;↳ VIII. Comprehensive Synthesis: Life vs. Property Insurance &amp; Co-Existing Mortgage Interests</option>
+      <option value="#viii-1-master-comparative-table">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Master Comparative Table: Insurable Interest in Life vs. Property Insurance</option>
+      <option value="#viii-2-co-existence-multiple-interests">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Co-Existence of Multiple Insurable Interests in a Single Property (Mortgagor &amp; Mortgagee)</option>
+      <option value="#viii-3-special-clauses-mortgages">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Special Clauses and Insurance Schemes in Mortgages</option>
+      <option value="#part-3-transfer-thing-policy-claim">PART 3: Transfer of Thing Insured, Policy, or Claim and Statutory Exceptions to Suspension</option>
+      <option value="#ix-triad-of-transfers">&nbsp;&nbsp;↳ IX. Triad of Transfers in Insurance Law: Thing Insured, Policy, and Claim</option>
+      <option value="#ix-1-transfer-of-thing-insured">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Transfer of the Thing Insured</option>
+      <option value="#ix-2-transfer-of-policy">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Transfer of the Insurance Policy (Life vs. Property &amp; Casualty)</option>
+      <option value="#ix-3-transfer-of-claim-after-loss">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Transfer of the Insurance Claim After Loss (Section 85)</option>
+      <option value="#ix-4-comparative-summary-transfers">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Comparative Summary: Rules Governing Transfers in Insurance Law</option>
+      <option value="#x-change-of-interest-general-rule">&nbsp;&nbsp;↳ X. Change of Interest in the Thing Insured: The General Rule of Suspension</option>
+      <option value="#x-1-operative-rule-sec-20">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. The Operative Rule of Suspension (Section 20)</option>
+      <option value="#x-2-scope-change-of-interest">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Scope of "Change of Interest": Absolute Transfers Only</option>
+      <option value="#xi-statutory-exceptions-part-1">&nbsp;&nbsp;↳ XI. Statutory Exceptions to the Section 20 Suspension Rule (Part 1)</option>
+      <option value="#xi-1-exception-1-life-health-accident">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Exception 1: Life, Health, and Accident Insurance (Section 20)</option>
+      <option value="#xi-2-exception-2-after-loss-sec-21">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Exception 2: Change of Interest After the Occurrence of Loss (Section 21)</option>
+      <option value="#xi-illustration-burned-house-sec-21">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: Sale of a Burned House After Loss (Section 21)</option>
+      <option value="#xi-3-exception-3-separate-things-sec-22">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Exception 3: Change of Interest in One of Several Distinct Things Separately Insured by One Policy (Section 22)</option>
+      <option value="#xi-illustration-four-townhouses">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: The Four Adjacent Townhouses (Section 22 vs. Section 20)</option>
+      <option value="#xii-statutory-exceptions-part-2">&nbsp;&nbsp;↳ XII. Statutory Exceptions to the Section 20 Suspension Rule (Part 2)</option>
+      <option value="#xii-1-exception-4-will-succession-sec-23">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Exception 4: Change of Interest by Will or Succession on the Death of the Insured (Section 23)</option>
+      <option value="#xii-2-exception-5-partners-co-owners-sec-24">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Exception 5: Transfer of Interest Among Partners, Joint Owners, or Co-Owners (Section 24)</option>
+      <option value="#xii-illustration-co-owner-buyout">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: Buyout of a Co-Owner's Share (Section 24)</option>
+      <option value="#xii-3-exception-6-prohibition-alienation-sec-25">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Exception 6: Express Policy Prohibition Against Alienation (Section 25 / Avoided vs. Suspended)</option>
+      <option value="#xii-4-exception-7-whomsoever-owner-sec-57">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Exception 7: Policy Framed to Inure to the Benefit of Whomsoever May Become the Owner (Section 57)</option>
+      <option value="#xii-5-summary-table-exceptions">&nbsp;&nbsp;&nbsp;&nbsp;↳ 5. Summary Table: Statutory Exceptions &amp; Modifications to Section 20 Suspension</option>
+      <option value="#administrative-matters-professors-asides">&nbsp;&nbsp;↳ Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">0911 CLASS</h1>
+
+  <h2 id="part-1-general-theory-life-insurance" class="c-navy">PART 1: GENERAL THEORY OF INSURABLE INTEREST AND INSURABLE INTEREST IN LIFE INSURANCE</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">DOCTRINE &amp; PUBLIC POLICY</div>
+        <div class="ui-sub">Pecuniary stake, life exception &amp; Sec. 25 wagering ban</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">FAMILY &amp; SUPPORT</div>
+        <div class="ui-sub">Sec. 10(a) blood ties vs. Sec. 10(b) actual dependency</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">CREDITOR &amp; ESTATE</div>
+        <div class="ui-sub">Sec. 10(c) debt ceiling, indemnity &amp; Sec. 10(d) usufruct</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">ASSURED VS. BENEFICIARY</div>
+        <div class="ui-sub">Sec. 10 procurement vs. Art. 2012 / 739 donations</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-1-overview-scope" class="c-navy">Part 1 Overview &amp; Scope of Topics</h4>
+
+  <ul>
+    <li><strong>I. The Doctrine of Insurable Interest: General Concepts &amp; Public Policy</strong> (Statutory Definition, The Practical "Stake" Test, Pecuniary Nature vs. The Life Insurance Exception, Policy Face Value vs. Intrinsic Value of Life, Validity Requirement, and Prohibition Against Wagering Contracts under <span class="c-teal">R.A. 10607</span>)</li>
+    <li><strong>II. Insurable Interest in Life and Health Insurance: Family, Support, and Commercial Ties</strong> (Dual Classification of Life Policies, <span class="c-teal">Section 10[a]</span> Direct Familial Relationships, <span class="c-teal">Section 10[b]</span> Dependency for Support or Education in relation to <span class="c-teal">Article 195 of the Family Code</span>, and Pecuniary Interest in Business Relationships)</li>
+    <li><strong>III. Creditor-Debtor and Estate-Dependent Life Insurance</strong> (<span class="c-teal">Section 10[c]</span> Legal Obligations for Money or Services, Ceiling on Creditor Recovery, Public Policy Against Moral Hazard, Functional Reclassification as Property Insurance, and <span class="c-teal">Section 10[d]</span> Usufructuary Interests)</li>
+    <li><strong>IV. Procurement of Life Insurance on Another vs. Designation of Beneficiaries</strong> (Distinguishing Assured's Insurable Interest over the <em>Cestui Que Vie</em> from Beneficiary Designation, Assimilation to Simple Donations under <span class="c-teal">Article 2012</span> and <span class="c-teal">Article 739 of the Civil Code</span>, and Comparative Analysis)</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="i-doctrine-of-insurable-interest" class="c-navy">I. THE DOCTRINE OF INSURABLE INTEREST: GENERAL CONCEPTS &amp; PUBLIC POLICY</h3>
+
+  <h4 id="i-1-concept-and-legal-definition" class="c-navy">1. Concept and Legal Definition of Insurable Interest</h4>
+
+  <ul>
+    <li><strong>Formal Doctrinal Definition:</strong> <span class="c-green"><strong><u>Insurable interest</u></strong></span> is that relation between the insured and the event insured against such that the <span class="c-green"><strong><u>occurrence of the event will cause substantial loss, damnification, or harm of some kind to the insured, or the non-occurrence of which will preserve a pecuniary benefit or advantage for the insured</u></strong></span>.</li>
+    <li><strong>The Practical Colloquial Test (<em>"Anong Paki Mo?"</em>):</strong> Before applying complex statutory enumerations, the threshold inquiry in determining insurable interest is asking: <em>"If the event insured against occurs, what is it to you?"</em> If the occurrence of the peril Inflicts direct financial injury, loss, or legal liability upon the person procuring the policy, <span class="c-green"><strong><u>insurable interest exists</u></strong></span>; if the person remains financially unaffected regardless of whether the event occurs, <span class="c-rust"><strong><u>insurable interest is absent</u></strong></span>.</li>
+    <li><strong>General Pecuniary Nature:</strong> As a general rule across Insurance Law (<span class="c-teal">Republic Act No. 10607</span>, or the <em><span class="c-teal">Amended Insurance Code</span></em>), insurable interest is <span class="c-green"><strong><u>pecuniary in nature</u></strong></span>—meaning it must be capable of monetary valuation or estimation in terms of financial loss or preservation of economic advantage.</li>
+  </ul>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Threshold Inquiry: The Practical "Anong Paki Mo?" Test</div>
+      <div class="ui-sub">"If the peril or event insured against occurs, what is it to you?"</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Inflicts Direct Financial Loss / Liability</div>
+        <div class="ui-sub">Insurable Interest Exists (Valid Insurance Contract)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Remains Financially Unaffected</div>
+        <div class="ui-sub">Insurable Interest Absent (Void Wagering Policy under Sec. 25)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="i-2-life-insurance-exception-face-value" class="c-navy">2. The Life Insurance Exception and the Nature of Policy Face Value</h4>
+
+  <ul>
+    <li><strong>Inestimable Value of Human Life:</strong> The sole exception to the rule that insurable interest is strictly pecuniary is <span class="c-green"><strong><u>life insurance procured upon one's own life or the life of a spouse or child</u></strong></span>. Human life is beyond pecuniary valuation; the law does not permit or require a person to place a market price upon his or her own existence.</li>
+    <li><strong>Face Value as a Contractual Ceiling, Not a Valuation of Life:</strong> While policyholders pay varying premiums corresponding to different policy face values (e.g., ₱1,000,000 vs. ₱300,000), the <span class="c-rust"><strong><u>face value of a life insurance policy does not represent the monetary worth of the insured's life</u></strong></span>. Rather, the face value represents the <span class="c-green"><strong><u>maximum contractual limit of liability</u></strong></span> that the insurer agrees to pay upon the occurrence of the contingent event, calibrated strictly against the insured's <strong>financial capacity to pay the corresponding premiums</strong>.</li>
+    <li><strong>Specialty Anatomical Insurance:</strong> In commercial practice—particularly in foreign jurisdictions involving entertainers, athletes, and public personalities—individuals may separately insure specific body parts (e.g., legs, arms, or vocal cords) when those anatomical features are the direct source of their livelihood and pecuniary income.</li>
+  </ul>
+
+  <h4 id="i-3-twin-legal-functions" class="c-navy">3. Twin Legal Functions of Insurable Interest</h4>
+
+  <ol>
+    <li><strong>Essential Requisite for Contractual Validity:</strong> Insurable interest is not merely a descriptive or distinguishing characteristic of an insurance contract. Under <strong><span class="c-teal">Section 25 of the Insurance Code</span></strong>, every stipulation in a policy for the payment of loss whether the person insured has or has not any interest in the property insured, or that the policy shall be received as proof of such interest, is <span class="c-rust"><strong><u>void</u></strong></span>. Thus, the presence of insurable interest dictates the <span class="c-green"><strong><u>intrinsic validity and enforceability</u></strong></span> of the insurance contract.</li>
+    <li><strong>Determinative Test of Legal Standing to Insure:</strong> Insurable interest answers the threshold question of <em>who</em> possesses the legal capacity to procure insurance over a specific human life or piece of property. Without qualifying under the statutory sources of insurable interest, no valid contract of insurance can be perfected.</li>
+  </ol>
+
+  <h4 id="i-4-absence-wagering-contracts" class="c-navy">4. Effect of Absence of Insurable Interest: Wagering Contracts</h4>
+
+  <ul>
+    <li><strong>Conversion into a Void Wagering Policy:</strong> An agreement purporting to be an insurance contract that lacks the requisite insurable interest is legally degraded into a <span class="c-rust"><strong><u>wagering contract</u></strong></span> (a contract of pure gambling or betting) and is <span class="c-rust"><strong><u>void <em>ab initio</em> for being contrary to public policy</u></strong></span> [<span class="c-teal">Insurance Code, Sec. 25</span>; <span class="c-teal">Civil Code, Art. 2014</span>].</li>
+    <li><strong>Rationale Against Wagering and Moral Hazard:</strong> In a wagering contract, the contracting party has no pre-existing stake in the subject matter other than the chance to win the bet itself; losing the bet inflicts no independent pecuniary harm beyond emotional disappointment. Furthermore, allowing a person without insurable interest to insure a life or property creates an intolerable <strong>moral hazard</strong>, as the policy buyer would be <span class="c-rust"><strong><u>more interested in the destruction of the life or property insured rather than its preservation</u></strong></span>.</li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Contractual Validity (Sec. 25)</div>
+        <div class="ui-sub">Dictates intrinsic validity and enforceability of the policy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🪪</div>
+        <div class="ui-title">Legal Standing to Insure</div>
+        <div class="ui-sub">Determines who has capacity to insure a life or property</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">Anti-Wagering &amp; Moral Hazard</div>
+        <div class="ui-sub">Prevents betting where buyer desires destruction over preservation</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="ii-insurable-interest-life-health" class="c-navy">II. INSURABLE INTEREST IN LIFE AND HEALTH INSURANCE: FAMILY, SUPPORT, AND COMMERCIAL TIES</h3>
+
+  <h4 id="ii-1-dual-classification" class="c-navy">1. Dual Classification of Life Insurance Policies</h4>
+
+  <ol>
+    <li><strong>Insurance Upon One's Own Life:</strong> A policy procured by an individual on his or her own life and health. Here, the presence of insurable interest is <span class="c-green"><strong><u>conclusive and absolute</u></strong></span>; every person possesses an unlimited insurable interest in his or her own life.</li>
+    <li><strong>Insurance Upon the Life of Another Person:</strong> A policy procured by one person (the <strong>assured</strong> or policy owner) over the life and health of a third person (the <strong><em>cestui que vie</em></strong>). Because insuring another person's life carries a high risk of wagering and moral hazard, the law imposes <span class="c-green"><strong><u>strict, exclusive statutory qualifications</u></strong></span> under <strong><span class="c-teal">Section 10 of the Insurance Code</span></strong>.</li>
+  </ol>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">❤️</div>
+        <div class="ui-title">Sec. 10(a): Blood &amp; Affection</div>
+        <div class="ui-sub">Himself, his spouse, and his children (conclusive presumption)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎓</div>
+        <div class="ui-title">Sec. 10(b): Support / Pecuniary</div>
+        <div class="ui-sub">Actual dependency for education/support or commercial pecuniary tie</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💼</div>
+        <div class="ui-title">Sec. 10(c): Legal Obligation</div>
+        <div class="ui-sub">Creditor over debtor or employer over employee (indemnity)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">Sec. 10(d): Vested Estate</div>
+        <div class="ui-sub">Person upon whose life a vested estate or usufruct depends</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="ii-2-sec-10a-oneself-spouse-children" class="c-navy">2. Section 10(a): Oneself, Spouse, and Children (Affection and Blood Alone)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 10(a)</span>]:</strong> Every person has an insurable interest in the life and health <span class="c-green"><strong><u>of himself, of his spouse, and of his children</u></strong></span>.</li>
+    <li><strong>Conclusive Presumption of Interest:</strong> Under <span class="c-teal">Paragraph (a)</span>, the mere existence of the marital bond or direct parent-child filiation establishes insurable interest. The assured need <strong>not</strong> prove pecuniary dependency or financial loss upon the death of the spouse or child; natural affection and familial ties suffice.</li>
+    <li><strong>Exclusivity of Paragraph (a):</strong> The enumeration in <span class="c-teal">Section 10(a)</span> is <span class="c-rust"><strong><u>strictly exclusive</u></strong></span>. Other blood relatives—such as <strong>parents</strong>, siblings, grandparents, uncles, aunts, or cousins—do <strong>not</strong> fall under <span class="c-teal">Section 10(a)</span>. Consequently, a child cannot insure the life of his or her parents merely by invoking filial relationship under <span class="c-teal">Paragraph (a)</span>, and must instead qualify under <span class="c-teal">Paragraph (b)</span>.</li>
+  </ul>
+
+  <h4 id="ii-3-sec-10b-first-clause-dependency" class="c-navy">3. Section 10(b), First Clause: Dependency for Education or Support</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 10(b)</span>]:</strong> Every person has an insurable interest in the life and health <span class="c-green"><strong><u>of any person on whom he depends wholly or in part for education or support</u></strong></span>.</li>
+    <li><strong>Interplay with <span class="c-teal">Article 195 of the Family Code</span>:</strong> To establish a legal baseline for support obligations—such as when a child seeks to insure the life of a parent—<span class="c-teal">Section 10(b)</span> is read in conjunction with <strong><span class="c-teal">Article 195 of the Family Code</span></strong>, which enumerates the persons legally obliged to support each other:
+      <ol>
+        <li><strong>Spouses</strong> (already covered unconditionally under <span class="c-teal">Section 10[a]</span>);</li>
+        <li><strong>Legitimate ascendants and descendants</strong>;</li>
+        <li><strong>Parents and their legitimate children</strong>, and the legitimate and illegitimate children of the latter;</li>
+        <li><strong>Parents and their illegitimate children</strong>, and the legitimate and illegitimate children of the latter; and</li>
+        <li><strong>Legitimate brothers and sisters</strong>, whether of the full or half-blood.</li>
+      </ol>
+    </li>
+    <li><strong>Mandatory Qualification of <em>Actual</em> Dependency:</strong> Qualifying under <span class="c-teal">Article 195 of the Family Code</span> is <span class="c-rust"><strong><u>not automatically sufficient</u></strong></span> to confer insurable interest under <span class="c-teal">Section 10(b)</span>. While <span class="c-teal">Article 195</span> identifies who is <em>legally obliged</em> to give support, <span class="c-teal">Section 10(b)</span> expressly requires that the assured <span class="c-green"><strong><u>actually depends wholly or in part</u></strong></span> upon the <em>cestui que vie</em> for education or support. If a parent is legally obliged to support an adult child under <span class="c-teal">Article 195</span> but provides <span class="c-rust"><strong><u>no actual support or educational funding</u></strong></span>, the child has <span class="c-rust"><strong><u>no insurable interest</u></strong></span> in the parent's life under <span class="c-teal">Section 10(b)</span>.</li>
+    <li><strong>Directionality of Dependency and the Practical Paradox:</strong> Under the first clause of <span class="c-teal">Section 10(b)</span>, the right to insure runs <span class="c-green"><strong><u>unidirectionally</u></strong></span>: only the <strong>dependent</strong> may insure the life of the <strong>provider/supporter</strong>, because it is the dependent who will suffer economic loss if the provider dies. Conversely, a benefactor who voluntarily pays for a non-child's education cannot invoke dependency to insure the student's life. <em>(Note: As a practical irony observed in law, although the dependent relies on the provider for financial survival, the law nevertheless permits the dependent to procure the policy and pay the premiums on the provider's life).</em></li>
+  </ul>
+
+  <h4 id="ii-4-sec-10b-second-clause-pecuniary" class="c-navy">4. Section 10(b), Second Clause: Pecuniary Interest in Commercial Relations</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 10(b)</span>]:</strong> Every person also has an insurable interest in the life and health <span class="c-green"><strong><u>of any person in whom he has a pecuniary interest</u></strong></span>.</li>
+    <li><strong>Operative Scope:</strong> Any person related to another by contract or commercial association—such that a legal right or economic advantage possessed by him will be extinguished or impaired by the death or illness of the other—may lawfully procure insurance on the other's life. This encompasses <strong>business partners</strong>, key commercial associates, and <strong>employees</strong> who have a direct pecuniary interest in the continued life and business operations of their employer.</li>
+  </ul>
+
+  <h4 id="ii-illustration-vice-ganda-ion-perez" class="c-navy">Professor's Illustration: Unmarried Partners and Directional Dependency (Vice Ganda &amp; Ion Perez)</h4>
+
+  <blockquote>
+    Suppose celebrity Vice Ganda and her partner Ion Perez—whose symbolic marriage abroad is not legally recognized in the Philippines—wish to procure life insurance on each other's lives. Vice Ganda <span class="c-rust"><strong><u>cannot</u></strong></span> procure a life insurance policy on the life of Ion under <span class="c-teal">Section 10</span>: Ion is not a legal spouse or child under <span class="c-teal">Section 10(a)</span> (unless Vice legally adopts him), nor does Vice depend on Ion for support or pecuniary survival under <span class="c-teal">Section 10(b)</span>. However, if Vice Ganda is funding Ion's college education or living expenses, <span class="c-green"><strong><u>Ion may validly procure life insurance over the life of Vice Ganda</u></strong></span> under <strong><span class="c-teal">Section 10(b)</span></strong> because Ion depends wholly or in part upon Vice for education or support. Even under those facts, Vice still cannot insure Ion's life because the statutory requirement of dependency ("depends") operates strictly in favor of the dependent, as Ion's death would cause Vice emotional grief rather than pecuniary loss.
+  </blockquote>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: SECTION 10 DIRECTIONAL DEPENDENCY &amp; ALTERNATIVE BENEFICIARY MECHANISM <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Unmarried / Domestic Partners<br/>(e.g., Vice Ganda &amp; Ion Perez)"] --> Mode{"How is the Life Insurance Policy Structured?"}
+
+  Mode -->|"Option A: Procuring Policy Over Partner's Life<br/>(Third-Party Cestui Que Vie — Sec. 10)"| WhoBuys{"Who is the Assured<br/>(Policy Buyer)?"}
+
+  WhoBuys -->|"Provider / Benefactor (Vice)<br/>insuring Dependent's Life (Ion)"| VoidPolicy["VOID WAGERING POLICY (Sec. 25)<br/>• Not legal spouse/child under Sec. 10(a)<br/>• Provider does NOT depend on Ion under Sec. 10(b)"]
+
+  WhoBuys -->|"Dependent (Ion) insuring<br/>Provider's Life (Vice)"| ValidSec10b["VALID POLICY UNDER SEC. 10(b)<br/>• Ion actually depends wholly or in part<br/>on Vice for education or support"]
+
+  Mode -->|"Option B: Procuring Policy on ONE'S OWN LIFE<br/>&amp; Designating Partner as Beneficiary"| OwnLife["Insured (Vice) insures OWN life (Sec. 10[a])<br/>&amp; names Partner (Ion) as Beneficiary (Sec. 11)"]
+
+  OwnLife --> Art739Check{"Is either partner barred under<br/>Art. 739 in rel. to Art. 2012 Civil Code?<br/>(e.g., Guilty of Adultery / Concubinage)"}
+
+  Art739Check -->|"No (Both unmarried to third parties)"| ValidBeneficiary["VALID BENEFICIARY DESIGNATION<br/>• Insurable interest NOT required for beneficiary<br/>• Governed by rules on simple donations"]
+  Art739Check -->|"Yes (Guilty of Adultery / Concubinage)"| VoidBeneficiary["BENEFICIARY DESIGNATION VOID<br/>• Policy remains valid; proceeds go to Insured's Estate"]
+
+  style Start fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style Mode fill:#F8FAFC,color:#1F2937,stroke:#1E3A8A,stroke-width:2px
+  style WhoBuys fill:#F8FAFC,color:#1F2937,stroke:#0F766E,stroke-width:2px
+  style OwnLife fill:#F0FDFA,color:#0F766E,stroke:#0F766E,stroke-width:2px
+  style Art739Check fill:#F8FAFC,color:#1F2937,stroke:#0F766E,stroke-width:2px
+  style ValidSec10b fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style ValidBeneficiary fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style VoidPolicy fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+  style VoidBeneficiary fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="iii-creditor-debtor-estate-dependent" class="c-navy">III. CREDITOR-DEBTOR AND ESTATE-DEPENDENT LIFE INSURANCE</h3>
+
+  <h4 id="iii-1-sec-10c-legal-obligation" class="c-navy">1. Section 10(c): Legal Obligation for Payment of Money, Property, or Services</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 10(c)</span>]:</strong> Every person has an insurable interest in the life and health <span class="c-green"><strong><u>of any person under a legal obligation to him for the payment of money, or respecting property or services, of which death or illness might delay or prevent the performance</u></strong></span>.</li>
+    <li><strong>Creditor-Debtor Application:</strong> Under the first phrase of <span class="c-teal">Section 10(c)</span>, a <strong>creditor</strong> possesses an insurable interest in the life of his or her <strong>debtor</strong>. Because the debtor is under a legal obligation to pay money, the debtor's premature death may either <strong>completely prevent payment</strong> (if the debtor dies insolvent with an estate insufficient to satisfy the debt) or <strong>substantially delay payment</strong> (due to the appointment of an estate administrator and judicial settlement proceedings).</li>
+    <li><strong>Employer-Employee Application:</strong> Under the second phrase of <span class="c-teal">Section 10(c)</span> ("respecting property or services"), an <strong>employer</strong> possesses an insurable interest in the lives of its <strong>employees</strong>. Because the continuity and profitability of the enterprise depend upon the performance of key services by its workforce, the death or illness of an employee delays or prevents performance, directly impairing the employer's business operations.</li>
+  </ul>
+
+  <h4 id="iii-2-ceiling-creditor-recovery" class="c-navy">2. Ceiling on Creditor's Recovery and Public Policy Rationale</h4>
+
+  <ul>
+    <li><strong>Strict Limitation to the Amount of the Debt:</strong> When a creditor procures life insurance on the life of a debtor under <span class="c-teal">Section 10(c)</span>, the creditor's insurable interest—and consequently the maximum face value and recovery under the policy—is <span class="c-green"><strong><u>strictly limited to the actual amount of the debt</u></strong></span> (plus reasonable interest and premiums advanced).</li>
+    <li><strong>Prevention of Moral Hazard:</strong> If a debtor owes ₱1,000,000 and the law permitted the creditor to insure the debtor's life for ₱5,000,000, the policy would violate <strong>public policy</strong>. The creditor would derive a ₱4,000,000 windfall from the debtor's death and would become <span class="c-rust"><strong><u>more interested in the destruction of the debtor's life than in its preservation</u></strong></span>.</li>
+  </ul>
+
+  <h4 id="iii-3-functional-reclassification" class="c-navy">3. Functional Reclassification as Property Insurance</h4>
+
+  <ul>
+    <li><strong>Doctrinal Reclassification:</strong> Although codified under <span class="c-teal">Section 10</span> (which governs insurable interest in life and health), life insurance procured by a <strong>creditor over the life of a debtor</strong> or by an <strong>employer over the life of an employee</strong> is doctrinally classified and treated as <span class="c-green"><strong><u>property insurance</u></strong></span> (a contract of indemnity).</li>
+    <li><strong>Underlying Rationale:</strong> In these policies, the assured has no sentimental stake in the <em>cestui que vie's</em> human life <em>per se</em>; the human life is merely incidental. What the creditor is actually protecting is the <strong>credit or receivable</strong> (which is property), and what the employer is protecting is the <strong>continuance of business operations</strong> (which is likewise property).</li>
+    <li><strong>Crucial Consequence on Temporal Rules:</strong> Because creditor-debtor and employer-employee life policies are functionally classified as <strong>property insurance</strong>, they do <strong>not</strong> follow the general single-point temporal rule of life insurance; instead, they must comply with the <span class="c-green"><strong><u>two-point temporal requirement of property insurance</u></strong></span> under <span class="c-teal">Section 19</span> (existence of insurable interest both at perfection and at the time of loss).</li>
+  </ul>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Creditor-Debtor or Employer-Employee Life Policy (Sec. 10[c])</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">True Object Protected: Credit / Receivable or Business Continuity</div>
+      <div class="ui-sub">Human life of debtor/employee is merely incidental; no sentimental stake</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Functionally Reclassified as PROPERTY INSURANCE (Contract of Indemnity)</div>
+      <div class="ui-sub">Recovery strictly capped at the unpaid debt amount to prevent moral hazard</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">GOVERNED BY TWO-POINT TEMPORAL RULE (SEC. 19)</div>
+      <div class="ui-sub">Insurable interest must exist BOTH when policy takes effect AND when death occurs</div>
+    </div>
+  </div>
+
+  <h4 id="iii-4-sec-10d-estate-or-interest" class="c-navy">4. Section 10(d): Estate or Interest Vested Dependent on Another's Life</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 10(d)</span>]:</strong> Every person has an insurable interest in the life and health <span class="c-green"><strong><u>of any person upon whose life any estate or interest vested in him depends</u></strong></span>.</li>
+    <li><strong>The Usufructuary Illustration:</strong> The classic legal application of <span class="c-teal">Section 10(d)</span> is a <strong>usufruct</strong> (the right to enjoy the property of another with the obligation of preserving its form and substance) where the usufructuary's beneficial enjoyment is constituted for the lifetime of the property owner or grantor. Because the death of the owner automatically <strong>extinguishes the usufruct</strong> and terminates the usufructuary's vested beneficial interest, the <strong>usufructuary</strong> possesses an insurable interest to procure life insurance over the life of the <strong>property owner</strong>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="iv-procurement-vs-beneficiary" class="c-navy">IV. PROCUREMENT OF LIFE INSURANCE ON ANOTHER VS. DESIGNATION OF BENEFICIARIES</h3>
+
+  <h4 id="iv-1-fundamental-doctrinal-distinction" class="c-navy">1. Fundamental Doctrinal Distinction</h4>
+
+  <ul>
+    <li><strong>Procuring Insurance Over Another's Life (<span class="c-teal">Sec. 10</span>):</strong> When a person (the assured) applies for a policy insuring the life of <em>another person</em> (the <em>cestui que vie</em>), the assured <span class="c-green"><strong><u>must possess an insurable interest</u></strong></span> over the life of that person under <span class="c-teal">Section 10(a), (b), (c), or (d)</span>. Absent such insurable interest, the policy is <span class="c-rust"><strong><u>void as a wagering contract</u></strong></span>.</li>
+    <li><strong>Designating a Beneficiary on One's Own Life (<span class="c-teal">Sec. 11</span> &amp; <span class="c-teal">Civil Code, Art. 2012</span>):</strong> When a person procures a policy upon <em>his or her own life</em> and designates a third person as the <strong>beneficiary</strong> to receive the proceeds upon the insured's death, <span class="c-green"><strong><u>no insurable interest is required</u></strong></span> between the insured and the designated beneficiary.</li>
+  </ul>
+
+  <h4 id="iv-2-governing-regime-simple-donation" class="c-navy">2. Governing Regime for Beneficiary Designation: Rules on Simple Donation</h4>
+
+  <ul>
+    <li><strong>Assimilation to an Act of Liberality:</strong> Designating a beneficiary in a policy taken upon one's own life is legally akin to a <strong>donation <em>inter vivos</em></strong>—it is a gratuitous act of liberality whereby the beneficiary receives the insurance proceeds without paying consideration.</li>
+    <li><strong>Statutory Disqualifications [<span class="c-teal">Civil Code, Art. 2012 in rel. to Art. 739</span>]:</strong> Because beneficiary designation is governed by the law on donations, an insured taking a policy on his or her own life may designate <strong>any person</strong> (including a friend, a celebrity, a political figure, an unmarried partner, or even an enemy) as beneficiary, <span class="c-rust"><strong><u>except</u></strong></span> those expressly prohibited from receiving donations from each other under <strong><span class="c-teal">Article 739 of the Civil Code</span></strong>:
+      <ol>
+        <li>Persons <span class="c-rust"><strong><u>guilty of adultery or concubinage</u></strong></span> at the time of the designation (no criminal conviction is required; preponderance of evidence in a civil action suffices);</li>
+        <li>Persons found <span class="c-rust"><strong><u>guilty of the same criminal offense</u></strong></span>, in consideration thereof; and</li>
+        <li><span class="c-rust"><strong><u>Public officers</u></strong></span> or their spouses, descendants, and ascendants, by reason of their office.</li>
+      </ol>
+    </li>
+    <li><strong>Practical Takeaway for Unmarried and Same-Sex Couples:</strong> When an unmarried or same-sex partner (e.g., Vice Ganda) cannot procure insurance <em>over the life</em> of the other partner (Ion) due to the absence of insurable interest under <span class="c-teal">Section 10</span>, the proper legal alternative is for the partner to <span class="c-green"><strong><u>procure insurance upon his or her own life and designate the partner as the beneficiary</u></strong></span>. Provided neither party is disqualified under <span class="c-teal">Article 739</span> (i.e., neither is validly married to someone else so as to commit adultery or concubinage), Philippine law imposes <strong>no prohibition</strong> against designating a same-sex or domestic partner as a life insurance beneficiary.</li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">1. Adultery or Concubinage</div>
+        <div class="ui-sub">At time of designation (civil preponderance suffices; no criminal conviction needed)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">2. Same Criminal Offense</div>
+        <div class="ui-sub">Persons found guilty of the same criminal offense, in consideration thereof</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">3. Public Officers &amp; Relatives</div>
+        <div class="ui-sub">Spouses, descendants, and ascendants, by reason of their office</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="iv-3-comparative-summary" class="c-navy">3. Comparative Summary: Procuring Life Insurance on Another vs. Designating a Beneficiary</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature / Legal Criterion</th>
+        <th>Procuring Life Insurance Over Another's Life</th>
+        <th>Designating a Beneficiary in a Policy on One's Own Life</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Identity of the <em>Cestui Que Vie</em></strong></td>
+        <td>A third person (spouse, child, supporter, debtor, employee, or estate grantor).</td>
+        <td>The insured himself or herself (who applies for and owns the policy).</td>
+      </tr>
+      <tr>
+        <td><strong>Requirement of Insurable Interest</strong></td>
+        <td><span class="c-green"><strong><u>Strictly Required.</u></strong></span> The policy buyer (assured) must have insurable interest in the <em>cestui que vie's</em> life under <span class="c-teal">Sec. 10</span>.</td>
+        <td><span class="c-green"><strong><u>Not Required.</u></strong></span> Neither the insured nor the beneficiary needs insurable interest in the other's life.</td>
+      </tr>
+      <tr>
+        <td><strong>Underlying Legal Principle</strong></td>
+        <td>Prevention of wagering contracts and moral hazard against the <em>cestui que vie</em>.</td>
+        <td>Exercise of gratuitous liberality akin to a simple donation (<em><span class="c-teal">Art. 2012, Civil Code</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Permissible Subjects / Designees</strong></td>
+        <td>Limited exclusively to the four enumerations under <strong><span class="c-teal">Section 10(a), (b), (c), and (d)</span></strong> of the Insurance Code.</td>
+        <td><strong>Any person</strong> (friends, strangers, same-sex partners, enemies), except those barred under <strong><span class="c-teal">Art. 739, Civil Code</span></strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of Non-Compliance</strong></td>
+        <td>The entire insurance contract is <span class="c-rust"><strong><u>void <em>ab initio</em></u></strong></span> as an illegal wagering policy (<em><span class="c-teal">Sec. 25</span></em>).</td>
+        <td>Only the <span class="c-rust"><strong><u>beneficiary designation is void</u></strong></span>; the policy remains valid and proceeds go to the insured's estate.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="part-2-temporal-rules-property-insurance" class="c-navy">PART 2: TEMPORAL RULES IN LIFE INSURANCE AND INSURABLE INTEREST IN PROPERTY INSURANCE</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">TEMPORAL RULES (LIFE)</div>
+        <div class="ui-sub">Sec. 19 single-point rule vs. creditor/employer two-point rule</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">PROPERTY SOURCES</div>
+        <div class="ui-sub">Sec. 13 damnification &amp; Sec. 14 existing, inchoate, expectancy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">INDEMNITY &amp; GAP RULE</div>
+        <div class="ui-sub">Sec. 17 measure, Sec. 18 beneficiary &amp; Sec. 19 meantime gap</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">SYNTHESIS &amp; MORTGAGES</div>
+        <div class="ui-sub">Life vs. Property matrix, Union vs. Open clauses &amp; MRI</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-2-overview-scope" class="c-navy">Part 2 Overview &amp; Scope of Topics</h4>
+
+  <ul>
+    <li><strong>V. Temporal Requirement of Insurable Interest in Life Insurance</strong> (<span class="c-teal">Section 19</span> "Single-Point" Rule, Effect of Subsequent Relationship Termination, The "Two-Point" Exception for Creditor-Debtor and Employer-Employee Life Policies, Key Terminology, and the Creditor-Debtor Extinguishment Problem)</li>
+    <li><strong>VI. Insurable Interest in Property Insurance: Statutory Sources</strong> (<span class="c-teal">Section 13</span> Pecuniary Damnification Test, <span class="c-teal">Section 14</span> Requirement of an Existing Interest, Legal Title vs. Equitable Title, Inchoate Interest Founded on an Existing Interest, and Expectancy Coupled with an Existing Interest)</li>
+    <li><strong>VII. Measure of Interest, Beneficiary Qualification, and Temporal Rules in Property Insurance</strong> (<span class="c-teal">Section 17</span> Measure of Indemnity, <span class="c-teal">Section 18</span> Requirement of Beneficiary Insurable Interest, <span class="c-teal">Section 19</span> "Two-Point" Temporal Rule, and the "Meantime Gap" Doctrine)</li>
+    <li><strong>VIII. Comprehensive Synthesis: Life vs. Property Insurance &amp; Co-Existing Mortgage Interests</strong> (Master Comparison Table, Co-Existing Interests of Mortgagor and Mortgagee under <span class="c-teal">Sections 8–9</span>, Union vs. Open Mortgage Clauses, and Mortgage Redemption Insurance)</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="v-temporal-requirement-life-insurance" class="c-navy">V. TEMPORAL REQUIREMENT OF INSURABLE INTEREST IN LIFE INSURANCE</h3>
+
+  <h4 id="v-1-general-single-point-rule" class="c-navy">1. The General "Single-Point" Rule in Life Insurance</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 19</span>]:</strong> An interest in the life or health of a person insured <span class="c-green"><strong><u>must exist when the insurance takes effect, but need not exist thereafter or when the loss occurs</u></strong></span>.</li>
+    <li><strong>Operative Meaning:</strong> In pure life and health insurance, the law tests the existence of insurable interest under <span class="c-teal">Section 10</span> at <span class="c-green"><strong><u>one point in time only</u></strong></span>: at the <strong>perfection and effectivity of the insurance contract</strong>.</li>
+    <li><strong>Effect of Subsequent Termination of Relationship:</strong> Once a life insurance policy validly takes effect with the requisite insurable interest present at perfection, any subsequent cessation of that relationship or qualification prior to the insured's death <span class="c-green"><strong><u>does not invalidate or suspend the policy</u></strong></span>. For example, if a spouse validly procures life insurance over the life of the other spouse under <span class="c-teal">Section 10(a)</span> during a valid marriage, and the marriage is subsequently dissolved or the spouses legally separate years later, the policy <strong>remains completely valid and enforceable</strong> upon the insured spouse's death.</li>
+  </ul>
+
+  <h4 id="v-2-two-point-exception" class="c-navy">2. The "Two-Point" Exception for Property-Nature Life Policies</h4>
+
+  <ul>
+    <li><strong>Applicable Exceptions:</strong> The single-point rule does <strong>not</strong> apply to two specific categories of life insurance under <span class="c-teal">Section 10</span>:
+      <ol>
+        <li><strong>Life insurance procured by a creditor over the life of a debtor</strong> [<span class="c-teal">Sec. 10(c)</span>]; and</li>
+        <li><strong>Life insurance procured by an employer over the life of an employee</strong> [<span class="c-teal">Sec. 10(b)/(c)</span>].</li>
+      </ol>
+    </li>
+    <li><strong>Application of the Property Insurance Temporal Rule:</strong> Because these two policies are functionally classified as <strong>property insurance</strong> (designed to indemnify the creditor for the unpaid debt or protect the employer's business continuity), they must satisfy the <strong>two-point temporal requirement of property insurance</strong>: insurable interest must exist <span class="c-green"><strong><u>both (1) when the insurance takes effect, AND (2) when the loss (death of the debtor or employee) occurs</u></strong></span>.</li>
+    <li><strong>Consequence of Debt Extinguishment Prior to Death:</strong> If the debtor fully pays the loan (or the employee ceases employment) <em>before</em> dying, the second temporal point is not met. Because the creditor's insurable interest has been extinguished prior to the occurrence of the loss, the creditor <span class="c-rust"><strong><u>cannot recover the insurance proceeds</u></strong></span> upon the former debtor's subsequent death.</li>
+  </ul>
+
+  <h4 id="v-3-essential-terminology-financial" class="c-navy">3. Essential Insurance Terminology and Financial Concepts</h4>
+
+  <ul>
+    <li><strong>Party Roles in Third-Party Life Policies:</strong>
+      <ul>
+        <li><strong>Insurer:</strong> The insurance corporation assuming the risk and promising to pay the proceeds.</li>
+        <li><strong>Assured:</strong> The person who procures the policy on the life of another, pays the premiums, and claims the proceeds (e.g., the creditor).</li>
+        <li><strong><em>Cestui Que Vie</em>:</strong> The person upon whose life the insurance contract is written (e.g., the debtor).</li>
+        <li><strong>Beneficiary:</strong> The person designated in the policy to receive the proceeds upon the maturity of the risk (in creditor-debtor policies, the creditor-assured typically designates himself or herself as beneficiary).</li>
+      </ul>
+    </li>
+    <li><strong>Premium vs. Proceeds (Face Value) vs. Cash Surrender Value:</strong>
+      <ul>
+        <li><strong>Proceeds (Face Value):</strong> The maximum principal sum pegged in the policy that the insurer is bound to pay upon the occurrence of the peril insured against.</li>
+        <li><strong>Premium:</strong> The periodic or lump-sum monetary consideration paid by the insured/assured to the insurer to keep the policy in force (which is always substantially smaller than the face value; e.g., ₱30,000 per year over 10 years totaling ₱300,000 for a ₱1,000,000 policy).</li>
+        <li><strong>Cash Surrender Value (CSV):</strong> The equitable reserve value accumulated under a life policy over time. If a policy is terminated or rendered unenforceable prior to maturity without fraud, the assured cannot demand a full refund of all premiums paid (since the insurer already assumed the risk during the active period), but may only recover the <span class="c-green"><strong><u>proportionately reduced cash surrender value</u></strong></span>, if any is provided under the policy terms and actuarial rules.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🏢</div>
+        <div class="ui-title">Insurer &amp; Assured</div>
+        <div class="ui-sub">Insurer assumes risk; Assured procures policy &amp; pays premiums</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">👤</div>
+        <div class="ui-title">Cestui Que Vie &amp; Beneficiary</div>
+        <div class="ui-sub">Subject whose life is insured vs. recipient of proceeds</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💰</div>
+        <div class="ui-title">Proceeds vs. Premium</div>
+        <div class="ui-sub">Maximum face value payable vs. periodic consideration paid</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📊</div>
+        <div class="ui-title">Cash Surrender Value</div>
+        <div class="ui-sub">Equitable reserve value upon early termination without fraud</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="v-illustration-bea-alonzo-angel-locsin" class="c-navy">Professor's Illustration: The Creditor-Debtor Extinguishment Problem (Bea Alonzo &amp; Angel Locsin)</h4>
+
+  <blockquote>
+    In January 2026, Angel Locsin (<em>debtor / cestui que vie</em>) borrowed ₱500,000,000 from Bea Alonzo (<em>creditor / assured</em>), payable in December 2026. To protect her receivable, Bea validly procured a ₱500,000,000 life insurance policy on Angel's life under <span class="c-teal">Section 10(c)</span> (Bea could not insure Angel for ₱600,000,000 because a creditor's interest is strictly capped at the ₱500,000,000 debt). In June 2026, Angel paid the entire ₱500,000,000 debt in full. In August 2026, Angel died. <span class="c-rust"><strong><u>Neither Bea nor Angel's heirs/estate can claim the ₱500,000,000 insurance proceeds.</u></strong></span> Because creditor-debtor life insurance follows the <span class="c-green"><strong><u>two-point temporal rule of property insurance</u></strong></span> under <span class="c-teal">Section 19</span>, insurable interest must exist both when the policy takes effect and when the loss occurs. While Bea had insurable interest in January 2026, Angel's full payment in June 2026 extinguished the debt prior to her death in August 2026, defeating the second temporal point and preventing unjust enrichment. Furthermore, Angel's heirs cannot claim the proceeds because they were neither parties nor designated beneficiaries under Bea's policy.
+  </blockquote>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: TEMPORAL RULES IN LIFE INSURANCE (PURE LIFE VS. CREDITOR-DEBTOR EXCEPTION) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Root["Temporal Requirement in Life Insurance (Sec. 19)"] --> Type{"What Type of Life Policy?"}
+
+  Type -->|"Pure Life / Health Policy<br/>(Sec. 10[a], Support under 10[b], 10[d])"| SinglePoint["SINGLE-POINT RULE (Sec. 19)<br/>Insurable interest must exist ONLY when policy takes effect"]
+  SinglePoint --> Divorce["Subsequent relationship termination<br/>(e.g., Annulment / Divorce / Separation)"]
+  Divorce --> ValidLife["POLICY REMAINS VALID &amp; ENFORCEABLE<br/>Assured/Beneficiary still recovers upon death"]
+
+  Type -->|"Property-Nature Life Policy<br/>(Creditor-Debtor or Employer-Employee — Sec. 10[c])"| TwoPoint["TWO-POINT RULE (Sec. 19)<br/>Insurable interest must exist at:<br/>(1) Policy Perfection AND (2) Time of Death"]
+
+  TwoPoint --> Timeline["Jan 2026 (Point 1): Angel borrows ₱500M;<br/>Bea (Creditor) insures Angel's life for ₱500M (Met)"]
+  Timeline --> June["June 2026: Angel pays ₱500M loan in full<br/>(Debt &amp; Insurable Interest Extinguished)"]
+  June --> Aug["Aug 2026 (Point 2): Angel dies"]
+  Aug --> NoRecovery["NEITHER BEA NOR ANGEL'S HEIRS CAN RECOVER PROCEEDS<br/>• Bea lacks insurable interest at time of death (Point 2 failed)<br/>• Angel's heirs are neither contracting parties nor beneficiaries"]
+
+  style Root fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style Type fill:#F8FAFC,color:#1F2937,stroke:#1E3A8A,stroke-width:2px
+  style SinglePoint fill:#F0FDFA,color:#0F766E,stroke:#0F766E,stroke-width:2px
+  style TwoPoint fill:#F0FDFA,color:#0F766E,stroke:#0F766E,stroke-width:2px
+  style ValidLife fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style NoRecovery fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="vi-insurable-interest-property-sources" class="c-navy">VI. INSURABLE INTEREST IN PROPERTY INSURANCE: STATUTORY SOURCES</h3>
+
+  <h4 id="vi-1-core-test-statutory-foundation" class="c-navy">1. Core Test and Statutory Foundation (Sections 13 &amp; 14)</h4>
+
+  <ul>
+    <li><strong>Direct Damnification Test [<span class="c-teal">Insurance Code, Sec. 13</span>]:</strong> Every interest in property, whether real or personal, or any relation thereto, or liability in respect thereof, of such nature that a contemplated peril might <span class="c-green"><strong><u>directly damnify the insured</u></strong></span>, is an insurable interest. Simply put, if the loss or destruction of the property will inflict direct pecuniary harm upon the person, insurable interest is present.</li>
+    <li><strong>The Unifying Thread of <span class="c-teal">Section 14</span>:</strong> Under <strong><span class="c-teal">Section 14 of the Insurance Code</span></strong>, an insurable interest in property may consist in:
+      <ol>
+        <li><span class="c-green"><strong><u>An existing interest</u></strong></span> [<span class="c-teal">Sec. 14(a)</span>];</li>
+        <li><span class="c-green"><strong><u>An inchoate interest founded on an existing interest</u></strong></span> [<span class="c-teal">Sec. 14(b)</span>]; or</li>
+        <li><span class="c-green"><strong><u>An expectancy, coupled with an existing interest in that out of which the expectancy arises</u></strong></span> [<span class="c-teal">Sec. 14(c)</span>].</li>
+      </ol>
+    </li>
+    <li><strong>Indispensability of an "Existing Interest":</strong> Across all three paragraphs of <span class="c-teal">Section 14</span>, the common and indispensable denominator is the presence of an <span class="c-green"><strong><u>existing interest</u></strong></span>. Even an inchoate right or a future expectancy cannot be insured unless it is anchored upon a present, legally recognized existing interest in the property.</li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🏠</div>
+        <div class="ui-title">Sec. 14(a): Existing Interest</div>
+        <div class="ui-sub">Present Legal Title or Equitable Title over the property</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🌱</div>
+        <div class="ui-title">Sec. 14(b): Inchoate Interest</div>
+        <div class="ui-sub">Incomplete/unripened right founded on an existing interest</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🌾</div>
+        <div class="ui-title">Sec. 14(c): Coupled Expectancy</div>
+        <div class="ui-sub">Future fruits/profits arising out of an existing interest</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="vi-2-sec-14a-existing-interest" class="c-navy">2. Section 14(a): An Existing Interest (Legal Title vs. Equitable Title)</h4>
+
+  <p>An existing interest in property may be held either by virtue of <strong>legal title</strong> or <strong>equitable title</strong>, both of which confer full standing to procure property insurance:</p>
+
+  <ul>
+    <li><strong>Holders of Legal Title:</strong>
+      <ol>
+        <li><strong>Absolute Owner:</strong> The registered or lawful owner in possession of the property.</li>
+        <li><strong>Seller / Trustee Prior to Delivery:</strong> A vendor who has perfected a contract of sale over a determinate thing but has not yet delivered it to the buyer retains legal title and holds the property as a trustee pending delivery.</li>
+        <li><strong>Mortgagor of Encumbered Property:</strong> Because a real estate or chattel mortgage merely constitutes a lien or encumbrance to secure an obligation without divesting ownership, the mortgagor retains legal title over the mortgaged asset.</li>
+        <li><strong>Lessor of Leased Property:</strong> In a contract of lease, the lessor transfers only the temporary physical possession and enjoyment (<em>jus utendi</em>) to the lessee while retaining full legal ownership over the premises.</li>
+      </ol>
+    </li>
+    <li><strong>Holders of Equitable Title:</strong>
+      <ol>
+        <li><strong>Buyer Prior to Delivery:</strong> A vendee under a perfected contract of sale who is awaiting physical delivery practically owns the beneficial interest in the object and holds equitable title thereto.</li>
+        <li><strong>Mortgagee of Encumbered Property:</strong> A bank or lender holding a mortgage over the debtor's property possesses an equitable interest in the preservation of the collateral, as the property stands as security for the satisfaction of the loan upon default.</li>
+        <li><strong>Mortgagor During the Statutory Redemption Period:</strong> Even after a mortgaged property has been foreclosed and sold at public auction, the mortgagor retains an <strong>equitable title</strong> prior to the expiration of the statutory redemption period, because the law vests in the mortgagor a legal right to repurchase and retain ownership of the property within the prescribed period.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="vi-3-sec-14b-inchoate-interest" class="c-navy">3. Section 14(b): An Inchoate Interest Founded on an Existing Interest</h4>
+
+  <ul>
+    <li><strong>Concept of Inchoate Interest:</strong> An <strong>inchoate interest</strong> is an incomplete, unripened, or contingent right that has not yet matured into full legal title (analogous in classroom illustration to a suitor in a courtship or <em>"mutual understanding"</em> who has a developing stake but has not yet secured final acceptance). To be insurable under <span class="c-teal">Section 14(b)</span>, this incomplete right <span class="c-green"><strong><u>must be founded upon a present existing interest</u></strong></span>.</li>
+    <li><strong>Doctrinal Illustrations:</strong>
+      <ol>
+        <li><strong>Stockholder in Corporate Property:</strong> A corporate shareholder does not own specific corporate properties while the corporation is a going concern, because the corporation has a separate juridical personality. However, the stockholder possesses an <strong>inchoate interest</strong> in the corporate assets (which will ripen into a distributive share upon corporate dissolution and liquidation after payment of creditors), founded upon an <strong>existing interest</strong>—namely, the stockholder's present <strong>ownership of shares of stock</strong> in the corporation.</li>
+        <li><strong>Buyer Under a Binding Contract Pending Final Title Transfer:</strong> A purchaser who has entered into a binding contract of sale where final transfer of title or statutory delivery is still pending holds an inchoate right protected by and founded upon the existing, enforceable contract.</li>
+        <li><strong>Partner in Undivided Partnership Assets:</strong> A partner holds a prospective stake in specific partnership assets whose ultimate realization depends upon ongoing commercial operations or future liquidation, anchored upon the partner's <strong>existing legal stake as a member of the partnership</strong>.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="vi-4-sec-14c-expectancy" class="c-navy">4. Section 14(c): An Expectancy Coupled with an Existing Interest</h4>
+
+  <ul>
+    <li><strong>Statutory Requisite [<span class="c-teal">Insurance Code, Sec. 14(c) &amp; Sec. 16</span>]:</strong> A mere hope or contingent expectation of a benefit (such as an heir's expectation of inheriting from a living parent) is <span class="c-rust"><strong><u>not insurable</u></strong></span>. For an <strong>expectancy</strong> to be insurable, it must be <span class="c-green"><strong><u>coupled with an existing interest in the specific property out of which the expectancy directly arises</u></strong></span>.</li>
+    <li><strong>Doctrinal Illustrations:</strong>
+      <ol>
+        <li><strong>Future Agricultural Crops:</strong> A farmer who owns agricultural land (or holds the land as a <strong>lessee</strong> under an existing lease contract—which likewise constitutes an existing interest) may validly insure <strong>future crops</strong> expected to grow and be harvested from that specific land, even before the seeds have sprouted.</li>
+        <li><strong>Future Offspring of Livestock:</strong> A commercial breeder who owns hogs, cattle, or poultry (<strong>existing interest</strong>) may insure the expected <strong>future offspring</strong> (<strong>expectancy</strong>) to be born of those animals.</li>
+        <li><strong>Expected Freightage or Voyage Profits:</strong> A shipowner who owns or charters a vessel (<strong>existing interest</strong>) has an insurable interest in the <strong>freightage or profits expected to be earned</strong> from an upcoming maritime voyage (<strong>expectancy</strong>) arising out of the operation of that vessel.</li>
+        <li><strong>Business Interruption and Prospective Store Profits:</strong> A business proprietor operating an established factory or retail store (<strong>existing interest</strong>) may insure against <strong>prospective loss of profits or business interruption</strong> (<strong>expectancy</strong>) that would result if the physical plant is disrupted by a covered peril.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="vi-5-comparative-table-sec-14" class="c-navy">5. Comparative Table: Modalities of Property Insurable Interest (Section 14)</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Statutory Category</th>
+        <th>Core Legal Nature</th>
+        <th>Source of Existing Interest</th>
+        <th>Concrete Bar Exam Illustrations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><span class="c-teal">Sec. 14(a)</span>: Existing Interest</strong></td>
+        <td>Present, vested <strong>Legal Title</strong> or <strong>Equitable Title</strong> over the property itself.</td>
+        <td>Direct ownership, trusteeship, security lien, or statutory right of redemption.</td>
+        <td>Absolute owner; unpaid seller before delivery; buyer before delivery; mortgagor (before foreclosure or during redemption); mortgagee; lessor; lessee.</td>
+      </tr>
+      <tr>
+        <td><strong><span class="c-teal">Sec. 14(b)</span>: Inchoate Interest</strong></td>
+        <td>An <strong>incomplete or unripened right</strong> to the property that matures upon a future legal event.</td>
+        <td>Present ownership of corporate shares, partnership equity, or a binding executory contract.</td>
+        <td><strong>Stockholder</strong> insuring corporate assets (based on stock ownership); <strong>partner</strong> insuring undivided partnership property (based on partnership stake).</td>
+      </tr>
+      <tr>
+        <td><strong><span class="c-teal">Sec. 14(c)</span>: Coupled Expectancy</strong></td>
+        <td>Expected <strong>future fruits, profits, or revenues</strong> not yet in physical existence.</td>
+        <td>Present ownership or leasehold possession of the parent asset generating the fruit/profit.</td>
+        <td><strong>Farmer/lessee</strong> insuring future crops; <strong>rancher</strong> insuring future livestock offspring; <strong>shipowner</strong> insuring expected freightage; <strong>factory owner</strong> insuring against business interruption.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="vii-measure-beneficiary-temporal-property" class="c-navy">VII. MEASURE OF INTEREST, BENEFICIARY QUALIFICATION, AND TEMPORAL RULES IN PROPERTY INSURANCE</h3>
+
+  <h4 id="vii-1-measure-of-interest-sec-17" class="c-navy">1. Measure of Insurable Interest in Property (Section 17)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 17</span>]:</strong> The measure of an insurable interest in property is the <span class="c-green"><strong><u>extent to which the insured might be damnified by loss or injury thereof</u></strong></span>.</li>
+    <li><strong>The Indemnity Ceiling:</strong> Unlike life insurance (where face value is unlimited save by the insured's ability to pay premiums), property insurance is strictly a <span class="c-green"><strong><u>contract of indemnity</u></strong></span>. An owner of a car worth ₱1,500,000 cannot validly insure and recover ₱3,000,000 for its loss. Allowing recovery beyond the actual value of the property or interest therein would violate public policy by tempting the insured to intentionally destroy or burn the property for profit.</li>
+  </ul>
+
+  <h4 id="vii-2-beneficiary-qualification-sec-18" class="c-navy">2. Beneficiary Qualification in Property Insurance (Section 18)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 18</span>]:</strong> No contract or policy of insurance on property shall be enforceable except for the benefit of some person <span class="c-green"><strong><u>having an insurable interest in the property insured</u></strong></span>.</li>
+    <li><strong>Strict Requirement of Beneficiary Insurable Interest:</strong> In stark contrast to life insurance (where the insured may designate any stranger as beneficiary subject only to <span class="c-teal">Article 739 of the Civil Code</span>), a <span class="c-green"><strong><u>beneficiary designated in a property insurance policy must possess an insurable interest in the property</u></strong></span>. In practice, the person who procures property insurance is almost always the owner/titleholder who designates himself or herself (or a mortgagee/lienholder) as the beneficiary. Permitting a person without insurable interest to collect property proceeds as a beneficiary would enable indirect wagering and arson.</li>
+  </ul>
+
+  <h4 id="vii-3-temporal-requirement-meantime-gap" class="c-navy">3. Temporal Requirement in Property Insurance &amp; The "Meantime Gap" Doctrine (Section 19)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 19</span>]:</strong> An interest in property insured <span class="c-green"><strong><u>must exist when the insurance takes effect, and when the loss occurs, but need not exist in the meantime</u></strong></span>.</li>
+    <li><strong>The Two-Point Mandate:</strong> For a property insurance claim to prosper, the claimant must possess insurable interest at <strong>two mandatory points in time</strong>:
+      <ol>
+        <li><strong>Point 1:</strong> When the insurance policy <strong>takes effect</strong> (perfection); <strong>AND</strong></li>
+        <li><strong>Point 2:</strong> When the <strong>loss occurs</strong>.</li>
+      </ol>
+    </li>
+    <li><strong>The "Meantime Gap" Doctrine:</strong> The statutory phrase <em>"but need not exist in the meantime"</em> means that a temporary interruption or gap in the insured's ownership between the perfection of the policy and the occurrence of the loss <span class="c-green"><strong><u>does not permanently void the policy</u></strong></span>. While the transfer of the property to a third party without assigning the policy <strong>suspends</strong> the coverage during the interim period [<span class="c-teal">Sec. 20</span>], if the original insured <strong>reacquires ownership</strong> of the property <em>before</em> the loss occurs, the suspension is lifted and the policy automatically revives, because both Point 1 and Point 2 are satisfied in the same person.</li>
+  </ul>
+
+  <h4 id="vii-illustration-1-sale-without-assignment" class="c-navy">Professor's Illustration 1: Sale of Insured Car Without Policy Assignment</h4>
+
+  <blockquote>
+    <strong>A</strong> owns a car and insures it for ₱1,000,000 (<strong>Point 1 met as to A</strong>). Subsequently, <strong>A</strong> sells and delivers the car to <strong>B</strong>, but does not assign or transfer the insurance policy to <strong>B</strong> with the insurer's consent. While <strong>B</strong> is driving the car, it is wrecked in an accident (<strong>Point 2</strong>). <span class="c-rust"><strong><u>Neither A nor B can claim the ₱1,000,000 insurance proceeds.</u></strong></span> Under <strong><span class="c-teal">Section 19</span></strong>, insurable interest in property must exist <em>both</em> when the insurance takes effect and when the loss occurs. <strong>B</strong> cannot recover because, although <strong>B</strong> owned the car when the loss occurred (Point 2), <strong>B</strong> had no insurable interest when the policy took effect (Point 1). Conversely, <strong>A</strong> cannot recover because, although <strong>A</strong> owned the car when the policy took effect (Point 1), <strong>A</strong> had already parted with ownership and had no insurable interest when the loss occurred (Point 2).
+  </blockquote>
+
+  <h4 id="vii-illustration-2-separation-anxiety" class="c-navy">Professor's Illustration 2: The "Separation Anxiety" Repurchase (Meantime Gap)</h4>
+
+  <blockquote>
+    Using the same facts where <strong>A</strong> insures his car for ₱1,000,000 and sells it to <strong>B</strong> without transferring the policy: suppose <strong>A</strong> suffers "separation anxiety" over the car and <strong>repurchases the car from B</strong> a month later. After the car is back in <strong>A's</strong> ownership, <strong>A</strong> figures in a vehicular accident that destroys the car. <span class="c-green"><strong><u>A can validly recover the ₱1,000,000 proceeds.</u></strong></span> Under <strong><span class="c-teal">Section 19</span></strong>, insurable interest in property must exist when the insurance takes effect (<strong>met by A</strong>) and when the loss occurs (<strong>likewise met by A</strong>), <span class="c-green"><strong><u>but need not exist in the meantime</u></strong></span>. The interim gap in ownership while <strong>B</strong> held the car merely suspended the policy under <span class="c-teal">Section 20</span>; once ownership reunited with the policy in <strong>A's</strong> person prior to the accident, coverage was fully restored.
+  </blockquote>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-card">
+      <div class="ui-title">Point 1 (Policy Perfection): A Owns &amp; Insures Car for ₱1,000,000</div>
+      <div class="ui-sub">Insurable interest exists in A when the insurance takes effect</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Meantime Gap: A Sells Car to B Without Policy Assignment</div>
+      <div class="ui-sub">Policy is merely SUSPENDED under Sec. 20 (not permanently voided)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Reunification Before Loss: A Repurchases Car from B</div>
+      <div class="ui-sub">Interest in the thing and interest in the policy reunite in A</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">Point 2 (Loss Occurs): Car Wrecked While Owned by A — A RECOVERS ₱1,000,000</div>
+      <div class="ui-sub">Sec. 19 satisfied: Interest existed at Point 1 and Point 2 ("need not exist in the meantime")</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="viii-comprehensive-synthesis-mortgage" class="c-navy">VIII. COMPREHENSIVE SYNTHESIS: LIFE VS. PROPERTY INSURANCE &amp; CO-EXISTING MORTGAGE INTERESTS</h3>
+
+  <h4 id="viii-1-master-comparative-table" class="c-navy">1. Master Comparative Table: Insurable Interest in Life vs. Property Insurance</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Point of Comparison</th>
+        <th>Life Insurance (General Rule)</th>
+        <th>Property Insurance (and Creditor/Employer Life Policies)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Nature of Interest</strong></td>
+        <td>Generally <strong>pecuniary</strong>, <em>except</em> in insurance on one's own life, spouse, or children (based on blood/affection).</td>
+        <td>Strictly <strong>pecuniary</strong> (must involve direct monetary damnification or legal liability under <em><span class="c-teal">Sec. 13</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>2. Measure / Extent of Interest</strong></td>
+        <td><strong>Unlimited</strong> (human life cannot be priced; face value is limited only by capacity to pay premiums), <em>except</em> in creditor-debtor life policies (limited to the debt).</td>
+        <td><strong>Limited strictly to the actual value</strong> of the property or the extent of the insured's damnification (<em><span class="c-teal">Sec. 17</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>3. Temporal Requirement (Time of Existence)</strong></td>
+        <td><strong>One Point Only:</strong> Must exist <strong>only when the insurance takes effect</strong>, and need not exist thereafter or when the loss occurs (<em><span class="c-teal">Sec. 19</span></em>).</td>
+        <td><strong>Two Points:</strong> Must exist <strong>both when the insurance takes effect AND when the loss occurs</strong>, but need not exist in the meantime (<em><span class="c-teal">Sec. 19</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>4. Insurable Interest of Beneficiary</strong></td>
+        <td><strong>Not Required.</strong> Insured on own life may designate <em>anyone</em> except persons disqualified to receive donations under <em><span class="c-teal">Art. 739, Civil Code</span></em>.</td>
+        <td><strong>Strictly Required.</strong> The beneficiary must possess an insurable interest in the property insured (<em><span class="c-teal">Sec. 18</span></em>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="viii-2-co-existence-multiple-interests" class="c-navy">2. Co-Existence of Multiple Insurable Interests in a Single Property (Mortgagor &amp; Mortgagee)</h4>
+
+  <ul>
+    <li><strong>Plurality of Insurable Interests [<span class="c-teal">Insurance Code, Sec. 8</span>]:</strong> Several distinct insurable interests may exist simultaneously in the same piece of property. The most prominent bar exam illustration is a <strong>mortgaged property</strong>, where both the <strong>mortgagor</strong> and the <strong>mortgagee</strong> possess separate and distinct insurable interests over the same asset:
+      <ol>
+        <li><strong>Insurable Interest of the Mortgagor:</strong> As the owner of the encumbered property, the mortgagor has an insurable interest up to the <span class="c-green"><strong><u>full actual value of the property</u></strong></span> (e.g., ₱1,000,000), because the loss of the property destroys the asset while leaving the principal debt subsisting.</li>
+        <li><strong>Insurable Interest of the Mortgagee:</strong> As the secured creditor, the mortgagee has a separate insurable interest limited strictly to the <span class="c-green"><strong><u>extent of the debt secured</u></strong></span> by the mortgage (e.g., ₱500,000), which continues until the mortgage debt is extinguished.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="viii-3-special-clauses-mortgages" class="c-navy">3. Special Clauses and Insurance Schemes in Mortgages</h4>
+
+  <ul>
+    <li><strong>Standard or Union Mortgage Clause:</strong> A policy stipulation protecting the mortgagee which provides that <span class="c-green"><strong><u>subsequent acts or breaches of the mortgagor cannot defeat or affect the rights of the mortgagee/assignee</u></strong></span>. The legal effect is as if the insurer entered into a <strong>new, independent contract</strong> directly with the mortgagee.</li>
+    <li><strong>Open or Loss-Payable Mortgage Clause:</strong> A policy stipulation merely making the mortgagee an appointee to receive the proceeds to the extent of his credit. Under an open clause, <span class="c-rust"><strong><u>the acts or breaches of the mortgagor directly affect and bind the mortgagee</u></strong></span>, because the mortgagor does not cease to be the sole contracting insured party.</li>
+    <li><strong>Mortgage Redemption Insurance (MRI):</strong> A form of <strong>group life insurance</strong> procured pursuant to a mortgage redemption scheme by the lending institution on the <strong>life of the mortgagor-borrower</strong>. Its purpose is that if the mortgagor dies prior to full payment of the loan, the life insurance proceeds are applied directly to <span class="c-green"><strong><u>extinguish the mortgage indebtedness</u></strong></span>, thereby freeing the mortgaged property from foreclosure and relieving the mortgagor's heirs and estate from the burden of paying the debt.</li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">Standard / Union Clause</div>
+        <div class="ui-sub">Independent contract; mortgagor's subsequent breaches do NOT defeat mortgagee</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚠️</div>
+        <div class="ui-title">Open / Loss-Payable Clause</div>
+        <div class="ui-sub">Mortgagee is a mere appointee; mortgagor's breaches bind &amp; defeat mortgagee</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏡</div>
+        <div class="ui-title">Mortgage Redemption (MRI)</div>
+        <div class="ui-sub">Group life policy on borrower; pays off loan upon death to free property for heirs</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="part-3-transfer-thing-policy-claim" class="c-navy">PART 3: TRANSFER OF THING INSURED, POLICY, OR CLAIM AND STATUTORY EXCEPTIONS TO SUSPENSION</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">TRIAD OF TRANSFERS</div>
+        <div class="ui-sub">Thing insured, policy (Sec. 184 vs. 20/58) &amp; claim (Sec. 85)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">SEC. 20 SUSPENSION</div>
+        <div class="ui-sub">Unaccompanied absolute transfer vs. mortgage or lease</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">EXCEPTIONS (PART 1)</div>
+        <div class="ui-sub">Life policies, Sec. 21 after loss &amp; Sec. 22 separate items</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XII</div>
+        <div class="ui-kicker">EXCEPTIONS (PART 2)</div>
+        <div class="ui-sub">Sec. 23 succession, Sec. 24 co-owners, Sec. 25 &amp; Sec. 57</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-3-overview-scope" class="c-navy">Part 3 Overview &amp; Scope of Topics</h4>
+
+  <ul>
+    <li><strong>IX. Triad of Transfers in Insurance Law: Thing Insured, Policy, and Claim</strong> (Distinguishing Transfers of the Subject Property, the Written Policy, and the Post-Loss Claim; <span class="c-teal">Section 184–185</span> Free Assignability of Life Policies vs. Personal Nature of Property/Casualty Policies under <span class="c-teal">Section 20/58</span>; and <span class="c-teal">Section 85</span> Nullity of Prohibitions Against Post-Loss Claim Transfers)</li>
+    <li><strong>X. Change of Interest in the Thing Insured: The General Rule of Suspension</strong> (<span class="c-teal">Section 20</span> Operative Rule, Restriction to Absolute Transfers of Ownership vs. Mere Encumbrances or Leases, and Integration with <span class="c-teal">Section 19</span>)</li>
+    <li><strong>XI. Statutory Exceptions to the Section 20 Suspension Rule (Part 1)</strong> (Inapplicability to Life/Health/Accident Policies, <span class="c-teal">Section 21</span> Change of Interest After Loss, and <span class="c-teal">Section 22</span> Separate Insurance of Distinct Things in a Single Policy)</li>
+    <li><strong>XII. Statutory Exceptions to the Section 20 Suspension Rule (Part 2)</strong> (<span class="c-teal">Section 23</span> Change of Interest by Will or Succession, <span class="c-teal">Section 24</span> Transfer Among Co-Owners or Partners, <span class="c-teal">Section 25</span> Express Prohibition Against Alienation, and <span class="c-teal">Section 57</span> Policies Inuring to Whomsoever May Become the Owner)</li>
+    <li><strong>Administrative Matters &amp; Professor's Asides</strong> (Bar Exam Strategy, Grading Philosophy, and Reading Guidance)</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="ix-triad-of-transfers" class="c-navy">IX. TRIAD OF TRANSFERS IN INSURANCE LAW: THING INSURED, POLICY, AND CLAIM</h3>
+
+  <p>In analyzing transfers in Insurance Law, it is critical to distinguish among three distinct objects of transfer: <strong>(1) the thing insured</strong> (the physical property); <strong>(2) the insurance policy</strong> (the written contract); and <strong>(3) the insurance claim</strong> (the vested right to collect proceeds after a loss has occurred).</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🚗</div>
+        <div class="ui-title">1. The Thing Insured</div>
+        <div class="ui-sub">Freely alienable (jus disponendi), but suspends unassigned policy (Sec. 20)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📄</div>
+        <div class="ui-title">2. The Insurance Policy</div>
+        <div class="ui-sub">Life: Freely transferable (Sec. 184) • Property: Needs insurer consent (Sec. 20/58)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💸</div>
+        <div class="ui-title">3. Post-Loss Claim (Sec. 85)</div>
+        <div class="ui-sub">Vested money debt; freely assignable after loss; anti-transfer clauses are VOID</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="ix-1-transfer-of-thing-insured" class="c-navy">1. Transfer of the Thing Insured</h4>
+
+  <ul>
+    <li><strong>No Restraint on Alienation (<em>Jus Disponendi</em>):</strong> Procuring property insurance over an asset does <strong>not</strong> constitute a lien, burden, or encumbrance on the owner's title. Although <span class="c-teal">Section 19</span> requires insurable interest to exist at the time of loss in order to recover under the policy, Insurance Law <span class="c-green"><strong><u>does not prohibit the owner from selling, donating, or disposing of the insured property</u></strong></span> at any time.</li>
+    <li><strong>Consequence on Coverage:</strong> While the sale of the thing insured is completely valid under Civil Law, transferring the property <strong>without</strong> a corresponding transfer/assignment of the insurance policy (approved by the insurer) triggers the <span class="c-rust"><strong><u>suspension of the insurance coverage</u></strong></span> under <strong><span class="c-teal">Section 20</span></strong>.</li>
+  </ul>
+
+  <h4 id="ix-2-transfer-of-policy" class="c-navy">2. Transfer of the Insurance Policy (Life vs. Property &amp; Casualty)</h4>
+
+  <ul>
+    <li><strong>Life Insurance Policies [<span class="c-teal">Insurance Code, Secs. 184 &amp; 185</span>]:</strong>
+      <ul>
+        <li><strong>General Rule:</strong> A policy of insurance upon life or health may pass by transfer, will, or succession to <span class="c-green"><strong><u>any person, whether he has an insurable interest or not</u></strong></span>, and <span class="c-green"><strong><u>without the consent of the insurer</u></strong></span> [<span class="c-teal">Sec. 184</span>]. The transferee may recover upon it whatever the insured might have recovered.</li>
+        <li><strong>Statutory Exception:</strong> Notice to an insurer of a transfer or bequest is not necessary to preserve the validity of a policy <span class="c-rust"><strong><u>unless expressly required by the policy</u></strong></span> [<span class="c-teal">Sec. 185</span>].</li>
+        <li><strong>Doctrinal Rationale &amp; Professor's Critique:</strong> The statutory theory behind <span class="c-teal">Section 184</span> is that a life policy represents a chose in action or investment rather than a strictly personal indemnity agreement. <em>(Note: As critiqued in lecture, this statutory rule sits in theoretical tension with the principle that insurance is a personal contract whose coverage and risk assessment depend on the personal qualifications of the contracting party; nevertheless, for Bar Exam purposes, <strong><span class="c-teal">Section 184</span> strictly governs</strong>—consent of the insurer is NOT required to transfer a life policy unless stipulated).</em></li>
+      </ul>
+    </li>
+    <li><strong>Property and Casualty Insurance Policies [<span class="c-teal">Insurance Code, Secs. 20 &amp; 58</span>]:</strong>
+      <ul>
+        <li><strong>Strict Requirement of Insurer Consent:</strong> In <strong>property insurance</strong> and <strong>casualty insurance</strong>, the policy <span class="c-rust"><strong><u>cannot be transferred without the express consent of the insurer</u></strong></span>.</li>
+        <li><strong>Rationale (<em>Delectus Personae</em> and Moral Hazard):</strong> Property and casualty insurance contracts are <span class="c-green"><strong><u>strictly personal contracts</u></strong></span>. An insurer approves a property or casualty policy based on its underwriting assessment of the <strong>personal qualifications, integrity, and diligence of the specific insured</strong> in safeguarding the property. Because moral hazards in property and casualty lines are exceptionally high, an insured cannot force the insurer to accept a stranger as a substitute contracting party without the insurer's consent.</li>
+        <li><strong>Effect of Unauthorized Policy Transfer:</strong> If a property policy or the thing insured is transferred without the insurer's consent, the policy is <span class="c-rust"><strong><u>suspended</u></strong></span> (not automatically voided, unless an express alienation clause under <span class="c-teal">Section 25</span> exists) until the interest in the thing and the interest in the policy are vested in the same person.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="ix-3-transfer-of-claim-after-loss" class="c-navy">3. Transfer of the Insurance Claim After Loss (Section 85)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 85</span>]:</strong> An agreement not to transfer the claim of the insured against the insurer <span class="c-rust"><strong><u>after the loss happens, is void if made before the loss</u></strong></span> (except as otherwise provided in the case of life insurance under specific settlement options).</li>
+    <li><strong>Maturation into a Vested Property Right:</strong> Once the peril insured against occurs and loss attaches, the contingent risk is terminated and the insured's right to collect the proceeds matures into a <span class="c-green"><strong><u>fixed money debt or vested property right (<em>chose in action</em>)</u></strong></span>.</li>
+    <li><strong>Absolute Transferability:</strong> Because an established post-loss claim is already the personal property of the insured, the insured may freely <span class="c-green"><strong><u>assign or transfer that claim to any third person without the insurer's consent</u></strong></span>. Any policy stipulation prohibiting the assignment of a claim after loss has occurred is <span class="c-rust"><strong><u>void</u></strong></span> because it unlawfully hinders the free transmission of vested property and cannot increase the insurer's moral hazard (since the loss has already occurred).</li>
+  </ul>
+
+  <h4 id="ix-4-comparative-summary-transfers" class="c-navy">4. Comparative Summary: Rules Governing Transfers in Insurance Law</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Subject of Transfer</th>
+        <th>Consent of Insurer Required?</th>
+        <th>Need Transferee Have Insurable Interest?</th>
+        <th>Legal Effect of Unauthorized Transfer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Life Insurance Policy (<em><span class="c-teal">Secs. 184–185</span></em>)</strong></td>
+        <td><strong>No</strong> (unless notice/consent is expressly required by the policy).</td>
+        <td><strong>No</strong> (<em><span class="c-teal">Sec. 184</span></em> expressly allows transfer to any person).</td>
+        <td><span class="c-green"><strong><u>Valid and enforceable</u></strong></span> by the transferee.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Property / Casualty Policy (<em><span class="c-teal">Secs. 20 &amp; 58</span></em>)</strong></td>
+        <td><strong>Yes</strong> (strictly personal contract due to moral hazard).</td>
+        <td><strong>Yes</strong> (transferee must also hold interest in the property insured).</td>
+        <td><span class="c-rust"><strong><u>Suspends</u></strong></span> the policy until interest in thing and policy reunite (<em>or voids if stipulated under <span class="c-teal">Sec. 25</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>3. The Thing Insured (Physical Property)</strong></td>
+        <td><strong>No</strong> (insurance is not a restraint on alienation of property).</td>
+        <td><strong>N/A</strong> (buyer acquires ownership of the property itself by sale).</td>
+        <td>Valid sale of property, but <span class="c-rust"><strong><u>suspends</u></strong></span> the unassigned insurance policy (<em><span class="c-teal">Sec. 20</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>4. Vested Claim After Loss (<em><span class="c-teal">Sec. 85</span></em>)</strong></td>
+        <td><strong>No</strong> (any stipulation prohibiting post-loss transfer is <span class="c-rust"><strong><u>void</u></strong></span>).</td>
+        <td><strong>No</strong> (claim is already a fixed money debt / vested property right).</td>
+        <td><span class="c-green"><strong><u>Valid assignment</u></strong></span>; assignee may collect the proceeds directly.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="x-change-of-interest-general-rule" class="c-navy">X. CHANGE OF INTEREST IN THE THING INSURED: THE GENERAL RULE OF SUSPENSION</h3>
+
+  <h4 id="x-1-operative-rule-sec-20" class="c-navy">1. The Operative Rule of Suspension (Section 20)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 20</span>]:</strong> A <strong>change of interest</strong> in any part of a thing insured, unaccompanied by a corresponding change of interest in the insurance, <span class="c-rust"><strong><u>suspends the insurance to an equivalent extent, until the interest in the thing and the interest in the insurance are vested in the same person</u></strong></span>.</li>
+    <li><strong>Doctrinal Rationale:</strong> <span class="c-teal">Section 20</span> is the direct statutory corollary of two fundamental principles:
+      <ol>
+        <li><strong>The Personal Nature of Property Insurance:</strong> Because the insurer underwrote the risk based on the personal care of the original insured, transferring the property to a third party without the insurer's consent to a policy assignment leaves the insurer with no privity of contract with the new owner.</li>
+        <li><strong>The Two-Point Temporal Rule (<span class="c-teal">Section 19</span>):</strong> Once the original insured parts with ownership of the thing without assigning the policy, the original insured lacks insurable interest at the time of loss (Point 2), while the new buyer lacks insurable interest at the time of policy perfection (Point 1). Thus, coverage remains <strong>suspended</strong> unless and until the property and the policy reunite in the same person prior to loss.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="x-2-scope-change-of-interest" class="c-navy">2. Scope of "Change of Interest": Absolute Transfers Only</h4>
+
+  <ul>
+    <li><strong>Requirement of Absolute Alienation:</strong> To trigger the suspension rule under <span class="c-teal">Section 20</span>, the "change of interest" in the thing insured must be an <span class="c-green"><strong><u>absolute transfer of ownership or title</u></strong></span> (such as an absolute sale, donation, exchange, or <em>dacion en pago</em>) that divests the insured of his or her insurable interest.</li>
+    <li><strong>Exclusion of Mere Encumbrances and Leases:</strong>
+      <ul>
+        <li><strong>Mortgage of Insured Property:</strong> If the owner of an insured house subsequently <strong>mortgages</strong> the house to a bank without notifying the insurer, <span class="c-teal">Section 20</span> <span class="c-green"><strong><u>does not apply</u></strong></span>. A mortgage is merely a security encumbrance; it does not divest the mortgagor of legal ownership.</li>
+        <li><strong>Lease of Insured Property:</strong> If the owner of an insured building subsequently <strong>leases</strong> the premises to a tenant, <span class="c-teal">Section 20</span> <span class="c-green"><strong><u>does not apply</u></strong></span>. A lease transfers only physical possession and enjoyment while leaving ownership vested in the lessor.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="xi-statutory-exceptions-part-1" class="c-navy">XI. STATUTORY EXCEPTIONS TO THE SECTION 20 SUSPENSION RULE (PART 1)</h3>
+
+  <p>While <span class="c-teal">Section 20</span> establishes the general rule that an unaccompanied change of interest suspends the policy, the Insurance Code provides <strong>seven statutory exceptions and modifications</strong> (<span class="c-teal">Sections 20, 21, 22, 23, 24, 25, and 57</span>). <em>(Note: As emphasized in lecture, several of these statutory "exceptions" are actually straightforward applications of the general two-point temporal rule under <span class="c-teal">Section 19</span>, codified explicitly to prevent confusion).</em></p>
+
+  <h4 id="xi-1-exception-1-life-health-accident" class="c-navy">1. Exception 1: Life, Health, and Accident Insurance (Section 20)</h4>
+
+  <ul>
+    <li><strong>Operative Rule:</strong> <span class="c-teal">Section 20</span> applies <span class="c-green"><strong><u>exclusively to property insurance</u></strong></span>. It has no application to <strong>life, health, or accident insurance</strong> because: (a) a human being cannot alienate or transfer ownership of his or her physical body to another person; and (b) under <span class="c-teal">Section 19</span>, insurable interest in pure life insurance need only exist at the time the policy takes effect.</li>
+  </ul>
+
+  <h4 id="xi-2-exception-2-after-loss-sec-21" class="c-navy">2. Exception 2: Change of Interest After the Occurrence of Loss (Section 21)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 21</span>]:</strong> A change of interest in a thing insured, <span class="c-green"><strong><u>after the occurrence of an injury which results in a loss, does not affect the right of the insured to indemnity for the loss</u></strong></span>.</li>
+    <li><strong>Doctrinal Explanation:</strong> If the insured property is destroyed or damaged while still owned by the original insured, <strong>both temporal points of <span class="c-teal">Section 19</span> have already been satisfied</strong> in the person of the original insured (ownership at policy perfection and ownership at the exact moment of loss). Once the loss occurs, the insured's right to indemnity becomes a <strong>vested money claim</strong>. Even if the insured subsequently sells the damaged or burned property (the salvage or underlying land) to a third party without assigning the policy, there is no suspension of coverage; the original insured retains the absolute right to collect the insurance proceeds.</li>
+  </ul>
+
+  <h4 id="xi-illustration-burned-house-sec-21" class="c-navy">Professor's Illustration: Sale of a Burned House After Loss (Section 21)</h4>
+
+  <blockquote>
+    <strong>A</strong> owns a house and insures it for ₱20,000,000. While <strong>A</strong> is still the owner, a fire destroys the house. After the fire, <strong>A</strong> sells the burned house and lot to <strong>B</strong> without transferring the insurance policy or assigning the insurance claim. <span class="c-green"><strong><u>A is entitled to claim and collect the ₱20,000,000 insurance proceeds.</u></strong></span> Under <strong><span class="c-teal">Section 21</span></strong> in relation to <strong><span class="c-teal">Section 19</span></strong>, both temporal points of insurable interest were fully met by <strong>A</strong>: <strong>A</strong> owned the house when the policy took effect (Point 1) and <strong>A</strong> still owned the house when the fire occurred (Point 2). Because the transfer to <strong>B</strong> took place <em>after</em> the loss had already matured <strong>A's</strong> right to indemnity, <span class="c-teal">Section 20</span> suspension does not apply, and <strong>B</strong> acquires no right to the proceeds unless <strong>A</strong> separately executes an assignment of the post-loss claim under <span class="c-teal">Section 85</span>.
+  </blockquote>
+
+  <h4 id="xi-3-exception-3-separate-things-sec-22" class="c-navy">3. Exception 3: Change of Interest in One of Several Distinct Things Separately Insured by One Policy (Section 22)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 22</span>]:</strong> A change of interest in one or more of several distinct things, <span class="c-green"><strong><u>separately insured by one policy, does not avoid or suspend the insurance as to the others</u></strong></span>.</li>
+    <li><strong>Divisibility of Separately Valued Risks:</strong> When a single written policy covers multiple distinct properties (e.g., four separate townhouses or three separate vehicles), and the policy <strong>separately apportions a specific valuation and coverage limit to each distinct item</strong> (rather than lumping all items under a single indivisible aggregate sum), the contract is <span class="c-green"><strong><u>divisible</u></strong></span>.</li>
+    <li><strong>Operative Effect:</strong> If the insured sells one of the properties without assigning the policy, <span class="c-rust"><strong><u>Section 20 suspension applies strictly to the specific property sold</u></strong></span>, while coverage for the remaining unsold properties <span class="c-green"><strong><u>remains completely valid and unaffected</u></strong></span> under <span class="c-teal">Section 22</span>.</li>
+  </ul>
+
+  <h4 id="xi-illustration-four-townhouses" class="c-navy">Professor's Illustration: The Four Adjacent Townhouses (Section 22 vs. Section 20)</h4>
+
+  <blockquote>
+    <strong>A</strong> owns four adjacent townhouses (<strong>Houses 1, 2, 3, and 4</strong>) covered under a <strong>single written insurance policy</strong>, where each townhouse is <strong>separately insured for ₱40,000,000</strong> (totaling ₱160,000,000). Subsequently, <strong>A</strong> sells <strong>House 1</strong> to <strong>B</strong> without assigning the insurance policy to <strong>B</strong>. Thereafter, a massive fire destroys all four townhouses. <span class="c-green"><strong><u>As to Houses 2, 3, and 4, A can validly recover ₱120,000,000 under Section 22</u></strong></span>, because the sale of House 1 does not suspend or affect the separate coverage of the other three distinct townhouses in which <strong>A</strong> met both temporal points of <span class="c-teal">Section 19</span>. <span class="c-rust"><strong><u>As to House 1, however, NEITHER A nor B can recover the ₱40,000,000 proceeds:</u></strong></span> coverage for House 1 is governed by the general rule of <strong><span class="c-teal">Section 20</span></strong> (suspended due to the unaccompanied change of interest), as <strong>A</strong> lacked insurable interest at the time of the fire and <strong>B</strong> lacked insurable interest when the policy took effect.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="xii-statutory-exceptions-part-2" class="c-navy">XII. STATUTORY EXCEPTIONS TO THE SECTION 20 SUSPENSION RULE (PART 2)</h3>
+
+  <h4 id="xii-1-exception-4-will-succession-sec-23" class="c-navy">1. Exception 4: Change of Interest by Will or Succession on the Death of the Insured (Section 23)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 23</span>]:</strong> A change of interest, <span class="c-green"><strong><u>by will or succession, on the death of the insured, does not avoid an insurance; and his interest in the insurance passes to the person taking his interest in the thing insured</u></strong></span>.</li>
+    <li><strong>Automatic Transfer by Operation of Law (<em>Mortis Causa</em>):</strong> When the insured owner of property dies, ownership of his or her properties is immediately transmitted to the heirs, legatees, or devisees by operation of law upon the moment of death [<span class="c-teal">Civil Code, Art. 777</span>]. Because succession is involuntary and automatic, the law automatically transfers the decedent's interest in the property insurance policy to the heir or devisee who inherits the insured property, without requiring insurer consent or triggering <span class="c-teal">Section 20</span> suspension.</li>
+  </ul>
+
+  <h4 id="xii-2-exception-5-partners-co-owners-sec-24" class="c-navy">2. Exception 5: Transfer of Interest Among Partners, Joint Owners, or Co-Owners (Section 24)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 24</span>]:</strong> A transfer of interest <span class="c-green"><strong><u>by one of several partners, joint owners, or owners in common, who are jointly insured, to the others, does not avoid an insurance even though it has been agreed that the insurance shall cease upon an alienation of the thing insured</u></strong></span>.</li>
+    <li><strong>Doctrinal Rationale (No Stranger Introduced):</strong> When multiple co-owners or partners are jointly insured under a property policy, the insurer has already vetted and accepted the personal qualifications and moral hazard of <strong>every single co-owner or partner</strong> at the inception of the contract. If one co-owner sells or transfers his or her undivided share <strong>to another existing co-owner</strong> (rather than to an outside third party), <span class="c-green"><strong><u>no stranger is introduced into the risk pool</u></strong></span>. Simply the internal proportionate shares of the remaining insured co-owners increase, and all remaining claimants continue to satisfy both temporal points of <span class="c-teal">Section 19</span>.</li>
+  </ul>
+
+  <h4 id="xii-illustration-co-owner-buyout" class="c-navy">Professor's Illustration: Buyout of a Co-Owner's Share (Section 24)</h4>
+
+  <blockquote>
+    <strong>Macalino, Juan, De Lera, and Paragas</strong> are co-owners of a residential house jointly insured under a single policy for ₱4,000,000. Needing funds for an upcoming trip abroad, <strong>Juan</strong> sells her undivided one-fourth co-ownership share in the house to her fellow co-owner, <strong>Macalino</strong>, without obtaining the insurer's consent. Shortly thereafter, the house burns down. <span class="c-green"><strong><u>The three remaining co-owners (Macalino, De Lera, and Paragas) can recover the full ₱4,000,000 insurance proceeds.</u></strong></span> Under <strong><span class="c-teal">Section 24</span></strong>, a transfer of interest from one jointly insured co-owner (<strong>Juan</strong>) to another existing co-owner (<strong>Macalino</strong>) does not suspend or avoid the policy under <span class="c-teal">Section 20</span>. No new party was added to the contract; <strong>Macalino's</strong> share merely increased, and the three remaining co-owners possessed insurable interest both when the policy took effect and when the fire occurred.
+  </blockquote>
+
+  <h4 id="xii-3-exception-6-prohibition-alienation-sec-25" class="c-navy">3. Exception 6: Express Policy Prohibition Against Alienation (Section 25 / Avoided vs. Suspended)</h4>
+
+  <ul>
+    <li><strong>Operative Rule:</strong> When the insurance policy contains an <strong>express stipulation prohibiting alienation</strong> or change of interest without the insurer's consent—declaring that any such transfer shall render the policy <strong>void</strong>—an unauthorized transfer of the property to a third party results in the permanent <span class="c-rust"><strong><u>avoidance (forfeiture) of the policy</u></strong></span>, rather than mere temporary suspension under <span class="c-teal">Section 20</span>.</li>
+    <li><strong>Why Classified as a Modification of <span class="c-teal">Section 20</span>:</strong> Under the general default rule of <span class="c-teal">Section 20</span>, an unaccompanied sale merely <em>suspends</em> the policy (allowing it to revive if the original insured repurchases the property before loss). Where an express <strong>anti-alienation forfeiture clause</strong> is stipulated, however, the contract is permanently <span class="c-rust"><strong><u>terminated and voided</u></strong></span> upon alienation, except in internal transfers among co-owners protected by <span class="c-teal">Section 24</span>.</li>
+  </ul>
+
+  <h4 id="xii-4-exception-7-whomsoever-owner-sec-57" class="c-navy">4. Exception 7: Policy Framed to Inure to the Benefit of Whomsoever May Become the Owner (Section 57)</h4>
+
+  <ul>
+    <li><strong>Statutory Rule [<span class="c-teal">Insurance Code, Sec. 57</span>]:</strong> When the description of the insured in a policy is so general that it may comprehend any person or any class of persons, only he who can show that it was intended to include him can claim the benefit of the policy; <span class="c-green"><strong><u>and when a policy is so framed that it will inure to the benefit of whomsoever, during the continuance of the risk, may become the owner of the interest insured</u></strong></span>, the coverage automatically follows the ownership of the property.</li>
+    <li><strong>The Commercial "Practice Hack" Bypassing <span class="c-teal">Section 20</span>:</strong> <span class="c-teal">Section 57</span> provides an express contractual mechanism to bypass <span class="c-teal">Section 20</span> suspension. By framing the policy at inception to cover <em>"whomsoever, during the continuance of the risk, may become the owner of the interest insured"</em> (commonly known in maritime and commercial practice as a policy <strong>"for whom it may concern"</strong>), the insurer gives <span class="c-green"><strong><u>advance blanket consent</u></strong></span> to future transfers of the property. Consequently, if the insured sells the car or cargo during the policy term, the insurance interest <strong>automatically transfers with the property</strong> to the new buyer without needing a separate deed of policy assignment or subsequent insurer approval.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: SECTION 20 SUSPENSION RULE &amp; THE 7 STATUTORY EXCEPTIONS <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Transaction Involving Insured Subject Matter<br/>Without Contemporaneous Insurer-Approved Policy Assignment"] --> Step1{"1. Is it a Life, Health, or<br/>Accident Policy? (Sec. 20)"}
+
+  Step1 -->|"Yes"| Ex1["NO SUSPENSION (Sec. 19 / 184)<br/>Sec. 20 applies strictly to property insurance"]
+  Step1 -->|"No (Property Insurance)"| Step2{"2. Is it a Mere Mortgage or Lease<br/>(Not an Absolute Alienation)?"}
+
+  Step2 -->|"Yes"| NoChange["NO SUSPENSION<br/>Legal ownership remains vested in the Mortgagor / Lessor"]
+  Step2 -->|"No (Absolute Transfer of Interest)"| Step3{"3. Under Which Statutory Category<br/>Does the Transfer Fall?"}
+
+  Step3 -->|"Transfer AFTER Loss Occurred<br/>(Sec. 21)"| Ex2["VALID CLAIM BY SELLER<br/>Both points of Sec. 19 already met; right to indemnity is vested"]
+  Step3 -->|"Sale of 1 of Several Distinct Items<br/>Separately Insured (Sec. 22)"| Ex3["DIVISIBLE COVERAGE<br/>Sold item is SUSPENDED (Sec. 20);<br/>Unsold items REMAIN VALID (Sec. 22)"]
+  Step3 -->|"Transfer by Will or Succession<br/>at Insured's Death (Sec. 23)"| Ex4["AUTOMATIC TRANSFER BY LAW<br/>Policy passes automatically to Heir / Devisee taking the property"]
+  Step3 -->|"Transfer Among Jointly Insured<br/>Partners / Co-Owners (Sec. 24)"| Ex5["REMAINS VALID &amp; ENFORCEABLE<br/>No stranger introduced (even if anti-alienation clause exists)"]
+  Step3 -->|"Policy Framed 'For Whomsoever<br/>May Become Owner' (Sec. 57)"| Ex7["AUTOMATIC COVERAGE TRANSFER<br/>Advance blanket consent; policy follows ownership to buyer"]
+  Step3 -->|"Ordinary Sale to Stranger"| ClauseCheck{"Does Policy Have an Express<br/>Anti-Alienation Forfeiture Clause? (Sec. 25)"}
+
+  ClauseCheck -->|"No (Default Rule)"| GenRule["POLICY IS SUSPENDED (Sec. 20)<br/>Revives if interest in thing &amp; policy reunite before loss"]
+  ClauseCheck -->|"Yes (Express Stipulation)"| Ex6["POLICY IS PERMANENTLY AVOIDED / VOID (Sec. 25)<br/>Forfeited upon unauthorized alienation to a stranger"]
+
+  style Start fill:#1E3A8A,color:#FFFFFF,stroke:#1E3A8A,stroke-width:2px
+  style Step1 fill:#F8FAFC,color:#1F2937,stroke:#1E3A8A,stroke-width:2px
+  style Step2 fill:#F8FAFC,color:#1F2937,stroke:#1E3A8A,stroke-width:2px
+  style Step3 fill:#F8FAFC,color:#1F2937,stroke:#0F766E,stroke-width:2px
+  style ClauseCheck fill:#F8FAFC,color:#1F2937,stroke:#C2410C,stroke-width:2px
+  style Ex1 fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style NoChange fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style Ex2 fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style Ex3 fill:#F0FDFA,color:#0F766E,stroke:#0F766E,stroke-width:2px
+  style Ex4 fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style Ex5 fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style Ex7 fill:#ECFDF5,color:#166534,stroke:#166534,stroke-width:2px
+  style GenRule fill:#FFF7ED,color:#C2410C,stroke:#C2410C,stroke-width:2px
+  style Ex6 fill:#FEF2F2,color:#991B1B,stroke:#991B1B,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="xii-5-summary-table-exceptions" class="c-navy">5. Summary Table: Statutory Exceptions &amp; Modifications to Section 20 Suspension</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Statutory Provision</th>
+        <th>Scenario / Triggering Fact</th>
+        <th>Operative Legal Effect on the Policy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Life, Health &amp; Accident (<em><span class="c-teal">Sec. 20</span></em>)</strong></td>
+        <td>Policy covers human life, health, or bodily accident rather than property.</td>
+        <td><span class="c-green"><strong><u>No suspension.</u></strong></span> <span class="c-teal">Sec. 20</span> applies strictly to property insurance; life insurance requires interest only at perfection (<em><span class="c-teal">Sec. 19</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>2. Transfer After Loss (<em><span class="c-teal">Sec. 21</span></em>)</strong></td>
+        <td>Insured sells the damaged/burned property <em>after</em> the peril and loss have already occurred.</td>
+        <td><span class="c-green"><strong><u>No suspension.</u></strong></span> Original insured recovers in full because both points of <em><span class="c-teal">Sec. 19</span></em> were met prior to the sale.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Separate Insurance in One Policy (<em><span class="c-teal">Sec. 22</span></em>)</strong></td>
+        <td>Single policy separately insures distinct items (e.g., 4 houses at ₱40M each); insured sells only House 1.</td>
+        <td><strong>Divisible effect:</strong> Coverage for House 1 is <span class="c-rust"><strong><u>suspended</u></strong></span> (<em><span class="c-teal">Sec. 20</span></em>), but coverage for Houses 2, 3, and 4 <span class="c-green"><strong><u>remains valid</u></strong></span> (<em><span class="c-teal">Sec. 22</span></em>).</td>
+      </tr>
+      <tr>
+        <td><strong>4. Will or Succession (<em><span class="c-teal">Sec. 23</span></em>)</strong></td>
+        <td>Insured property owner dies; property passes to heirs, legatees, or devisees <em>mortis causa</em>.</td>
+        <td><span class="c-green"><strong><u>No suspension.</u></strong></span> Interest in the policy passes <strong>automatically by operation of law</strong> to the heir/devisee taking the property.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Transfer Among Co-Owners / Partners (<em><span class="c-teal">Sec. 24</span></em>)</strong></td>
+        <td>One jointly insured partner or co-owner transfers his/her undivided share to another existing co-owner.</td>
+        <td><span class="c-green"><strong><u>No suspension or avoidance</u></strong></span> (even if policy has an anti-alienation clause), because no stranger is introduced into the contract.</td>
+      </tr>
+      <tr>
+        <td><strong>6. Express Anti-Alienation Clause (<em><span class="c-teal">Sec. 25</span></em>)</strong></td>
+        <td>Policy expressly stipulates that any alienation without insurer consent renders the policy <strong>void</strong>.</td>
+        <td>Policy is permanently <span class="c-rust"><strong><u>avoided (forfeited)</u></strong></span> upon unauthorized sale to a stranger, rather than merely suspended.</td>
+      </tr>
+      <tr>
+        <td><strong>7. "Whomsoever May Become Owner" (<em><span class="c-teal">Sec. 57</span></em>)</strong></td>
+        <td>Policy is expressly framed to inure to the benefit of whomsoever becomes the owner during the risk.</td>
+        <td><span class="c-green"><strong><u>No suspension.</u></strong></span> Coverage <strong>automatically follows ownership</strong> to the buyer without needing separate policy assignment.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="administrative-matters-professors-asides" class="c-navy">Administrative Matters &amp; Professor's Asides</h3>
+
+  <ul>
+    <li><strong>Bar Exam Question Framing &amp; Issue-Spotting Trends:</strong>
+      <ul>
+        <li>The Professor noted that recent Bar Examination questions have reverted to longer, pre-BBE (Justice Leonen era) narrative formats where spotting the core legal issue requires careful reading through dense facts, though examiners historically grade more leniently when questions are exceptionally difficult.</li>
+      </ul>
+    </li>
+    <li><strong>Professor's Grading Philosophy &amp; Bar Exam Writing Strategy:</strong>
+      <ul>
+        <li><strong>Argumentation Over Mere "Yes/No" Conclusions:</strong> A bare "Yes" or "No" conclusion—even if accurate—earns almost zero credit if unsupported by coherent legal reasoning. Grading heavily rewards the <strong>logical flow, structure, and persuasive presentation</strong> of the legal argument, even when a student's ultimate conclusion diverges from the official suggested answer due to non-linear statutory phrasing.</li>
+        <li><strong>Key Public Policy Phrase to Echo in Bar Answers:</strong> When explaining why the law prohibits insuring property without insurable interest, why a property beneficiary must possess insurable interest (<span class="c-teal">Sec. 18</span>), or why a creditor cannot insure a debtor's life beyond the amount of the debt (<span class="c-teal">Sec. 10[c]</span>), students should explicitly write: <span class="c-rust"><strong><u><em>"Otherwise, the insured/beneficiary would be more interested in the destruction of the life or property insured rather than its preservation, which is contrary to public policy."</em></u></strong></span></li>
+        <li><strong>Restraint Against Volunteering Unasked Remedies:</strong> When a Bar or exam question asks solely <em>"Who may claim the insurance proceeds?"</em> (as in the Creditor-Debtor Extinguishment problem), answer the specific question directly and cite the two-point rule under <span class="c-teal">Section 19</span>. <strong>Do not volunteer tangential discussions</strong> on cash surrender value or premium refunds unless a sub-question explicitly asks for the equitable remedies of the parties, as volunteering unasked rules risks introducing errors.</li>
+      </ul>
+    </li>
+    <li><strong>Upcoming Syllabus Topics &amp; Reading Assignment:</strong>
+      <ul>
+        <li><strong>Next Topic:</strong> <strong>Concealment and Misrepresentation</strong> (situations where an insured is barred from recovering proceeds due to breach of the duty of utmost good faith / <em>uberrimae fidei</em>).</li>
+        <li><strong>Reading Directive:</strong> Students are expected to read the codal provisions and commentary on <strong>Concealment and Misrepresentation</strong> ahead of the next session to build familiarity with the concepts prior to classroom lecture.</li>
+        <li><strong>Open Research Challenge:</strong> Students are encouraged to share any additional concrete legal illustrations of <strong><span class="c-teal">Section 10(d)</span></strong> (estate or interest vested dependent on another's life) beyond the standard <strong>usufructuary</strong> example.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
