@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 16 Commercial Law 2 - Intellectual Property Lecture</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings & Separators */
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.85rem;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.45rem;
+  border-bottom: 2px solid #CBD5E1;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+  scroll-margin-top: 4.5rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.65rem;
+  scroll-margin-top: 4.5rem;
+}
+
+h5 {
+  color: #1E3A8A;
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.25rem 0;
+}
+
+ul, ol {
+  margin: 0.75rem 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li > ul, li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  padding-left: 1.5rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: FOUNDATIONAL PRINCIPLES OF INTELLECTUAL PROPERTY LAW</option>
+      <option value="#part-1-overview">&nbsp;&nbsp;↳ Part 1 Overview &amp; Scope of Topics</option>
+      <option value="#sec-i">I. Nature, Purpose, and Jurisprudential Foundations of IP Rights</option>
+      <option value="#concept-commercial-ubiquity">&nbsp;&nbsp;↳ Concept and Commercial Ubiquity of Intellectual Property</option>
+      <option value="#broad-bifurcation">&nbsp;&nbsp;↳ Broad Bifurcation of Intellectual Property</option>
+      <option value="#legal-characteristics">&nbsp;&nbsp;↳ Legal Characteristics of Intellectual Property Rights</option>
+      <option value="#sec-ii">II. Statutory Taxonomy of IP Rights under R.A. No. 8293</option>
+      <option value="#statutory-enumeration">&nbsp;&nbsp;↳ Statutory Enumeration of Intellectual Property Rights (Sec. 4.1)</option>
+      <option value="#copyright-related-rights">&nbsp;&nbsp;↳ Copyright and Related Rights</option>
+      <option value="#trademarks-service-marks">&nbsp;&nbsp;↳ Trademarks and Service Marks</option>
+      <option value="#industrial-designs-patents-overview">&nbsp;&nbsp;↳ Industrial Designs and Patents (Overview)</option>
+      <option value="#sec-iii">III. Geographic Indications, Layout-Designs, and Trade Secrets</option>
+      <option value="#geographic-indications">&nbsp;&nbsp;↳ Geographic Indications (GIs)</option>
+      <option value="#layout-designs">&nbsp;&nbsp;↳ Layout-Designs (Topographies) of Integrated Circuits</option>
+      <option value="#trade-secrets">&nbsp;&nbsp;↳ Protection of Undisclosed Information (Trade Secrets)</option>
+      <option value="#air-philippines-v-pennswell">&nbsp;&nbsp;↳ Case: Air Philippines Corp. v. Pennswell, Inc. (2007)</option>
+      <option value="#sec-iv">IV. Comparative Matrix &amp; Interaction of Trademarks, Patents, and Copyrights</option>
+      <option value="#comparative-table-core-ip">&nbsp;&nbsp;↳ Comparative Table of Core Intellectual Property Rights</option>
+      <option value="#non-interchangeability-vs-coexistence">&nbsp;&nbsp;↳ Rule on Non-Interchangeability vs. Co-Existence Over a Single Product</option>
+      <option value="#kho-v-ca">&nbsp;&nbsp;↳ Case: Kho v. Court of Appeals (2002)</option>
+      <option value="#part-2">PART 2: THE LAW ON PATENTS: PATENTABILITY, UTILITY MODELS &amp; OWNERSHIP</option>
+      <option value="#part-2-overview">&nbsp;&nbsp;↳ Part 2 Overview &amp; Scope of Topics</option>
+      <option value="#sec-v">V. General Principles of Patent Law, Utility Models, and Industrial Designs</option>
+      <option value="#definition-fourfold-policy">&nbsp;&nbsp;↳ Definition and Fourfold Policy Purpose of Patents</option>
+      <option value="#three-categories-patents">&nbsp;&nbsp;↳ Three Categories: Inventions, Utility Models, and Industrial Designs</option>
+      <option value="#sec-vi">VI. Statutory Requisites of a Patentable Invention</option>
+      <option value="#novelty-prior-art">&nbsp;&nbsp;↳ 1. Novelty (Newness) and Prior Art (Secs. 23–25)</option>
+      <option value="#aguas-v-de-leon">&nbsp;&nbsp;↳ Case: Aguas v. De Leon (1982)</option>
+      <option value="#inventive-step">&nbsp;&nbsp;↳ 2. Inventive Step ("Non-Obviousness / Wow Factor Standard")</option>
+      <option value="#industrial-applicability">&nbsp;&nbsp;↳ 3. Industrial Applicability (Sec. 27)</option>
+      <option value="#sec-vii">VII. Non-Patentable Inventions and Statutory Exclusions (Sec. 22)</option>
+      <option value="#sec-viii">VIII. Ownership of Patents, First-to-File Rule, and Remedies of True Inventor</option>
+      <option value="#general-rule-patent-ownership">&nbsp;&nbsp;↳ General Rule on Patent Ownership (Sec. 28)</option>
+      <option value="#pearl-and-dean-v-shoemart">&nbsp;&nbsp;↳ Case: Pearl &amp; Dean (Phil.), Inc. v. Shoemart, Inc. (2003)</option>
+      <option value="#first-to-file-rule">&nbsp;&nbsp;↳ The First-to-File Rule (Sec. 29)</option>
+      <option value="#remedies-true-inventor">&nbsp;&nbsp;↳ Remedies of the True and Actual Inventor (Secs. 67–68)</option>
+      <option value="#commissioned-vs-employee-inventions">&nbsp;&nbsp;↳ Commissioned vs. Employee Inventions (Sec. 30)</option>
+      <option value="#right-of-priority">&nbsp;&nbsp;↳ Right of Priority (Sec. 31)</option>
+      <option value="#part-3">PART 3: PATENT RIGHTS, LIMITATIONS, INFRINGEMENT, REMEDIES &amp; LICENSING</option>
+      <option value="#part-3-overview">&nbsp;&nbsp;↳ Part 3 Overview &amp; Scope of Topics</option>
+      <option value="#sec-ix">IX. Cancellation, Rights Conferred, and Statutory Limitations</option>
+      <option value="#grounds-for-cancellation">&nbsp;&nbsp;↳ Grounds for Cancellation of a Patent (Sec. 61)</option>
+      <option value="#rights-conferred-term">&nbsp;&nbsp;↳ Rights Conferred (Sec. 71) and Term of Patent (Sec. 54)</option>
+      <option value="#statutory-limitations-patent">&nbsp;&nbsp;↳ Statutory Limitations on Patent Rights (Sec. 72)</option>
+      <option value="#prior-user-good-faith">&nbsp;&nbsp;↳ Doctrine of Prior User in Good Faith (Sec. 73)</option>
+      <option value="#government-use">&nbsp;&nbsp;↳ Use of Invention by Government (Sec. 74)</option>
+      <option value="#sec-x">X. Patent Infringement: Tests, Contributory Liability, Remedies, and Defenses</option>
+      <option value="#concept-patent-infringement">&nbsp;&nbsp;↳ Concept of Patent Infringement (Sec. 76.1)</option>
+      <option value="#two-tests-patent-infringement">&nbsp;&nbsp;↳ Two Tests of Patent Infringement</option>
+      <option value="#smith-kline-v-ca">&nbsp;&nbsp;↳ Case: Smith Kline Beckman Corp. v. Court of Appeals (2003)</option>
+      <option value="#contributory-infringement">&nbsp;&nbsp;↳ Contributory Infringement (Sec. 76.6)</option>
+      <option value="#remedies-patent-owner">&nbsp;&nbsp;↳ Remedies of the Patent Owner (Secs. 76 &amp; 84)</option>
+      <option value="#prescriptive-period-notice">&nbsp;&nbsp;↳ Prescriptive Period for Damages &amp; Notice Requirement (Secs. 79–80)</option>
+      <option value="#defenses-infringement">&nbsp;&nbsp;↳ Defenses in an Action for Infringement (Sec. 81)</option>
+      <option value="#sec-xi">XI. Voluntary Licensing (TTAs), Compulsory Licensing, and Assignment</option>
+      <option value="#voluntary-licensing">&nbsp;&nbsp;↳ Voluntary Licensing / Technology Transfer Arrangements (Secs. 85–92)</option>
+      <option value="#compulsory-licensing">&nbsp;&nbsp;↳ Compulsory Licensing (Secs. 93–102)</option>
+      <option value="#assignment-transmission">&nbsp;&nbsp;↳ Assignment and Transmission of Rights (Secs. 103–106)</option>
+      <option value="#administrative-matters">Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1>October 16 Commercial Law 2 - Intellectual Property Lecture</h1>
+
+  <h2 id="part-1">PART 1: FOUNDATIONAL PRINCIPLES OF INTELLECTUAL PROPERTY LAW, STATUTORY CLASSIFICATIONS, AND COMPARATIVE DOCTRINES</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">FOUNDATIONS</div>
+        <div class="ui-sub">Nature, bifurcation &amp; 4 legal attributes of IP rights</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">TAXONOMY</div>
+        <div class="ui-sub">Sec. 4.1 categories: Copyright, Marks, Designs &amp; Patents</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">SPECIAL REGIMES</div>
+        <div class="ui-sub">Geographic Indications, Layout-Designs &amp; Trade Secrets</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">INTERACTION</div>
+        <div class="ui-sub">Comparative matrix, non-interchangeability &amp; co-existence</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-1-overview">Part 1 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong>I. Nature, Purpose, and Jurisprudential Foundations of Intellectual Property Rights:</strong> Practical ubiquity of intellectual property in commerce; broad bifurcation into Industrial Property and Copyright and Related Rights; four core legal characteristics of intellectual property rights (statutory, incorporeal, private, and limited/non-absolute).</li>
+    <li><strong>II. Statutory Taxonomy of Intellectual Property Rights under <span class="c-teal">R.A. No. 8293</span>:</strong> Overview of <span class="c-teal">Section 4.1 of the Intellectual Property Code</span>; Copyright and Related Rights (moment-of-creation protection); Trademarks vs. Service Marks (distinguishing goods vs. services, stamped or marked containers); Industrial Designs; and Patents.</li>
+    <li><strong>III. Geographic Indications, Layout-Designs of Integrated Circuits, and Trade Secrets:</strong> Definition and global/local illustrations of Geographic Indications; Layout-Designs (Topographies) of Integrated Circuits under <span class="c-teal">R.A. No. 9150</span>; Protection of Undisclosed Information (Trade Secrets) and its three statutory requisites.</li>
+    <li><strong>IV. Comparative Matrix and Interaction of Trademarks, Patents, and Copyrights:</strong> Comprehensive comparative table contrasting Trademarks, Patents, and Copyrights; rule on non-interchangeability of legal regimes; doctrine of co-existence of multiple intellectual property rights over a single commercial article.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-i">I. NATURE, PURPOSE, AND JURISPRUDENTIAL FOUNDATIONS OF INTELLECTUAL PROPERTY RIGHTS</h3>
+
+  <h4 id="concept-commercial-ubiquity">Concept and Commercial Ubiquity of Intellectual Property</h4>
+  <p>Intellectual property (IP) refers to <span class="c-green"><strong><u>creations of the mind—such as inventions, literary and artistic works, designs, symbols, names, and images—used in commerce and daily life</u></strong></span>. Far from being a purely theoretical or elitist legal regime, Intellectual Property Law (governed primarily by <span class="c-teal"><strong>Republic Act No. 8293</strong></span>, otherwise known as the <span class="c-teal"><strong>Intellectual Property Code of the Philippines [IP Code]</strong></span>) regulates everyday commercial articles and digital interactions. Consumer goods such as branded bags, skincare formulations, textbooks, mobile applications, artificial intelligence training datasets, and secret culinary recipes are all governed by distinct spheres of intellectual property protection.</p>
+
+  <h4 id="broad-bifurcation">Broad Bifurcation of Intellectual Property</h4>
+  <p>Under international conventions and Philippine commercial law, intellectual property is broadly classified into two main branches:</p>
+  <ol>
+    <li><strong>Industrial Property:</strong> Encompasses creations and commercial identifiers utilized in manufacturing, trade, and industry. This category includes <strong>patents</strong> (inventions), <strong>utility models</strong>, <strong>industrial designs</strong>, <strong>trademarks</strong>, <strong>service marks</strong>, <strong>trade names</strong>, <strong>geographic indications of source</strong>, and the <strong>protection of undisclosed information (trade secrets)</strong>. Industrial property typically relates to commercial goods, technical processes, or tangible articles of manufacture.</li>
+    <li><strong>Copyright and Related (Neighboring) Rights:</strong> Encompasses original and derivative intellectual creations in the <strong>literary, scientific, and artistic domains</strong>. Related rights protect the legal interests of <strong>performing artists</strong> in their performances, <strong>producers of phonograms</strong> (sound recordings) in their recordings, and <strong>broadcasting organizations</strong> in their radio and television programs.</li>
+  </ol>
+
+  <h4 id="legal-characteristics">Legal Characteristics of Intellectual Property Rights</h4>
+  <p>Intellectual property rights possess four fundamental legal attributes that define their enforcement and limitation under Philippine law:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📜</div>
+        <div class="ui-title">Statutory in Nature</div>
+        <div class="ui-sub">Purely creatures of R.A. No. 8293 and special laws</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💡</div>
+        <div class="ui-title">Incorporeal &amp; Intangible</div>
+        <div class="ui-sub">Distinct from the physical object (Sec. 181, IP Code)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🔐</div>
+        <div class="ui-title">Private Right</div>
+        <div class="ui-sub">Vested in creator/inventor to exploit, assign, or license</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⏳</div>
+        <div class="ui-title">Not Absolute</div>
+        <div class="ui-sub">Fixed duration &amp; statutory public interest limitations</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Statutory in Nature:</strong> Intellectual property rights are <span class="c-green"><strong><u>purely creatures of statute</u></strong></span>. The exclusive rights to exploit, license, or prohibit unauthorized third-party use of an intellectual creation exist only because the law (<span class="c-teal">R.A. No. 8293</span> and related special laws) expressly confers and defines them. <span class="c-rust"><strong><u>Absent a statutory grant or compliance with statutory requisites, no exclusive monopoly may be asserted against the public</u></strong></span>.</li>
+    <li><strong>Incorporeal and Intangible:</strong> An intellectual property right is an intangible right (<em>res incorporales</em>) that exists <span class="c-green"><strong><u>separately and distinctly from the physical or material object</u></strong></span> in which it is embodied. Pursuant to the principle reflected in <span class="c-teal">Section 181 of the IP Code</span>, the <span class="c-rust"><strong><u>transfer or sale of the physical object</u></strong></span> (e.g., purchasing a physical book, painting, or laptop) <span class="c-rust"><strong><u>does not, by itself, transfer the underlying copyright, patent, or trademark</u></strong></span> attached to that object.</li>
+    <li><strong>Private Right:</strong> Intellectual property is a private property right vested in an individual creator, inventor, or juridical entity. Within the bounds of the law, the right-holder may exercise exclusivity, restrict unauthorized commercial exploitation, assign the right, or collect royalties through licensing agreements.</li>
+    <li><strong>Not Absolute (Subject to Statutory Limitations and Fixed Duration):</strong> Intellectual property rights are <span class="c-rust"><strong><u>neither perpetual nor absolute</u></strong></span>. The State grants a temporary monopoly to incentivize innovation and reward creative labor, balanced against the overarching public interest. Once the statutory term of protection expires, the invention or creative work <span class="c-green"><strong><u>falls into the public domain</u></strong></span>, becoming available for free use and replication by the general public. Furthermore, even during the term of protection, the law imposes limitations such as fair use, compulsory licensing, parallel importation, and government exploitation for national security or public health.</li>
+  </ul>
+
+  <h4 id="prof-illustration-part1-sec1">Professor's Illustration</h4>
+  <blockquote>
+    <strong>Application Example:</strong> Consider a consumer purchasing a high-end laptop. While the buyer acquires ownership over the corporeal machine under the Civil Code, multiple incorporeal IP rights remain vested in the manufacturer. The brand logo on the lid is protected as a <strong>trademark</strong>; the outer chassis contour is protected as an <strong>industrial design</strong>; the internal semiconductor architecture is protected as a <strong>layout-design of an integrated circuit</strong>; the novel cooling mechanism is covered by a <strong>patent</strong>; and the pre-installed operating system is protected by <strong>copyright</strong>.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-ii">II. STATUTORY TAXONOMY OF INTELLECTUAL PROPERTY RIGHTS UNDER R.A. NO. 8293</h3>
+
+  <h4 id="statutory-enumeration">Statutory Enumeration of Intellectual Property Rights</h4>
+  <p>Under <span class="c-teal"><strong>Section 4.1 of R.A. No. 8293</strong></span>, the term "intellectual property rights" consists of seven distinct legal categories:</p>
+  <ol>
+    <li><strong>Copyright and Related Rights;</strong></li>
+    <li><strong>Trademarks and Service Marks;</strong></li>
+    <li><strong>Geographic Indications;</strong></li>
+    <li><strong>Industrial Designs;</strong></li>
+    <li><strong>Patents;</strong></li>
+    <li><strong>Layout-Designs (Topographies) of Integrated Circuits;</strong> and</li>
+    <li><strong>Protection of Undisclosed Information.</strong></li>
+  </ol>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  ROOT["Intellectual Property Rights under Sec. 4.1, R.A. No. 8293"]
+  B1["1. Copyright & Related Rights (Secs. 172.1–172.2)"]
+  B2["Industrial Property Regimes"]
+
+  ROOT --> B1
+  ROOT --> B2
+
+  B1 --> C1["Literary & Artistic Works (Protected from Moment of Creation)"]
+  B1 --> C2["Neighboring Rights: Performers, Phonogram Producers & Broadcasters"]
+
+  B2 --> I1["2. Trademarks & Service Marks (Sec. 121.1)"]
+  B2 --> I2["3. Geographic Indications (Sec. 4.1[c] / TRIPS Art. 22.1)"]
+  B2 --> I3["4. Industrial Designs (Sec. 112.1)"]
+  B2 --> I4["5. Patents & Utility Models (Secs. 21 & 109.1)"]
+  B2 --> I5["6. Layout-Designs of Integrated Circuits (Sec. 112 / R.A. 9150)"]
+  B2 --> I6["7. Protection of Undisclosed Information / Trade Secrets (Sec. 4.1[g])"]
+
+  style ROOT fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style B1 fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style B2 fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style C1 fill:#ECFDF5,stroke:#166534,color:#1F2937
+  style C2 fill:#ECFDF5,stroke:#166534,color:#1F2937
+  style I1 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style I2 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style I3 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style I4 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style I5 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style I6 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="copyright-related-rights">Copyright and Related Rights</h4>
+  <p>Under <span class="c-teal"><strong>Sections 172.1 and 172.2 of the IP Code</strong></span>, copyright subsists in original and derivative intellectual creations in the <strong>literary and artistic domain</strong>. The defining hallmark of copyright is that works are <span class="c-green"><strong><u>protected from the moment of their creation</u></strong></span>, irrespective of their mode or form of expression, as well as of their content, quality, and purpose. <span class="c-rust"><strong><u>Registration and deposit of the work</u></strong></span> with the National Library or the Intellectual Property Office of the Philippines (IPOPHL) <span class="c-rust"><strong><u>are not conditions precedent for the acquisition of copyright</u></strong></span>; rather, registration merely establishes a <em>prima facie</em> presumption of ownership and facilitates evidentiary proof in infringement suits. Covered works range from books, musical compositions, paintings, sculptures, and cinematographic films to computer programs, databases, advertisements, maps, and technical drawings.</p>
+
+  <h4 id="trademarks-service-marks">Trademarks and Service Marks</h4>
+  <p>Under <span class="c-teal"><strong>Section 121.1 of the IP Code</strong></span>, a <strong>"mark"</strong> means <span class="c-green"><strong><u>any visible sign capable of distinguishing the goods (trademark) or services (service mark) of an enterprise</u></strong></span> and shall include a <strong>stamped or marked container of goods</strong>. While commercial parlance often uses "trademark" as an umbrella term, the statute draws a functional distinction based on the commercial offering of the enterprise:</p>
+  <ul>
+    <li><strong>Trademark:</strong> A visible sign used to identify and distinguish tangible <strong>goods or merchandise</strong> manufactured or sold by one enterprise from those of others (e.g., Apple for mobile phones, Jollibee for food products).</li>
+    <li><strong>Service Mark:</strong> A visible sign used to identify and distinguish <strong>services</strong> rendered by an enterprise that does not sell physical goods, but rather offers intangible services to the public (e.g., <strong>Netflix</strong> for digital streaming services, <strong>Grab</strong> for ride-hailing and transport logistics, <strong>BDO</strong> for banking services, or the brand name and logo of a <strong>law firm</strong>, <strong>accounting firm</strong>, or <strong>management consultancy</strong>).</li>
+    <li><strong>Stamped or Marked Container of Goods:</strong> The distinctive three-dimensional configuration or embossed bottle/packaging of a product capable of distinguishing the goods contained therein.</li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Trademark</th>
+        <th>Service Mark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Statutory Basis</strong></td>
+        <td><span class="c-teal">Sec. 121.1, R.A. No. 8293</span></td>
+        <td><span class="c-teal">Sec. 121.1, R.A. No. 8293</span></td>
+      </tr>
+      <tr>
+        <td><strong>Object Distinguished</strong></td>
+        <td>Tangible goods, commodities, or manufactured products (including stamped/marked containers).</td>
+        <td>Intangible services offered to the public without transferring ownership of physical goods.</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial Function</strong></td>
+        <td>Indicates the origin or manufacturer of physical merchandise in the market.</td>
+        <td>Identifies the provider and guarantees the quality of professional, digital, or logistical services.</td>
+      </tr>
+      <tr>
+        <td><strong>Illustrative Examples</strong></td>
+        <td>Nike swoosh on athletic shoes; embossed Coca-Cola glass bottle.</td>
+        <td>Grab for transport-booking; Netflix for streaming; SyCipLaw for legal services.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="industrial-designs-patents-overview">Industrial Designs and Patents (Overview)</h4>
+  <ul>
+    <li><strong>Industrial Design (<span class="c-teal">Sec. 112.1, IP Code</span>):</strong> Any composition of lines or colors or any three-dimensional form, whether or not associated with lines or colors, provided that such composition or form gives a <span class="c-green"><strong><u>special appearance to and can serve as a pattern for an industrial product or handicraft</u></strong></span>. It protects the ornamental, aesthetic, or structural framework of a commercial article (e.g., the ergonomic contour of a chair or the external cap structure of a specialized tumbler).</li>
+    <li><strong>Patent (<span class="c-teal">Sec. 21, IP Code</span>):</strong> An exclusive statutory grant issued over an invention that provides <span class="c-green"><strong><u>any technical solution of a problem in any field of human activity</u></strong></span> which is <span class="c-green"><strong><u>new (novel)</u></strong></span>, involves an <span class="c-green"><strong><u>inventive step</u></strong></span>, and is <span class="c-green"><strong><u>industrially applicable</u></strong></span>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-iii">III. GEOGRAPHIC INDICATIONS, LAYOUT-DESIGNS OF INTEGRATED CIRCUITS, AND TRADE SECRETS</h3>
+
+  <h4 id="geographic-indications">Geographic Indications (GIs)</h4>
+  <p>Under <span class="c-teal"><strong>Section 4.1(c) of the IP Code</strong></span> <code>[Note: Transcript references Sec. 112; the substantive definition is anchored in Sec. 4.1(c) of R.A. 8293 in relation to Art. 22.1 of the TRIPS Agreement and the IPOPHL Bureau of Trademarks Regulations on Geographical Indications]</code>, <strong>Geographic Indications</strong> are indications which <span class="c-green"><strong><u>identify a good as originating in the territory of a country, or a region or locality in that territory, where a given quality, reputation, or other characteristic of the good is essentially attributable to its geographical origin</u></strong></span>.</p>
+  <p>Unlike a regular trademark which identifies a specific commercial enterprise, a geographic indication links the reputation and superior quality of a product directly to the <em>terroir</em>, climate, raw materials, or traditional craftsmanship of a specific geographic locality.</p>
+
+  <h5 id="global-local-illustrations-gi">Global and Local Illustrations of Geographic Indications</h5>
+  <ul>
+    <li><strong>International Examples:</strong> <strong>Bordeaux</strong> (France) for wine; <strong>Grasse</strong> (France) for high-grade perfumery fragrances; <strong>Tuscany</strong> (Italy) for extra-virgin olive oil; and <strong>Uji, Kyoto</strong> (Japan) for ceremonial-grade matcha green tea cultivars.</li>
+    <li><strong>Philippine Local Examples:</strong> <strong>Vigan</strong> (Ilocos Sur) for <em>Vigan Longganisa</em>; <strong>Baguio</strong> (Benguet) for strawberry jam and peanut brittle; <strong>Ilocos</strong> for <em>Inabel</em> handwoven textiles; and <strong>South Cotabato / Lake Sebu</strong> (Mindanao) for <em>T'nalak</em> abaca cloth woven by the T'boli people.</li>
+  </ul>
+
+  <h5 id="four-categories-gi">Four Principal Categories of Goods Protected by Geographic Indications</h5>
+  <ol>
+    <li><strong>Agricultural Products:</strong> Fresh produce, tea leaves (e.g., Uji matcha), coffee beans, and regional crops whose flavor profile depends on local soil and climate.</li>
+    <li><strong>Foodstuffs, Wines, and Spirits:</strong> Prepared regional delicacies, cured meats (e.g., Vigan longganisa), olive oils (e.g., Tuscany), and fermented beverages (e.g., Bordeaux wine, Champagne).</li>
+    <li><strong>Textiles and Clothing:</strong> Traditional woven fabrics and garments utilizing indigenous techniques and local fibers (e.g., Ilocos <em>Inabel</em>, T'boli <em>T'nalak</em>).</li>
+    <li><strong>Handicrafts and Industrial Products:</strong> Artisanal pottery, woodwork, jewelry, or manufactured goods associated with the specialized skill of a locality (e.g., Grasse perfumery).</li>
+  </ol>
+
+  <h4 id="layout-designs">Layout-Designs (Topographies) of Integrated Circuits</h4>
+  <p>Under <span class="c-teal"><strong>Section 112 of the IP Code, as amended by R.A. No. 9150</strong></span>, the law protects both the physical semiconductor chip concept and its three-dimensional blueprint:</p>
+  <ul>
+    <li><strong>Integrated Circuit (<span class="c-teal">Sec. 112.2, IP Code</span>):</strong> A product, in its final form, or an intermediate form, in which the elements, at least one of which is an active element, and some or all of the interconnections are <span class="c-green"><strong><u>integrally formed in and/or on a piece of material</u></strong></span>, and which is <span class="c-green"><strong><u>intended to perform an electronic function</u></strong></span>.</li>
+    <li><strong>Layout-Design / Topography (<span class="c-teal">Sec. 112.3, IP Code</span>):</strong> The <span class="c-green"><strong><u>three-dimensional disposition, however expressed, of the elements</u></strong></span>, at least one of which is an active element, and of some or all of the interconnections of an integrated circuit, or such a three-dimensional disposition prepared for an integrated circuit intended for manufacture. Only layout-designs that are <span class="c-green"><strong><u>original</u></strong></span> (i.e., the result of their creators' own intellectual effort and not commonplace among creators of layout-designs and manufacturers of integrated circuits at the time of creation) are entitled to protection for a <span class="c-rust"><strong><u>non-renewable period of ten (10) years</u></strong></span>.</li>
+  </ul>
+
+  <h4 id="trade-secrets">Protection of Undisclosed Information (Trade Secrets)</h4>
+  <p>Under <span class="c-teal"><strong>Section 4.1(g) of the IP Code</strong></span>, in relation to <span class="c-teal"><strong>Article 39.2 of the TRIPS Agreement</strong></span> and Philippine jurisprudence, natural and legal persons have the right to prevent information lawfully within their control from being <span class="c-green"><strong><u>disclosed to, acquired by, or used by others without their consent in a manner contrary to honest commercial practices</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🤫</div>
+        <div class="ui-title">1. Secrecy</div>
+        <div class="ui-sub">Not generally known or readily accessible in the relevant circles</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💎</div>
+        <div class="ui-title">2. Commercial Value</div>
+        <div class="ui-sub">Actual or potential economic value because it is secret</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">3. Reasonable Steps</div>
+        <div class="ui-sub">Guarded by NDAs, restricted access &amp; security measures</div>
+      </div>
+    </div>
+  </div>
+
+  <h5 id="three-requisites-trade-secrets">Three Requisites for Trade Secret Protection</h5>
+  <p>To qualify as protected undisclosed information, the information must concurrently satisfy three statutory elements:</p>
+  <ol>
+    <li><strong>Secrecy:</strong> The information is <span class="c-green"><strong><u>secret</u></strong></span> in the sense that it is not, as a body or in the precise configuration and assembly of its components, generally known among or readily accessible to persons within the circles that normally deal with the kind of information in question.</li>
+    <li><strong>Commercial Value:</strong> The information has actual or potential <span class="c-green"><strong><u>commercial value because it is secret</u></strong></span> (i.e., its confidentiality confers a competitive economic edge over rivals).</li>
+    <li><strong>Reasonable Protective Measures:</strong> The information has been subject to <span class="c-green"><strong><u>reasonable steps under the circumstances</u></strong></span>, by the person lawfully in control of the information, to keep it secret (e.g., non-disclosure agreements, restricted vault access, fragmented manufacturing steps).</li>
+  </ol>
+
+  <h4 id="air-philippines-v-pennswell"><span class="c-burgundy"><em>Air Philippines Corporation v. Pennswell, Inc.</em>, G.R. No. 172835 (2007)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> Pennswell sued Air Philippines to collect unpaid balances for industrial chemical solvents, prompting Air Philippines to demand the compulsory disclosure of the exact chemical composition of the solvents. Pennswell refused to disclose the chemical formula, invoking trade secret protection.</li>
+      <li><strong>Issue:</strong> May a manufacturer be compelled in a collection suit to disclose the chemical formula and ingredients of its industrial products?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No, the chemical formula is privileged as a protected trade secret</u></strong></span>. Under <span class="c-teal">R.A. No. 8293</span> and the <span class="c-teal">TRIPS Agreement</span>, a <span class="c-green"><strong><u>trade secret is any formula, pattern, device, or compilation of information used in one's business that gives the employer an opportunity to obtain an advantage over competitors who do not know or use it</u></strong></span>. Compelling disclosure would destroy its commercial value and cause irreparable economic injury to the proprietor.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="prof-illustration-trade-secret">Professor's Illustration</h4>
+  <blockquote>
+    <strong>Application Example:</strong> A local family bakery develops an exclusive pastry flavoring, or a fast-food chain like KFC guards its "11 herbs and spices" blend. Instead of applying for a patent—which requires public disclosure of the exact formula and expires after 20 years—the business keeps the recipe confidential behind non-disclosure agreements and restricted kitchen access. Because the recipe is not generally known, derives commercial value from its secrecy, and is guarded by reasonable security measures, it is protected indefinitely as <strong>undisclosed information (trade secret)</strong> so long as secrecy is maintained.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-iv">IV. COMPARATIVE MATRIX AND INTERACTION OF TRADEMARKS, PATENTS, AND COPYRIGHTS</h3>
+
+  <h4 id="comparative-table-core-ip">Comparative Table of Core Intellectual Property Rights</h4>
+  <p>In Bar Examinations and commercial practice, distinguishing the three primary IP regimes—<strong>Trademark</strong>, <strong>Patent</strong>, and <strong>Copyright</strong>—is essential.</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Trademark / Service Mark</th>
+        <th>Invention Patent</th>
+        <th>Copyright</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Statutory Definition</strong></td>
+        <td>Any visible sign capable of distinguishing the goods or services of an enterprise, including stamped or marked containers (<span class="c-teal">Sec. 121.1, IP Code</span>).</td>
+        <td>An exclusive right granted to an inventor over a technical solution to a problem in any field of human activity (<span class="c-teal">Sec. 21, IP Code</span>).</td>
+        <td>An intangible, incorporeal right granted by statute to the author or creator of original literary and artistic works (<span class="c-teal">Sec. 172, IP Code</span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Scope / Object Protected</strong></td>
+        <td>Distinctive visible signs, brand names, logos, and product packaging used on commercial goods and services.</td>
+        <td>Technical solutions (products, processes, or improvements) that are novel, involve an inventive step, and are industrially applicable.</td>
+        <td>Literary, scientific, and artistic expressions (books, music, films, software, paintings, sculptures).</td>
+      </tr>
+      <tr>
+        <td><strong>Mode of Acquisition</strong></td>
+        <td>Acquired solely through <span class="c-green"><strong><u>valid registration</u></strong></span> with the IPOPHL (<span class="c-teal">Sec. 122, IP Code</span>), subject to actual use in commerce.</td>
+        <td>Acquired solely through <span class="c-green"><strong><u>application, exhaustive examination, and grant of registration</u></strong></span> by the IPOPHL (<span class="c-green"><strong><u>First-to-File Rule</u></strong></span>).</td>
+        <td>Vests automatically <span class="c-green"><strong><u>from the moment of creation</u></strong></span> without need of registration (<span class="c-teal">Sec. 172.1, IP Code</span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Term of Protection</strong></td>
+        <td><strong>Ten (10) years</strong> from registration, indefinitely <strong>renewable for 10-year periods</strong>, subject to filing the <strong>Declaration of Actual Use (DAU)</strong> within 3 years from filing and within 1 year from the 5th anniversary (6th year) (<span class="c-teal">Secs. 124.2, 145–146, IP Code</span>).</td>
+        <td><strong>Twenty (20) years</strong> counted from the filing date of the application, <span class="c-rust"><strong><u>strictly non-renewable</u></strong></span> (<span class="c-teal">Sec. 54, IP Code</span>).</td>
+        <td>Generally during the <strong>lifetime of the author plus fifty (50) years</strong> after death (<span class="c-teal">Sec. 213.1, IP Code</span>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="non-interchangeability-vs-coexistence">Rule on Non-Interchangeability vs. Co-Existence Over a Single Product</h4>
+  <ol>
+    <li><strong>Strict Non-Interchangeability of IP Regimes:</strong> The legal regimes of trademark, patent, and copyright are <span class="c-rust"><strong><u>mutually exclusive in their respective scopes and cannot be used interchangeably</u></strong></span>. A creator who obtains a copyright registration over a technical drawing or marketing poster does not thereby acquire a patent over the underlying mechanical device, nor does a trademark registration protect the functional utility of an article.</li>
+    <li><strong>Co-Existence of Multiple IP Rights Over a Single Commercial Product:</strong> While the legal terms are not interchangeable, <span class="c-green"><strong><u>several distinct intellectual property rights may simultaneously subsist over different facets of a single physical product</u></strong></span>. Because IP rights are incorporeal, each distinct aspect of an item—its brand identifier, its ornamental shape, its separable artistic surface design, and its internal technical mechanism—is governed by its corresponding IP category.</li>
+  </ol>
+
+  <h4 id="kho-v-ca"><span class="c-burgundy"><em>Kho v. Court of Appeals</em>, G.R. No. 115758 (2002)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> Elidad Kho registered the business name and copyright/patent over the containers and labels of "Chin Chun Su" medicated facial cream and sought a preliminary injunction to stop Summerville General Merchandising from selling cream under the same brand. Summerville proved that it was the exclusive importer authorized by the Taiwanese manufacturer who originated the product.</li>
+      <li><strong>Issue:</strong> Does registration of a copyright or industrial design over a container confer the exclusive trademark right to use the trade name "Chin Chun Su" on medicated cream?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No, trademark, copyright, and patents are completely different intellectual property rights that cannot be interchanged with one another</u></strong></span>. A copyright over the label design or a patent over the container shape does not grant an exclusive right over the brand name itself, which falls strictly within the domain of trademark law.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="prof-illustrations-multilayered-ip">Professor's Illustrations on Multi-Layered IP Protection</h4>
+  <blockquote>
+    <p><strong>Application Example 1 (Designer Coffee Mug &amp; Casetify x Heart Evangelista Phone Case):</strong> A specialty coffee tumbler or a <strong>Casetify phone case</strong> features a collaboration artwork painted by Heart Evangelista. Here, three distinct IP rights co-exist: (1) The brand name and distinctive camera-ring logo of Casetify or the stamped container mark is protected as a <strong>Trademark</strong>; (2) Heart Evangelista's painting printed on the removable cup sleeve or phone backplate is protected by <strong>Copyright</strong> as an artistic work because its aesthetic value can be <span class="c-green"><strong><u>physically or conceptually separated from the utilitarian aspect</u></strong></span> of the mug or phone case (the case still protects the phone even without the painting); and (3) The ergonomic shape or protective bumper contour of the case or mug lid can be registered as an <strong>Industrial Design</strong>, though not as an invention patent because a standard case or mug lacks novelty and an inventive step.</p>
+    <p><strong>Application Example 2 (Apple iPhone):</strong> A single <strong>Apple iPhone</strong> embodies four distinct IP regimes simultaneously: (1) The bitten-apple logo and the wordmark "iPhone" are protected by <strong>Trademark Law</strong>; (2) The iOS operating system source code, icons, and graphical user interface are protected by <strong>Copyright Law</strong>; (3) The external rounded-rectangle glass-and-titanium housing is protected as an <strong>Industrial Design</strong>; and (4) The proprietary internal Bionic processor technology and periscope camera stabilization mechanism are protected by <strong>Invention Patents</strong>.</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="part-2">PART 2: THE LAW ON PATENTS: PATENTABILITY, UTILITY MODELS, INDUSTRIAL DESIGNS, AND OWNERSHIP RULES</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">CATEGORIES</div>
+        <div class="ui-sub">Invention Patents, Utility Models &amp; Industrial Designs</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">PATENTABILITY</div>
+        <div class="ui-sub">Novelty, Inventive Step &amp; Industrial Applicability</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">EXCLUSIONS</div>
+        <div class="ui-sub">Non-Patentable Inventions under Sec. 22 &amp; R.A. 9502</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">OWNERSHIP</div>
+        <div class="ui-sub">First-to-File, True Inventor Remedies &amp; Priority</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-2-overview">Part 2 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong>V. General Principles of Patent Law, Utility Models, and Industrial Designs:</strong> Definition and fourfold policy purpose of the patent system; comparative distinctions between Invention Patents, Utility Models (petty patents), and Industrial Designs; classroom illustrations of utility models and industrial designs.</li>
+    <li><strong>VI. Statutory Requisites of a Patentable Invention:</strong> Technical solution to a problem; Novelty and Prior Art (<span class="c-teal">Sec. 23–24</span>); the Doctrine of Non-Prejudicial Disclosure (<span class="c-teal">Sec. 25</span>); Inventive Step and the "Person Skilled in the Art" standard (<span class="c-teal">Sec. 26</span>); <span class="c-teal">R.A. No. 9502</span> rule on pharmaceutical compounds; and Industrial Applicability (<span class="c-teal">Sec. 27</span>).</li>
+    <li><strong>VII. Non-Patentable Inventions and Statutory Exclusions:</strong> Exhaustive analysis of <span class="c-teal">Section 22 of the IP Code</span> (discoveries, mathematical methods, mental/business schemes, computer programs, surgical/therapeutic/diagnostic methods, biological processes, aesthetic creations, and inventions contrary to public order or morality).</li>
+    <li><strong>VIII. Ownership of Patents, the First-to-File Rule, and Remedies of the True Inventor:</strong> Ownership rules (<span class="c-teal">Sec. 28</span>); the Lightbox doctrine (<span class="c-burgundy"><em>Pearl &amp; Dean v. Shoemart</em></span>); the First-to-File Rule (<span class="c-teal">Sec. 29</span>); statutory remedies of the True and Actual Inventor (<span class="c-teal">Sec. 67–68</span>); commissioned inventions vs. commissioned copyrights (<span class="c-teal">Sec. 30.1</span>); employee inventions (<span class="c-teal">Sec. 30.2</span>); and the Right of Priority (<span class="c-teal">Sec. 31</span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-v">V. GENERAL PRINCIPLES OF PATENT LAW, UTILITY MODELS, AND INDUSTRIAL DESIGNS</h3>
+
+  <h4 id="definition-fourfold-policy">Definition and Fourfold Policy Purpose of Patents</h4>
+  <p>A <strong>patent</strong> is a <span class="c-green"><strong><u>statutory monopoly granted by the State to an inventor over an invention</u></strong></span> (or, in its broader sense under Part II of the IP Code, a registration granted over a utility model or an industrial design), conferring the <span class="c-green"><strong><u>exclusive right to make, use, offer for sale, sell, or import the same for commerce and industry for a limited period</u></strong></span>.</p>
+  <p>As established in Philippine jurisprudence (<span class="c-burgundy"><em>Pearl &amp; Dean (Phil.), Inc. v. Shoemart, Inc.</em>, G.R. No. 148222, 2003</span>), the patent system is anchored on a <strong>fourfold statutory policy</strong>:</p>
+  <ol>
+    <li><strong>To Foster and Reward Invention:</strong> It incentivizes creative and scientific research by granting inventors a temporary exclusive period to recoup their investments and profit from their ingenuity.</li>
+    <li><strong>To Promote Disclosure of Inventions:</strong> In exchange for the monopoly, the inventor must fully disclose the technical specifications of the invention, thereby stimulating further innovation and <span class="c-green"><strong><u>permitting the public to practice the invention freely once the patent expires</u></strong></span>.</li>
+    <li><strong>To Safeguard the Public Domain:</strong> Stringent patentability standards ensure that ideas, natural laws, and existing technologies already in the public domain remain there for the free use of society.</li>
+    <li><strong>Exhaustive Administrative Examination:</strong> A patent is issued only after a rigorous substantive examination by the Bureau of Patents of the IPOPHL confirms that all statutory requisites are met.</li>
+  </ol>
+
+  <h4 id="three-categories-patents">Three Categories Under the Law on Patents: Inventions, Utility Models, and Industrial Designs</h4>
+  <p>While the term "patent" ordinarily refers to <strong>Patentable Inventions</strong>, Part II of <span class="c-teal">R.A. No. 8293</span> governs three distinct technical and structural registrations:</p>
+  <ul>
+    <li><strong>Invention Patent (<span class="c-teal">Sec. 21, IP Code</span>):</strong> Any technical solution of a problem in any field of human activity which is <span class="c-green"><strong><u>new (novel)</u></strong></span>, involves an <span class="c-green"><strong><u>inventive step</u></strong></span>, and is <span class="c-green"><strong><u>industrially applicable</u></strong></span>. It may be, or may relate to, a product, or process, or an improvement of any of the foregoing.</li>
+    <li><strong>Utility Model (<span class="c-teal">Sec. 109.1, IP Code</span>):</strong> Often termed a <em>"petty patent"</em> or <em>"innovation patent,"</em> it refers to any technical solution or model of implements, tools, or product (or part thereof) of <span class="c-green"><strong><u>practical utility</u></strong></span> by reason of its form, configuration, construction, or composition. To qualify for registration as a utility model, the creation must be <span class="c-green"><strong><u>new</u></strong></span> and <span class="c-green"><strong><u>industrially applicable</u></strong></span>, but <span class="c-rust"><strong><u>it does not require an inventive step</u></strong></span>. <code>[Note: While colloquial classroom discussion sometimes describes a utility model as "semi-novel" because it merely modifies an existing tool without a "wow factor," Section 109.1 strictly requires novelty and industrial applicability, dispensing only with the requisite of an inventive step.]</code></li>
+    <li><strong>Industrial Design (<span class="c-teal">Sec. 112.1 &amp; Sec. 113, IP Code</span>):</strong> Any composition of lines or colors or any three-dimensional form that gives a <span class="c-green"><strong><u>special appearance to and can serve as a pattern for an industrial product or handicraft</u></strong></span>. It must be <span class="c-green"><strong><u>new or ornamental</u></strong></span>, and <span class="c-rust"><strong><u>excludes anything dictated essentially by technical or functional considerations</u></strong></span>.</li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Invention Patent</th>
+        <th>Utility Model</th>
+        <th>Industrial Design</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Statutory Basis</strong></td>
+        <td><span class="c-teal">Sec. 21, R.A. No. 8293</span></td>
+        <td><span class="c-teal">Sec. 109, R.A. No. 8293</span></td>
+        <td><span class="c-teal">Secs. 112–113, R.A. No. 8293</span></td>
+      </tr>
+      <tr>
+        <td><strong>Core Subject Matter</strong></td>
+        <td>Technical solution to a problem (product, process, or improvement).</td>
+        <td>Practical utility in the form, configuration, or composition of an existing implement or tool.</td>
+        <td>Ornamental or aesthetic composition of lines, colors, or 3D form of an article.</td>
+      </tr>
+      <tr>
+        <td><strong>Requisites for Registration</strong></td>
+        <td>1. Novelty<br>2. <span class="c-green"><strong><u>Inventive Step</u></strong></span><br>3. Industrial Applicability</td>
+        <td>1. Novelty<br>2. <span class="c-rust"><strong><u>NO Inventive Step required</u></strong></span><br>3. Industrial Applicability</td>
+        <td>1. New or Ornamental<br>2. Not dictated essentially by technical function</td>
+      </tr>
+      <tr>
+        <td><strong>Substantive Examination</strong></td>
+        <td>Mandatory exhaustive substantive examination by IPOPHL.</td>
+        <td>Registration system (formality examination; no substantive examination on inventive step).</td>
+        <td>Registration system based on novelty and ornamental character.</td>
+      </tr>
+      <tr>
+        <td><strong>Term of Protection</strong></td>
+        <td><strong>Twenty (20) years</strong> from filing date, <span class="c-rust"><strong><u>non-renewable</u></strong></span> (<span class="c-teal">Sec. 54</span>).</td>
+        <td><strong>Seven (7) years</strong> from filing date, <span class="c-rust"><strong><u>without possibility of renewal</u></strong></span> (<span class="c-teal">Sec. 109.3</span>).</td>
+        <td><strong>Five (5) years</strong> from filing date, <strong>renewable for at most two (2) consecutive 5-year periods</strong> (max 15 years) (<span class="c-teal">Sec. 118</span>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="prof-illustrations-utility-models">Professor's Illustrations on Inventions, Utility Models, and Industrial Designs</h4>
+  <blockquote>
+    <p><strong>Application Example 1 (Utility Models — Frixion Pen, Bottom-Load Dispenser, and Karaoke Machine):</strong> A <strong>Pilot Frixion erasable pen</strong> combines a standard ballpoint pen with thermo-sensitive ink and a rubber friction tip; a <strong>bottom-load water dispenser</strong> relocates the heavy water gallon from the top to a lower cabinet to prevent back strain; and a <strong>Filipino coin-operated karaoke machine (videoke)</strong> integrates a microphone, television display, song-selection keypad, and coin slot into a wheeled cabinet. None of these exhibit a revolutionary "wow factor" (inventive step) that alters science, as their components are obvious to average mechanics, yet each offers practical utility and industrial applicability, qualifying them as <strong>Utility Models</strong>.</p>
+    <p><strong>Application Example 2 (Inventions vs. Industrial Designs — Smartphones, Oura Ring, and Owala Tumbler):</strong> When first introduced to the market, <strong>smartphones</strong>, <strong>Google Maps GPS navigation</strong>, <strong>smartwatches</strong>, and the <strong>Oura smart health-tracking ring</strong> provided non-obvious technical solutions to human problems, qualifying as <strong>Patentable Inventions</strong>. Conversely, the distinctive outer aesthetic contour and dual-opening lid appearance of an <strong>Owala FreeSip tumbler</strong> (which allows sipping through a built-in straw or swigging through a wide mouth) can be registered as an <strong>Industrial Design</strong> for its special appearance, and as a <strong>Utility Model</strong> for its practical lid configuration.</p>
+  </blockquote>
+
+  <hr>
+
+  <h3 id="sec-vi">VI. STATUTORY REQUISITES OF A PATENTABLE INVENTION: NOVELTY, INVENTIVE STEP, AND INDUSTRIAL APPLICABILITY</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 21 of the IP Code</strong></span>, an invention is patentable only if it is a <span class="c-green"><strong><u>technical solution of a problem in any field of human activity</u></strong></span> and concurrently satisfies three mandatory requisites: (1) <span class="c-green"><strong><u>Novelty (Newness)</u></strong></span>; (2) <span class="c-green"><strong><u>Inventive Step</u></strong></span>; and (3) <span class="c-green"><strong><u>Industrial Applicability</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">✨</div>
+        <div class="ui-title">1. Novelty (Sec. 23)</div>
+        <div class="ui-sub">Does not form part of prior art anywhere in the world</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🧠</div>
+        <div class="ui-title">2. Inventive Step (Sec. 26)</div>
+        <div class="ui-sub">Not obvious to a person skilled in the art at filing/priority date</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏭</div>
+        <div class="ui-title">3. Industrial Applicability (Sec. 27)</div>
+        <div class="ui-sub">Can be produced and used in any industry</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="novelty-prior-art">1. Novelty (Newness) and Prior Art</h4>
+  <ul>
+    <li><strong>Statutory Rule on Novelty (<span class="c-teal">Sec. 23, IP Code</span>):</strong> An invention <span class="c-rust"><strong><u>shall not be considered new if it forms part of a prior art</u></strong></span>. If an invention is already known or available to the public before the patent application is filed, it lacks novelty and cannot be patented.</li>
+    <li><strong>Definition of Prior Art (<span class="c-teal">Sec. 24, IP Code</span>):</strong> Prior art consists of two broad components:
+      <ol>
+        <li><strong>Worldwide Public Availability (<span class="c-teal">Sec. 24.1</span>):</strong> Everything which has been <span class="c-green"><strong><u>made available to the public anywhere in the world</u></strong></span>, before the filing date or the priority date of the application claiming the invention (whether by written or oral disclosure, actual use, or any other means).</li>
+        <li><strong>Prior Philippine Applications (<span class="c-teal">Sec. 24.2</span>):</strong> The whole contents of a published application for a patent, utility model, or industrial design registration, filed or effective in the Philippines, with a filing or priority date that is earlier than the filing or priority date of the application, provided that the application was published in accordance with the IP Code and the inventors or applicants are not the same persons.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h5 id="no-patent-no-protection">The "No Patent, No Protection" Rule</h5>
+  <p>Under Philippine Patent Law, <span class="c-rust"><strong><u>there is no protection without a valid patent registration</u></strong></span>. Unlike copyright which vests from the moment of creation, an inventor who fails to register a patent—or who prematurely releases the invention to the market outside the statutory grace period—cannot restrain third parties from manufacturing or selling the invention, as unpatented disclosed technology forms part of the prior art and belongs to the public domain.</p>
+
+  <h5 id="non-prejudicial-disclosure">Exception: Doctrine of Non-Prejudicial Disclosure (<span class="c-teal">Sec. 25, IP Code</span>)</h5>
+  <p>Under <span class="c-teal"><strong>Section 25.1 of the IP Code</strong></span>, the <span class="c-green"><strong><u>disclosure of information contained in the application during the twelve (12) months preceding the filing date or the priority date of the application shall not prejudice the applicant on the ground of lack of novelty</u></strong></span> if such disclosure was made by:</p>
+  <ol>
+    <li><strong>The Inventor Himself:</strong> The inventor (or his successor-in-interest) publicly disclosed, tested, or exhibited the invention within the 12-month grace period prior to filing;</li>
+    <li><strong>A Patent Office:</strong> A patent office published the information in contravention of the law, or in a separate application filed by the inventor without his knowledge or consent by a third party; or</li>
+    <li><strong>A Third Party:</strong> A third party obtained the information directly or indirectly from the inventor (whether with consent or through breach of confidence).</li>
+  </ol>
+
+  <h4 id="aguas-v-de-leon"><span class="c-burgundy"><em>Aguas v. De Leon</em>, G.R. No. L-32160 (1982)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> Conrado De Leon obtained a patent for a new process of making pre-cast mosaic tiles having a specific depth, lip width, and reinforcement that solved the problem of heavy tiles fracturing or detaching from walls. Domiciano Aguas copied the mould and manufactured identical tiles, arguing that mosaic tiles were old and not patentable.</li>
+      <li><strong>Issue:</strong> Does De Leon's improved process and structural reinforcement for producing thinner, durable mosaic tiles constitute a patentable invention?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes, the patent is valid and enforceable</u></strong></span>. Under patent law, an <span class="c-green"><strong><u>improvement of an existing product or process is patentable if it is new, involves an inventive step, and provides a technical solution to an existing industrial problem</u></strong></span>. De Leon did not claim a monopoly over old mosaic tiles in general, but over his novel critical depth, lip width, and engraving process that eliminated tile fractures.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="inventive-step">2. Inventive Step ("The Non-Obviousness / Wow Factor Standard")</h4>
+  <ul>
+    <li><strong>Statutory Rule on Inventive Step (<span class="c-teal">Sec. 26.1, IP Code</span>):</strong> An invention involves an <strong>inventive step</strong> if, having regard to prior art, <span class="c-green"><strong><u>it is not obvious to a person skilled in the art at the time of the filing date or priority date</u></strong></span> of the application claiming the invention.</li>
+    <li><strong>Meaning of "Person Skilled in the Art":</strong> A "person skilled in the art" does not refer to a Nobel laureate or a top-tier scientific genius; rather, jurisprudence defines this benchmark as an <span class="c-green"><strong><u>ordinary practitioner possessing average skill and general knowledge in the relevant technical field</u></strong></span> at the time of filing. If an average technician in that industry would find the solution obvious or predictable based on existing prior art (much like judges on a talent show seeing a routine performance as opposed to a non-obvious "golden buzzer" act like <em>El Gamma Penumbra</em> or <em>Marcelito Pomoy</em>), the creation lacks an inventive step.</li>
+    <li><strong>Special Rule on Drugs and Medicines (<span class="c-teal">Sec. 26.2, IP Code, as amended by R.A. No. 9502 [Universally Accessible Cheaper and Quality Medicines Act of 2008]</span>):</strong> In the case of drugs and medicines, <span class="c-rust"><strong><u>there is no inventive step if the invention results from the mere discovery of a new form or new property of a known substance which does not result in the enhancement of the known efficacy of that substance</u></strong></span>, or the mere discovery of any new property or new use for a known substance, or the mere use of a known process unless such known process results in a new product that employs at least one new reactant.</li>
+  </ul>
+
+  <h4 id="prof-illustration-glutathione">Professor's Illustration</h4>
+  <blockquote>
+    <strong>Application Example (Glutathione Repurposing):</strong> <strong>Glutathione</strong> was originally developed and used in medicine as an antioxidant for liver treatment, during which patients and physicians observed skin lightening as a side effect. When pharmaceutical companies subsequently marketed and articulated glutathione capsules specifically as a <strong>skin-whitening agent</strong>, could they obtain an invention patent over glutathione for whitening? <span class="c-rust"><strong><u>No.</u></strong></span> Under <span class="c-teal">Section 22.1</span> and <span class="c-teal">Section 26.2 of the IP Code</span> (as amended by <span class="c-teal">R.A. No. 9502</span>), discovering a <span class="c-rust"><strong><u>new property or new use of a known substance</u></strong></span> (its whitening side effect) without altering its chemical structure to enhance its known therapeutic efficacy lacks an inventive step and is non-patentable.
+  </blockquote>
+
+  <h4 id="industrial-applicability">3. Industrial Applicability</h4>
+  <p>Under <span class="c-teal"><strong>Section 27 of the IP Code</strong></span>, an invention that <span class="c-green"><strong><u>can be produced and used in any industry</u></strong></span> shall be industrially applicable. This requires that the invention be capable of practical, repeatable manufacture and real-world utilization in commerce, agriculture, or industry, rather than remaining a purely abstract, theoretical, or inoperable concept.</p>
+
+  <hr>
+
+  <h3 id="sec-vii">VII. NON-PATENTABLE INVENTIONS AND STATUTORY EXCLUSIONS</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 22 of the IP Code (as amended by R.A. No. 9502)</strong></span>, the following are <span class="c-rust"><strong><u>expressly excluded from patent protection</u></strong></span> even if they appear novel or useful:</p>
+
+  <ol>
+    <li><strong>Discoveries, Scientific Theories, and Mathematical Methods (<span class="c-teal">Sec. 22.1</span>):</strong> Natural phenomena, laws of nature (e.g., Albert Einstein's Theory of Relativity, <em>E=mc<sup>2</sup></em>), and mathematical formulas or algorithms cannot be monopolized by any individual, as they are fundamental tools of scientific and technological work. Furthermore, for <strong>drugs and medicines</strong>, this exclusion encompasses the <span class="c-rust"><strong><u>mere discovery of a new form or new property of a known substance</u></strong></span> that does not enhance its known efficacy, or the mere discovery of any new property or new use for a known substance.</li>
+    <li><strong>Schemes, Rules, and Methods of Performing Mental Acts, Playing Games, or Doing Business, and Programs for Computers (<span class="c-teal">Sec. 22.2</span>):</strong> Abstract business models, accounting systems, rules of board games, mental calculation methods, and standalone <strong>computer programs</strong> are excluded from patentability. (Note: Computer programs are protected under <strong>Copyright Law</strong> pursuant to <span class="c-teal">Sec. 172.1(n) of the IP Code</span>).</li>
+    <li><strong>Methods for Treatment of the Human or Animal Body by Surgery or Therapy and Diagnostic Methods Practiced on the Human or Animal Body (<span class="c-teal">Sec. 22.3</span>):</strong> To protect public health and ensure that physicians and veterinarians are never restrained from saving lives, surgical techniques, therapeutic procedures, and diagnostic methods cannot be patented. <strong>Exception:</strong> This exclusion <span class="c-green"><strong><u>shall not apply to products and compositions for use in any of these methods</u></strong></span> (e.g., surgical instruments, medical devices, or novel pharmaceutical compounds with enhanced efficacy remain patentable).</li>
+    <li><strong>Plant Varieties or Animal Breeds or Essentially Biological Processes for the Production of Plants or Animals (<span class="c-teal">Sec. 22.4</span>):</strong> Living organisms found in nature, cross-bred plant varieties, animal breeds, and natural biological processes (e.g., an unaltered natural meat-tenderizing enzyme extracted from papaya) are not inventions of man. <strong>Exception:</strong> This exclusion <span class="c-green"><strong><u>shall not apply to micro-organisms and non-biological and microbiological processes</u></strong></span> (e.g., genetically engineered bacteria used to synthesize insulin or clean oil spills). (Note: Plant varieties are protected separately under <span class="c-teal">R.A. No. 9168</span>, the <em>Philippine Plant Variety Protection Act of 2002</em>).</li>
+    <li><strong>Aesthetic Creations (<span class="c-teal">Sec. 22.5</span>):</strong> Purely artistic, literary, or ornamental works lack technical functionality and fall under <strong>Copyright Law</strong> or <strong>Industrial Design</strong>, not invention patents.</li>
+    <li><strong>Anything Contrary to Public Order or Morality (<span class="c-teal">Sec. 22.6</span>):</strong> The State will not grant a monopoly over inventions designed for <span class="c-rust"><strong><u>illegal, immoral, or socially destructive purposes</u></strong></span> (e.g., a device designed specifically to facilitate sexual assault, counterfeiting plates, or <strong>bogus coin detectors used exclusively in illegal gambling machines</strong> where gambling is prohibited by public policy).</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="sec-viii">VIII. OWNERSHIP OF PATENTS, THE FIRST-TO-FILE RULE, AND REMEDIES OF THE TRUE INVENTOR</h3>
+
+  <h4 id="general-rule-patent-ownership">General Rule on Patent Ownership (<span class="c-teal">Sec. 28, IP Code</span>)</h4>
+  <p>The right to a patent belongs to the <span class="c-green"><strong><u>inventor, his heirs, or assigns</u></strong></span>. When two (2) or more persons have jointly made an invention, the right to a patent shall belong to them <span class="c-green"><strong><u>jointly</u></strong></span>.</p>
+
+  <h4 id="pearl-and-dean-v-shoemart"><span class="c-burgundy"><em>Pearl &amp; Dean (Phil.), Inc. v. Shoemart, Inc.</em>, G.R. No. 148222 (2003)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> Pearl &amp; Dean obtained a Certificate of Copyright Registration over the technical engineering drawings of its illuminated advertising display units ("lightboxes") and sued Shoemart (SM) for copyright and patent infringement when SM contracted other fabricators to construct similar lightboxes for its malls. Pearl &amp; Dean had never applied for or secured a patent registration over the mechanical lightbox unit itself.</li>
+      <li><strong>Issue:</strong> Did Pearl &amp; Dean's copyright registration over the technical drawings confer an exclusive patent right over the physical lightbox units themselves?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No, Pearl &amp; Dean cannot sue for infringement over the manufacture of the physical lightboxes</u></strong></span>. Copyright over engineering drawings covers only the printed graphical illustrations and posters, not the functional mechanical article depicted therein. To secure an exclusive monopoly over the manufacture and use of the physical lightbox structure, Pearl &amp; Dean was required to obtain a patent; having failed to do so, the lightbox design was in the public domain and freely usable by competitors.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="first-to-file-rule">The First-to-File Rule (<span class="c-teal">Sec. 29, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 29 of the IP Code</strong></span>, if two (2) or more persons have made the invention <span class="c-green"><strong><u>separately and independently of each other</u></strong></span>, the right to the patent shall belong to the <span class="c-green"><strong><u>person who filed an application for such invention</u></strong></span>, or where two or more applications are filed for the same invention, to the <span class="c-green"><strong><u>applicant who has the earliest filing date or, the earliest priority date</u></strong></span>.</p>
+  <ul>
+    <li><strong>Crucial Qualification:</strong> The First-to-File Rule under <span class="c-teal">Section 29</span> applies <span class="c-green"><strong><u>only when both parties invented the item separately, independently, and in good faith</u></strong></span>. If Applicant A merely stole, misappropriated, or copied the invention from True Inventor B and raced to the IPOPHL to file first, <span class="c-rust"><strong><u>Section 29 does not apply</u></strong></span> because A did not make the invention independently.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  START["Competing Claimants to the Same Invention"]
+  Q1{"Did Both Parties Invent Separately, Independently & in Good Faith?"}
+  FTF["Sec. 29 First-to-File Rule Applies: Patent Belongs to Earliest Filing / Priority Date"]
+  USURP["Bad-Faith Usurpation / Fraud: Sec. 29 Does NOT Apply"]
+  COURT["True & Actual Inventor (TAI) Obtains Final Court Order Declaring Ownership"]
+  Q2{"Status of Usurper's Patent Application?"}
+  PEND["Application Still Pending (Sec. 67.1): Within 3 Months from Finality, TAI May:"]
+  GRANT["Patent Already Granted (Sec. 68): Court Shall Order:"]
+
+  P1["(a) Prosecute Application as His Own"]
+  P2["(b) File New Application (Accorded Original Filing Date)"]
+  P3["(c) Request Pending Application Be Refused"]
+  P4["(d) Seek Cancellation of Interim Patent"]
+
+  G1["(a) Substitution of TAI as Patentee"]
+  G2["(b) Cancellation of Patent + Actual & Other Damages"]
+
+  START --> Q1
+  Q1 -- "YES (Independent)" --> FTF
+  Q1 -- "NO (Stolen / Copied)" --> USURP
+  USURP --> COURT
+  COURT --> Q2
+  Q2 -- "Pending" --> PEND
+  Q2 -- "Granted" --> GRANT
+  PEND --> P1 & P2 & P3 & P4
+  GRANT --> G1 & G2
+
+  style START fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style Q1 fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style FTF fill:#ECFDF5,stroke:#166534,color:#1F2937,font-weight:bold
+  style USURP fill:#FFF7ED,stroke:#C2410C,color:#C2410C,font-weight:bold
+  style COURT fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style Q2 fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style PEND fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937,font-weight:bold
+  style GRANT fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937,font-weight:bold
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="remedies-true-inventor">Remedies of the True and Actual Inventor (<span class="c-teal">Secs. 67–68, IP Code</span>)</h4>
+  <p>When a bad-faith usurper (A) files a patent application or obtains a patent over an invention stolen from the <strong>True and Actual Inventor (B)</strong>, can B immediately file an action for <strong>Patent Infringement</strong> against A? <span class="c-rust"><strong><u>No.</u></strong></span> An action for patent infringement under <span class="c-teal">Section 76</span> is available only to a <strong>patentee</strong> (or his assignee/licensee) holding an issued patent. Because B does not yet hold a patent ("no patent, no protection"), B must first establish ownership in court.</p>
+  <p>Under <span class="c-teal"><strong>Sections 67 and 68 of the IP Code</strong></span>, if a person other than the applicant is <span class="c-green"><strong><u>declared by final court order or decision as having the right to the patent</u></strong></span>, the True and Actual Inventor (B) may exercise the following remedies:</p>
+  <ol>
+    <li><strong>Where the Usurper's Application is Still Pending (<span class="c-teal">Sec. 67.1, IP Code</span>):</strong> Within <span class="c-green"><strong><u>three (3) months</u></strong></span> after the court decision has become final, the true inventor may, at his option:
+      <ul>
+        <li><strong>(a) Prosecute the application as his own</strong> application in place of the usurper;</li>
+        <li><strong>(b) File a new patent application</strong> in respect of the same invention (which shall be accorded the filing date of the usurper's initial application without prejudice);</li>
+        <li><strong>(c) Request that the pending application be refused</strong>; or</li>
+        <li><strong>(d) Seek cancellation of the patent</strong>, if one has already been granted in the interim.</li>
+      </ul>
+    </li>
+    <li><strong>Where a Patent Has Already Been Granted to the Usurper (<span class="c-teal">Sec. 68, IP Code</span>):</strong> If the true and actual inventor was deprived of the patent without his consent or through fraud, and is declared by <span class="c-green"><strong><u>final court order</u></strong></span> to be the true and actual inventor, the court shall order:
+      <ul>
+        <li><strong>(a) His substitution as patentee</strong>, or</li>
+        <li><strong>(b) At the option of the true inventor, the cancellation of the patent</strong>, and the award of actual and other damages in his favor if warranted by the circumstances.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h4 id="commissioned-vs-employee-inventions">Inventions Pursuant to a Commission vs. Employee Inventions (<span class="c-teal">Sec. 30, IP Code</span>)</h4>
+  <ul>
+    <li><strong>Inventions Pursuant to a Commission (<span class="c-teal">Sec. 30.1, IP Code</span>):</strong> The <span class="c-green"><strong><u>person who commissions the work shall own the patent</u></strong></span>, unless otherwise provided in the contract.
+      <ul>
+        <li><strong>Contrast with Commissioned Copyrightable Works (<span class="c-teal">Sec. 178.4, IP Code</span>):</strong> In <strong>Patent Law</strong>, the commissioning party owns both the physical output and the patent itself (unless agreed otherwise). Conversely, in <strong>Copyright Law</strong>, when a work is commissioned (e.g., a commissioned sculpture or portrait), the <span class="c-green"><strong><u>person who commissioned the work owns the physical object/work itself</u></strong></span>, but the <span class="c-green"><strong><u>copyright remains with the creator/author</u></strong></span>, unless there is a written stipulation to the contrary.</li>
+      </ul>
+    </li>
+    <li><strong>Inventions Created by an Employee (<span class="c-teal">Sec. 30.2, IP Code</span>):</strong> When an employee makes an invention in the course of an employment contract, ownership depends on the scope of the employee's regular duties:
+      <ol>
+        <li><strong>Owned by the Employee (<span class="c-teal">Sec. 30.2[a]</span>):</strong> The patent belongs to the <span class="c-green"><strong><u>employee</u></strong></span> if the inventive activity is <span class="c-green"><strong><u>not a part of his regular duties</u></strong></span>, <span class="c-green"><strong><u>even if the employee uses the time, facilities, and materials of the employer</u></strong></span>.</li>
+        <li><strong>Owned by the Employer (<span class="c-teal">Sec. 30.2[b]</span>):</strong> The patent belongs to the <span class="c-green"><strong><u>employer</u></strong></span> if the invention is the <span class="c-green"><strong><u>result of the performance of his regularly-assigned duties</u></strong></span>, unless there is an agreement, express or implied, to the contrary.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th>Ownership of the Right</th>
+        <th>Statutory Exception</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Commissioned Invention (Patent)</strong></td>
+        <td><strong>Person who commissioned</strong> the work owns the patent (<span class="c-teal">Sec. 30.1</span>).</td>
+        <td>Unless otherwise provided in the contract.</td>
+      </tr>
+      <tr>
+        <td><strong>Commissioned Artistic Work (Copyright)</strong></td>
+        <td>Commissioning party owns the <strong>physical object</strong>; <strong>Creator/Author owns the copyright</strong> (<span class="c-teal">Sec. 178.4</span>).</td>
+        <td>Unless there is a written stipulation to the contrary.</td>
+      </tr>
+      <tr>
+        <td><strong>Employee Invention (Outside Regular Duties)</strong></td>
+        <td><strong>Employee</strong> owns the patent, even if using employer's time, facilities, and materials (<span class="c-teal">Sec. 30.2[a]</span>).</td>
+        <td>Unless otherwise agreed by the parties.</td>
+      </tr>
+      <tr>
+        <td><strong>Employee Invention (Part of Regular Duties)</strong></td>
+        <td><strong>Employer</strong> owns the patent (<span class="c-teal">Sec. 30.2[b]</span>).</td>
+        <td>Unless there is an express or implied agreement to the contrary.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="prof-illustration-employee-invention">Professor's Illustration</h4>
+  <blockquote>
+    <strong>Application Example (Employee Invention):</strong> A court stenographer employed by the Supreme Court uses her official office hours, court computer, and government electricity to tinker with hardware and invents a novel mechanical keyboard switch. Who owns the patent? <strong>The stenographer.</strong> Under <span class="c-teal">Section 30.2(a) of the IP Code</span>, because her regular duty is to transcribe stenographic notes and not to invent computer hardware, the patent belongs to her even though she used the time, facilities, and materials of her employer.
+  </blockquote>
+
+  <h4 id="right-of-priority">Right of Priority (<span class="c-teal">Sec. 31, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 31 of the IP Code</strong></span>, an application for a patent filed by any person who has previously applied for the same invention in another country which by <span class="c-green"><strong><u>treaty, convention, or law affords similar privileges to Filipino citizens</u></strong></span>, shall be <span class="c-green"><strong><u>considered as filed as of the date of filing the foreign application</u></strong></span>, provided the following <strong>three (3) statutory requisites</strong> are complied with:</p>
+  <ol>
+    <li>The local application <span class="c-green"><strong><u>expressly claims priority</u></strong></span>;</li>
+    <li>The local application is <span class="c-green"><strong><u>filed within twelve (12) months</u></strong></span> from the date the earliest foreign application was filed; and</li>
+    <li>A <span class="c-green"><strong><u>certified copy of the foreign application together with an English translation is filed within six (6) months</u></strong></span> from the date of filing in the Philippines.</li>
+  </ol>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Foreign Patent Application Filed in Reciprocating Treaty Country</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">1. Express Claim of Priority + 2. Philippine Filing Within 12 Months</div>
+      <div class="ui-sub">Counted from the date the earliest foreign application was filed</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Certified Copy of Foreign Application + English Translation Within 6 Months</div>
+      <div class="ui-sub">Counted from the date of filing in the Philippines</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">PHILIPPINE APPLICATION ACCORDED FOREIGN PRIORITY DATE (SEC. 31)</div>
+      <div class="ui-sub">Considered as filed as of the date of filing the earliest foreign application</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="part-3">PART 3: PATENT RIGHTS, LIMITATIONS, INFRINGEMENT, REMEDIES, LICENSING REGIMES, AND ADMINISTRATIVE MATTERS</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">RIGHTS &amp; LIMITS</div>
+        <div class="ui-sub">Sec. 61 Cancellation, Sec. 71 Rights &amp; Secs. 72–74 Exceptions</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">INFRINGEMENT</div>
+        <div class="ui-sub">Literal vs. Equivalents, Contributory Liability &amp; Remedies</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">LICENSING</div>
+        <div class="ui-sub">Voluntary TTAs (Sec. 87), Compulsory Licenses (Sec. 93) &amp; Assignments</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-3-overview">Part 3 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong>IX. Cancellation of Patents, Rights Conferred, and Statutory Limitations on Patent Rights:</strong> Grounds for cancellation of patents (<span class="c-teal">Sec. 61</span>); exclusive rights conferred by product and process patents (<span class="c-teal">Sec. 71</span>); 20-year non-extendible term (<span class="c-teal">Sec. 54</span>); statutory limitations on patent rights (<span class="c-teal">Sec. 72</span>); Doctrine of Prior User in Good Faith (<span class="c-teal">Sec. 73</span>); and Government Exploitation of Patents (<span class="c-teal">Sec. 74</span>).</li>
+    <li><strong>X. Patent Infringement: Tests, Contributory Liability, Remedies, and Defenses:</strong> Concept of patent infringement (<span class="c-teal">Sec. 76</span>); Literal Infringement Test vs. Doctrine of Equivalents (<span class="c-burgundy"><em>Smith Kline Beckman Corp. v. CA</em></span>); contributory infringement (<span class="c-teal">Sec. 76.6</span>); civil, provisional, and criminal remedies (<span class="c-teal">Sec. 84</span>); four-year prescriptive period and notice requirement (<span class="c-teal">Secs. 79–80</span>); and defenses in infringement actions (<span class="c-teal">Sec. 81</span>).</li>
+    <li><strong>XI. Voluntary Licensing (Technology Transfer Arrangements), Compulsory Licensing, and Assignment of Patents:</strong> Voluntary licensing and prohibited clauses in Technology Transfer Arrangements (<span class="c-teal">Sec. 87</span>); Compulsory Licensing grounds and timing rules (<span class="c-teal">Secs. 93–95</span>); and assignment and transmission of patent rights (<span class="c-teal">Secs. 103–106</span>).</li>
+    <li><strong>Administrative Matters &amp; Professor's Asides:</strong> Special commercial law reporting assignments and schedule, BDO credit card phishing/smishing case study, and examination instructions.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="sec-ix">IX. CANCELLATION OF PATENTS, RIGHTS CONFERRED, AND STATUTORY LIMITATIONS ON PATENT RIGHTS</h3>
+
+  <h4 id="grounds-for-cancellation">Grounds for Cancellation of a Patent (<span class="c-teal">Sec. 61, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 61.1 of the IP Code</strong></span>, any interested person may, upon payment of the required fee, petition to cancel the patent or any claim thereof, or parts of the claim, on any of the following <strong>three (3) exclusive statutory grounds</strong>:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">1. Not New or Patentable</div>
+        <div class="ui-sub">Fails Sec. 21 requisites or falls under Sec. 22 exclusions</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📄</div>
+        <div class="ui-title">2. Insufficient Disclosure</div>
+        <div class="ui-sub">Not sufficiently clear &amp; complete for a person skilled in the art</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">3. Public Order / Morality</div>
+        <div class="ui-sub">Patent is contrary to public order or morality</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Lack of Novelty or Patentability:</strong> That what is claimed as the invention is <span class="c-rust"><strong><u>not new or Patentable</u></strong></span> (i.e., it fails to meet the requisites of <span class="c-teal">Section 21</span> or falls under the non-patentable exclusions of <span class="c-teal">Section 22</span>);</li>
+    <li><strong>Insufficient Disclosure (Lack of Enablement):</strong> That the patent <span class="c-rust"><strong><u>does not disclose the invention in a manner sufficiently clear and complete for it to be carried out by any person skilled in the art</u></strong></span>; or</li>
+    <li><strong>Public Order or Morality:</strong> That the patent is <span class="c-rust"><strong><u>contrary to public order or morality</u></strong></span>.</li>
+  </ol>
+  <p>Where the grounds for cancellation relate to some of the claims or parts of a claim, cancellation may be effected to such extent only (<span class="c-teal">Sec. 61.2, IP Code</span>).</p>
+
+  <h4 id="rights-conferred-term">Rights Conferred by a Patent (<span class="c-teal">Sec. 71, IP Code</span>) and Term of Patent (<span class="c-teal">Sec. 54, IP Code</span>)</h4>
+  <ul>
+    <li><strong>Term of Patent (<span class="c-teal">Sec. 54, IP Code</span>):</strong> The term of a patent shall be <span class="c-green"><strong><u>twenty (20) years from the filing date of the application</u></strong></span>, <span class="c-rust"><strong><u>strictly without possibility of extension</u></strong></span>.</li>
+    <li><strong>Exclusive Rights Over a Product vs. a Process (<span class="c-teal">Sec. 71.1, IP Code</span>):</strong> A patent confers on its owner the following exclusive negative rights:
+      <ol>
+        <li><strong>Where the subject matter of a patent is a Product:</strong> The right to <span class="c-green"><strong><u>restrain, prohibit, and prevent</u></strong></span> any unauthorized person or entity from <span class="c-green"><strong><u>making, using, offering for sale, selling, or importing</u></strong></span> that product.</li>
+        <li><strong>Where the subject matter of a patent is a Process:</strong> The right to <span class="c-green"><strong><u>restrain, prevent, or prohibit</u></strong></span> any unauthorized person or entity from <span class="c-green"><strong><u>using the process</u></strong></span>, and from <span class="c-green"><strong><u>manufacturing, dealing in, using, selling, or offering for sale, or importing any product obtained directly or indirectly from such process</u></strong></span>.</li>
+      </ol>
+    </li>
+    <li><strong>Right to Assign and License (<span class="c-teal">Sec. 71.2, IP Code</span>):</strong> Patent owners shall also have the right to <span class="c-green"><strong><u>assign, or transfer by succession</u></strong></span> the patent, and to <span class="c-green"><strong><u>conclude licensing contracts</u></strong></span> for the same.</li>
+  </ul>
+
+  <h4 id="statutory-limitations-patent">Statutory Limitations on Patent Rights (<span class="c-teal">Sec. 72, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 72 of the IP Code (as amended by R.A. No. 9502)</strong></span>, the owner of a patent has <span class="c-rust"><strong><u>no right to prevent third parties</u></strong></span> from performing acts in the following circumstances:</p>
+  <ol>
+    <li><strong>Doctrine of Exhaustion / First Sale Doctrine (<span class="c-teal">Sec. 72.1</span>):</strong> Using a patented product which has been <span class="c-green"><strong><u>put on the market in the Philippines by the owner of the product, or with his express consent</u></strong></span>, insofar as such use is performed after that product has been so put on the said market. <strong>Special Rule for Drugs and Medicines:</strong> Under <span class="c-teal">R.A. No. 9502</span>, the limitation on patent rights applies to drugs and medicines after they have been introduced <span class="c-green"><strong><u>anywhere in the world</u></strong></span> by the patent owner or by any party authorized to use the invention (<span class="c-green"><strong><u>International Exhaustion / Parallel Importation</u></strong></span>).</li>
+    <li><strong>Private and Non-Commercial Use (<span class="c-teal">Sec. 72.2</span>):</strong> Where the act is done <span class="c-green"><strong><u>privately and on a non-commercial scale or for a non-commercial purpose</u></strong></span>, provided that it does not significantly prejudice the economic interests of the owner of the patent.</li>
+    <li><strong>Experimental Use Exception (<span class="c-teal">Sec. 72.3</span>):</strong> Where the act consists of making or using <span class="c-green"><strong><u>exclusively for experimental use</u></strong></span> of the invention for scientific or educational purposes, and such other activities directly related to such scientific or educational experimental use.</li>
+    <li><strong>Bolar Provision / Regulatory Approval Exception for Drugs (<span class="c-teal">Sec. 72.4, added by R.A. No. 9502</span>):</strong> In the case of drugs and medicines, where the act includes <span class="c-green"><strong><u>testing, using, making, or selling the invention solely for purposes reasonably related to the development and submission of information required under laws regulating the manufacture, sale, or use of drugs and medicines</u></strong></span>.</li>
+    <li><strong>Individual Pharmacy / Medical Prescription Exception (<span class="c-teal">Sec. 72.5</span>):</strong> Where the act consists of the <span class="c-green"><strong><u>preparation for individual cases, in a pharmacy or by a medical professional, of a medicine in accordance with a medical prescription</u></strong></span> or acts concerning the medicine so prepared.</li>
+    <li><strong>Foreign Vessels, Aircraft, or Land Vehicles in Transit (<span class="c-teal">Sec. 72.6</span>):</strong> Where the invention is used in any <span class="c-green"><strong><u>ship, vessel, aircraft, or land vehicle of any other country entering the territory of the Philippines temporarily or accidentally</u></strong></span>, provided that such invention is used exclusively for the needs of the ship, vessel, aircraft, or land vehicle and not used for the manufacturing of anything to be sold within the Philippines.</li>
+  </ol>
+
+  <h4 id="prior-user-good-faith">Doctrine of Prior User in Good Faith (<span class="c-teal">Sec. 73, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 73.1 of the IP Code</strong></span>, <span class="c-green"><strong><u>any prior user, who, in good faith was using the invention or has undertaken serious preparations to use the invention in his enterprise or business, before the filing date or priority date of the application on which a patent is granted</u></strong></span>, shall have the <span class="c-green"><strong><u>right to continue the use thereof</u></strong></span> as envisaged in such preparations within the territory where the patent produces its effect.</p>
+  <ul>
+    <li><strong>Limitation on Transfer of Prior User Right (<span class="c-teal">Sec. 73.2, IP Code</span>):</strong> The right of the prior user may only be transferred or assigned <span class="c-rust"><strong><u>together with his enterprise or business</u></strong></span>, or with that part of his enterprise or business in which the use or preparations for use have been made.</li>
+  </ul>
+
+  <h4 id="government-use">Use of Invention by Government (<span class="c-teal">Sec. 74, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 74.1 of the IP Code (as amended by R.A. No. 9502)</strong></span>, a <span class="c-green"><strong><u>Government agency or third person authorized by the Government may exploit the invention even without agreement of the patent owner</u></strong></span> where:</p>
+  <ol>
+    <li>The <strong>public interest</strong>, in particular, <strong>national security, nutrition, health, or the development of other sectors</strong>, as determined by the appropriate agency of the government, so requires; or</li>
+    <li>A <strong>judicial or administrative body has determined that the manner of exploitation, by the owner of the patent or his licensee, is anti-competitive</strong>; or</li>
+    <li>In the case of drugs and medicines, there is a <strong>national emergency or other circumstance of extreme urgency</strong>, or there is <strong>public non-commercial use</strong>, or the demand for the patented drug is not being met to an adequate extent and on reasonable terms.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="sec-x">X. PATENT INFRINGEMENT: TESTS, CONTRIBUTORY LIABILITY, REMEDIES, AND DEFENSES</h3>
+
+  <h4 id="concept-patent-infringement">Concept of Patent Infringement (<span class="c-teal">Sec. 76.1, IP Code</span>)</h4>
+  <p>Under <span class="c-teal"><strong>Section 76.1 of the IP Code</strong></span>, the <span class="c-green"><strong><u>making, using, offering for sale, selling, or importing a patented product or a product obtained directly or indirectly from a patented process, or the use of a patented process without the authorization of the patentee</u></strong></span> constitutes <strong>patent infringement</strong>.</p>
+
+  <h4 id="two-tests-patent-infringement">Two Tests of Patent Infringement</h4>
+  <p>To determine whether an accused device or process infringes upon an existing patent, Philippine courts employ two complementary tests:</p>
+  <ol>
+    <li><strong>Literal Infringement Test:</strong> Resort must be had, in the first instance, to the <span class="c-green"><strong><u>words of the claim</u></strong></span>. If the accused matter clearly falls within the claim—meaning there is <span class="c-green"><strong><u>exact identity of the specifications, claims, and material elements</u></strong></span> between the patented invention and the accused product through a juxtaposition of the two—then <strong>literal infringement</strong> exists and that is the end of the inquiry.</li>
+    <li><strong>Doctrine of Equivalents (Function-Means-Result Test):</strong> Recognizing that unscrupulous manufacturers often make minor, insubstantial alterations to a patented product to evade the literal wording of a patent claim, the <strong>Doctrine of Equivalents</strong> provides that <span class="c-green"><strong><u>an infringement also occurs when a device appropriates a prior invention by incorporating its innovative concept and, albeit with some modification and change, performs substantially the same function in substantially the same way to achieve substantially the same result</u></strong></span>.</li>
+  </ol>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Literal Infringement Test</th>
+        <th>Doctrine of Equivalents</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Primary Focus</strong></td>
+        <td>Exact textual wording of the patent claims and specifications juxtaposed with the accused device.</td>
+        <td>Substantial identity of the underlying innovative concept despite minor structural or material variations.</td>
+      </tr>
+      <tr>
+        <td><strong>Standard Applied</strong></td>
+        <td><span class="c-green"><strong><u>Exact identity of material elements, structure, and specifications</u></strong></span>.</td>
+        <td><strong>Function-Means-Result Test:</strong> Performs <span class="c-green"><strong><u>substantially the same function</u></strong></span>, in <span class="c-green"><strong><u>substantially the same way (means)</u></strong></span>, to achieve <span class="c-green"><strong><u>substantially the same result</u></strong></span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Purpose</strong></td>
+        <td>Protects the clear literal boundaries of the patent grant.</td>
+        <td>Prevents fraud on a patent through cosmetic or insubstantial modifications by copycats.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="smith-kline-v-ca"><span class="c-burgundy"><em>Smith Kline Beckman Corporation v. Court of Appeals</em>, G.R. No. 126627 (2003)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> Smith Kline held a Philippine patent over the compound <em>methyl 5 propylthio-2-benzimidazole carbamate</em> (Albendazole) used to combat gastrointestinal parasites in livestock, and sued Tryco Pharma for patent infringement for selling "Imidazole," which contained Albendazole. The lower courts absolved Tryco, leading Smith Kline to invoke the Doctrine of Equivalents.</li>
+      <li><strong>Issue:</strong> Did Smith Kline establish patent infringement under the Doctrine of Equivalents against Tryco Pharma?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No, the Doctrine of Equivalents requires the patentee to prove with concrete evidence that the accused product performs substantially the same function in substantially the same way to achieve the same result</u></strong></span>. While both compounds fought parasites, Smith Kline failed to adduce scientific proof showing that the two compounds operated in substantially the same manner or means. <span class="c-rust"><strong><u>Without satisfying all three prongs of the Function-Means-Result test, infringement cannot be sustained</u></strong></span>.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="contributory-infringement">Contributory Infringement (<span class="c-teal">Sec. 76.6, IP Code</span>)</h4>
+  <p>Liability for patent infringement is not confined to the direct infringer. Under <span class="c-teal"><strong>Section 76.6 of the IP Code</strong></span>, <span class="c-green"><strong><u>anyone who actively induces the infringement of a patent or provides the infringer with a component of a patented product or of a product produced because of a patented process, knowing it to be especially adopted for infringing the patented invention and not suitable for substantial non-infringing use, shall be liable as a contributory infringer and shall be jointly and severally (solidarily) liable with the infringer</u></strong></span>.</p>
+
+  <h4 id="remedies-patent-owner">Remedies of the Patent Owner (<span class="c-teal">Secs. 76 &amp; 84, IP Code</span>)</h4>
+  <ol>
+    <li><strong>Civil Action for Infringement (<span class="c-teal">Sec. 76.2–76.4, IP Code</span>):</strong> The patentee, or anyone possessing any right, title, or interest in and to the patented invention (including a foreign national or juridical entity satisfying reciprocity under <span class="c-teal">Sec. 77</span>, even if not licensed to do business in the Philippines), may bring a civil action before a Regional Trial Court designated as a <strong>Special Commercial Court</strong> to recover:
+      <ul>
+        <li><strong>Actual Damages</strong> sustained, plus <strong>attorney's fees and other expenses of litigation</strong>;</li>
+        <li><strong>Reasonable Royalty:</strong> If damages are inadequate or cannot be readily ascertained with reasonable certainty, the court may award by way of damages a sum <span class="c-green"><strong><u>equivalent to reasonable royalty</u></strong></span> (<span class="c-teal">Sec. 76.3</span>);</li>
+        <li><strong>Treble Damages:</strong> The court may, according to the circumstances of the case, award damages in a sum above the amount found as actual damages sustained, <span class="c-green"><strong><u>provided that the award does not exceed three (3) times the amount of such actual damages</u></strong></span> (<span class="c-teal">Sec. 76.4</span>).</li>
+      </ul>
+    </li>
+    <li><strong>Provisional Remedies: Injunction and Destruction of Infringing Goods (<span class="c-teal">Secs. 76.2 &amp; 76.5, IP Code</span>):</strong>
+      <ul>
+        <li>The patentee may secure a <strong>preliminary or final injunction</strong> to restrain the continuation of infringing acts; and</li>
+        <li>The court may, in its discretion, order that the <span class="c-green"><strong><u>infringing goods, materials, and implements predominantly used in the infringement be disposed of outside the channels of commerce or destroyed, without compensation</u></strong></span> (<span class="c-teal">Sec. 76.5</span>).</li>
+      </ul>
+    </li>
+    <li><strong>Criminal Action for Repetition of Infringement (<span class="c-teal">Sec. 84, IP Code</span>):</strong> Unlike trademark or copyright infringement where a criminal action can be filed at the first instance, <span class="c-rust"><strong><u>a criminal action for patent infringement cannot be instituted for a first-time offense</u></strong></span>. Under <span class="c-teal">Section 84</span>, criminal liability attaches <span class="c-green"><strong><u>only if the infringement is repeated by the infringer or by anyone in connivance with him after finality of the judgment of the court against the infringer</u></strong></span> in the prior civil action.
+      <ul>
+        <li><strong>Penalty:</strong> Imprisonment for a period of <strong>not less than six (6) months but not more than three (3) years</strong> and/or a fine of <strong>not less than PhP 100,000.00 but not more than PhP 300,000.00</strong>, at the discretion of the court.</li>
+        <li><strong>Prescription of Criminal Action:</strong> The criminal action shall <span class="c-rust"><strong><u>prescribe in three (3) years</u></strong></span> from the date of the commission of the crime.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">1. First-Time Patent Infringement Committed (Sec. 76)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Civil Action Before Special Commercial Court (RTC)</div>
+      <div class="ui-sub">Actual damages / Reasonable royalty / Up to 3x Treble damages + Injunction + Destruction of goods (No Criminal Action yet)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Finality of Civil Judgment Against Infringer</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Repetition of Infringement by Infringer or Conniver</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">CRIMINAL ACTION FOR REPETITION OF INFRINGEMENT ATTACHES (SEC. 84)</div>
+      <div class="ui-sub">6 mos. to 3 yrs. imprisonment and/or PhP 100k–300k fine • Prescribes in 3 years from commission</div>
+    </div>
+  </div>
+
+  <h4 id="prescriptive-period-notice">Prescriptive Period for Damages and Notice Requirement (<span class="c-teal">Secs. 79–80, IP Code</span>)</h4>
+  <ul>
+    <li><strong>Four-Year Limitation on Recovery of Damages (<span class="c-teal">Sec. 79, IP Code</span>):</strong> <span class="c-rust"><strong><u>No damages can be recovered for acts of infringement committed more than four (4) years before the institution of the action for infringement.</u></strong></span></li>
+    <li><strong>Requirement of Notice / Constructive Notice (<span class="c-teal">Sec. 80, IP Code</span>):</strong> Damages cannot be recovered for acts of infringement committed before the infringer <span class="c-green"><strong><u>had known, or had reasonable grounds to know of the patent</u></strong></span>. It is <span class="c-green"><strong><u>conclusively presumed that the infringer had known of the patent</u></strong></span> if on the patented product, or on the container or package in which the article is supplied to the public, or on the advertising material relating to the patented product or process, are placed the words <strong>"Philippine Patent" with the number of the patent</strong>.</li>
+  </ul>
+
+  <h4 id="defenses-infringement">Defenses in an Action for Infringement (<span class="c-teal">Sec. 81, IP Code</span>)</h4>
+  <p>In an action for patent infringement, the defendant, in addition to other defenses available to him (such as <strong>non-infringement</strong>, <strong>prior user in good faith</strong>, <strong>exhaustion</strong>, or <strong>four-year prescription</strong>), may show the <span class="c-green"><strong><u>invalidity of the patent, or any claim thereof</u></strong></span>, on any of the grounds on which a petition for cancellation can be brought under <span class="c-teal">Section 61</span>:</p>
+  <ol>
+    <li>That what is claimed as the invention is <strong>not new or patentable</strong>;</li>
+    <li>That the specification <strong>does not disclose the invention in a manner sufficiently clear and complete</strong> for it to be carried out by any person skilled in the art;</li>
+    <li>That the patent is <strong>contrary to public order or morality</strong>; or</li>
+    <li>That the patent was issued <strong>not to the True and Actual Inventor (TAI)</strong> or that the plaintiff derives no valid rights from the true and actual inventor.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="sec-xi">XI. VOLUNTARY LICENSING (TECHNOLOGY TRANSFER ARRANGEMENTS), COMPULSORY LICENSING, AND ASSIGNMENT OF PATENTS</h3>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  PAT["Commercial Exploitation & Transfer of Patent Rights"]
+  VOL["Voluntary Licensing / TTAs (Secs. 85–92)"]
+  COMP["Compulsory Licensing (Secs. 93–102)"]
+  ASSN["Assignment & Transmission (Secs. 103–106)"]
+
+  PAT --> VOL
+  PAT --> COMP
+  PAT --> ASSN
+
+  VOL --> V1["Contract with Patentee for Royalties"]
+  VOL --> V2["Must Avoid Prohibited Clauses (Sec. 87): Tie-In, Price-Fixing, Volume Restrictions"]
+
+  COMP --> C1["State Grants License WITHOUT Patentee Consent + Adequate Remuneration"]
+  COMP --> C2["Sec. 93.5 Non-Working: Apply Only After 4 Yrs from Filing or 3 Yrs from Grant (Whichever is Later)"]
+  COMP --> C3["Secs. 93.1–93.4 & 93.6 (Emergency, Public Interest, Anti-Competitive, Drugs): Apply ANY TIME After Grant"]
+
+  ASSN --> A1["Must Be in Writing & Notarized (Sec. 105)"]
+  ASSN --> A2["Record with IPOPHL Within 3 Months or Prior to Subsequent Purchase (Sec. 106)"]
+
+  style PAT fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style VOL fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style COMP fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style ASSN fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold
+  style V2 fill:#FFF7ED,stroke:#C2410C,color:#C2410C
+  style C2 fill:#F8FAFC,stroke:#1E3A8A,color:#1F2937
+  style C3 fill:#ECFDF5,stroke:#166534,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="voluntary-licensing">Voluntary Licensing / Technology Transfer Arrangements (<span class="c-teal">Secs. 85–92, IP Code</span>)</h4>
+  <p>Because an individual inventor often lacks the capital and factory infrastructure to mass-produce an invention, the commercial model of patent exploitation relies on <strong>Voluntary Licensing</strong>, governed by <span class="c-teal">Chapter IX of the IP Code</span> on <strong>Technology Transfer Arrangements (TTAs)</strong>. A voluntary license is a contract wherein the patent holder (licensor) authorizes a manufacturer or third party (licensee) to produce and commercialize the patented invention in exchange for <strong>royalties</strong>, subject to quality standards and defined market territories.</p>
+
+  <h5 id="prohibited-clauses-tta">Prohibited Clauses in Technology Transfer Arrangements (<span class="c-teal">Sec. 87, IP Code</span>)</h5>
+  <p>To prevent restraint of trade and abuse of patent monopoly, <span class="c-teal"><strong>Section 87 of the IP Code</strong></span> enumerates <strong>Prohibited Clauses</strong> that are <em>prima facie</em> deemed to have an adverse effect on competition and trade. <span class="c-rust"><strong><u>Their inclusion renders the TTA unenforceable</u></strong></span> unless granted an exceptional exemption under <span class="c-teal">Section 91</span>. Key prohibited stipulations include:</p>
+  <ol>
+    <li><strong>Tie-In Clauses and Forced Employment (<span class="c-teal">Sec. 87.1</span>):</strong> Those which impose upon the licensee the <span class="c-rust"><strong><u>obligation to acquire from a specific source capital goods, intermediate products, raw materials, and other technologies, or of permanently employing personnel indicated by the licensor</u></strong></span>;</li>
+    <li><strong>Resale Price Maintenance / Price-Fixing (<span class="c-teal">Sec. 87.2</span>):</strong> Those pursuant to which the <span class="c-rust"><strong><u>licensor reserves the right to fix the sale or resale prices</u></strong></span> of the products manufactured on the basis of the license; and</li>
+    <li><strong>Production Volume and Structure Restrictions (<span class="c-teal">Sec. 87.3</span>):</strong> Those that contain <span class="c-rust"><strong><u>restrictions regarding the volume and structure of production</u></strong></span>.</li>
+  </ol>
+
+  <h4 id="compulsory-licensing">Compulsory Licensing (<span class="c-teal">Secs. 93–102, IP Code</span>)</h4>
+  <p><strong>Compulsory Licensing</strong> occurs when the State (through the Director of Legal Affairs of the IPOPHL, or the Director General in special cases) <span class="c-green"><strong><u>grants a license to a third person or government agency to exploit a patented invention even without the agreement or consent of the patent owner</u></strong></span>, subject to the payment of adequate remuneration to the patentee.</p>
+
+  <h5 id="six-grounds-compulsory-licensing">Six Statutory Grounds for Compulsory Licensing (<span class="c-teal">Sec. 93, IP Code, as amended by R.A. No. 9502</span>)</h5>
+  <ol>
+    <li><strong>National Emergency or Extreme Urgency (<span class="c-teal">Sec. 93.1</span>):</strong> National emergency or other circumstances of extreme urgency;</li>
+    <li><strong>Public Interest (<span class="c-teal">Sec. 93.2</span>):</strong> Where the public interest, in particular, <strong>national security, nutrition, health, or the development of other vital sectors of the national economy</strong> as determined by the appropriate agency of the Government, so requires;</li>
+    <li><strong>Anti-Competitive Exploitation (<span class="c-teal">Sec. 93.3</span>):</strong> Where a judicial or administrative body has determined that the <strong>manner of exploitation by the owner of the patent or his licensee is anti-competitive</strong> (e.g., monopolistic price-gouging or artificial market restriction);</li>
+    <li><strong>Public Non-Commercial Use (<span class="c-teal">Sec. 93.4</span>):</strong> In case of public non-commercial use of the patent by the patentee, without satisfactory reason;</li>
+    <li><strong>Failure to Work the Patent on a Commercial Scale in the Philippines (<span class="c-teal">Sec. 93.5</span>):</strong> If the patented invention is <span class="c-green"><strong><u>not being worked in the Philippines on a commercial scale</u></strong></span>, although capable of being worked, without satisfactory reason; <strong>Provided, That the importation of the patented article shall constitute working or using the patent</strong>; and</li>
+    <li><strong>Unmet Demand for Patented Drugs and Medicines (<span class="c-teal">Sec. 93.6, added by R.A. No. 9502</span>):</strong> Where the demand for the patented drug or medicine in the Philippines is not being met to an adequate extent and on reasonable terms, as determined by the Secretary of the Department of Health.</li>
+  </ol>
+
+  <h5 id="period-filing-compulsory-license">Period for Filing a Petition for Compulsory License (<span class="c-teal">Sec. 94, IP Code</span>)</h5>
+  <ul>
+    <li><strong>For Failure to Work on a Commercial Scale (<span class="c-teal">Sec. 94.1</span>):</strong> A compulsory license may <span class="c-rust"><strong><u>not be applied for</u></strong></span> on the ground of <span class="c-teal">Section 93.5</span> (non-working in the Philippines) <span class="c-green"><strong><u>before the expiration of a period of four (4) years from the date of filing of the application or three (3) years from the date of the patent, whichever period expires last</u></strong></span>.</li>
+    <li><strong>For All Other Grounds (<span class="c-teal">Sec. 94.2</span>):</strong> A compulsory license applied for on any of the grounds stated in <span class="c-teal">Subsections 93.1, 93.2, 93.3, 93.4, and 93.6</span> may be applied for <span class="c-green"><strong><u>at any time after the grant of the patent</u></strong></span>.</li>
+  </ul>
+
+  <h4 id="assignment-transmission">Assignment and Transmission of Rights (<span class="c-teal">Secs. 103–106, IP Code</span>)</h4>
+  <ul>
+    <li><strong>Scope of Assignment (<span class="c-teal">Sec. 104, IP Code</span>):</strong> An assignment may be of the <strong>entire right, title, or interest</strong> in and to the patent and the invention covered thereby, or of an <strong>undivided share</strong> of the entire patent and invention, in which event the parties become <strong>joint owners</strong> thereof. An assignment may be <strong>limited to a specified territory</strong>.</li>
+    <li><strong>Form of Assignment (<span class="c-teal">Sec. 105, IP Code</span>):</strong> The assignment must be <span class="c-green"><strong><u>in writing, acknowledged before a notary public</u></strong></span> or other officer authorized to administer oaths or perform notarial acts, and certified under the hand and official seal of such notary or other officer.</li>
+    <li><strong>Recording with the IPOPHL (<span class="c-teal">Sec. 106, IP Code</span>):</strong> An assignment or transfer shall be <span class="c-rust"><strong><u>void as against any subsequent purchaser or mortgagee for valuable consideration and without notice</u></strong></span>, unless it is <span class="c-green"><strong><u>recorded in the IPOPHL within three (3) months from the date of said instrument</u></strong></span>, or prior to the subsequent purchase or mortgage.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="administrative-matters">Administrative Matters &amp; Professor's Asides</h3>
+
+  <ul>
+    <li><strong>Special Commercial Law Reporting Assignments &amp; Revised Groupings:</strong>
+      <ul>
+        <li><strong>Transportation Law Omitted:</strong> Transportation Law will no longer be covered in Commercial Law II because it is already offered as a separate standalone subject in the curriculum.</li>
+        <li><strong>Order of Reporting and Assigned Presenters:</strong>
+          <ol>
+            <li><strong>Securities Regulation Code (<span class="c-teal">R.A. No. 8799</span>):</strong> Tabina &amp; Evangelista.</li>
+            <li><strong>Anti-Financial Account Scamming Act [AFASA] (<span class="c-teal">R.A. No. 12010</span>):</strong> Atos &amp; Baragas (reassigned from the Internet Transactions Act so the class is prepared for its inclusion in upcoming Bar Examinations).</li>
+            <li><strong>Electronic Commerce Act (<span class="c-teal">R.A. No. 8792</span>) merged with the Internet Transactions Act of 2023 (<span class="c-teal">R.A. No. 11967</span>):</strong> Galera &amp; Armas.</li>
+            <li><strong>Philippine Competition Act (<span class="c-teal">R.A. No. 10667</span>):</strong> Macalino &amp; Briones.</li>
+            <li><strong>Public Service Act (<span class="c-teal">C.A. No. 146, as amended by R.A. No. 11659</span>):</strong> Guillamon &amp; Juan.</li>
+          </ol>
+        </li>
+        <li><strong>Reporting Guidelines:</strong> Presenters do not need to recite every single codal provision. Focus strictly on <strong>high-yield provisions, statutory elements, comparative distinctions</strong>, and <strong>past Bar Examination questions</strong> pertaining to the assigned special law.</li>
+      </ul>
+    </li>
+    <li><strong>Course Schedule &amp; Examination Mechanics:</strong>
+      <ul>
+        <li><strong>October 23:</strong> Midterm Examinations week.</li>
+        <li><strong>November 6:</strong> Continuation and completion of Intellectual Property Law (Part 2: Trademarks and Copyrights, featuring interactive slide exercises on trademark infringement, copyright infringement, and fair use).</li>
+        <li><strong>November 13, 20, and 27:</strong> Student reporting sessions (one to two reporting pairs per meeting).</li>
+        <li><strong>ExamSoft / Examplify Technical Contingencies:</strong> Due to widespread software, keyboard, and webcam glitches experienced by students on Examplify without on-site IT support, the Professor noted that alternative assessment formats or written report submissions may be utilized to prevent technical failures from prejudicing student grades.</li>
+      </ul>
+    </li>
+    <li><strong>Professor's Practical Commentary &amp; AFASA Case Study (BDO Smishing Scam):</strong>
+      <ul>
+        <li><strong>Real-World Smishing Attack:</strong> In relation to the <strong>Anti-Financial Account Scamming Act (AFASA)</strong>, the Professor shared a personal experience involving a fraudulent link injected directly into the legitimate official SMS text thread of BDO offering a one-time credit limit increase. Clicking the link opened a cloned website where Chrome's browser auto-fill inadvertently populated saved credit card details and intercepted/auto-filled the One-Time Password (OTP), allowing an unauthorized transaction to push through before the card was blocked.</li>
+        <li><strong>Banking Dispute Pitfalls:</strong> Banks refuse to tag or process a fraud dispute while an unauthorized transaction is still "floating" (pending posting), requiring the cardholder to wait until the charge is formally posted—and often demanding interim payment while the BSP/bank investigation is pending. Cardholders should immediately contact the <strong>merchant directly</strong> to cancel the unauthorized order before fulfillment, disable browser credit card auto-fill, and never click links embedded even within official bank SMS threads.</li>
+        <li><strong>IP Litigation Practice Tip:</strong> Patent litigation is virtually non-existent in provincial courts and is heavily concentrated in Metro Manila Special Commercial Courts, whereas provincial commercial dockets more commonly encounter cybercrime, trademark counterfeiting, or financial scam disputes.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
