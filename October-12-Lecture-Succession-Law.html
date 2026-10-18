@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 12 Lecture - Succession Law</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: THE LAW ON DISINHERITANCE — DESCENDANTS &amp; ASCENDANTS</option>
+      <option value="#sec-i-general-principles">&nbsp;&nbsp;↳ I. General Principles &amp; Essential Requisites of Disinheritance (Arts. 915–917)</option>
+      <option value="#nature-and-scope">&nbsp;&nbsp;&nbsp;&nbsp;• Nature and Scope of Disinheritance</option>
+      <option value="#essential-requisites">&nbsp;&nbsp;&nbsp;&nbsp;• Essential Requisites of a Valid Disinheritance</option>
+      <option value="#conditional-disinheritance-vs-revocation">&nbsp;&nbsp;&nbsp;&nbsp;• Conditional Disinheritance vs. Conditional Revocation</option>
+      <option value="#burden-of-proof">&nbsp;&nbsp;&nbsp;&nbsp;• Burden of Proof in Contested Disinheritance</option>
+      <option value="#sec-ii-grounds-descendants">&nbsp;&nbsp;↳ II. Specific Grounds for Disinheritance of Children and Descendants (Art. 919)</option>
+      <option value="#art-919-1">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Attempt Against Life (Art. 919[1])</option>
+      <option value="#art-919-2">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Groundless Accusation of a Crime Punishable by 6+ Years (Art. 919[2])</option>
+      <option value="#art-919-3">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Conviction of Adultery or Concubinage with Spouse (Art. 919[3])</option>
+      <option value="#art-919-4">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Fraud, Violence, Intimidation, or Undue Influence (Art. 919[4])</option>
+      <option value="#art-919-5">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Refusal Without Justifiable Cause to Support (Art. 919[5])</option>
+      <option value="#art-919-6">&nbsp;&nbsp;&nbsp;&nbsp;• 6. Maltreatment of the Testator by Word or Deed (Art. 919[6])</option>
+      <option value="#art-919-7">&nbsp;&nbsp;&nbsp;&nbsp;• 7. Leading a Dishonorable or Disgraceful Life (Art. 919[7])</option>
+      <option value="#art-919-8">&nbsp;&nbsp;&nbsp;&nbsp;• 8. Conviction of a Crime Carrying Civil Interdiction (Art. 919[8])</option>
+      <option value="#sec-iii-grounds-ascendants">&nbsp;&nbsp;↳ III. Specific Grounds for Disinheritance of Parents and Ascendants (Art. 920)</option>
+      <option value="#art-920-1">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Abandonment vs. Inducement to Immorality or Attempt Against Virtue (Art. 920[1])</option>
+      <option value="#art-920-overlapping">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Overlapping Grounds Between Descendants and Ascendants</option>
+      <option value="#art-920-6">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Loss of Parental Authority (Art. 920[6])</option>
+      <option value="#art-920-8">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Attempt by One Parent Against the Life of the Other (Art. 920[8] vs. Art. 920[2])</option>
+      <option value="#part-2">PART 2: SPOUSAL DISINHERITANCE, RECONCILIATION, INEFFECTUAL DISINHERITANCE &amp; INTESTATE SUCCESSION</option>
+      <option value="#sec-iv-spousal-disinheritance">&nbsp;&nbsp;↳ IV. Disinheritance of a Spouse, Reconciliation, and Ineffectual Disinheritance (Arts. 918, 921–923)</option>
+      <option value="#art-921-grounds">&nbsp;&nbsp;&nbsp;&nbsp;• Specific Grounds for Disinheritance of a Spouse (Art. 921)</option>
+      <option value="#art-921-4-legal-separation">&nbsp;&nbsp;&nbsp;&nbsp;• Incorporation of Family Code Grounds for Legal Separation (Art. 921[4])</option>
+      <option value="#art-922-reconciliation">&nbsp;&nbsp;&nbsp;&nbsp;• The Doctrine of Reconciliation (Art. 922)</option>
+      <option value="#art-923-representation">&nbsp;&nbsp;&nbsp;&nbsp;• Representation of the Disinherited Heir (Art. 923)</option>
+      <option value="#art-918-imperfect">&nbsp;&nbsp;&nbsp;&nbsp;• Legal Effects of Imperfect or Ineffectual Disinheritance (Art. 918)</option>
+      <option value="#math-models-120m">&nbsp;&nbsp;&nbsp;&nbsp;• Mathematical Estate Distribution Models: The ₱120 Million Estate</option>
+      <option value="#sec-v-intestate-principles">&nbsp;&nbsp;↳ V. Fundamental Principles and Orders of Intestate Succession (Arts. 960–962, 978–1014)</option>
+      <option value="#rule-preference-lines">&nbsp;&nbsp;&nbsp;&nbsp;• 1. The Rule of Preference of Lines</option>
+      <option value="#rule-proximity-degree">&nbsp;&nbsp;&nbsp;&nbsp;• 2. The Rule of Proximity of Degree (Art. 962)</option>
+      <option value="#regular-vs-irregular">&nbsp;&nbsp;&nbsp;&nbsp;• 3. The Regular vs. Irregular Order of Intestate Succession</option>
+      <option value="#concurrence-and-exclusion">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Rules on Concurrence and Exclusion in Intestate Succession</option>
+      <option value="#part-3">PART 3: THE RIGHT OF REPRESENTATION, THE IRON CURTAIN RULE (ART. 992) &amp; ADMINISTRATIVE MATTERS</option>
+      <option value="#sec-vi-representation">&nbsp;&nbsp;↳ VI. The Right of Representation in Testate and Intestate Succession (Arts. 969–977)</option>
+      <option value="#art-970-definition">&nbsp;&nbsp;&nbsp;&nbsp;• Definition and Nature of Representation (Art. 970)</option>
+      <option value="#operative-causes-scope">&nbsp;&nbsp;&nbsp;&nbsp;• Operative Causes and Scope: Testate vs. Intestate Succession</option>
+      <option value="#lineal-status-restrictions">&nbsp;&nbsp;&nbsp;&nbsp;• Lineal and Status Restrictions on Representation</option>
+      <option value="#two-way-repudiation">&nbsp;&nbsp;&nbsp;&nbsp;• The Two-Way Rule on Repudiation (Arts. 976 and 977)</option>
+      <option value="#per-stirpes-vs-per-capita">&nbsp;&nbsp;&nbsp;&nbsp;• Grandchildren Inheriting Per Stirpes vs. Per Capita (Art. 969)</option>
+      <option value="#sec-vii-iron-curtain">&nbsp;&nbsp;↳ VII. The Barrier Between Legitimates and Illegitimates (Art. 992) and Interplay with Art. 777</option>
+      <option value="#art-992-iron-curtain">&nbsp;&nbsp;&nbsp;&nbsp;• The Iron Curtain Rule (Art. 992)</option>
+      <option value="#qualification-representatives">&nbsp;&nbsp;&nbsp;&nbsp;• Qualification of Representatives Based on Filial Status (Arts. 902, 989, 990, 992)</option>
+      <option value="#dela-merced-case">&nbsp;&nbsp;&nbsp;&nbsp;• Jurisprudential Analysis: Dela Merced v. Dela Merced (G.R. No. 126707)</option>
+      <option value="#admin-matters">&nbsp;&nbsp;↳ Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <p class="c-navy"><strong>October 12 Lecture - Succession Law:</strong></p>
+
+  <h1 id="part-1">PART 1: THE LAW ON DISINHERITANCE — CONCEPT, REQUISITES, AND STATUTORY GROUNDS FOR DESCENDANTS AND ASCENDANTS</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">ARTS. 915–917</div>
+        <div class="ui-title">General Principles</div>
+        <div class="ui-sub">Nature, 7 strict requisites, conditional revocation &amp; burden of proof</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">ARTICLE 919</div>
+        <div class="ui-title">Children &amp; Descendants</div>
+        <div class="ui-sub">8 exclusive grounds for disinheriting legitimate or illegitimate descendants</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">ARTICLE 920</div>
+        <div class="ui-title">Parents &amp; Ascendants</div>
+        <div class="ui-sub">8 exclusive grounds, gender distinctions &amp; Art. 920(8) vs. 920(2)</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 1 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>I. General Principles &amp; Essential Requisites of Disinheritance (<span class="c-teal">Civil Code, Arts. 915–917</span>):</strong> Nature and purpose of disinheritance; restriction to compulsory heirs; formal and substantive requisites; total versus partial disinheritance; conditional disinheritance versus conditional revocation; allocation of the burden of proof.</li>
+        <li><strong>II. Specific Grounds for Disinheritance of Children and Descendants (<span class="c-teal">Civil Code, Art. 919</span>):</strong> Attempt against the life of the testator and the requirement of final conviction; irrelevance of executive clemency; groundless accusation of a grave crime and the evidentiary threshold of acquittal; adultery or concubinage with the testator's spouse; vitiation of testamentary consent; unjustifiable refusal to give support; maltreatment by word or deed; leading a dishonorable or disgraceful life; conviction of a crime carrying the accessory penalty of civil interdiction.</li>
+        <li><strong>III. Specific Grounds for Disinheritance of Parents and Ascendants (<span class="c-teal">Civil Code, Art. 920</span>):</strong> Abandonment of children versus gender-specific inducement to immorality or attempts against virtue; comparative analysis of attempts against life across ascending and descending lines; interplay between parental reconciliation and criminal conviction under <span class="c-teal">Article 920(2)</span> and <span class="c-teal">Article 920(8)</span>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-i-general-principles">I. GENERAL PRINCIPLES &amp; ESSENTIAL REQUISITES OF DISINHERITANCE</h2>
+
+  <h3 id="nature-and-scope">Nature and Scope of Disinheritance</h3>
+  <p>Under <span class="c-teal"><strong>Article 915 of the Civil Code</strong></span>, <span class="c-green"><strong><u>disinheritance is the testamentary act by which a testator, for a just and legal cause expressly stated in a valid will, deprives a compulsory heir of his or her <em>legitime</em></u></strong></span>. Because compulsory heirs succeed to their <em>legitime</em> by operation of law regardless of the testator's wishes, the testator cannot arbitrarily strip them of this reserved portion; deprivation is permissible only when the compulsory heir commits a grave statutory offense against the testator.</p>
+
+  <p>Conversely, <span class="c-rust"><strong><u>voluntary or testamentary heirs (such as friends, strangers, or collateral relatives) cannot be the subject of disinheritance</u></strong></span>. Because voluntary heirs inherit solely out of the testator's liberality from the free portion of the estate, a testator who wishes to exclude them simply omits their names from the will or revokes an existing testamentary institution.</p>
+
+  <h3 id="essential-requisites">Essential Requisites of a Valid Disinheritance</h3>
+  <p>Pursuant to <span class="c-teal"><strong>Articles 915, 916, and 917 of the Civil Code</strong></span>, a valid and effective disinheritance requires the concurrence of seven strict requisites:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📜</div>
+        <div class="ui-title">Valid Will &amp; Express</div>
+        <div class="ui-sub">Must be in a probated will, expressly identifying the compulsory heir</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Legal &amp; Stated Cause</div>
+        <div class="ui-sub">Based on exclusive statutory grounds (Arts. 919–921) stated in the will</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🔒</div>
+        <div class="ui-title">True, Total &amp; Unconditional</div>
+        <div class="ui-sub">Existing at execution, absolute, and forfeiting the entire legitime</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🔎</div>
+        <div class="ui-title">Proved if Contested</div>
+        <div class="ui-sub">Other heirs bear the burden of proof if the disinherited heir denies the cause</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><span class="c-green"><strong><u>It must be made in a valid will:</u></strong></span> Disinheritance is strictly a testamentary disposition. It cannot be effected through an <em>inter vivos</em> public instrument, an affidavit, or an oral declaration. Furthermore, the will itself must comply with all extrinsic formalities required by law (under <span class="c-teal">Articles 804 to 814</span>) and must be duly admitted to probate.</li>
+    <li><span class="c-green"><strong><u>It must be made expressly, identifying the disinherited heir:</u></strong></span> The testator must unequivocally manifest the intent to disinherit a specifically identified compulsory heir. Tacit omission does not constitute disinheritance; rather, the unintentional or unexplained omission of a compulsory heir in the direct line results in <span class="c-rust"><strong><u><em>preterition</em> under Article 854</u></strong></span>.</li>
+    <li><span class="c-green"><strong><u>It must be based on a cause expressly specified by law:</u></strong></span> The grounds enumerated in <span class="c-teal"><strong>Articles 919, 920, and 921 of the Civil Code</strong></span> are exclusive (<em>numerus clausus</em>). A testator cannot invent personal grounds based on whim, caprice, or petty family grievances.</li>
+    <li><span class="c-green"><strong><u>The legal cause must be expressly stated in the will itself:</u></strong></span> It is insufficient for a legal ground to exist in fact; the testator must explicitly articulate the specific statutory cause within the text of the will so the probate or settlement court can evaluate its legal sufficiency.</li>
+    <li><span class="c-green"><strong><u>The cause must be certain and true (existing at the time of execution):</u></strong></span> The offense or ground relied upon must already exist at the time the testator executes the will. It <span class="c-rust"><strong><u>cannot be predicated on a future, speculative, or conditional offense</u></strong></span> that has not yet occurred.</li>
+    <li><span class="c-green"><strong><u>It must be unconditional:</u></strong></span> Because disinheritance is a punitive sanction for an offense already committed against the testator, the deprivation of the <em>legitime</em> <span class="c-rust"><strong><u>cannot be made to depend upon the fulfillment of a suspensive or resolutory condition</u></strong></span>.</li>
+    <li><span class="c-green"><strong><u>It must be total and not partial:</u></strong></span> The <em>legitime</em> <span class="c-rust"><strong><u>cannot be partially forfeited</u></strong></span>. Because statutory grounds for disinheritance constitute grave offenses of ingratitude against the testator, the law does not permit the testator to quantify the degree of offense and deduct a mere fraction (such as one-third or one-half) of the heir's <em>legitime</em>. The testator must either forgive the offense entirely or disinherit the compulsory heir completely.</li>
+  </ol>
+
+  <h3 id="conditional-disinheritance-vs-revocation">Conditional Disinheritance vs. Conditional Revocation of Disinheritance</h3>
+  <p>While the act of disinheritance itself cannot be subjected to a condition, Philippine succession law distinguishes between a <span class="c-rust"><strong><u>conditional disinheritance (which is void)</u></strong></span> and a <span class="c-green"><strong><u>conditional revocation or lifting of a disinheritance (which is valid)</u></strong></span>. When a testator disinherits a compulsory heir based on an existing, actual statutory ground, the disinheritance is immediately valid and unconditional; if the testator subsequently attaches a condition allowing the heir to regain his or her successional rights upon reforming or making amends, the condition attaches not to the disinheritance <em>per se</em>, but to the <strong>revocation of the disinheritance</strong> (or the testator's conditional pardon).</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Testamentary Provision Involving a Condition</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Conditional Disinheritance</div>
+        <div class="ui-sub">Condition attaches to the <strong>imposition</strong> of disinheritance (future/speculative event) → <strong>VOID</strong></div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Conditional Revocation</div>
+        <div class="ui-sub">Disinheritance is based on an existing statutory cause; condition attaches to its <strong>lifting/pardon</strong> → <strong>VALID</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="example-unapproved-marriage">Application Example: Unapproved Marriage as a Future Ground</h4>
+  <blockquote>
+    <p>Suppose a father states in his will: <em>"I hereby disinherit my daughter if she marries a man below our family's socioeconomic bracket."</em> This disinheritance is <span class="c-rust"><strong><u>void</u></strong></span> on two independent grounds. First, marrying a person against the parents' socioeconomic preferences is not among the exclusive grounds enumerated in <span class="c-teal">Article 919 of the Civil Code</span>. Second, the ground is a future, contingent event rather than an existing cause at the time of the execution of the will, violating the rule that disinheritance must be based on an actual, completed offense.</p>
+  </blockquote>
+
+  <h4 id="illustration-conditional-lifting">Professor's Illustration: Conditional Lifting of Disinheritance</h4>
+  <blockquote>
+    <p>A testator provides in his will: <em>"I hereby disinherit my daughter because she is currently living a dishonorable and disgraceful life. If, however, she mends her ways, leaves that lifestyle, returns to my house, and serves me well, this disinheritance shall be revoked and lifted."</em> This testamentary provision is <span class="c-green"><strong><u>valid</u></strong></span>. The disinheritance itself is anchored on an existing, statutory ground under <span class="c-teal">Article 919(7)</span>. The condition attaches not to the imposition of the disinheritance, but to its <strong>revocation</strong>, effectively operating as a valid conditional pardon by the testator.</p>
+  </blockquote>
+
+  <h3 id="burden-of-proof">Burden of Proof in Contested Disinheritance</h3>
+  <p>Under <span class="c-teal"><strong>Article 917 of the Civil Code</strong></span>, if the disinherited compulsory heir denies or contradicts the truth of the cause stated in the will, the <span class="c-green"><strong><u>burden of proof (<em>onus probandi</em>) rests upon the other heirs of the testator</u></strong></span> who seek to sustain the disinheritance. The disinherited heir is not required to prove a negative or establish his or her innocence. Because the other heirs stand to benefit financially from the forfeiture of the disinherited heir's <em>legitime</em>, they must affirmatively establish by preponderance of evidence that the statutory ground alleged by the testator actually occurred.</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature / Parameter</th>
+        <th>Valid Disinheritance (<span class="c-teal">Arts. 915–917</span>)</th>
+        <th>Defective / Imperfect Disinheritance (<span class="c-teal">Art. 918</span>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Instrument Used</strong></td>
+        <td>Executed in a valid, probated will.</td>
+        <td>Made outside a will, or in a will denied probate.</td>
+      </tr>
+      <tr>
+        <td><strong>Statement of Cause</strong></td>
+        <td>Legal cause is expressly stated in the will.</td>
+        <td>No cause is stated, or the stated cause is not recognized by law.</td>
+      </tr>
+      <tr>
+        <td><strong>Nature of Cause</strong></td>
+        <td>Existing and true at the time the will is made.</td>
+        <td>Future, speculative, or contradicted and unproven by the other heirs.</td>
+      </tr>
+      <tr>
+        <td><strong>Extent of Forfeiture</strong></td>
+        <td>Total deprivation of the compulsory heir's <em>legitime</em>.</td>
+        <td>Partial deprivation (e.g., forfeiting only 1/3 of the <em>legitime</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Conditionality</strong></td>
+        <td>Absolute and unconditional (though revocation may be conditional).</td>
+        <td>Disinheritance itself is subjected to a suspensive or resolutory condition.</td>
+      </tr>
+      <tr>
+        <td><strong>Effect on <em>Legitime</em></strong></td>
+        <td>Heir is completely deprived of the <em>legitime</em> (subject to representation).</td>
+        <td>Institution of heirs is annulled insofar as it prejudices the heir's <em>legitime</em>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="sec-ii-grounds-descendants">II. SPECIFIC GROUNDS FOR DISINHERITANCE OF CHILDREN AND DESCENDANTS (ARTICLE 919)</h2>
+
+  <p><span class="c-teal"><strong>Article 919 of the Civil Code</strong></span> establishes eight exclusive causes for the disinheritance of children and descendants, whether legitimate or illegitimate.</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Root["ARTICLE 919: 8 Exclusive Grounds to Disinherit Children &amp; Descendants"]
+
+  subgraph ConvReq["Grounds Requiring Final Conviction / Judicial Finding"]
+    G1["1. Attempt Against Life (Art. 919[1])<br/>• Testator, spouse, descendants, or ascendants<br/>• Requires FINAL CONVICTION<br/>• Executive pardon does NOT erase ground"]
+    G2["2. Groundless Accusation (Art. 919[2])<br/>• Crime punishable by 6+ years<br/>• Judgment must declare accusation FALSE/MALICIOUS<br/>• Reasonable doubt acquittal is NOT enough"]
+    G3["3. Adultery or Concubinage with Spouse (Art. 919[3])<br/>• Requires FINAL CONVICTION<br/>• Applies to biological or step-parent spouse"]
+    G8["8. Crime with Civil Interdiction (Art. 919[8])<br/>• Death, reclusion perpetua, or reclusion temporal<br/>• May be committed against a STRANGER"]
+  end
+
+  subgraph NoConv["Grounds NOT Requiring Criminal Conviction"]
+    G4["4. Vitiating Testamentary Consent (Art. 919[4])<br/>• Fraud, violence, intimidation, or undue influence"]
+    G5["5. Unjustifiable Refusal to Support (Art. 919[5])<br/>• Need + Demand + Capacity + Unjust Refusal"]
+    G6["6. Maltreatment by Word or Deed (Art. 919[6])<br/>• Physical assault, unprosecuted attempt on life,<br/>grave oral/social media insults"]
+    G7["7. Dishonorable or Disgraceful Life (Art. 919[7])<br/>• Habitual/continuous conduct bringing moral shame"]
+  end
+
+  Root --> ConvReq
+  Root --> NoConv
+  G1 -. "If unprosecuted to avoid scandal" .-> G6
+
+  style Root fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style G1 fill:#F0FDFA,stroke:#0F766E,color:#1F2937
+  style G2 fill:#F0FDFA,stroke:#0F766E,color:#1F2937
+  style G3 fill:#F0FDFA,stroke:#0F766E,color:#1F2937
+  style G8 fill:#F0FDFA,stroke:#0F766E,color:#1F2937
+  style G4 fill:#F0FDF4,stroke:#166534,color:#1F2937
+  style G5 fill:#F0FDF4,stroke:#166534,color:#1F2937
+  style G6 fill:#FFF7ED,stroke:#C2410C,color:#1F2937
+  style G7 fill:#F0FDF4,stroke:#166534,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="art-919-1">1. Attempt Against the Life of the Testator, Spouse, Descendants, or Ascendants</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(1)</strong></span>, a child or descendant may be disinherited when he or she has been <span class="c-green"><strong><u>found guilty of an attempt against the life</u></strong></span> of the testator, his or her spouse, descendants, or ascendants.</p>
+
+  <ul>
+    <li><strong>Requisites:</strong>
+      <ol>
+        <li>The compulsory heir committed an intentional felony against the life of the testator, the testator's spouse, the testator's descendant (e.g., a sibling or child of the heir), or the testator's ascendant (e.g., the testator's parent).</li>
+        <li>The felony reached at least the <span class="c-green"><strong><u>attempted stage</u></strong></span> under <span class="c-teal">Article 6 of the Revised Penal Code</span> (consummated or frustrated stages are necessarily included).</li>
+        <li>The heir was <span class="c-green"><strong><u>prosecuted and found guilty by final judgment</u></strong></span> in a criminal proceeding.</li>
+      </ol>
+    </li>
+    <li><strong>Effect of Executive Clemency:</strong> If the convicted child or descendant is subsequently granted an <strong>absolute presidential pardon</strong>, the testator may still validly disinherit him or her. An executive pardon blots out the criminal liability and penal consequences against the State, but <span class="c-rust"><strong><u>it cannot erase the personal ingratitude and moral offense already committed against the testator</u></strong></span>.</li>
+    <li><strong>Effect of Non-Prosecution:</strong> If the child attempts to kill the testator, but the family refuses to file a criminal case to avoid public scandal, the child <span class="c-rust"><strong><u>cannot be disinherited under Article 919(1)</u></strong></span> because the statutory element of being <em>"found guilty"</em> is absent. However, the testator may validly disinherit the child under <span class="c-teal"><strong>Article 919(6)</strong></span> for <span class="c-green"><strong><u>maltreatment of the testator by deed</u></strong></span>, which does not require a prior criminal conviction.</li>
+  </ul>
+
+  <h3 id="art-919-2">2. Groundless Accusation of a Crime Punishable by Six Years or More</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(2)</strong></span>, disinheritance is warranted when a child or descendant has accused the testator of a crime for which the law prescribes imprisonment for <span class="c-green"><strong><u>six years or more</u></strong></span> (<em>prision correccional</em> in its maximum period to <em>reclusion perpetua</em>), if the accusation has been <span class="c-green"><strong><u>found groundless</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Scope of "Accusation":</strong> The term encompasses filing a criminal complaint, acting as a private complainant, or voluntarily testifying as a prosecution witness against the testator.</li>
+    <li><strong>Distinction Between Acquittal on Reasonable Doubt and a "Groundless" Accusation:</strong> The mere acquittal of the testator does not automatically render the accusation "groundless." If the criminal court acquits the testator merely on the ground that the prosecution failed to prove guilt beyond reasonable doubt (insufficiency of evidence) or due to a procedural technicality, <span class="c-rust"><strong><u>Article 919(2) is not satisfied</u></strong></span>. To justify disinheritance, the judgment of acquittal must positively declare or unmistakably demonstrate that the accusation was <span class="c-green"><strong><u>false, malicious, or fabricated</u></strong></span>—meaning the crime was not committed at all, or the child knew the testator was innocent.</li>
+  </ul>
+
+  <h3 id="art-919-3">3. Conviction of Adultery or Concubinage with the Testator's Spouse</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(3)</strong></span>, a child or descendant may be disinherited when he or she has been <span class="c-green"><strong><u>convicted of adultery or concubinage with the spouse of the testator</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Requirement of Final Conviction:</strong> Just as in the first ground, a criminal prosecution and final judgment of conviction for adultery (<span class="c-teal">Article 333, Revised Penal Code</span>) or concubinage (<span class="c-teal">Article 334, Revised Penal Code</span>) are indispensable.</li>
+    <li><strong>Application to Step-Parents:</strong> This ground does not necessarily involve biological incest. It frequently applies where the testator's first marriage was dissolved by death or declaration of nullity, the testator contracted a subsequent marriage, and the testator's child from the prior marriage engaged in an illicit sexual relationship with the stepmother or stepfather resulting in a criminal conviction.</li>
+  </ul>
+
+  <h3 id="art-919-4">4. Fraud, Violence, Intimidation, or Undue Influence in Making or Changing a Will</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(4)</strong></span>, a child or descendant may be disinherited when, by <span class="c-green"><strong><u>fraud, violence, intimidation, or undue influence</u></strong></span>, he or she causes the testator to make a will or to change one already made. This ground penalizes any coercive or deceitful interference with the testator's testamentary freedom, even if the coerced will was subsequently revoked and replaced by a new, freely executed will containing the disinheritance.</p>
+
+  <h3 id="art-919-5">5. Refusal Without Justifiable Cause to Support the Testator</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(5)</strong></span>, a child or descendant may be disinherited for <span class="c-green"><strong><u>refusal without justifiable cause to support</u></strong></span> the parent or ascendant who disinherits such child or descendant.</p>
+
+  <ul>
+    <li><strong>Requisites:</strong>
+      <ol>
+        <li>The testator-ascendant was in actual need of support under the <span class="c-teal">Family Code</span>.</li>
+        <li>A formal or extrajudicial demand for support was made upon the child or descendant.</li>
+        <li>The child or descendant had the financial means and capacity to provide support (otherwise, the refusal has a justifiable cause).</li>
+        <li>The child or descendant unjustifiably refused to provide the requested support.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h3 id="art-919-6">6. Maltreatment of the Testator by Word or Deed</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(6)</strong></span>, <span class="c-green"><strong><u>maltreatment of the testator by word or by deed</u></strong></span> by the child or descendant is a sufficient cause for disinheritance.</p>
+
+  <ul>
+    <li><strong>Absence of Conviction Requirement:</strong> Unlike <span class="c-teal">Article 919(1)</span>, maltreatment requires <span class="c-green"><strong><u>no criminal conviction</u></strong></span>.</li>
+    <li><strong>Scope of Verbal and Physical Maltreatment:</strong> Maltreatment "by deed" covers any physical violence, assault, or unprosecuted attempt against the life of the parent. Maltreatment "by word" encompasses grave oral defamation, vicious cursing, public humiliation, or broadcasting vile insults and derogatory attacks against the parent on social media platforms.</li>
+  </ul>
+
+  <h3 id="art-919-7">7. Leading a Dishonorable or Disgraceful Life</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(7)</strong></span>, a child or descendant may be disinherited when he or she <span class="c-green"><strong><u>leads a dishonorable or disgraceful life</u></strong></span>. The phrase <em>"leads a life"</em> implies continuity, habituality, and permanence of conduct that brings shame and moral disrepute to the family name, rather than an isolated indiscretion. Furthermore, this ground is not limited to sexual immorality; it includes habitual criminality, chronic drug trafficking, or notorious public scandal.</p>
+
+  <h3 id="art-919-8">8. Conviction of a Crime Carrying the Penalty of Civil Interdiction</h3>
+  <p>Under <span class="c-teal"><strong>Article 919(8)</strong></span>, disinheritance is authorized upon the child's or descendant's <span class="c-green"><strong><u>conviction of a crime which carries with it the penalty of civil interdiction</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Crimes Carrying Civil Interdiction:</strong> Under <span class="c-teal">Articles 34 and 41 of the Revised Penal Code</span>, civil interdiction is an accessory penalty that attaches by operation of law to the principal penalties of <span class="c-green"><strong><u>death (when not executed), <em>reclusion perpetua</em>, and <em>reclusion temporal</em></u></strong></span>.</li>
+    <li><strong>Offense Need Not Be Committed Against the Testator:</strong> Unlike <span class="c-teal">Article 919(1)</span>, where the attempt on life must be directed against the testator or specific close family members, the crime under <span class="c-teal">Article 919(8)</span> <span class="c-green"><strong><u>may be committed against a total stranger</u></strong></span>. Because crimes punishable by <em>reclusion temporal</em> or <em>reclusion perpetua</em> (such as murder, robbery with homicide, or plunder) are exceptionally heinous, final conviction thereof severs the moral bond between parent and child and taints the family honor, empowering the testator to disinherit the offender.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-iii-grounds-ascendants">III. SPECIFIC GROUNDS FOR DISINHERITANCE OF PARENTS AND ASCENDANTS (ARTICLE 920)</h2>
+
+  <p>When the testator has no surviving children or descendants, the <strong>parents and ascendants</strong> become compulsory heirs. <span class="c-teal"><strong>Article 920 of the Civil Code</strong></span> enumerates eight exclusive grounds by which a descendant-testator may disinherit his or her parents or ascendants.</p>
+
+  <h3 id="art-920-1">1. Abandonment of Children vs. Inducement to Immorality or Attempt Against Virtue</h3>
+  <p>Under <span class="c-teal"><strong>Article 920(1)</strong></span>, parents or ascendants may be disinherited when they have <span class="c-green"><strong><u>abandoned their children or induced their daughters to live a corrupt or immoral life, or attempted against their virtue</u></strong></span>. This provision contains three distinct acts with different gender applications:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🏚️</div>
+        <div class="ui-title">Abandonment of Children</div>
+        <div class="ui-sub"><strong>Gender-Neutral:</strong> Applies to both male and female descendants (total deprivation of care/support/guidance)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚠️</div>
+        <div class="ui-title">Inducement to Immorality</div>
+        <div class="ui-sub"><strong>Female-Specific:</strong> Applies strictly to daughters and granddaughters</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">Attempt Against Virtue</div>
+        <div class="ui-sub"><strong>Female-Specific:</strong> Sexual offenses against a daughter/granddaughter (no prior conviction required)</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Abandonment of Children (Gender-Neutral):</strong> The first clause—<em>"when the parents have abandoned their children"</em>—applies equally to <span class="c-green"><strong><u>both male and female descendants</u></strong></span> (sons, daughters, grandsons, or granddaughters). Abandonment signifies the total deprivation of basic parental care, financial support, and moral guidance during the child's minority, rather than mere temporary physical separation.</li>
+    <li><strong>Inducement to Live a Corrupt or Immoral Life (Female-Specific):</strong> The second clause—<em>"induced their daughters to live a corrupt or immoral life"</em> (e.g., forcing a daughter into prostitution)—applies strictly to <span class="c-rust"><strong><u>daughters and granddaughters</u></strong></span> (female descendants).</li>
+    <li><strong>Attempt Against Their Virtue (Female-Specific):</strong> The third clause—<em>"attempted against their virtue"</em>—likewise applies to female descendants and encompasses sexual offenses committed by an ascendant against a daughter or granddaughter, such as attempted rape, acts of lasciviousness, or sexual abuse, <span class="c-green"><strong><u>even without a prior criminal conviction</u></strong></span>.</li>
+  </ul>
+
+  <h3 id="art-920-overlapping">2. Overlapping Grounds Between Descendants (Art. 919) and Ascendants (Art. 920)</h3>
+  <p>Several grounds under <span class="c-teal">Article 920</span> mirror the provisions of <span class="c-teal">Article 919</span>, operating reciprocally when the descendant is the testator and the ascendant is the compulsory heir:</p>
+  <ul>
+    <li><span class="c-teal"><strong>Article 920(2):</strong></span> Conviction of an attempt against the life of the testator, his or her spouse, descendants, or ascendants (mirrors <span class="c-teal">Art. 919[1]</span>).</li>
+    <li><span class="c-teal"><strong>Article 920(3):</strong></span> Groundless accusation of a crime punishable by imprisonment for six years or more (mirrors <span class="c-teal">Art. 919[2]</span>).</li>
+    <li><span class="c-teal"><strong>Article 920(4):</strong></span> Conviction of adultery or concubinage with the spouse of the testator (mirrors <span class="c-teal">Art. 919[3]</span>).</li>
+    <li><span class="c-teal"><strong>Article 920(5):</strong></span> Causing the testator by fraud, violence, intimidation, or undue influence to make a will or change one already made (mirrors <span class="c-teal">Art. 919[4]</span>).</li>
+    <li><span class="c-teal"><strong>Article 920(7):</strong></span> Refusal without justifiable cause to support the children or descendants (mirrors <span class="c-teal">Art. 919[5]</span>).</li>
+  </ul>
+
+  <h3 id="art-920-6">3. Loss of Parental Authority (Article 920[6])</h3>
+  <p>Under <span class="c-teal"><strong>Article 920(6)</strong></span>, a parent or ascendant may be disinherited for the <span class="c-green"><strong><u>loss of parental authority for causes specified in the Code</u></strong></span> (now governed by the <span class="c-teal">Family Code</span>, such as judicial deprivation of parental authority due to excessive harshness, corrupting orders, or conviction of a crime carrying civil interdiction). To constitute a ground for disinheritance, the loss of parental authority must be attributable to the <span class="c-green"><strong><u>fault or culpability</u></strong></span> of the parent, <span class="c-rust"><strong><u>not due to benign statutory termination</u></strong></span> such as the child reaching the age of majority (emancipation).</p>
+
+  <h3 id="art-920-8">4. Attempt by One Parent Against the Life of the Other (Art. 920[8] vs. Art. 920[2])</h3>
+  <p>Under <span class="c-teal"><strong>Article 920(8)</strong></span>, a child or descendant may disinherit a parent for <span class="c-green"><strong><u>"an attempt by one of the parents against the life of the other, unless there has been a reconciliation between them."</u></strong></span> A critical doctrinal distinction exists between <span class="c-teal"><strong>Article 920(8)</strong></span> and <span class="c-teal"><strong>Article 920(2)</strong></span> regarding the requirement of conviction and the legal effect of reconciliation between the parents:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">One Parent Attempts to Kill the Other Parent (Testator's Ascendant)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">8</div>
+        <div class="ui-title">Article 920(8): NO Conviction</div>
+        <div class="ui-sub">Child may disinherit offending parent without conviction, <strong>UNLESS the parents reconcile</strong> (parental reconciliation extinguishes ground)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">2</div>
+        <div class="ui-title">Article 920(2): WITH Final Conviction</div>
+        <div class="ui-sub">Parental reconciliation does <strong>NOT</strong> bar disinheritance; only reconciliation between the parent and the <strong>child-testator (Art. 922)</strong> extinguishes ground</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Under <span class="c-teal">Article 920(8)</span> (No Conviction Required; Extinguished by Parental Reconciliation):</strong> If the father attempts to kill the mother, the child can disinherit the father under <span class="c-teal">Article 920(8)</span> <span class="c-green"><strong><u>even if no criminal case was filed and there was no conviction</u></strong></span>. However, because the primary offended party is the mother, if the mother subsequently forgives and <span class="c-rust"><strong><u>reconciles with the father, the child loses the right to disinherit the father under Article 920(8)</u></strong></span>.</li>
+    <li><strong>Under <span class="c-teal">Article 920(2)</span> (With Final Conviction; Unaffected by Parental Reconciliation):</strong> If the father attempts to kill the mother (who is an ascendant of the child-testator), is prosecuted, and is <span class="c-green"><strong><u>convicted by final judgment</u></strong></span>, the child's right to disinherit the father falls squarely under <span class="c-teal"><strong>Article 920(2)</strong></span>. Once a final conviction is handed down, a subsequent <span class="c-rust"><strong><u>reconciliation between the mother and the father does NOT bar the child from disinheriting the father</u></strong></span> under <span class="c-teal">Article 920(2)</span>. Under <span class="c-teal">Article 922</span>, only a reconciliation between the offender (the father) and the <em>testator himself</em> (the child) can extinguish the child's right to disinherit under <span class="c-teal">Article 920(2)</span>.</li>
+  </ul>
+
+  <h4 id="illustration-parental-reconciliation">Professor's Illustration: Parental Reconciliation After Conviction</h4>
+  <blockquote>
+    <p>A father attempts to murder the testator's mother. A criminal case for frustrated parricide is filed, and the father is convicted by final judgment. While serving his sentence, the mother forgives the father and fully reconciles with him. Can the child-testator still validly disinherit the father? <span class="c-green"><strong><u>Yes.</u></strong></span> While parental reconciliation extinguishes the ground under <span class="c-teal">Article 920(8)</span> (which applies when there is no conviction), the father's final conviction triggers <span class="c-teal"><strong>Article 920(2)</strong></span> (conviction of an attempt against the life of the testator's ascendant). Only a personal reconciliation between the father and the child-testator under <span class="c-teal">Article 922</span> can defeat a disinheritance anchored on <span class="c-teal">Article 920(2)</span>.</p>
+  </blockquote>
+
+  <hr>
+
+  <h1 id="part-2">PART 2: SPOUSAL DISINHERITANCE, RECONCILIATION, INEFFECTUAL DISINHERITANCE, AND THE ARCHITECTURE OF INTESTATE SUCCESSION</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">ARTS. 918, 921–923</div>
+        <div class="ui-title">Spouse, Reconciliation &amp; Art. 918</div>
+        <div class="ui-sub">6 spousal grounds, Family Code Art. 55, bilateral reconciliation, Art. 923 representation &amp; ₱120M models</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">ARTS. 960–962, 978–1014</div>
+        <div class="ui-title">Intestate Succession Architecture</div>
+        <div class="ui-sub">Preference of lines, proximity of degree, Regular vs. Irregular Orders &amp; concurrence rules</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 2 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>IV. Disinheritance of a Spouse, Reconciliation, and Ineffectual Disinheritance (<span class="c-teal">Civil Code, Arts. 918, 921–923</span>):</strong> Statutory grounds for disinheriting a surviving spouse; incorporation of <span class="c-teal">Family Code</span> grounds for legal separation; bilateral mechanics of reconciliation under <span class="c-teal">Article 922</span>; right of representation of the disinherited heir's descendants under <span class="c-teal">Article 923</span>; legal consequences of imperfect disinheritance under <span class="c-teal">Article 918</span> and its interplay with <em>preterition</em>; step-by-step mathematical estate distribution models.</li>
+        <li><strong>V. Fundamental Principles and Orders of Intestate Succession (<span class="c-teal">Civil Code, Arts. 960–962, 978–1014</span>):</strong> Rule of preference of lines; rule of proximity of degree and its subordination to the statutory order of intestate succession; comparative analysis of the Regular Order (legitimate decedent) and Irregular Order (illegitimate decedent); rules on concurrence and exclusion among intestate heirs.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-iv-spousal-disinheritance">IV. DISINHERITANCE OF A SPOUSE, RECONCILIATION, AND INEFFECTUAL DISINHERITANCE (ARTICLES 918, 921–923)</h2>
+
+  <h3 id="art-921-grounds">Specific Grounds for Disinheritance of a Spouse (Article 921)</h3>
+  <p>Under <span class="c-teal"><strong>Article 921 of the Civil Code</strong></span>, a testator may validly disinherit his or her surviving spouse upon any of six exclusive statutory causes:</p>
+
+  <ol>
+    <li><span class="c-green"><strong><u>Conviction of an attempt against the life</u></strong></span> of the testator, his or her descendants, or ascendants (<span class="c-teal">Art. 921[1]</span>).</li>
+    <li><span class="c-green"><strong><u>Groundless accusation</u></strong></span> against the testator of a crime for which the law prescribes imprisonment for six years or more (<span class="c-teal">Art. 921[2]</span>).</li>
+    <li>Causing the testator by <span class="c-green"><strong><u>fraud, violence, intimidation, or undue influence</u></strong></span> to make a will or to change one already made (<span class="c-teal">Art. 921[3]</span>).</li>
+    <li><span class="c-green"><strong><u>When the spouse has given cause for legal separation</u></strong></span> (<span class="c-teal">Art. 921[4]</span>).</li>
+    <li><span class="c-green"><strong><u>When the spouse has given grounds for the loss of parental authority</u></strong></span> (<span class="c-teal">Art. 921[5]</span>).</li>
+    <li><span class="c-green"><strong><u>Unjustifiable refusal to support</u></strong></span> the children or the other spouse (<span class="c-teal">Art. 921[6]</span>).</li>
+  </ol>
+
+  <h3 id="art-921-4-legal-separation">Incorporation of Family Code Grounds for Legal Separation (Article 921[4])</h3>
+  <p>Under <span class="c-teal"><strong>Article 921(4)</strong></span>, a final judicial decree of legal separation is <span class="c-green"><strong><u>not required</u></strong></span> to disinherit a spouse; it is sufficient that the offending spouse <span class="c-green"><strong><u>"has given cause"</u></strong></span> for legal separation. Note that if a final decree of legal separation has already been granted by the Family Court prior to the testator's death, the offending spouse is disqualified from inheriting <em>by operation of law</em> under <span class="c-teal">Article 63(4) of the Family Code</span> without any need for testamentary disinheritance. Thus, <span class="c-teal">Article 921(4)</span> is specifically utilized when the testator chooses not to file (or has not yet completed) a petition for legal separation, but executes a will disinheriting the guilty spouse based on any of the ten grounds under <span class="c-teal"><strong>Article 55 of the Family Code</strong></span>:</p>
+
+  <ul>
+    <li><strong>Repeated physical violence or grossly abusive conduct</strong> directed against the testator, a common child, or a child of the testator (e.g., a spouse who habitually batters or physically abuses the testator).</li>
+    <li><strong>Physical violence or moral pressure</strong> to compel the testator to change religious or political affiliation.</li>
+    <li>Attempt of the respondent spouse to <strong>corrupt or induce</strong> the testator, a common child, or a child of the testator, to engage in prostitution, or connivance in such corruption or inducement.</li>
+    <li><strong>Final judgment sentencing the respondent spouse to imprisonment of more than six years</strong>, even if pardoned.</li>
+    <li><strong>Drug addiction or habitual alcoholism</strong> of the respondent spouse.</li>
+    <li><strong>Lesbianism or homosexuality</strong> of the respondent spouse.</li>
+    <li>Contracting by the respondent spouse of a <strong>subsequent bigamous marriage</strong>, whether in the Philippines or abroad.</li>
+    <li><strong>Sexual infidelity or perversion</strong> (which is broader than criminal adultery or concubinage and requires no criminal conviction).</li>
+    <li><strong>Attempt by the respondent spouse against the life of the testator</strong> (note that because this is a cause for legal separation under <span class="c-teal">Art. 55[9] of the Family Code</span>, a spouse who attempts to kill the testator personally can be disinherited under <span class="c-teal">Art. 921[4]</span> <span class="c-green"><strong><u><em>even without a prior criminal conviction</em></u></strong></span>, bypassing the conviction requirement of <span class="c-teal">Art. 921[1]</span>).</li>
+    <li><strong>Abandonment of the testator without justifiable cause for more than one year.</strong></li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Statutory Ground Category</th>
+        <th>Descendants (<span class="c-teal">Art. 919</span>)</th>
+        <th>Ascendants (<span class="c-teal">Art. 920</span>)</th>
+        <th>Surviving Spouse (<span class="c-teal">Art. 921</span>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Attempt on Life (With Conviction)</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[1]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 920[2]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 921[1]</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>False Accusation (6+ Years Penalty)</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[2]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 920[3]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 921[2]</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Adultery / Concubinage with Spouse</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[3]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 920[4]</span>)</td>
+        <td>Covered under <span class="c-teal">Art. 921(4)</span> (Sexual Infidelity)</td>
+      </tr>
+      <tr>
+        <td><strong>Fraud, Violence, Undue Influence</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[4]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 920[5]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 921[3]</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Unjustifiable Refusal to Support</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[5]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 920[7]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 921[6]</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Maltreatment / Dishonorable Life</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[6] &amp; [7]</span>)</td>
+        <td>No (Not applicable to parents)</td>
+        <td>Covered under <span class="c-teal">Art. 921(4)</span> (Abusive Conduct)</td>
+      </tr>
+      <tr>
+        <td><strong>Conviction with Civil Interdiction</strong></td>
+        <td>Yes (<span class="c-teal">Art. 919[8]</span>)</td>
+        <td>Covered via Loss of Authority</td>
+        <td>Covered under <span class="c-teal">Art. 921(4) &amp; (5)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Abandonment / Corrupting Virtue</strong></td>
+        <td>No</td>
+        <td>Yes (<span class="c-teal">Art. 920[1]</span>)</td>
+        <td>Covered under <span class="c-teal">Art. 921(4) &amp; (5)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Loss of Parental Authority</strong></td>
+        <td>No</td>
+        <td>Yes (<span class="c-teal">Art. 920[6]</span>)</td>
+        <td>Yes (<span class="c-teal">Art. 921[5]</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Attempt on Other Parent's Life</strong></td>
+        <td>Covered under <span class="c-teal">Art. 919(1)</span></td>
+        <td>Yes (<span class="c-teal">Art. 920[8]</span>)</td>
+        <td>Covered under <span class="c-teal">Art. 921(1) &amp; (4)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Giving Cause for Legal Separation</strong></td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes (<span class="c-teal">Art. 921[4]</span>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="art-922-reconciliation">The Doctrine of Reconciliation (Article 922)</h3>
+  <p>Under <span class="c-teal"><strong>Article 922 of the Civil Code</strong></span>, a subsequent <span class="c-green"><strong><u>reconciliation</u></strong></span> between the offender and the offended person (the testator) produces two automatic legal effects:</p>
+  <ol>
+    <li>If made <strong>before</strong> the execution of a will, it <span class="c-green"><strong><u>deprives the testator of the right to disinherit</u></strong></span> the offending heir for that specific offense.</li>
+    <li>If made <strong>after</strong> the execution of a will containing a valid disinheritance, it <span class="c-green"><strong><u>renders the disinheritance ineffectual</u></strong></span> by operation of law, without requiring the testator to execute a new will or codicil revoking the disinheritance.</li>
+  </ol>
+
+  <h4 id="bilateral-reconciliation">Bilateral Nature of Reconciliation vs. Unilateral Pardon</h4>
+  <p>For <span class="c-teal">Article 922</span> to operate, there must be a genuine <span class="c-green"><strong><u>bilateral reconciliation</u></strong></span>, <span class="c-rust"><strong><u>not a mere unilateral pardon or general expression of forgiveness</u></strong></span>. Reconciliation requires:</p>
+  <ol>
+    <li>An offer of forgiveness by the offended testator;</li>
+    <li>An acceptance of that forgiveness by the offending compulsory heir; and</li>
+    <li>An actual <span class="c-green"><strong><u>restoration of the former familial relationship</u></strong></span> and harmony between the parties.</li>
+  </ol>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-card">
+      <div class="ui-title">1. Offer of Forgiveness by Offended Testator</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Acceptance of Forgiveness by Offending Compulsory Heir</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Actual Restoration of Former Familial Relationship</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">BILATERAL RECONCILIATION COMPLETE (ART. 922)</div>
+      <div class="ui-sub">Bars future disinheritance OR renders existing disinheritance ineffectual by operation of law</div>
+    </div>
+  </div>
+
+  <h4 id="illustration-deathbed-forgiveness">Professor's Illustration: Deathbed Forgiveness vs. True Reconciliation</h4>
+  <blockquote>
+    <p>A testator who previously executed a valid will disinheriting an erring son lies on his deathbed. Fearing spiritual judgment as he is about to expire, the testator declares before witnesses: <em>"I forgive everyone who has wronged me, including the children I disinherited in my will."</em> The testator dies hours later without the disinherited son accepting the pardon or resuming their filial relationship. The disinheritance <span class="c-green"><strong><u>remains valid and effective</u></strong></span>. A <span class="c-rust"><strong><u>unilateral, general deathbed pardon does not satisfy Article 922</u></strong></span>, which requires mutual reconciliation and the actual restoration of former relations between the offender and the offended testator.</p>
+  </blockquote>
+
+  <h3 id="art-923-representation">Representation of the Disinherited Heir (Article 923)</h3>
+  <p>Under <span class="c-teal"><strong>Article 923 of the Civil Code</strong></span>, although a validly disinherited compulsory heir forfeits his or her <em>legitime</em>, the <span class="c-green"><strong><u>children and descendants of the person disinherited shall take his or her place and shall preserve the rights of compulsory heirs with respect to the <em>legitime</em></u></strong></span>.</p>
+  <ul>
+    <li><strong>Underlying Rationale:</strong> Grounded in the principle that the guilt of the parent must not be visited upon the innocent child (<em>peccata patrum non nocent filiis</em>), the law elevates the disinherited heir's descendants by right of representation.</li>
+    <li><strong>Extent of Representation:</strong> The representatives are entitled <span class="c-green"><strong><u>only to the <em>legitime</em></u></strong></span> that the disinherited parent would have received. If the testator also left the free portion unassigned, the disinherited heir's children may additionally represent their parent in the intestate distribution of the undisposed free portion. However, the disinherited parent is <span class="c-rust"><strong><u>strictly barred from enjoying the usufruct or administration</u></strong></span> of the property that constitutes the <em>legitime</em> inherited by his or her children.</li>
+  </ul>
+
+  <h3 id="art-918-imperfect">Legal Effects of Imperfect or Ineffectual Disinheritance (Article 918)</h3>
+  <p>Under <span class="c-teal"><strong>Article 918 of the Civil Code</strong></span>, a disinheritance is <span class="c-rust"><strong><u>ineffectual (imperfect or defective)</u></strong></span> when it is made: (1) without expression of the cause; (2) for a cause the truth of which, if contradicted, is not proved; or (3) for a cause which is not one of those set forth in the Civil Code.</p>
+  <ul>
+    <li><strong>Effect on the Institution of Heirs:</strong> Ineffectual disinheritance <span class="c-green"><strong><u>annuls the institution of heirs insofar as it may prejudice the person disinherited</u></strong></span>, meaning the invalidly disinherited compulsory heir must first be given his or her full <em>legitime</em>. However, unlike <em>preterition</em> under <span class="c-teal">Article 854</span> (which annuls the institution of heirs <span class="c-rust"><strong><u>totally</u></strong></span> unless there are legacies and devises), imperfect disinheritance under <span class="c-teal">Article 918</span> annuls the institution of heirs <span class="c-green"><strong><u>only partially</u></strong></span>—to the extent necessary to satisfy the prejudiced heir's <em>legitime</em>. The institution of heirs over the <strong>free portion</strong> remains valid.</li>
+    <li><strong>When the Invalidly Disinherited Heir Receives More Than the <em>Legitime</em>:</strong> While an invalidly disinherited heir is always guaranteed at least his or her <em>legitime</em>, he or she will receive <strong>more than the <em>legitime</em></strong> (i.e., his or her full intestate share) if the testator failed to validly dispose of the free portion—such as when no voluntary heirs were instituted, or when the institution of heirs was totally annulled due to the concurrent <em>preterition</em> of another compulsory heir in the direct line.</li>
+  </ul>
+
+  <h3 id="math-models-120m">Mathematical Estate Distribution Models: The ₱120 Million Estate</h3>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Estate["Testator X's Net Estate: ₱120 Million<br/>4 Legitimate Children: A, B, C, and D<br/>Collective Legitime = ₱60M (₱15M each) | Free Portion = ₱60M"]
+
+  S1["SCENARIO 1: Invalid Disinheritance of D + Preterition of C<br/>Will: 'Disinherit D (no cause); institute A &amp; B as sole heirs'"]
+  S1_Out["• Art. 918: D's disinheritance is invalid<br/>• Art. 854: Omission of C = Preterition (TOTALLY annuls institution)<br/>• Entire ₱120M passes by INTESTACY:<br/>A = ₱30M | B = ₱30M | C = ₱30M | D = ₱30M"]
+
+  S2["SCENARIO 2: Invalid Disinheritance of D WITHOUT Preterition<br/>Will: 'Disinherit D (no cause); give entire estate to A, B, and C'"]
+  S2_Out["• No preterition (all 4 children mentioned)<br/>• Art. 918: Partial annulment only to restore D's ₱15M legitime<br/>• ₱60M Free Portion remains validly instituted to A, B, C (₱20M each):<br/>A = ₱35M | B = ₱35M | C = ₱35M | D = ₱15M"]
+
+  S3["SCENARIO 3: VALID Disinheritance of D (Art. 919)<br/>Will: 'Validly disinherit D; give entire estate to A, B, and C'"]
+  S3_NoChild["If D has NO children:<br/>D gets ₱0<br/>A = ₱40M | B = ₱40M | C = ₱40M"]
+  S3_WithChild["If D has 2 legitimate children (D1 &amp; D2):<br/>• Art. 923: D1 &amp; D2 represent D ONLY in ₱15M legitime (₱7.5M each)<br/>• A, B, C take ₱35M each (₱15M legitime + ₱20M free portion)"]
+
+  Estate --> S1 --> S1_Out
+  Estate --> S2 --> S2_Out
+  Estate --> S3
+  S3 --> S3_NoChild
+  S3 --> S3_WithChild
+
+  style Estate fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style S1 fill:#FFF7ED,stroke:#C2410C,color:#1F2937,font-weight:bold
+  style S1_Out fill:#FFF7ED,stroke:#C2410C,color:#1F2937
+  style S2 fill:#F0FDFA,stroke:#0F766E,color:#1F2937,font-weight:bold
+  style S2_Out fill:#F0FDFA,stroke:#0F766E,color:#1F2937
+  style S3 fill:#F0FDF4,stroke:#166534,color:#1F2937,font-weight:bold
+  style S3_NoChild fill:#F0FDF4,stroke:#166534,color:#1F2937
+  style S3_WithChild fill:#F0FDF4,stroke:#166534,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="scenario-1-120m">Professor's Illustration: Scenario 1 — Invalid Disinheritance Concurrent with Preterition</h4>
+  <blockquote>
+    <p>Testator X dies leaving four legitimate children (A, B, C, and D) and a net estate of <strong>₱120 Million</strong>. In his will, X states: <em>"I disinherit my son D. I institute my children A and B as my sole and universal heirs."</em> Here, the disinheritance of D is <span class="c-rust"><strong><u>ineffectual</u></strong></span> under <span class="c-teal">Article 918</span> because no legal cause was stated. Simultaneously, the complete omission of C—a compulsory heir in the direct line—constitutes <span class="c-rust"><strong><u>preterition</u></strong></span> under <span class="c-teal">Article 854</span>, which <span class="c-rust"><strong><u>totally annuls the institution of A and B</u></strong></span>. Because both the disinheritance and the institution of heirs are void, the entire ₱120 Million estate passes by <strong>intestate succession</strong>, dividing equally among A, B, C, and D at <span class="c-green"><strong><u>₱30 Million each</u></strong></span> (exceeding D's strict <em>legitime</em> of ₱15 Million).</p>
+  </blockquote>
+
+  <h4 id="scenario-2-120m">Professor's Illustration: Scenario 2 — Invalid Disinheritance Without Preterition</h4>
+  <blockquote>
+    <p>Assume the same facts (estate of <strong>₱120 Million</strong>; legitimate children A, B, C, and D), except X's will states: <em>"I disinherit my son D. I give my entire estate to my children A, B, and C."</em> Here, there is <strong>no preterition</strong> because all four children were mentioned in the will. The disinheritance of D is <span class="c-rust"><strong><u>invalid</u></strong></span> under <span class="c-teal">Article 918</span> for lack of a stated cause, which annuls the institution of A, B, and C <span class="c-green"><strong><u>only insofar as it prejudices D's <em>legitime</em></u></strong></span>. The collective <em>legitime</em> of the four legitimate children is one-half of the estate (<strong>₱60 Million</strong>), giving A, B, C, and D <strong>₱15 Million each</strong>. Because the institution of A, B, and C over the <strong>₱60 Million free portion</strong> remains valid, they divide the free portion equally (<strong>₱20 Million each</strong>). Thus, A, B, and C receive <span class="c-green"><strong><u>₱35 Million each</u></strong></span> (₱15M <em>legitime</em> + ₱20M free portion), while D receives only his strict <em>legitime</em> of <span class="c-green"><strong><u>₱15 Million</u></strong></span>.</p>
+  </blockquote>
+
+  <h4 id="scenario-3-120m">Professor's Illustration: Scenario 3 — Valid Disinheritance With and Without Descendants</h4>
+  <blockquote>
+    <p>Assume the same facts as Scenario 2 (estate of <strong>₱120 Million</strong>; will gives the entire estate to A, B, and C), except that X <span class="c-green"><strong><u>validly disinherited D</u></strong></span> based on an expressly stated, proven ground under <span class="c-teal">Article 919</span>.</p>
+    <ul>
+      <li><strong>If D has no children:</strong> D receives nothing. A, B, and C divide the entire ₱120 Million estate equally, receiving <span class="c-green"><strong><u>₱40 Million each</u></strong></span>.</li>
+      <li><strong>If D has legitimate children (D1 and D2):</strong> Under <span class="c-teal">Article 923</span>, D1 and D2 represent D <span class="c-green"><strong><u>only with respect to D's <em>legitime</em></u></strong></span> of <strong>₱15 Million</strong> (receiving ₱7.5 Million each). The remaining ₱105 Million (comprising A, B, and C's <em>legitimes</em> of ₱45 Million plus the ₱60 Million free portion instituted to A, B, and C) is divided equally among A, B, and C at <span class="c-green"><strong><u>₱35 Million each</u></strong></span>.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-v-intestate-principles">V. FUNDAMENTAL PRINCIPLES AND ORDERS OF INTESTATE SUCCESSION (ARTICLES 960–962, 978–1014)</h2>
+
+  <h3 id="rule-preference-lines">1. The Rule of Preference of Lines</h3>
+  <p>In intestate succession, relatives of the decedent are grouped into three successional lines, which enjoy a strict hierarchy of preference:</p>
+  <ol>
+    <li><strong>The Direct Descending Line</strong> (children, grandchildren, great-grandchildren);</li>
+    <li><strong>The Direct Ascending Line</strong> (parents, grandparents, great-grandparents); and</li>
+    <li><strong>The Collateral Line</strong> (brothers, sisters, nephews, nieces, uncles, aunts, cousins).</li>
+  </ol>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-card">
+      <div class="ui-title">1. Direct Descending Line</div>
+      <div class="ui-sub">Children, grandchildren, great-grandchildren</div>
+    </div>
+    <div class="ui-connector">↓ Strictly Preferred Over</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Direct Ascending Line</div>
+      <div class="ui-sub">Parents, grandparents, great-grandparents</div>
+    </div>
+    <div class="ui-connector">↓ Strictly Preferred Over</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Collateral Line</div>
+      <div class="ui-sub">Brothers, sisters, nephews, nieces, uncles, aunts, cousins</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Operative Rule:</strong> The <span class="c-green"><strong><u>direct descending line is strictly preferred over the direct ascending line</u></strong></span>, and the <span class="c-green"><strong><u>direct ascending line is strictly preferred over the collateral line</u></strong></span>. Consequently, the presence of even one legitimate child or descendant completely excludes the decedent's legitimate parents and ascendants. Similarly, if the decedent leaves no descendants, the presence of surviving parents or ascendants completely excludes the decedent's brothers, sisters, nephews, and nieces (who belong to the collateral line).</li>
+  </ul>
+
+  <h3 id="rule-proximity-degree">2. The Rule of Proximity of Degree (Article 962)</h3>
+  <p>Under <span class="c-teal"><strong>Article 962 of the Civil Code</strong></span>, in every inheritance, the <span class="c-green"><strong><u>relative nearest in degree excludes the more distant ones</u></strong></span>, saving the right of representation when it properly takes place.</p>
+  <ul>
+    <li><strong>Subordination to the Order of Intestate Succession:</strong> While proximity of degree governs priority within the same line or class, <span class="c-green"><strong><u>the Rule of Proximity always yields to the statutory Order of Intestate Succession</u></strong></span>. A relative who is in an equal or even nearer degree of consanguinity will be excluded by another relative who belongs to a higher preferred class in the statutory order of intestacy.</li>
+  </ul>
+
+  <h3 id="regular-vs-irregular">3. The Regular vs. Irregular Order of Intestate Succession</h3>
+  <p>Philippine law establishes two distinct hierarchies of intestate succession depending on the <strong>filial status of the decedent</strong> (the person who died):</p>
+  <ul>
+    <li><strong>Regular Order of Intestate Succession:</strong> Applies when the <span class="c-green"><strong><u>decedent is a legitimate person</u></strong></span>.</li>
+    <li><strong>Irregular Order of Intestate Succession:</strong> Applies when the <span class="c-green"><strong><u>decedent is an illegitimate person</u></strong></span>.</li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Priority Rank</th>
+        <th>Regular Order (Legitimate Decedent)</th>
+        <th>Irregular Order (Illegitimate Decedent)</th>
+        <th>Key Doctrinal Distinctions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1st Class</strong></td>
+        <td><strong>Legitimate Children</strong> and Legitimate Descendants (<span class="c-teal">Art. 979</span>)</td>
+        <td><strong>Legitimate Children</strong> and Legitimate Descendants (<span class="c-teal">Art. 979</span>)</td>
+        <td>Identical in both orders; always first in preference.</td>
+      </tr>
+      <tr>
+        <td><strong>2nd Class</strong></td>
+        <td><strong>Legitimate Parents</strong> and Legitimate Ascendants (<span class="c-teal">Art. 985</span>)</td>
+        <td><strong>Illegitimate Children</strong> and their Descendants, legitimate or illegitimate (<span class="c-teal">Art. 988</span>)</td>
+        <td>Ranks 2 and 3 <strong>interchange</strong>. In the Regular Order, legitimate ascendants come before illegitimate children (though they concur). In the Irregular Order, illegitimate children exclude illegitimate parents.</td>
+      </tr>
+      <tr>
+        <td><strong>3rd Class</strong></td>
+        <td><strong>Illegitimate Children</strong> and their Descendants, legitimate or illegitimate (<span class="c-teal">Art. 988</span>)</td>
+        <td><strong>Illegitimate Parents ONLY</strong> (<span class="c-teal">Art. 993</span>)</td>
+        <td>For an illegitimate decedent, succession in the ascending line stops strictly at <strong>illegitimate parents</strong>; it does <strong>not</strong> ascend to grandparents or other ascendants due to the barrier under <span class="c-teal">Art. 992</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>4th Class</strong></td>
+        <td><strong>Surviving Spouse</strong> (<span class="c-teal">Art. 995</span>)</td>
+        <td><strong>Surviving Spouse</strong> (<span class="c-teal">Art. 994</span>)</td>
+        <td>Identical rank in both orders (without prejudice to concurrence with Ranks 1, 2, 3, and 5).</td>
+      </tr>
+      <tr>
+        <td><strong>5th Class</strong></td>
+        <td><strong>Brothers, Sisters, Nephews, and Nieces</strong> (<span class="c-teal">Art. 1003</span>)</td>
+        <td><strong>Illegitimate Brothers, Sisters, Nephews, and Nieces</strong> (<span class="c-teal">Art. 994</span>)</td>
+        <td>Identical rank, though for an illegitimate decedent, <span class="c-teal">Article 992</span> bars inheritance by/from legitimate brothers and sisters.</td>
+      </tr>
+      <tr>
+        <td><strong>6th Class</strong></td>
+        <td><strong>Other Collateral Relatives</strong> within the 5th civil degree (<span class="c-teal">Art. 1009</span>)</td>
+        <td><strong>The State</strong> (<span class="c-teal">Art. 1011</span>)</td>
+        <td>Other collateral relatives (uncles, aunts, cousins up to the 5th degree) inherit <strong>only</strong> in the Regular Order. In the Irregular Order, they are excluded by <span class="c-teal">Art. 992</span>, so the State is Rank 6.</td>
+      </tr>
+      <tr>
+        <td><strong>7th Class</strong></td>
+        <td><strong>The State</strong> (<span class="c-teal">Art. 1011</span>)</td>
+        <td><em>(None — Ends at Rank 6)</em></td>
+        <td>In the Regular Order, the State inherits only upon failure of 5th-degree collaterals.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="concurrence-and-exclusion">4. Rules on Concurrence and Exclusion in Intestate Succession</h3>
+  <p>Being listed in a particular numerical rank in the Order of Intestate Succession does not mean that an upper rank automatically excludes all lower ranks. Several classes <strong>concur</strong> (inherit simultaneously) with one another:</p>
+
+  <ul>
+    <li><strong>Concurrence of Legitimate Children, Illegitimate Children, and Surviving Spouse:</strong> In the Regular Order, Rank 1 (Legitimate Children), Rank 3 (Illegitimate Children), and Rank 4 (Surviving Spouse) <span class="c-green"><strong><u>concur with one another</u></strong></span>. The presence of legitimate children excludes <span class="c-rust"><strong><u>only Rank 2 (Legitimate Parents and Ascendants)</u></strong></span> and Ranks 5 to 7, but does <strong>not</strong> exclude illegitimate children or the surviving spouse.</li>
+    <li><strong>Exclusion of Illegitimate Parents by Any Child (Irregular Order):</strong> In the Irregular Order, the presence of either legitimate children (Rank 1) or <span class="c-green"><strong><u>illegitimate children (Rank 2) completely excludes the illegitimate parents (Rank 3)</u></strong></span> pursuant to <span class="c-teal">Article 993</span>.</li>
+    <li><strong>Concurrence of Surviving Spouse with Brothers, Sisters, Nephews, and Nieces (<span class="c-teal">Article 1001</span>):</strong> If the decedent dies without descendants or ascendants, the <span class="c-green"><strong><u>Surviving Spouse (Rank 4) does NOT exclude Brothers, Sisters, Nephews, and Nieces (Rank 5)</u></strong></span>. Instead, they concur: <strong>one-half (1/2) of the estate goes to the surviving spouse</strong>, and the <strong>other one-half (1/2) goes to the brothers, sisters, nephews, and nieces</strong> as a class.</li>
+    <li><strong>Exclusion of Other Collaterals by Brothers, Sisters, Nephews, and Nieces:</strong> Within the collateral line, brothers, sisters, nephews, and nieces (Rank 5) form a privileged class that <span class="c-green"><strong><u>completely excludes all other collateral relatives (Rank 6)</u></strong></span>, such as uncles, aunts, and first cousins, even if they stand in the exact same civil degree of relationship to the decedent.</li>
+  </ul>
+
+  <h4 id="illustration-subordination-proximity">Professor's Illustration: Subordination of Proximity to the Order of Intestate Succession</h4>
+  <blockquote>
+    <p>Decedent X (a legitimate person) dies intestate without descendants, ascendants, or a spouse. He is survived by his <strong>Uncle E</strong> (the brother of X's predeceased father) and his two <strong>Nephews, C and D</strong> (the children of X's predeceased brothers, A and B). Computing civil degrees under <span class="c-teal">Articles 963–966</span>: Uncle E is <strong>three degrees</strong> removed from X (X up to Father [1], up to Grandfather [2], down to Uncle E [3]). Nephews C and D are also <strong>three degrees</strong> removed from X (X up to Father [1], down to Brothers A/B [2], down to Nephews C/D [3]). Although Uncle E and Nephews C and D stand in equal proximity (3rd civil degree), <span class="c-green"><strong><u>Nephews C and D exclude Uncle E and inherit the entire estate</u></strong></span>. The Rule of Proximity yields to the Order of Intestate Succession, where nephews and nieces belong to <strong>Rank 5</strong>, whereas uncles and aunts belong to <strong>Rank 6 (Other Collateral Relatives)</strong>.</p>
+  </blockquote>
+
+  <hr>
+
+  <h1 id="part-3">PART 3: THE RIGHT OF REPRESENTATION, THE IRON CURTAIN RULE (ARTICLE 992), AND ADMINISTRATIVE MATTERS</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">ARTS. 969–977</div>
+        <div class="ui-title">Right of Representation</div>
+        <div class="ui-sub">Testate vs. intestate scope, lineal limits, two-way repudiation rule &amp; ₱300M model</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">ART. 992 VS. ART. 777</div>
+        <div class="ui-title">The Iron Curtain Rule</div>
+        <div class="ui-sub">Filial qualification (2:1 ratio), nonmarital terminology &amp; Dela Merced v. Dela Merced</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">CLASS DIRECTIVES</div>
+        <div class="ui-title">Administrative &amp; Bar Tips</div>
+        <div class="ui-sub">Midterm bonus, digest schedules, upcoming quizzes &amp; Family Court insights</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 3 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>VI. The Right of Representation in Testate and Intestate Succession (<span class="c-teal">Civil Code, Arts. 969–977</span>):</strong> Statutory definition and legal fiction of representation; operative triggers in testate versus intestate succession; scope of property inherited; lineal limitations (descending vs. ascending vs. collateral lines); disqualification of adopted children; the two-way rule on repudiation (<span class="c-teal">Art. 976</span> vs. <span class="c-teal">Art. 977</span>); <em>per stirpes</em> representation versus <em>per capita</em> succession by grandchildren when all children repudiate under <span class="c-teal">Article 969</span>.</li>
+        <li><strong>VII. The Barrier Between Legitimates and Illegitimates (<span class="c-teal">Article 992</span>) and Interplay with <span class="c-teal">Article 777</span>:</strong> Filial qualification of representatives (legitimate vs. illegitimate representation rules and the 2:1 ratio); historical rationale and modern critique of the Iron Curtain Rule; <span class="c-burgundy"><em>Justice Leonen's</em></span> "nonmarital children" terminology versus Bar Exam usage; case analysis of <span class="c-burgundy"><em>Dela Merced v. Dela Merced</em> (G.R. No. 126707)</span> and how <span class="c-teal">Article 777</span> defeats the invocation of <span class="c-teal">Article 992</span>.</li>
+        <li><strong>Administrative Matters &amp; Professor's Asides:</strong> Midterm exam adjustments, grading mechanics, case digest schedules, quiz targets, and bar review pointers.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-vi-representation">VI. THE RIGHT OF REPRESENTATION IN TESTATE AND INTESTATE SUCCESSION (ARTICLES 969–977)</h2>
+
+  <h3 id="art-970-definition">Definition and Nature of Representation (Article 970)</h3>
+  <p>Under <span class="c-teal"><strong>Article 970 of the Civil Code</strong></span>, <span class="c-green"><strong><u>representation is a right created by fiction of law, by virtue of which the representative is raised to the place and the degree of the person represented, and acquires the rights which the latter would have if he were living or if he could have inherited</u></strong></span>. Through this legal fiction, a more distant relative (such as a grandchild) is elevated into the shoes of a nearer relative (such as a predeceased child) so as not to be excluded by other surviving nearer relatives under the Rule of Proximity.</p>
+
+  <h3 id="operative-causes-scope">Operative Causes and Scope: Testate vs. Intestate Succession</h3>
+  <p>The availability and scope of the right of representation differ fundamentally depending on whether the succession is testate or intestate:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Testate Succession (With a Will)</th>
+        <th>Intestate Succession (Without a Will)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Operative Causes (When It Exists)</strong></td>
+        <td><strong>1. Predecease</strong> (<span class="c-teal">Art. 856</span>)<br><strong>2. Incapacity / Unworthiness</strong> (<span class="c-teal">Art. 1035</span>)<br><strong>3. Valid Disinheritance</strong> (<span class="c-teal">Art. 923</span>)</td>
+        <td><strong>1. Predecease</strong> (<span class="c-teal">Art. 981</span>)<br><strong>2. Incapacity / Unworthiness</strong> (<span class="c-teal">Art. 1035</span>)<br><em>(Note: Disinheritance does not exist in intestacy because it requires a valid will).</em></td>
+      </tr>
+      <tr>
+        <td><strong>Scope of Property Inherited</strong></td>
+        <td><span class="c-green"><strong><u>Covers ONLY the <em>Legitime</em>.</u></strong></span> There is <span class="c-rust"><strong><u>no right to represent a voluntary heir</u></strong></span> or take the free portion instituted to the represented person, because testamentary liberality is strictly personal to the instituted heir.</td>
+        <td><span class="c-green"><strong><u>Covers ALL (the entire intestate share)</u></strong></span> that the person represented would have inherited if he or she were living or could have inherited.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="lineal-status-restrictions">Lineal and Status Restrictions on Representation</h3>
+  <ol>
+    <li><strong>Direct Descending Line Only (Never in the Ascending Line):</strong> Under <span class="c-teal"><strong>Article 972 of the Civil Code</strong></span>, representation takes place continuously in the <span class="c-green"><strong><u>direct descending line, but NEVER in the ascending line</u></strong></span>. Thus, a grandchild or great-grandchild can represent a father, but a paternal grandfather can never represent a predeceased father to inherit from a grandson.</li>
+    <li><strong>Collateral Line Restriction:</strong> Under <span class="c-teal"><strong>Article 972</strong></span>, in the collateral line, representation takes place <span class="c-green"><strong><u>only in favor of the children of brothers or sisters (nephews and nieces)</u></strong></span>, whether they be of the full or half blood. <span class="c-rust"><strong><u>Great-nephews and great-nieces (grandnephews/grandnieces) have no right of representation.</u></strong></span> Furthermore, under <span class="c-teal"><strong>Article 975</strong></span>, nephews and nieces inherit by right of representation (<em>per stirpes</em>) <span class="c-green"><strong><u>only when they survive with at least one uncle or aunt</u></strong></span> (a surviving brother or sister of the decedent); if only nephews and nieces survive without any living uncle or aunt, they inherit in their own right (<em>per capita</em>) in equal shares.</li>
+    <li><strong>Exclusion of Adopted Children:</strong> Under established Philippine civil law doctrine, an <span class="c-rust"><strong><u>adopted child cannot represent the adopter, nor can an adopted child be represented</u></strong></span> by his or her descendants in the succession of the adopter's relatives. Because the legal fiction of adoption creates a relationship purely personal between the adopter and the adopted, it does not extend to create blood ties with the adopter's parents or other relatives.</li>
+  </ol>
+
+  <h3 id="two-way-repudiation">The Two-Way Rule on Repudiation (Articles 976 and 977)</h3>
+  <p>A crucial distinction governs the interplay between <strong>repudiation</strong> (the voluntary renunciation of an inheritance) and the right of representation:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Article 977: Repudiating Heir CANNOT Be Represented</div>
+        <div class="ui-sub">If Heir B renounces Decedent X's estate, B's child C <strong>cannot represent B</strong> in X's estate</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Article 976: Heir MAY Represent Person Whose Estate He Renounced</div>
+        <div class="ui-sub">If C renounced predeceased Father B's estate, C <strong>can still represent B</strong> in Grandfather X's estate</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Rule 1: An Heir Who Repudiates CANNOT Be Represented (<span class="c-teal">Article 977</span>):</strong> Under <span class="c-teal"><strong>Article 977</strong></span>, <span class="c-rust"><strong><u>heirs who repudiate their share may not be represented</u></strong></span>. Unlike predecease, incapacity, or disinheritance (which are involuntary deprivations), an heir who is alive and capacitated but voluntarily waives his inheritance effectively surrenders that share for both himself and his line; his children cannot step into his shoes by representation.</li>
+    <li><strong>Rule 2: An Heir MAY Represent a Person Whose Inheritance He Previously Repudiated (<span class="c-teal">Article 976</span>):</strong> Under <span class="c-teal"><strong>Article 976</strong></span>, <span class="c-green"><strong><u>a person may represent him whose inheritance he has renounced</u></strong></span>. If a father dies first and his son repudiates the inheritance from the father's estate (e.g., because the father's estate is heavily indebted), and subsequently the paternal grandfather dies, the son <strong>can still represent his predeceased father</strong> in the inheritance of the grandfather's estate. In representation, the representative inherits directly from the decedent (the grandfather), not through the estate of the person represented (the father).</li>
+  </ul>
+
+  <h4 id="illustration-repudiation-977-976">Professor's Illustration: Contrasting Article 977 and Article 976 on Repudiation</h4>
+  <blockquote>
+    <p><strong>Case A (<span class="c-teal">Art. 977</span>):</strong> Grandfather X dies intestate, survived by his two sons, A and B, and B's son (Grandson C). B repudiates his inheritance from X. <span class="c-rust"><strong><u>C cannot represent B</u></strong></span> because a repudiating heir cannot be represented (<span class="c-teal">Art. 977</span>), nor can C inherit in his own right because Uncle A (a nearer 1st-degree relative) excludes C under the Rule of Proximity; thus, A takes the entire estate. <strong>Case B (<span class="c-teal">Art. 976</span>):</strong> Son B predeceases Grandfather X. Upon B's death, Grandson C repudiates his inheritance from B's estate. Later, Grandfather X dies, survived by Son A and Grandson C. <span class="c-green"><strong><u>C can validly represent B</u></strong></span> in X's estate and take half of X's estate alongside A, because an heir may represent a predeceased parent whose own estate he previously renounced (<span class="c-teal">Art. 976</span>).</p>
+  </blockquote>
+
+  <h3 id="per-stirpes-vs-per-capita">Grandchildren Inheriting <em>Per Stirpes</em> vs. <em>Per Capita</em> (Article 969)</h3>
+  <p>As a general rule under <span class="c-teal"><strong>Article 982</strong></span>, grandchildren and other descendants always inherit <span class="c-green"><strong><u>by right of representation (<em>per stirpes</em>)</u></strong></span>, dividing among themselves the specific share pertaining to their respective parent. However, <span class="c-teal"><strong>Article 969 of the Civil Code</strong></span> provides a singular exception: if <span class="c-green"><strong><u>ALL the children of the decedent repudiate the inheritance</u></strong></span>, the grandchildren do not inherit by representation (since representation is barred in repudiation under <span class="c-teal">Art. 977</span>); instead, being the next degree of relatives, they <span class="c-green"><strong><u>inherit in their own right (<em>per capita</em>)</u></strong></span>, dividing the estate into equal individual shares.</p>
+
+  <h4 id="illustration-300m-estate">Professor's Illustration: The ₱300 Million Estate — Representation vs. Universal Repudiation</h4>
+  <blockquote>
+    <p>Decedent X dies intestate leaving a <strong>₱300 Million</strong> estate, three children (A, B, and G), and five grandchildren: D (sole child of A), E and F (children of B), and H and I (children of G).</p>
+    <ul>
+      <li><strong>Scenario 1 (Predecease, Incapacity, and Disinheritance):</strong> Suppose A was validly disinherited (in a prior will disposing only of disinheritance), B is incapacitated, and G predeceased X. All three causes permit representation (<em>per stirpes</em>). The ₱300M estate is divided into 3 lines of ₱100M each: <span class="c-green"><strong><u>D takes ₱100M</u></strong></span> (representing A); <span class="c-green"><strong><u>E and F take ₱50M each</u></strong></span> (sharing B's ₱100M); and <span class="c-green"><strong><u>H and I take ₱50M each</u></strong></span> (sharing G's ₱100M).</li>
+      <li><strong>Scenario 2 (Universal Repudiation by All Children):</strong> Suppose A, B, and G are all alive and capacitated, and <strong>all three repudiate</strong> their inheritance from X in hopes of favoring their children. Under <span class="c-teal"><strong>Article 969</strong></span>, representation is barred, and the five grandchildren (D, E, F, H, and I) inherit <span class="c-green"><strong><u>in their own right (<em>per capita</em>)</u></strong></span>. The ₱300M estate is divided equally by 5, giving D, E, F, H, and I <span class="c-green"><strong><u>₱60 Million each</u></strong></span>.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-vii-iron-curtain">VII. THE BARRIER BETWEEN LEGITIMATES AND ILLEGITIMATES (ARTICLE 992) AND INTERPLAY WITH ARTICLE 777</h2>
+
+  <h3 id="art-992-iron-curtain">The Iron Curtain Rule (Article 992)</h3>
+  <p>Under <span class="c-teal"><strong>Article 992 of the Civil Code</strong></span>, <span class="c-rust"><strong><u>an illegitimate child has no right to inherit <em>ab intestato</em> from the legitimate children and relatives of his father or mother; nor shall such children or relatives inherit in the same manner from the illegitimate child.</u></strong></span></p>
+
+  <ul>
+    <li><strong>Historical Rationale vs. Modern Context:</strong> Known in Philippine jurisprudence as the <span class="c-rust"><strong><u>"Iron Curtain Rule"</u></strong></span> or the <strong>successional barrier</strong>, <span class="c-teal">Article 992</span> was originally enacted by the Code Commission on the presumption of mutual hostility and animosity between the legitimate family and the illegitimate child (historically viewed as the product of sin or marital infidelity). While modern social realities increasingly reflect blended or "hybrid" families where legitimate and nonmarital children cohabit harmoniously, <span class="c-teal">Article 992</span> remains binding statutory law until repealed by Congress.</li>
+    <li><strong>Terminology Caveat for the Bar Examinations:</strong> In recent Supreme Court jurisprudence (notably penned by <span class="c-burgundy"><em>Senior Associate Justice Marvic Leonen</em></span>, <code>[Assumed reference to Aquino v. Aquino, G.R. No. 208912, Dec. 7, 2021]</code>), the Court adopted the sociological term <strong>"nonmarital children"</strong> to avoid the pejorative stigma attached to the word "illegitimate." However, for purposes of the <strong>Bar Examinations</strong>, examinees must continue to use the statutory term <span class="c-green"><strong><u>"illegitimate children"</u></strong></span> as expressly written in the <span class="c-teal">Civil Code</span> and <span class="c-teal">Family Code</span> to ensure precision in codal citations.</li>
+    <li><strong>Restricted to Intestate Succession:</strong> By its express terms (<em>"ab intestato"</em>), the barrier under <span class="c-teal">Article 992</span> applies <span class="c-green"><strong><u>strictly to intestate succession</u></strong></span> (and by extension, to representation in compulsory succession). It does <strong>not</strong> prohibit a testator from voluntarily instituting an illegitimate half-brother, stepchild, or illegitimate grandchild as a <strong>voluntary heir, legatee, or devisee</strong> out of the <strong>free portion</strong> of the estate in a valid will.</li>
+  </ul>
+
+  <h3 id="qualification-representatives">Qualification of Representatives Based on Filial Status (Articles 902, 989, 990, and 992)</h3>
+  <p>When applying the Right of Representation in the direct descending line, the interaction between <span class="c-teal"><strong>Article 992</strong></span> (which bars an illegitimate child from representing a legitimate parent in the succession of a legitimate grandparent) and <span class="c-teal"><strong>Articles 902 and 990</strong></span> (which transmit the rights of an illegitimate child to both his legitimate and illegitimate descendants) yields a cardinal rule:</p>
+
+  <ol>
+    <li><strong>If the person to be represented is a LEGITIMATE child:</strong> He or she can be represented <span class="c-green"><strong><u>ONLY by a legitimate child or descendant</u></strong></span>. An illegitimate child of a legitimate child is <span class="c-rust"><strong><u>barred by Article 992</u></strong></span> from representing his parent in the estate of the legitimate grandparent.</li>
+    <li><strong>If the person to be represented is an ILLEGITIMATE child:</strong> He or she can be represented by <span class="c-green"><strong><u>BOTH legitimate and illegitimate children or descendants</u></strong></span> (<span class="c-teal">Articles 902 and 990</span>). When both legitimate and illegitimate descendants represent an illegitimate parent, they divide the represented parent's share between themselves observing the <span class="c-green"><strong><u>2:1 ratio</u></strong></span> (each legitimate representative gets double the share of each illegitimate representative).</li>
+  </ol>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  X["Decedent X (Dies Intestate)"]
+
+  subgraph LineA["Line of Predeceased LEGITIMATE Child A"]
+    A["A (Predeceased Legitimate Child)"]
+    C["C (Legitimate Child of A)<br/>✓ CAN Represent A"]
+    D["D (Illegitimate Child of A)<br/>✕ BARRED by Art. 992 Iron Curtain"]
+    A --> C
+    A -.-> D
+  end
+
+  subgraph LineB["Line of Predeceased ILLEGITIMATE Child B (Share: ₱30M)"]
+    B["B (Predeceased Illegitimate Child)"]
+    E["E (Legitimate Child of B)<br/>✓ CAN Represent B (Arts. 902, 990)<br/>Receives ₱20M (2 parts)"]
+    F["F (Illegitimate Child of B)<br/>✓ CAN Represent B (Arts. 902, 990)<br/>Receives ₱10M (1 part)"]
+    B --> E
+    B --> F
+  end
+
+  X --> A
+  X --> B
+
+  style X fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold
+  style A fill:#F0FDFA,stroke:#0F766E,color:#1F2937,font-weight:bold
+  style B fill:#F0FDFA,stroke:#0F766E,color:#1F2937,font-weight:bold
+  style C fill:#F0FDF4,stroke:#166534,color:#1F2937
+  style D fill:#FFF7ED,stroke:#C2410C,color:#1F2937
+  style E fill:#F0FDF4,stroke:#166534,color:#1F2937
+  style F fill:#F0FDF4,stroke:#166534,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="illustration-2-1-ratio">Professor's Illustration: Legitimate vs. Illegitimate Representation and the 2:1 Ratio</h4>
+  <blockquote>
+    <p>Decedent X dies intestate. X had two predeceased children: <strong>A (a legitimate child)</strong> and <strong>B (an illegitimate child)</strong>. Predeceased legitimate child A left two children: <strong>C (legitimate)</strong> and <strong>D (illegitimate)</strong>. Predeceased illegitimate child B also left two children: <strong>E (legitimate)</strong> and <strong>F (illegitimate)</strong>.</p>
+    <ul>
+      <li><strong>In the Line of A (Legitimate Child):</strong> <span class="c-green"><strong><u>Only C (legitimate) can represent A.</u></strong></span> D (illegitimate) is <span class="c-rust"><strong><u>completely barred by the Iron Curtain Rule under Article 992</u></strong></span> from representing his legitimate father A in the estate of X.</li>
+      <li><strong>In the Line of B (Illegitimate Child):</strong> <span class="c-green"><strong><u>Both E (legitimate) and F (illegitimate) can represent B</u></strong></span> under <span class="c-teal">Articles 902 and 990</span>. If B's intestate share from X's estate is <strong>₱30 Million</strong>, E and F divide that ₱30 Million using the <strong>2:1 ratio</strong>: <span class="c-green"><strong><u>E (legitimate) receives ₱20 Million</u></strong></span>, and <span class="c-green"><strong><u>F (illegitimate) receives ₱10 Million</u></strong></span>.</li>
+    </ul>
+  </blockquote>
+
+  <h3 id="dela-merced-case">Jurisprudential Analysis: <span class="c-burgundy"><em>Dela Merced v. Dela Merced</em> (G.R. No. 126707, February 25, 1999)</span></h3>
+  <p>A frequent Bar Examination trap involves confusing <strong>succession by right of representation</strong> (where <span class="c-teal">Article 992</span> applies) with <span class="c-green"><strong><u>two successive, independent transmissions of inheritance</u></strong></span> governed by <span class="c-teal"><strong>Article 777 of the Civil Code</strong></span>, which provides that <em>"the rights to the succession are transmitted from the moment of the death of the decedent."</em></p>
+
+  <h4 id="case-brief-dela-merced">Case Brief: <span class="c-burgundy"><em>Dela Merced v. Dela Merced</em> (G.R. No. 126707, February 25, 1999)</span></h4>
+  <blockquote>
+    <ul>
+      <li><strong>Facts:</strong> A, B, C, and D were legitimate siblings. A (Evarista) died intestate without issue, leaving an estate inherited by her surviving legitimate siblings B (Francisco), C, and D (say, ₱300 Million total, or ₱100 Million each). Subsequently, B died intestate, and his recognized illegitimate son, S (Joselito), claimed B's entire estate, including the ₱100 Million share B had inherited from his legitimate sister A; C and D opposed S's claim, invoking the Iron Curtain Rule under <span class="c-teal">Article 992</span> to argue that S, being an illegitimate child, could not inherit property originating from B's legitimate sibling A.</li>
+      <li><strong>Issue:</strong> Does <span class="c-teal">Article 992 of the Civil Code</span> bar an illegitimate child (S) from inheriting property that his deceased parent (B) had previously inherited from a legitimate sibling (A) who died <em>before</em> the parent?</li>
+      <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>No.</u></strong></span> The Supreme Court held that <span class="c-teal">Article 992</span> is completely inapplicable because B did <strong>not</strong> predecease A; rather, B survived A, and under <span class="c-teal"><strong>Article 777 of the Civil Code</strong></span>, B's one-third share (₱100 Million) in A's estate vested in B immediately upon A's death, becoming an absolute, indistinguishable part of B's own personal estate. When B subsequently died, his illegitimate son S inherited that property <span class="c-green"><strong><u>in his own right directly from his father B</u></strong></span> (as a compulsory heir of B), and <strong>not by right of representation</strong> in A's estate; hence, there was no collateral intestate succession between S and A for <span class="c-teal">Article 992</span> to block.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="admin-matters">Administrative Matters &amp; Professor's Asides</h2>
+
+  <ul>
+    <li><strong>Midterm Examination Scoring &amp; Bonus Points:</strong>
+      <ul>
+        <li><strong>Bonus on the Last Exam Question (5 Points):</strong> The Professor granted <strong>full bonus points (5 points total, 1 point per item)</strong> to the entire class on the final question of the midterm examination due to a typographical error in the prompt (which asked students to determine the <em>legitime</em> of the heirs in an <em>"intestate"</em> succession instead of testate succession). Because no student raised a query during the exam and everyone had to guess the intended premise, all examinees received full credit.</li>
+        <li><strong>Integration of Midterm Quiz Scores:</strong> Although the Professor previously announced on Google Classroom that the last five questions would serve separately as a midterm quiz while the earlier questions would constitute the midterm exam, the Professor decided to <strong>merge and include the scores from the last five questions into the main midterm exam score</strong> after computing the grades, as doing so significantly pulled up the students' overall midterm exam scores.</li>
+        <li><strong>Common Exam Pitfall (<em>Reserva Troncal</em>):</strong> Nearly no student correctly answered the computation problem involving <strong><em>reserva troncal</em></strong>. Students were advised to review the rationale and suggested answers uploaded alongside their exam scores.</li>
+        <li><strong>Release of Midterm Grades:</strong> The Professor expects to release official midterm grades around <strong>Monday, October 26</strong>, once the remaining unrecorded recitations and pending assessments are completed (noting Ms. Dalida's exam and quiz were still being finalized).</li>
+      </ul>
+    </li>
+    <li><strong>Assignments, Case Digests, and Recitation Tracking:</strong>
+      <ul>
+        <li><strong>Case Digests Deadline:</strong> The submission of the pending case digests was confirmed for <strong>October 16</strong> (following the Professor's prior approval of the class's request regarding digest submissions).</li>
+        <li><strong>Students Lacking Recitation:</strong> The Professor audited the class cards and attendance records, identifying three students who still lacked a recitation grade for the term: <strong>Mr. Boado</strong> (who works at the Bangko Sentral ng Pilipinas [BSP] and was absent during the roll call), <strong>Mr. Macalino</strong>, and <strong>Ms. Ursino</strong>. The class beadle was instructed to notify Mr. Boado to attend and recite so midterm grades can be computed.</li>
+        <li><strong>Self-Study &amp; Reading Assignments:</strong>
+          <ul>
+            <li>Students must read and study <strong>Legacies and Devises</strong> on their own to help the class catch up on lost instructional hours.</li>
+            <li>For the next meeting, the class will proceed directly to <strong>Intestate Shares and Mathematical Computations of Intestate Distribution</strong>, followed by the <strong>Provisions Common to Testate and Intestate Succession</strong> (Right of Accretion, Capacity to Succeed, Acceptance and Repudiation, Collation, and Partition).</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Upcoming Quizzes and Final Examination Coverage:</strong>
+      <ul>
+        <li><strong>Two Final-Term Quizzes:</strong> The Professor plans to administer <strong>two major quizzes</strong> prior to the final examinations:
+          <ol>
+            <li><strong>Quiz 1:</strong> Immediately after completing the <em>Provisions Common to Testate and Intestate Succession</em> (allocated approximately 1.5 hours for the quiz, with the remainder of the session devoted to case recitations).</li>
+            <li><strong>Quiz 2:</strong> Comprehensive review quiz right before the final examinations.</li>
+          </ol>
+        </li>
+        <li><strong>Cover-to-Cover Final Exam:</strong> The Final Examination in Succession Law is strictly <strong>cover-to-cover</strong> (passing threshold referenced at 60%). Students must not forget first-half doctrines (such as <em>legitimes</em>, formalities of wills, <em>preterition</em>, and <em>reserva troncal</em>) because final exam problem sets integrate midterm testamentary principles with intestate distribution.</li>
+      </ul>
+    </li>
+    <li><strong>Professor's Practical Bar Tips &amp; Litigation Insights:</strong>
+      <ul>
+        <li><strong>Constructing Comparative Study Tables:</strong> To master Succession for both law school exams and the Bar, students should personally construct comparative tables for: (1) the <strong>Grounds for Disinheritance</strong> across <span class="c-teal">Articles 919, 920, and 921</span>; (2) the <strong>Regular vs. Irregular Order of Intestate Succession</strong>; and (3) the <strong>Combinations of Compulsory Heirs for <em>Legitimes</em> vs. Intestate Shares</strong>.</li>
+        <li><strong>Mental Math &amp; Explaining Computations:</strong> In law school and Bar exams, stating a bare numerical figure (e.g., <em>"₱35 Million"</em>) or writing <em>"I believe"</em> without citing the statutory rule and showing the step-by-step division of the <em>legitime</em> and free portion will receive zero credit.</li>
+        <li><strong>Family Court Practice Insights:</strong> Drawing from Family Court experience, the Professor emphasized that the parental obligation to give <strong>support</strong> under the <span class="c-teal">Family Code</span> is a mandatory legal duty—not an optional act of generosity (<em>generosidad</em>)—and is <span class="c-green"><strong><u>never conditioned upon visitation rights</u></strong></span> or whether the father sees the child. Furthermore, in contemporary practice, petitions for declaration of nullity are filed far more frequently than petitions for legal separation because legal separation does not dissolve the marriage bond or grant the right to remarry, though the grounds for legal separation remain potent tools for spousal disinheritance under <span class="c-teal">Article 921(4)</span>.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
