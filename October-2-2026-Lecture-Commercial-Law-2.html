@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 2, 2026 Lecture - Commercial Law 2</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+h2, h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #E2E8F0;
+  margin: 2rem 0;
+}
+ul, ol {
+  padding-left: 1.5rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+.formula-box {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: Marine Insurance: Risk, Concealment, Representation, and Implied Warranties</option>
+      <option value="#topic-i">&nbsp;&nbsp;↳ I. Fundamentals &amp; Scope of Marine Insurance</option>
+      <option value="#topic-i-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept and Classifications of Marine Insurance</option>
+      <option value="#topic-i-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Risks Insured Against: Perils of the Sea vs. Perils of the Ship</option>
+      <option value="#topic-i-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Vessel Covered by Marine Insurance vs. Fire Insurance</option>
+      <option value="#topic-ii">&nbsp;&nbsp;↳ II. Concealment and Representation in Marine Insurance</option>
+      <option value="#topic-ii-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept and Rationale of Marine Concealment</option>
+      <option value="#topic-ii-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Disclosure of Information, Belief, or Expectation of Third Persons</option>
+      <option value="#topic-ii-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. When Concealment Does Not Vitiate the Entire Contract (Qualified Concealment)</option>
+      <option value="#topic-ii-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Comparative Summary: Marine Concealment vs. Ordinary Concealment</option>
+      <option value="#topic-ii-e">&nbsp;&nbsp;&nbsp;&nbsp;• E. Representation in Marine Insurance</option>
+      <option value="#topic-iii">&nbsp;&nbsp;↳ III. Implied Warranties in Marine Insurance: Seaworthiness and Deviation</option>
+      <option value="#topic-iii-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept and Enumeration of Implied Warranties</option>
+      <option value="#topic-iii-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. The Implied Warranty of Seaworthiness</option>
+      <option value="#topic-iii-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. When Seaworthiness Must Exist: General Rule vs. Statutory Exceptions</option>
+      <option value="#topic-iii-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Implied Warranty of Seaworthiness of Cargo Owners</option>
+      <option value="#topic-iii-e">&nbsp;&nbsp;&nbsp;&nbsp;• E. The Implied Warranty Against Improper Deviation</option>
+      <option value="#part-2">PART 2: Marine Losses, Abandonment, Averages, Fire Insurance, and Casualty Insurance</option>
+      <option value="#topic-iv">&nbsp;&nbsp;↳ IV. Loss, Abandonment, Averages, and Co-Insurance in Marine Policies</option>
+      <option value="#topic-iv-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Classification of Losses in Marine Insurance</option>
+      <option value="#topic-iv-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Actual Total Loss vs. Constructive Total Loss</option>
+      <option value="#topic-iv-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. The Doctrine of Abandonment</option>
+      <option value="#topic-iv-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Measure of Indemnity and Marine Averages</option>
+      <option value="#topic-iv-e">&nbsp;&nbsp;&nbsp;&nbsp;• E. Automatic Co-Insurance in Marine Insurance</option>
+      <option value="#topic-v">&nbsp;&nbsp;↳ V. Fire Insurance and Allied Risks</option>
+      <option value="#topic-v-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept, Scope, and Direct Indemnity Principle</option>
+      <option value="#topic-v-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Hostile Fire vs. Friendly Fire</option>
+      <option value="#topic-v-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Alteration of the Insured Property</option>
+      <option value="#topic-v-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Special Clauses in Fire Insurance</option>
+      <option value="#topic-vi">&nbsp;&nbsp;↳ VI. Casualty and Third-Party Liability Insurance</option>
+      <option value="#topic-vi-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept, Scope, and General Divisions</option>
+      <option value="#topic-vi-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Insurable Interest and Nature of Liability in Liability Insurance</option>
+      <option value="#topic-vi-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Direct Action by Injured Third Party Against the Insurer</option>
+      <option value="#part-3">PART 3: Life Insurance, Suretyship, CMVLI, Claims Settlement, and the Insurance Commission</option>
+      <option value="#topic-vii">&nbsp;&nbsp;↳ VII. Life Insurance: Classifications, Assignment, and Causes of Death</option>
+      <option value="#topic-vii-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept, Parties, and Distinction from Accident Insurance</option>
+      <option value="#topic-vii-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Classifications of Life Insurance Policies</option>
+      <option value="#topic-vii-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Transfer and Assignment of Life Insurance Policies</option>
+      <option value="#topic-vii-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Liability of the Insurer in Specific Causes of Death</option>
+      <option value="#topic-viii">&nbsp;&nbsp;↳ VIII. Suretyship and Microinsurance</option>
+      <option value="#topic-viii-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Contract of Suretyship</option>
+      <option value="#topic-viii-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Microinsurance</option>
+      <option value="#topic-ix">&nbsp;&nbsp;↳ IX. Compulsory Motor Vehicle Liability Insurance (CMVLI)</option>
+      <option value="#topic-ix-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Concept, Purpose, and Scope of Coverage</option>
+      <option value="#topic-ix-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. The "No-Fault" Indemnity Clause</option>
+      <option value="#topic-ix-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Special Clauses in Motor Vehicle Insurance</option>
+      <option value="#topic-ix-d">&nbsp;&nbsp;&nbsp;&nbsp;• D. Change of Ownership in CMVLI</option>
+      <option value="#topic-x">&nbsp;&nbsp;↳ X. Claims Settlement, Prescription, and the Insurance Commission</option>
+      <option value="#topic-x-a">&nbsp;&nbsp;&nbsp;&nbsp;• A. Claims vs. Claim Settlement and Statutory Payment Timeframes</option>
+      <option value="#topic-x-b">&nbsp;&nbsp;&nbsp;&nbsp;• B. Prescriptive Periods in Insurance Actions</option>
+      <option value="#topic-x-c">&nbsp;&nbsp;&nbsp;&nbsp;• C. Powers and Jurisdiction of the Insurance Commission</option>
+      <option value="#admin-matters">&nbsp;&nbsp;↳ Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <p class="c-teal"><strong>October 2, 2026 Lecture - Commercial Law 2</strong></p>
+
+  <h1 id="part-1">PART 1: MARINE INSURANCE: RISK, CONCEALMENT, REPRESENTATION, AND IMPLIED WARRANTIES</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">FUNDAMENTALS</div>
+        <div class="ui-sub">Ocean vs. Inland, Perils of Sea vs. Ship, All-Risks (Secs. 101–102)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">CONCEALMENT</div>
+        <div class="ui-sub">Uberrimae Fidei, 3rd-Party Beliefs &amp; Sec. 112 Causation (Secs. 109–115)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">WARRANTIES</div>
+        <div class="ui-sub">Seaworthiness &amp; Proper vs. Improper Deviation (Secs. 115–128)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-1-overview" class="c-navy">Part 1 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong class="c-navy">I. Fundamentals &amp; Scope of Marine Insurance:</strong> Ocean vs. Inland Marine Insurance; Perils of the Sea vs. Perils of the Ship; "All-Risks" Marine Policies; Vessel in Navigation vs. Unfinished Vessel (<span class="c-teal"><strong>Secs. 101–102, R.A. 10607</strong></span>).</li>
+    <li><strong class="c-navy">II. Concealment and Representation in Marine Insurance:</strong> Stricter Standard of <em>Uberrimae Fidei</em>; Information, Belief, or Expectation of Third Persons (<span class="c-teal"><strong>Sec. 110</strong></span>); Qualified Concealment / Matters Exonerating the Insurer Only When Causing the Loss (<span class="c-teal"><strong>Sec. 112</strong></span>); Intentional vs. Unintentional Misrepresentation (<span class="c-teal"><strong>Secs. 113–115</strong></span>).</li>
+    <li><strong class="c-navy">III. Implied Warranties in Marine Insurance (Seaworthiness and Deviation):</strong> Nature of Implied Warranties; Relativity and Legal Test of Seaworthiness (<span class="c-teal"><strong>Secs. 115–116</strong></span>); Time of Compliance and Statutory Exceptions for Time, Cargo, and Staged Voyage Policies (<span class="c-teal"><strong>Secs. 117–118</strong></span>); Scope of Seaworthiness (<span class="c-teal"><strong>Sec. 119</strong></span>); Cargo Owner's Obligation of Seaworthiness; Proper vs. Improper Deviation (<span class="c-teal"><strong>Secs. 123–128</strong></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-i" class="c-navy">I. FUNDAMENTALS &amp; SCOPE OF MARINE INSURANCE</h3>
+
+  <h4 id="topic-i-a" class="c-navy">A. Concept and Classifications of Marine Insurance</h4>
+  <p>Under <span class="c-teal"><strong>Section 101 of R.A. 10607 (The Amended Insurance Code)</strong></span>, marine insurance is broadly classified as <span class="c-green"><strong><u>transportation insurance covering loss or damage to vessels, craft, aircraft, vehicles, goods, freights, cargoes, merchandise, and all other kinds of property and interests therein, in connection with any and all risks or perils of navigation, transit, or transportation</u></strong></span>.</p>
+  <ul>
+    <li><strong class="c-navy">Two Principal Divisions:</strong>
+      <ol>
+        <li><strong class="c-navy">Inland Marine Insurance:</strong> Covers primarily the land or over-the-land transportation perils of property shipped by railroads, motor trucks, airplanes, and other means of inland transit, as well as bridges, tunnels, and piers.</li>
+        <li><strong class="c-navy">Ocean Marine Insurance:</strong> Covers property and interests exposed to maritime perils over the high seas or navigable waters, encompassing the hull (vessel), cargo, freightage (expected earnings/rent of the vessel), and liability to third persons.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🚚</div>
+        <div class="ui-title">Inland Marine</div>
+        <div class="ui-sub">Railroads, trucks, airplanes, bridges, tunnels &amp; piers</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚢</div>
+        <div class="ui-title">Ocean Marine</div>
+        <div class="ui-sub">High seas / navigable waters: hull, cargo, freightage &amp; TPL</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="topic-i-b" class="c-navy">B. Risks Insured Against: Perils of the Sea vs. Perils of the Ship</h4>
+  <p>In a standard ocean marine insurance contract, the insurer undertakes to indemnify the insured only against <span class="c-green"><strong><u>perils of the sea</u></strong></span> and not <span class="c-rust"><strong><u>perils of the ship</u></strong></span>, unless the parties expressly stipulate an <span class="c-green"><strong><u>"All-Risks" policy</u></strong></span>.</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Basis of Comparison</th>
+        <th>Perils of the Sea</th>
+        <th>Perils of the Ship</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nature of Risk</strong></td>
+        <td>Extraordinary, fortuitous, and unusual casualties and violence of the elements (wind, waves, tempest, lightning, rocks, piracy) connected with navigation.</td>
+        <td>Ordinary, natural, and inevitable action of the sea, or losses resulting from the ordinary wear and tear of the vessel or its inherent vice/unseaworthiness.</td>
+      </tr>
+      <tr>
+        <td><strong>Proximate Cause</strong></td>
+        <td>External, accidental, and unexpected maritime hazards that could not be guarded against by the ordinary exertion of human skill and prudence.</td>
+        <td>Internal defects of the hull, defective equipment, improper stowage, or negligence of the master and crew without an intervening fortuitous maritime event.</td>
+      </tr>
+      <tr>
+        <td><strong>Standard Coverage</strong></td>
+        <td><span class="c-green"><strong><u>Covered</u></strong></span> as a general rule under an ordinary marine insurance policy.</td>
+        <td><span class="c-rust"><strong><u>Not covered</u></strong></span> under an ordinary marine policy; the shipowner or insured bears the loss.</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of "All-Risks" Policy</strong></td>
+        <td>Covered automatically unless expressly excluded by the terms of the policy.</td>
+        <td><span class="c-green"><strong><u>Covered by exception</u></strong></span>, provided the loss is fortuitous and not caused by the insured's willful misconduct or fraud.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong class="c-navy">Rule on "All-Risks" Marine Policies:</strong> By way of exception, when a marine policy is issued on an <span class="c-green"><strong><u>"all-risks"</u></strong></span> basis, it covers all losses during the voyage whether arising from a peril of the sea or a peril of the ship, except when the loss is caused by the <span class="c-rust"><strong><u>willful destruction, fraud, or intentional misconduct of the insured</u></strong></span>. The <span class="c-green"><strong><u>burden of proof shifts to the insurer</u></strong></span> to establish that the loss falls cleanly within an express exclusion in the policy.</li>
+  </ul>
+
+  <h4 id="topic-i-c" class="c-navy">C. Vessel Covered by Marine Insurance vs. Fire Insurance</h4>
+  <p>Because a vessel may be damaged by fire, determining whether the governing law is Marine Insurance or Fire Insurance depends on the operational status of the craft at the time of the contract:</p>
+  <ul>
+    <li><strong class="c-navy">When Governed by Fire Insurance:</strong> If the subject matter of the policy is an <span class="c-rust"><strong><u>unfinished vessel</u></strong></span> still under construction in a shipyard, drydock, or port, has never been afloat for a voyage, or consists merely of raw materials in a shipyard intended for constructing vessels, the contract is strictly a <span class="c-teal"><strong>fire insurance policy</strong></span>.</li>
+    <li><strong class="c-navy">When Governed by Marine Insurance:</strong> If the policy covers a <span class="c-green"><strong><u>vessel engaged in navigation</u></strong></span> (or afloat and ready for maritime service), it is governed by the rules of <span class="c-teal"><strong>ocean marine insurance</strong></span>, even if the policy insures the vessel against fire risk only.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-ii" class="c-navy">II. CONCEALMENT AND REPRESENTATION IN MARINE INSURANCE</h3>
+
+  <h4 id="topic-ii-a" class="c-navy">A. Concept and Rationale of Marine Concealment</h4>
+  <p>Under <span class="c-teal"><strong>Section 26</strong></span>, concealment is the neglect to communicate that which a party knows and ought to communicate. While this definition applies to both ordinary and marine insurance, <span class="c-teal"><strong>Section 109</strong></span> imposes a much stricter standard of <em>uberrimae fidei</em> (utmost good faith) in marine insurance: each party is bound to communicate <span class="c-green"><strong><u>all the information which he possesses</u></strong></span>, material to the risk, except such as is mentioned in <span class="c-teal"><strong>Section 30</strong></span>, and to state the <span class="c-green"><strong><u>exact and whole truth</u></strong></span> in relation to all matters that he represents, or upon inquiry discloses or assumes to disclose.</p>
+  <ul>
+    <li><strong class="c-navy">Rationale for Unique Marine Concealment Rules:</strong> Unlike ordinary property or life insurance where the insurer can readily inspect the building or subject the applicant to a medical examination, a vessel or cargo may be in a foreign port or on the high seas. Moreover, marine insurance involves massive aggregate valuations (hull, multi-party cargoes, expected freightage, and charter hire) and multiple intersecting commercial parties.</li>
+  </ul>
+
+  <h4 id="topic-ii-b" class="c-navy">B. Disclosure of Information, Belief, or Expectation of Third Persons</h4>
+  <p>Under <span class="c-teal"><strong>Section 35</strong></span> governing ordinary insurance, neither party is bound to communicate information of his own judgment or opinion upon the matters in question, even if inquired into. However, <span class="c-teal"><strong>Section 110</strong></span> establishes a critical exception in marine insurance: <span class="c-green"><strong><u>In marine insurance, information of the belief or expectation of a third person, in reference to a material fact, is material and must be communicated.</u></strong></span></p>
+  <ul>
+    <li><strong class="c-navy">Rationale for Requiring Disclosure of Third-Party Beliefs:</strong> Persons operating within the maritime port environment—such as harbor pilots, stevedores, shipwrights, and officers or seamen of neighboring vessels—are not ordinary laypersons. They are <span class="c-green"><strong><u>maritime experts</u></strong></span> within the same industry whose observations and expectations regarding a vessel's condition carry technical weight and materially affect the insurer's estimation of the risk.</li>
+  </ul>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong><br>
+    While Vessel X is docked at the port being loaded with cargo, seamen and officers from an adjacent vessel observe the loading process and remark that Vessel X is listing heavily to one side (<em>"lumaladlad o bumabanking ang barko"</em>) because the cargo is not properly stowed (<em>not properly laden</em>). Even though these observers are third persons unconnected to the shipowner, crew, or cargo owner of Vessel X, their belief or expectation that the vessel is improperly laden is a <span class="c-green"><strong><u>material fact</u></strong></span> formed by industry experts. Under <span class="c-teal"><strong>Section 110</strong></span>, the insured must disclose this third-party observation to the marine insurer.</p>
+  </blockquote>
+
+  <h4 id="topic-ii-c" class="c-navy">C. When Concealment Does Not Vitiate the Entire Contract (Qualified Concealment)</h4>
+  <p>In ordinary insurance contracts, any material concealment entitles the injured party to rescind the <span class="c-rust"><strong><u>entire contract</u></strong></span>, even if the insured dies or suffers a loss from a cause completely unrelated to the concealed fact. In contrast, <span class="c-teal"><strong>Section 112</strong></span> provides a specialized rule for marine insurance where concealment regarding five specific matters <span class="c-green"><strong><u>does not vitiate the entire contract</u></strong></span>, but merely exonerates the insurer from a loss <span class="c-rust"><strong><u>resulting from the risk concealed</u></strong></span>:</p>
+  <ol>
+    <li>The <span class="c-green"><strong><u>national character</u></strong></span> of the insured;</li>
+    <li>The <span class="c-green"><strong><u>liability of the thing insured to capture and detention</u></strong></span>;</li>
+    <li>The <span class="c-green"><strong><u>liability to seizure from breach of foreign laws of trade</u></strong></span>;</li>
+    <li>The <span class="c-green"><strong><u>want of necessary documents</u></strong></span>; and</li>
+    <li>The <span class="c-green"><strong><u>use of false and simulated papers</u></strong></span>.</li>
+  </ol>
+
+  <ul>
+    <li><strong class="c-navy">Operative Rule of Causation under Section 112:</strong> If the insured conceals any of the five enumerated matters above, the marine insurance contract remains valid and subsisting. The insurer is exonerated from liability <span class="c-green"><strong><u>only if there is a causal connection</u></strong></span> (<em>"nagtama ang rason at ang fact concealed"</em>) between the concealed matter and the actual cause of the loss. If the vessel is lost due to an independent peril of the sea or a different risk, the insurer remains fully liable.</li>
+  </ul>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Concealment of 1 of the 5 Matters Under Sec. 112</div>
+      <div class="ui-sub">(National character, capture/detention, foreign trade laws, want of documents, or false/simulated papers)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Did the Loss Result Directly From the Specific Risk Concealed?</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">YES (Causal Match)</div>
+        <div class="ui-sub">Insurer is EXONERATED from the loss</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">NO (Independent Cause)</div>
+        <div class="ui-sub">Contract NOT vitiated; Insurer remains LIABLE</div>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong><br>
+    A shipowner applies for marine insurance and conceals the fact that the vessel carries high-value contraband that could attract pirates along a pirate-infested route (concealing <em>liability to capture and detention</em>). However, during the voyage, no pirates attack the ship; instead, the vessel suffers a loss because port authorities detain it for lacking required customs clearances (<em>want of necessary documents</em>), or it sinks in a typhoon. Because the concealed fact (piracy/capture risk) did not match the actual cause of the loss, the contract is <span class="c-green"><strong><u>not vitiated</u></strong></span> under <span class="c-teal"><strong>Section 112</strong></span>, and the insurer cannot avoid liability on the ground of the piracy concealment.</p>
+  </blockquote>
+
+  <h4 id="topic-ii-d" class="c-navy">D. Comparative Summary: Marine Concealment vs. Ordinary Concealment</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature / Legal Rule</th>
+        <th>Ordinary / Non-Marine Insurance</th>
+        <th>Marine Insurance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Scope of Duty to Disclose</strong></td>
+        <td>Duty to communicate material facts within the party's actual or presumed knowledge (<span class="c-teal"><strong>Secs. 26–28</strong></span>).</td>
+        <td>Duty to communicate <span class="c-green"><strong><u>all information possessed</u></strong></span> material to the risk and state the <span class="c-green"><strong><u>exact and whole truth</u></strong></span> (<span class="c-teal"><strong>Sec. 109</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Opinions, Beliefs, or Expectations of Third Persons</strong></td>
+        <td>Need <strong>not</strong> be communicated; matters of opinion or judgment are immaterial even if asked (<span class="c-teal"><strong>Sec. 35</strong></span>).</td>
+        <td>Information of the <span class="c-green"><strong><u>belief or expectation of a third person</u></strong></span> regarding a material fact <span class="c-green"><strong><u>is material</u></strong></span> and must be disclosed (<span class="c-teal"><strong>Sec. 110</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Causal Connection Between Fact Concealed and Loss</strong></td>
+        <td><span class="c-rust"><strong><u>Not required</u></strong></span> at all; any material concealment avoids the entire policy regardless of the cause of death or loss.</td>
+        <td><span class="c-green"><strong><u>Required for the 5 specific matters under Sec. 112</u></strong></span>; concealment exonerates the insurer <em>only</em> if the loss results from the specific risk concealed.</td>
+      </tr>
+      <tr>
+        <td><strong>Failure to Communicate Agent's Expectation</strong></td>
+        <td>If required by the policy terms, failure to disclose vitiates the entire contract.</td>
+        <td>Governed by <span class="c-teal"><strong>Secs. 110 and 112</strong></span>; vitiates only if material to the general risk or if it causes the specific loss under <span class="c-teal"><strong>Sec. 112</strong></span>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="topic-ii-e" class="c-navy">E. Representation in Marine Insurance</h4>
+  <p>Under <span class="c-teal"><strong>Sections 113 to 115</strong></span>, representations in marine insurance are governed by whether the falsity is intentional or unintentional:</p>
+  <ul>
+    <li><strong class="c-navy">Intentional Falsity (<span class="c-teal">Sec. 113</span>):</strong> If a representation by the insured is <span class="c-rust"><strong><u>intentionally false</u></strong></span> in any material respect, or in respect of any fact on which the character and nature of the risk depends, the insurer may <span class="c-rust"><strong><u>rescind the entire contract</u></strong></span>.</li>
+    <li><strong class="c-navy">Unintentional Falsity / Eventual Falsity (<span class="c-teal">Sec. 114</span>):</strong> The eventual falsity of a representation as to <span class="c-green"><strong><u>expectation</u></strong></span> does not, in the absence of fraud, avoid a contract of marine insurance. However, if an unintentional representation of a material fact is false, the insurer may rescind the contract from the time the representation becomes false (<span class="c-teal"><strong>Sec. 45 in relation to Sec. 113</strong></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-iii" class="c-navy">III. IMPLIED WARRANTIES IN MARINE INSURANCE: SEAWORTHINESS AND DEVIATION</h3>
+
+  <h4 id="topic-iii-a" class="c-navy">A. Concept and Enumeration of Implied Warranties</h4>
+  <p>In ordinary insurance contracts, all warranties (whether affirmative or promissory) must be <span class="c-green"><strong><u>expressly contained</u></strong></span> in the policy itself or in another instrument signed by the insured and referred to in the policy as making a part of it (<span class="c-teal"><strong>Sec. 70</strong></span>). In <strong>Marine Insurance</strong>, however, the law reads <span class="c-green"><strong><u>Implied Warranties</u></strong></span> into every contract by operation of law. Even if the policy is completely silent and the parties did not expressly stipulate them, these warranties are conclusively presumed to exist:</p>
+  <ol>
+    <li><span class="c-green"><strong><u>Implied Warranty of Seaworthiness</u></strong></span> (<span class="c-teal"><strong>Sec. 115</strong></span>);</li>
+    <li><span class="c-green"><strong><u>Implied Warranty Against Improper Deviation</u></strong></span> (<span class="c-teal"><strong>Secs. 123–128</strong></span>);</li>
+    <li><span class="c-green"><strong><u>Implied Warranty of Neutrality / National Character</u></strong></span>—that the ship will carry the requisite documents to show its nationality or neutrality and will not carry documents casting reasonable suspicion thereon (<span class="c-teal"><strong>Sec. 122</strong></span>);</li>
+    <li><span class="c-green"><strong><u>Implied Warranty of Legality of the Venture</u></strong></span>—that the adventure insured is lawful and does not violate domestic law; and</li>
+    <li><span class="c-green"><strong><u>Implied Warranty of Insurable Interest</u></strong></span>—that the insured possesses an insurable interest in the vessel, cargo, or freightage.</li>
+  </ol>
+
+  <h4 id="topic-iii-b" class="c-navy">B. The Implied Warranty of Seaworthiness</h4>
+  <p>Under <span class="c-teal"><strong>Section 115</strong></span>, in every marine insurance upon a ship or freight, or freightage, or upon anything which is the subject of marine insurance, a warranty is implied that the ship is <span class="c-green"><strong><u>seaworthy</u></strong></span>.</p>
+  <ul>
+    <li><strong class="c-navy">Definition and Test of Seaworthiness (<span class="c-teal">Sec. 116</span>):</strong> A ship is seaworthy when it is <span class="c-green"><strong><u>reasonably fit to perform the service and to encounter the ordinary perils of the voyage</u></strong></span> contemplated by the parties to the policy.</li>
+    <li><strong class="c-navy">Relativity of Seaworthiness:</strong> Seaworthiness is not an absolute or fixed engineering standard; it is a <span class="c-green"><strong><u>relative term</u></strong></span> that depends entirely upon the nature of the ship, the specific voyage to be undertaken, the season, the service to be performed, and the nature of the goods carried. A vessel that is perfectly seaworthy for inland river navigation or a calm coastal passage may be completely unseaworthy for a trans-Pacific ocean voyage.</li>
+    <li><strong class="c-navy">Comprehensive Scope of Seaworthiness (<span class="c-teal">Sec. 119</span>):</strong> A warranty of seaworthiness extends not only to the <span class="c-green"><strong><u>condition of the structure of the ship</u></strong></span> itself, but requires that:
+      <ol>
+        <li>It be <span class="c-green"><strong><u>properly laden</u></strong></span> (cargo must be properly stowed, balanced, and secured so the vessel will not list or capsize, and not overloaded beyond its Plimsoll mark);</li>
+        <li>It be provided with a <span class="c-green"><strong><u>competent master</u></strong></span>;</li>
+        <li>It be manned by a <span class="c-green"><strong><u>sufficient number of competent officers and seamen</u></strong></span>; and</li>
+        <li>It be furnished with the <span class="c-green"><strong><u>necessary appurtenances and equipment</u></strong></span> (such as anchors, cables, navigation instruments, radar, fuel, medical supplies, and stores), as well as being seaworthy in reference to the specific <span class="c-green"><strong><u>kind of cargo</u></strong></span> taken on board (<span class="c-teal"><strong>Sec. 121</strong></span>).</li>
+      </ol>
+    </li>
+  </ul>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Properly Laden</div>
+        <div class="ui-sub">Cargo stowed, balanced &amp; within Plimsoll mark</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚓</div>
+        <div class="ui-title">Competent Master</div>
+        <div class="ui-sub">Qualified ship captain in command</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">👥</div>
+        <div class="ui-title">Competent Crew</div>
+        <div class="ui-sub">Sufficient number of officers and seamen</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🧭</div>
+        <div class="ui-title">Appurtenances</div>
+        <div class="ui-sub">Equipment, radar, fuel, stores &amp; cargo fitness</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="topic-iii-c" class="c-navy">C. When Seaworthiness Must Exist: General Rule vs. Statutory Exceptions</h4>
+  <p>Under <span class="c-teal"><strong>Section 117</strong></span>, the <strong>General Rule</strong> is that an implied warranty of seaworthiness is complied with if the ship be seaworthy <span class="c-green"><strong><u>at the time of the commencement of the risk</u></strong></span>. Prior unseaworthiness (cured before sailing) or subsequent unseaworthiness arising during the voyage is not a breach of the warranty, nor is it material, provided the insured does not unreasonably delay repairing defects when the ship becomes unseaworthy during the voyage (<span class="c-teal"><strong>Sec. 120</strong></span>).</p>
+  <p>However, <span class="c-teal"><strong>Section 117</strong></span> enumerates <strong>Three Statutory Exceptions</strong> where seaworthiness must be determined at multiple points rather than once:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Type of Policy</th>
+        <th>Statutory Rule on When Seaworthiness Must Exist (<span class="c-teal">Secs. 117–118</span>)</th>
+        <th>Professor's Analytical Observation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Time Policy</strong></td>
+        <td>When the insurance is made for a <strong>specified length of time</strong> (e.g., 1 year), the implied warranty is not complied with unless the ship be seaworthy at the <span class="c-green"><strong><u>commencement of every voyage</u></strong></span> it undertakes during that time (<span class="c-teal"><strong>Sec. 117[a]</strong></span>).</td>
+        <td>In truth, these three "exceptions" are merely strict applications of the general rule to multi-part operations: every time a new voyage, a new vessel transfer, or a new voyage segment commences, the risk recommences, requiring seaworthiness at each starting point.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Cargo / Transshipment Policy</strong></td>
+        <td>When the insurance is upon <strong>cargo</strong> which, by the terms of the policy, description of the voyage, or established custom of the trade, is to be <strong>transshipped at an intermediate port</strong>, the warranty is not complied with unless <span class="c-green"><strong><u>each vessel</u></strong></span> upon which the cargo is shipped or transshipped be seaworthy at the <span class="c-green"><strong><u>commencement of each particular voyage</u></strong></span> (<span class="c-teal"><strong>Sec. 117[b]</strong></span>).</td>
+        <td>Applies when a <em>balikbayan</em> box or commercial cargo is transferred across multiple vessels at stopover ports (e.g., New York to Guam, Guam to Singapore, Singapore to Manila); each receiving vessel must be seaworthy when it departs.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Voyage in Stages Policy</strong></td>
+        <td>Where different <strong>portions or segments of the voyage</strong> contemplated by a policy differ in respect to the things requisite to make the ship seaworthy therefor (e.g., river navigation followed by open ocean navigation), the warranty is not complied with unless, at the <span class="c-green"><strong><u>commencement of each portion</u></strong></span>, the ship is seaworthy with reference to that portion (<span class="c-teal"><strong>Sec. 118</strong></span>).</td>
+        <td>Every time the vessel completes one segment and prepares to commence the next segment of a staged voyage, its fitness for that specific upcoming segment must be verified prior to departure.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="topic-iii-d" class="c-navy">D. Implied Warranty of Seaworthiness of Cargo Owners</h4>
+  <p>Under <span class="c-teal"><strong>Section 115</strong></span> and settled Supreme Court jurisprudence (<span class="c-burgundy"><em>Roque v. Intermediate Appellate Court</em>, G.R. No. L-66935</span>; <span class="c-burgundy"><em>Delsan Transport Lines, Inc. v. Court of Appeals</em>, G.R. No. 127897</span>), the implied warranty of seaworthiness attaches even when the policy is procured by the <span class="c-green"><strong><u>cargo owner</u></strong></span> rather than the shipowner.</p>
+  <ul>
+    <li><strong class="c-navy">Doctrine:</strong> A cargo owner cannot excuse the unseaworthiness of the carrying vessel by claiming he neither owns nor controls the ship. While the shipper has no physical control over the management of the vessel, <span class="c-green"><strong><u>he has complete control in the choice of the common carrier</u></strong></span> that will transport his goods. It is the legal obligation of the cargo owner to look for a reliable common carrier that keeps its vessels in seaworthy condition. If the vessel is unseaworthy, the <span class="c-rust"><strong><u>cargo insurer is discharged from liability</u></strong></span>, and the cargo owner's recourse is to sue the common carrier for breach of contract of carriage, not the marine insurer.</li>
+  </ul>
+
+  <h4 id="topic-iii-e" class="c-navy">E. The Implied Warranty Against Improper Deviation</h4>
+  <p>Under <span class="c-teal"><strong>Sections 123 to 125</strong></span>, in every marine insurance contract, the vessel must sail along the course of sailing fixed by mercantile usage (or the most natural, direct, and advantageous route if none is fixed by usage).</p>
+  <ul>
+    <li><strong class="c-navy">Four Forms of Deviation (<span class="c-teal">Sec. 125</span>):</strong> Deviation is defined as:
+      <ol>
+        <li>A <span class="c-rust"><strong><u>departure from the course of the voyage</u></strong></span> insured;</li>
+        <li>An <span class="c-rust"><strong><u>unreasonable delay</u></strong></span> in pursuing the voyage;</li>
+        <li>The <span class="c-rust"><strong><u>commencement of an entirely different voyage</u></strong></span> (e.g., sailing from Point A to Point C instead of the agreed route from Point A to Point B); or</li>
+        <li>In the case of a time policy, any departure from the limits of navigation specified.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Four Instances of Proper Deviation (<span class="c-teal">Sec. 126</span>):</strong> A deviation does <strong>not</strong> vitiate the policy and is deemed <span class="c-green"><strong><u>proper</u></strong></span> only in four specific instances:
+      <ol>
+        <li>When caused by <span class="c-green"><strong><u>circumstances over which neither the master nor the owner of the ship has any control</u></strong></span> (e.g., violent storms, strong ocean currents, icebergs, or heavy maritime traffic);</li>
+        <li>When <span class="c-green"><strong><u>necessary to comply with a warranty, or to avoid a peril</u></strong></span>, whether or not the peril is insured against;</li>
+        <li>When made in <span class="c-green"><strong><u>good faith, and upon reasonable grounds of belief</u></strong></span> in its necessity to avoid a peril; or</li>
+        <li>When made in <span class="c-green"><strong><u>good faith, for the purpose of saving human life or relieving another vessel in distress</u></strong></span>.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Strict Rule on Improper Deviation (<span class="c-teal">Secs. 127–128</span>):</strong> Under <span class="c-teal"><strong>Section 127</strong></span>, every deviation not specified in <span class="c-teal"><strong>Section 126</strong></span> is <span class="c-rust"><strong><u>improper</u></strong></span>. Under <span class="c-teal"><strong>Section 128</strong></span>, an improper deviation <span class="c-rust"><strong><u>exonerates the insurer</u></strong></span> from any loss happening to the thing insured subsequent to the improper deviation, whether or not the deviation increased the risk or caused the loss.</li>
+  </ul>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  A["Vessel Deviates From Prescribed Course / Delays Voyage (Sec. 125)"] --> B{"Does It Fall Under Any of the 4 Proper Grounds in Sec. 126?"}
+  B -->|"1. Beyond Master/Owner Control"| C["PROPER DEVIATION (Sec. 126)"]
+  B -->|"2. Necessary to Comply With Warranty / Avoid Peril"| C
+  B -->|"3. Good Faith + Reasonable Grounds of Belief"| C
+  B -->|"4. Good Faith to Save Human Life / Vessel in Distress"| C
+  B -->|"Any Other Reason (e.g., Captain's Dream)"| D["IMPROPER DEVIATION (Sec. 127)"]
+  C --> E["Policy Remains in Full Force"]
+  D --> F["Insurer EXONERATED From Subsequent Loss Regardless of Causation (Sec. 128)"]
+  style A fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px
+  style B fill:#F8FAFC,stroke:#0F766E,stroke-width:2px
+  style C fill:#ECFDF5,stroke:#166534,stroke-width:2px
+  style E fill:#ECFDF5,stroke:#166534,stroke-width:2px
+  style D fill:#FEF2F2,stroke:#C2410C,stroke-width:2px
+  style F fill:#FEF2F2,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong></p>
+    <ol>
+      <li><strong>The Captain's Dream (Bar Exam Problem):</strong> During a voyage, the ship captain dreams of his deceased grandfather (also a former seaman), who warns him in the dream to change the ship's route to avoid an impending disaster. Upon waking, the captain alters the vessel's course based solely on this dream, and the ship hits a reef and sinks along the new route. <strong>Application:</strong> The deviation is <span class="c-rust"><strong><u>improper</u></strong></span>, and the insurer is exonerated from liability. Under <span class="c-teal"><strong>Section 126(c)</strong></span>, good faith alone is insufficient; the deviation must rest upon <span class="c-green"><strong><u>reasonable grounds of belief</u></strong></span> based on objective maritime standards, radar, or weather advisories, not superstition or dreams.</li>
+      <li><strong>Medical Emergency at Sea:</strong> During an ocean voyage, the vessel's Third Officer suffers an acute, debilitating wisdom tooth infection after a week without sleep despite taking all onboard antibiotics, as the ship has no licensed doctor. The captain deviates for two days toward the nearest port in Malaysia for emergency medical relief. <strong>Application:</strong> Under <span class="c-teal"><strong>Section 126(d)</strong></span>, deviating in good faith to preserve the health or life of a crew member in severe medical distress qualifies as a <span class="c-green"><strong><u>proper deviation</u></strong></span>; hence, the marine policy remains in full force.</li>
+    </ol>
+  </blockquote>
+
+  <hr>
+
+  <h1 id="part-2">PART 2: MARINE LOSSES, ABANDONMENT, AVERAGES, FIRE INSURANCE, AND CASUALTY INSURANCE</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">MARINE LOSSES</div>
+        <div class="ui-sub">ATL vs. CTL (3/4 Rule), Abandonment, Averages &amp; Co-Insurance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">FIRE INSURANCE</div>
+        <div class="ui-sub">Hostile vs. Friendly Fire, Allied Risks &amp; Property Alterations</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">CASUALTY &amp; TPL</div>
+        <div class="ui-sub">Insurable Interest, Direct Action vs. Indemnity for Actual Loss</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-2-overview" class="c-navy">Part 2 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong class="c-navy">IV. Loss, Abandonment, Averages, and Co-Insurance in Marine Policies:</strong> Total vs. Partial Loss; Actual Total Loss vs. Constructive Total Loss and the Three-Fourths (3/4) Rule (<span class="c-teal"><strong>Secs. 130–141</strong></span>); Doctrine of Abandonment: Requisites, Effects, and Refusal (<span class="c-teal"><strong>Secs. 140–157</strong></span>); Measure of Indemnity (<span class="c-teal"><strong>Secs. 158–166</strong></span>); Particular vs. General Average (<span class="c-teal"><strong>Sec. 138; Arts. 806–818, Code of Commerce</strong></span>); Automatic Co-Insurance (<span class="c-teal"><strong>Sec. 159</strong></span>).</li>
+    <li><strong class="c-navy">V. Fire Insurance and Allied Risks:</strong> Concept and Direct Indemnity Nature (<span class="c-teal"><strong>Sec. 169</strong></span>); Hostile Fire vs. Friendly Fire; Consequential Coverages (Business Interruption, Rent, Extra Expense); Alteration of Insured Property (<span class="c-teal"><strong>Secs. 170–172</strong></span>); Option to Rebuild Clause (<span class="c-teal"><strong>Sec. 174</strong></span>) and Fallen Building Clause.</li>
+    <li><strong class="c-navy">VI. Casualty and Third-Party Liability Insurance:</strong> Concept, Scope, and Divisions (<span class="c-teal"><strong>Sec. 176</strong></span>); Insurable Interest in Liability Insurance; Direct Action by Injured Third Parties (Indemnity Against Liability vs. Indemnity Against Actual Loss); The "No Action" Clause; Contractual vs. Tortious Liability.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-iv" class="c-navy">IV. LOSS, ABANDONMENT, AVERAGES, AND CO-INSURANCE IN MARINE POLICIES</h3>
+
+  <h4 id="topic-iv-a" class="c-navy">A. Classification of Losses in Marine Insurance</h4>
+  <p>Under <span class="c-teal"><strong>Sections 130 and 131</strong></span>, a loss in marine insurance may be either <strong>total</strong> or <strong>partial</strong> (any loss that is not total is partial). Under <span class="c-teal"><strong>Section 132</strong></span>, a total loss may be either:</p>
+  <ol>
+    <li><span class="c-green"><strong><u>Actual Total Loss</u></strong></span>; or</li>
+    <li><span class="c-green"><strong><u>Constructive Total Loss</u></strong></span> (also known as <em>Technical Total Loss</em> or <em>Quasi-Total Loss</em>).</li>
+  </ol>
+  <ul>
+    <li><strong class="c-navy">Exam Terminology Note:</strong> When answering bar or classroom problems on marine losses, always use the complete statutory three-word phrases: <span class="c-green"><strong><u>"Actual Total Loss"</u></strong></span> and <span class="c-green"><strong><u>"Constructive Total Loss"</u></strong></span> (never merely "actual loss" or "constructive loss").</li>
+  </ul>
+
+  <h4 id="topic-iv-b" class="c-navy">B. Actual Total Loss vs. Constructive Total Loss</h4>
+  <p>Under <span class="c-teal"><strong>Section 133</strong></span>, an <span class="c-green"><strong><u>Actual Total Loss</u></strong></span> occurs when the subject matter is completely destroyed or rendered valueless to the owner for the purpose for which he held it, caused by:</p>
+  <ol>
+    <li>A <span class="c-green"><strong><u>total destruction</u></strong></span> of the thing insured;</li>
+    <li>The <span class="c-green"><strong><u>irretrievable loss</u></strong></span> of the thing by sinking, or by being broken up (e.g., sinking into an unrecoverable ocean trench);</li>
+    <li>Any damage to the thing which renders it <span class="c-green"><strong><u>valueless</u></strong></span> to the owner for the purpose for which he held it; or</li>
+    <li>Any <span class="c-green"><strong><u>other event which effectively deprives the owner of the possession</u></strong></span>, at the port of destination, of the thing insured (including insurmountable legal obstacles or permanent seizure).</li>
+  </ol>
+
+  <p>Under <span class="c-teal"><strong>Section 134</strong></span> in relation to <span class="c-teal"><strong>Section 141</strong></span>, a <span class="c-green"><strong><u>Constructive Total Loss (CTL)</u></strong></span> is one which gives to a person insured a right to <span class="c-green"><strong><u>abandon</u></strong></span> under <span class="c-teal"><strong>Section 141</strong></span> because, although the property is not completely destroyed, the commercial cost of saving or repairing it makes a total loss inevitable or economically impractical. Under <span class="c-teal"><strong>Section 141 (The Three-Fourths [3/4] Rule)</strong></span>, a person insured by a contract of marine insurance may abandon the thing insured and claim for a Constructive Total Loss when <span class="c-green"><strong><u>more than three-fourths (3/4)</u></strong></span> thereof in value is actually lost, or would have to be expended to recover it from the peril, specifically:</p>
+  <ol>
+    <li>If more than <span class="c-green"><strong><u>three-fourths (3/4) in value</u></strong></span> is actually lost or would have to be expended to recover it;</li>
+    <li>If it is <span class="c-green"><strong><u>injured to such an extent as to reduce its value more than three-fourths (3/4)</u></strong></span>;</li>
+    <li>If the thing insured is the <strong>ship</strong>, and the contemplated voyage cannot be lawfully performed without incurring either an expense to the insured of <span class="c-green"><strong><u>more than three-fourths (3/4) the value of the thing abandoned</u></strong></span> or a risk which a prudent man would not take under the circumstances; or</li>
+    <li>If the thing insured is <strong>cargo or freightage</strong>, and the voyage cannot be performed, nor another ship procured by the master (expenses of transshipment), within a reasonable time and with reasonable diligence, to forward the cargo, without incurring the like <span class="c-green"><strong><u>expense of more than three-fourths (3/4)</u></strong></span> of the value of the cargo or risk.</li>
+  </ol>
+
+  <h4 id="topic-iv-c" class="c-navy">C. The Doctrine of Abandonment</h4>
+  <p>Under <span class="c-teal"><strong>Section 140</strong></span>, <span class="c-green"><strong><u>Abandonment</u></strong></span> is the act of the insured by which, after a <span class="c-green"><strong><u>constructive total loss</u></strong></span>, he declares the <span class="c-green"><strong><u>relinquishment to the insurer of his interest in the thing insured</u></strong></span>.</p>
+  <ul>
+    <li><strong class="c-navy">Exclusive Applicability to Constructive Total Loss:</strong> The right of abandonment can <span class="c-green"><strong><u>only</u></strong></span> be exercised in the case of a <span class="c-green"><strong><u>Constructive Total Loss</u></strong></span>. In an <strong>Actual Total Loss</strong>, abandonment is neither necessary nor possible (<span class="c-teal"><strong>Sec. 137</strong></span>) because there is nothing left to abandon, and the insured simply claims the full indemnity outright. Conversely, in the absence of a Constructive Total Loss (i.e., when the loss is less than 3/4), the insured has <span class="c-rust"><strong><u>no right to abandon</u></strong></span>.</li>
+    <li><strong class="c-navy">Two Options of the Insured in a Constructive Total Loss:</strong> When a Constructive Total Loss occurs, the insured is not compelled to abandon; he has two distinct options:
+      <ol>
+        <li><strong class="c-navy">Option 1 (Abandon and Claim Total Loss):</strong> Exercise the right of abandonment by relinquishing all rights and title over the remaining salvage of the vessel or cargo to the insurer, and recover the <span class="c-green"><strong><u>entire insured value</u></strong></span> as for an actual total loss; or</li>
+        <li><strong class="c-navy">Option 2 (Retain Ownership and Claim Partial/Actual Loss):</strong> Decline to abandon, retain ownership and possession of the damaged vessel or cargo, and recover from the insurer only the <span class="c-green"><strong><u>actual amount of the partial loss</u></strong></span> sustained.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Statutory Requisites for a Valid Abandonment (<span class="c-teal">Secs. 142–147</span>):</strong>
+      <ol>
+        <li>There must be an actual <span class="c-green"><strong><u>Constructive Total Loss</u></strong></span> exceeding the <span class="c-green"><strong><u>3/4 threshold</u></strong></span> (<span class="c-teal"><strong>Sec. 141</strong></span>);</li>
+        <li>The abandonment must be <span class="c-green"><strong><u>neither partial nor conditional</u></strong></span>—it must be <span class="c-green"><strong><u>absolute and unconditional</u></strong></span> (<span class="c-teal"><strong>Sec. 142</strong></span>);</li>
+        <li>It must be made <span class="c-green"><strong><u>within a reasonable time</u></strong></span> after receipt of reliable information of the loss (<span class="c-teal"><strong>Sec. 143</strong></span>);</li>
+        <li>It must be <span class="c-green"><strong><u>factual</u></strong></span>—if the information upon which it is made proves incorrect, or the thing insured was restored before the abandonment was made, the abandonment is ineffectual (<span class="c-teal"><strong>Sec. 144</strong></span>);</li>
+        <li>It must be made by giving <span class="c-green"><strong><u>explicit notice</u></strong></span> thereof to the insurer, which may be done <strong>orally or in writing</strong>; however, if done orally, a <span class="c-green"><strong><u>written notice must be submitted within seven (7) days</u></strong></span> from such oral notice (<span class="c-teal"><strong>Sec. 145</strong></span>); and</li>
+        <li>The notice must specify the <span class="c-green"><strong><u>true particular cause</u></strong></span> of the loss showing a constructive total loss (<span class="c-teal"><strong>Secs. 146–147</strong></span>).</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Legal Effects of a Valid Abandonment (<span class="c-teal">Secs. 148–149</span>):</strong>
+      <ol>
+        <li><strong class="c-navy">Transfer of Interest (<span class="c-teal">Sec. 148</span>):</strong> It is equivalent to a transfer by the insured of his entire interest in the thing insured to the insurer, with all the chances of recovery and indemnity (subrogation/salvage rights).</li>
+        <li><strong class="c-navy">Transfer of Agency (<span class="c-teal">Sec. 149</span>):</strong> Upon a valid abandonment, the <span class="c-green"><strong><u>acts of the insured's agents</u></strong></span> done in good faith subsequent to the loss are at the <span class="c-green"><strong><u>risk of the insurer</u></strong></span>, and for its benefit.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Effect of Insurer's Refusal to Accept a Valid Abandonment (<span class="c-teal">Sec. 151</span>):</strong> Acceptance by the insurer is <span class="c-green"><strong><u>not necessary</u></strong></span> to validate an abandonment that complies with all statutory requisites. If the insurer refuses to accept a valid abandonment, the insurer is nonetheless <span class="c-green"><strong><u>liable as upon an actual total loss</u></strong></span>, deducting from the amount any proceeds of the thing insured which may have come to the hands of the insured.</li>
+  </ul>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Constructive Total Loss Occurs (&gt; 3/4 Value Lost or Expended, Sec. 141)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Insured's Election of Remedy (Sec. 140)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">1</div>
+        <div class="ui-title">Option 1: Abandon to Insurer</div>
+        <div class="ui-sub">Relinquish remaining salvage (Secs. 142–147) &amp; recover FULL insured value as Actual Total Loss</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">2</div>
+        <div class="ui-title">Option 2: Do Not Abandon</div>
+        <div class="ui-sub">Retain ownership of damaged vessel/cargo &amp; recover actual PARTIAL loss sustained</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="topic-iv-d" class="c-navy">D. Measure of Indemnity and Marine Averages</h4>
+  <ul>
+    <li><strong class="c-navy">Measure of Indemnity (<span class="c-teal">Secs. 158–166</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">Valued Policy (<span class="c-teal">Sec. 158</span>):</strong> A valuation in the policy is <span class="c-green"><strong><u>conclusive</u></strong></span> between the parties in adjusting either a partial or a total loss, if the insured has some interest at risk and there is no fraud.</li>
+        <li><strong class="c-navy">Open Policy (<span class="c-teal">Sec. 163</span>):</strong> When the policy does not fix the value, the value is estimated at the <span class="c-green"><strong><u>commencement of the risk</u></strong></span> (e.g., value of the ship at the outset of the voyage, prime cost of the cargo at the port of loading plus expenses of lading and cost of insurance, and gross freightage exclusive of primage).</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Concept and Classification of Averages (<span class="c-teal">Sec. 138; Arts. 806–818, Code of Commerce</span>):</strong><br>
+      An <span class="c-green"><strong><u>Average</u></strong></span> refers to any <span class="c-green"><strong><u>extraordinary or accidental expense</u></strong></span> incurred during the voyage for the preservation of the vessel, cargo, or both, and all damages or deterioration suffered by the vessel from departure to arrival, or by the cargo from loading to unloading. Ordinary operating projections (such as routine fuel/bunker oil, crew wages, and standard port dues) are <span class="c-rust"><strong><u>not</u></strong></span> averages.</li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Basis of Comparison</th>
+        <th>Particular (Simple) Average</th>
+        <th>General (Gross) Average</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definition &amp; Nature</strong></td>
+        <td>Includes all damages and expenses caused to the vessel or to her cargo which have <span class="c-rust"><strong><u>not inured to the common benefit</u></strong></span> and profit of all the persons interested in the vessel and her cargo (<span class="c-teal"><strong>Art. 809, Code of Commerce</strong></span>).</td>
+        <td>Includes all damages and expenses which are <span class="c-green"><strong><u>deliberately caused</u></strong></span> in order to save the vessel, its cargo, or both at the same time, from a real and known risk, and which <span class="c-green"><strong><u>inured to the common benefit</u></strong></span> (<span class="c-teal"><strong>Art. 811, Code of Commerce</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Requisites</strong></td>
+        <td>1. Accidental or isolated damage/expense;<br>2. Absence of common danger or deliberate sacrifice;<br>3. Does not benefit the other maritime interests.</td>
+        <td>1. Common danger to both vessel and cargo;<br>2. Deliberate sacrifice of part of the vessel or cargo;<br>3. Successful saving of the vessel/remaining cargo;<br>4. Compliance with legal formalities by the captain.</td>
+      </tr>
+      <tr>
+        <td><strong>Who Bears the Loss</strong></td>
+        <td>Borne <span class="c-rust"><strong><u>alone by the owner</u></strong></span> of the thing (vessel or specific cargo) that suffered the damage or gave rise to the expense (<span class="c-teal"><strong>Art. 810</strong></span>).</td>
+        <td>Borne <span class="c-green"><strong><u>proportionately (by contribution) by all the parties</u></strong></span> who benefited from the sacrifice—the shipowner and all owners of the saved cargo (<span class="c-teal"><strong>Art. 812</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Liability of Marine Insurer</strong></td>
+        <td>The insurer of the damaged item pays the loss unless the policy contains a "Free From Particular Average" (FPA) clause (<span class="c-teal"><strong>Sec. 138</strong></span>).</td>
+        <td>The marine insurers of the saved vessel and saved cargoes are liable to pay the <span class="c-green"><strong><u>general average contributions</u></strong></span> assessed against their respective insureds (<span class="c-teal"><strong>Sec. 166</strong></span>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong></p>
+    <ol>
+      <li><strong>General Average (Jettison / <em>"The Boat is Sinking"</em>):</strong> During a violent storm at sea, a cargo vessel begins listing dangerously and is about to sink under its heavy load. To save the ship, the crew's lives, and the remaining cargo, the captain deliberately jettisons (throws overboard) Cargo A belonging to Shipper X. Because this deliberate sacrifice saved the vessel and the cargoes of Shippers Y and Z, it <span class="c-green"><strong><u>inured to the common benefit</u></strong></span> of all parties and constitutes a <span class="c-green"><strong><u>General Average</u></strong></span>. The shipowner, Shipper Y, and Shipper Z (and their respective marine insurers) must contribute proportionately to indemnify Shipper X for the sacrificed Cargo A.</li>
+      <li><strong>Particular Average:</strong> During a calm voyage, crew members get into a brawl on deck and accidentally knock Cargo B overboard, or seawater leaks into a single hold and spoils only Cargo B. Because this loss was not a deliberate sacrifice and did not inure to the common benefit of the vessel and other cargo owners, it is a <span class="c-rust"><strong><u>Particular Average</u></strong></span> borne solely by the owner of Cargo B (or his insurer, subject to any fault of the carrier).</li>
+    </ol>
+  </blockquote>
+
+  <h4 id="topic-iv-e" class="c-navy">E. Automatic Co-Insurance in Marine Insurance</h4>
+  <p>Under <span class="c-teal"><strong>Section 159</strong></span>, a marine insurer is liable upon a <strong>partial loss</strong>, only for such <span class="c-green"><strong><u>proportion of the amount insured by him as the loss bears to the value of the whole interest of the insured</u></strong></span> in the property insured.</p>
+  <ul>
+    <li><strong class="c-navy">Operative Rule on Marine Co-Insurance:</strong> In marine insurance, when the property is insured for <strong>less than its full value</strong> (under-insurance) and suffers a <strong>partial loss</strong>, the insured is automatically considered a <span class="c-green"><strong><u>co-insurer</u></strong></span> for the uninsured difference, even without an express co-insurance stipulation in the policy:
+      <div class="formula-box">
+        Insurer's Liability = (Amount of Insurance &divide; Total Value of Property) &times; Amount of Partial Loss
+      </div>
+      <em>(Note: In Fire Insurance, co-insurance is never presumed and applies only if expressly stipulated via a co-insurance clause; in Marine Insurance, co-insurance applies by operation of law under <span class="c-teal"><strong>Section 159</strong></span> in all partial losses).</em>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-v" class="c-navy">V. FIRE INSURANCE AND ALLIED RISKS</h3>
+
+  <h4 id="topic-v-a" class="c-navy">A. Concept, Scope, and Direct Indemnity Principle</h4>
+  <p>Under <span class="c-teal"><strong>Section 169</strong></span>, <span class="c-green"><strong><u>Fire Insurance</u></strong></span> includes insurance against loss by <strong>fire</strong>, and—when covered by extension or riders to fire insurance policies or by separate policies—loss by <span class="c-green"><strong><u>lightning, windstorm, tornado, or earthquake and other allied risks</u></strong></span>.</p>
+  <ul>
+    <li><strong class="c-navy">Contract of Indemnity for Direct Loss Only:</strong> Standard fire insurance is strictly a contract of indemnity covering <span class="c-green"><strong><u>actual and direct physical loss or damage</u></strong></span> to the insured property caused by fire. Unless covered by specific allied riders, a standard fire policy does not cover indirect or consequential economic losses (such as the insured's inability to report for work or loss of business profits).</li>
+    <li><strong class="c-navy">Allied Consequential Coverages (By Express Rider or Separate Policy):</strong>
+      <ol>
+        <li><strong class="c-navy">Business Interruption Insurance:</strong> Indemnifies the insured for loss of earnings (net profits that would have been realized had the business continued) and fixed operating expenses that continue despite the temporary shutdown of the business due to fire.</li>
+        <li><strong class="c-navy">Rent Insurance:</strong> Protects the property owner/lessor or lessee against the loss of rental income or rental value when the premises are rendered untenantable by fire.</li>
+        <li><strong class="c-navy">Extra Expense Insurance:</strong> Covers extraordinary expenses incurred by the insured (such as urgently leasing temporary commercial space and equipment) to maintain continuous operations and avoid an interruption of service following a fire.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="topic-v-b" class="c-navy">B. Hostile Fire vs. Friendly Fire</h4>
+  <p>To recover under a fire insurance policy, the proximate cause of the loss must be a <span class="c-green"><strong><u>Hostile Fire</u></strong></span>, not a <span class="c-rust"><strong><u>Friendly Fire</u></strong></span>:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Basis of Comparison</th>
+        <th>Friendly Fire</th>
+        <th>Hostile Fire</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definition &amp; Location</strong></td>
+        <td>A fire that <span class="c-rust"><strong><u>burns in a place where it was intended to burn and ought to be</u></strong></span>, remaining completely confined within its designated receptacle (e.g., a flame inside a fireplace, chimney, furnace, gas stove, or a lit candle wick).</td>
+        <td>A fire that becomes uncontrollable or <span class="c-green"><strong><u>escapes from the place where it was intended to burn and ought to be</u></strong></span> (e.g., a candle flame that ignites a curtain and spreads to the house).</td>
+      </tr>
+      <tr>
+        <td><strong>Liability of Insurer</strong></td>
+        <td><span class="c-rust"><strong><u>Insurer is NOT liable.</u></strong></span> Damage caused merely by smoke, soot, or excessive heat from a fire that never escaped its proper receptacle is not recoverable.</td>
+        <td><span class="c-green"><strong><u>Insurer IS liable.</u></strong></span> Once the fire escapes its intended confinement, the insurer is liable for all direct fire, smoke, water, and firefighting damages.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong></p>
+    <ol>
+      <li><strong>Confined LPG Stove vs. Escaping Flame:</strong> If a flame remains confined inside a fireplace or kitchen gas stove and merely emits heavy smoke that discolors the walls, or if a mechanical rupture causes an explosion without the fire escaping to burn the house, it remains a <span class="c-rust"><strong><u>Friendly Fire</u></strong></span> (or an unindemnified explosion loss unless covered by an explosion rider), and the fire insurer is not liable. However, if a lit candle is placed too close to a window curtain, and the flame jumps from the wick onto the curtain and burns the room, the friendly fire has transformed into a <span class="c-green"><strong><u>Hostile Fire</u></strong></span>, making the insurer fully liable.</li>
+      <li><strong>Wildfires:</strong> While a forest wildfire has no specific man-made receptacle where it was "intended to burn," if an uncontrolled wildfire spreads onto the insured's property and burns the insured structure, it operates as a <span class="c-green"><strong><u>Hostile Fire</u></strong></span> (or is alternatively covered under natural calamity/fortuitous event extensions).</li>
+    </ol>
+  </blockquote>
+
+  <h4 id="topic-v-c" class="c-navy">C. Alteration of the Insured Property</h4>
+  <p>While an insured generally retains the right to use and modify his property, <span class="c-teal"><strong>Sections 170 to 172</strong></span> govern when an <strong>Alteration</strong>—the introduction of a change in the use or condition of the thing insured—entitles the insurer to <span class="c-rust"><strong><u>rescind</u></strong></span> a fire insurance contract:</p>
+  <ul>
+    <li><strong class="c-navy">Five Requisites for Alteration to Rescind a Fire Policy (<span class="c-teal">Sec. 170</span>):</strong>
+      <ol>
+        <li>The <span class="c-green"><strong><u>use or condition</u></strong></span> of the thing insured is <span class="c-green"><strong><u>altered</u></strong></span>;</li>
+        <li>The use or condition is <span class="c-green"><strong><u>limited by the policy</u></strong></span> (either expressly or impliedly);</li>
+        <li>The alteration is made <span class="c-green"><strong><u>without the consent of the insurer</u></strong></span>;</li>
+        <li>The alteration is made <span class="c-green"><strong><u>by means within the control of the insured</u></strong></span>; and</li>
+        <li>The alteration <span class="c-rust"><strong><u>increases the risk</u></strong></span> (or, under <span class="c-teal"><strong>Sec. 172</strong></span>, even if it does <em>not</em> increase the risk, the act <span class="c-rust"><strong><u>expressly violates the provisions of the policy</u></strong></span>).</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Alterations That Do NOT Avoid the Policy (<span class="c-teal">Secs. 171–172</span>):</strong>
+      <ol>
+        <li>An alteration in the use or condition of the thing insured which <span class="c-green"><strong><u>does not increase the risk</u></strong></span>, unless it directly violates an express policy provision (<span class="c-teal"><strong>Sec. 171</strong></span>);</li>
+        <li>When the questioned articles kept on the premises are <span class="c-green"><strong><u>necessarily required by the nature of the insured business</u></strong></span> covered by the policy, or where the policy would be rendered useless if such acts were prohibited; or</li>
+        <li>When the increase of risk is caused purely by <span class="c-green"><strong><u>accident</u></strong></span> or fortuitous circumstances <span class="c-green"><strong><u>beyond the insured's control</u></strong></span>.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Alteration by the Insured's Employees or Tenants:</strong> Because a lessor/employer has legal control over his premises and lessees, an alteration that increases the risk committed by the <span class="c-rust"><strong><u>insured's staff or tenant</u></strong></span> is deemed within the control of the insured and <span class="c-rust"><strong><u>avoids the policy</u></strong></span>.</li>
+  </ul>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong><br>
+    A warehouse owner procures a fire insurance policy declaring that the warehouse stores only non-hazardous goods such as snacks (<em>chichirya</em>) and frozen foods. During the <em>"ber"</em> months leading up to New Year's Eve, the owner (or his tenant) uses the warehouse to store fireworks (<em>paputok</em>) without the insurer's consent, or blocks the mandatory fire exits. Because storing fireworks alters the use and condition of the property within the insured's control and drastically <span class="c-rust"><strong><u>increases the risk of fire</u></strong></span>, the insurer is entitled to <span class="c-rust"><strong><u>rescind the policy</u></strong></span> under <span class="c-teal"><strong>Section 170</strong></span>.</p>
+  </blockquote>
+
+  <h4 id="topic-v-d" class="c-navy">D. Special Clauses in Fire Insurance</h4>
+  <ul>
+    <li><strong class="c-navy">Option to Rebuild Clause (<span class="c-teal">Sec. 174</span>):</strong> In open policies, the parties may stipulate that instead of paying the pecuniary amount of the loss in cash, the insurer reserves the <span class="c-green"><strong><u>option to rebuild, reinstate, or replace</u></strong></span> the damaged or destroyed property at the insurer's expense within a reasonable time.</li>
+    <li><strong class="c-navy">Fallen Building Clause:</strong> A standard stipulation in fire insurance policies providing that if the insured building, or any material part thereof, <span class="c-rust"><strong><u>falls except as the result of fire</u></strong></span> (e.g., collapses due to structural defect, landslide, or earthquake), all insurance by the policy on such building or its contents shall <span class="c-rust"><strong><u>immediately cease</u></strong></span>. Consequently, if a fire breaks out <em>after</em> the building has already fallen from a non-fire cause, the insurer is not liable because the fire was not the proximate cause of the collapse and the policy had already terminated upon the fall.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-vi" class="c-navy">VI. CASUALTY AND THIRD-PARTY LIABILITY INSURANCE</h3>
+
+  <h4 id="topic-vi-a" class="c-navy">A. Concept, Scope, and General Divisions</h4>
+  <p>Under <span class="c-teal"><strong>Section 176</strong></span>, <span class="c-green"><strong><u>Casualty Insurance</u></strong></span> is insurance covering <span class="c-green"><strong><u>loss or liability arising from accident or mishap</u></strong></span>, excluding certain types of loss which by law or custom are considered as falling exclusively within the scope of other types of insurance such as fire or marine.</p>
+  <ul>
+    <li><strong class="c-navy">Common Examples of Casualty Insurance:</strong> Personal accident and health insurance; public liability insurance; employer's liability and workmen's compensation insurance; burglary, robbery, and theft insurance; Compulsory Third Party Liability (CTPL) motor vehicle insurance; and <strong>plate glass insurance</strong> (insuring expensive structural glass panels of commercial buildings against accidental breakage or strong winds).</li>
+    <li><strong class="c-navy">Two General Divisions of Casualty Insurance:</strong>
+      <ol>
+        <li><strong class="c-navy">Accident or Health Insurance:</strong> Covers injuries, disability, loss of limb, medical expenses, or death suffered by the insured himself due to accidental means.</li>
+        <li><strong class="c-navy">Third-Party Liability (TPL) Insurance:</strong> A contract of indemnity for the benefit of the insured and those in privity with him (or those to whom the law on grounds of public policy extends indemnity) against <span class="c-green"><strong><u>liability</u></strong></span> to third persons for bodily injury or property damage arising from an accident for which the insured may be held legally responsible.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="topic-vi-b" class="c-navy">B. Insurable Interest and Nature of Liability in Liability Insurance</h4>
+  <ul>
+    <li><strong class="c-navy">Insurable Interest in Liability Insurance:</strong> Unlike life insurance (interest in one's own life or specified relationships) or property insurance (interest in the preservation of one's own property), the insurable interest of the insured in Third-Party Liability insurance lies in the <span class="c-green"><strong><u>safety of other persons and their property</u></strong></span> who may maintain an action against him in case of their accidental injury or destruction.</li>
+    <li><strong class="c-navy">Contractual vs. Tortious Liability (No Solidary Liability):</strong> In a vehicular or premise accident, the liability of the offending insured to the injured third party is based on <strong>quasi-delict (torts)</strong> or crime, which is unlimited (covering actual, moral, and exemplary damages). In contrast, the liability of the insurer is based strictly on the <span class="c-green"><strong><u>insurance contract</u></strong></span> and is <span class="c-green"><strong><u>limited to the face value/coverage limit</u></strong></span> of the policy. Therefore, the insurer is <span class="c-rust"><strong><u>never solidarily liable</u></strong></span> with the insured for the entire tort judgment beyond the policy limits.</li>
+  </ul>
+
+  <h4 id="topic-vi-c" class="c-navy">C. Direct Action by Injured Third Party Against the Insurer</h4>
+  <p>When an innocent third party is injured or suffers property damage due to the fault of an insured driver or property owner, whether the injured third party can <span class="c-green"><strong><u>sue the insurer directly</u></strong></span> depends on the nature of the liability policy (<span class="c-burgundy"><em>Guingona v. Del Monte</em>, G.R. No. L-21806</span>; <span class="c-burgundy"><em>Shafer v. Judge, RTC of Olongapo</em>, G.R. No. 78848</span>):</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Type of Liability Policy</th>
+        <th>When Insurer's Obligation Attaches</th>
+        <th>Right of Injured Third Party to Sue Insurer Directly</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Indemnity Against Third-Party Liability</strong></td>
+        <td>Liability attaches the moment the <span class="c-green"><strong><u>insured becomes legally liable</u></strong></span> to the third person upon the occurrence of the accident/injury, even before the insured pays anything.</td>
+        <td><span class="c-green"><strong><u>YES.</u></strong></span> The injured third party may <span class="c-green"><strong><u>directly sue</u></strong></span> the insurer (or implead the insurer together with the insured) to recover up to the policy limit.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Indemnity Against Actual Loss or Payment</strong></td>
+        <td>Liability attaches only after the insured has <span class="c-rust"><strong><u>actually paid</u></strong></span> the third person's claim following a final court judgment.</td>
+        <td><span class="c-rust"><strong><u>NO.</u></strong></span> The injured third party has <span class="c-rust"><strong><u>no direct cause of action</u></strong></span> against the insurer; he must first sue the insured, obtain a final judgment, and execute against the insured, who then seeks reimbursement from the insurer.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong class="c-navy">The "No Action" Clause:</strong> A stipulation in a liability insurance policy providing that no action shall lie against the insurer unless <span class="c-rust"><strong><u>suit and final judgment be first obtained against the insured</u></strong></span>, and only thereafter can the injured person recover on the policy. <em>(Note: Jurisprudence holds that a "No Action" clause cannot prevail over Rules of Court provisions on third-party complaints or over policies that are expressly contracts of indemnity against liability).</em></li>
+  </ul>
+
+  <hr>
+
+  <h1 id="part-3">PART 3: LIFE INSURANCE, SURETYSHIP, CMVLI, CLAIMS SETTLEMENT, AND THE INSURANCE COMMISSION</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">LIFE INSURANCE</div>
+        <div class="ui-sub">Policies, Assignment, Execution, Suicide &amp; Beneficiary Forfeiture</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">SURETY &amp; MICRO</div>
+        <div class="ui-sub">Solidary Bond Liability &amp; Microinsurance Thresholds</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">CMVLI</div>
+        <div class="ui-sub">No-Fault Indemnity (Php 30k), Authorized Driver &amp; Theft Clauses</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">CLAIMS &amp; IC</div>
+        <div class="ui-sub">Payment Timelines, Prescription &amp; Php 5M Concurrent Jurisdiction</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="part-3-overview" class="c-navy">Part 3 Overview &amp; Scope of Topics</h4>
+  <ul>
+    <li><strong class="c-navy">VII. Life Insurance: Classifications, Assignment, and Causes of Death:</strong> Nature of Life Insurance vs. Accident Insurance (<span class="c-teal"><strong>Secs. 181–182</strong></span>); Classifications of Life Policies (Ordinary, Limited Payment, Endowment, Term, Variable/VUL, Industrial under <span class="c-teal"><strong>Secs. 235–240</strong></span>); Transfer and Assignment of Life Policies (<span class="c-teal"><strong>Secs. 184–185</strong></span>); Liability in Specific Causes of Death: Execution, Suicide (<span class="c-teal"><strong>Sec. 183</strong></span>), and Willful Killing by the Beneficiary (<span class="c-teal"><strong>Sec. 12</strong></span>).</li>
+    <li><strong class="c-navy">VIII. Suretyship and Microinsurance:</strong> Suretyship as Insurance Business (<span class="c-teal"><strong>Sec. 177</strong></span>); Nature of Surety's Liability (<span class="c-teal"><strong>Sec. 178</strong></span>); Types of Surety Bonds; Microinsurance (<span class="c-teal"><strong>Sec. 187</strong></span>).</li>
+    <li><strong class="c-navy">IX. Compulsory Motor Vehicle Liability Insurance (CMVLI):</strong> Purpose, Scope, and Amended Indemnity Limits (<span class="c-teal"><strong>Secs. 386–402</strong></span>); The "No-Fault" Indemnity Clause (<span class="c-teal"><strong>Sec. 391</strong></span>); Special Clauses (Cooperation, Authorized Driver, and Theft Clauses); Change of Ownership and Prescriptive Periods.</li>
+    <li><strong class="c-navy">X. Claims Settlement, Prescription, and the Insurance Commission:</strong> Claims vs. Claim Settlement; Statutory Payment Periods and Penalties for Delay (<span class="c-teal"><strong>Secs. 247–250</strong></span>); Fraudulent Claims (<span class="c-teal"><strong>Sec. 251</strong></span>); Prescription of Actions (<span class="c-teal"><strong>Sec. 63</strong></span>); Administrative and Adjudicatory Jurisdiction of the Insurance Commission (<span class="c-teal"><strong>Secs. 437–439</strong></span>).</li>
+    <li><strong class="c-navy">Administrative Matters &amp; Professor's Asides.</strong></li>
+  </ul>
+
+  <hr>
+
+  <h3 id="topic-vii" class="c-navy">VII. LIFE INSURANCE: CLASSIFICATIONS, ASSIGNMENT, AND CAUSES OF DEATH</h3>
+
+  <h4 id="topic-vii-a" class="c-navy">A. Concept, Parties, and Distinction from Accident Insurance</h4>
+  <p>Under <span class="c-teal"><strong>Sections 181 and 182</strong></span>, <span class="c-green"><strong><u>Life Insurance</u></strong></span> is insurance on human lives and insurance appertaining thereto or connected therewith, including every contract or pledge for the payment of endowments or annuities. It may be made payable on the <span class="c-green"><strong><u>death of the person</u></strong></span>, or on his <span class="c-green"><strong><u>surviving a specified period</u></strong></span>, or contingently on the continuance or cessation of life.</p>
+  <ul>
+    <li><strong class="c-navy">Parties to a Life Policy:</strong> A person may procure insurance on his own life and designate any beneficiary (subject to <span class="c-teal"><strong>Article 2012 in relation to Article 739 of the Civil Code</strong></span>), or a person may procure insurance on the life of another person in whom he has an <span class="c-green"><strong><u>insurable interest</u></strong></span> under <span class="c-teal"><strong>Section 10</strong></span> (himself, spouse and children, person on whom he depends for education/support or in whom he has a pecuniary interest, debtor, or person under a legal obligation to him) and designate himself or another as beneficiary.</li>
+    <li><strong class="c-navy">Life Insurance vs. Accident Insurance:</strong>
+      <ol>
+        <li><strong class="c-navy">Traditional Life Insurance:</strong> Provides a monetary fund for the benefit of the estate, heirs, or designated beneficiaries of the insured strictly <span class="c-green"><strong><u>after the insured's death</u></strong></span> (or upon surviving an endowment period).</li>
+        <li><strong class="c-navy">Accident Insurance (or Accidental Death &amp; Dismemberment Rider):</strong> Protects the insured during his lifetime against <span class="c-green"><strong><u>loss of time, disability, loss of limb or sight, and medical expenses</u></strong></span> resulting from accidental bodily injury, and pays an additional indemnity if death results from an accident.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="topic-vii-b" class="c-navy">B. Classifications of Life Insurance Policies</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Type of Life Policy</th>
+        <th>Key Statutory &amp; Operational Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Ordinary / Whole Life Policy</strong></td>
+        <td>Traditional life insurance without an investment component; the insured pays premiums throughout his life, and the face value is payable <span class="c-green"><strong><u>only upon the death</u></strong></span> of the insured.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Limited Payment Life Policy</strong></td>
+        <td>Premiums are payable only for a <span class="c-green"><strong><u>specified limited period</u></strong></span> (e.g., 5, 10, or 20 years). In strict limited-term variants described in the lecture, coverage or payment is tied to the specified period; in standard whole-life limited-pay policies, once the payment period expires, the policy is fully paid up for life.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Endowment Policy</strong></td>
+        <td>The insured pays premiums for a specified period (e.g., 10 or 20 years). If the insured <span class="c-green"><strong><u>dies within the period</u></strong></span>, the beneficiaries receive the face value; if the insured <span class="c-green"><strong><u>outlives/survives the period</u></strong></span>, the face value is paid directly to the <span class="c-green"><strong><u>insured himself</u></strong></span> while alive.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Term Insurance Policy</strong></td>
+        <td>Provides temporary life coverage for a <span class="c-green"><strong><u>fixed period or term</u></strong></span> (often via a single lump-sum premium or fixed-term payments, frequently marketed to retirees or high-net-worth individuals). If the insured dies within the term, the beneficiaries recover; if he <span class="c-rust"><strong><u>outlives the term, no one recovers</u></strong></span> unless the policy includes a return-of-premium or interest feature.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Variable Life Policy (VUL)</strong></td>
+        <td>Combines life insurance protection with an <span class="c-green"><strong><u>investment component</u></strong></span> (<span class="c-teal"><strong>Secs. 238–240</strong></span>), where benefits or cash values vary according to the investment performance of separate equity/bond accounts managed by the insurer.</td>
+      </tr>
+      <tr>
+        <td><strong>6. Industrial Life Policy</strong></td>
+        <td>Under <span class="c-teal"><strong>Section 235</strong></span>, that form of life insurance under which the premiums are payable <span class="c-green"><strong><u>weekly</u></strong></span>, or where the premiums are payable <span class="c-green"><strong><u>monthly or oftener, but not less than weekly</u></strong></span>, if the <span class="c-green"><strong><u>face amount of insurance is Php 2,000 or less</u></strong></span> (or the statutory cap) and the words <span class="c-green"><strong><u>"Industrial Policy"</u></strong></span> are printed upon the policy as part of the descriptive matter.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="topic-vii-c" class="c-navy">C. Transfer and Assignment of Life Insurance Policies</h4>
+  <p>Unlike property insurance—where a transfer of the property without a corresponding transfer of the policy consented to by the insurer suspends the insurance—<span class="c-teal"><strong>Sections 184 and 185</strong></span> establish a liberal rule for transferring life policies:</p>
+  <ul>
+    <li><strong class="c-navy">No Insurable Interest Required in the Transferee (<span class="c-teal">Sec. 184</span>):</strong> A policy of insurance upon life or health may pass by <span class="c-green"><strong><u>transfer, will, or succession to any person, whether he has an insurable interest or not</u></strong></span>, and such person may recover upon it whatever the insured might have recovered.</li>
+    <li><strong class="c-navy">Notice to Insurer Not Required for Validity (<span class="c-teal">Sec. 185</span>):</strong> Notice to an insurer of a transfer or bequest thereof is <span class="c-green"><strong><u>not necessary to preserve the validity of a policy</u></strong></span> of insurance upon life or health, unless thereby <span class="c-rust"><strong><u>expressly required</u></strong></span> by the policy. <em>(Professor's Practical Note: While valid in law without notice or insurable interest in the assignee, in actual practice insurers strictly scrutinize informal assignments to prevent wagering contracts, so transfers should always be officially endorsed).</em></li>
+  </ul>
+
+  <h4 id="topic-vii-d" class="c-navy">D. Liability of the Insurer in Specific Causes of Death</h4>
+  <ol>
+    <li><strong class="c-navy">Death at the Hands of the Law (Legal Execution):</strong>
+      <ul>
+        <li>If the <strong>insured</strong> dies by legal execution (e.g., lethal injection following a final criminal conviction), the beneficiaries <span class="c-green"><strong><u>can recover</u></strong></span> on the life policy, as death at the hands of the law is not an excepted risk under the Insurance Code and is one of the risks assumed by the insurer.</li>
+        <li>However, if the <strong>beneficiary</strong> is the one executed or commits a felony against the insured, the beneficiary (or his heirs claiming through his unlawful act) <span class="c-rust"><strong><u>cannot profit from his own crime</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Suicide by the Insured (<span class="c-teal">Sec. 183</span>):</strong><br>
+      The insurer in a life insurance contract is <span class="c-green"><strong><u>liable in case of suicide</u></strong></span> only in the following three instances:
+      <ul>
+        <li><strong class="c-navy">After Two (2) Years:</strong> When the suicide is committed <span class="c-green"><strong><u>after the policy has been in force for a period of two (2) years</u></strong></span> from the date of its issue or of its last reinstatement;</li>
+        <li><strong class="c-navy">Shortened Period by Stipulation:</strong> When the suicide is committed after a <span class="c-green"><strong><u>shorter period</u></strong></span> (e.g., 1 year) <span class="c-green"><strong><u>stipulated in the policy</u></strong></span>, because <span class="c-teal"><strong>Section 183</strong></span> allows the policy to provide a shorter waiting period favorable to the insured; or</li>
+        <li><strong class="c-navy">State of Insanity (Regardless of Time):</strong> If the suicide is committed in a <span class="c-green"><strong><u>state of insanity</u></strong></span>, the insurer is <span class="c-green"><strong><u>always liable regardless of the date of commission</u></strong></span> (even if committed within 24 hours of policy issuance, as the 2-year waiting period does not apply to insane suicide).</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Willful Killing of the Insured by the Beneficiary (<span class="c-teal">Sec. 12</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">General Rule (Forfeiture):</strong> The interest of a beneficiary in a life insurance policy shall be <span class="c-rust"><strong><u>forfeited</u></strong></span> when the beneficiary is the <span class="c-rust"><strong><u>principal, accomplice, or accessory in willfully bringing about the death of the insured</u></strong></span>.</li>
+        <li><strong class="c-navy">Three Exceptions (When the Beneficiary Can Still Recover Despite Causing Death):</strong> Because the law requires that the killing be <span class="c-green"><strong><u>"willful"</u></strong></span> and felonious, the beneficiary does <strong>not</strong> forfeit his share and <span class="c-green"><strong><u>can still recover</u></strong></span> if the death of the insured was caused by:
+          <ol>
+            <li><span class="c-green"><strong><u>Accidental killing</u></strong></span> (lack of intent/willfulness);</li>
+            <li><span class="c-green"><strong><u>Self-defense</u></strong></span> (justifying circumstance where the insured unlawfully provoked/attacked the beneficiary); or</li>
+            <li><span class="c-green"><strong><u>Insanity of the beneficiary</u></strong></span> at the time of the killing (exempting circumstance negating willful intent).</li>
+          </ol>
+        </li>
+        <li><strong class="c-navy">Order of Distribution of Forfeited Proceeds (<span class="c-teal">Sec. 12, as amended by R.A. 10607</span>):</strong> When a beneficiary is disqualified under <span class="c-teal"><strong>Section 12</strong></span>, the forfeited share passes strictly in the following statutory order:
+          <ol>
+            <li>To the <span class="c-green"><strong><u>other beneficiaries</u></strong></span>, unless they are also disqualified;</li>
+            <li>In the absence of other qualified beneficiaries, in accordance with the <span class="c-green"><strong><u>policy contract</u></strong></span>; or</li>
+            <li>If the policy contract is silent, to the <span class="c-green"><strong><u>estate of the insured</u></strong></span>.</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  A["Death of Insured in Life Policy"] --> B{"Cause of Death?"}
+  B -->|"Suicide (Sec. 183)"| C{"Committed in a State of Insanity?"}
+  C -->|"YES"| D["Insurer ALWAYS LIABLE (Regardless of Time)"]
+  C -->|"NO (Sane)"| E{"In Force for 2 Years (or Shorter Stipulated Period)?"}
+  E -->|"YES"| D
+  E -->|"NO"| F["Insurer NOT Liable"]
+  B -->|"Killed by Beneficiary (Sec. 12)"| G{"Was the Killing Willful & Felonious?"}
+  G -->|"NO (Accident, Self-Defense, or Insanity)"| H["Beneficiary DOES NOT Forfeit; Can Still Recover"]
+  G -->|"YES (Principal, Accomplice, or Accessory)"| I["Beneficiary's Share FORFEITED"]
+  I --> J["1. Other Qualified Beneficiaries -> 2. Policy Contract -> 3. Estate of Insured"]
+  style A fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px
+  style D fill:#ECFDF5,stroke:#166534,stroke-width:2px
+  style H fill:#ECFDF5,stroke:#166534,stroke-width:2px
+  style J fill:#F8FAFC,stroke:#0F766E,stroke-width:2px
+  style F fill:#FEF2F2,stroke:#C2410C,stroke-width:2px
+  style I fill:#FEF2F2,stroke:#C2410C,stroke-width:2px
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="topic-viii" class="c-navy">VIII. SURETYSHIP AND MICROINSURANCE</h3>
+
+  <h4 id="topic-viii-a" class="c-navy">A. Contract of Suretyship</h4>
+  <p>Under <span class="c-teal"><strong>Section 177</strong></span>, a <span class="c-green"><strong><u>Contract of Suretyship</u></strong></span> is an agreement whereby a party called the <strong>surety</strong> guarantees the performance by another party called the <strong>principal or obligor</strong> of an obligation or undertaking in favor of a third party called the <strong>obligee</strong>.</p>
+  <ul>
+    <li><strong class="c-navy">When Suretyship Constitutes Insurance Business (<span class="c-teal">Sec. 2[a]</span>):</strong> A contract of suretyship is deemed an insurance contract only if executed by the surety <span class="c-green"><strong><u>as a vocation, and not merely incidental</u></strong></span> to any other legitimate business or activity of the surety.</li>
+    <li><strong class="c-navy">Nature of the Surety's Liability (<span class="c-teal">Sec. 178</span>):</strong> The liability of the surety or sureties shall be <span class="c-green"><strong><u>joint and several (solidary)</u></strong></span> with the obligor, shall be <span class="c-green"><strong><u>limited to the amount of the bond</u></strong></span>, and is determined strictly by the terms of the contract of suretyship in relation to the principal contract between the obligor and the obligee.</li>
+    <li><strong class="c-navy">Classifications of Surety Bonds:</strong>
+      <ol>
+        <li><strong class="c-navy">Contract Bonds:</strong> Guarantee the faithful performance of construction or procurement contracts (<strong>Performance Bond</strong>) or guarantee that the contractor will pay laborers and materialmen (<strong>Payment Bond</strong>).</li>
+        <li><strong class="c-navy">Fidelity Bonds (Industrial or Public Official Bonds):</strong> Guarantee employers or the government against financial loss caused by the dishonesty, defalcation, or failure to properly account for funds by accountable employees or public officers handling public collections.</li>
+        <li><strong class="c-navy">Judicial Bonds:</strong> Bonds required in judicial proceedings, such as <strong>Bail Bonds</strong> in criminal cases (as an alternative to cash bail, property bond, or recognizance) or attachment, injunction, and replevin bonds in civil actions.</li>
+        <li><strong class="c-navy">Continuing Suretyship:</strong> An agreement whereby the principal places itself in a position to enter into a <span class="c-green"><strong><u>projected series of future credit transactions</u></strong></span> with its creditor without executing a separate surety contract or bond for each individual financing or credit accommodation extended to the principal debtor.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="topic-viii-b" class="c-navy">B. Microinsurance</h4>
+  <p>Under <span class="c-teal"><strong>Section 187</strong></span>, <span class="c-green"><strong><u>Microinsurance</u></strong></span> is a financial product or service that meets the risk protection needs of the <span class="c-green"><strong><u>poor and low-income sector</u></strong></span> where:</p>
+  <ol>
+    <li>The amount of contributions, premiums, fees, or charges, computed on a daily basis, <span class="c-green"><strong><u>does not exceed seven and a half percent (7.5%) of the current daily minimum wage rate</u></strong></span> for nonagricultural workers in Metro Manila; and</li>
+    <li>The maximum sum of guaranteed benefits is <span class="c-green"><strong><u>not more than one thousand (1,000) times</u></strong></span> of the current daily minimum wage rate for nonagricultural workers in Metro Manila.</li>
+  </ol>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🪙</div>
+        <div class="ui-title">&le; 7.5% Daily Minimum Wage</div>
+        <div class="ui-sub">Maximum daily premium/contribution cap (NCR non-agricultural)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">&le; 1,000&times; Daily Minimum Wage</div>
+        <div class="ui-sub">Maximum sum of guaranteed microinsurance benefits</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="topic-ix" class="c-navy">IX. COMPULSORY MOTOR VEHICLE LIABILITY INSURANCE (CMVLI)</h3>
+
+  <h4 id="topic-ix-a" class="c-navy">A. Concept, Purpose, and Scope of Coverage</h4>
+  <p>Under <span class="c-teal"><strong>Sections 386 to 402</strong></span>, <span class="c-green"><strong><u>Compulsory Motor Vehicle Liability Insurance (CMVLI)</u></strong></span> is a mandatory species of liability insurance required by the Land Transportation Office (LTO) prior to the registration or renewal of registration of any motor vehicle. It provides protection coverage that answers for <span class="c-green"><strong><u>legal liability for losses and damages for bodily injuries or death</u></strong></span> (and property damage by extension) that may be sustained by another arising from the use and operation of a motor vehicle.</p>
+  <ul>
+    <li><strong class="c-navy">Statutory Purpose:</strong> To provide <span class="c-green"><strong><u>immediate financial assistance and compensation</u></strong></span> for the death or bodily injuries suffered by innocent third parties or passengers in motor vehicle accidents, without waiting for protracted litigation.</li>
+    <li><strong class="c-navy">Who Must Procure and Pay for CMVLI:</strong>
+      <ol>
+        <li><strong class="c-navy">Private Motor Vehicle Owners:</strong> Must procure comprehensive coverage against <span class="c-green"><strong><u>third-party liability</u></strong></span> for death or bodily injuries (and if used to transport passengers for compensation, must also include passenger liability).</li>
+        <li><strong class="c-navy">Land Transportation Operators (Public Utility Vehicles):</strong> Must procure coverage against both <span class="c-green"><strong><u>passenger and third-party liability</u></strong></span>. The law strictly mandates that the <span class="c-green"><strong><u>operator</u></strong></span>—not the driver—must pay the CMVLI premiums.</li>
+      </ol>
+    </li>
+    <li><strong class="c-navy">Amended Schedule of Indemnity Limits (IC Circular Letter / LTO Issuance):</strong> Under the updated schedule of indemnities, the maximum limit of third-party liability for all CMVLI coverage is <span class="c-green"><strong><u>Php 200,000.00</u></strong></span> per motor vehicle (with death indemnity including burial and funeral expenses set at <span class="c-green"><strong><u>Php 200,000.00</u></strong></span>, specific scheduled amounts for fractures, hospital room, surgical fees, and permanent disablement, plus up to <span class="c-green"><strong><u>Php 10,000.00</u></strong></span> for unscheduled pertinent and reasonable incidental expenses, not exceeding the aggregate Php 200,000.00 cap).</li>
+  </ul>
+
+  <h4 id="topic-ix-b" class="c-navy">B. The "No-Fault" Indemnity Clause</h4>
+  <p>Under <span class="c-teal"><strong>Section 391</strong></span> (as updated by Insurance Commission circulars), any claim for <span class="c-green"><strong><u>death or bodily injury</u></strong></span> to any passenger or third party shall be paid <span class="c-green"><strong><u>without the necessity of proving fault or negligence of any kind</u></strong></span>, subject to the following rules:</p>
+  <ol>
+    <li><strong class="c-navy">Maximum "No-Fault" Amount:</strong> The total no-fault indemnity in respect of any one person shall be <span class="c-green"><strong><u>Php 30,000.00</u></strong></span> for all motor vehicles.</li>
+    <li><strong class="c-navy">Strictly Limited to Death or Bodily Injury:</strong> The No-Fault Indemnity Clause applies <span class="c-green"><strong><u>only to bodily injury or death</u></strong></span>; it <span class="c-rust"><strong><u>never applies to property damage</u></strong></span>.</li>
+    <li><strong class="c-navy">Required Proofs:</strong> A police report of the accident and either a death certificate (with proof of relationship) or a medical report and medical/hospital receipts.</li>
+    <li><strong class="c-navy">Rule on Which Insurer to Claim From (<span class="c-teal">Sec. 391[c]</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">If the Victim is a Passenger / Occupant:</strong> The claim shall lie against the <span class="c-green"><strong><u>insurer of the vehicle in which the claimant was riding, mounting, or dismounting from</u></strong></span> (even if that vehicle was completely faultless and was rear-ended by another vehicle).</li>
+        <li><strong class="c-navy">If the Victim is a Third Party / Pedestrian (Not an Occupant):</strong> The claim shall lie against the <span class="c-green"><strong><u>insurer of the directly offending vehicle</u></strong></span>.</li>
+        <li><strong class="c-navy">Right of Reimbursement:</strong> In all cases, the insurer that pays the no-fault claim has the statutory right to <span class="c-green"><strong><u>recover against the owner of the vehicle actually responsible</u></strong></span> for the accident. Furthermore, receiving the Php 30,000.00 no-fault indemnity does not bar the victim from suing the offending party in a criminal or civil action to recover the <span class="c-green"><strong><u>excess damages</u></strong></span> (e.g., claiming the remaining Php 270,000.00 out of a Php 300,000.00 court judgment).</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">No-Fault Indemnity Claim (Up to Php 30,000.00 for Death or Bodily Injury Only, Sec. 391)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Who is the Injured Victim? (Sec. 391[c])</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">A</div>
+        <div class="ui-title">Passenger / Occupant</div>
+        <div class="ui-sub">Claim against insurer of the vehicle where victim was RIDING, MOUNTING, or DISMOUNTING</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">B</div>
+        <div class="ui-title">Pedestrian / Non-Occupant</div>
+        <div class="ui-sub">Claim against insurer of the DIRECTLY OFFENDING vehicle</div>
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">PAYING INSURER MAY RECOVER FROM OWNER OF AT-FAULT VEHICLE</div>
+      <div class="ui-sub">Victim may still sue offending party for excess damages beyond Php 30,000.00</div>
+    </div>
+  </div>
+
+  <h4 id="topic-ix-c" class="c-navy">C. Special Clauses in Motor Vehicle Insurance</h4>
+  <ol>
+    <li><strong class="c-navy">Cooperation Clause:</strong> Requires the insured to give the insurer all information, cooperation, and assistance necessary to defend claims (including attending court trials and hearings); willful breach thereof exonerates the insurer.</li>
+    <li><strong class="c-navy">Authorized Driver Clause:</strong> Indemnifies the insured owner against loss or damage to the vehicle only when driven by:
+      <ul>
+        <li>The <span class="c-green"><strong><u>insured himself</u></strong></span>; or</li>
+        <li>Any person driving on the <span class="c-green"><strong><u>insured's order or with his permission</u></strong></span> (<strong>Authorized Driver</strong>), provided such driver is <span class="c-green"><strong><u>duly licensed</u></strong></span> to drive the motor vehicle and is not disqualified by law or violated any restriction on his license.</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Theft Clause (and Its Interaction with the Authorized Driver Clause):</strong> Includes theft or unlawful taking of the vehicle as an insured peril. Under Supreme Court jurisprudence (<span class="c-burgundy"><em>Villacorta v. Insurance Commission</em>, G.R. No. L-54171</span>; <span class="c-burgundy"><em>Palermo v. Pyramid Insurance</em>, G.R. No. L-36480</span>), the interaction between the Authorized Driver Clause and the Theft Clause follows strict rules:</li>
+  </ol>
+
+  <blockquote>
+    <p><strong class="c-rust"><code>Professor's Illustration</code></strong><br>
+    Car Owner A lends his insured car to his friend B, who figures in an accident.</p>
+    <ul>
+      <li><strong>Scenario 1 (Valid License):</strong> If B has a valid, unexpired driver's license and drives with A's permission, B is an <span class="c-green"><strong><u>authorized driver</u></strong></span> and A can recover from the insurer.</li>
+      <li><strong>Scenario 2 (No License, Expired License, or Violated Restriction):</strong> If B drives with A's permission, <span class="c-rust"><strong><u>but B has no driver's license, has an expired license, or drives at night in violation of a "Cannot Drive at Night" restriction</u></strong></span> on his license, B is <span class="c-rust"><strong><u>NOT an authorized driver</u></strong></span>, and the insurer will validly <span class="c-rust"><strong><u>deny</u></strong></span> A's claim.</li>
+      <li><strong>Scenario 3 (Unauthorized Taking Invoking the Theft Clause):</strong> If B takes and drives A's car <span class="c-green"><strong><u>without A's knowledge or permission</u></strong></span> (or a repair shop employee takes it for a joyride) and crashes it, the insurer cannot deny A's claim under the Authorized Driver Clause; instead, A can recover under the <span class="c-green"><strong><u>Theft Clause</u></strong></span>, even if the unauthorized taker had no license or an expired license!</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="topic-ix-d" class="c-navy">D. Change of Ownership in CMVLI</h4>
+  <p>Under <span class="c-teal"><strong>Section 395</strong></span>, a transfer of ownership of a motor vehicle <span class="c-green"><strong><u>does not suspend the CMVLI policy</u></strong></span>, provided three requisites concur:</p>
+  <ol>
+    <li>The <span class="c-green"><strong><u>insurance company agrees</u></strong></span> to continue such policy;</li>
+    <li>The change of ownership (or change of engine) is <span class="c-green"><strong><u>indicated in an endorsement</u></strong></span> by the insurer; and</li>
+    <li>A <span class="c-green"><strong><u>signed duplicate of the endorsement is filed with the LTO</u></strong></span>.</li>
+  </ol>
+  <p><em>(If a vehicle is sold via an "open deed of sale" without transferring the policy and notifying the insurer and LTO, the <span class="c-rust"><strong><u>policy is suspended</u></strong></span> because the seller no longer has insurable interest at the time of loss, and the buyer is not yet the insured under the policy).</em></p>
+
+  <hr>
+
+  <h3 id="topic-x" class="c-navy">X. CLAIMS SETTLEMENT, PRESCRIPTION, AND THE INSURANCE COMMISSION</h3>
+
+  <h4 id="topic-x-a" class="c-navy">A. Claims vs. Claim Settlement and Statutory Payment Timeframes</h4>
+  <ul>
+    <li><strong class="c-navy">Claim vs. Claim Settlement:</strong> A <span class="c-green"><strong><u>Claim</u></strong></span> is the initial formal demand filed by the insured or beneficiary with the insurer for the satisfaction of a loss covered by the policy. <span class="c-green"><strong><u>Claim Settlement</u></strong></span> refers to the legal process and remedies for the indemnification of the insured's loss when the insurer commits an <span class="c-rust"><strong><u>unreasonable delay or unjust refusal/denial</u></strong></span> to pay a valid claim.</li>
+    <li><strong class="c-navy">Unfair Claim Settlement Practices (<span class="c-teal">Sec. 247</span>):</strong> An insurer may face administrative sanctions (suspension or revocation of license) for knowingly misrepresenting policy provisions, failing to acknowledge communications promptly, failing to adopt standards for prompt investigation, refusing to pay claims without conducting a reasonable investigation, or compelling insureds to litigate by offering substantially less than the amounts ultimately recovered.</li>
+    <li><strong class="c-navy">Statutory Periods for Payment of Claims (<span class="c-teal">Secs. 248–249</span>):</strong></li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Type of Insurance Policy</th>
+        <th>Mandatory Statutory Period for Payment</th>
+        <th>Penalty for Unreasonable Delay / Refusal (<span class="c-teal">Secs. 248–250</span>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Life Insurance Maturing Upon Expiration of Term (Endowment)</strong></td>
+        <td><span class="c-green"><strong><u>Immediately</u></strong></span> upon maturity of the policy (<span class="c-teal"><strong>Sec. 248</strong></span>).</td>
+        <td>Unless the delay is based on the ground that the claim is <strong>fraudulent</strong>, the insurer is liable to pay:<br>1. The <span class="c-green"><strong><u>amount of the claim</u></strong></span>;<br>2. <span class="c-rust"><strong><u>Interest at twice the ceiling</u></strong></span> prescribed by the Monetary Board from the date following the time prescribed until fully satisfied;<br>3. <span class="c-rust"><strong><u>Attorney's fees</u></strong></span> and other litigation expenses (<span class="c-teal"><strong>Sec. 250</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>2. Life Insurance Maturing at Death of Insured</strong></td>
+        <td>Within <span class="c-green"><strong><u>sixty (60) days</u></strong></span> after presentation of the claim and filing of proof of death of the insured (<span class="c-teal"><strong>Sec. 248</strong></span>).</td>
+        <td>Same penalties apply (double interest, attorney's fees, and litigation expenses).</td>
+      </tr>
+      <tr>
+        <td><strong>3. Non-Life Insurance (Property, Marine, Fire, Casualty)</strong></td>
+        <td>Within <span class="c-green"><strong><u>thirty (30) days</u></strong></span> after receipt by the insurer of proof of loss, and ascertainment of the loss or damage by agreement or arbitration; if ascertainment is not had within <span class="c-green"><strong><u>sixty (60) days</u></strong></span> after receipt of proof of loss, then within <span class="c-green"><strong><u>ninety (90) days</u></strong></span> after such receipt (<span class="c-teal"><strong>Sec. 249</strong></span>).</td>
+        <td>Same penalties apply (double interest, attorney's fees, and litigation expenses).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong class="c-navy">Criminal Liability for Fraudulent Claims (<span class="c-teal">Sec. 251</span>):</strong> Any person who presents or causes to be presented any <span class="c-rust"><strong><u>fraudulent claim</u></strong></span> for the payment of a loss under an insurance contract, or fraudulently prepares, makes, or subscribes any writing with intent to use the same in support of any such claim, shall be punished by a <span class="c-rust"><strong><u>fine not exceeding twice the amount claimed, or imprisonment of two (2) years, or both</u></strong></span>, at the discretion of the court.</li>
+  </ul>
+
+  <h4 id="topic-x-b" class="c-navy">B. Prescriptive Periods in Insurance Actions</h4>
+  <ol>
+    <li><strong class="c-navy">General Insurance Policies (<span class="c-teal">Sec. 63</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">With Valid Stipulation:</strong> The parties may stipulate a prescriptive period in the policy, provided it is <span class="c-green"><strong><u>not less than one (1) year</u></strong></span> from the time the cause of action accrues. In insurance law, the cause of action accrues <strong>not</strong> upon the occurrence of the loss, but <span class="c-green"><strong><u>upon the final rejection/denial of the claim</u></strong></span> by the insurer. Any stipulation limiting the time to commence an action to less than one (1) year from accrual is <span class="c-rust"><strong><u>void</u></strong></span>.</li>
+        <li><strong class="c-navy">Without Stipulation (or if Stipulation is Void):</strong> If the policy contains no prescriptive stipulation, or if the stipulation is void for being less than one year, the action prescribes in <span class="c-green"><strong><u>ten (10) years</u></strong></span> from rejection of the claim, as an action upon a written contract under <span class="c-teal"><strong>Article 1144 of the Civil Code</strong></span>.</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Special Prescriptive Periods in CMVLI (<span class="c-teal">Sec. 397</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">Notice of Claim:</strong> Must be filed in writing with the insurer within <span class="c-green"><strong><u>six (6) months from the date of the accident</u></strong></span>; otherwise, the claim is <span class="c-rust"><strong><u>deemed waived</u></strong></span>.</li>
+        <li><strong class="c-navy">Court / IC Action:</strong> If the claim is denied or contested, the action must be brought within <span class="c-green"><strong><u>one (1) year from the date of the denial of the claim</u></strong></span> with the Insurance Commissioner or the proper court.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h4 id="topic-x-c" class="c-navy">C. Powers and Jurisdiction of the Insurance Commission</h4>
+  <p>Under <span class="c-teal"><strong>Sections 437 to 439</strong></span>, the <strong>Insurance Commission</strong> (established in 1949 and headed by the Insurance Commissioner) exercises two distinct sets of powers to regulate the insurance industry and protect the insuring public:</p>
+  <ol>
+    <li><strong class="c-navy">Administrative and Regulatory Powers (<span class="c-teal">Sec. 437</span>):</strong>
+      <ul>
+        <li>Enforcing the provisions of the Insurance Code;</li>
+        <li>Issuing, suspending, or revoking <span class="c-green"><strong><u>Certificates of Authority</u></strong></span> for entities engaging in the insurance business;</li>
+        <li>Examining the books, records, and financial condition of insurance companies at any time; and</li>
+        <li>Exercising <span class="c-green"><strong><u>quasi-legislative / rule-making authority</u></strong></span> to issue circulars, rules, and regulations (which may carry administrative penalties).</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Adjudicatory (Quasi-Judicial) Jurisdiction (<span class="c-teal">Sec. 439 &amp; Sec. 398</span>):</strong>
+      <ul>
+        <li><strong class="c-navy">Exclusive Jurisdiction over CMVLI Claims:</strong> Under <span class="c-teal"><strong>Section 398</strong></span>, the Insurance Commissioner has <span class="c-green"><strong><u>exclusive original jurisdiction</u></strong></span> to adjudicate claims and complaints under Compulsory Motor Vehicle Liability Insurance (CMVLI) within the statutory coverage limits.</li>
+        <li><strong class="c-navy">Concurrent Original Jurisdiction up to Php 5,000,000.00:</strong> Under <span class="c-teal"><strong>Section 439</strong></span>, the Insurance Commissioner has <span class="c-green"><strong><u>concurrent original jurisdiction with the Regional Trial Courts (RTC)</u></strong></span> to adjudicate any claim or complaint involving any loss, damage, or liability where the amount of the loss, damage, or liability being claimed or sued upon <span class="c-green"><strong><u>does not exceed Five Million Pesos (Php 5,000,000.00)</u></strong></span> for any single claim, exclusive of interest, costs, and attorney's fees.
+          <ul>
+            <li><em>Doctrine on Non-Exhaustion of Administrative Remedies:</em> Because jurisdiction for claims of Php 5,000,000.00 and below is <span class="c-green"><strong><u>concurrent</u></strong></span>, a claimant (for instance, in Visayas or Mindanao far from the Insurance Commission's main office) has the absolute option to file a Php 4,000,000.00 insurance claim <span class="c-green"><strong><u>directly with the RTC</u></strong></span>, and the RTC <span class="c-rust"><strong><u>cannot dismiss</u></strong></span> the complaint on the ground of failure to exhaust administrative remedies.</li>
+          </ul>
+        </li>
+        <li><strong class="c-navy">Exclusive Original Jurisdiction of the RTC Above Php 5,000,000.00:</strong> If the amount of the single insurance claim <span class="c-green"><strong><u>exceeds Five Million Pesos (Php 5,000,000.00)</u></strong></span>, exclusive of interest, costs, and attorney's fees, the <span class="c-green"><strong><u>Regional Trial Court (RTC)</u></strong></span> has <span class="c-green"><strong><u>exclusive original jurisdiction</u></strong></span>, and the Insurance Commissioner has <span class="c-rust"><strong><u>no authority to adjudicate it</u></strong></span>.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🚗</div>
+        <div class="ui-title">CMVLI Claims</div>
+        <div class="ui-sub">Insurance Commissioner has EXCLUSIVE Original Jurisdiction (Sec. 398)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">&le; Php 5,000,000.00</div>
+        <div class="ui-sub">CONCURRENT Original Jurisdiction between Insurance Commissioner &amp; RTC (Sec. 439)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">&gt; Php 5,000,000.00</div>
+        <div class="ui-sub">RTC has EXCLUSIVE Original Jurisdiction (IC has no authority)</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="admin-matters" class="c-navy">Administrative Matters &amp; Professor's Asides</h3>
+
+  <ul>
+    <li><strong class="c-navy">Examination &amp; Class Schedule:</strong>
+      <ul>
+        <li><strong class="c-navy">No Class on the 9th:</strong> Class is suspended on the 9th to give students time to study and prepare for their upcoming Thursday and Saturday examinations in other subjects.</li>
+        <li><strong class="c-navy">Next Lecture Meeting (16th):</strong> The class will reconvene on the <strong>16th</strong> to begin the lecture on <strong>Intellectual Property Law</strong>.</li>
+        <li><strong class="c-navy">Insurance Law Examination Date (23rd):</strong> By consensus of the class and approval of the Professor, the examination covering <strong>Insurance Law</strong> is officially scheduled on the <strong>23rd</strong> (with the Professor jokingly asking if the class wanted to take the exam via <em>ExamSoft</em>).</li>
+        <li><strong class="c-navy">Lecture Slides:</strong> The Professor confirmed that the presentation slides (including the updated CMVLI schedule of indemnities table) will be distributed to the class.</li>
+      </ul>
+    </li>
+    <li><strong class="c-navy">Professor's Bar Exam Tips &amp; Practical Insights:</strong>
+      <ul>
+        <li><strong class="c-navy">High-Yield Bar Topics:</strong> Pay special attention to the definition and relativity of <strong>Seaworthiness</strong>, the four instances of <strong>Proper Deviation</strong> (including the "Captain's Dream" bar problem), the distinction between <strong>Actual Total Loss and Constructive Total Loss</strong> (remembering to write the complete three-word phrases and that <strong>Abandonment</strong> is available <em>only</em> in Constructive Total Loss), the <strong>Suicide and Insanity Rules</strong> under <span class="c-teal"><strong>Section 183</strong></span> (a question the Professor personally drafted before, warning students not to be tricked by time periods when the insured commits suicide in a state of insanity), and the interaction between the <strong>Authorized Driver Clause and Theft Clause</strong> in motor vehicle insurance.</li>
+        <li><strong class="c-navy">Real-World Litigation &amp; Practice Warnings:</strong>
+          <ul>
+            <li>In <strong>Life Insurance transfers</strong>, although <span class="c-teal"><strong>Sections 184–185</strong></span> state that notice to the insurer is unnecessary, always execute and register policy assignments formally with the insurer to avoid protracted litigation after death.</li>
+            <li>In <strong>Buy-and-Sell Motor Vehicle Transactions</strong>, warn clients against executing "open deeds of sale" without endorsing the insurance policy to the buyer and filing a duplicate with the LTO under <span class="c-teal"><strong>Section 395</strong></span>; otherwise, the insurance policy is suspended for lack of insurable interest in the seller.</li>
+            <li>Former seafarer and Third Officer Mr. Galamiton served as the class's resource person on maritime practices, sharing insights on pirated sea lanes, port loading inspections (<em>listing/banking</em>), segmented ocean voyages, long-range marine radio communication, and an actual two-day deviation to Malaysia caused by an acute wisdom tooth emergency at sea.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
