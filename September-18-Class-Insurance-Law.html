@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>September 18 Class Lecture - Insurance Law: Risk, Concealment, Representations, Warranties &amp; Incontestability</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: #1E3A8A;
+  font-weight: 800;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.25rem 0;
+}
+
+ul, ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-overview">Part 1: Risk, Peril, Hazard &amp; The Device of Concealment</option>
+      <option value="#topic-i-risk-peril-hazard">&nbsp;&nbsp;↳ I. Conceptual Foundations of Risk, Peril, and Hazard in Insurance Law</option>
+      <option value="#i-1-risk">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Risk: The Chance or Uncertainty of Loss</option>
+      <option value="#i-2-peril">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Peril: The Contingent Cause of Loss</option>
+      <option value="#i-3-hazard">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Hazard: The Contributing Conditions</option>
+      <option value="#i-comparative-analysis">&nbsp;&nbsp;&nbsp;&nbsp;↳ Comparative Analysis: Risk, Peril, and Hazard</option>
+      <option value="#i-professors-illustration">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustration: Classroom Demarcation of Terms</option>
+      <option value="#topic-ii-four-primary-concerns">&nbsp;&nbsp;↳ II. The Four Primary Concerns of the Parties in Controlling Risk and Loss</option>
+      <option value="#ii-1-determination-of-loss">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Determination of Whether Loss Occurs and the Amount Thereof</option>
+      <option value="#ii-2-control-of-risk">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Control of the Risk</option>
+      <option value="#ii-3-correct-estimation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Correct Estimation of the Risk</option>
+      <option value="#ii-4-precise-delimitation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Precise Delimitation of the Risk</option>
+      <option value="#topic-iii-device-of-concealment">&nbsp;&nbsp;↳ III. The Device of Concealment: Statutory Foundations and Requisites</option>
+      <option value="#iii-1-statutory-definition">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Statutory Definition (Sec. 26)</option>
+      <option value="#iii-2-nature-of-silence">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. The Nature of Silence: Omission of Truth versus Active Falsehood</option>
+      <option value="#iii-professors-illustrations-silence">&nbsp;&nbsp;&nbsp;&nbsp;↳ Professor's Illustrations: The Psychology and Mechanics of Silence</option>
+      <option value="#iii-3-five-essential-requisites">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. The Five Essential Requisites of Concealment</option>
+      <option value="#iii-4-critical-timeline-rule">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. The Critical Timeline Rule: Why Post-Effectivity Concealment is Legally Irrelevant</option>
+      <option value="#topic-iv-materiality-effects-burdens">&nbsp;&nbsp;↳ IV. Materiality, Legal Effects, and Procedural Burdens in Concealment</option>
+      <option value="#iv-1-statutory-test-materiality">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. The Statutory Test of Materiality (Sec. 31)</option>
+      <option value="#iv-2-legal-effect-rescind">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Legal Effect of Concealment: The Insurer's Option to Rescind (Sec. 27)</option>
+      <option value="#iv-3-burden-of-proof-fraud">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Burden of Proof and Presumption of Fraud</option>
+      <option value="#iv-4-inoperability-good-faith">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. The Inoperability of Good Faith as a Defense</option>
+      <option value="#iv-5-irrelevance-cause-of-loss">&nbsp;&nbsp;&nbsp;&nbsp;↳ 5. Irrelevance of the Eventual Cause of Death or Loss</option>
+      <option value="#part-2-statutory-inquiries-representations-warranties">Part 2: Statutory Inquiries, Representations, Warranties, and Conditions</option>
+      <option value="#topic-v-statutory-rules-disclosure">&nbsp;&nbsp;↳ V. Statutory Rules on Disclosure, Inquiries, and Waiver (Estoppel)</option>
+      <option value="#v-1-mandatory-disclosures-sec-28">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Matters that Must be Disclosed Even in the Absence of Inquiry (Sec. 28)</option>
+      <option value="#v-2-exempt-absent-inquiry-sec-30">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Matters that Need Not be Disclosed in the Absence of Inquiry (Sec. 30)</option>
+      <option value="#v-3-personal-opinion-sec-35">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Matters Withheld Even in Answer to Inquiries: Personal Opinion (Sec. 35)</option>
+      <option value="#v-4-waiver-estoppel-sec-33">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Waiver of Information and Underwriting Estoppel (Sec. 33)</option>
+      <option value="#topic-vi-representation-misrepresentation">&nbsp;&nbsp;↳ VI. The Device of Representation and Misrepresentation</option>
+      <option value="#vi-1-definition-nature">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Definition and Nature of Representations</option>
+      <option value="#vi-2-requisites-misrepresentation">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Requisites of Actionable Misrepresentation</option>
+      <option value="#vi-3-classifications-representations">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Classifications of Representations</option>
+      <option value="#vi-4-critical-temporal-test">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. The Critical Temporal Test: Reckoning Truth at Policy Effectivity</option>
+      <option value="#vi-5-alterations-withdrawals-sec-41">&nbsp;&nbsp;&nbsp;&nbsp;↳ 5. Alterations and Withdrawals of Representations (Sec. 41)</option>
+      <option value="#vi-6-substantial-truth">&nbsp;&nbsp;&nbsp;&nbsp;↳ 6. The Standard of Substantial Truth and Liberal Construction</option>
+      <option value="#topic-vii-device-of-warranties">&nbsp;&nbsp;↳ VII. The Device of Warranties</option>
+      <option value="#vii-1-definition-significance">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Definition and Legal Significance</option>
+      <option value="#vii-2-classifications-warranties">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Classifications of Warranties</option>
+      <option value="#vii-3-legal-effect-sec-74">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Legal Effect of Breach: Section 74 and General Rescission</option>
+      <option value="#vii-4-other-insurance-clause">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Converting Immaterial Provisions into Material Warranties: "Other Insurance Clause"</option>
+      <option value="#vii-comparative-matrix">&nbsp;&nbsp;&nbsp;&nbsp;↳ Comparative Matrix: Misrepresentation versus Warranty</option>
+      <option value="#topic-viii-exception-and-condition">&nbsp;&nbsp;↳ VIII. The Devices of Exception and Condition</option>
+      <option value="#viii-1-exceptions-exclusions">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Exceptions (Exclusions): The Delimitation of Scope</option>
+      <option value="#viii-2-conditions-precedent-subsequent">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Conditions: Precedent versus Subsequent</option>
+      <option value="#viii-comprehensive-matrix">&nbsp;&nbsp;&nbsp;&nbsp;↳ Comprehensive Comparative Matrix: The Five Devices of Risk Control</option>
+      <option value="#part-3-rescission-and-incontestability">Part 3: Rescission of Policies and the Incontestability Clause</option>
+      <option value="#topic-ix-rescission-non-life-vs-life">&nbsp;&nbsp;↳ IX. Rescission of Insurance Contracts: Non-Life vs. Life Policies</option>
+      <option value="#ix-1-rescission-non-life">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Rescission in Non-Life (Property) Policies</option>
+      <option value="#topic-x-incontestability-clause">&nbsp;&nbsp;↳ X. The Incontestability Clause (Section 48, Insurance Code)</option>
+      <option value="#x-1-public-policy-statutory-text">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Public Policy Foundation and Statutory Text</option>
+      <option value="#x-2-three-essential-requisites">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. The Three Essential Requisites of Incontestability</option>
+      <option value="#x-3-reckoning-two-year-clock">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Reckoning the Two-Year Clock: Issuance versus Reinstatement</option>
+      <option value="#topic-xi-dynamics-of-incontestability">&nbsp;&nbsp;↳ XI. The Dynamics of Incontestability: Death, Modification, and Excluded Defenses</option>
+      <option value="#xi-1-death-within-two-years">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. The Jurisprudential Dilemma: Death of the Insured Within the Two-Year Period</option>
+      <option value="#xi-2-modification-of-period">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Modification of the Contestability Period</option>
+      <option value="#xi-3-defenses-barred-vs-surviving">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Defenses Barred versus Defenses Surviving Incontestability</option>
+      <option value="#xi-4-bar-exam-attack-methodology">&nbsp;&nbsp;&nbsp;&nbsp;↳ 4. Bar Exam Attack Methodology: The Three-Step Analytical Filter</option>
+      <option value="#topic-xii-administrative-matters">&nbsp;&nbsp;↳ XII. Administrative Matters &amp; Professor's Asides</option>
+      <option value="#xii-1-bar-examination-insights">&nbsp;&nbsp;&nbsp;&nbsp;↳ 1. Bar Examination Insights and Observations</option>
+      <option value="#xii-2-practical-perspectives">&nbsp;&nbsp;&nbsp;&nbsp;↳ 2. Practical Perspectives: The Realities of Bar Operations and Examination Day</option>
+      <option value="#xii-3-pacing-syllabus">&nbsp;&nbsp;&nbsp;&nbsp;↳ 3. Pacing, Syllabus, and Next Assigned Readings</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">SEPTEMBER 18 CLASS LECTURE</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">RISK, PERIL &amp; HAZARD</div>
+        <div class="ui-sub">Conceptual foundations under <span class="c-teal">R.A. No. 10607</span></div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">FOUR CONCERNS</div>
+        <div class="ui-sub">Conditions, warranties, disclosures &amp; exceptions</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">CONCEALMENT</div>
+        <div class="ui-sub"><span class="c-teal">Section 26</span> definition, silence &amp; 5 requisites</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">MATERIALITY</div>
+        <div class="ui-sub"><span class="c-teal">Section 31</span> test, <span class="c-teal">Section 27</span> rescission &amp; fraud</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="part-1-overview" class="c-navy">Part 1 Overview &amp; Scope of Topics</h3>
+
+  <ul>
+    <li><strong>Topic I: Conceptual Foundations of Risk, Peril, and Hazard in Insurance Law</strong>
+      <ul>
+        <li>Definitions and statutory context under <span class="c-teal">Republic Act No. 10607</span> (<span class="c-teal">The Insurance Code of the Philippines</span>).</li>
+        <li>Doctrinal distinctions: Chance of loss (<em>Risk</em>), specific cause of loss (<em>Peril</em>), and conditions increasing loss probability (<em>Hazard</em>).</li>
+        <li>Tripartite breakdown across diverse contexts: Property insurance, Life/Health insurance, and the classroom's romantic relationship analogy.</li>
+      </ul>
+    </li>
+    <li><strong>Topic II: The Four Primary Concerns of the Parties in Controlling Risk and Loss</strong>
+      <ul>
+        <li>The economic tension between insurer and insured.</li>
+        <li>Ascertainment of loss occurrence and quantification (Conditions).</li>
+        <li>Control and monitoring of risk (Warranties and Conditions).</li>
+        <li>Correct estimation of risk at underwriting (Concealment and Representations).</li>
+        <li>Precise delimitation of the scope of coverage (Exceptions/Exclusions).</li>
+      </ul>
+    </li>
+    <li><strong>Topic III: The Device of Concealment: Statutory Foundations and Requisites</strong>
+      <ul>
+        <li>Definition under <span class="c-teal">Section 26 of the Insurance Code</span>.</li>
+        <li>Legal effect of silence versus active falsehood: The concept of "omission of truth."</li>
+        <li>Five essential requisites of actionable concealment.</li>
+        <li>The critical timeline rule: Why concealment is legally confined to the negotiation stage prior to contract effectivity.</li>
+      </ul>
+    </li>
+    <li><strong>Topic IV: Materiality, Legal Effects, and Procedural Burdens in Concealment</strong>
+      <ul>
+        <li>The statutory standard of materiality under <span class="c-teal">Section 31</span>: Probable and reasonable influence on the underwriter.</li>
+        <li>The option to rescind under <span class="c-teal">Section 27</span> and the unilateral nature of insurance contracts.</li>
+        <li>Evidentiary rules: Presumption of fraud and the total inoperability of good faith as a defense.</li>
+        <li>Doctrinal independence of the fact concealed from the eventual cause of death or loss.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="topic-i-risk-peril-hazard" class="c-navy">I. CONCEPTUAL FOUNDATIONS OF RISK, PERIL, AND HAZARD IN INSURANCE LAW</h2>
+
+  <p>The fundamental architecture of insurance law rests upon the transfer, distribution, and management of economic uncertainty. In every contract of insurance, an insurer assumes a defined exposure from the insured in exchange for a consideration known as the premium. To properly evaluate the legal mechanisms governing this contract, one must master the three foundational concepts that dictate risk underwriting: <span class="c-green"><strong><u>Risk</u></strong></span>, <span class="c-green"><strong><u>Peril</u></strong></span>, and <span class="c-green"><strong><u>Hazard</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE RISK CASCADE</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚠️</div>
+        <div class="ui-title c-rust">HAZARD</div>
+        <div class="ui-sub">Condition/Factor creating chance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚡</div>
+        <div class="ui-title c-teal">PERIL</div>
+        <div class="ui-sub">Contingent Event causing the loss</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎯</div>
+        <div class="ui-title c-navy">RISK</div>
+        <div class="ui-sub">Chance/Possibility of actual loss</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: THE RISK CASCADE &amp; HAZARD TAXONOMY <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart LR
+  subgraph H["1. HAZARDS (Contributing Conditions)"]
+    direction TB
+    H1["Physical Hazard (Tangible/Structural/Environmental)"]
+    H2["Moral Hazard (Dishonesty/Fraudulent Propensity)"]
+    H3["Morale Hazard (Indifference/Apathy/Carelessness)"]
+  end
+
+  subgraph P["2. PERIL (Operational Cause)"]
+    P1["Contingent, Fortuitous, or Unknown Event<br/>(e.g., Fire, Typhoon, Death, Illness)"]
+  end
+
+  subgraph R["3. RISK (Overarching Exposure)"]
+    R1["Chance or Possibility of Actual Loss<br/>(Transferred from Insured to Insurer for Premium)"]
+  end
+
+  H1 -->|"Magnifies probability"| P1
+  H2 -->|"Incentivizes occurrence"| P1
+  H3 -->|"Reduces precaution"| P1
+  P1 -->|"Materializes into"| R1
+
+  style H fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style P fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style R fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style H1 fill:#FFFFFF,stroke:#C2410C,color:#1F2937
+  style H2 fill:#FFFFFF,stroke:#C2410C,color:#1F2937
+  style H3 fill:#FFFFFF,stroke:#C2410C,color:#1F2937
+  style P1 fill:#FFFFFF,stroke:#0F766E,color:#1F2937
+  style R1 fill:#FFFFFF,stroke:#1E3A8A,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="i-1-risk" class="c-navy">1. Risk: The Chance or Uncertainty of Loss</h3>
+
+  <p><span class="c-green"><strong><u>Risk</u></strong></span> is legally and technically defined as the <span class="c-green"><strong><u>chance of loss, or the degree of uncertainty concerning the occurrence of a loss based on an aggregate of known and unknown factors</u></strong></span>. In substantive insurance jurisprudence, risk represents the exposure to injury, destruction, or economic impairment. An insurable risk must be contingent—an event that may or may not happen, or a certain event (such as death) the exact time of which is unknown.</p>
+
+  <h3 id="i-2-peril" class="c-navy">2. Peril: The Contingent Cause of Loss</h3>
+
+  <p><span class="c-green"><strong><u>Peril</u></strong></span> is the <span class="c-green"><strong><u>contingent, fortuitous, or unknown event that acts as the immediate or proximate cause of the loss or damage insured against</u></strong></span>. While risk denotes the possibility of sustaining damage, peril is the operational instrument of that damage. In life insurance, perils encompass death, critical illness, terminal sickness, accidental bodily injury, and, subject to statutory limits, suicide. In non-life or property insurance, perils encompass fire, lightning, earthquake, maritime collision, piracy, explosion, and windstorm.</p>
+
+  <h3 id="i-3-hazard" class="c-navy">3. Hazard: The Contributing Conditions</h3>
+
+  <p>A <span class="c-green"><strong><u>Hazard</u></strong></span> is <span class="c-green"><strong><u>any condition, factor, circumstance, or environment—tangible or intangible—that creates, facilitates, or increases the probability of loss arising from a given peril</u></strong></span>. Hazards do not directly inflict damage; rather, they magnify the exposure to a peril. Hazards are classified into:</p>
+
+  <ul>
+    <li><span class="c-green"><strong><u>Physical Hazards:</u></strong></span> Tangible, structural, material, or environmental features that increase vulnerability to a peril (e.g., storing combustible solvents in a wooden warehouse, residing in an active fault zone, possessing a genetic predisposition to coronary disease).</li>
+    <li><span class="c-rust"><strong><u>Moral Hazards:</u></strong></span> Intangible, psychological, or behavioral conditions stemming from dishonesty, fraudulent propensity, or character deficiencies in the insured (e.g., insuring a failing enterprise for sums far exceeding its value, incentivizing intentional arson).</li>
+    <li><span class="c-rust"><strong><u>Morale Hazards:</u></strong></span> Intangible conditions arising from indifference, extreme apathy, or carelessness born out of the knowledge that insurance coverage exists (e.g., failing to lock warehouse gates, neglecting routine automotive brake maintenance).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="i-comparative-analysis" class="c-navy">Comparative Analysis: Risk, Peril, and Hazard</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Conceptual Element</th>
+        <th>Substantive Legal Definition</th>
+        <th>Nature and Function</th>
+        <th>Manifestation in Property Insurance</th>
+        <th>Manifestation in Health/Life Insurance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong class="c-navy">Risk</strong></td>
+        <td>The possibility, chance, or contingency of sustaining economic loss or physical damage.</td>
+        <td>The overarching exposure transferred from insured to insurer.</td>
+        <td>Possibility that an industrial warehouse will be destroyed or lose commercial value.</td>
+        <td>Uncertainty surrounding premature mortality or incurring catastrophic medical bills.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Peril</strong></td>
+        <td>The contingent, external, or unknown event that directly causes the loss or injury.</td>
+        <td>The proximate cause or operational agent of destruction.</td>
+        <td>Fire, conflagration, structural explosion, typhoon, floodwaters.</td>
+        <td>Terminal disease, myocardial infarction, vehicular collision, stroke.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-rust">Hazard</strong></td>
+        <td>A physical, environmental, or behavioral condition increasing the likelihood of a peril.</td>
+        <td>The background catalyst magnifying the severity or frequency of a peril.</td>
+        <td>Flammable wooden framing, proximity to fireworks factory, deficient wiring.</td>
+        <td>Chronic stress, heavy tobacco consumption, advanced age, dangerous hobbies.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="i-professors-illustration" class="c-navy">Professor's Illustration: Classroom Demarcation of Terms</h3>
+
+  <p>To clarify how these terms interact, the professor presented concrete illustrations across property underwriting, health assessment, and an extended socio-cultural hypothetical:</p>
+
+  <blockquote>
+    <ul>
+      <li><strong>Property Setting:</strong> If a commercial warehouse owner purchases fire insurance, the <strong>risk</strong> is the financial devastation of losing the warehouse. The <strong>peril</strong> is the fire itself—the conflagration that consumes the structural timber. The <strong>hazard</strong> consists of the surrounding conditions: the property's physical location, combustible construction materials, or an adjacent establishment engaged in the manufacture of pyrotechnics.</li>
+      <li><strong>Health and Life Setting:</strong> In life underwriting, the <strong>risk</strong> is the premature death or disability of the breadwinner. The <strong>perils</strong> causing that loss are coronary artery disease, stroke, or fatal trauma. The <strong>hazards</strong> that elevate those perils encompass biological age, extreme stress, an occupational sedentary lifestyle, cigarette smoking, alcohol dependency, or high-risk recreational activities such as bungee jumping, technical mountain climbing, or high-speed driving.</li>
+    </ul>
+  </blockquote>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">THE PROFESSOR'S ROMANTIC RELATIONSHIP HYPOTHETICAL</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title c-rust">3. THE HAZARDS (Catalysts Increasing Peril Probability)</div>
+      <div class="ui-sub">
+        • In-laws interfering in household affairs.<br>
+        • Geographic separation (Long-Distance Relationship).<br>
+        • Constant physical comparison with past romantic partners.<br>
+        • Uncontrolled vanity / social media solicitation of external attention.
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-teal">2. THE PERILS (Proximate Causes)</div>
+      <div class="ui-sub">
+        • Extramarital infidelity or third-party interference.<br>
+        • Progressive emotional estrangement ("falling out of love").<br>
+        • Irreconcilable financial stress.
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome" style="background: #FEF2F2; border-color: #FECACA;">
+      <div class="ui-title c-burgundy">1. THE RISK (Loss/Damage)</div>
+      <div class="ui-sub" style="color: #7F1D1D;">The eventual dissolution or break-up of the bond.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="topic-ii-four-primary-concerns" class="c-navy">II. THE FOUR PRIMARY CONCERNS OF THE PARTIES IN CONTROLLING RISK AND LOSS</h2>
+
+  <p>In an insurance relationship, an inherent economic tension exists between the contracting parties:</p>
+
+  <ul>
+    <li>The <strong>insured</strong> seeks maximum indemnity or payout upon the occurrence of an adverse event, having already tendered consideration via premium payments.</li>
+    <li>The <strong>insurer</strong>, bearing the collective risk pool, possesses a vital commercial interest in strictly regulating claims, eliminating fraud, and confining indemnity within precise contractual boundaries.</li>
+  </ul>
+
+  <p>To maintain actuarial solvency, statutory law and underwriting practice recognize <span class="c-green"><strong><u>four primary concerns</u></strong></span> of the parties, predominantly exercised by the insurer through specific legal devices:</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE FOUR PRIMARY CONCERNS OF UNDERWRITING</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">DETERMINING LOSS OCCURRENCE &amp; AMOUNT</div>
+        <div class="ui-sub"><strong>Governing Device:</strong> <span class="c-teal">CONDITIONS</span> (Proof/Notice of Loss, Surveys)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">CONTROLLING AND MONITORING THE UNDERLYING RISK</div>
+        <div class="ui-sub"><strong>Governing Device:</strong> <span class="c-teal">WARRANTIES &amp; CONDITIONS</span> (Protective stipulations)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">CORRECT ESTIMATION OF THE RISK (UNDERWRITING STAGE)</div>
+        <div class="ui-sub"><strong>Governing Device:</strong> <span class="c-teal">CONCEALMENT &amp; REPRESENTATIONS</span> (Truthful disclosure)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">PRECISE DELIMITATION OF POLICY COVERAGE</div>
+        <div class="ui-sub"><strong>Governing Device:</strong> <span class="c-teal">EXCEPTIONS / EXCLUSIONS</span> (Carve-outs from perils)</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="ii-1-determination-of-loss" class="c-navy">1. Determination of Whether Loss Occurs and the Amount Thereof</h3>
+
+  <p>Upon receipt of a claim, the insurer must confirm whether a covered loss truly transpired, whether it falls within policy bounds, and its exact pecuniary measure. This concern is managed via <span class="c-green"><strong><u>conditions</u></strong></span> incorporated into the contract, such as filing timely notice of loss, rendering formal proof of loss, submitting to sworn examinations, and permitting claims adjusters to inspect physical debris.</p>
+
+  <h3 id="ii-2-control-of-risk" class="c-navy">2. Control of the Risk</h3>
+
+  <p>The insurer must ensure that the hazard profile evaluated at inception does not unilaterally deteriorate through the affirmative acts, omissions, or gross negligence of the insured during the policy term. This control is maintained through <span class="c-green"><strong><u>warranties</u></strong></span> and <span class="c-green"><strong><u>conditions</u></strong></span>, which impose continuous obligations upon the policyholder (e.g., maintaining functional fire extinguishing systems, securing property with continuous night-watch services, prohibiting the storage of hazardous inflammable liquids).</p>
+
+  <h3 id="ii-3-correct-estimation" class="c-navy">3. Correct Estimation of the Risk</h3>
+
+  <p>Prior to issuing a policy, the underwriter must accurately determine whether to accept the proposed risk, calculate the actuarially sound premium, and set appropriate policy covenants. This underwriting calculus is anchored upon complete, truthful disclosure from the applicant. The primary legal mechanisms governing this concern are the doctrines of <span class="c-green"><strong><u>concealment</u></strong></span> and <span class="c-green"><strong><u>representation</u></strong></span>. Any failure by the applicant to act in good faith distorts the insurer’s assessment, rendering the <span class="c-rust"><strong><u>contract voidable</u></strong></span>.</p>
+
+  <h3 id="ii-4-precise-delimitation" class="c-navy">4. Precise Delimitation of the Risk</h3>
+
+  <p>The insurer must draw clear boundaries around the risks it assumes, excluding specific categories of perils, circumstances, or geographical zones that it refuses to underwrite. This delimitation is governed by <span class="c-green"><strong><u>exceptions</u></strong></span> (or exclusions). Perils specifically excluded (such as acts of foreign war, civil insurrections, nuclear contamination, and natural catastrophes) are carved out of the policy's insuring agreement.</p>
+
+  <hr>
+
+  <h2 id="topic-iii-device-of-concealment" class="c-navy">III. THE DEVICE OF CONCEALMENT: STATUTORY FOUNDATIONS AND REQUISITES</h2>
+
+  <h3 id="iii-1-statutory-definition" class="c-navy">1. Statutory Definition</h3>
+
+  <p>Concealment is explicitly defined in the Insurance Code:</p>
+
+  <blockquote>
+    <strong><span class="c-teal">Section 26, Republic Act No. 10607:</span></strong><br>
+    <em>"A <span class="c-green"><strong><u>neglect to communicate that which a party knows and ought to communicate</u></strong></span>, is called a concealment."</em>
+  </blockquote>
+
+  <p>At its core, concealment is a failure of communication where a statutory duty to speak exists. It is the legal antithesis of full disclosure, penalizing an applicant who withholds material facts known to them, thereby distorting the underwriting evaluation of the risk pool.</p>
+
+  <hr>
+
+  <h3 id="iii-2-nature-of-silence" class="c-navy">2. The Nature of Silence: Omission of Truth versus Active Falsehood</h3>
+
+  <p>Under general contract law, mere silence does not necessarily constitute misrepresentation unless an express legal or fiduciary obligation to speak exists. However, insurance contracts are contracts of <span class="c-green"><strong><u>utmost good faith (<em>uberrimae fidei</em>)</u></strong></span>. The applicant and the underwriter do not stand upon equal footing; the insured possesses intimate, exclusive knowledge regarding the internal status of their health, commercial operations, or structural property, while the insurer sits at an informational disadvantage. Consequently, <span class="c-rust"><strong><u>silence—when there is a legal obligation to disclose—is an actionable omission of truth</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE CONTINUUM OF TRUTHFULNESS IN CONTRACTS</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">1</div>
+        <div class="ui-title c-green">FULL TRUTH</div>
+        <div class="ui-sub">[Complete Good Faith]</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge" style="color: #0F766E; border: 1.5px solid #0F766E; background: #F0FDFA;">2</div>
+        <div class="ui-title c-teal">MERE SILENCE</div>
+        <div class="ui-sub">[Permissible where no duty to speak exists]</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">3</div>
+        <div class="ui-title c-rust">CONCEALMENT</div>
+        <div class="ui-sub">[Actionable Omission where duty exists]</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">4</div>
+        <div class="ui-title c-burgundy">MISREPRESENTATION</div>
+        <div class="ui-sub">[Active Falsehood: Express untruth collaterally told]</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="iii-professors-illustrations-silence" class="c-navy">Professor's Illustrations: The Psychology and Mechanics of Silence</h3>
+
+  <p>To dissect whether silence constitutes an omission of truth that undermines legal consent, the professor offered two relatable analogies before applying the doctrine to insurance:</p>
+
+  <blockquote>
+    <ul>
+      <li><strong>The Stolen Twenty-Peso Bill:</strong> A child takes a twenty-peso bill from a parent's wallet without permission. When directly confronted by the parent asking, <em>"Did you take the money?"</em>, the child remains silent, smiling without uttering a word. This deliberate silence is not innocent neutrality; it is an omission of truth. In insurance, maintaining silence regarding an inquiry about a known material fact constitutes an equivalent suppression of truth.</li>
+      <li><strong>The Celebrity Interview Hypothetical (Carina and the Pregnancy Rumor):</strong> A talk show host confronts a celebrity guest ("Carina") on live television, inquiring whether a prominent actress ("Marian Rivera") is pregnant. Carina offers no spoken denial or affirmation, responding only with an enigmatic smile. Does this reaction satisfy the legal definition of concealment?
+        <ul>
+          <li><strong>The Legal Test:</strong> Apply <span class="c-teal">Section 26</span>. Concealment requires the <em>neglect to communicate that which a party knows and ought to communicate</em>.</li>
+          <li><strong>The Informational Threshold:</strong> If Carina possessed verified personal knowledge of the pregnancy and was bound by a duty of disclosure to the interviewer, her silence would constitute concealment. However, if she possessed no firsthand, verified information, she had nothing factual to disclose. <span class="c-green"><strong><u>One cannot legally conceal that which one does not know.</u></strong></span></li>
+        </ul>
+      </li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h3 id="iii-3-five-essential-requisites" class="c-navy">3. The Five Essential Requisites of Concealment</h3>
+
+  <p>For an insurer to successfully invoke concealment to avoid liability or rescind an insurance contract, <span class="c-green"><strong><u>five substantive elements must concur</u></strong></span>:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">THE FIVE REQUISITES OF CONCEALMENT</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[1] DUTY TO DISCLOSE</div>
+      <div class="ui-sub">The party concealing was under a legal duty to speak.</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[2] LACK OF KNOWLEDGE</div>
+      <div class="ui-sub">The other party had no independent means of discovery.</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[3] NO WARRANTY</div>
+      <div class="ui-sub">The fact is not already protected by an express warranty.</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[4] ACTUAL KNOWLEDGE</div>
+      <div class="ui-sub">The party concealing possesses actual knowledge of fact.</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[5] CRITICAL TIMELINE</div>
+      <div class="ui-sub">Occurred prior to or at the time contract takes effect.</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Requisite 1: <span class="c-green"><u>The party concealing was duty-bound to disclose.</u></span></strong> The information withheld must be of such nature that the law, the specific terms of the application, or the doctrine of <em>uberrimae fidei</em> compels disclosure.</li>
+    <li><strong>Requisite 2: <span class="c-green"><u>The other party has no means of ascertaining the fact concealed.</u></span></strong> If the underwriter possesses immediate, practical, and ordinary means to ascertain the true facts, or if the facts are matters of general public notoriety, the failure to speak cannot be used to void the contract.</li>
+    <li><strong>Requisite 3: <span class="c-green"><u>The party concealing makes no warranty as to the fact concealed.</u></span></strong> The fact withheld must not be covered by an express contractual warranty. If an applicant expressly warrants the non-existence of a physical disease and that disease in fact exists, the governing legal framework shifts from concealment to breach of warranty.</li>
+    <li><strong>Requisite 4: <span class="c-green"><u>The party concealing has actual knowledge of the fact.</u></span></strong> An applicant cannot be penalized for withholding facts of which they were legitimately, blissfully ignorant. The law does not mandate omniscience; it penalizes the suppression of facts known to the applicant.</li>
+    <li><strong>Requisite 5: <span class="c-green"><u>The concealment takes place at the time the contract is entered into.</u></span></strong> The non-disclosure must occur during the period of application and negotiation, prior to or contemporaneous with the perfection and effectivity of the insurance policy.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="iii-4-critical-timeline-rule" class="c-navy">4. The Critical Timeline Rule: Why Post-Effectivity Concealment is Legally Irrelevant</h3>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE CRITICAL TIMELINE OF RISK ASSESSMENT</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-badge ui-badge-no">!</div>
+        <div class="ui-title c-rust">NEGOTIATION / UNDERWRITING STAGE</div>
+        <div class="ui-sub">[Applicant completes questionnaire]</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • Insurer calculates risk exposure.<br>
+          • Premium rates are set.<br>
+          • High duty of utmost good faith.<br>
+          <strong class="c-rust">===&gt; CONCEALMENT HAS LEGAL BEARING!</strong>
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">POLICY ISSUANCE &amp; POST-EFFECTIVITY</div>
+        <div class="ui-sub">[Contract perfected; risk transferred]</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • Underwriting decisions are finalized.<br>
+          • Contract becomes unilateral.<br>
+          • <strong class="c-green">New habits do NOT constitute actionable concealment under <span class="c-teal">Section 26</span>!</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>A crucial doctrinal question arises: <em>Why does the law insist that concealment take place at the time the contract is entered into, and why is concealment after policy effectivity devoid of legal consequence?</em></p>
+
+  <p>During the negotiation stage, the underwriter relies upon the applicant's disclosures to form an estimate of the proposed risk, calculate corresponding premiums, and evaluate prospective profit margins. Once the policy is delivered and the first premium is paid, the negotiation stage closes. The contract becomes wholly <span class="c-green"><strong><u>unilateral</u></strong></span>: the insured has executed their primary performance (payment of premium), and the insurer remains bound under the singular conditional obligation to indemnify upon the occurrence of a covered peril.</p>
+
+  <h4 id="iii-professors-illustration-post-effectivity" class="c-navy">Professor's Illustration: Post-Effectivity Change of Habits</h4>
+
+  <blockquote>
+    <ul>
+      <li><strong>Hypothetical:</strong> An applicant applies for life insurance. During the underwriting interview, the insurer inquires: <em>"Do you smoke cigarettes?"</em> The applicant truthfully responds: <em>"No."</em> At that point, the applicant has never used tobacco. The policy is approved and issued. One month later, the insured begins smoking two packs of cigarettes daily. Must the insured notify the insurer, and does the failure to disclose constitute actionable concealment?</li>
+      <li><strong>Legal Analysis:</strong> No. At the time of negotiation, the statement was true; there was no suppression of an existing fact. The insured is under <span class="c-green"><strong><u>no general legal duty to continuously report deteriorating lifestyle habits after contract perfection</u></strong></span> unless the policy contains an express, continuing promissory warranty to that effect. The underwriter’s risk calculus had already been formalized. Post-effectivity concealment does not invalidate consent at inception.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="topic-iv-materiality-effects-burdens" class="c-navy">IV. MATERIALITY, LEGAL EFFECTS, AND PROCEDURAL BURDENS IN CONCEALMENT</h2>
+
+  <h3 id="iv-1-statutory-test-materiality" class="c-navy">1. The Statutory Test of Materiality</h3>
+
+  <p>Not every omitted detail entitles an insurer to rescind a policy. The withheld information must cross the threshold of legal materiality:</p>
+
+  <blockquote>
+    <strong><span class="c-teal">Section 31, Republic Act No. 10607:</span></strong><br>
+    <em>"Materiality is to be determined <span class="c-rust"><strong><u>not by the event</u></strong></span>, but <span class="c-green"><strong><u>solely by the probable and reasonable influence of the facts upon the party to whom the communication is due, in forming his estimate of the advantages of the proposed contract, or in making his inquiries</u></strong></span>."</em>
+  </blockquote>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE STATUTORY TEST OF MATERIALITY</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">NOT DETERMINED BY:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • The eventual event of death.<br>
+          • The proximate cause of loss.<br>
+          • Subsequent physical outcomes.
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">DETERMINED SOLELY BY:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • The probable and reasonable influence upon the underwriter's judgment.<br>
+          • Would the insurer have rejected the risk?<br>
+          • Would the insurer have charged more?<br>
+          • Would the insurer have inquired further?
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>Under <span class="c-teal">Section 31</span>, materiality is an <span class="c-green"><strong><u>objective standard measured exclusively at the moment of risk estimation</u></strong></span>. The test does not depend on hindsight, the eventual cause of loss, or whether the concealed condition contributed to the insured's demise. The sole inquiry is: <em>Had the insurer known the concealed fact, would it have declined the application altogether, demanded a higher premium, or conducted an expanded medical or technical investigation?</em> If the answer is affirmative, the fact is legally material.</p>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: ACTIONABLE CONCEALMENT &amp; THE SECTION 31 MATERIALITY TEST <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  A["Applicant Omits Fact During Negotiation Stage"] --> B{"1. Did Applicant have Actual Knowledge?<br/>(Requisite 4)"}
+  B -->|"No (Blissfully Ignorant)"| C["NO CONCEALMENT<br/>One cannot conceal what one does not know"]
+  B -->|"Yes"| D{"2. Is the Fact Material under Section 31?<br/>(Probable &amp; reasonable influence on underwriter's estimate/inquiries)"}
+  D -->|"No (e.g., Minor tension headache)"| E["IMMATERIAL OMISSION<br/>Policy Remains Valid &amp; Binding"]
+  D -->|"Yes (e.g., Renal failure, Gallstones, Adjacent fireworks)"| F["ACTIONABLE CONCEALMENT (Sec. 26 &amp; 27)<br/>Fraudulent Intent Presumed by Law"]
+  F --> G["Good Faith is Inoperable as a Defense (Sec. 27)<br/>Causal Connection to Eventual Loss is Irrelevant (Sec. 31)"]
+  G --> H["CONTRACT IS VOIDABLE AT INSURER'S ELECTION<br/>Insurer May Rescind Policy &amp; Return Unearned Premium"]
+
+  style A fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style B fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style D fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style C fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style E fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style F fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style G fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style H fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="iv-2-legal-effect-rescind" class="c-navy">2. Legal Effect of Concealment: The Insurer's Option to Rescind</h3>
+
+  <p>Under <span class="c-teal">Section 27 of the Insurance Code</span>, concealment entitles the injured party to <span class="c-rust"><strong><u>rescind</u></strong></span> the contract. The contract does not become void <em>ipso jure</em> (automatically void); rather, it is <span class="c-green"><strong><u>voidable at the election of the insurer</u></strong></span>.</p>
+
+  <p>The rationale for granting this option exclusively to the insurer stems from the commercial nature of insurance. Once premium consideration is paid, the insured’s active obligations cease, leaving the insurer alone to bear the risk of potential payout. Upon uncovering pre-existing concealment, the insurer may decide that despite the defect, retaining the premium and maintaining the customer relationship is commercially acceptable. Alternatively, the insurer may choose to rescind, tender back the unearned premiums, and terminate the policy.</p>
+
+  <hr>
+
+  <h3 id="iv-3-burden-of-proof-fraud" class="c-navy">3. Burden of Proof and Presumption of Fraud</h3>
+
+  <p>In judicial proceedings, the <span class="c-green"><strong><u>burden of proving concealment rests upon the party asserting it</u></strong></span>—almost invariably the insurer. The insurer must establish by a preponderance of evidence that the applicant had actual knowledge of a material fact and deliberately failed to disclose it.</p>
+
+  <p>However, once the insurer proves that the applicant suppressed an unequivocally material fact (such as a recent biopsy confirming a malignant neoplasm, or chronic internal organ failure), <span class="c-rust"><strong><u>fraudulent intent is presumed by law</u></strong></span>. The insurer is not burdened with proving independent, malicious intent to defraud. The deliberate withholding of what ought to be disclosed satisfies the requirement of fraud in insurance law.</p>
+
+  <hr>
+
+  <h3 id="iv-4-inoperability-good-faith" class="c-navy">4. The Inoperability of Good Faith as a Defense</h3>
+
+  <p>In standard contracts governed by the Civil Code, good faith (<em>bona fides</em>) serves as an equitable shield against charges of fraud. In insurance law, this protection is discarded:</p>
+
+  <blockquote>
+    <strong><span class="c-teal">Section 27, Republic Act No. 10607:</span></strong><br>
+    <em>"A concealment <span class="c-rust"><strong><u>whether intentional or unintentional</u></strong></span> entitles the injured party to rescind a contract of insurance."</em>
+  </blockquote>
+
+  <p><span class="c-rust"><strong><u>Good faith is completely unavailable as a defense against a charge of concealment.</u></strong></span> An applicant cannot avoid policy rescission by arguing that they acted without malice, did not believe the condition was severe, or assumed the underwriter already had access to their medical records.</p>
+
+  <h4 id="iv-professors-illustration-bait-baitan" class="c-navy">Professor's Illustration: The "Bait-baitan" (Playing the Victim) Defense</h4>
+
+  <blockquote>
+    The professor emphasized that an insured cannot plead: <em>"I acted in good faith; I honestly did not realize that undergoing a liver biopsy last month had to be reported on the form."</em> Such assertions of innocence are legally futile. The statute requires full disclosure of material facts. If an applicant withholds an objective material fact within their knowledge, the insurer’s statutory right to rescind attaches regardless of personal good faith.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="iv-5-irrelevance-cause-of-loss" class="c-navy">5. Irrelevance of the Eventual Cause of Death or Loss</h3>
+
+  <p>A recurring bar exam scenario tests whether an insurer remains liable if the concealed condition is entirely unrelated to the eventual cause of death or property loss.</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">THE SCENARIO: CONCEALED FACT DISSOCIATED FROM CAUSE OF LOSS</div>
+    </div>
+    <div class="ui-grid" style="width: 100%;">
+      <div class="ui-step-card">
+        <div class="ui-title c-rust">APPLICANT CONCEALS:</div>
+        <div class="ui-sub">Severe chronic renal failure<br>(Material internal illness)</div>
+      </div>
+      <div class="ui-step-card">
+        <div class="ui-title c-teal">EVENTUAL CAUSE OF DEATH:</div>
+        <div class="ui-sub">Violent vehicular collision<br>(External accidental trauma)</div>
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome" style="background: #FFF7ED; border-color: #FED7AA;">
+      <div class="ui-title c-rust">LEGAL CONSEQUENCE:</div>
+      <div class="ui-sub" style="color: #7C2D12; text-align: left; display: inline-block; margin-top: 0.35rem;">
+        • <strong>Insurer may STILL rescind the contract!</strong><br>
+        • The validity of rescission is measured at contract inception (<span class="c-teal">Section 31</span>).<br>
+        • Total absence of causal connection between the concealed fact and the death is <strong>ENTIRELY IMMATERIAL</strong> to the insurer's defense of concealment.
+      </div>
+    </div>
+  </div>
+
+  <h4 id="iv-professors-illustration-gallstones" class="c-navy">Professor's Illustration: Gallstones versus the Hit-and-Run Collision</h4>
+
+  <blockquote>
+    <ul>
+      <li><strong>Hypothetical:</strong> An applicant undergoes an insurance medical examination. When asked: <em>"Have you ever suffered from or been diagnosed with any disease of the gallbladder, liver, or internal organs?"</em>, the applicant answers <em>"No"</em>, deliberately concealing that two weeks prior, diagnostic scans revealed cholelithiasis (gallbladder stones) requiring surgical intervention. Six months after the policy is issued, while crossing a pedestrian lane, the insured is struck by a speeding truck and dies instantly from traumatic brain injury.</li>
+      <li><strong>The Claim:</strong> The beneficiaries demand payment, arguing: <em>"The insured did not die from gallstones or internal organ disease; death was caused exclusively by an independent, external vehicular accident. The concealed fact is completely disconnected from the peril that materialized."</em></li>
+      <li><strong>The Legal Resolution:</strong> The <span class="c-rust"><strong><u>insurer is legally excused from liability and may validly rescind the policy</u></strong></span>. Materiality is determined under <span class="c-teal">Section 31</span> solely by the influence the undisclosed condition would have exerted upon the underwriter at the inception of the contract. Had the gallbladder disease been disclosed, the insurer would have deferred issuance, charged a higher premium, or excluded gastrointestinal illnesses. The physical cause of death has zero bearing on the legal validity of the insurer's defense of concealment.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="iv-counter-scenario-immaterial" class="c-navy">The Counter-Scenario: Concealment of an Immaterial Fact</h4>
+
+  <p>Conversely, what if the fact concealed was objectively <strong>immaterial</strong> to the risk?</p>
+
+  <blockquote>
+    <ul>
+      <li><strong>Hypothetical:</strong> An applicant denies ever having suffered from minor headaches, despite experiencing occasional tension headaches relieved by over-the-counter paracetamol. The insured later dies in a commercial aviation accident.</li>
+      <li><strong>Legal Resolution:</strong> The <span class="c-green"><strong><u>insurer cannot rescind the contract</u></strong></span>. Because occasional mild headaches have no reasonable influence upon an underwriter in assessing mortality exposure, the non-disclosure fails the <span class="c-teal">Section 31</span> test. Because the concealed fact is legally immaterial, the insurer remains liable on the policy.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h1 id="part-2-statutory-inquiries-representations-warranties" class="c-navy">PART 2: STATUTORY INQUIRIES, REPRESENTATIONS, WARRANTIES, AND CONDITIONS</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">DISCLOSURE &amp; WAIVER</div>
+        <div class="ui-sub"><span class="c-teal">Secs. 28, 30, 33 &amp; 35</span> inquiries &amp; estoppel</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">REPRESENTATIONS</div>
+        <div class="ui-sub">Effectivity test, <span class="c-teal">Sec. 41</span> &amp; substantial truth</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">WARRANTIES</div>
+        <div class="ui-sub">Strict compliance, <span class="c-teal">Sec. 74</span> &amp; statutory excuses</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">EXCEPTIONS &amp; CONDITIONS</div>
+        <div class="ui-sub">Scope carve-outs vs. precedent/subsequent duties</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="part-2-overview" class="c-navy">Part 2 Overview &amp; Scope of Topics</h3>
+
+  <ul>
+    <li><strong>Topic V: Statutory Rules on Disclosure, Inquiries, and Waiver (Estoppel)</strong>
+      <ul>
+        <li>Matters that must be disclosed even in the absence of inquiry (<span class="c-teal">Section 28</span>).</li>
+        <li>Matters that need not be disclosed in the absence of inquiry (<span class="c-teal">Section 30</span>).</li>
+        <li>Matters that need not be disclosed even in response to direct inquiry: The privilege of personal opinion (<span class="c-teal">Section 35</span>).</li>
+        <li>Waiver of communication and the doctrine of equitable estoppel in underwriting.</li>
+      </ul>
+    </li>
+    <li><strong>Topic VI: The Device of Representation and Misrepresentation</strong>
+      <ul>
+        <li>Nature, definition, and statutory scope of representations.</li>
+        <li>Structural distinctions: Concealment (suppression) versus Misrepresentation (affirmative untruth).</li>
+        <li>Classifications: Oral versus Written, Affirmative versus Promissory.</li>
+        <li>The critical temporal test: Reckoning truthfulness at the exact point of policy effectivity.</li>
+        <li>Permissible alterations and withdrawals under <span class="c-teal">Section 41</span>.</li>
+        <li>The rule of substantial truth and the standard of liberal construction in favor of the insured.</li>
+      </ul>
+    </li>
+    <li><strong>Topic VII: The Device of Warranties</strong>
+      <ul>
+        <li>Definition, legal significance, and solemnity of warranties in the contract.</li>
+        <li>Classifications: Express, Implied, Affirmative, and Promissory.</li>
+        <li>The baseline legal effect of breach: Rescission under <span class="c-teal">Section 74</span>.</li>
+        <li>Statutory excuses for non-performance of a material warranty.</li>
+        <li>Converting immaterial matters into material warranties: The mechanics of the "Other Insurance Clause."</li>
+      </ul>
+    </li>
+    <li><strong>Topic VIII: The Devices of Exception and Condition</strong>
+      <ul>
+        <li>Exceptions: Precise delimitation of the scope of coverage.</li>
+        <li>Conditions: Actionable prerequisites to policy enforceability.</li>
+        <li>Conditions Precedent (premium payment) versus Conditions Subsequent (notice and proof of loss).</li>
+        <li>Comparative doctrinal matrix: Distinguishing Concealment, Representation, Warranty, Exception, and Condition.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="topic-v-statutory-rules-disclosure" class="c-navy">V. STATUTORY RULES ON DISCLOSURE, INQUIRIES, AND WAIVER (ESTOPPEL)</h2>
+
+  <p>The Insurance Code meticulously delineates what an applicant must disclose, what they may withhold absent an inquiry, and what they are legally permitted to keep silent on even when directly asked.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE THREE STATUTORY TIERS OF DISCLOSURE</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-kicker c-rust">[SECTION 28]</div>
+        <div class="ui-title">MANDATORY DISCLOSURES EVEN WITHOUT INQUIRY</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.4rem;">
+          • Material facts within applicant's knowledge.<br>
+          • Matters where no warranty is made and insurer cannot readily ascertain.
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-kicker c-teal">[SECTION 30]</div>
+        <div class="ui-title">MATTERS EXEMPT FROM DISCLOSURE IN THE ABSENCE OF INQUIRY</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.4rem;">
+          • Facts the insurer already knows or ought to know through ordinary care.<br>
+          • Facts waived by the insurer.<br>
+          • Matters covered by express warranties or policy exceptions.
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-kicker c-green">[SECTION 35]</div>
+        <div class="ui-title">MATTERS EXEMPT FROM DISCLOSURE EVEN UPON DIRECT INQUIRY</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.4rem;">
+          • Personal judgments, internal opinions, subjective beliefs ("Carina method").
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: STATUTORY TIERS OF DISCLOSURE &amp; WAIVER (SECTIONS 28, 30, 33 &amp; 35) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Information in Applicant's Sphere"] --> Q1{"Does it call for Personal Judgment / Opinion?<br/>(Section 35)"}
+  Q1 -->|"Yes (Subjective Belief)"| S35["EXEMPT EVEN UPON DIRECT INQUIRY (Sec. 35)<br/>Applicant may remain silent ('Carina Method')"]
+  Q1 -->|"No (Objective Fact)"| Q2{"Did the Insurer Make a Direct Inquiry?"}
+  Q2 -->|"No Inquiry Made"| Q3{"Does it fall under the 5 Exceptions of Section 30?<br/>(Known/ought to be known, Waived, Covered by Warranty/Exception)"}
+  Q3 -->|"Yes"| S30["EXEMPT IN THE ABSENCE OF INQUIRY (Sec. 30)<br/>No duty of spontaneous disclosure"]
+  Q3 -->|"No (Exclusive Material Fact)"| S28["MANDATORY SPONTANEOUS DISCLOSURE (Sec. 28)<br/>e.g., Unpermitted fireworks factory behind warehouse"]
+  Q2 -->|"Yes, Inquired"| Q4{"Was the Answer Incomplete or Red Flag Ignored?<br/>(Section 33)"}
+  Q4 -->|"Yes, Insurer Issued Policy Without Follow-up"| S33["IMPLIED WAIVER &amp; UNDERWRITING ESTOPPEL (Sec. 33)<br/>Insurer estopped from claiming concealment"]
+  Q4 -->|"No, Applicant Withheld Known Material Fact"| S26["ACTIONABLE CONCEALMENT (Sec. 26 &amp; 27)"]
+
+  style Start fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style Q1 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Q2 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Q3 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Q4 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style S35 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style S30 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style S33 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style S28 fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style S26 fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="v-1-mandatory-disclosures-sec-28" class="c-navy">1. Matters that Must be Disclosed Even in the Absence of Inquiry (<span class="c-teal">Section 28</span>)</h3>
+
+  <p><span class="c-teal">Section 28</span> sets forth the baseline affirmative duty resting upon every applicant:</p>
+
+  <blockquote>
+    Each party to an insurance contract is legally obligated to <span class="c-green"><strong><u>communicate, in good faith, all facts within their actual knowledge that are material to the contract, for which they make no warranty, and which the other party lacks the ordinary means of ascertaining</u></strong></span>.
+  </blockquote>
+
+  <p>Under this standard, an applicant cannot hide behind the excuse: <em>"The agent never asked me about that specific issue."</em> If the fact is material to the risk and falls within the exclusive knowledge of the applicant, <span class="c-green"><strong><u>spontaneous disclosure is legally mandatory</u></strong></span>.</p>
+
+  <h4 id="v-professors-illustration-fireworks" class="c-navy">Professor's Illustration: The Commercial Fireworks Factory</h4>
+
+  <blockquote>
+    An entrepreneur applies for commercial fire insurance covering a storage warehouse containing general textiles. The applicant knows that immediately behind the back wall of the warehouse, an unpermitted, high-risk home manufacturing outfit for pyrotechnics operates. Even if the fire insurance application form does not contain a specific question asking: <em>"Are fireworks manufactured near your perimeter?"</em>, the applicant is <span class="c-green"><strong><u>legally obligated under <span class="c-teal">Section 28</span> to disclose this hazard</u></strong></span>. It is a material fact profoundly affecting the risk of conflagration which the insurer cannot readily discover through casual review.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="v-2-exempt-absent-inquiry-sec-30" class="c-navy">2. Matters that Need Not be Disclosed in the Absence of Inquiry (<span class="c-teal">Section 30</span>)</h3>
+
+  <p><span class="c-teal">Section 30</span> provides five statutory exceptions to the duty of spontaneous disclosure:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-teal">SECTION 30: MATTERS WITHHELD ABSENT DIRECT INQUIRY</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title">1. Facts the insurer already knows.</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Facts which, in the exercise of ordinary care, the insurer ought to know.</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Facts of which the insurer waives communication.</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title">4. Facts proving or tending to prove a risk excluded by an express warranty.</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title">5. Facts relating to a risk specifically exempted from the policy coverage.</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Facts known or imputable to the insurer:</strong> Matters of common public knowledge, general geographical conditions, ongoing natural disasters, or legal doctrines subject to judicial notice need not be brought up by the applicant.</li>
+    <li><strong>Risks governed by warranty or policy exclusion:</strong> If an applicant agrees to an absolute express warranty that no combustible fuel will ever be stored on the premises, they need not disclose historic fuel deliveries that occurred prior to the contract. Any future violation of this standard will be resolved as a breach of warranty, not concealment. Similarly, if flood damage is expressly excluded from coverage, the applicant need not disclose that the terrain frequently experiences minor seasonal flash floods.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="v-3-personal-opinion-sec-35" class="c-navy">3. Matters Withheld Even in Answer to Inquiries: Personal Opinion (<span class="c-teal">Section 35</span>)</h3>
+
+  <blockquote>
+    <strong><span class="c-teal">Section 35, Republic Act No. 10607:</span></strong><br>
+    <em>"Neither party to a contract of insurance is bound to communicate, <span class="c-green"><strong><u>even upon inquiry, information of his own judgment upon the matters in question</u></strong></span>."</em>
+  </blockquote>
+
+  <p>An applicant is bound to disclose objective, verifiable facts, not subjective assessments, medical self-diagnoses, or personal opinions. When asked questions that call for personal evaluation or speculative conjecture, the applicant is legally entitled to offer no response—a posture humorously termed the <strong>"Carina Method"</strong> by the professor.</p>
+
+  <h4 id="v-professors-illustration-health-opinion" class="c-navy">Professor's Illustration: Evaluating One's Own Physical Health</h4>
+
+  <blockquote>
+    <ul>
+      <li><strong>Hypothetical Inquiry:</strong> The insurance medical questionnaire asks: <em>"Do you believe you are currently in robust, overall excellent physical health?"</em> or <em>"Do you consider your life expectancy to be average or above average?"</em></li>
+      <li><strong>Legal Application:</strong> The applicant is under no legal obligation to answer. An applicant is a layperson, not a licensed diagnostic physician. Whether one considers oneself "healthy" is purely a <span class="c-green"><strong><u>subjective judgment under <span class="c-teal">Section 35</span></u></strong></span>. The applicant may safely pass over the question or decline to speculate without committing actionable concealment. However, if the question asks for a historical fact—<em>"Have you experienced unprovoked fainting spells or received a medical prescription for cardiac medication within the past twelve months?"</em>—the question demands factual reality, and <span class="c-teal">Section 35</span> cannot be invoked.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h3 id="v-4-waiver-estoppel-sec-33" class="c-navy">4. Waiver of Information and Underwriting Estoppel</h3>
+
+  <p><span class="c-teal">Section 33</span> establishes that a right to information of material facts may be <span class="c-green"><strong><u>waived</u></strong></span>, either expressly by the terms of the insurance contract, or impliedly through the <span class="c-green"><strong><u>neglect of the insurer to make inquiries regarding facts that were already partially disclosed or visibly apparent</u></strong></span>.</p>
+
+  <p>Waiver puts the insurer in <span class="c-green"><strong><u>estoppel</u></strong></span>: having abandoned the opportunity to investigate known or suggested circumstances, it cannot later void the contract on grounds of non-disclosure.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE THREE MODES OF UNDERWRITING WAIVER</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">EXPRESS CONTRACTUAL WAIVER</div>
+        <div class="ui-sub">Policy terms state the company waives disclosure of past medical conditions.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">ASSUMPTION OF PRE-EXISTING ILLNESSES</div>
+        <div class="ui-sub">"Guaranteed Issue" policies assuming all past, present, and future illnesses in exchange for higher premiums or limited payouts.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">FAILURE TO PURSUE REASONABLE INQUIRY ON DISCLOSED RED FLAGS</div>
+        <div class="ui-sub">
+          • Applicant discloses a vague medical treatment; insurer asks no follow-ups.<br>
+          • Visible, obvious physical abnormalities ignored by examining medical agent.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="v-professors-illustrations-waiver" class="c-navy">Professor's Illustrations: The Incomplete Answer and Visible Medical Apparatus</h4>
+
+  <blockquote>
+    <ul>
+      <li><strong>The Abandoned Follow-Up:</strong> In response to a written inquiry asking: <em>"Have you suffered any abdominal or gastrointestinal illness over the past year?"</em>, the applicant writes: <em>"Yes."</em> The underwriter issues the policy without asking follow-up questions regarding the diagnosis, severity, hospitalization dates, or surgical records. By approving the application based on an incomplete response, the <span class="c-green"><strong><u>insurer impliedly waives further details</u></strong></span>. It cannot later claim concealment regarding the nature of that disclosed illness.</li>
+      <li><strong>The Visible Medical Apparatus:</strong> The applicant appears in person before the insurer’s designated medical examiner with an external catheter or colostomy bag attached and plainly visible. The examining physician conducts the interview, ignores the apparatus, and makes no written inquiry regarding it. The insurer has waived communication of the underlying pathology. It is <span class="c-green"><strong><u>estopped from asserting that the condition was concealed</u></strong></span>, as the physical manifestation was plainly observable through the exercise of ordinary care.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="topic-vi-representation-misrepresentation" class="c-navy">VI. THE DEVICE OF REPRESENTATION AND MISREPRESENTATION</h2>
+
+  <h3 id="vi-1-definition-nature" class="c-navy">1. Definition and Nature of Representations</h3>
+
+  <p>A <span class="c-green"><strong><u>representation</u></strong></span> is an <span class="c-green"><strong><u>oral or written statement of fact made by the applicant to the insurer, prior to or contemporaneous with the issuance of the policy, relative to the proposed risk</u></strong></span>. Its purpose is to provide essential information to the underwriter and induce the company to enter into the contract.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE DICHOTOMY OF RISK ESTIMATION DEVICES</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-icon">🤐</div>
+        <div class="ui-title c-rust">CONCEALMENT (The Introvert)</div>
+        <div class="ui-kicker" style="margin-top: 0.25rem;">PASSIVE SUPPRESSION</div>
+        <div class="ui-sub">Maintaining silence when a legal duty to speak exists. Fails to disclose a known material fact.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🗣️</div>
+        <div class="ui-title c-teal">REPRESENTATION (The Extrovert)</div>
+        <div class="ui-kicker" style="margin-top: 0.25rem;">POSITIVE ASSERTION</div>
+        <div class="ui-sub">Making affirmative verbal or written statements. Advances claims regarding facts to induce acceptance.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="vi-2-requisites-misrepresentation" class="c-navy">2. Requisites of Actionable Misrepresentation</h3>
+
+  <p>For an insurer to rescind a policy on the ground of misrepresentation, <span class="c-green"><strong><u>three elements must concur</u></strong></span>:</p>
+
+  <ol>
+    <li>The insured made an affirmative statement of fact that is <span class="c-rust"><strong><u>untrue</u></strong></span>.</li>
+    <li>The statement was made with <span class="c-rust"><strong><u>knowledge</u></strong></span> of its falsity, or was asserted positively as true without knowing whether it was true or false.</li>
+    <li>The untruthful statement is <span class="c-green"><strong><u>material to the risk</u></strong></span> under the standard of <span class="c-teal">Section 31</span>.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="vi-3-classifications-representations" class="c-navy">3. Classifications of Representations</h3>
+
+  <p>Representations fall into three distinct analytical pairings:</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">CLASSIFICATIONS OF REPRESENTATIONS</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-kicker c-teal">AS TO FORM</div>
+        <div class="ui-title">Oral vs. Written</div>
+        <div class="ui-sub">Oral (verbal statements) vs. Written (in application form)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-kicker c-teal">AS TO TIME</div>
+        <div class="ui-title">Prior vs. Contemporaneous</div>
+        <div class="ui-sub">Made prior to issuance vs. Made at the moment of issuance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-kicker c-teal">AS TO SUBSTANCE</div>
+        <div class="ui-title">Affirmative vs. Promissory</div>
+        <div class="ui-sub">Affirmative (existing/past facts) vs. Promissory (future acts)</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><span class="c-green"><strong><u>Affirmative Representation:</u></strong></span> An assertion regarding the present existence or past occurrence of a fact (e.g., <em>"The insured property is equipped with an operating, UL-certified burglar alarm system."</em>).</li>
+    <li><span class="c-green"><strong><u>Promissory Representation:</u></strong></span> A representation regarding future conduct, conditions, or occurrences to be fulfilled after the policy has come into existence (e.g., <em>"The applicant promises that an industrial fire extinguisher will be installed within fifteen days of policy approval."</em>). A promissory representation functions much like an informal warranty or condition.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="vi-4-critical-temporal-test" class="c-navy">4. The Critical Temporal Test: Reckoning Truth at Policy Effectivity</h3>
+
+  <p>A cornerstone rule governing representations is that their truth or falsity is not judged at the moment they are spoken or written. It is <span class="c-green"><strong><u>reckoned strictly at the moment the insurance contract takes effect</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE TWO TEMPORAL ASSESSMENT VECTORS</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">[SCENARIO A: FALSE WHEN MADE, BUT TRUE AT EFFECTIVITY]</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>Day 1 (Application):</strong> Applicant states fire extinguishers are installed. (FALSE)<br>
+          • <strong>Day 5:</strong> Applicant purchases and installs certified extinguishers.<br>
+          • <strong>Day 10 (Policy Takes Effect):</strong> Extinguishers are functional on site. (TRUE)<br>
+          <strong class="c-green">===&gt; HOLDING: NO MISREPRESENTATION! (Cured prior to perfection)</strong>
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">[SCENARIO B: TRUE WHEN MADE, BUT FALSE AT EFFECTIVITY]</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>Day 1 (Application):</strong> Applicant states fire extinguishers are installed. (TRUE)<br>
+          • <strong>Day 5:</strong> Extinguishers are returned to rental company and removed.<br>
+          • <strong>Day 10 (Policy Takes Effect):</strong> Premises completely devoid of equipment. (FALSE)<br>
+          <strong class="c-rust">===&gt; HOLDING: ACTIONABLE MISREPRESENTATION! (Voidable at insurer's option)</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Rule 1: <span class="c-green"><u>A statement false when made, but true when the policy takes effect, is NOT an actionable misrepresentation.</u></span></strong> In Scenario A, the defect was cured before the risk attached. The insurer received the exact protective condition it bargained for when the contract was perfected.</li>
+    <li><strong>Rule 2: <span class="c-rust"><u>A statement true when made, but which becomes false before the policy takes effect, CONSTITUTES an actionable misrepresentation.</u></span></strong> In Scenario B, the change in conditions altered the risk profile prior to inception. The applicant’s failure to correct the statement results in a policy predicated on an operational falsehood.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="vi-5-alterations-withdrawals-sec-41" class="c-navy">5. Alterations and Withdrawals of Representations</h3>
+
+  <p>Under <span class="c-teal">Section 41 of the Insurance Code</span>, a representation may be <span class="c-green"><strong><u>altered or withdrawn</u></strong></span> at any point <em>before the insurance policy officially takes effect</em>, but it <span class="c-rust"><strong><u>cannot be altered or withdrawn thereafter</u></strong></span>. Once the policy is delivered and active, the factual representations underlying the underwriting decision become legally set.</p>
+
+  <hr>
+
+  <h3 id="vi-6-substantial-truth" class="c-navy">6. The Standard of Substantial Truth and Liberal Construction</h3>
+
+  <p>Unlike warranties, which demand literal compliance, representations are construed <span class="c-green"><strong><u>liberally in favor of the insured</u></strong></span>. The legal standard requires only <span class="c-green"><strong><u>substantial truth</u></strong></span>:</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">LITERAL COMPLIANCE VS. SUBSTANTIAL TRUTH</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-title c-rust">WARRANTIES DEMAND:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.4rem;">
+          • Exact, literal fulfillment.<br>
+          • Absolute precision in execution.<br>
+          • Zero tolerance for deviations.
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-title c-green">REPRESENTATIONS REQUIRE ONLY:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.4rem;">
+          • Substantial truth.<br>
+          • Absence of material deception.<br>
+          • Technical, minor deviations disregarded.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>If an applicant represents that their industrial extinguishers were inspected and serviced recently, and investigation shows the inspection occurred twelve months ago instead of eleven, the representation remains substantially true. Such a minor technical discrepancy does not defeat policy coverage unless actual fraud or substantial distortion of the hazard is established.</p>
+
+  <hr>
+
+  <h2 id="topic-vii-device-of-warranties" class="c-navy">VII. THE DEVICE OF WARRANTIES</h2>
+
+  <h3 id="vii-1-definition-significance" class="c-navy">1. Definition and Legal Significance</h3>
+
+  <p>A <span class="c-green"><strong><u>warranty</u></strong></span> is a <span class="c-green"><strong><u>statement, promise, or undertaking made by the insured, incorporated directly into the text of the policy or attached to it by proper legal reference, the literal falsity or non-fulfillment of which renders the policy voidable at the election of the insurer</u></strong></span>, <span class="c-rust"><strong><u>regardless of whether the violation caused or contributed to the loss</u></strong></span>.</p>
+
+  <p>Warranties form part of the contract itself. They represent conditions precedent or subsequent that the parties have formally elevated into essential terms of coverage.</p>
+
+  <hr>
+
+  <h3 id="vii-2-classifications-warranties" class="c-navy">2. Classifications of Warranties</h3>
+
+  <ul>
+    <li><span class="c-green"><strong><u>Express Warranty:</u></strong></span> A formal, written stipulation inserted directly into the policy text, or incorporated via an attached endorsement or rider, asserting a fact or promising performance.</li>
+    <li><span class="c-green"><strong><u>Implied Warranty:</u></strong></span> A warranty that is not reduced to writing, but which the law reads into the contract based on the nature of the transaction. Implied warranties arise primarily in <strong>marine insurance</strong>, where the shipowner automatically warrants:
+      <ul>
+        <li>The <span class="c-green"><strong><u>seaworthiness</u></strong></span> of the vessel at the voyage's inception.</li>
+        <li>That the ship will not execute an unlawful <span class="c-green"><strong><u>deviation</u></strong></span> from the agreed voyage path.</li>
+        <li>That the venture will be conducted with <span class="c-green"><strong><u>legality</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><span class="c-green"><strong><u>Affirmative Warranty:</u></strong></span> A warranty asserting the absolute truth of a past or existing fact at the time the policy is executed (e.g., <em>"The insured warrants that the building is constructed exclusively of reinforced concrete"</em>).</li>
+    <li><span class="c-green"><strong><u>Promissory (Continuing) Warranty:</u></strong></span> A warranty stipulating that certain conditions shall exist or that certain acts shall be performed or avoided during the entire life of the policy (e.g., <em>"The insured warrants that a private security guard will patrol the premises every night from 10:00 PM to 6:00 AM"</em>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="vii-3-legal-effect-sec-74" class="c-navy">3. Legal Effect of Breach: <span class="c-teal">Section 74</span> and General Rescission</h3>
+
+  <p>Under <span class="c-teal">Section 74 of the Insurance Code</span>, the <span class="c-rust"><strong><u>violation of a material warranty by either party entitles the other to rescind the contract</u></strong></span>. Because warranties are essential terms of the contract, their violation constitutes an immediate breach of contract, dispensing with the need to prove independent bad faith.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE THREE STATUTORY EXCUSES FOR NON-PERFORMANCE</div>
+      <div class="ui-sub">Even a material warranty will NOT avoid the policy under three conditions:</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker c-green">STATUTORY SUPERVENING ILLEGALITY</div>
+        <div class="ui-sub">Performance of the warranted act becomes unlawful under new municipal laws or statutory enactments at the place of the contract.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker c-green">PRIOR LOSS BEFORE APPOINTED TIME</div>
+        <div class="ui-sub">The property is destroyed by a covered peril before the arrival of the contractual date designated for performing the warranty.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker c-green">SUPERVENING PHYSICAL IMPOSSIBILITY</div>
+        <div class="ui-sub">Performance of the warranty becomes physically impossible through fortuitous events or widespread supply chain failures.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: EVALUATION OF REPRESENTATIONS VS. WARRANTIES &amp; STATUTORY EXCUSES <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Statement or Undertaking by the Insured"] --> Type{"Is it Incorporated in the Policy / Rider<br/>or Merely a Collateral Inducement?"}
+  Type -->|"Collateral Inducement"| Rep["REPRESENTATION (Secs. 36–48)<br/>Oral or Written; Must Prove Materiality (Sec. 31)"]
+  Type -->|"Written in Policy / Rider"| War["WARRANTY (Secs. 67–76)<br/>Conclusively Presumed Material (or via Express Voidance Clause)"]
+
+  Rep --> RepTest{"Is it Substantially True at the<br/>Moment Policy Takes Effect?"}
+  RepTest -->|"Yes (Even if false when made)"| Valid1["NO MISREPRESENTATION<br/>Policy Valid &amp; Enforceable"]
+  RepTest -->|"No (Became false before effectivity)"| Resc1["ACTIONABLE MISREPRESENTATION<br/>Voidable at Insurer's Election (Sec. 44)"]
+
+  War --> WarTest{"Was there Strict, Literal Compliance?"}
+  WarTest -->|"Yes"| Valid2["WARRANTY FULFILLED<br/>Policy Valid &amp; Enforceable"]
+  WarTest -->|"No"| Excuse{"Does a Statutory Excuse Apply?<br/>1. Supervening Illegality<br/>2. Prior Loss Before Due Date<br/>3. Supervening Physical Impossibility"}
+  Excuse -->|"Yes"| Valid3["NON-PERFORMANCE LEGALLY EXCUSED<br/>Policy Remains Valid"]
+  Excuse -->|"No"| Resc2["BREACH OF MATERIAL WARRANTY (Sec. 74)<br/>Insurer Entitled to Rescind Policy"]
+
+  style Start fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style Type fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Rep fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style War fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style RepTest fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style WarTest fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Excuse fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style Valid1 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style Valid2 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style Valid3 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style Resc1 fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style Resc2 fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="vii-professors-illustrations-excused-warranties" class="c-navy">Professor's Illustrations: The Excused Fire Extinguisher Warranties</h4>
+
+  <blockquote>
+    <ul>
+      <li><strong>Supervening Illegality:</strong> The policy contains a promissory warranty that the insured will install a specialized industrial gas-suppression extinguishing system within twenty days. Five days after issuance, the municipal government enacts an environmental safety ordinance prohibiting the commercial use of that specific chemical gas due to inhalation hazards. The insured’s <span class="c-green"><strong><u>non-compliance is legally excused; the policy remains valid</u></strong></span>.</li>
+      <li><strong>Prior Loss Before Performance Date:</strong> The insured is contractually granted a thirty-day grace period from policy inception to complete the installation of exterior emergency fire escapes. On day four, an accidental fire originating on an adjacent property destroys the warehouse. The <span class="c-green"><strong><u>insurer cannot raise breach of warranty; the loss occurred before the date arrived for required performance</u></strong></span>.</li>
+      <li><strong>Supervening Impossibility:</strong> The insured warrants the installation of specialized imported safety valves within ten days. A sudden national maritime embargo halts all harbor shipments, creating an absolute market shortage. The <span class="c-green"><strong><u>performance of the warranty is rendered temporarily impossible, excusing the delay</u></strong></span>.</li>
+    </ul>
+  </blockquote>
+
+  <hr>
+
+  <h3 id="vii-4-other-insurance-clause" class="c-navy">4. Converting Immaterial Provisions into Material Warranties: The "Other Insurance Clause"</h3>
+
+  <p>As a general rule, an immaterial provision does not avoid a policy if violated. However, an exception exists: <span class="c-rust"><strong><u>where the policy expressly stipulates that the violation of a particular provision—regardless of intrinsic materiality—shall avoid the policy, the stipulation governs.</u></strong></span></p>
+
+  <p>A prominent commercial example is the <strong>"Other Insurance Clause"</strong> (Double Insurance Disclosure Clause):</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE ANATOMY OF THE OTHER INSURANCE CLAUSE</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-title c-teal">GENERAL COMMON LAW RULE:</div>
+        <div class="ui-sub">An insured may purchase insurance from multiple carriers without mandatory disclosure, provided total recovery does not exceed true value.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-title c-rust">OPERATION OF EXPRESS CLAUSE:</div>
+        <div class="ui-sub">Clause states: "Notice of all prior/later insurances must be given in writing, failing which this policy is instantly VOID."<br><strong class="c-rust">===&gt; Immaterial fact becomes a MATERIAL WARRANTY through express agreement!</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="vii-professors-warning-overdrafting" class="c-navy">Professor's Warning: Over-Drafting for the Client</h4>
+
+  <blockquote>
+    The professor warned against overly complex drafting: while an attorney might be tempted to load a contract with stringent warranties to make it appear authoritative, doing so can harm the client. Elevating minor technical requirements into express warranties allows the insurer to deny coverage for non-compliance with provisions that would have otherwise been treated as immaterial.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="vii-comparative-matrix" class="c-navy">Comparative Matrix: Misrepresentation versus Warranty</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Point of Comparison</th>
+        <th>Warranty</th>
+        <th>Representation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Contractual Placement</strong></td>
+        <td>An integral, formal part of the insurance policy contract.</td>
+        <td>Collateral inducement; sits outside the primary contract.</td>
+      </tr>
+      <tr>
+        <td><strong>Form Required</strong></td>
+        <td>Must be written in the policy or incorporated by express reference.</td>
+        <td>May be communicated either orally or in written form.</td>
+      </tr>
+      <tr>
+        <td><strong>Presumption of Materiality</strong></td>
+        <td>Conclusively presumed to be material by the parties' agreement.</td>
+        <td>Must be proven to be material under <span class="c-teal">Section 31</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Standard of Compliance</strong></td>
+        <td>Demands absolute, strict, and literal compliance.</td>
+        <td>Requires only substantial truth and fair fulfillment.</td>
+      </tr>
+      <tr>
+        <td><strong>Legal Effect of Falsity</strong></td>
+        <td>Operates directly as a breach of contract and ground to rescind.</td>
+        <td>Renders policy voidable on the ground of fraudulent inducement.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="topic-viii-exception-and-condition" class="c-navy">VIII. THE DEVICES OF EXCEPTION AND CONDITION</h2>
+
+  <h3 id="viii-1-exceptions-exclusions" class="c-navy">1. Exceptions (Exclusions): The Delimitation of Scope</h3>
+
+  <p>An <span class="c-green"><strong><u>exception</u></strong></span> (or exclusion) is a <span class="c-green"><strong><u>negative contractual term that carves specific perils, property types, or hazard categories out of the policy's insuring agreement</u></strong></span>. Unlike warranties or conditions, an exception does not impose duties of performance on the policyholder; it simply establishes that no coverage was ever provided for the specified event.</p>
+
+  <p>If a loss is caused by an excepted peril, the insurer does not need to prove a breach or rescind the contract. It simply denies the claim on the ground that the incident falls outside the policy's coverage.</p>
+
+  <h4 id="viii-professors-illustration-ondoy" class="c-navy">Professor's Illustration: The Evolution of Metro Manila Flood Exclusions</h4>
+
+  <blockquote>
+    Historically, comprehensive automotive policies routinely omitted express exclusions for natural catastrophes, as severe, total vehicle submersions were rare in urban centers. Following the catastrophic flooding of Tropical Storm Ondoy (2009) and Typhoon Pepeng, hundreds of flooded vehicles resulted in crippling losses for commercial insurers. In response, modern underwriters routinely categorize "acts of God," flash floods, and natural calamities as <strong>excepted perils</strong>, requiring motorists to pay a specialized, additional premium endorsement for "Acts of Nature" coverage.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="viii-2-conditions-precedent-subsequent" class="c-navy">2. Conditions: Precedent versus Subsequent</h3>
+
+  <p>A <span class="c-green"><strong><u>condition</u></strong></span> is an <span class="c-green"><strong><u>act, event, or continuing duty that the insured must perform or maintain for the insurance policy to take legal effect, remain operative, or allow a claim to be processed</u></strong></span>.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE TWO PILLARS OF POLICY CONDITIONS</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-title c-navy">[CONDITION PRECEDENT]</div>
+        <div class="ui-sub">Must be satisfied BEFORE the policy attaches and becomes legally binding.</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>Primary Example:</strong> Full payment of the initial premium under <span class="c-teal">Section 77</span>.<br>
+          • <strong>Effect of Breach:</strong> <span class="c-rust">No contract comes into legal existence.</span>
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-title c-teal">[CONDITION SUBSEQUENT]</div>
+        <div class="ui-sub">Must be satisfied AFTER the policy attaches or after a covered loss transpires.</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>Primary Examples:</strong> Timely Notice of Loss under <span class="c-teal">Sec. 90</span>; Proof of Loss under <span class="c-teal">Sec. 92</span>.<br>
+          • <strong>Effect of Breach:</strong> <span class="c-rust">Forfeiture of the right to enforce claim or policy rescission.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Condition Precedent (<span class="c-teal">Section 77</span>):</strong> An act that must be performed before the contract becomes binding. Under <span class="c-teal">Section 77 of the Insurance Code</span>, <span class="c-rust"><strong><u>no insurance policy is valid and binding until the premium is fully paid</u></strong></span>, making initial payment the primary condition precedent.</li>
+    <li><strong>Condition Subsequent (<span class="c-teal">Sections 90 &amp; 92</span>):</strong> An act that must be performed after the policy has attached, typically following a loss, to maintain the right to recovery. The insured must give formal <span class="c-green"><strong><u>notice of loss</u></strong></span> without unnecessary delay (<span class="c-teal">Section 90</span> for fire) and render competent <span class="c-green"><strong><u>proof of loss</u></strong></span> (<span class="c-teal">Section 92</span>). The insurer cannot be expected to know of a distant catastrophe unless notified. The failure to comply with a condition subsequent gives the insurer the option to rescind or deny the claim.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="viii-comprehensive-matrix" class="c-navy">Comprehensive Comparative Matrix: The Five Devices of Risk Control</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Risk Control Device</th>
+        <th>Primary Purpose &amp; Function</th>
+        <th>Statutory Basis / Placement</th>
+        <th>Standard of Compliance</th>
+        <th>Practical Classroom Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong class="c-navy">Concealment</strong></td>
+        <td>Guarantees proper risk estimation by penalizing silence.</td>
+        <td><span class="c-teal">Section 26, Insurance Code</span>; negotiation stage.</td>
+        <td>Absolute disclosure of all known material facts.</td>
+        <td>Suppressing a recent biopsy that confirmed chronic organ failure.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-navy">Representation</strong></td>
+        <td>Collateral inducement aiding the underwriter's evaluation.</td>
+        <td><span class="c-teal">Sections 36–48, Insurance Code</span>; oral or written.</td>
+        <td>Substantial truth; interpreted liberally.</td>
+        <td>Claiming fire extinguishers are installed when they are merely rented.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-navy">Warranty</strong></td>
+        <td>Eliminates increased hazards via binding contractual promises.</td>
+        <td><span class="c-teal">Sections 67–76, Insurance Code</span>; written in policy.</td>
+        <td>Strict, literal, and absolute compliance.</td>
+        <td>Formally promising that premises will never store explosive pyrotechnics.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-navy">Exception</strong></td>
+        <td>Delimits coverage by carving out specific perils.</td>
+        <td>Expressly enumerated exclusions in the policy.</td>
+        <td>Objective boundary; no duty of performance.</td>
+        <td>Explicitly carving out losses caused by floodwaters or natural calamities.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-navy">Condition</strong></td>
+        <td>Establishes prerequisites for policy validity and claims.</td>
+        <td>Written policy conditions; precedent/subsequent.</td>
+        <td>Exact compliance according to terms.</td>
+        <td>Paying initial premium; providing timely notice and proof of fire damage.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h1 id="part-3-rescission-and-incontestability" class="c-navy">PART 3: RESCISSION OF POLICIES AND THE INCONTESTABILITY CLAUSE</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">NON-LIFE RESCISSION</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 48 Par. 1</span> action vs. affirmative defense</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">INCONTESTABILITY</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 48 Par. 2</span> 2-year bar &amp; reinstatement</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">DYNAMICS &amp; DEFENSES</div>
+        <div class="ui-sub">Death within 2 years, surviving defenses &amp; Bar filter</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XII</div>
+        <div class="ui-kicker">BAR EXAM INSIGHTS</div>
+        <div class="ui-sub">High-yield areas, exam strategy &amp; next readings</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="part-3-overview" class="c-navy">Part 3 Overview &amp; Scope of Topics</h3>
+
+  <ul>
+    <li><strong>Topic IX: Rescission of Insurance Contracts: Non-Life vs. Life Policies</strong>
+      <ul>
+        <li>The statutory concept of rescission in insurance law.</li>
+        <li>Rescission in non-life (property) policies: The general rule requiring an affirmative action prior to the filing of a collection suit.</li>
+        <li>The procedural exception: Interposing fraud, deceit, and false representation as affirmative defenses without temporal limits.</li>
+      </ul>
+    </li>
+    <li><strong>Topic X: The Incontestability Clause (<span class="c-teal">Section 48, Insurance Code</span>)</strong>
+      <ul>
+        <li>Legislative intent and public policy foundation of <span class="c-teal">Section 48</span>.</li>
+        <li>The statutory text: Paragraph 1 versus Paragraph 2 of <span class="c-teal">Section 48</span>.</li>
+        <li>The three essential requisites for the application of the clause.</li>
+        <li>Reckoning the two-year statutory clock: Issuance versus last reinstatement.</li>
+      </ul>
+    </li>
+    <li><strong>Topic XI: The Dynamics of Incontestability: Death, Modification, and Excluded Defenses</strong>
+      <ul>
+        <li>The effect of the insured's death within the two-year period: The definitive doctrine and procedural ramifications.</li>
+        <li>Modification of the statutory period: Why parties may legally shorten, but can never extend, the two-year window.</li>
+        <li>The strict exclusivity of the clause: Why <span class="c-teal">Section 48</span> bars only fraudulent concealment and misrepresentation.</li>
+        <li>Defenses that survive the two-year bar: Vicious fraud, lack of insurable interest, non-payment of premium, and policy exceptions.</li>
+        <li>Practical Bar Exam Attack Methodology: The three-step analytical filter.</li>
+      </ul>
+    </li>
+    <li><strong>Topic XII: Administrative Matters &amp; Professor's Asides</strong>
+      <ul>
+        <li>Practical bar examination guidance, pacing, and preparation.</li>
+        <li>Personal reflections: The physical and mental demands of bar operations and the examination experience.</li>
+        <li>Curricular syllabus pacing and preview of upcoming topics.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="topic-ix-rescission-non-life-vs-life" class="c-navy">IX. RESCISSION OF INSURANCE CONTRACTS: NON-LIFE VS. LIFE POLICIES</h2>
+
+  <p>Rescission is the contractual remedy whereby an insurer cancels and terminates a policy due to pre-contractual defects or material post-perfection breaches. In insurance law, rescission is available for:</p>
+
+  <ol>
+    <li>Material concealment (<span class="c-teal">Section 27</span>).</li>
+    <li>Material misrepresentation (<span class="c-teal">Section 44</span>).</li>
+    <li>Breach of a material warranty (<span class="c-teal">Section 74</span>).</li>
+    <li>Breach of a condition subsequent.</li>
+    <li>Unauthorized alteration in the use or condition of the thing insured increasing the risk (<span class="c-teal">Section 32</span>).</li>
+  </ol>
+
+  <p>The procedural application of rescission differs significantly between <strong>non-life (property)</strong> policies and <strong>life</strong> policies.</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">RESCISSION IN NON-LIFE (PROPERTY) POLICIES</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">[GENERAL RULE: SECTION 48, PARAGRAPH 1]</div>
+      <div class="ui-sub">The insurer must exercise its right to rescind the contract <strong>PREVIOUS TO THE COMMENCEMENT OF AN ACTION ON THE CONTRACT</strong> by the insured.</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title c-green">[THE PROCEDURAL EXCEPTION: AFFIRMATIVE DEFENSE]</div>
+      <div class="ui-sub" style="color: #065F46;">If the insured files a collection suit first, the insurer is barred from initiating an independent action to rescind. <strong>HOWEVER</strong>, it may still raise fraud, deceit, and misrepresentation as an <strong>AFFIRMATIVE DEFENSE</strong> in its Answer without time limit!</div>
+    </div>
+  </div>
+
+  <h3 id="ix-1-rescission-non-life" class="c-navy">1. Rescission in Non-Life (Property) Policies</h3>
+
+  <p>Under <span class="c-teal">Paragraph 1 of Section 48</span>, whenever an insurer possesses a right to rescind a non-life policy, that right must be exercised <span class="c-green"><strong><u>previous to the commencement of an action on the contract</u></strong></span> by the insured.</p>
+
+  <ul>
+    <li><strong>The General Rule:</strong> The insurer must initiate an affirmative, overt action to rescind before the insured files a judicial claim to collect insurance proceeds. If the insured files their complaint first, the insurer can no longer bring an independent action for rescission.</li>
+    <li><strong>The Procedural Exception:</strong> While the insurer is barred from initiating an <em>independent action for rescission</em> after a collection suit is filed, it remains free to raise fraudulent concealment, misrepresentation, or breach of warranty as an <span class="c-green"><strong><u>affirmative defense</u></strong></span> in its Answer. As a practical matter, insurers rarely discover fraud upon policy issuance; they uncover it during the claims investigation following a notice of loss. The insurer then raises these grounds to deny the claim in court.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="topic-x-incontestability-clause" class="c-navy">X. THE INCONTESTABILITY CLAUSE (<span class="c-teal">SECTION 48, INSURANCE CODE</span>)</h2>
+
+  <h3 id="x-1-public-policy-statutory-text" class="c-navy">1. Public Policy Foundation and Statutory Text</h3>
+
+  <p>The <span class="c-green"><strong><u>Incontestability Clause</u></strong></span> is a statutory safeguard unique to life insurance. Its purpose is to protect beneficiaries from facing protracted, costly litigation regarding alleged application misstatements years after the insured has passed away. Recognizing that the insured—the individual best equipped to clarify representations made during underwriting—is no longer alive to testify, the law imposes a strict period of limitation on the insurer's right to contest the policy.</p>
+
+  <div class="ui-box" style="background: #F0FDFA; border-color: #99F6E4;">
+    <div class="ui-kicker c-teal" style="margin-bottom: 0.5rem;">SECTION 48, PARAGRAPH 2: THE STATUTORY TEXT</div>
+    <div style="font-style: italic; color: #1F2937;">
+      "After a <span class="c-green"><strong><u>policy of life insurance made payable on the death of the insured</u></strong></span> shall have been <span class="c-green"><strong><u>in force during the lifetime of the insured for a period of two years from the date of its issue or of its last reinstatement</u></strong></span>, the insurer <span class="c-rust"><strong><u>cannot prove that the policy is void ab initio or is rescindable by reason of the fraudulent concealment or misrepresentation of the insured or his agent</u></strong></span>."
+    </div>
+  </div>
+
+  <p>After the two-year period expires, the policy becomes <span class="c-green"><strong><u>incontestable</u></strong></span>. The insurer cannot avoid liability by asserting that the policy was obtained through fraudulent concealment or misrepresentation.</p>
+
+  <hr>
+
+  <h3 id="x-2-three-essential-requisites" class="c-navy">2. The Three Essential Requisites of Incontestability</h3>
+
+  <p>For the statutory bar under <span class="c-teal">Section 48</span> to apply, <span class="c-green"><strong><u>three requisites must concur</u></strong></span>:</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE THREE REQUISITES OF INCONTESTABILITY</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">NATURE OF POLICY</div>
+        <div class="ui-sub">Must be a <strong>LIFE</strong> insurance policy.<br>(Inapplicable to non-life or property insurance)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">PAYMENT TERMS</div>
+        <div class="ui-sub">Must be payable upon the <strong>DEATH</strong> of the insured.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">STATUTORY DURATION</div>
+        <div class="ui-sub">Must have been in force for at least <strong>TWO (2) YEARS</strong> from date of issue or last reinstatement.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="x-3-reckoning-two-year-clock" class="c-navy">3. Reckoning the Two-Year Clock: Issuance versus Reinstatement</h3>
+
+  <p>The two-year contestable period begins on the <span class="c-green"><strong><u>date of policy issuance</u></strong></span> or the <span class="c-green"><strong><u>date of its last reinstatement</u></strong></span>.</p>
+
+  <ul>
+    <li>If a policy lapses due to non-payment of premiums and is subsequently reinstated upon payment of arrears and evidence of insurability, the two-year contestability period <span class="c-green"><strong><u>resets and begins anew</u></strong></span> from the date of approval of that reinstatement.</li>
+    <li>However, this renewed contestability applies only to representations made in the application for reinstatement; it does not permit the insurer to re-litigate disclosures made in the original application if those were already covered by the original two-year bar.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="topic-xi-dynamics-of-incontestability" class="c-navy">XI. THE DYNAMICS OF INCONTESTABILITY: DEATH, MODIFICATION, AND EXCLUDED DEFENSES</h2>
+
+  <h3 id="xi-1-death-within-two-years" class="c-navy">1. The Jurisprudential Dilemma: Death of the Insured Within the Two-Year Period</h3>
+
+  <p>A challenging issue in insurance law concerns the legal consequence when the insured <strong>dies within the two-year contestable period</strong>, but the insurer fails to discover the fraud or contest the policy until after that two-year period has elapsed.</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">TIMELINE: DEATH OF INSURED OCCURRING WITHIN TWO YEARS</div>
+    </div>
+    <div class="ui-grid" style="width: 100%;">
+      <div class="ui-step-card">
+        <div class="ui-kicker c-teal">September 1, 2010</div>
+        <div class="ui-title">Policy Issued</div>
+      </div>
+      <div class="ui-step-card">
+        <div class="ui-kicker c-rust">June 15, 2011</div>
+        <div class="ui-title">Insured Dies</div>
+        <div class="ui-sub">(Within Contestability)</div>
+      </div>
+      <div class="ui-step-card">
+        <div class="ui-kicker c-navy">September 2, 2012</div>
+        <div class="ui-title">Two-Year Statutory Period Concludes</div>
+      </div>
+      <div class="ui-step-card">
+        <div class="ui-kicker c-burgundy">July 10, 2013</div>
+        <div class="ui-title">Insurer Attempts to Contest Policy</div>
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome" style="background: #FFF7ED; border-color: #FED7AA;">
+      <div class="ui-title c-rust">CRUCIAL LEGAL QUESTION:</div>
+      <div class="ui-sub" style="color: #7C2D12;">Can the insurer still contest the policy on July 10, 2013 on grounds of fraud?</div>
+    </div>
+  </div>
+
+  <h4 id="xi-classroom-debate" class="c-navy">Classroom Debate and Analysis of Competing Views</h4>
+
+  <p>During the lecture, the class divided over the interpretation of this scenario:</p>
+
+  <ul>
+    <li><strong>The "Absolute Extinguishment" View:</strong> Several students argued that upon the insured's death within the two-year window, the contract is no longer "in force during the lifetime of the insured." Consequently, the beneficiaries' right to the proceeds vests immediately upon death, foreclosing further contest by the insurer.</li>
+    <li><strong><span class="c-green"><u>The "Guaranteed Two-Year Window" View (The Rule Explained by the Professor):</u></span></strong> The professor clarified the established doctrine: The law provides the insurer a full two-year window from the date of issuance or reinstatement to investigate and contest the contract for fraud.
+      <ul>
+        <li>If the insured dies within that two-year period, <span class="c-green"><strong><u>the insurer does NOT lose its right to contest the policy</u></strong></span>. It retains the remaining portion of the two-year period to investigate and raise concealment or misrepresentation as a defense.</li>
+        <li>However, if the insurer allows the full two-year period to elapse without filing an action or formally denying the claim—even where the insured died during the first year—the policy becomes <span class="c-rust"><strong><u>permanently incontestable</u></strong></span>. The death of the insured within the period does not suspend or extend the statutory two-year clock. If the insurer remains inactive until the two years have run, it is forever barred from asserting fraudulent concealment or misrepresentation.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="xi-applied-scenarios" class="c-navy">Applied Scenarios: The Classroom Hypotheticals</h3>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">APPLIED HYPOTHETICALS: THE INCONTESTABILITY CLOCK</div>
+    </div>
+    <div class="ui-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); text-align: left;">
+      <div class="ui-step-card" style="text-align: left;">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">[CASE 1: CONTEST ATTEMPTED WITHIN TWO YEARS]</div>
+        <div class="ui-sub" style="margin-top: 0.4rem;">
+          • <strong>Policy Issued:</strong> September 1, 2010.<br>
+          • <strong>Discovery of Fraud:</strong> July 15, 2011.<br>
+          • <strong>Insurer Files Action to Rescind:</strong> July 20, 2011.<br>
+          <strong class="c-green">===&gt; VALID:</strong> The policy has been in force for only 10 months; contestability open.
+        </div>
+      </div>
+      <div class="ui-step-card" style="text-align: left;">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">[CASE 2: CONTEST ATTEMPTED AFTER TWO YEARS]</div>
+        <div class="ui-sub" style="margin-top: 0.4rem;">
+          • <strong>Policy Issued:</strong> September 1, 2010.<br>
+          • <strong>Discovery of Concealment:</strong> July 15, 2013.<br>
+          • <strong>Insurer Attempts to Rescind:</strong> July 20, 2013.<br>
+          <strong class="c-rust">===&gt; BARRED:</strong> Two-year window expired on September 2, 2012; policy incontestable.
+        </div>
+      </div>
+      <div class="ui-step-card" style="text-align: left;">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">[CASE 3: DEATH OCCURS WITHIN TWO YEARS, RESCISSION WITHIN TWO YEARS]</div>
+        <div class="ui-sub" style="margin-top: 0.4rem;">
+          • <strong>Policy Issued:</strong> September 1, 2010.<br>
+          • <strong>Insured Dies:</strong> June 1, 2011 (9 months after issuance).<br>
+          • <strong>Fraud Discovered &amp; Contested:</strong> July 15, 2011 (10 months after issuance).<br>
+          <strong class="c-green">===&gt; VALID:</strong> Insurer acted within the two-year window; death does not cut short the insurer's statutory right to investigate and contest.
+        </div>
+      </div>
+      <div class="ui-step-card" style="text-align: left;">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">[CASE 4: DEATH OCCURS WITHIN TWO YEARS, CONTEST SOUGHT AFTER EXPIRATION]</div>
+        <div class="ui-sub" style="margin-top: 0.4rem;">
+          • <strong>Policy Issued:</strong> September 1, 2010.<br>
+          • <strong>Insured Dies:</strong> June 1, 2011 (Within contestable window).<br>
+          • <strong>Insurer Sits Idle and Takes No Legal Action until July 15, 2013.</strong><br>
+          <strong class="c-rust">===&gt; BARRED:</strong> Two-year clock expired on September 2, 2012; inaction makes the policy permanently incontestable despite the prior death.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="xi-2-modification-of-period" class="c-navy">2. Modification of the Contestability Period</h3>
+
+  <p>Can the parties contractually modify the statutory two-year period in <span class="c-teal">Section 48</span>?</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">CONTRACTUAL MODIFICATION OF THE TWO-YEAR PERIOD</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">AGREEMENT TO SHORTEN PERIOD<br>(e.g., 2 Years ---&gt; 1 Year)</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>STATUS:</strong> <span class="c-green">VALID AND ENFORCEABLE.</span><br>
+          • <strong>RATIONALE:</strong> Increases protection for the policyholder and beneficiaries, fulfilling legislative intent.
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">AGREEMENT TO EXTEND PERIOD<br>(e.g., 2 Years ---&gt; 5 Years)</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • <strong>STATUS:</strong> <span class="c-rust">VOID AS AGAINST PUBLIC POLICY.</span><br>
+          • <strong>RATIONALE:</strong> Forces the insured into prolonged uncertainty, defeating the protective purpose of <span class="c-teal">Section 48</span>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Shortening the Period (<span class="c-green"><u>Permissible</u></span>):</strong> A contractual clause providing that the policy becomes incontestable after one year (or six months) is legally valid. Because the Incontestability Clause is designed to protect policyholders, shortening the period expands that statutory protection and benefits the insured.</li>
+    <li><strong>Extending the Period (<span class="c-rust"><u>Impermissible</u></span>):</strong> A stipulation extending the contestable period to five or ten years is <span class="c-rust"><strong><u>void</u></strong></span>. Permitting extensions would allow commercial insurers to undermine the statute, leaving beneficiaries exposed to uncertainty long after the policy should have been secure.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="xi-3-defenses-barred-vs-surviving" class="c-navy">3. Defenses Barred versus Defenses Surviving Incontestability</h3>
+
+  <p><span class="c-teal">Section 48</span> is specific: it bars defenses based on <span class="c-green"><strong><u>fraudulent concealment</u></strong></span> or <span class="c-green"><strong><u>fraudulent misrepresentation</u></strong></span> of the insured or their agent. It does not bar all defenses. Other fundamental grounds for denying coverage remain available even after the two-year period has run.</p>
+
+  <div class="ui-box">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div class="ui-kicker c-navy">THE STATUTORY SCOPE OF INCONTESTABILITY</div>
+    </div>
+    <div class="ui-grid">
+      <div class="ui-col" style="border-right: 1px solid #E2E8F0; padding-right: 1rem;">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title c-rust">DEFENSES PERMANENTLY BARRED AFTER TWO-YEAR LAPSE:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • Fraudulent concealment of past medical history or illnesses.<br>
+          • Misrepresentation regarding lifestyle, tobacco, or alcohol.<br>
+          • Misrepresentation of physical age (subject to age adjustment clause).
+        </div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title c-green">DEFENSES THAT SURVIVE THE TWO-YEAR BARRIER:</div>
+        <div class="ui-sub" style="text-align: left; margin-top: 0.5rem;">
+          • Total absence of insurable interest.<br>
+          • Non-payment of premiums (<span class="c-teal">Sec. 77</span>).<br>
+          • Death caused by an excepted/excluded peril.<br>
+          • Vicious fraud (e.g., policy procured via hired substitute / staged identity).<br>
+          • Failure to submit proof of death.<br>
+          • Violation of military or naval exclusions.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="xi-analysis-surviving-defenses" class="c-navy">Analysis of Defenses Surviving the Two-Year Barrier</h4>
+
+  <ol>
+    <li><strong>Total Absence of Insurable Interest:</strong> Under <span class="c-teal">Section 18</span>, a contract of insurance is <span class="c-rust"><strong><u>void if the insured lacks an insurable interest in the subject matter</u></strong></span>. An agreement void <em>ab initio</em> for lack of insurable interest cannot be validated through the passage of time under an incontestability clause.</li>
+    <li><strong>Non-Payment of Premiums:</strong> Incontestability protects against application defects, not post-perfection failure to pay consideration. If an insured defaults on premiums in year five, the policy lapses; the beneficiary cannot invoke incontestability to compel payment on a lapsed policy.</li>
+    <li><strong>Peril Falls Under an Express Policy Exception:</strong> If a life insurance policy contains an express exclusion for death resulting from military combat, international aviation stunts, or suicide within the contestable period, the insurer is not asserting that the contract is void. Rather, it is enforcing the policy terms: the peril that materialized was simply never covered.</li>
+    <li><strong>Vicious Fraud / Impersonation Schemes:</strong> The clause protects genuine applicants who engaged in concealment or misstatement. It does not shield criminal conspiracies involving <span class="c-rust"><strong><u>vicious fraud</u></strong></span>, such as where an individual hires a healthy impostor to sit for the medical examination, or procures a policy on a terminally ill stranger to collect proceeds.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="xi-4-bar-exam-attack-methodology" class="c-navy">4. Bar Exam Attack Methodology: The Three-Step Analytical Filter</h3>
+
+  <p>To conclude the discussion on incontestability, the professor outlined a three-step analytical method for addressing <span class="c-teal">Section 48</span> problems on the Bar Exam:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">THE THREE-STEP INCONTESTABILITY BAR EXAM METHODOLOGY</div>
+    </div>
+    <div class="ui-step-card">
+      <div class="ui-title c-navy">STEP 1: VERIFY THE NATURE OF THE POLICY (The Subject-Matter Trap)</div>
+      <div class="ui-sub" style="text-align: left; margin-top: 0.35rem;">
+        • Is it a <strong>LIFE</strong> insurance policy payable upon death?<br>
+        • If it is a property, marine, fire, or casualty policy, <strong>STOP</strong>. <span class="c-teal">Section 48</span> does not apply. Resolve under non-life rescission rules.
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-teal">STEP 2: CHECK THE DATES (The Temporal Calculation)</div>
+      <div class="ui-sub" style="text-align: left; margin-top: 0.35rem;">
+        • Identify the date of issue or last reinstatement.<br>
+        • Has the policy been in force for at least two years?<br>
+        • Did the insured die within the two years, and did the insurer act before the two-year mark elapsed?
+      </div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title c-green">STEP 3: IDENTIFY THE PRECISE DEFENSE INVOKED (The Substantive Ground)</div>
+      <div class="ui-sub" style="text-align: left; margin-top: 0.35rem;">
+        • Is the insurer raising fraudulent concealment or misrepresentation? If so, the defense is barred after two years.<br>
+        • Is the insurer raising non-payment of premium, lack of insurable interest, or an excepted risk? If so, the defense <strong>SURVIVES</strong>, and incontestability does not apply.
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: THE THREE-STEP SECTION 48 INCONTESTABILITY BAR EXAM FILTER <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  S1["STEP 1: Verify Nature of Policy<br/>Is it a LIFE Insurance Policy Payable on Death?"] -->|"No (Property, Fire, Marine, Casualty)"| NonLife["STOP: Sec. 48 Par. 2 Incontestability Does NOT Apply<br/>Apply Sec. 48 Par. 1: Rescind prior to suit, or raise Fraud as Affirmative Defense in Answer"]
+  S1 -->|"Yes"| S2["STEP 2: Check the 2-Year Statutory Clock<br/>(From Date of Issue or Last Reinstatement)"]
+  S2 -->|"Insurer Contests WITHIN 2 Years<br/>(Even if Insured Died Within 2 Years)"| Open["CONTESTABILITY OPEN<br/>Insurer May Validly Rescind for Concealment / Misrepresentation"]
+  S2 -->|"2 Full Years Elapsed Without Contest<br/>(Even if Insured Died Within 2 Years)"| S3["STEP 3: Identify the Precise Defense Invoked"]
+  S3 -->|"Fraudulent Concealment or Misrepresentation"| Barred["DEFENSE PERMANENTLY BARRED (Sec. 48 Par. 2)<br/>Policy is Incontestable; Insurer Must Pay"]
+  S3 -->|"1. Lack of Insurable Interest (Sec. 18)<br/>2. Non-Payment of Premium (Sec. 77)<br/>3. Excepted / Excluded Peril<br/>4. Vicious Fraud / Impostor Scheme<br/>5. Failure to Submit Proof of Death"| Survives["DEFENSE SURVIVES THE 2-YEAR BARRIER<br/>Incontestability Clause Does Not Apply"]
+
+  style S1 fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1F2937
+  style S2 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style S3 fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#1F2937
+  style NonLife fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#1F2937
+  style Open fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+  style Barred fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#1F2937
+  style Survives fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#1F2937
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="topic-xii-administrative-matters" class="c-navy">XII. ADMINISTRATIVE MATTERS &amp; PROFESSOR'S ASIDES</h2>
+
+  <h3 id="xii-1-bar-examination-insights" class="c-navy">1. Bar Examination Insights and Observations</h3>
+
+  <ul>
+    <li><strong>High-Frequency Testing Areas:</strong> The professor emphasized that across past bar examinations, the three most heavily tested topics in Insurance Law are:
+      <ol>
+        <li><strong>Insurable Interest</strong> (<span class="c-teal">Sections 10–25</span>).</li>
+        <li><strong>Concealment and Materiality</strong> (<span class="c-teal">Sections 26–35</span>).</li>
+        <li><strong>The Incontestability Clause</strong> (<span class="c-teal">Section 48</span>).</li>
+      </ol>
+    </li>
+    <li><strong>Question Crafting Patterns:</strong> Bar examiners often include specific calendar dates within hypothetical problems to signal that the question turns on <span class="c-teal">Section 48</span>. However, examinees must be careful not to fall into the "subject-matter trap": if the examiner includes dates within a <em>property or casualty insurance</em> problem, the two-year incontestability rule cannot be applied.</li>
+    <li><strong>Structuring Bar Answers on Incontestability:</strong> Examinees should avoid unnecessary recitations of the entire Incontestability Clause when the defense raised falls outside its scope. If an insurer denies a five-year-old life insurance policy because the insured stopped paying premiums in year four, the response should state directly:<br>
+    <em>"The defense of non-payment of premium is not barred by the Incontestability Clause under <span class="c-teal">Section 48</span>. The two-year bar applies exclusively to fraudulent concealment or misrepresentation. Non-payment of premium invalidates coverage under <span class="c-teal">Section 77</span> regardless of how long the policy has been active."</em></li>
+  </ul>
+
+  <hr>
+
+  <h3 id="xii-2-practical-perspectives" class="c-navy">2. Practical Perspectives: The Realities of Bar Operations and Examination Day</h3>
+
+  <ul>
+    <li><strong>The Toll of Bar Operations:</strong> The professor reflected on personal experiences with law school Bar Operations from 2008 to 2017. While Bar Ops programs provide valuable logistical support, the intense schedule—traveling between Baguio and Manila at midnight, navigating crowds at De La Salle University and later the University of Santo Tomas, and managing logistics on minimal sleep—presents significant physical demands.</li>
+    <li><strong>Managing Examination Day Realities:</strong>
+      <ul>
+        <li>Examinees should avoid being overwhelmed by bulky summary materials, complex outlines, or unsolicited advice outside the examination gates. Thorough, focused preparation completed before exam day is what matters.</li>
+        <li>Maintaining physical focus is critical during the four-hour afternoon examination blocks. Candidates should plan their nutrition, rest, and routine headache management carefully to ensure they can perform at their best.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="xii-3-pacing-syllabus" class="c-navy">3. Pacing, Syllabus, and Next Assigned Readings</h3>
+
+  <ul>
+    <li><strong>Topic Transition:</strong> The class will move next to the study of the <strong>Policy of Insurance</strong> (<span class="c-teal">Sections 49–66</span>) and its supporting attachments.</li>
+    <li><strong>Upcoming Course Coverage:</strong>
+      <ul>
+        <li>The Insurance Policy document, endorsements, riders, and binding receipts.</li>
+        <li>The statutory requirements for <strong>premium payment</strong> (<span class="c-teal">Section 77</span>) and its recognized exceptions.</li>
+        <li>Fundamental concepts of <strong>Marine Insurance</strong>, including implied warranties of seaworthiness, deviations, and insurable interests in maritime ventures.</li>
+      </ul>
+    </li>
+    <li><strong>Preparation Instructions:</strong> Students are expected to complete the assigned statutory readings and digest the accompanying jurisprudence on policies, riders, and premium payments prior to the next lecture session.</li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
