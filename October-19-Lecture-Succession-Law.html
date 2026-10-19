@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 19 Lecture - Succession Law</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 280px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: INTESTATE SUCCESSION, CONCURRENCE OF HEIRS, AND MIXED SUCCESSION</option>
+      <option value="#sec-i-fundamental-principles">&nbsp;&nbsp;↳ I. Fundamental Principles and Causes of Legal or Intestate Succession</option>
+      <option value="#nature-intestate-succession">&nbsp;&nbsp;&nbsp;&nbsp;• Nature of Intestate Succession and Total Disposition</option>
+      <option value="#jurisprudential-foundations">&nbsp;&nbsp;&nbsp;&nbsp;• Jurisprudential Foundations: Representation and Collaterals</option>
+      <option value="#case-dela-merced">&nbsp;&nbsp;&nbsp;&nbsp;• De La Merced v. De La Merced (G.R. No. 126707)</option>
+      <option value="#case-delos-santos">&nbsp;&nbsp;&nbsp;&nbsp;• De Los Santos v. De La Cruz (G.R. No. L-29192)</option>
+      <option value="#statutory-causes-intestacy">&nbsp;&nbsp;&nbsp;&nbsp;• Statutory Causes of Legal or Intestate Succession (Art. 960)</option>
+      <option value="#illustration-art-960">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (Art. 960)</option>
+      <option value="#sec-ii-rules-of-thumb">&nbsp;&nbsp;↳ II. Rules of Thumb and Specific Combinations in Intestate Shares</option>
+      <option value="#one-half-rule">&nbsp;&nbsp;&nbsp;&nbsp;• The "One-Half Rule" and Core Intestate Combinations</option>
+      <option value="#comparative-table-legitimes-intestate">&nbsp;&nbsp;&nbsp;&nbsp;• Comparative Table: Legitimes vs. Intestate Shares</option>
+      <option value="#double-share-rule-collaterals">&nbsp;&nbsp;&nbsp;&nbsp;• Double-Share Rule: Full-Blood vs. Half-Blood Collaterals</option>
+      <option value="#adopted-children-intestacy">&nbsp;&nbsp;&nbsp;&nbsp;• Intestate Status of Adopted Children</option>
+      <option value="#sec-iii-concurrence-children">&nbsp;&nbsp;↳ III. Concurrence of Legitimate and Illegitimate Children in Intestacy</option>
+      <option value="#statutory-tension-non-impairment">&nbsp;&nbsp;&nbsp;&nbsp;• Statutory Tension and Non-Impairment of Legitimes</option>
+      <option value="#exclusion-theory">&nbsp;&nbsp;&nbsp;&nbsp;• 1. The Exclusion Theory (Exclusionary View)</option>
+      <option value="#concurrence-theory">&nbsp;&nbsp;&nbsp;&nbsp;• 2. The Concurrence Theory (Proportional 2:1 View)</option>
+      <option value="#illustration-exclusion-concurrence">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (₱120M Concurrence)</option>
+      <option value="#sec-iv-mixed-succession">&nbsp;&nbsp;↳ IV. Mixed Succession (Partial Intestacy) and the Rule on Charging Legacies</option>
+      <option value="#mixed-succession-top-line-prohibition">&nbsp;&nbsp;&nbsp;&nbsp;• Concept of Mixed Succession &amp; Prohibition on Top-Line Deduction</option>
+      <option value="#charging-legacy-excess-share">&nbsp;&nbsp;&nbsp;&nbsp;• Operative Rule: Charging Legacy to Heir Exceeding Legitime</option>
+      <option value="#illustration-mixed-succession">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (₱10M Legacy to Sarah)</option>
+      <option value="#part-2">PART 2: PROVISIONS COMMON TO TESTATE AND INTESTATE SUCCESSION — RIGHT OF ACCRETION AND RESOLUTION OF VACANCIES</option>
+      <option value="#sec-v-right-of-accretion">&nbsp;&nbsp;↳ V. Concept, Nature, and Requisites of the Right of Accretion</option>
+      <option value="#contextualizing-accretion">&nbsp;&nbsp;&nbsp;&nbsp;• Succession Law vs. Property Law Accretion</option>
+      <option value="#essential-requisites-accretion">&nbsp;&nbsp;&nbsp;&nbsp;• Essential Requisites of the Right of Accretion</option>
+      <option value="#illustration-earmarking">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (Earmarking vs. Pro Indiviso)</option>
+      <option value="#sec-vi-accretion-intestate-vs-testate">&nbsp;&nbsp;↳ VI. Accretion in Legal Succession vs. Testamentary Succession</option>
+      <option value="#accretion-intestate-art-1018">&nbsp;&nbsp;&nbsp;&nbsp;• Accretion in Legal Succession (Article 1018 &amp; Jurado Doctrine)</option>
+      <option value="#accretion-compulsory-heirs-art-1021">&nbsp;&nbsp;&nbsp;&nbsp;• Accretion Among Compulsory Heirs (Article 1021)</option>
+      <option value="#sec-vii-philosophical-foundations-vacancies">&nbsp;&nbsp;↳ VII. Philosophical Foundations and Master Hierarchy for Resolving Vacancies</option>
+      <option value="#primacy-testator-will-legitime-immunity">&nbsp;&nbsp;&nbsp;&nbsp;• Primacy of Testator's Will &amp; Immunity of Legitime</option>
+      <option value="#master-analytical-matrix">&nbsp;&nbsp;&nbsp;&nbsp;• Master Analytical Matrix for Resolving Vacancies (R-I-P)</option>
+      <option value="#illustration-matrix">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (Vacant Free Portion)</option>
+      <option value="#sec-viii-master-problem-120m">&nbsp;&nbsp;↳ VIII. Comprehensive Distribution Mechanics in Vacancies (₱120M Master Problem)</option>
+      <option value="#facts-master-problem">&nbsp;&nbsp;&nbsp;&nbsp;• Facts of the Master Classroom Problem</option>
+      <option value="#step-1-baseline-allocation">&nbsp;&nbsp;&nbsp;&nbsp;• Step 1: Baseline Allocation in Testate Succession</option>
+      <option value="#step-2-resolving-c-predecease">&nbsp;&nbsp;&nbsp;&nbsp;• Step 2: Resolving C's Vacant Share (Predecease)</option>
+      <option value="#step-3-resolving-d-repudiation">&nbsp;&nbsp;&nbsp;&nbsp;• Step 3: Resolving D's Vacant Share (Repudiation &amp; Assignment)</option>
+      <option value="#step-4-contrast-pure-intestacy">&nbsp;&nbsp;&nbsp;&nbsp;• Step 4: Contrast with Pure Intestate Succession</option>
+      <option value="#part-3">PART 3: CAPACITY TO SUCCEED BY WILL OR BY INTESTACY, RELATIVE INCAPACITIES, AND SPECIAL DISPOSITIONS</option>
+      <option value="#sec-ix-general-capacity-survivorship">&nbsp;&nbsp;↳ IX. General Capacity to Succeed, Natural Persons, and Presumptions on Survivorship</option>
+      <option value="#requirement-existence-opening">&nbsp;&nbsp;&nbsp;&nbsp;• Requirement of Existence at Opening of Succession (Art. 1025)</option>
+      <option value="#conceived-children-intrauterine-rule">&nbsp;&nbsp;&nbsp;&nbsp;• Conceived Children and Intrauterine Life Rule (Arts. 40 &amp; 41)</option>
+      <option value="#simultaneous-death-representation">&nbsp;&nbsp;&nbsp;&nbsp;• Presumption of Simultaneous Death and Representation (Art. 43)</option>
+      <option value="#illustration-simultaneous-death">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (Simultaneous Death)</option>
+      <option value="#sec-x-incapacity-undue-influence">&nbsp;&nbsp;↳ X. Incapacity by Reason of Possible Undue Influence (Article 1027)</option>
+      <option value="#scope-philosophy-art-1027">&nbsp;&nbsp;&nbsp;&nbsp;• Scope and Underlying Philosophy of Article 1027</option>
+      <option value="#detailed-analysis-six-disqualifications">&nbsp;&nbsp;&nbsp;&nbsp;• Detailed Analysis of the Six Disqualifications</option>
+      <option value="#art-1027-par-1-priest">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Priest or Minister of the Gospel (Art. 1027[1])</option>
+      <option value="#art-1027-par-2-relatives-church">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Relatives within 4th Degree &amp; Church (Art. 1027[2])</option>
+      <option value="#art-1027-par-3-guardian">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Guardian Prior to Final Accounts (Art. 1027[3])</option>
+      <option value="#art-1027-par-4-witnesses">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Attesting Witnesses &amp; Family (Art. 1027[4])</option>
+      <option value="#art-1027-par-5-medical-personnel">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Medical Professionals &amp; Druggists (Art. 1027[5])</option>
+      <option value="#art-1027-par-6-prohibited-entities">&nbsp;&nbsp;&nbsp;&nbsp;• 6. Entities Prohibited by Law (Art. 1027[6])</option>
+      <option value="#illustration-art-1027">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (Art. 1027 Application)</option>
+      <option value="#sec-xi-incapacity-morality-prayers-adoption">&nbsp;&nbsp;↳ XI. Incapacity Arising from Morality, Dispositions for the Soul, and Adoption Rules</option>
+      <option value="#art-1028-morality-art-739">&nbsp;&nbsp;&nbsp;&nbsp;• Dispositions Prohibited Under Art. 1028 in rel. to Art. 739</option>
+      <option value="#art-1029-prayers-soul">&nbsp;&nbsp;&nbsp;&nbsp;• Dispositions for Prayers and Pious Works (Art. 1029)</option>
+      <option value="#illustration-prayers-soul">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration (1,000 Masses)</option>
+      <option value="#adoption-succession-bar-representation">&nbsp;&nbsp;&nbsp;&nbsp;• Adoption Rules &amp; Absolute Bar Against Representation</option>
+      <option value="#comparative-table-capacity-dispositions">&nbsp;&nbsp;&nbsp;&nbsp;• Summary Table: Capacity and Special Dispositions</option>
+      <option value="#sec-xii-subsequent-topics-overview">&nbsp;&nbsp;↳ XII. Overview of Subsequent Topics (Arts. 1032, 1041–1057, 1061–1105)</option>
+      <option value="#admin-matters-asides">&nbsp;&nbsp;↳ Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <p class="c-navy"><strong>October 19 Class Lecture:</strong></p>
+
+  <h1 id="part-1">PART 1: INTESTATE SUCCESSION, CONCURRENCE OF HEIRS, AND MIXED SUCCESSION</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">ARTS. 960, 1011–1014</div>
+        <div class="ui-title">Fundamental Principles</div>
+        <div class="ui-sub">Pure intestacy, absence of free portion, causes &amp; jurisprudence</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">ARTS. 996–1009</div>
+        <div class="ui-title">Intestate Combinations</div>
+        <div class="ui-sub">One-half rule, collateral 2:1 ratio &amp; adopted children</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">ART. 999 / FC 176</div>
+        <div class="ui-title">Concurrence of Children</div>
+        <div class="ui-sub">Legitime non-impairment, Exclusion vs. Concurrence theories</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">ART. 960(2)</div>
+        <div class="ui-title">Mixed Succession</div>
+        <div class="ui-sub">Prohibition on top-line deduction &amp; legacy charging rule</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 1 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>I. Fundamental Principles and Causes of Legal or Intestate Succession:</strong> Nature of intestate distribution, absence of a free portion in pure intestacy, the State as default ultimate heir (<span class="c-teal">Civil Code, Arts. 1011–1014</span>), jurisprudential foundations in <span class="c-burgundy"><em>De La Merced v. De La Merced</em></span> and <span class="c-burgundy"><em>De Los Santos v. De La Cruz</em></span>, and the statutory causes of intestacy under <span class="c-teal">Article 960 of the Civil Code</span>.</li>
+        <li><strong>II. Rules of Thumb and Specific Combinations in Intestate Shares:</strong> The "One-Half Rule" for the legitimate line, specific statutory combinations (<span class="c-teal">Arts. 996, 998, 1000, 1001</span>), the double-share rule for full-blood collaterals vs. half-blood collaterals (<span class="c-teal">Arts. 1006, 1008</span>) and its outer limits, and the status of adopted children in intestacy.</li>
+        <li><strong>III. Concurrence of Legitimate and Illegitimate Children in Intestacy:</strong> Resolving the statutory tension between <span class="c-teal">Article 999</span> and the 2:1 ratio under <span class="c-teal">Article 895</span> (as amended by <span class="c-teal">Art. 176 of the Family Code</span>), prevention of legitime impairment, the Exclusion Theory, and the Concurrence Theory.</li>
+        <li><strong>IV. Mixed Succession (Partial Intestacy) and the Rule on Charging Legacies:</strong> Mechanics of distributing an estate where a valid will disposes of only a fraction of the hereditary estate, the prohibition against deducting legacies off the top of the gross estate, and charging testamentary dispositions against the legal heir whose intestate share exceeds his legitime.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-i-fundamental-principles">I. FUNDAMENTAL PRINCIPLES AND CAUSES OF LEGAL OR INTESTATE SUCCESSION</h2>
+
+  <h3 id="nature-intestate-succession">Nature of Intestate Succession and Total Disposition of the Estate</h3>
+
+  <p>Legal or intestate succession is the mode of transmission of hereditary rights established by operation of law in default of a valid and operative testamentary disposition. It rests upon the presumed will of the decedent, allocating the hereditary estate to relatives in accordance with natural affection, blood proximity, and familial duty.</p>
+
+  <ul>
+    <li><strong>Absence of a Free Portion in Pure Intestacy:</strong> In pure intestate succession, the concepts of "legitime" and "free portion" do not strictly operate as separate dispositive buckets because the decedent left no last will and testament. The entire net hereditary estate is <span class="c-green"><strong><u>distributed completely among the surviving legal or intestate heirs according to the proportions fixed by law</u></strong></span>, leaving no undisposed remainder.</li>
+    <li><strong>Preservation of Compulsory Shares:</strong> Although there is no formal free portion in pure intestacy, where compulsory heirs concur in intestate succession (particularly legitimate and illegitimate descendants), the law mandates a preliminary check against their statutory legitimes to guarantee that the resulting intestate distribution does <span class="c-rust"><strong><u>not impair the minimum shares guaranteed to them by law</u></strong></span>.</li>
+    <li><strong>The State as Ultimate Default Intestate Heir:</strong> Under <span class="c-teal"><strong>Articles 1011 to 1014 of the Civil Code</strong></span>, the State stands at the very end of both the regular and irregular orders of intestate succession. Because the State is the ultimate legal heir in default of all blood relatives, surviving spouse, and illegitimate relations, an intestate estate <span class="c-green"><strong><u>can never remain permanently ownerless or undisposed</u></strong></span>.</li>
+  </ul>
+
+  <h3 id="jurisprudential-foundations">Jurisprudential Foundations on Intestate Representation and Collateral Rights</h3>
+
+  <p>Before advancing into complex mathematical distributions, the lecture anchored the transition into intestate shares upon two foundational Supreme Court decisions governing how illegitimate and collateral relatives participate in intestate estates.</p>
+
+  <h3 id="case-dela-merced"><span class="c-burgundy"><em>De La Merced v. De La Merced</em></span> (G.R. No. 126707, February 25, 1999)</h3>
+
+  <blockquote>
+    <p><strong>Facts:</strong> Evaristo De La Merced died intestate without issue, survived by his collateral relatives (siblings) and Joselito De La Merced, the illegitimate son of Evaristo's predeceased legitimate brother, Francisco. Evaristo's surviving siblings sought to exclude Joselito from the intestate estate by invoking the barrier under Article 992 of the Civil Code.</p>
+    <p><strong>Issue:</strong> Does Article 992 of the Civil Code bar an illegitimate child from inheriting <em>ab intestato</em> from his natural father's legitimate brother when the father had already been granted co-ownership rights prior to death?</p>
+    <p><strong>Ruling / Ratio:</strong> While Article 992 establishes a barrier preventing illegitimate children from inheriting <em>ab intestato</em> from the legitimate relatives of their father or mother, this barrier applies only when the illegitimate child attempts to represent his parent to inherit <em>from</em> the legitimate relative. Where the parent had already acquired a vested proprietary right over the property during his lifetime, the illegitimate child inherits directly from his own parent under Article 988, not from the legitimate collateral relative.</p>
+  </blockquote>
+
+  <h3 id="case-delos-santos"><span class="c-burgundy"><em>De Los Santos v. De La Cruz</em></span> (G.R. No. L-29192, February 22, 1971)</h3>
+
+  <blockquote>
+    <p><strong>Facts:</strong> Pelagia De La Cruz died intestate without descendants, ascendants, or a surviving spouse, leaving behind nieces and a grandniece (Gertrudes De Los Santos, whose mother Marciana—a niece of the decedent—had predeceased the decedent). Gertrudes claimed a proportionate share in the intestate estate by right of representation of her predeceased mother.</p>
+    <p><strong>Issue:</strong> May a grandniece inherit by right of representation alongside surviving nieces and nephews in the intestate succession of a collateral decedent?</p>
+    <p><strong>Ruling / Ratio:</strong> No, a grandniece cannot inherit by right of representation in the collateral line because under Article 972 of the Civil Code, representation in the collateral line takes place <em>only</em> in favor of the children of brothers or sisters (nephews and nieces), whether of the full or half blood. Consequently, the surviving nieces—being relatives of the fourth civil degree—exclude the grandniece, who belongs to the fifth civil degree, pursuant to the principle of proximity (<em>propinquior excludit remotiorem</em>).</p>
+  </blockquote>
+
+  <h3 id="statutory-causes-intestacy">Statutory Causes of Legal or Intestate Succession</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 960 of the Civil Code</strong></span>, legal or intestate succession takes place in the following specific instances, supplemented by doctrinal situations recognized in jurisprudence and civil law commentary:</p>
+
+  <ol>
+    <li><strong>Absence, Nullity, or Revocation of a Will:</strong> When a person dies without a will, or with a void will (e.g., lacking essential formal requisites under Arts. 804–808), or with a will that has subsequently lost its validity (such as a will validly revoked under Art. 830 without a subsequent will taking its place).</li>
+    <li><strong>Lack of Institution or Partial Disposition:</strong> When the will does not institute an heir to, or does not dispose of, all the property belonging to the testator. In such case, legal succession shall take place only with respect to the property of which the testator has not disposed, resulting in <strong>mixed succession</strong>.</li>
+    <li><strong>Failure of a Suspensive Condition:</strong> If the suspensive condition attached to the institution of an heir does not happen or is not fulfilled, rendering the conditional testamentary institution ineffective.</li>
+    <li><strong>Predecease, Incapacity, or Repudiation Without Substitute or Accretion:</strong> When the instituted heir predeceases the testator, or repudiates the inheritance, or is incapacitated to succeed, and no substitution has been designated and no right of accretion takes place.</li>
+    <li><strong>Fulfillment of a Resolutory Condition:</strong> Upon the fulfillment of a resolutory condition attached to the institution of an heir, which extinguishes the testamentary right and triggers intestate distribution as to that portion <code>[Assumed reference to Art. 871, Civil Code]</code>.</li>
+    <li><strong>Expiration of a Resolutory Term:</strong> Upon the expiration of a resolutory term or period attached to the institution of an heir, after which the property passes to the legal heirs unless otherwise directed by the testator <code>[Assumed reference to Art. 885, Civil Code]</code>.</li>
+  </ol>
+
+  <h3 id="illustration-art-960">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Testator A, whose sole surviving relative is his brother B, executes a valid will devising a specific house to C provided C passes the 2025 Bar Examinations, and bequeathing a specific car to D, designating E as D's simple substitute strictly in case of predecease. D dies in 1997, A dies in 1998, E repudiates the substitution, and C subsequently fails the 2025 Bar Examinations. Because the suspensive condition attached to C's devise failed and the institution/substitution regarding D's legacy became ineffective without accretion, both properties pass by intestate succession to A's sole legal heir, his brother B.</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-ii-rules-of-thumb">II. RULES OF THUMB AND SPECIFIC COMBINATIONS IN INTESTATE SHARES</h2>
+
+  <h3 id="one-half-rule">The "One-Half Rule" and Core Intestate Combinations</h3>
+
+  <p>To master estate distribution problems without confusion, the lecture emphasized a foundational analytical rule of thumb in intestate combinations: <span class="c-green"><strong><u>whenever the legitimate direct line (whether legitimate children/descendants or, in their default, legitimate parents/ascendants) concurs with multiple classes of irregular compulsory heirs, the legitimate line consistently receives at least one-half (1/2) of the estate.</u></strong></span> Furthermore, every fraction of the estate must be exhausted.</p>
+
+  <ul>
+    <li><strong>Legitimate Parents + Illegitimate Children + Surviving Spouse:</strong> Under <span class="c-teal"><strong>Article 1000 of the Civil Code</strong></span>, if legitimate ascendants survive along with illegitimate children and the surviving spouse, the legitimate ascendants shall be entitled to <strong>one-half (1/2)</strong> of the inheritance, the illegitimate children to <strong>one-fourth (1/4)</strong>, and the surviving spouse to <strong>one-fourth (1/4)</strong>. Notice how the 2:1 ratio between the legitimate line (1/2) and the illegitimate line (1/4) is preserved, while the remaining 1/4 goes to the spouse, exhausting 100% of the estate.</li>
+    <li><strong>Surviving Spouse + Brothers, Sisters, Nephews, and Nieces:</strong> Under <span class="c-teal"><strong>Article 1001 of the Civil Code</strong></span>, should brothers and sisters or their children (nephews and nieces) survive with the widow or widower, the surviving spouse shall be entitled to <strong>one-half (1/2)</strong> of the inheritance, and the brothers and sisters or their children to the other <strong>one-half (1/2)</strong>.</li>
+    <li><strong>One Legitimate Child + Surviving Spouse:</strong> Under <span class="c-teal"><strong>Article 996 of the Civil Code</strong></span> (as construed by the Supreme Court in <span class="c-burgundy"><em>Santillon v. Miranda</em></span>), when the widow or widower survives with only one legitimate child, they divide the entire intestate estate equally: <strong>one-half (1/2)</strong> to the lone legitimate child and <strong>one-half (1/2)</strong> to the surviving spouse.</li>
+    <li><strong>Illegitimate Children + Surviving Spouse:</strong> Under <span class="c-teal"><strong>Article 998 of the Civil Code</strong></span>, if a widow or widower survives with illegitimate children (in the absence of legitimate descendants and legitimate ascendants), the surviving spouse shall be entitled to <strong>one-half (1/2)</strong> of the inheritance, and the illegitimate children or their descendants to the other <strong>one-half (1/2)</strong>.</li>
+  </ul>
+
+  <h3 id="comparative-table-legitimes-intestate">Comparative Table: Legitimes vs. Intestate Shares in Key Combinations</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Surviving Heirs</th>
+        <th>Legitime (Testate Succession)</th>
+        <th>Intestate Share (Legal Succession)</th>
+        <th>Statutory Basis (Civil Code / Family Code)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1 Legitimate Child + Surviving Spouse</strong></td>
+        <td>LC: 1/2 of estate; SS: 1/4 of estate (Free Portion: 1/4)</td>
+        <td>LC: 1/2 of estate; SS: 1/2 of estate (No Free Portion)</td>
+        <td><span class="c-teal">Art. 888, Art. 892 par. 1; Art. 996</span></td>
+      </tr>
+      <tr>
+        <td><strong>2 or More Legitimate Children + Surviving Spouse</strong></td>
+        <td>LCs: 1/2 divided equally; SS: equal to 1 LC from free portion</td>
+        <td>LCs and SS divide the entire estate equally (SS counts as 1 LC)</td>
+        <td><span class="c-teal">Art. 888, Art. 892 par. 2; Art. 996</span></td>
+      </tr>
+      <tr>
+        <td><strong>Legitimate Parents + Illegitimate Children + Surviving Spouse</strong></td>
+        <td>LP: 1/2; ICs: 1/4; SS: 1/8 (Free Portion: 1/8)</td>
+        <td>LP: 1/2; ICs: 1/4; SS: 1/4 (No Free Portion)</td>
+        <td><span class="c-teal">Art. 889, Art. 896, Art. 899; Art. 1000</span></td>
+      </tr>
+      <tr>
+        <td><strong>Illegitimate Children + Surviving Spouse</strong></td>
+        <td>ICs: 1/3; SS: 1/3 (Free Portion: 1/3)</td>
+        <td>ICs: 1/2; SS: 1/2 (No Free Portion)</td>
+        <td><span class="c-teal">Art. 894; Art. 998</span></td>
+      </tr>
+      <tr>
+        <td><strong>Surviving Spouse + Brothers, Sisters, Nephews, Nieces</strong></td>
+        <td>SS: 1/2 (or 1/3 if <em>in articulo mortis</em>); Collaterals: None (not compulsory heirs)</td>
+        <td>SS: 1/2 of estate; Collaterals: 1/2 of estate</td>
+        <td><span class="c-teal">Art. 900; Art. 1001</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="double-share-rule-collaterals">The Double-Share Rule for Full-Blood vs. Half-Blood Collaterals</h3>
+
+  <p>Under <span class="c-teal"><strong>Articles 1006 and 1008 of the Civil Code</strong></span>, should brothers and sisters of the full blood survive together with brothers and sisters of the half blood, the former shall be entitled to a share double that of the latter (a <span class="c-green"><strong><u>2:1 ratio</u></strong></span>). The same 2:1 rule applies when nephews and nieces of the full blood concur with nephews and nieces of the half blood, whether inheriting in their own right or by right of representation.</p>
+
+  <ul>
+    <li><strong>Strict Limitation to Brothers, Sisters, Nephews, and Nieces:</strong> The distinction between full blood and half blood applies <span class="c-rust"><strong><u>exclusively</u></strong></span> to brothers, sisters, nephews, and nieces (including third-degree <em>reservatarios</em> in <em>reserva troncal</em> under <span class="c-burgundy"><em>Padura v. Baldovino</em></span>).</li>
+    <li><strong>Inapplicability to Other Fifth-Degree or Fourth-Degree Collaterals:</strong> Under <span class="c-teal"><strong>Article 1009 of the Civil Code</strong></span>, when other collateral relatives within the fifth civil degree succeed (such as <strong>first cousins</strong>, <strong>grandnephews</strong>, <strong>grandnieces</strong>, aunts, or uncles), they succeed <span class="c-green"><strong><u>without distinction of lines or preference among them by reason of the whole blood</u></strong></span>. Thus, a half-blood first cousin or grandnephew takes the exact same <em>per capita</em> share as a full-blood first cousin or grandnephew.</li>
+  </ul>
+
+  <h3 id="adopted-children-intestacy">Intestate Status of Adopted Children</h3>
+
+  <p>Pursuant to Philippine adoption statutes <code>[Assumed reference to R.A. 8552 and R.A. 11642]</code>, an adopted child is deemed a <span class="c-green"><strong><u>legitimate child</u></strong></span> of the adopter for all civil and successional intents and purposes. Consequently, in intestate succession from the adopter, the adopted child inherits the exact same share as a biological legitimate child, never the reduced share of an illegitimate child.</p>
+
+  <hr>
+
+  <h2 id="sec-iii-concurrence-children">III. CONCURRENCE OF LEGITIMATE AND ILLEGITIMATE CHILDREN IN INTESTACY</h2>
+
+  <h3 id="statutory-tension-non-impairment">The Statutory Tension and Non-Impairment of Legitimes</h3>
+
+  <p>When the decedent dies intestate survived by both <strong>legitimate children</strong> and <strong>illegitimate children</strong>, <span class="c-teal"><strong>Article 983</strong></span> in relation to <span class="c-teal"><strong>Article 895 of the Civil Code</strong></span> (as modified by <span class="c-teal"><strong>Article 176 of the Family Code</strong></span>) provides that illegitimate children shall inherit with legitimate children in the proportion of <span class="c-green"><strong><u>two-to-one (2:1)</u></strong></span>—such that the share of each illegitimate child is equal to one-half (1/2) of the share of each legitimate child—<span class="c-rust"><strong><u>provided that the legitime of the legitimate children (one-half of the net estate) is never impaired</u></strong></span>.</p>
+
+  <p>To ensure that the collective legitime of the legitimate children is never impaired in intestacy (especially when illegitimate children outnumber legitimate children), the mandatory first step in computing their intestate shares is to <span class="c-green"><strong><u>satisfy their respective statutory legitimes first</u></strong></span>:</p>
+
+  <ol>
+    <li>Allocate <strong>one-half (1/2)</strong> of the net hereditary estate to the legitimate children, divided equally among them.</li>
+    <li>Allocate to each illegitimate child a legitime equal to <strong>one-half (1/2)</strong> of the legitime of one legitimate child, taken from the remaining half of the estate.</li>
+    <li>If the remaining half is insufficient to satisfy the illegitimate children's shares in full, the illegitimate children simply divide the remaining half equally among themselves (avoiding impairment of the legitimate children's 1/2 legitime).</li>
+    <li>However, if a <strong>surplus or undisposed remainder</strong> is left after satisfying both groups' legitimes, Philippine civil law recognizes <strong>two competing doctrinal theories</strong> on how to distribute that surplus in intestacy.</li>
+  </ol>
+
+  <!-- Mermaid Diagram: Concurrence Resolution & Competing Theories -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM: CONCURRENCE OF LEGITIMATE &amp; ILLEGITIMATE CHILDREN IN INTESTACY <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  A["Intestate Estate: Concurrence of LC and IC"] --> B["Mandatory Step 1: Satisfy Statutory Legitimes First"]
+  B --> C["Allocate 1/2 of Estate to Legitimate Children (Collective Legitime)"]
+  B --> D["Allocate Legitime to IC (1/2 of each LC's Legitime from other 1/2)"]
+  C & D --> E{"Is there a Surplus / Remaining Undisposed Balance?"}
+  E -- "No (Remaining 1/2 fully exhausted or deficient)" --> F["IC divide remaining 1/2 equally (Legitime of LC fully protected)"]
+  E -- "Yes (Surplus balance remains)" --> G{"Which Intestate Theory Applies?"}
+  G --> H["1. EXCLUSION THEORY<br/>(Exclusionary View)"]
+  G --> I["2. CONCURRENCE THEORY<br/>(Proportional 2:1 View - Professor's Preferred)"]
+  H --> J["Surplus balance allocated EXCLUSIVELY to LC<br/>(IC excluded after receiving legitime quota)"]
+  I --> K["Surplus balance divided CONCURRENTLY at 2:1 Ratio<br/>(LC gets 2 parts, IC gets 1 part; 2:1 applies to entire estate)"]
+
+  style A fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style B fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style C fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style D fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style E fill:#F8FAFC,stroke:#0F766E,stroke-width:2px,color:#0F766E
+  style F fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#991B1B
+  style G fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style H fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style I fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style J fill:#EFF6FF,stroke:#1E3A8A,stroke-width:1.5px,color:#1E3A8A
+  style K fill:#ECFDF5,stroke:#166534,stroke-width:1.5px,color:#166534
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="exclusion-theory">1. The Exclusion Theory (Exclusionary View)</h3>
+
+  <p>Under the <strong>Exclusion Theory</strong>, once the statutory legitimes of both the legitimate children and the illegitimate children have been fully satisfied, any remaining undisposed portion of the intestate estate goes <span class="c-navy"><strong><u>exclusively to the legitimate children</u></strong></span>, to the total exclusion of the illegitimate children.</p>
+
+  <ul>
+    <li><strong>Legal Basis:</strong> In the regular order of intestate succession, legitimate children and descendants stand in the <strong>First Order</strong> (<span class="c-teal">Arts. 979, 980</span>), whereas illegitimate children stand in a subordinate class that only concurs to the extent of their statutory entitlement. Once the illegitimate children receive their 1/2 legitime quota, the legitimate children—as the primary preferred class in the regular order—absorb the entirety of the remaining estate in equal shares.</li>
+  </ul>
+
+  <h3 id="concurrence-theory">2. The Concurrence Theory (Proportional 2:1 View)</h3>
+
+  <p>Under the <strong>Concurrence Theory</strong>, the 2:1 ratio mandated by Article 983 and Article 176 of the Family Code governs not merely the legitimes, but the <span class="c-green"><strong><u>entire intestate estate</u></strong></span> whenever no impairment of the legitimate children's legitime occurs.</p>
+
+  <ul>
+    <li><strong>Legal Basis:</strong> Article 983 explicitly states that when illegitimate children survive with legitimate children in intestacy, their shares shall be in the same proportions prescribed by Article 895 (now 2:1 under Art. 176, Family Code). Therefore, the remaining undisposed balance after satisfying the legitimes is distributed <strong>concurrently</strong> between the legitimate and illegitimate children following the <span class="c-green"><strong><u>2:1 ratio</u></strong></span> (which yields the exact same result as dividing the entire estate from the outset at a 2:1 ratio, provided the legitimate children receive at least 1/2 of the estate).</li>
+    <li><strong>Professor's Evaluation:</strong> While both theories are recognized in bar examinations provided the examinee clearly articulates the legal justification, the Professor favors the <strong>Concurrence Theory</strong> as fairer and more equitable because illegitimate children are likewise the decedent's flesh and blood and the 2:1 proportion is preserved across the entire estate.</li>
+  </ul>
+
+  <h3 id="illustration-exclusion-concurrence">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Decedent X dies intestate leaving a net estate of ₱120 Million, survived by two legitimate children (A and B) and two illegitimate children (C and D). First, satisfy legitimes: A and B get ₱60 Million collectively (₱30M each); C and D each get half of a legitimate child's legitime (₱15M each, totaling ₱30M), leaving a ₱30 Million balance. Under the <strong>Exclusion Theory</strong>, A and B exclude C and D from the ₱30M balance, taking an extra ₱15M each (Final: A=₱45M, B=₱45M, C=₱15M, D=₱15M). Under the <strong>Concurrence Theory</strong>, the ₱30M balance is divided in a 2:2:1:1 ratio, giving A and B ₱10M each and C and D ₱5M each (Final: A=₱40M, B=₱40M, C=₱20M, D=₱20M).</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-iv-mixed-succession">IV. MIXED SUCCESSION (PARTIAL INTESTACY) AND THE RULE ON CHARGING LEGACIES</h2>
+
+  <h3 id="mixed-succession-top-line-prohibition">Concept of Mixed Succession and the Prohibition Against Top-Line Deduction</h3>
+
+  <p><strong>Mixed succession</strong> occurs when a decedent dies leaving a valid will that does not institute a universal heir and disposes of only a part of his estate (such as a specific legacy or devise to a friend), leaving the remainder undisposed (<span class="c-teal">Civil Code, Art. 960, par. 2</span>). With respect to the part disposed of by the will, testamentary succession governs; with respect to the undisposed remainder, intestate succession governs.</p>
+
+  <ul>
+    <li><strong>The Fatal Error of Deducting the Legacy First:</strong> A common yet fatal error in solving mixed succession problems is <span class="c-rust"><strong><u>deducting the testamentary legacy directly from the gross/net estate at the outset</u></strong></span> and then distributing the reduced balance among the intestate heirs according to their intestate fractions.</li>
+    <li><strong>Why Top-Line Deduction is Illegal:</strong> Deducting the legacy off the top reduces the computational base of the estate. When the intestate fractions (such as 1/2 for legitimate parents or legitimate children) are applied to that reduced base, the resulting amount falls below their statutory legitime (which must always be computed based on the <strong>entire net hereditary estate</strong> before testamentary dispositions), thereby illegally <span class="c-rust"><strong><u>impairing their legitime</u></strong></span>.</li>
+  </ul>
+
+  <h3 id="charging-legacy-excess-share">Operative Rule: Charging the Legacy to the Heir Whose Intestate Share Exceeds His Legitime</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 960(2)</strong></span> in relation to <span class="c-teal"><strong>Article 1000 and the rules on legitime</strong></span>, when a will leaves a legacy or devise without disposing of the rest of the estate, the distribution must follow a strict three-step sequence:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">1. Determine Theoretical Intestate Shares &amp; Statutory Legitimes</div>
+      <div class="ui-sub">Compute both on the ENTIRE net estate (temporarily ignoring the testamentary legacy)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Compare Intestate Share vs. Statutory Legitime</div>
+      <div class="ui-sub">Identify which surviving legal heir's theoretical intestate share is LARGER than their legitime (that excess is the absorbed free portion)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Deduct the Legacy from the Excess Intestate Share</div>
+      <div class="ui-sub">Charge legacy exclusively against the excess share of the heir whose intestate portion exceeds legitime</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">LEGITIMES REMAIN 100% UNIMPAIRED</div>
+      <div class="ui-sub">If deduction reduces heir below statutory legitime, legacy is reduced as inofficious</div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Determine the Theoretical Intestate Shares and the Statutory Legitimes:</strong> Compute both the statutory legitime and the theoretical pure intestate share of each surviving compulsory/legal heir based on the <span class="c-green"><strong><u>entire net estate</u></strong></span> (ignoring the legacy temporarily).</li>
+    <li><strong>Compare Intestate Share vs. Legitime:</strong> Identify which surviving legal heir has a theoretical <span class="c-green"><strong><u>intestate share that is larger than his or her statutory legitime</u></strong></span>. That excess represents the "free portion" absorbed by that heir by operation of intestacy.</li>
+    <li><strong>Deduct the Legacy from the Excess Intestate Share:</strong> Satisfy the testamentary legacy by deducting it <span class="c-navy"><strong><u>exclusively from the intestate share of the legal heir whose intestate share exceeds his legitime</u></strong></span>, provided that the deduction does not reduce that heir's final receipt below his statutory legitime (otherwise, the legacy must be reduced as inofficious).</li>
+  </ol>
+
+  <h3 id="illustration-mixed-succession">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Testator X dies leaving a ₱120 Million estate and a valid will containing only one clause: <em>"I give ₱10 Million to my friend Sarah."</em> X is survived by his legitimate parents (A and B), his wife (W), and two illegitimate children (C and D). Comparing legitimes vs. theoretical intestate shares on ₱120M: Legitimate parents A and B have a 1/2 legitime (₱60M) and a 1/2 intestate share (₱60M); illegitimate children C and D have a 1/4 legitime (₱30M) and a 1/4 intestate share (₱30M); Wife W has a <strong>1/8 legitime (₱15M)</strong> under Art. 899, but a <strong>1/4 intestate share (₱30M)</strong> under Art. 1000. Because W is the only heir whose intestate share (₱30M) exceeds her legitime (₱15M), Sarah's ₱10M legacy is deducted entirely from W's ₱30M intestate share. Thus, A and B get ₱60M (₱30M each), C and D get ₱30M (₱15M each), Sarah gets ₱10M, and W gets ₱20M (which still exceeds her ₱15M legitime).</p>
+  </blockquote>
+
+  <hr>
+
+  <h1 id="part-2">PART 2: PROVISIONS COMMON TO TESTATE AND INTESTATE SUCCESSION — RIGHT OF ACCRETION AND RESOLUTION OF VACANCIES</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">ARTS. 1015–1017</div>
+        <div class="ui-title">Accretion Defined</div>
+        <div class="ui-sub">Succession vs. property law, requisites, pro indiviso vs. earmarking &amp; RIP</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">ARTS. 1018, 1021</div>
+        <div class="ui-title">Testate vs. Intestate</div>
+        <div class="ui-sub">Jurado doctrine on Art. 1018 &amp; why legitimes do not accrue</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">ARTS. 859, 970, 1022</div>
+        <div class="ui-title">Master Hierarchy</div>
+        <div class="ui-sub">Primacy of will, legitime immunity &amp; 4-tier matrix for vacancies</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">₱120M PROBLEM</div>
+        <div class="ui-title">Vacancies Applied</div>
+        <div class="ui-sub">Step-by-step resolution of concurrent predecease and repudiation</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 2 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>V. Concept, Nature, and Requisites of the Right of Accretion:</strong> Contextualizing accretion in Succession Law (<span class="c-teal">Civil Code, Art. 1015</span>) versus Property Law (<span class="c-teal">Art. 457</span>), Unity of Object, Plurality of Subjects called <em>pro indiviso</em>, earmarking vs. non-earmarking (<span class="c-teal">Arts. 1016–1017</span>), and causes of vacancy (RIP).</li>
+        <li><strong>VI. Accretion in Legal (Intestate) Succession vs. Testamentary Succession:</strong> Analysis of <span class="c-teal">Article 1018</span> in intestacy, Justice Desiderio Jurado's doctrinal explanation on why Article 1018 specifies only repudiation, and <span class="c-teal">Article 1021</span> governing accretion among compulsory heirs (free portion vs. legitime).</li>
+        <li><strong>VII. Philosophical Foundations and Master Hierarchy for Resolving Vacancies:</strong> Succession as an extension of ownership, primacy of the testator's will, absolute immunity of the legitime from substitution or conditions, and the comprehensive structural matrix for resolving vacancies across testate and intestate succession.</li>
+        <li><strong>VIII. Comprehensive Distribution Mechanics in Vacancies:</strong> Step-by-step resolution of the Professor's ₱120 Million Master Problem involving concurrent predecease and repudiation in both testate and intestate settings, including the doctrinal debate on a repudiated legitime.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-v-right-of-accretion">V. CONCEPT, NATURE, AND REQUISITES OF THE RIGHT OF ACCRETION</h2>
+
+  <h3 id="contextualizing-accretion">Contextualizing Accretion in Succession Law vs. Property Law</h3>
+
+  <p>In bar examinations, examinees must strictly contextualize the term <strong>accretion</strong> within the Law on Succession and never confuse it with <em>alluvion</em> or accretion under the Law on Property (where soil is gradually deposited on riverbanks for the benefit of the riparian owner under <span class="c-teal">Art. 457</span>).</p>
+
+  <p>Under <span class="c-teal"><strong>Article 1015 of the Civil Code</strong></span>, in the Law on Succession, the <span class="c-green"><strong><u>right of accretion</u></strong></span> is a right by virtue of which, when two or more persons are called to the same inheritance, legacy, or devise, the part assigned to the one who <strong>renounces (repudiates)</strong> or <strong>cannot receive his share (incapacity)</strong>, or <strong>who died before the testator (predecease)</strong>, is added or incorporated into that of his co-heirs, co-legatees, or co-devisees.</p>
+
+  <h3 id="essential-requisites-accretion">Essential Requisites of the Right of Accretion</h3>
+
+  <p>Extracted from <span class="c-teal">Articles 1015, 1016, and 1017 of the Civil Code</span>, the right of accretion requires the concurrence of the following indispensable elements:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">1. Unity of Object</div>
+        <div class="ui-sub">Same inheritance, legacy, or devise</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">👥</div>
+        <div class="ui-title">2. Plurality of Subjects</div>
+        <div class="ui-sub">Called <em>pro indiviso</em> without physical earmarking</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚡</div>
+        <div class="ui-title">3. Vacancy (R-I-P)</div>
+        <div class="ui-sub">Repudiation, Incapacity, or Predecease</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📜</div>
+        <div class="ui-title">4. Acceptance &amp; No Sub</div>
+        <div class="ui-sub">Surviving co-heir accepts; no substitute designated</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Unity of Object:</strong> Two or more persons must be called to the <span class="c-green"><strong><u>exact same inheritance, legacy, or devise</u></strong></span>. There must be a single, unified hereditary mass, property, or fund designated for the beneficiaries.</li>
+    <li><strong>Plurality of Subjects Called <em>Pro Indiviso</em> (Without Especial Designation of Parts):</strong> There must be two or more beneficiaries instituted to that single object <em>pro indiviso</em> (undividedly). Under <span class="c-teal"><strong>Article 1016</strong></span>, accretion takes place when the testator calls two or more persons to the same inheritance, or to the same portion thereof, without special designation of shares.
+      <ul>
+        <li><strong>Distinction Between Aliquot Fractions and Physical Earmarking (Art. 1017):</strong> The phrase "one-half for each" or "in equal shares" or any designation of <span class="c-green"><strong><u>abstract/aliquot fractional shares</u></strong></span> does <strong>not</strong> exclude the right of accretion. What destroys unity of object and bars accretion is <span class="c-rust"><strong><u>earmarking</u></strong></span>—meaning the testator physically segregated or individualized specific, distinct properties or determinate portions of a property exclusively for each heir (e.g., assigning the northern half of Lot A to X and the southern half to Y, or assigning distinct bank accounts to each heir).</li>
+      </ul>
+    </li>
+    <li><strong>Vacancy in the Inheritance (The "RIP" Causes and Additional Grounds):</strong> One of the instituted shares becomes vacant due to:
+      <ul>
+        <li><strong>R – Repudiation (Renunciation):</strong> The beneficiary validly rejects his share.</li>
+        <li><strong>I – Incapacity (or Unworthiness/Disinheritance):</strong> The beneficiary is legally incapable of succeeding.</li>
+        <li><strong>P – Predecease:</strong> The beneficiary dies ahead of the testator.</li>
+        <li><strong>Additional Doctrinal Grounds:</strong> Accretion also operates when a <strong>suspensive condition</strong> attached to one co-heir's institution is not fulfilled, or when one of the designated co-heirs <strong>cannot be identified</strong> (<span class="c-teal">Civil Code, Art. 845</span>).</li>
+      </ul>
+    </li>
+    <li><strong>Acceptance by the Remaining Co-Heirs and Absence of Substitution:</strong> The co-heir, co-legatee, or co-devisee to whom the vacant share accrues must accept his own original share (and be capacitated to inherit), and the testator must not have expressly prohibited accretion or designated a valid <span class="c-navy"><strong><u>substitute</u></strong></span> (since substitution prevails over accretion in the free portion).</li>
+  </ol>
+
+  <h3 id="illustration-earmarking">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>If Testator X states in his will, <em>"I devise my house and lot in Barangay Sevilla, San Fernando City, La Union, to my friends A, B, and C,"</em> there is unity of object and plurality of subjects <em>pro indiviso</em>; hence, if A repudiates, his 1/3 share accrues equally to B and C. Conversely, if X states, <em>"I bequeath the balance of my Metrobank account to A, the balance of my BPI account to B, and the cash kept inside my house vault in Barangay Sevilla, San Fernando City, La Union, to C,"</em> there is physical segregation (<strong>earmarking</strong>) of distinct legacies; thus, if A predeceases X, accretion cannot take place and the Metrobank balance passes by intestacy.</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-vi-accretion-intestate-vs-testate">VI. ACCRETION IN LEGAL (INTESTATE) SUCCESSION VS. TESTAMENTARY SUCCESSION</h2>
+
+  <h3 id="accretion-intestate-art-1018">Accretion in Legal or Intestate Succession (Article 1018)</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1018 of the Civil Code</strong></span>, <em>"In legal succession the share of the person who repudiates the inheritance shall always accrue to his co-heirs."</em></p>
+
+  <ul>
+    <li><strong>Why Article 1018 Mentions Only Repudiation (The Jurado Doctrine vs. Analogous View):</strong> A classic doctrinal debate arises because Article 1015 defines accretion using all three causes of vacancy (<strong>predecease, incapacity, and repudiation</strong>), whereas Article 1018 (governing intestate succession) mentions <strong>only repudiation</strong>.
+      <ul>
+        <li><strong>View of Justice Desiderio Jurado:</strong> Justice Jurado explains that the omission of predecease and incapacity in Article 1018 was deliberate and technically accurate. In intestate succession, when an heir <strong>predeceases</strong> the decedent or is <strong>incapacitated</strong>, no true "vacancy" requiring accretion occurs: either that heir is represented by his own descendants under the <span class="c-green"><strong><u>right of representation</u></strong></span> (<span class="c-teal">Arts. 970, 981, 982</span>), or, if he has no descendants (or is a collateral relative beyond nephews/nieces), he simply never became an heir at the moment of the decedent's death, so the remaining surviving relatives of that class inherit the entire estate <span class="c-green"><strong><u>in their own right (<em>iure proprio</em>)</u></strong></span> from the very beginning. By contrast, a repudiating heir actually acquired a vested call to the succession at the moment of death and cannot be represented (<span class="c-teal">Art. 977</span>); hence, his renunciation creates a true post-opening vacancy that passes to his co-heirs by <span class="c-navy"><strong><u>accretion</u></strong></span> under Article 1018.</li>
+        <li><strong>Broad/Analogous View:</strong> Other civilists maintain that if a predeceased or incapacitated intestate heir leaves no qualified representative, the resulting expansion of the surviving co-heirs' shares operates practically and by analogy in the same manner as accretion.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 id="accretion-compulsory-heirs-art-1021">Accretion Among Compulsory Heirs (Article 1021)</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1021 of the Civil Code</strong></span>, among the compulsory heirs, the right of accretion shall take place <span class="c-green"><strong><u>only when the free portion is left to two or more of them, or to any of them and to a stranger</u></strong></span>. Should the part repudiated be the <strong>legitime</strong>, the other co-heirs shall succeed to it <span class="c-rust"><strong><u>in their own right, and not by the right of accretion</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Rationale for Denying Accretion in the Legitime:</strong> The legitime is conferred directly by operation of law upon a class of compulsory heirs (e.g., all legitimate children get 1/2 of the estate collectively), not by the creative will of the testator. Accretion is predicated on the presumed will of the testator calling multiple persons to a disposable object. Therefore, when one compulsory heir repudiates his share of the legitime, he cannot be represented (<span class="c-teal">Art. 977</span>), and his remaining co-heirs in the same class simply absorb the vacant legitime <span class="c-green"><strong><u>in their own right (<em>iure proprio</em>)</u></strong></span> because the collective 1/2 legitime belongs to the surviving members of that class by mandate of law.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-vii-philosophical-foundations-vacancies">VII. PHILOSOPHICAL FOUNDATIONS AND MASTER HIERARCHY FOR RESOLVING VACANCIES</h2>
+
+  <h3 id="primacy-testator-will-legitime-immunity">Primacy of the Testator's Will and Immunity of the Legitime</h3>
+
+  <p>To navigate any vacancy problem in succession, one must view the rules from a high doctrinal vantage point anchored on two pillars:</p>
+
+  <ol>
+    <li><strong>Succession as an Extension of Ownership (Primacy of the Testator's Will):</strong> Because succession is an extension of the right of ownership beyond death, the law seeks above all to fulfill the lawful intentions of the testator as expressed in a valid will. This includes the testator's power not only to institute primary voluntary heirs, legatees, and devisees over the free portion, but also to designate <span class="c-navy"><strong><u>substitutes</u></strong></span> ("Plan B") in case the primary voluntary beneficiary dies ahead, is incapacitated, or repudiates.</li>
+    <li><strong>Absolute Immunity of the Legitime (Non-Impairment Principle):</strong> Under <span class="c-teal"><strong>Articles 872 and 904 of the Civil Code</strong></span>, the testator cannot impose any burden, encumbrance, condition, or <span class="c-rust"><strong><u>substitution of any kind whatsoever</u></strong></span> upon the legitime reserved by law for compulsory heirs. The <span class="c-rust"><strong><u>only</u></strong></span> legal mechanism by which a testator can deprive a compulsory heir of his legitime is through a <span class="c-rust"><strong><u>valid disinheritance</u></strong></span> based on an express statutory ground specified in a valid will (<span class="c-teal">Arts. 915–921</span>).</li>
+  </ol>
+
+  <h3 id="master-analytical-matrix">Master Analytical Matrix for Resolving Vacancies (R-I-P)</h3>
+
+  <p>Whenever a vacancy occurs due to <strong>Predecease (P)</strong>, <strong>Incapacity/Disinheritance (I)</strong>, or <strong>Repudiation (R)</strong>, the order of remedies depends strictly on (a) whether the succession is <strong>Testate or Intestate</strong>, (b) whether the vacant portion in testate succession pertains to the <strong>Legitime or the Free Portion</strong>, and (c) the specific <strong>cause of the vacancy</strong>.</p>
+
+  <!-- Interactive Mermaid Diagram: Master Vacancy Resolution Tree -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM: MASTER HIERARCHY FOR RESOLVING VACANCIES (R-I-P) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  VAC["VACANCY OCCURS IN SUCCESSION<br/>(Predecease, Incapacity, or Repudiation)"] --> TYPE{"Succession Mode &amp; Portion"}
+
+  TYPE -- "Testate: Legitime" --> LEG{"Cause of Vacancy"}
+  LEG -- "Predecease / Incapacity" --> L1["1st: Substitution PROHIBITED (Art. 904)"]
+  L1 --> L2["2nd: Right of REPRESENTATION (Direct Descending Line, Art. 972)"]
+  L2 --> L3["3rd: Surviving Co-heirs IN THEIR OWN RIGHT (Art. 1021 par. 2)"]
+  L3 --> L4["Default: The State (Arts. 1011–1014)"]
+
+  LEG -- "Repudiation" --> LR1["1st: Substitution PROHIBITED (Art. 904)"]
+  LR1 --> LR2["2nd: Representation PROHIBITED (Art. 977)"]
+  LR2 --> LR3["3rd: Surviving Co-heirs IN THEIR OWN RIGHT (Art. 1021 par. 2)"]
+  LR3 --> LR4["Default: The State (Arts. 1011–1014)"]
+
+  TYPE -- "Testate: Free Portion" --> FP{"Cause of Vacancy"}
+  FP -- "Predecease / Incapacity" --> FP1["1st: TESTAMENTARY SUBSTITUTION (Art. 859)"]
+  FP1 --> FP2["2nd: Representation / Accretion (Universal vs Voluntary)"]
+  FP2 --> FP3["3rd: INTESTATE SUCCESSION (Legal Heirs, Art. 1022)"]
+  FP3 --> FP4["Default: The State (Arts. 1011–1014)"]
+
+  FP -- "Repudiation" --> FPR1["1st: TESTAMENTARY SUBSTITUTION (Art. 859)"]
+  FPR1 --> FPR2["2nd: RIGHT OF ACCRETION (Pro Indiviso Co-heirs, Art. 1015, 1021)"]
+  FPR2 --> FPR3["3rd: INTESTATE SUCCESSION (Legal Heirs, Art. 1022)"]
+  FPR3 --> FPR4["Default: The State (Arts. 1011–1014)"]
+
+  TYPE -- "Pure Intestate" --> INT{"Cause of Vacancy"}
+  INT -- "Predecease / Incapacity" --> I1["1st: Substitution INAPPLICABLE (No will)"]
+  I1 --> I2["2nd: RIGHT OF REPRESENTATION (Descending / Collateral Nephews, Art. 972)"]
+  I2 --> I3["3rd: Surviving Co-heirs IN THEIR OWN RIGHT / Next Degree"]
+  I3 --> I4["Default: The State (Arts. 1011–1014)"]
+
+  INT -- "Repudiation" --> IR1["1st: Substitution INAPPLICABLE (No will)"]
+  IR1 --> IR2["2nd: Representation PROHIBITED (Art. 977)"]
+  IR2 --> IR3["3rd: RIGHT OF ACCRETION TO CO-HEIRS (Art. 1018)"]
+  IR3 --> IR4["Default: The State (Arts. 1011–1014)"]
+
+  style VAC fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style TYPE fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style LEG fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style FP fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534
+  style INT fill:#F5F3FF,stroke:#0F766E,stroke-width:2px,color:#0F766E
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Mode &amp; Portion</th>
+        <th>Cause of Vacancy</th>
+        <th>1st Priority</th>
+        <th>2nd Priority</th>
+        <th>3rd Priority</th>
+        <th>Ultimate Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Testate: Legitime</strong></td>
+        <td><strong>Predecease</strong> or <strong>Incapacity</strong> (or Disinheritance)</td>
+        <td><span class="c-rust"><strong>Substitution: NONE</strong></span> (Prohibited on legitime under Art. 904)</td>
+        <td><span class="c-green"><strong>Representation</strong></span> (Direct descending line only; never ascending line, Art. 972)</td>
+        <td><span class="c-navy"><strong>Intestate / Co-heirs in their own right</strong></span> (<em>iure proprio</em>, Art. 1021 par. 2)</td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+      <tr>
+        <td><strong>Testate: Legitime</strong></td>
+        <td><strong>Repudiation</strong></td>
+        <td><span class="c-rust"><strong>Substitution: NONE</strong></span> (Prohibited on legitime under Art. 904)</td>
+        <td><span class="c-rust"><strong>Representation: NONE</strong></span> (An heir who repudiates cannot be represented, Art. 977)</td>
+        <td><span class="c-green"><strong>Co-heirs in their own right / Intestate Succession</strong></span> (Art. 1021 par. 2)</td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+      <tr>
+        <td><strong>Testate: Free Portion</strong></td>
+        <td><strong>Predecease</strong> or <strong>Incapacity</strong></td>
+        <td><span class="c-navy"><strong>Substitution</strong></span> (If validly designated by the testator in the will, Art. 859)</td>
+        <td><span class="c-green"><strong>Representation / Accretion</strong></span> <em>(See doctrinal note below on universal institution vs. pure voluntary heirs)</em></td>
+        <td><span class="c-teal"><strong>Intestate Succession</strong></span> (Legal heirs inherit vacant portion, Art. 1022)</td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+      <tr>
+        <td><strong>Testate: Free Portion</strong></td>
+        <td><strong>Repudiation</strong></td>
+        <td><span class="c-navy"><strong>Substitution</strong></span> (If validly designated by the testator in the will, Art. 859)</td>
+        <td><span class="c-green"><strong>Accretion</strong></span> (Co-heirs, co-legatees, co-devisees if <em>pro indiviso</em>, Art. 1015, 1021 par. 1)</td>
+        <td><span class="c-teal"><strong>Intestate Succession</strong></span> (If no substitute and no co-heirs for accretion, Art. 1022)</td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+      <tr>
+        <td><strong>Intestate Succession</strong></td>
+        <td><strong>Predecease</strong> or <strong>Incapacity</strong></td>
+        <td><span class="c-rust"><strong>Substitution: NONE</strong></span> (No will exists in pure intestacy)</td>
+        <td><span class="c-green"><strong>Representation</strong></span> (Direct descending line, or children of siblings in collateral line, Art. 972)</td>
+        <td><span class="c-navy"><strong>Surviving Co-heirs in their own right / Next Degree in Order</strong></span></td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+      <tr>
+        <td><strong>Intestate Succession</strong></td>
+        <td><strong>Repudiation</strong></td>
+        <td><span class="c-rust"><strong>Substitution: NONE</strong></span> (No will exists in pure intestacy)</td>
+        <td><span class="c-rust"><strong>Representation: NONE</strong></span> (No representation in repudiation, Art. 977)</td>
+        <td><span class="c-green"><strong>Accretion</strong></span> (Always accrues to co-heirs, Art. 1018; if sole heir in class, next degree)</td>
+        <td><strong>State</strong> (Arts. 1011–1014)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="illustration-matrix">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Testator X executes a will stating: <em>"I leave the entire free portion of my estate exclusively to my friend A."</em> X does not designate any substitute. Upon X's death, A repudiates the inheritance. Following the matrix for a vacancy in the <strong>Testate Free Portion caused by Repudiation</strong>: (1) we check for <strong>Substitution</strong>, which is absent; (2) we check for <strong>Accretion</strong>, which cannot take place because A was instituted alone and has no co-heirs to the free portion (lacking plurality of subjects); and (3) therefore, the vacant free portion passes by <strong>Intestate Succession</strong> under Article 1022 to X's legal heirs.</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-viii-master-problem-120m">VIII. COMPREHENSIVE DISTRIBUTION MECHANICS IN VACANCIES (THE ₱120M MASTER PROBLEM)</h2>
+
+  <h3 id="facts-master-problem">Facts of the Master Classroom Problem</h3>
+
+  <p>Testator <strong>X</strong> has four legitimate children: <strong>A, B, C, and D</strong>.</p>
+
+  <ul>
+    <li><strong>C</strong> has two legitimate children: <strong>E and F</strong> (grandchildren of X).</li>
+    <li><strong>D</strong> has one legitimate child: <strong>G</strong> (grandchild of X).</li>
+    <li><strong>X</strong> dies leaving a net estate of <strong>₱120 Million</strong> and a valid will instituting all four of his children (<strong>A, B, C, and D</strong>) as his sole heirs to his <strong>entire estate</strong> without designating any substitutes.</li>
+    <li><strong>C predeceased X</strong> (died ahead of his father X).</li>
+    <li><strong>D repudiated</strong> his entire inheritance from X.</li>
+  </ul>
+
+  <!-- Mermaid Diagram: ₱120M Master Problem Distribution -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM: ₱120M MASTER PROBLEM DISTRIBUTION FLOW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  ROOT["Testator X Net Estate: ₱120 Million<br/>Will instituting A, B, C, D equally to entire estate"] --> SPLIT["Testate Split: Legitime ₱60M (₱15M each) | Free Portion ₱60M (₱15M each)"]
+
+  SPLIT --> A_LINE["A (Survives &amp; Accepts)<br/>Base: ₱15M Legitime + ₱15M Free = ₱30M"]
+  SPLIT --> B_LINE["B (Survives &amp; Accepts)<br/>Base: ₱15M Legitime + ₱15M Free = ₱30M"]
+  SPLIT --> C_LINE["C (PREDECEASED X)<br/>₱15M Legitime + ₱15M Free Portion"]
+  SPLIT --> D_LINE["D (REPUDIATED)<br/>₱15M Legitime + ₱15M Free Portion"]
+
+  C_LINE --> C_REP["Right of Representation (Arts. 970, 981)<br/>Children E &amp; F step into C's shoes"]
+  C_REP --> EF["E: ₱15M total (₱7.5M Legitime + ₱7.5M Free)<br/>F: ₱15M total (₱7.5M Legitime + ₱7.5M Free)"]
+
+  D_LINE --> D_FREE["D's ₱15M Free Portion"]
+  D_LINE --> D_LEG["D's ₱15M Legitime (Art. 1021 par. 2)"]
+  D_LINE --> G_RES["G (D's Child) gets ZERO<br/>(Heir who repudiates cannot be represented, Art. 977)"]
+
+  D_FREE --> D_ACC["Accretion under Art. 1021 par. 1<br/>Accrues equally to instituted co-heirs A &amp; B (+₱7.5M each)"]
+
+  D_LEG --> V_A["VIEW A (Classroom 3-Way Line Division)<br/>A gets +₱5M, B gets +₱5M, E&amp;F get +₱5M (₱2.5M each)<br/>Totals: A=₱42.5M, B=₱42.5M, E=₱17.5M, F=₱17.5M"]
+  D_LEG --> V_B["VIEW B (Surviving 1st Degree Co-heirs A &amp; B)<br/>A gets +₱7.5M, B gets +₱7.5M<br/>Totals: A=₱45M, B=₱45M, E=₱15M, F=₱15M"]
+
+  style ROOT fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style SPLIT fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style C_LINE fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style D_LINE fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#991B1B
+  style G_RES fill:#FEF2F2,stroke:#991B1B,stroke-width:1.5px,color:#991B1B
+  style EF fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style D_ACC fill:#EFF6FF,stroke:#1E3A8A,stroke-width:1.5px,color:#1E3A8A
+  style V_A fill:#ECFDF5,stroke:#166534,stroke-width:1.5px,color:#166534
+  style V_B fill:#EFF6FF,stroke:#1E3A8A,stroke-width:1.5px,color:#1E3A8A
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="step-1-baseline-allocation">Step 1: Baseline Allocation in Testate Succession</h3>
+
+  <p>Because X instituted his four legitimate children (A, B, C, and D) to his entire ₱120 Million estate equally without any other voluntary beneficiaries, each child's initial baseline share is <strong>₱30 Million</strong> (₱120M ÷ 4). However, because this is <strong>testate succession</strong>, each child's ₱30 Million share is legally composed of two distinct halves:</p>
+
+  <ul>
+    <li><strong>Legitime (₱60M total ÷ 4):</strong> <strong>₱15 Million</strong> per child (received as a compulsory heir).</li>
+    <li><strong>Free Portion (₱60M total ÷ 4):</strong> <strong>₱15 Million</strong> per child (received as an instituted voluntary heir).</li>
+    <li>Since <strong>A and B</strong> survived and accepted, A and B initially receive their baseline <strong>₱30 Million each</strong> (₱15M legitime + ₱15M free portion). We must now resolve the vacancies in <strong>C's ₱30M</strong> and <strong>D's ₱30M</strong>.</li>
+  </ul>
+
+  <h3 id="step-2-resolving-c-predecease">Step 2: Resolving C's Vacant Share (₱15M Legitime + ₱15M Free Portion) — Cause: Predecease</h3>
+
+  <ol>
+    <li><strong>C's ₱15 Million Legitime:</strong> Because C predeceased X, no substitution is allowed on the legitime. We proceed to <span class="c-green"><strong><u>Representation</u></strong></span>. Since E and F are legitimate children of C in the direct descending line, <strong>E and F represent C</strong> and divide C's ₱15M legitime equally, receiving <strong>₱7.5 Million each</strong>.</li>
+    <li><strong>C's ₱15 Million Free Portion:</strong> As presented in the lecture's classroom computation, because X instituted all four children universally to the entire estate without a substitute, the Professor applied <span class="c-green"><strong><u>Representation</u></strong></span> to C's ₱15M share of the free portion as well, awarding <strong>E and F another ₱7.5 Million each</strong> (so E and F get ₱15M each, totaling C's full ₱30M share).
+      <ul>
+        <li><em>Note for Bar Exam Precision:</em> Under the lecture's matrix and board computation, E and F take C's entire ₱30M (₱15M legitime + ₱15M free portion) by representation (₱15M to E, ₱15M to F). <em>(In strict civil law commentary such as Balane/Tolentino, some scholars argue that a voluntary heir cannot be represented in the free portion so C's ₱15M free portion would accrue to A and B by accretion under Art. 1021, whereas others and the lecture's board matrix allow representation when compulsory heirs are simply instituted universally to the whole estate; examinees should note the Professor's explicit board computation giving E and F ₱7.5M each in the legitime and ₱7.5M each in the free portion, totaling ₱15M each).</em></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3 id="step-3-resolving-d-repudiation">Step 3: Resolving D's Vacant Share (₱15M Free Portion + ₱15M Legitime) — Cause: Repudiation</h3>
+
+  <ol>
+    <li><strong>D's ₱15 Million Free Portion:</strong> D repudiated his inheritance. Because there is no substitute designated in the will and <span class="c-rust"><strong><u>an heir who repudiates can never be represented (Art. 977)</u></strong></span>, D's child <strong>G gets nothing</strong>. Under <span class="c-teal"><strong>Article 1021, par. 1</strong></span>, accretion takes place among compulsory heirs with respect to the <span class="c-green"><strong><u>free portion</u></strong></span>. Thus, D's ₱15M free portion accrues equally to his surviving instituted co-heirs <strong>A and B</strong>, who receive an additional <strong>₱7.5 Million each</strong> (bringing A and B to ₱37.5M each so far).</li>
+    <li><strong>D's ₱15 Million Legitime (The Classroom Debate and Written Assignment):</strong> How should D's repudiated ₱15 Million legitime be distributed? During the lecture, students proposed conflicting views, and the Professor assigned this specific ₱15 Million portion as a <strong>mandatory written research assignment</strong> requiring full legal justification:
+      <ul>
+        <li><strong>Doctrinal Rule under Article 1021, par. 2 (Co-heirs in Their Own Right):</strong> Article 1021, par. 2 expressly provides: <em>"Should the part repudiated be the legitime, the other co-heirs shall succeed to it in their own right, and not by the right of accretion."</em> Because the collective legitime of legitimate children is always one-half (1/2) of the net estate (₱60 Million) as a class under <span class="c-teal"><strong>Article 888</strong></span>, when D repudiates his share of the legitime (and cannot be represented by G under Art. 977), the remaining members of the legitimate descending line succeed to the entire ₱60 Million legitime <span class="c-green"><strong><u>in their own right (<em>iure proprio</em>)</u></strong></span> (and by representation as to C's line).</li>
+        <li><strong>The Two Competing Computations for the Assignment:</strong>
+          <ul>
+            <li><em>View A (Three-Way Division of the ₱60M Legitime among A, B, and C's Representatives E &amp; F):</em> Because C predeceased X, E and F stand in C's shoes by right of representation in the succession <em>from X</em> (not from D—D did not die, D merely repudiated his share from X!). With D out of the picture due to repudiation, there are three active lines in the legitimate descending class of X: <strong>A (1/3), B (1/3), and C represented by E and F (1/3)</strong>. Under this view, D's ₱15M repudiated legitime goes <strong>₱5M to A, ₱5M to B, and ₱5M to E and F (₱2.5M each)</strong>, so the ₱60M total legitime is held ₱20M by A, ₱20M by B, and ₱20M by E &amp; F (₱10M each).</li>
+            <li><em>View B (Two-Way Division Exclusively Between Surviving Children A and B):</em> If one follows the professor's classroom hint that D's ₱15M legitime drops into intestate/own-right distribution strictly between the surviving first-degree co-heirs <strong>A and B</strong> (or if one argues E and F only represent what C would have taken before D's post-mortem repudiation), then the ₱15M goes <strong>₱7.5M to A and ₱7.5M to B</strong>. Presenting both views with citations to <span class="c-teal"><strong>Articles 888, 970, 977, and 1021(2)</strong></span> guarantees full credit on the written assignment.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3 id="step-4-contrast-pure-intestacy">Step 4: Contrast with Pure Intestate Succession Under the Same Facts</h3>
+
+  <p>The Professor then demonstrated how much simpler the exact same problem becomes if <strong>X died wholly intestate (without a will)</strong>:</p>
+
+  <ul>
+    <li>In pure intestacy, we do not split the ₱120 Million estate into legitime and free portion. Initially, the four lines (A, B, C, D) are allocated <strong>₱30 Million each</strong>.</li>
+    <li><strong>C's ₱30 Million (Predecease):</strong> Passes by <span class="c-green"><strong><u>right of representation</u></strong></span> (<span class="c-teal">Art. 981</span>) to C's legitimate children <strong>E and F</strong>, who receive <strong>₱15 Million each</strong>.</li>
+    <li><strong>D's ₱30 Million (Repudiation):</strong> Because D repudiated, D's child <span class="c-rust"><strong><u>G cannot represent him</u></strong></span> (<span class="c-teal">Art. 977</span>) and gets <strong>zero</strong>. Under <span class="c-teal"><strong>Article 1018</strong></span>, in legal succession, the share of the person who repudiates always accrues to his co-heirs. As computed by the Professor in class, D's ₱30 Million accrues to his surviving co-heirs <strong>A and B</strong> (₱15 Million each).</li>
+    <li><strong>Final Pure Intestate Distribution:</strong> <span class="c-navy"><strong>A = ₱45 Million</strong></span>, <span class="c-navy"><strong>B = ₱45 Million</strong></span>, <span class="c-green"><strong>E = ₱15 Million</strong></span>, <span class="c-green"><strong>F = ₱15 Million</strong></span>, and <span class="c-rust"><strong>G = ₱0</strong></span> (Total = ₱120 Million).</li>
+  </ul>
+
+  <hr>
+
+  <h1 id="part-3">PART 3: CAPACITY TO SUCCEED BY WILL OR BY INTESTACY, RELATIVE INCAPACITIES, AND SPECIAL DISPOSITIONS</h1>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">ARTS. 40, 41, 43, 1025</div>
+        <div class="ui-title">General Capacity</div>
+        <div class="ui-sub">Intrauterine life rules, civil personality &amp; survivorship</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">ARTICLE 1027</div>
+        <div class="ui-title">Undue Influence</div>
+        <div class="ui-sub">6 disqualifications: priests, guardians, witnesses, doctors</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">ARTS. 1028, 1029</div>
+        <div class="ui-title">Morality &amp; Prayers</div>
+        <div class="ui-sub">Paramours (Art. 739), masses for soul &amp; adoption bars</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XII</div>
+        <div class="ui-kicker">ARTS. 1032, 1041+</div>
+        <div class="ui-title">Roadmap Ahead</div>
+        <div class="ui-sub">Unworthiness, acceptance, repudiation, collation &amp; quiz</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Part 3 Overview &amp; Scope of Topics:</strong>
+      <ul>
+        <li><strong>IX. General Capacity to Succeed, Natural Persons, and Presumptions on Survivorship:</strong> Requirement of existence at the opening of succession (<span class="c-teal">Civil Code, Art. 1025</span>), civil personality of conceived children based on intrauterine life under <span class="c-teal">Articles 40 and 41</span>, and the presumption of simultaneous death under <span class="c-teal">Article 43</span> in relation to representation.</li>
+        <li><strong>X. Incapacity by Reason of Possible Undue Influence (Article 1027):</strong> Scope of <span class="c-teal">Article 1027</span> (inapplicability to legitimes and intestacy), detailed analysis of paragraphs 1 through 6 (priests/ministers, 4th-degree relatives and churches, guardians, attesting witnesses, physicians/nurses/druggists, and prohibited entities), and classroom nuances.</li>
+        <li><strong>XI. Incapacity Arising from Morality, Dispositions for the Soul, and Adoption Rules:</strong> Cross-reference to <span class="c-teal">Article 1028 and Article 739</span>, dispositions for prayers and pious works under <span class="c-teal">Article 1029</span> (50-50 church/State split vs. specified application), and the absolute bar against representation in adoption.</li>
+        <li><strong>XII. Overview of Subsequent Topics &amp; Final Summary of Non-Doctrinal Content:</strong> Bridge to unworthiness (<span class="c-teal">Art. 1032</span>), acceptance/repudiation, and collation; followed by Administrative Matters &amp; Professor's Asides.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="sec-ix-general-capacity-survivorship">IX. GENERAL CAPACITY TO SUCCEED, NATURAL PERSONS, AND PRESUMPTIONS ON SURVIVORSHIP</h2>
+
+  <h3 id="requirement-existence-opening">Requirement of Existence at the Opening of Succession</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1024 of the Civil Code</strong></span>, persons not incapacitated by law may succeed by will or ab intestato. Under <span class="c-teal"><strong>Article 1025</strong></span>, in order to be capacitated to inherit, the heir, devisee, or legatee must be <span class="c-green"><strong><u>living at the moment the succession opens</u></strong></span> (which is the precise moment of the decedent's death under <span class="c-teal">Art. 777</span>), except in case of representation, when it is proper.</p>
+
+  <h3 id="conceived-children-intrauterine-rule">Conceived (Unborn) Children and the Intrauterine Life Rule (Articles 40 and 41)</h3>
+
+  <p>Because a child already conceived at the time of the death of the decedent is capable of succeeding provided it be born later under the conditions prescribed in <span class="c-teal"><strong>Article 41</strong></span> (<span class="c-teal">Civil Code, Art. 1025, par. 2</span>), examinees must apply the exact terminology of <span class="c-teal"><strong>Articles 40 and 41 of the Civil Code</strong></span>:</p>
+
+  <ul>
+    <li><strong>Crucial Bar Terminology ("Intrauterine Life"):</strong> Never write "when the child is below seven months old." A seven-month-old baby is already an infant living outside the womb! The legally accurate phrase required for bar exam credit is that the conceived child had an <span class="c-green"><strong><u>intrauterine life</u></strong></span> of less than seven months, or seven months or more.</li>
+    <li><strong>Rule 1: Intrauterine Life of Less Than Seven (7) Months:</strong> If the fetus had an <span class="c-navy"><strong><u>intrauterine life of less than seven months</u></strong></span>, it is not deemed born (and acquires no civil personality or capacity to succeed) if it dies within <span class="c-rust"><strong><u>twenty-four (24) hours</u></strong></span> after its <span class="c-green"><strong><u>complete delivery from the maternal womb</u></strong></span> (which requires the complete separation from the mother's womb, i.e., the cutting of the umbilical cord, plus survival for a full 24 hours).</li>
+    <li><strong>Rule 2: Intrauterine Life of Seven (7) Months or More:</strong> For civil purposes, a fetus with an <span class="c-navy"><strong><u>intrauterine life of at least seven months</u></strong></span> is considered born and acquires full legal personality—including the capacity to succeed—the moment it is <span class="c-green"><strong><u>alive at the time it is completely delivered from the mother's womb</u></strong></span>, without any requirement of surviving for 24 hours.
+      <ul>
+        <li><em>Consequence of Dying 5 Minutes After Delivery:</em> If a fetus with an intrauterine life of seven months or more is completely delivered alive from the maternal womb and dies just <strong>five (5) minutes</strong> later, the child <span class="c-green"><strong><u>acquired legal personality and succeeded</u></strong></span> to the decedent's estate during those five minutes; upon the infant's death, its inherited share is transmitted to the infant's own heirs.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Mermaid Diagram: Intrauterine Life & Civil Personality -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM: CAPACITY TO SUCCEED OF CONCEIVED CHILDREN (ARTS. 40 &amp; 41) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  FETUS["Fetus Conceived at Moment Decedent Dies (Art. 1025 par. 2)"] --> IUL{"Duration of Intrauterine Life (Art. 41)"}
+
+  IUL -- "Intrauterine Life LESS than 7 Months" --> DEL1["Complete delivery from maternal womb (cutting of umbilical cord)"]
+  DEL1 --> SURV{"Does the child survive for at least 24 full hours?"}
+  SURV -- "YES (Survives 24+ Hours)" --> PERS1["Acquires Civil Personality (Retroacts to conception under Art. 40)<br/>CAPACITATED TO SUCCEED"]
+  SURV -- "NO (Dies within 24 Hours)" --> NOPERS1["Not deemed born; NO civil personality<br/>INCAPACITATED TO SUCCEED (Share vacant)"]
+
+  IUL -- "Intrauterine Life 7 MONTHS OR MORE" --> DEL2["Complete delivery from maternal womb"]
+  DEL2 --> ALIVE{"Is the child alive at the moment of complete delivery?"}
+  ALIVE -- "YES (Even if it dies 5 minutes later!)" --> PERS2["Acquires Full Civil Personality Instantly<br/>CAPACITATED TO SUCCEED (Transmits share to own heirs)"]
+  ALIVE -- "NO (Stillborn)" --> NOPERS2["Never acquired personality<br/>INCAPACITATED TO SUCCEED"]
+
+  style FETUS fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style IUL fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style PERS1 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style PERS2 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style NOPERS1 fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,color:#DC2626
+  style NOPERS2 fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,color:#DC2626
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="simultaneous-death-representation">Presumption of Simultaneous Death and Representation (Article 43)</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 43 of the Civil Code</strong></span>, whenever there is a doubt, as between two or more persons who are called to succeed each other, as to which of them died first, whoever alleges the death of one prior to the other shall prove the same; in the absence of proof, <span class="c-rust"><strong><u>it is presumed that they died at the same time and there shall be no transmission of rights from one to the other</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Article 43 Does Not Bar the Right of Representation:</strong> Although Article 43 states that there is "no transmission of rights from one to the other" when a parent and child die simultaneously in a common disaster without proof of who died first, this <span class="c-green"><strong><u>does not preclude the operation of the right of representation</u></strong></span>. Why? Because in representation (<span class="c-teal">Art. 970</span>), the grandchild does not inherit <em>through</em> the deceased parent via a two-step transmission; rather, the grandchild steps directly into the shoes of the deceased parent to inherit <span class="c-navy"><strong><u>directly from the grandparent</u></strong></span>.</li>
+  </ul>
+
+  <h3 id="illustration-simultaneous-death">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Father X and his legitimate son A perish together in a vehicular accident, and there is no evidence to establish who between X and A died first. Under Article 43, they are presumed to have died simultaneously, so no hereditary rights are transmitted from X to A. However, if A is survived by his own legitimate children, B and C (grandchildren of X), B and C are not barred by Article 43 and may validly inherit A's share in X's estate by <strong>right of representation</strong>.</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-x-incapacity-undue-influence">X. INCAPACITY BY REASON OF POSSIBLE UNDUE INFLUENCE (ARTICLE 1027)</h2>
+
+  <h3 id="scope-philosophy-art-1027">Scope and Underlying Philosophy of Article 1027</h3>
+
+  <p><span class="c-teal"><strong>Article 1027 of the Civil Code</strong></span> enumerates six classes of persons who are <span class="c-rust"><strong><u>incapable of succeeding</u></strong></span> due to a conclusive legal presumption of <span class="c-rust"><strong><u>undue influence</u></strong></span> over the testator at a time of extreme vulnerability, spiritual dependence, or fiduciary control.</p>
+
+  <ul>
+    <li><strong>Applies Exclusively to Testamentary Succession (Free Portion):</strong> Because Article 1027 repeatedly refers to the <em>"testator"</em> and <em>"testamentary dispositions,"</em> this incapacity applies <span class="c-rust"><strong><u>only to testamentary succession</u></strong></span> (voluntary institutions, legacies, and devises taken from the free portion). It <span class="c-green"><strong><u>never applies to intestate succession</u></strong></span>.</li>
+    <li><strong>Never Affects or Impairs the Legitime:</strong> If any person disqualified under Article 1027 (such as a priest or physician) happens to be a <strong>compulsory heir</strong> of the testator (e.g., the testator's legitimate child), the disqualification <span class="c-green"><strong><u>does not affect his legitime</u></strong></span>. The legitime is conferred by operation of law and is completely beyond the testator's control; hence, undue influence cannot possibly taint the legitime. The disqualification only nullifies the excess <strong>free portion</strong> given to that compulsory heir by will.</li>
+  </ul>
+
+  <h3 id="detailed-analysis-six-disqualifications">Detailed Analysis of the Six Disqualifications Under Article 1027</h3>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⛪</div>
+        <div class="ui-title">1. Priest / Minister</div>
+        <div class="ui-sub">Heard confession / spiritual aid during last illness</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">👥</div>
+        <div class="ui-title">2. Relatives &amp; Order</div>
+        <div class="ui-sub">Within 4th degree of priest, or his church/community</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">3. Guardian</div>
+        <div class="ui-sub">Prior to final accounts (unless ascendant/descendant/spouse)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">✍️</div>
+        <div class="ui-title">4. Attesting Witness</div>
+        <div class="ui-sub">Witness, spouse, parents, children (unless 3 others exist)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🩺</div>
+        <div class="ui-title">5. Physician / Nurse</div>
+        <div class="ui-sub">Took care of testator during last illness</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">6. Prohibited Entity</div>
+        <div class="ui-sub">Entities not permitted by law to inherit</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="art-1027-par-1-priest">1. The Priest or Minister of the Gospel (Art. 1027, par. 1)</h4>
+
+  <p>The priest who heard the <strong>confession</strong> of the testator during his <strong>last illness</strong>, or the minister of the gospel who extended <strong>spiritual aid</strong> to him during the same period, is incapacitated to succeed.</p>
+
+  <ul>
+    <li><strong>Sequential Confessions to Multiple Priests:</strong> If the testator, during his last illness, confessed sequentially to five different priests on the same day (e.g., Priest A at 7:00 AM, Priest B at 8:00 AM, down to Priest E at 5:00 PM) and the next day executed a will instituting all five priests as heirs of ₱1 Million each, <span class="c-rust"><strong><u>all five priests (Priests A through E) are disqualified</u></strong></span>, not merely the literal last priest (Priest E). The suspicion of undue influence attaches to every priest who heard his confession during the last illness.</li>
+    <li><strong>Praying the Rosary vs. Hearing Confession:</strong> If a priest visited the testator in the hospital during his last illness merely to pray the Rosary without hearing a sacramental confession, he is not covered by the first clause ("priest who heard the confession"), which requires an actual confession of sins. However, as discussed in class, praying the Rosary with a dying testator may still qualify under the second clause as <span class="c-navy"><strong><u>extending spiritual aid</u></strong></span> during the last illness, thereby triggering the disqualification.</li>
+    <li><strong>Longtime Family Friend Priest:</strong> Even if the priest who heard the confession during the last illness was a longtime family friend whom the testator naturally called upon out of friendship, the disqualification <span class="c-rust"><strong><u>still attaches</u></strong></span> because the statute makes no exception for friends and the conclusive presumption of undue influence applies.</li>
+    <li><strong>Will Executed While Healthy <em>Before</em> the Confession:</strong> If the testator executed his will instituting his friend Father P while the testator was completely <strong>healthy</strong>, and months or years later fell into his last illness and confessed to Father P before dying, the <span class="c-green"><strong><u>incapacity does NOT attach</u></strong></span>. At the time the testamentary disposition was made, the testator was healthy and had not yet confessed to Father P during a last illness; hence, the disposition could not have been procured through spiritual undue influence.</li>
+  </ul>
+
+  <h4 id="art-1027-par-2-relatives-church">2. Relatives of the Priest within the Fourth Degree and His Church (Art. 1027, par. 2)</h4>
+
+  <p>To prevent circumvention through intermediaries, the incapacity extends to the <span class="c-rust"><strong><u>relatives of such priest or minister within the fourth civil degree</u></strong></span>, as well as to the <span class="c-rust"><strong><u>church, order, chapter, community, organization, or institution</u></strong></span> to which such priest or minister may belong.</p>
+
+  <h4 id="art-1027-par-3-guardian">3. The Guardian Prior to Approval of Final Accounts (Art. 1027, par. 3)</h4>
+
+  <p>A guardian is incapacitated with respect to testamentary dispositions given by a ward in his favor <span class="c-rust"><strong><u>before the final accounts of the guardianship have been approved</u></strong></span>, even if the testator should die after the approval thereof.</p>
+
+  <ul>
+    <li><strong>Built-In Statutory Exception for Close Relatives:</strong> Paragraph 3 expressly provides that <span class="c-green"><strong><u>any provision made by the ward in favor of the guardian when the latter is his ascendant, descendant, brother, sister, or spouse shall be valid</u></strong></span>. By contrast, a non-relative appointed as guardian (such as a longtime household helper or stranger appointed by the court) is strictly disqualified prior to final account approval.</li>
+  </ul>
+
+  <h4 id="art-1027-par-4-witnesses">4. Attesting Witnesses and Their Immediate Family (Art. 1027, par. 4)</h4>
+
+  <p>Any attesting witness to the execution of a will, the <strong>spouse, parents, or children</strong>, or any one claiming under such witness, spouse, parents, or children, is incapacitated to succeed under that will (reiterating <span class="c-teal"><strong>Article 823</strong></span>).</p>
+
+  <ul>
+    <li><strong>Exception When Superfluous Competent Witnesses Exist:</strong> Because a notarial will requires only three (3) credible witnesses, if there are <span class="c-green"><strong><u>more than three witnesses</u></strong></span> (e.g., five attesting witnesses) so that three other competent witnesses remain outside the beneficiary witness, the testamentary disposition in favor of the fourth or fifth witness is <span class="c-green"><strong><u>valid</u></strong></span> (<span class="c-teal">Civil Code, Art. 823</span>).</li>
+  </ul>
+
+  <h4 id="art-1027-par-5-medical-personnel">5. Physician, Surgeon, Nurse, Health Officer, or Druggist (Art. 1027, par. 5)</h4>
+
+  <p>Any physician, surgeon, nurse, health officer, or <strong>druggist</strong> (the archaic Civil Code term for a <strong>pharmacist</strong>, not a drug offender) who <span class="c-rust"><strong><u>took care of the testator during his last illness</u></strong></span> is incapacitated to succeed.</p>
+
+  <ul>
+    <li><strong>Requisite of "Taking Care" vs. Mere Consultation:</strong> The medical professional must have <strong>actually taken care of</strong> (continuously attended to) the testator during the last illness. If Attending Physician Dr. X merely <strong>consulted</strong> Specialist Dr. A regarding the testator's illness, <span class="c-green"><strong><u>Dr. A is NOT incapacitated</u></strong></span> to inherit from the testator because Dr. A did not actually take care of the patient.</li>
+    <li><strong>Doctrinal Debate When the Physician/Nurse is a Child or Close Relative:</strong> Unlike Paragraph 3 (Guardians), which contains an express exception for ascendants, descendants, brothers, sisters, and spouses, Paragraph 5 (Physicians/Nurses) and Paragraph 1 (Priests) contain <span class="c-rust"><strong><u>no express statutory exception</u></strong></span> for close relatives.
+      <ul>
+        <li><em>Strict Textual View (Expressio Unius):</em> Some commentators argue that because the framers of the Civil Code explicitly exempted close relatives in Paragraph 3 (Guardians) but omitted that exception in Paragraphs 1 and 5, a doctor-child or priest-child is still disqualified as to the <strong>free portion</strong> (though never as to his legitime).</li>
+        <li><em>Professor's Preferred View (Teleological/Absurdity Avoidance):</em> The Professor submits that the <span class="c-green"><strong><u>better view</u></strong></span> is that if the physician, nurse, or priest is an ascendant, descendant, sibling, or spouse of the testator, the incapacity <span class="c-green"><strong><u>should not apply</u></strong></span> even to the free portion, because Filipino family law and custom expect a doctor-child to care for an ailing parent, and it would be absurd to penalize filial care or force a child to abandon a dying parent just to preserve testamentary capacity.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="art-1027-par-6-prohibited-entities">6. Entities Prohibited by Law (Art. 1027, par. 6)</h4>
+
+  <p>Individuals, associations, and corporations not permitted by law to inherit are incapacitated.</p>
+
+  <h3 id="illustration-art-1027">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Testator X dies leaving a ₱120 Million estate, survived by his first cousin (FC) and three legitimate children: Father A (a priest who heard X's confession during X's last illness), Dr. B (a physician who took care of X during the same last illness), and C (an ordinary child). During that last illness, X executed a will leaving his entire estate to A, B, and C. Regardless of which view is taken on Art. 1027, A, B, and C first receive their <strong>₱60M legitime (₱20M each)</strong> because Art. 1027 never affects legitimes. As to the <strong>₱60M free portion</strong>, under the Professor's preferred view, A, B, and C are not disqualified as children and take the remaining ₱20M each. However, under the strict textual view, Father A is disqualified (Art. 1027[1]), Dr. B is disqualified (both under Art. 1027[5] as physician and Art. 1027[2] as a 2nd-degree sibling of Father A), and <strong>C is likewise disqualified under Art. 1027(2)</strong> because a sibling is a <strong>2nd-degree relative</strong> of the priest (within the 4th degree!). Thus, the ₱60M free portion passes by intestacy—and even if A, B, and C were excluded in intestacy, <strong>First Cousin FC (who is 4th degree from X, but 5th degree from Father A)</strong> lies outside the 4th-degree prohibition of Art. 1027(2).</p>
+  </blockquote>
+
+  <hr>
+
+  <h2 id="sec-xi-incapacity-morality-prayers-adoption">XI. INCAPACITY ARISING FROM MORALITY, DISPOSITIONS FOR THE SOUL, AND ADOPTION RULES</h2>
+
+  <h3 id="art-1028-morality-art-739">Dispositions Prohibited Under Article 1028 in Relation to Article 739</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1028 of the Civil Code</strong></span>, the prohibitions mentioned in <span class="c-teal"><strong>Article 739</strong></span>, concerning donations <em>inter vivos</em>, shall apply to testamentary provisions. Consequently, any testamentary institution, legacy, or devise made in favor of a person with whom the testator was guilty of <span class="c-rust"><strong><u>adultery or concubinage</u></strong></span> at the time of the execution of the will (e.g., the testator's mistress or paramour) is <span class="c-rust"><strong><u>void</u></strong></span> by reason of public morality and public policy.</p>
+
+  <h3 id="art-1029-prayers-soul">Dispositions for Prayers and Pious Works for the Soul (Article 1029)</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1029 of the Civil Code</strong></span>, should the testator dispose of the whole or part of his property for prayers and pious works for the benefit of his soul, <strong>in general terms and without specifying its application</strong>, the executor, with the court's approval, shall deliver <span class="c-navy"><strong><u>one-half (50%)</u></strong></span> thereof or its proceeds to the <strong>church or denomination</strong> to which the testator may belong, to be used for such prayers and pious works, and the other <span class="c-teal"><strong><u>one-half (50%) to the State</u></strong></span>, for the public educational and charitable purposes mentioned in <span class="c-teal"><strong>Article 1013</strong></span>.</p>
+
+  <ul>
+    <li><strong>When Article 1029 Does NOT Apply (Primacy of Specified Application):</strong> Because the testator's will is the supreme law of succession, the 50%-50% split between the church and the State under Article 1029 applies <span class="c-rust"><strong><u>only when the disposition is made in general terms without specifying its application</u></strong></span>. If the testator explicitly specifies the exact proportion (e.g., 75% to the church and 25% to the State) or designates the exact parishes, masses, and religious services on which the entire fund must be spent, <span class="c-green"><strong><u>Article 1029 does not apply</u></strong></span> and 100% of the fund goes to the specified application.</li>
+  </ul>
+
+  <h3 id="illustration-prayers-soul">Professor's Illustration</h3>
+
+  <blockquote>
+    <p>Testator X states in his will: <em>"I leave ₱100 Million for prayers for the benefit of my soul. In this connection, I order that 1,000 masses be celebrated for me every day throughout the Philippines, with special prayers every Tuesday in St. Anthony's Shrine, every Wednesday in Baclaran Church, every Thursday in St. Jude Parish, and every Friday in Quiapo Church."</em> Because X specifically designated the application, churches, and masses for the fund, <strong>Article 1029 does not apply</strong>; the State receives nothing, and the entire ₱100 Million must be expended strictly in accordance with X's instructions.</p>
+  </blockquote>
+
+  <h3 id="adoption-succession-bar-representation">Successional Rules on Adoption and the Absolute Bar Against Representation</h3>
+
+  <p>Under Philippine adoption law, all legal ties between the biological parent(s) and the adoptee are severed and vested in the adopter(s), establishing <span class="c-green"><strong><u>reciprocal rights of succession</u></strong></span> between the adopter and the adopted child equivalent to those of a legitimate child.</p>
+
+  <ul>
+    <li><strong>Exception — An Adopted Child Cannot Represent and Cannot Be Represented:</strong> Notwithstanding its legitimate status, <span class="c-rust"><strong><u>an adopted child can neither represent the adopter nor be represented by its own descendants</u></strong></span> in the succession of the adopter's relatives.</li>
+    <li><strong>Wisdom Behind the Rule:</strong> Adoption creates a purely personal civil relationship (<em>fictio iuris</em>) strictly between the <strong>adopter and the adopted child</strong>. It does not establish blood or legal filiation between the adopted child and the adopter's parents or collateral relatives. Because the right of representation involves stepping into the shoes of the adopter to inherit from a third person (such as the adopter's parent), the adopted child is a legal stranger to the adopter's ascendants.</li>
+    <li><strong>Application:</strong> If X adopts A, and X subsequently predeceases his own father Y, <span class="c-rust"><strong><u>A cannot represent X</u></strong></span> in the inheritance from Y. Conversely, if X himself dies, A inherits directly from X with the full rights of a legitimate child.</li>
+  </ul>
+
+  <h3 id="comparative-table-capacity-dispositions">Comparative Table: Summary of Special Rules on Capacity and Dispositions</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Legal Provision / Doctrine</th>
+        <th>Scope of Application</th>
+        <th>Operative Rule / Effect</th>
+        <th>Key Exception / Limitation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Art. 1027 (Undue Influence)</strong></td>
+        <td>Testamentary Succession (Free Portion only)</td>
+        <td>Renders dispositions to confessing priest, 4th-degree relatives, guardian, witness, or attending caregiver void.</td>
+        <td>Never affects <span class="c-green"><strong>legitimes</strong></span> or <span class="c-green"><strong>intestate succession</strong></span>; Par. 3 exempts close-relative guardians; consulting doctors are not barred.</td>
+      </tr>
+      <tr>
+        <td><strong>Art. 1028 in rel. to Art. 739</strong></td>
+        <td>Testamentary &amp; <em>Inter Vivos</em> Dispositions</td>
+        <td>Nullifies dispositions between persons guilty of adultery or concubinage (e.g., paramour/mistress).</td>
+        <td>Does not apply if the illicit relationship had nothing to do with the disposition or fell under statutory exceptions.</td>
+      </tr>
+      <tr>
+        <td><strong>Art. 1029 (Prayers for the Soul)</strong></td>
+        <td>Testamentary Dispositions for Pious Works</td>
+        <td>Splits fund <span class="c-navy"><strong>50% to the testator's church</strong></span> and <span class="c-teal"><strong>50% to the State</strong></span> (Art. 1013 purposes).</td>
+        <td><span class="c-rust"><strong>Inapplicable</strong></span> if the testator specified the exact application, parishes, or proportions in the will.</td>
+      </tr>
+      <tr>
+        <td><strong>Adoption &amp; Representation</strong></td>
+        <td>Testate &amp; Intestate Succession</td>
+        <td>Adopted child has reciprocal legitimate rights directly with the adopter.</td>
+        <td>Adopted child <span class="c-rust"><strong>cannot represent</strong></span> the adopter (e.g., in inheriting from adopter's parents) and <span class="c-rust"><strong>cannot be represented</strong></span>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="sec-xii-subsequent-topics-overview">XII. OVERVIEW OF SUBSEQUENT TOPICS (UNWORTHINESS, ACCEPTANCE/REPUDIATION, AND COLLATION)</h2>
+
+  <p>To map out the remaining trajectory of the semester under the 2027 Bar Examinations Syllabus, the Professor outlined the upcoming sequence of topics:</p>
+
+  <ol>
+    <li><strong>Incapacity by Reason of Unworthiness (Article 1032):</strong> Unlike Article 1027 (which rests on presumed undue influence and applies only to testamentary dispositions), <span class="c-teal"><strong>Article 1032</strong></span> enumerates acts of gross ingratitude or moral unworthiness against the decedent (such as attempting against the testator's life, accusing the testator of a crime, adultery with the testator's spouse, or using force/fraud regarding the will) that disqualify an heir in <span class="c-rust"><strong><u>both testate and intestate succession</u></strong></span>, including his legitime.</li>
+    <li><strong>Acceptance and Repudiation of the Inheritance (Articles 1041–1057):</strong> Rules governing how heirs accept or renounce their shares, completing the analysis of the "RIP" causes of vacancy.</li>
+    <li><strong>Collation, Partition, and Distribution of the Estate (Articles 1061–1105):</strong> Mathematical computation of the net hereditary estate by adding back (<em>collating</em>) <em>inter vivos</em> donations to determine whether legitimes have been impaired, followed by final partition.</li>
+  </ol>
+
+  <hr>
+
+  <h2 id="admin-matters-asides">Administrative Matters &amp; Professor's Asides</h2>
+
+  <ul>
+    <li><strong>Midterm Grades Release:</strong> Midterm grades will be released next week.</li>
+    <li><strong>Mandatory Written Assignment (Due Next Meeting — October 26):</strong>
+      <ul>
+        <li><strong>Problem to Solve:</strong> Based on the classroom Master Problem—Testator X (₱120M estate) institutes his four legitimate children A, B, C, and D to his entire estate; C predeceases X leaving two legitimate children E and F; D repudiates his inheritance leaving one legitimate child G—<strong>explain in writing how the ₱15 Million repudiated legitime of D should be distributed, backed by full legal basis</strong>.</li>
+        <li><strong>Recitation &amp; Anti-AI Warning:</strong> Every student must submit their individual written explanation and be prepared to be called one by one next meeting. The Professor explicitly warned students <span class="c-rust"><strong><u>not to use AI</u></strong></span> to write their answers and <span class="c-rust"><strong><u>not to copy</u></strong></span> from classmates.</li>
+      </ul>
+    </li>
+    <li><strong>Upcoming Class Schedule and Assessments:</strong>
+      <ul>
+        <li><strong>October 26 (Next Meeting):</strong> Recitation on the written assignment, completion of Capacity to Succeed (specifically Incapacity due to Unworthiness under Art. 1032), and full discussion of Acceptance and Repudiation of Inheritance.</li>
+        <li><strong>November 2:</strong> No classes (All Souls' Day / holiday break).</li>
+        <li><strong>November 9:</strong> <strong>1-Hour Written Quiz</strong> covering all topics up to Acceptance and Repudiation, followed immediately by a 1.5-hour lecture on <strong>Collation</strong> for the remainder of the period.</li>
+        <li><strong>Final Exam Coverage Note:</strong> <em>Reserva Troncal</em> will not be included in the November 9 quiz and will instead be reserved for the Final Examinations.</li>
+      </ul>
+    </li>
+    <li><strong>Professor's Study, Bar Exam, and Practical Estate Planning Tips:</strong>
+      <ul>
+        <li><strong>Responsibility for Missed Classes:</strong> Students who are absent or late bear the strict responsibility of reading the full text of discussed cases (such as <span class="c-burgundy"><em>De La Merced</em></span> and <span class="c-burgundy"><em>De Los Santos</em></span>) and catching up on missed topics.</li>
+        <li><strong>Create Personal Summary Charts:</strong> Memorize the tables of legitimes and intestate shares, as well as the Master Vacancy Resolution Matrix (Predecease, Incapacity, Repudiation across Testate Legitime, Testate Free Portion, and Intestate Succession). You cannot solve estate distribution problems without having these fractions and priority rules memorized.</li>
+        <li><strong>Practical Advice on Repudiation:</strong> In pure intestate succession, advise your parents <span class="c-rust"><strong><u>never to repudiate</u></strong></span> their inheritance! If a parent repudiates an intestate inheritance, their own children cannot represent them (<span class="c-teal">Art. 977</span>), and the entire repudiated share accrues to the parent's siblings (the children's aunts and uncles) under <span class="c-teal">Article 1018</span>.</li>
+        <li><strong>Practical Advice on Dispositions for the Soul (Art. 1029):</strong> When drafting a will that leaves money for prayers for the testator's soul, always <span class="c-green"><strong><u>specify the exact application, churches, or masses</u></strong></span> in the will so that 100% of the fund goes to the intended religious purpose rather than losing 50% to the State under <span class="c-teal">Article 1029</span>.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
