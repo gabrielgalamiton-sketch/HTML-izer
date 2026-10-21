@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 21 Lecture - Legal Forms: Foundational Principles of Contract Drafting, Requisites, Formalities, Powers of Attorney, Corporate Charters & Special Commercial Instruments</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.85rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 280px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAFAFA;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+.diagram-container pre.mermaid {
+  margin: 0;
+  padding: 1rem;
+  background: transparent;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-heading">PART 1: FOUNDATIONAL PRINCIPLES OF CONTRACT DRAFTING</option>
+      <option value="#part-1-overview">&nbsp;&nbsp;↳ Part 1 Overview & Scope of Topics</option>
+      <option value="#the-nature-and-essential-elements-of-a-contract">&nbsp;&nbsp;↳ I. The Nature and Essential Elements of a Contract</option>
+      <option value="#statutory-definition-and-scope">&nbsp;&nbsp;&nbsp;&nbsp;• A. Statutory Definition & Scope (Art. 1305)</option>
+      <option value="#essential-requisites-of-a-contract">&nbsp;&nbsp;&nbsp;&nbsp;• B. Essential Requisites of a Contract (COC, Art. 1318)</option>
+      <option value="#consent-of-the-contracting-parties">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Consent of the Contracting Parties (Art. 1319)</option>
+      <option value="#object-certain-subject-matter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Object Certain (Arts. 1347–1349)</option>
+      <option value="#cause-or-consideration-of-the-obligation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Cause or Consideration (Art. 1350)</option>
+      <option value="#cardinal-principles-and-best-practices">&nbsp;&nbsp;↳ II. Cardinal Principles & Best Practices in Drafting</option>
+      <option value="#identify-the-parties-correctly">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Identify Parties & Verify Legal Capacity</option>
+      <option value="#be-specific-state-who-what-when-how-much">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Be Specific: Who, What, When, How Much (Mora, Art. 1169)</option>
+      <option value="#use-clear-plain-language">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Use Plain Language & Eliminate Legalese</option>
+      <option value="#keep-provisions-consistent">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Keep Consistent & Zero White-Out</option>
+      <option value="#anticipate-problems-preventive-lawyering">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Anticipate Problems (Preventive Lawyering)</option>
+      <option value="#follow-the-law-limits-on-autonomy">&nbsp;&nbsp;&nbsp;&nbsp;• 6. Follow the Law (Art. 1306 & Art. 1409[1])</option>
+      <option value="#anatomy-of-a-standard-contract">&nbsp;&nbsp;↳ III. Anatomy of a Standard Contract & Formalities</option>
+      
+      <option value="#part-2-heading">PART 2: FORMALITIES, POWERS OF ATTORNEY & CORPORATE CHARTERS</option>
+      <option value="#part-2-overview">&nbsp;&nbsp;↳ Part 2 Overview & Scope of Topics</option>
+      <option value="#statutory-rules-on-form-notarization-registration">&nbsp;&nbsp;↳ IV. Statutory Rules on Form, Notarization & Registration</option>
+      <option value="#general-rule-on-form-vs-exceptions">&nbsp;&nbsp;&nbsp;&nbsp;• A. General Rule on Form vs. Statutory Exceptions (Art. 1356)</option>
+      <option value="#statute-of-frauds-enforceability">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Form for Enforceability: Statute of Frauds (Art. 1403[2])</option>
+      <option value="#form-for-convenience-efficacy-remedies">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Form for Convenience & Real Rights (Art. 1358 & 2125)</option>
+      <option value="#legal-effect-of-notarization-and-registration">&nbsp;&nbsp;&nbsp;&nbsp;• B. Legal Effect of Notarization & Registration</option>
+      <option value="#agency-and-powers-of-attorney">&nbsp;&nbsp;↳ V. Agency and Powers of Attorney (GPA vs. SPA)</option>
+      <option value="#nature-of-agency-in-legal-drafting">&nbsp;&nbsp;&nbsp;&nbsp;• A. Nature of Agency in Legal Drafting (Art. 1868)</option>
+      <option value="#gpa-vs-spa">&nbsp;&nbsp;&nbsp;&nbsp;• B. General (Art. 1877) vs. Special Power of Attorney (Art. 1878)</option>
+      <option value="#key-doctrinal-rules-powers-of-attorney">&nbsp;&nbsp;&nbsp;&nbsp;• C. Key Doctrinal Rules (Substance, Art. 1874 & 1879)</option>
+      <option value="#corporate-instruments-aoi-and-opc">&nbsp;&nbsp;↳ VI. Corporate Instruments: Articles of Incorporation & OPC</option>
+      <option value="#drafting-articles-of-incorporation-under-rcc">&nbsp;&nbsp;&nbsp;&nbsp;• A. Drafting AOI under the Revised Corporation Code</option>
+      <option value="#mandatory-contents-and-compliance-aoi">&nbsp;&nbsp;&nbsp;&nbsp;• B. Mandatory Contents & Compliance Checklists</option>
+      <option value="#opc-vs-sole-proprietorship">&nbsp;&nbsp;&nbsp;&nbsp;• C. One Person Corporation (OPC) vs. Sole Proprietorship</option>
+      
+      <option value="#part-3-heading">PART 3: PARTNERSHIPS, LEASES, SERVICE CONTRACTS & SPECIAL FORMS</option>
+      <option value="#part-3-overview">&nbsp;&nbsp;↳ Part 3 Overview & Scope of Topics</option>
+      <option value="#articles-of-partnership-and-joint-ventures">&nbsp;&nbsp;↳ VII. Articles of Partnership & Joint Venture Arrangements</option>
+      <option value="#nature-of-partnership-and-business-vehicle">&nbsp;&nbsp;&nbsp;&nbsp;• A. Nature of Partnership (Art. 1767) vs. Corporation</option>
+      <option value="#classifications-of-partners">&nbsp;&nbsp;&nbsp;&nbsp;• B. Classifications of Partners & Drafting Implications</option>
+      <option value="#essential-clauses-contract-of-partnership">&nbsp;&nbsp;&nbsp;&nbsp;• C. Essential Clauses in a Contract of Partnership</option>
+      <option value="#mandatory-formalities-sec-registration-partnerships">&nbsp;&nbsp;&nbsp;&nbsp;• D. Formalities & SEC Rules (Art. 1772 vs. 1773 Inventory)</option>
+      <option value="#drafting-contracts-of-lease">&nbsp;&nbsp;↳ VIII. Drafting Contracts of Lease (Real & Personal)</option>
+      <option value="#service-contracts-and-legal-retainership">&nbsp;&nbsp;↳ IX. Service Contracts & Legal Retainership Agreements</option>
+      <option value="#essential-elements-service-consultancy">&nbsp;&nbsp;&nbsp;&nbsp;• A. Scope, Tiered Appearance Fees & Confidentiality (CPRA)</option>
+      <option value="#independent-contractor-vs-labor-law">&nbsp;&nbsp;&nbsp;&nbsp;• B. Independent Contractor Clause vs. Four-Fold Test</option>
+      <option value="#other-common-business-instruments">&nbsp;&nbsp;↳ X. Other Common Business & Dispute Instruments</option>
+      <option value="#deep-dive-loans-and-compromise-agreements">&nbsp;&nbsp;&nbsp;&nbsp;• Deep-Dive: Written Interest (Art. 1956) & Compromise (Art. 2028)</option>
+      <option value="#administrative-matters-and-professors-asides">&nbsp;&nbsp;↳ Administrative Matters & Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">October 21 Lecture - Legal Forms</h1>
+
+  <h2 id="part-1-heading" class="c-navy">PART 1: FOUNDATIONAL PRINCIPLES OF CONTRACT DRAFTING, ESSENTIAL REQUISITES, AND CARDINAL RULES OF CONSTRUCTION</h2>
+
+  <!-- Part 1 Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">ESSENTIAL ELEMENTS</div>
+        <div class="ui-sub">Consent, Object Certain, & Cause (COC)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">CARDINAL RULES</div>
+        <div class="ui-sub">Specificity, Mora, Plain Language, & Prevention</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">CONTRACT ANATOMY</div>
+        <div class="ui-sub">11 Structural Components & Formal Execution</div>
+      </div>
+    </div>
+  </div>
+
+  <p id="part-1-overview"><strong>Part 1 Overview & Scope of Topics:</strong></p>
+  <ul>
+    <li><strong>I. The Nature and Essential Elements of a Contract in Legal Drafting:</strong> Definition of a contract (<span class="c-teal"><strong>Civil Code, Art. 1305</strong></span>); Essential requisites (<em><span class="c-green"><strong><u>Consent, Object, Cause</u></strong></span></em> under <span class="c-teal"><strong>Art. 1318</strong></span>); Signifying consent in written instruments (signature vs. thumbmark and notarial modifications); Vices of consent (<span class="c-teal"><strong>Art. 1330</strong></span>) and legal capacity (<span class="c-teal"><strong>Art. 1327</strong></span>; <span class="c-teal"><strong>R.A. 6809</strong></span>); Specificity of object for movable property (motor vehicles) and immovable property (titled vs. untitled land); Cause or consideration in onerous vs. gratuitous contracts (<span class="c-teal"><strong>Art. 1350</strong></span>).</li>
+    <li><strong>II. Cardinal Principles and Best Practices in Drafting Contracts:</strong> Accurate identification of parties and representative capacity; Specificity of obligations and distinction between ordinary delay and legal delay (<em><span class="c-green"><strong><u>mora solvendi</u></strong></span></em> under <span class="c-teal"><strong>Art. 1169</strong></span>); Plain language drafting; Internal consistency, proofreading, and avoidance of material alterations; Preventive lawyering and contingency clauses; Autonomy of contracts and compliance with law, morals, good customs, public order, and public policy (<span class="c-teal"><strong>Art. 1306</strong></span>).</li>
+    <li><strong>III. Anatomy of a Standard Contract and Formalities of Execution:</strong> Structural components of commercial and civil instruments, party designations, operative covenants, catch-all remedy clauses, signature blocks, and notarial certificates.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="the-nature-and-essential-elements-of-a-contract" class="c-navy">I. THE NATURE AND ESSENTIAL ELEMENTS OF A CONTRACT IN LEGAL DRAFTING</h3>
+
+  <h4 id="statutory-definition-and-scope" class="c-navy">A. Statutory Definition and Scope in Legal Forms</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1305 of the Civil Code</strong></span>, <span class="c-green"><strong><u>a contract is a meeting of minds between two persons whereby one binds himself, with respect to the other, to give something or to render some service</u></strong></span>. In the context of <strong>Legal Forms and Drafting</strong>, the general principles of Obligations and Contracts transition from abstract doctrinal theory into tangible, enforceable written instruments.</p>
+
+  <ul>
+    <li><strong>The Concept of "Meeting of Minds":</strong> A contract exists when the <span class="c-green"><strong><u>offer and acceptance of the contracting parties concur</u></strong></span> upon the exact terms, conditions, and subject matter of the agreement.</li>
+    <li><strong>Scope of Prestations:</strong> While <span class="c-teal"><strong>Article 1305</strong></span> explicitly mentions obligations <em>to give</em> (real obligations) and <em>to render some service</em> (positive personal obligations <em>to do</em>), the prestation of a contract equally encompasses negative personal obligations (<strong>obligations <em>not to do</em></strong>), such as non-compete covenants, confidentiality undertakings, or restrictions on subleasing.</li>
+    <li><strong>Oral vs. Written Contracts:</strong> Although Philippine civil law generally recognizes the validity of oral or verbal contracts under the principle of consensuality (<span class="c-teal"><strong>Article 1315, Civil Code</strong></span>), the discipline of Legal Forms focuses exclusively on reducing agreements into <strong>written instruments</strong> to ensure enforceability, evidentiary certainty, and registrability.</li>
+  </ul>
+
+  <h4 id="essential-requisites-of-a-contract" class="c-navy">B. Essential Requisites of a Contract (<em>COC</em>)</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1318 of the Civil Code</strong></span>, <span class="c-rust"><strong><u>there is no contract unless the following three essential requisites concur</u></strong></span>: (1) <span class="c-green"><strong><u>Consent</u></strong></span> of the contracting parties; (2) <span class="c-green"><strong><u>Object</u></strong></span> certain which is the subject matter of the contract; and (3) <span class="c-green"><strong><u>Cause</u></strong></span> of the obligation which is established. When drafting any legal instrument, the lawyer must ensure that all three elements are explicitly and unmistakably reflected on the face of the document.</p>
+
+  <!-- Requisites UI Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🤝</div>
+        <div class="ui-title">1. Consent</div>
+        <div class="ui-sub">Meeting of offer & acceptance; intelligent, free, & capacitated</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎯</div>
+        <div class="ui-title">2. Object Certain</div>
+        <div class="ui-sub">Determinate subject matter; technical descriptions required</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">3. Cause</div>
+        <div class="ui-sub">Onerous monetary price or gratuitous pure liberality</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="consent-of-the-contracting-parties" class="c-navy">1. Consent of the Contracting Parties</h4>
+
+  <p>Consent is manifested by the meeting of the offer and the acceptance upon the thing and the cause which are to constitute the contract (<span class="c-teal"><strong>Article 1319, Civil Code</strong></span>).</p>
+
+  <ul>
+    <li><strong>Manner of Signifying Consent in Written Contracts:</strong>
+      <ul>
+        <li><strong>Standard Wet-Ink Signature:</strong> The primary and most common method of signifying express consent to a written instrument is by affixing one's customary signature above the printed name in the signature block.</li>
+        <li><strong>Thumbmark or Other Physical Mark:</strong> If a contracting party is illiterate, physically unable to write, or otherwise incapable of signing, consent may be signified by affixing a <strong>thumbmark</strong> (or another finger's print if the party lacks a thumb).</li>
+        <li><strong>Notarial Modifications for Thumbmarks:</strong> Under the <span class="c-burgundy"><strong>2004 Rules on Notarial Practice (A.M. No. 02-8-13-SC)</strong></span>, when a party executes a document by thumbmark or other mark in lieu of a handwritten signature, best practice and notarial rules require at least <span class="c-green"><strong><u>two (2) disinterested instrumental witnesses</u></strong></span> to attest that the party affixed the thumbmark in their presence. Furthermore, the drafter must modify the language of the <strong>Acknowledgment</strong> or <strong>Jurat</strong> to state that the affiant or executing party <em>"affixed his/her thumbmark"</em> rather than <em>"signed"</em> the instrument.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Thumbmark Execution Workflow Card -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">1. Party Illiterate or Physically Incapable of Signing</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Party Affixes Thumbmark (or other mark) in Presence of Notary</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. At Least Two (2) Disinterested Witnesses Attest & Sign</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">4. Notarial Certificate Modified to Recite "Affixed His/Her Thumbmark"</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">VALID AND ENFORCEABLE PUBLIC INSTRUMENT</div>
+      <div class="ui-sub">Complies strictly with 2004 Notarial Rules & evidentiary standards</div>
+    </div>
+  </div>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Mode of Execution</th>
+        <th>Witness Requirement</th>
+        <th>Required Modification in Notarial Certificate (Jurat / Acknowledgment)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Handwritten Signature</strong></td>
+        <td>Two (2) instrumental witnesses required for deeds conveying realty or acknowledgments; none strictly required for a simple jurat unless needed for evidentiary weight.</td>
+        <td>Standard phrasing: <em>"This instrument was <strong>signed</strong> by the parties and their instrumental witnesses on each and every page thereof..."</em></td>
+      </tr>
+      <tr>
+        <td><strong>Thumbmark / Cross Mark</strong></td>
+        <td>At least <strong>two (2) witnesses</strong> who must sign their own names and attest to the affixing of the thumbmark in the presence of the Notary Public.</td>
+        <td>Modified phrasing: <em>"The executing party, being unable to write, <strong>affixed his/her right/left thumbmark</strong> on the instrument in my presence and in the presence of two disinterested witnesses..."</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Requisites of Valid Consent and Duties of the Notary Public:</strong>
+      <ol>
+        <li><strong>Intelligent and Informed Consent:</strong> The party must understand the nature, contents, and legal consequences of the instrument.</li>
+        <li><strong>Freedom and Voluntariness:</strong> The consent must be freely given without external compulsion.</li>
+        <li><strong>Absence of Vices of Consent:</strong> Under <span class="c-teal"><strong>Article 1330 of the Civil Code</strong></span>, a contract where consent is given through <span class="c-rust"><strong>mistake, violence (force), intimidation (threat), undue influence, or fraud</strong></span> is <span class="c-rust"><strong><u>voidable</u></strong></span>. When acting as a Notary Public, the lawyer has a positive legal duty to personally examine the executing parties, explain the terms of the contract in a language or dialect known to them, and verify that they are signing voluntarily without force, threat, or intimidation.</li>
+        <li><strong>Legal Capacity to Contract:</strong> Under <span class="c-teal"><strong>Republic Act No. 6809</strong></span> (amending the Family Code), the age of majority and legal capacity in the Philippines is <strong>eighteen (18) years old</strong>. Under <span class="c-teal"><strong>Article 1327 of the Civil Code</strong></span>, <span class="c-rust"><strong>unemancipated minors, insane or demented persons, and deaf-mutes who do not know how to write cannot give valid consent</strong></span>. Even if a person is 18 years or older, suffering from severe mental disability or cognitive incapacity vitiates consent.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration: Vices of Consent and Notarial Verification</strong><br>
+    Suppose a client appears before you as a Notary Public to have a Deed of Absolute Sale notarized, looking visibly distressed. Upon inquiry, you discover the buyer threatened the seller, saying, <em>"If you do not sign this contract, I will burn your house down,"</em> or <em>"I will kill you."</em> This constitutes <strong>intimidation or threat</strong> under <span class="c-teal"><strong>Article 1335 of the Civil Code</strong></span>, which vitiates consent and renders the contract <span class="c-rust"><strong><u>voidable</u></strong></span>. As a Notary Public, you must refuse to notarize the document; notarizing an instrument executed under duress violates the Rules on Notarial Practice and subjects the lawyer to administrative discipline.
+  </blockquote>
+
+  <!-- Diagram 1: Contract Formation & Requisites -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 1: ESSENTIAL REQUISITES (COC), EXECUTION & VICES OF CONSENT <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Contract Formation<br>(Art. 1305, Civil Code)"] --> B["Three Essential Requisites<br>(Art. 1318, Civil Code)"]
+            
+            B --> C["1. CONSENT (Art. 1319)"]
+            B --> D["2. OBJECT CERTAIN (Arts. 1347-1349)"]
+            B --> E["3. CAUSE (Art. 1350)"]
+            
+            C --> C1["Manner of Execution"]
+            C1 --> C1a["Wet-Ink Signature<br>(Standard / Presumed Valid)"]
+            C1 --> C1b["Thumbmark / Cross Mark<br>(2 Disinterested Witnesses + Modified Notarial Block)"]
+            
+            C --> C2["Capacity & Integrity"]
+            C2 --> C2a["Legal Capacity: 18+ Years Old<br>(R.A. 6809; Minors & Incompetents Incapacitated under Art. 1327)"]
+            C2 --> C2b["Vices of Consent<br>(Mistake, Violence, Intimidation, Undue Influence, Fraud - Art. 1330)"]
+            C2b --> C2c["Consequence: VOIDABLE Contract<br>Notary must refuse notarization"]
+            
+            D --> D1["Specific & Determinate<br>(Not generic)"]
+            D1 --> D1a["Movable (Motor Vehicles)<br>LTO CR/OR, Engine, Chassis, & Plate Nos."]
+            D1 --> D1b["Immovable (Real Property)<br>TCT/OCT Metes & Bounds or Assessor TD Boundaries"]
+            
+            E --> E1["Onerous Contracts<br>Prestation / Monetary Price in Words & Figures"]
+            E --> E2["Gratuitous Contracts<br>Pure Liberality, Generosity, or Love & Affection"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B navy;
+            class C,D,E green;
+            class C1a,C1b,D1a,D1b,E1,E2 teal;
+            class C2b,C2c rust;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="object-certain-subject-matter" class="c-navy">2. Object Certain (Subject Matter of the Contract)</h4>
+
+  <p>The object of a contract may be things, rights, or services that are not outside the commerce of men, are not impossible, and are <span class="c-green"><strong><u>determinate as to their kind</u></strong></span> (<span class="c-teal"><strong>Articles 1347–1349, Civil Code</strong></span>). In contract drafting, the object must be <span class="c-green"><strong><u>specific and sufficiently definite</u></strong></span> so that it can be identified without the need for a new agreement between the parties.</p>
+
+  <ul>
+    <li><strong>Distinction Between Generic and Specific Objects:</strong> A generic thing is identified only by its specie or class (e.g., "a black Kawasaki motorcycle"), whereas a specific or determinate thing is particularly designated or physically segregated from all others of the same class. A Deed of Sale or Chattel Mortgage covering a movable or immovable must describe a <strong>specific thing</strong>.</li>
+    <li><strong>Drafting Descriptions for Movable Property (Motor Vehicles):</strong> Simply describing the object as <em>"a black Toyota car"</em> or <em>"a Kawasaki motorcycle"</em> is <span class="c-rust"><strong><u>fatally defective</u></strong></span> for registration and enforcement. The drafter must examine the <strong>Certificate of Registration (CR)</strong> and <strong>Official Receipt (OR)</strong> issued by the Land Transportation Office (LTO) and explicitly state the following technical specifications:
+      <ol>
+        <li>Make, Brand, and Series/Model;</li>
+        <li>Year Model and Body Type;</li>
+        <li><strong>Motor or Engine Number</strong>;</li>
+        <li><strong>Chassis or Serial Number</strong>;</li>
+        <li><strong>Plate Number</strong> and MV File Number;</li>
+        <li>Color; and</li>
+        <li>CR Number and OR Number.</li>
+      </ol>
+    </li>
+    <li><strong>Drafting Descriptions for Immovable Property (Real Estate):</strong> Colloquial or informal landmark descriptions (such as describing land in Ilocano vernacular as being <em>"near the salamagi [tamarind] tree"</em> or using general directional terms like <em>daya</em> [east] and <em>laud</em> [west] without technical metes and bounds) are legally insufficient.
+      <ul>
+        <li><strong>Titled Real Property:</strong> The contract must specify the <strong>Transfer Certificate of Title (TCT)</strong> or <strong>Original Certificate of Title (OCT)</strong> number, the Registry of Deeds where it is registered, the Lot Number, Block Number, Survey/Plan Number, exact location (Barangay, Municipality/City, Province), total area in square meters, and the verbatim <span class="c-green"><strong><u>technical description</u></strong></span> (metes and bounds) appearing on the title.</li>
+        <li><strong>Untitled / Unregistered Real Property:</strong> Where the land is not yet covered by a Torrens title, the drafter must identify it using the <strong>Tax Declaration (TD) Number</strong>, Property Index Number (PIN), exact location, approximate area, and the specific <span class="c-green"><strong><u>adjoining boundary owners</u></strong></span> on the North, East, South, and West as recorded in the Municipal or Provincial Assessor's Office.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Type of Property</th>
+        <th>Primary Reference Document</th>
+        <th>Mandatory Identifying Details in the Contract</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Motor Vehicle (Movable)</strong></td>
+        <td>LTO Certificate of Registration (CR) and Official Receipt (OR)</td>
+        <td>Make/Brand, Body Type, Color, <strong>Engine Number</strong>, <strong>Chassis Number</strong>, <strong>Plate Number</strong>, MV File No., and CR No.</td>
+      </tr>
+      <tr>
+        <td><strong>Titled Land (Immovable)</strong></td>
+        <td>OCT / TCT / Condominium Certificate of Title (CCT)</td>
+        <td>Title Number, Registry of Deeds, Lot/Block/Survey No., Location, Area (sq.m.), and full <strong>Technical Description (Metes and Bounds)</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>Untitled Land (Immovable)</strong></td>
+        <td>Tax Declaration of Real Property & Cadastral Survey</td>
+        <td><strong>Tax Declaration Number</strong>, Cadastral Lot No., Location, Area, Assessed Value, and <strong>Boundaries (North, East, South, West)</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration: Defective Colloquial Land Descriptions vs. Technical Specificity</strong><br>
+    If a client asks you to draft a Deed of Sale for a parcel of land in the province and describes its location merely as <em>"my land in Tinagpudtudan or Daldalayap, right beside the big salamagi (tamarind) tree,"</em> you cannot put that colloquial description in the deed. What if the tamarind tree is cut down or dies? The object becomes unidentifiable. The lawyer must require the client to produce the <strong>Transfer Certificate of Title (TCT)</strong> or, if unregistered, the current <strong>Tax Declaration</strong>, and copy the exact technical description and boundary limits into the instrument.
+  </blockquote>
+
+  <h4 id="cause-or-consideration-of-the-obligation" class="c-navy">3. Cause or Consideration of the Obligation</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1350 of the Civil Code</strong></span>, in onerous contracts the cause is understood to be, for each contracting party, the prestation or promise of a thing or service by the other; in remuneratory ones, the service or benefit which is remunerated; and in contracts of pure beneficence, the mere liberality of the benefactor.</p>
+
+  <ul>
+    <li><strong>Onerous Contracts (e.g., Deed of Sale, Contract of Lease):</strong> The cause or consideration for the seller or lessor is the <span class="c-green"><strong><u>monetary price or rental</u></strong></span> paid or promised by the buyer or lessee. The drafter must state the exact currency and amount both in <strong>words and in figures</strong> (e.g., <em>"ONE HUNDRED THOUSAND PESOS (PhP 100,000.00), Philippine Currency"</em>) to prevent alteration or ambiguity.</li>
+    <li><strong>Gratuitous Contracts / Contracts of Pure Beneficence (e.g., Deed of Donation):</strong> There is no monetary consideration. Instead, the drafter must explicitly recite that the conveyance is made out of the donor's <strong>"liberality and generosity"</strong> or out of <strong>"love and affection"</strong> for the donee (such as when parents or grandparents donate a parcel of land to a newlywed child or grandchild to help them start their married life).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="cardinal-principles-and-best-practices" class="c-navy">II. CARDINAL PRINCIPLES AND BEST PRACTICES IN DRAFTING CONTRACTS</h3>
+
+  <p>Drafting a contract is both an art and a science. A well-drafted instrument anticipates disputes, protects the legitimate interests of the parties, and serves as the <span class="c-green"><strong><u>law between the contracting parties</u></strong></span>. Below are the six cardinal rules every legal drafter must observe:</p>
+
+  <!-- Cardinal Rules UI Grid -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">IDENTIFY</div>
+        <div class="ui-sub">Parties, capacity, & spousal consent</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">SPECIFY</div>
+        <div class="ui-sub">Deadlines, mora triggers, & amounts</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">SIMPLIFY</div>
+        <div class="ui-sub">Plain language; eliminate legalese</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">PROOFREAD</div>
+        <div class="ui-sub">Zero white-out; reconcile numbers</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">5</div>
+        <div class="ui-kicker">PREVENT</div>
+        <div class="ui-sub">Default penalties, "as-is" & remedies</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">6</div>
+        <div class="ui-kicker">COMPLY</div>
+        <div class="ui-sub">Stay within law, morals & policy (Art. 1306)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="identify-the-parties-correctly" class="c-navy">1. Identify the Parties Correctly and Verify Legal Capacity</h4>
+
+  <p>The opening paragraph (Exordium) must accurately state the full legal names of the parties, their capacities, and their authority if acting on behalf of another.</p>
+
+  <ul>
+    <li><strong>Personal Circumstances:</strong> Always state whether a natural person is <strong>"of legal age"</strong>, their <strong>nationality/citizenship</strong> (critical for constitutional restrictions on land ownership under Article XII of the 1987 Constitution), their <strong>civil status</strong> (<em>single, married, widow/widower, or legally separated</em>), and their <strong>residence or postal address</strong>.</li>
+    <li><strong>Importance of Civil Status:</strong> Under the Family Code (Articles 96 and 124), any disposition or encumbrance of community or conjugal property without the <span class="c-rust"><strong><u>written consent of the other spouse</u></strong></span> is <span class="c-rust"><strong><u>void</u></strong></span>. Indicating civil status alerts the drafter to include a marital consent clause or have both spouses execute the deed.</li>
+    <li><strong>Representative Capacity:</strong> If the person signing is not the principal owner or obligor, the contract must explicitly disclose the representative relationship in both the exordium and the signature block (e.g., <em>"JUAN DELA CRUZ, of legal age, Filipino, single, and a resident of Baguio City, herein represented by his Attorney-in-Fact, PEDRO PENDUKO, by virtue of a Special Power of Attorney dated..."</em>).</li>
+  </ul>
+
+  <h4 id="be-specific-state-who-what-when-how-much" class="c-navy">2. Be Specific: State Who Must Do What, By When, and For How Much</h4>
+
+  <p>Ambiguity regarding performance schedules is the leading cause of breach-of-contract litigation. Specificity is especially vital in <strong>Deeds of Conditional Sale</strong> or <strong>Contracts to Sell</strong> where the purchase price is paid in installments following an initial down payment.</p>
+
+  <ul>
+    <li><strong>Why Specificity Matters—Determining Delay (<em>Mora</em>):</strong> Under <span class="c-teal"><strong>Article 1169 of the Civil Code</strong></span>, those obliged to deliver or to do something incur in delay from the time the obligee judicially or extrajudicially demands from them the fulfillment of their obligation.</li>
+    <li><strong>Ordinary Delay vs. Legal Delay (<em>Mora Solvendi</em>):</strong>
+      <ul>
+        <li><strong>Ordinary Delay</strong> is merely the non-performance of an obligation on the stipulated maturity date. By itself, without a demand, it does not place the debtor in legal default.</li>
+        <li><strong>Legal Delay (Default / <em>Mora</em>)</strong> arises only when: (1) the obligation is demandable and liquidated; (2) the debtor delays performance; and (3) the creditor makes a <span class="c-green"><strong><u>judicial or extrajudicial demand</u></strong></span>, and the debtor fails to comply despite receipt of demand (unless demand is expressly waived in the contract under Art. 1169[1]).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Delay Workflow Card -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Stipulated Maturity Date Arrives Without Performance</div>
+      <div class="ui-sub">Constitutes Ordinary Delay only (no damages or default yet)</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Creditor Makes Judicial or Extrajudicial Demand</div>
+      <div class="ui-sub">Unless contract contains express "without need of demand" waiver (Art. 1169[1])</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Debtor Fails to Comply Despite Receipt of Demand</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">LEGAL DELAY (MORA SOLVENDI) IS PERFECTED</div>
+      <div class="ui-sub">Triggers liability for damages, penalty clauses, stipulated interest, or contract rescission</div>
+    </div>
+  </div>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>Definition & Trigger</th>
+        <th>Legal Consequence in Contract Drafting</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ordinary Delay</strong></td>
+        <td>Mere failure to perform an obligation on the agreed date or deadline, <strong>prior to any demand</strong> by the creditor.</td>
+        <td>Does not yet make the debtor liable for damages or default interest, unless the contract contains an express <strong>"without need of demand"</strong> clause.</td>
+      </tr>
+      <tr>
+        <td><strong>Legal Delay (<em>Mora</em>)</strong></td>
+        <td>Virtual non-fulfillment of the obligation that continues <strong>after a judicial or extrajudicial demand</strong> has been made and received (<span class="c-teal"><strong>Art. 1169, Civil Code</strong></span>).</td>
+        <td>Places the debtor in <strong>default</strong>; triggers liability for damages, penalty clauses, default interest, or rescission/cancellation of the contract.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Diagram 2: Delay & Remedies -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 2: THE SPECTRUM OF DELAY & DEFAULT MECHANICS (ART. 1169) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Maturity Date Stipulated in Contract"] --> B{"Has the Maturity Date Passed?"}
+            B -- No --> C["Obligation Not Yet Due"]
+            B -- Yes --> D["ORDINARY DELAY<br>(Mere non-performance on due date)"]
+            
+            D --> E{"Is there an express clause:<br>'without need of demand'?<br>(Art. 1169[1])"}
+            
+            E -- Yes --> F["AUTOMATIC DEFAULT<br>Legal Delay arises immediately"]
+            E -- No --> G{"Has Creditor made Judicial or<br>Extrajudicial Demand?"}
+            
+            G -- No Demand Made --> H["Debtor NOT in Legal Default<br>No damages or penalty triggered"]
+            G -- Demand Made & Received --> I["LEGAL DELAY / MORA SOLVENDI<br>(Art. 1169, Civil Code)"]
+            
+            F --> J["LEGAL REMEDIES ACTIVATED"]
+            I --> J
+            
+            J --> J1["Stipulated Penalty Clause"]
+            J --> J2["Default Interest / Damages"]
+            J --> J3["Action for Specific Performance"]
+            J --> J4["Rescission / Cancellation (Art. 1191)"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B navy;
+            class D,E,G teal;
+            class H,J1,J2,J3,J4 rust;
+            class F,I,J green;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="use-clear-plain-language" class="c-navy">3. Use Clear, Plain Language and Avoid Unnecessary Legal Expressions</h4>
+
+  <p>A contract is written primarily for the <strong>client</strong> and the contracting parties, not as a contest of esoteric vocabulary.</p>
+
+  <ul>
+    <li><strong>Eliminate Archaic Legalese and Vague Adverbs:</strong> Avoid highfalutin Latinisms, redundant couplets, and vague temporal modifiers such as <em>"promptly,"</em> <em>"immediately,"</em> <em>"forthwith,"</em> or <em>"as soon as possible."</em></li>
+    <li><strong>Use Measurable Benchmarks:</strong> Instead of vague adverbs, specify exact calendar or business days anchored to a verifiable trigger event.</li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration: Vague vs. Definite Payment Clauses</strong><br>
+    Compare two drafting approaches in a service agreement:
+    <ul>
+      <li><strong>Defective/Vague Clause:</strong> <em>"The Client shall pay the Consultant promptly."</em> This is dangerous because "promptly" is subjective; the Consultant cannot easily establish when the Client's obligation has matured for purposes of making a formal demand.</li>
+      <li><strong>Proper/Definite Clause:</strong> <em>"The Client shall pay the amount of PhP 50,000.00 within five (5) calendar days after receiving the completed report and billing invoice."</em> This establishes an unmistakable reckoning point and deadline.</li>
+    </ul>
+  </blockquote>
+
+  <h4 id="keep-provisions-consistent" class="c-navy">4. Keep Provisions Consistent and Proofread Meticulously</h4>
+
+  <p>Lawyers frequently commit errors by failing to proofread final drafts before printing and execution.</p>
+
+  <ul>
+    <li><strong>Internal Reconciliation:</strong> The drafter must cross-check all dates, monetary amounts (ensuring words match figures), defined terms, party designations, and attached annexes or schedules.</li>
+    <li><strong>Prohibition Against Correction Tape or Fluid ("White-Out / Snowpake"):</strong> Unlike the typewriter and carbon-paper era where typists used correction fluid (<em>Snowpake</em> or <em>White-out</em>), modern lawyers must <span class="c-rust"><strong><u>never use correction tape or correction fluid</u></strong></span> on final contracts. Physical erasures or tape over material terms create a presumption of <span class="c-rust"><strong><u>unauthorized alteration or spoliation</u></strong></span>, which can render the instrument suspect in court or unacceptable to registries (such as the Registry of Deeds or SEC). If a typographical error is discovered before signing, the entire page or document must be <strong>reprinted</strong>.</li>
+  </ul>
+
+  <h4 id="anticipate-problems-preventive-lawyering" class="c-navy">5. Anticipate Problems ("Preventive Lawyering")</h4>
+
+  <p>Contract drafting is an exercise in <span class="c-green"><strong><u>preventive lawyering</u></strong></span>—designing the agreement to prevent litigation before it arises, or to ensure clear remedies if litigation becomes unavoidable. The drafter must think several steps ahead and incorporate protective clauses addressing:</p>
+
+  <ol>
+    <li><strong>Default and Interest:</strong> What happens if the conditional buyer or debtor fails to pay on time? Include penalty clauses and stipulated interest rates.</li>
+    <li><strong>Warranties vs. "As-Is, Where-Is" Clauses:</strong> If the object sold is brand new, include express warranties against <strong>hidden or mechanical defects</strong> (<span class="c-teal"><strong>Article 1561, Civil Code</strong></span>). Conversely, if the object is a secondhand motor vehicle or used equipment, protect the seller by stipulating that the sale is on an <span class="c-green"><strong><u>"as-is, where-is" basis</u></strong></span>, waiving implied warranties as to physical condition.</li>
+    <li><strong>Breach, Termination, and Remedies:</strong> In a Contract of Lease, what if the tenant absconds in the middle of the night without paying rent? Specify the grounds for pre-termination, forfeiture of deposits, and extrajudicial remedies.</li>
+    <li><strong>Fairness and Mutuality:</strong> While a lawyer must protect their client's interests, a contract should <span class="c-rust"><strong>not be unconscionably one-sided</strong></span>. Under <span class="c-teal"><strong>Article 1308 of the Civil Code</strong></span>, the contract must bind both contracting parties; its validity or compliance cannot be left to the will of one of them. A balanced, fair contract is more likely to be respected by the parties and upheld by the courts.</li>
+  </ol>
+
+  <h4 id="follow-the-law-limits-on-autonomy" class="c-navy">6. Follow the Law (Limits on Contractual Autonomy)</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1306 of the Civil Code</strong></span>, the contracting parties may establish such stipulations, clauses, terms, and conditions as they may deem convenient, <span class="c-green"><strong><u>provided they are not contrary to law, morals, good customs, public order, or public policy</u></strong></span>. Under <span class="c-teal"><strong>Article 1409(1)</strong></span>, contracts whose cause, object, or purpose is contrary to law, morals, good customs, public order, or public policy are <span class="c-rust"><strong><u>inexistent and void from the beginning</u></strong></span>.</p>
+
+  <blockquote>
+    <strong>Professor's Illustration: Void Agreements (Marital Separation & Criminal Contracts)</strong><br>
+    <ol>
+      <li><strong>Contract of Marital Separation:</strong> Suppose an estranged husband and wife visit your law office requesting a notarized <em>"Agreement to Separate Until Death Do Us Part,"</em> stipulating that they are mutually dissolving their marriage and allowing each other to remarry or cohabit with third persons. Under <span class="c-teal"><strong>Article 2035 of the Civil Code</strong></span> and the <strong>Family Code</strong>, marriage is an inviolable social institution; any extrajudicial contract for personal separation or dissolution of marriage is <span class="c-rust"><strong><u>void ab initio</u></strong></span> for being contrary to law and public policy.</li>
+      <li><strong>Contract to Commit a Crime:</strong> A client asks you to draft a service contract obligating another party to assassinate a rival in exchange for a stipulated fee. Such an agreement has an illicit object and cause, rendering it utterly <span class="c-rust"><strong><u>void</u></strong></span> and exposing the parties and the lawyer to criminal prosecution and disbarment. (As noted in public controversies involving anomalous flood control projects, perpetrators of illegal schemes avoid leaving a written "paper trail," whereas unwitting or careless signatories who place their names on irregular documents become the primary "fall guys" when investigators trace documentary liability.)</li>
+    </ol>
+  </blockquote>
+
+  <hr>
+
+  <h3 id="anatomy-of-a-standard-contract" class="c-navy">III. ANATOMY OF A STANDARD CONTRACT AND FORMALITIES OF EXECUTION</h3>
+
+  <p>To draft systematically, a lawyer must master the standard architecture of a Philippine legal instrument (as illustrated in standard formbooks such as Suarez's <em>Legal Forms</em>, pp. 122 et seq.):</p>
+
+  <ol>
+    <li><strong>Title or Caption:</strong> Placed at the top center in bold capital letters identifying the nature of the instrument (e.g., <strong>DEED OF ABSOLUTE SALE OF MOTOR VEHICLE</strong>, <strong>DEED OF SALE OF UNREGISTERED LAND</strong>, <strong>DEED OF CONDITIONAL SALE</strong>, <strong>CONTRACT OF LEASE</strong>, or <strong>MEMORANDUM OF AGREEMENT</strong>).</li>
+    <li><strong>Announcement / Opening Words:</strong> Traditional introductory phrase such as <em>"KNOW ALL MEN BY THESE PRESENTS:"</em> (or modern gender-neutral equivalents).</li>
+    <li><strong>Exordium / Identification of Parties and Designations:</strong> States the names, capacities, civil status, citizenship, and addresses of the parties, together with their <strong>defined shorthand designations</strong> used throughout the body:
+      <ul>
+        <li><strong>Contract of Sale:</strong> <em>VENDOR</em> and <em>VENDEE</em> (or <em>SELLER</em> and <em>BUYER</em>).</li>
+        <li><strong>Contract of Lease:</strong> <em>LESSOR</em> and <em>LESSEE</em>.</li>
+        <li><strong>Contract of Loan:</strong> <em>CREDITOR / LENDER</em> and <em>DEBTOR / BORROWER</em>.</li>
+        <li><strong>Deed of Real Estate or Chattel Mortgage:</strong> <em>MORTGAGOR</em> and <em>MORTGAGEE</em>.</li>
+        <li><strong>Memorandum of Agreement (MOA) / Understanding (MOU):</strong> Where nominate civil law labels do not neatly apply, parties may be designated by their organizational acronyms or simply as <strong>"FIRST PARTY"</strong>, <strong>"SECOND PARTY"</strong>, and (in a tripartite agreement) <strong>"THIRD PARTY"</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>Recitals (<em>Whereas</em> Clauses) / Subject and Purpose:</strong> Sets forth the factual background, ownership of the subject property, and the mutual intent or purpose of entering into the contract.</li>
+    <li><strong>Consideration, Price, and Payment Terms:</strong> Specifies the financial obligation—whether the purchase price in a sale, monthly or annual rental in a lease, or premium in an insurance contract—along with the schedule and mode of payment.</li>
+    <li><strong>Operative Covenants / Obligations and Duties:</strong> Numbered paragraphs detailing the specific rights, duties, warranties, and restrictions binding each party.</li>
+    <li><strong>Duration / Term of the Contract:</strong> Essential in time-bound agreements such as a <strong>Contract of Lease</strong> (e.g., one year) or a <strong>Fixed-Term / Contractual Employment Agreement</strong> (e.g., three months, six months, or one year), stating the exact commencement and expiration dates.</li>
+    <li><strong>Breach and Remedies Clause (Catch-All Provision):</strong> Specifies specific penalties for default and typically includes a general catch-all stipulation: <em>"In the event of breach by either party of any of the terms and conditions herein stipulated, the aggrieved or innocent party may avail of any and all remedies provided under existing laws."</em></li>
+    <li><strong>Testimonium Clause:</strong> The concluding paragraph preceding the signatures, stating the place and date of execution (e.g., <em>"IN WITNESS WHEREOF, the parties have hereunto affixed their signatures this ___ day of __________, 20__ at the City of San Fernando, La Union, Philippines."</em>).</li>
+    <li><strong>Signature Block and Instrumental Witnesses:</strong> Contains the printed names of the parties (with their designations underneath) and lines for at least two instrumental witnesses under the phrase <em>"SIGNED IN THE PRESENCE OF:"</em>.</li>
+    <li><strong>Notarial Certificate (Acknowledgment or Jurat):</strong> Complies with the 2004 Rules on Notarial Practice, transforming the bilateral contract (via an <strong>Acknowledgment</strong>) into a public document.</li>
+  </ol>
+
+  <hr>
+
+  <h2 id="part-2-heading" class="c-navy">PART 2: FORMALITIES OF CONTRACTS, POWERS OF ATTORNEY, AND CORPORATE & PARTNERSHIP INSTRUMENTS</h2>
+
+  <!-- Part 2 Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">FORM & REGISTRATION</div>
+        <div class="ui-sub">Statute of Frauds, Notarization, & Public Registries</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">POWERS OF ATTORNEY</div>
+        <div class="ui-sub">GPA (Administration) vs. SPA (Strict Dominion)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">CORPORATE CHARTERS</div>
+        <div class="ui-sub">AOI Compliance & One Person Corporation (OPC)</div>
+      </div>
+    </div>
+  </div>
+
+  <p id="part-2-overview"><strong>Part 2 Overview & Scope of Topics:</strong></p>
+  <ul>
+    <li><strong>IV. Statutory Rules on Form, Notarization, and Registration:</strong> General rule of consensuality (<span class="c-teal"><strong>Art. 1356</strong></span>); Contracts required to be in writing for enforceability under the Statute of Frauds (<span class="c-teal"><strong>Art. 1403[2]</strong></span>); Contracts required to be in a public instrument (<span class="c-teal"><strong>Art. 1358</strong></span>) and real estate mortgages; Legal effect of notarization vs. unnotarized private documents; Registration with government registries (LTO, Registry of Deeds, Assessor's Office).</li>
+    <li><strong>V. Agency and Powers of Attorney (GPA vs. SPA):</strong> Nature of agency (<span class="c-teal"><strong>Art. 1868</strong></span>); General Power of Attorney (<span class="c-teal"><strong>Art. 1877</strong></span>, acts of administration) vs. Special Power of Attorney (<span class="c-teal"><strong>Art. 1878</strong></span>, acts of strict dominion); Substance over caption doctrine; Mandatory written authority to sell land (<span class="c-teal"><strong>Art. 1874</strong></span>); Mutual exclusion between power to sell and power to mortgage (<span class="c-teal"><strong>Art. 1879</strong></span>).</li>
+    <li><strong>VI. Corporate Instruments: Articles of Incorporation and the One Person Corporation (OPC):</strong> Statutory contents of the Articles of Incorporation under the Revised Corporation Code (<span class="c-teal"><strong>R.A. 11232, Secs. 13–14</strong></span>); Corporate compliance checklists (corporate name, purpose clause, principal office, perpetual corporate term under Sec. 11, nationality restrictions, and capital stock subscription computations); Structural comparison between a Sole Proprietorship and a One Person Corporation (OPC).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="statutory-rules-on-form-notarization-registration" class="c-navy">IV. STATUTORY RULES ON FORM, NOTARIZATION, AND REGISTRATION</h3>
+
+  <h4 id="general-rule-on-form-vs-exceptions" class="c-navy">A. General Rule on Form vs. Statutory Exceptions</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1356 of the Civil Code</strong></span>, contracts shall be obligatory, in whatever form they may have been entered into, provided all the essential requisites for their validity are present. However, when the law requires that a contract be in some form in order that it may be <span class="c-green"><strong><u>valid</u></strong></span> or <span class="c-green"><strong><u>enforceable</u></strong></span>, or that a contract be proved in a certain way, that requirement is absolute and indispensable.</p>
+
+  <h4 id="statute-of-frauds-enforceability" class="c-navy">1. Form Required for Enforceability: The Statute of Frauds</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1403(2) of the Civil Code (Statute of Frauds)</strong></span>, certain executory agreements must be <span class="c-green"><strong><u>in writing</u></strong></span> (or in some note or memorandum subscribed by the party charged or by his agent) to be <span class="c-green"><strong><u>enforceable by action in court</u></strong></span>. These include:</p>
+
+  <ul>
+    <li>An agreement that by its terms is not to be performed within a year from the making thereof;</li>
+    <li>A special promise to answer for the debt, default, or miscarriage of another (guaranty);</li>
+    <li>An agreement made in consideration of marriage, other than a mutual promise to marry;</li>
+    <li>An agreement for the sale of goods, chattels, or things in action at a price not less than PhP 500.00;</li>
+    <li>An agreement for the leasing for a longer period than one year, or for the <strong>sale of real property or of an interest therein</strong>; and</li>
+    <li>A representation as to the credit of a third person.</li>
+  </ul>
+
+  <p><strong>Crucial Distinction (Validity vs. Enforceability):</strong> An oral contract of sale of land covered by the Statute of Frauds is <span class="c-green"><strong><u>valid</u></strong></span> between the consenting parties because all essential elements (<em>COC</em>) are present; however, if it remains purely executory and unwritten, it is <span class="c-rust"><strong><u>unenforceable</u></strong></span>—meaning neither party can sue in court to compel performance over the timely objection of the other.</p>
+
+  <h4 id="form-for-convenience-efficacy-remedies" class="c-navy">2. Form Required for Convenience, Efficacy Against Third Persons, or Specific Remedies</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1358 of the Civil Code</strong></span>, acts and contracts which have for their object the creation, transmission, modification, or extinguishment of <span class="c-green"><strong><u>real rights over immovable property</u></strong></span> (such as a Deed of Sale of Land) must appear in a <strong>public document</strong> (a notarized instrument).</p>
+
+  <ul>
+    <li><strong>Sale of Real Property:</strong> Even if a Deed of Sale of Land is only in a private (unnotarized) writing, or even oral (if partially executed), the sale itself is valid between the buyer and seller. However, without a notarized public instrument, the buyer cannot register the sale with the Registry of Deeds to bind third parties. Under <span class="c-teal"><strong>Article 1357</strong></span>, the buyer can compel the seller to execute the necessary public instrument once the contract is perfected and enforceable.</li>
+    <li><strong>Real Estate Mortgage (Art. 2125, Civil Code):</strong> For a Real Estate Mortgage to be validly constituted and registered so that the mortgagee can legally <span class="c-green"><strong><u>foreclose the mortgage</u></strong></span> upon default, it is indispensable that the document in which it appears be <span class="c-green"><strong><u>in a public instrument and recorded in the Registry of Property</u></strong></span>. If the mortgage is not notarized and registered, the creditor cannot avail of foreclosure against third persons, although the principal loan and the personal undertaking between the parties remain binding.</li>
+  </ul>
+
+  <h4 id="legal-effect-of-notarization-and-registration" class="c-navy">B. Legal Effect of Notarization and Registration</h4>
+
+  <ol>
+    <li><strong>Unnotarized Contracts Are Not Automatically Void:</strong> Notarization is not a general requisite for the validity of ordinary contracts. An unnotarized written contract remains a <strong>private document</strong> that is fully valid, binding, and enforceable between the signatory parties.</li>
+    <li><strong>Function of Notarization:</strong> Notarization converts a private document into a <strong>public document</strong>, rendering it admissible in evidence in court without the need for further proof of its due execution and authenticity (<span class="c-burgundy"><strong>Rule 132, Section 19 & 30, Revised Rules on Evidence</strong></span>), and making it eligible for registration in public registries.</li>
+    <li><strong>Notarization Cannot Cure an Illegal Contract:</strong> If the underlying contract is void for being contrary to law, morals, or public policy (e.g., an illegal sale of public domain or a contract with an illicit cause), notarizing it <span class="c-rust"><strong><u>does not validate or cure the defect</u></strong></span>. Furthermore, the Notary Public who knowingly notarizes an unlawful or void instrument faces administrative sanctions, revocation of notarial commission, and suspension or disbarment under the Code of Professional Responsibility and Accountability (CPRA).</li>
+    <li><strong>Registration as a Separate Post-Execution Step:</strong> Drafting and notarizing the contract is only the first phase. To bind the whole world and effect the official transfer of ownership or encumbrance, the notarized instrument must undergo <strong>registration</strong> with the appropriate government agency:
+      <ul>
+        <li><strong>Motor Vehicles:</strong> Registered with the <strong>Land Transportation Office (LTO)</strong>.</li>
+        <li><strong>Titled Real Property:</strong> Registered with the <strong>Registry of Deeds (RD)</strong> of the city or province where the land is situated.</li>
+        <li><strong>Untitled / Unregistered Real Property:</strong> Recorded with the <strong>Municipal or Provincial Assessor's Office</strong> (and Register of Deeds under Act No. 3344 / P.D. 1529 for unregistered lands) for the issuance of a new Tax Declaration.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Stage / Form of Contract</th>
+        <th>Legal Status Between Parties</th>
+        <th>Evidentiary Nature & Third-Party Effect</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Purely Oral / Verbal (Executory Sale of Land)</strong></td>
+        <td><strong>Valid</strong> as to consent, object, and cause, but <span class="c-rust"><strong>Unenforceable</strong></span> in court under the Statute of Frauds (<span class="c-teal"><strong>Art. 1403[2]</strong></span>).</td>
+        <td>Cannot be proved by oral testimony over objection; cannot be registered.</td>
+      </tr>
+      <tr>
+        <td><strong>Private Written Instrument (Signed, Unnotarized)</strong></td>
+        <td><strong>Valid and Enforceable</strong> between the contracting parties (satisfies Statute of Frauds).</td>
+        <td>Private document; due execution must be proved in court; <strong>cannot be registered</strong> with RD or LTO.</td>
+      </tr>
+      <tr>
+        <td><strong>Public Instrument (Signed and Notarized)</strong></td>
+        <td><strong>Valid and Enforceable</strong> between the parties.</td>
+        <td>Public document; self-authenticating in court (<em>prima facie</em> evidence); ready for registration.</td>
+      </tr>
+      <tr>
+        <td><strong>Registered Public Instrument</strong></td>
+        <td><strong>Valid and Enforceable</strong> between the parties.</td>
+        <td><span class="c-green"><strong><u>Binds third persons and the whole world</u></strong></span>; completes transfer of title or mortgage lien (e.g., enables foreclosure).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration: Unnotarized Sale vs. Unnotarized Mortgage</strong><br>
+    Suppose A sells his parcel of land to B via a handwritten, signed agreement that was never notarized. Is the sale void? <strong>No.</strong> It is a valid private document binding between A and B, and B can compel A under <span class="c-teal"><strong>Article 1357</strong></span> to execute a notarized deed so B can register the land. Conversely, suppose X borrows money from Y and signs an unnotarized private agreement mortgaging X's land. If X defaults, Y cannot immediately initiate extrajudicial foreclosure with the Sheriff or Notary because foreclosure requires a <strong>registered public instrument</strong>. Y must first sue to compel the execution and registration of the public mortgage deed or sue for ordinary collection of sum of money.
+  </blockquote>
+
+  <!-- Diagram 3: Hierarchy of Form & Registration -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 3: HIERARCHY OF FORM, EVIDENTIARY VALUE & REGISTRABILITY <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Stage 1: Oral Agreement"] --> A1{"Covered by Statute of Frauds?<br>(Art. 1403[2])"}
+            A1 -- Yes & Executory --> A2["VALID inter se, but UNENFORCEABLE in Court<br>Cannot compel performance over objection"]
+            A1 -- No or Executed --> B["Stage 2: Private Written Instrument<br>(Signed by parties)"]
+            
+            A2 -- Ratified or in Writing --> B
+            
+            B --> B1["VALID & ENFORCEABLE between parties<br>Satisfies Statute of Frauds"]
+            B1 --> B2["Evidentiary Rule: Must prove due execution<br>CANNOT be registered with RD or LTO"]
+            
+            B --> C["Stage 3: Public Instrument<br>(Notarized before Notary Public)"]
+            
+            C --> C1["Converts to Public Document<br>(Rule 132, Secs. 19 & 30)"]
+            C1 --> C2["Self-authenticating prima facie evidence<br>Ready for submission to registries"]
+            
+            C --> D["Stage 4: Official Registration<br>(RD for Lands / LTO for Vehicles)"]
+            
+            D --> D1["BINDS THIRD PARTIES & THE WORLD<br>Transfers Torrens Title / Perfects Mortgage Lien"]
+            D1 --> D2["Enables Extrajudicial Foreclosure under Art. 2125"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B,C,D navy;
+            class A1,B1,C1,D1 teal;
+            class A2,B2 rust;
+            class C2,D2 green;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="agency-and-powers-of-attorney" class="c-navy">V. AGENCY AND POWERS OF ATTORNEY (GPA VS. SPA)</h3>
+
+  <h4 id="nature-of-agency-in-legal-drafting" class="c-navy">A. Nature of Agency in Legal Drafting</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1868 of the Civil Code</strong></span>, by the contract of agency a person binds himself to render some service or to do something in representation or on behalf of another, with the consent or authority of the latter. The written instrument evidencing this authority is a <strong>Power of Attorney</strong>, wherein the person granting authority is the <strong>Principal</strong> and the person authorized to act is the <strong>Attorney-in-Fact (Agent)</strong>.</p>
+
+  <h4 id="gpa-vs-spa" class="c-navy">B. General Power of Attorney (GPA) vs. Special Power of Attorney (SPA)</h4>
+
+  <p>When drafting a Power of Attorney or reviewing an agent's authority before preparing a transaction deed, the lawyer must strictly distinguish between acts of administration and acts of strict dominion:</p>
+
+  <ul>
+    <li><strong>General Power of Attorney (GPA) — <span class="c-teal"><strong>Article 1877, Civil Code</strong></span>:</strong> An agency couched in general terms comprises <span class="c-green"><strong><u>only acts of administration</u></strong></span>, even if the principal should state that he withholds no power or that the agent may execute such acts as he may consider appropriate, or even though the agency should authorize a general and unlimited management.</li>
+    <li><strong>Special Power of Attorney (SPA) — <span class="c-teal"><strong>Article 1878, Civil Code</strong></span>:</strong> Special powers of attorney are necessary whenever the act to be performed is an <span class="c-rust"><strong><u>act of strict dominion or ownership</u></strong></span> (such as selling, mortgaging, leasing real property for more than one year, compromising, novating, or waiving an obligation gratuitously).</li>
+  </ul>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>General Power of Attorney (GPA)</th>
+        <th>Special Power of Attorney (SPA)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Statutory Basis</strong></td>
+        <td><span class="c-teal"><strong>Article 1877, Civil Code</strong></span></td>
+        <td><span class="c-teal"><strong>Article 1878, Civil Code</strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Scope of Authority</strong></td>
+        <td>Covers only <strong>acts of administration</strong> and routine management (e.g., paying taxes, collecting ordinary rentals, hiring repairmen).</td>
+        <td>Required for <strong>acts of strict dominion or ownership</strong> (e.g., selling land, constituting a mortgage, entering into a compromise).</td>
+      </tr>
+      <tr>
+        <td><strong>Drafting Style</strong></td>
+        <td>Broad, general management clauses without specifying the disposition of specific properties.</td>
+        <td>Explicitly enumerates the <strong>exact transaction</strong> and specifically describes the property or right involved.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="key-doctrinal-rules-powers-of-attorney" class="c-navy">C. Key Doctrinal Rules in Drafting and Interpreting Powers of Attorney</h4>
+
+  <ol>
+    <li><strong>Substance Over Form (Caption Does Not Control):</strong> In Philippine jurisprudence, the title or caption of the document is <span class="c-rust"><strong>not controlling</strong></span>. To determine whether an instrument is a GPA or an SPA, the lawyer and the court must read the <span class="c-green"><strong><u>actual powers granted in the body of the text</u></strong></span>. Even if a document is titled <em>"General Power of Attorney,"</em> if its body expressly and specifically authorizes the agent <em>"to sell, transfer, and convey my parcel of land covered by TCT No. 12345,"</em> it is legally operative as a <strong>Special Power of Attorney</strong> with respect to that specific sale.</li>
+    <li><strong>Sale of Land by an Agent Requires Written Authority (<span class="c-teal"><strong>Art. 1874, Civil Code</strong></span>):</strong> When a sale of a piece of land or any interest therein is through an agent, <span class="c-rust"><strong><u>the authority of the agent shall be in writing; otherwise, the sale shall be void</u></strong></span>. Verbal authority to sell real property produces <span class="c-rust"><strong><u>zero legal effect</u></strong></span>, and the resulting Deed of Sale cannot be ratified merely by the buyer's good faith.</li>
+    <li><strong>Power to Sell Does Not Include Power to Mortgage, and <em>Vice Versa</em> (<span class="c-teal"><strong>Art. 1879, Civil Code</strong></span>):</strong> <span class="c-rust"><strong><u>A special power to sell excludes the power to mortgage; and a special power to mortgage does not include the power to sell</u></strong></span>, <strong>unless both powers are expressly and separately stipulated</strong> in the SPA. The drafter must carefully interview the client to ascertain the exact commercial objective and explicitly enumerate every intended power.</li>
+  </ol>
+
+  <blockquote>
+    <strong>Professor's Illustration: Checking the SPA in a Real Estate Purchase</strong><br>
+    Suppose you are buying a parcel of land for investment, and the person negotiating with you is the owner's brother, who claims, <em>"My sister is abroad and verbally told me over the phone to sell this lot for her."</em> If you pay him and sign a Deed of Sale without requiring a <strong>written Special Power of Attorney</strong> signed by the sister (and apostilled/consularized if executed abroad), the sale is <span class="c-rust"><strong><u>void ab initio</u></strong></span> under <span class="c-teal"><strong>Article 1874</strong></span>. Similarly, if the brother presents a written SPA authorizing him <em>only</em> "to sell" the land, he cannot use that SPA to obtain a bank loan and <strong>mortgage</strong> the property, unless the power to mortgage is also expressly written in the instrument (<span class="c-teal"><strong>Art. 1879</strong></span>).
+  </blockquote>
+
+  <!-- Diagram 4: Powers of Attorney Decision Tree -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 4: AGENCY POWERS & STATUTORY REQUISITES (ARTS. 1874, 1877, 1878 & 1879) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Examination of Power of Attorney"] --> B{"Look at Actual Body of Text<br>(Substance Over Form: Caption Not Controlling)"}
+            
+            B --> C["Only General Management / Routine Tasks"]
+            B --> D["Acts of Strict Dominion / Ownership (Art. 1878)"]
+            
+            C --> C1["GENERAL POWER OF ATTORNEY (GPA)<br>(Art. 1877, Civil Code)"]
+            C1 --> C2["Covers ONLY Acts of Administration<br>(Paying bills, ordinary repairs, collecting rent)"]
+            C1 --> C3["CANNOT sell, mortgage, or compromise"]
+            
+            D --> D1["SPECIAL POWER OF ATTORNEY (SPA)<br>(Art. 1878, Civil Code)"]
+            D1 --> D2["Must express the EXACT authority granted"]
+            
+            D1 --> E{"Does it involve Sale of Land?<br>(Art. 1874)"}
+            E -- Verbal Authority Only --> E1["SALE IS VOID AB INITIO<br>Zero legal effect; cannot be ratified"]
+            E -- Written Authority in SPA --> E2["Sale is Valid & Enforceable"]
+            
+            D1 --> F{"Power to Sell vs. Mortgage<br>(Art. 1879)"}
+            F -- Power to Sell Only --> F1["EXCLUDES power to mortgage"]
+            F -- Power to Mortgage Only --> F2["EXCLUDES power to sell"]
+            F -- Both Expressly Stipulated --> F3["Agent may both sell and mortgage"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B navy;
+            class C,C1,C2,D,D1,D2 teal;
+            class C3,E1,F1,F2 rust;
+            class E2,F3 green;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="corporate-instruments-aoi-and-opc" class="c-navy">VI. CORPORATE INSTRUMENTS: ARTICLES OF INCORPORATION AND THE ONE PERSON CORPORATION (OPC)</h3>
+
+  <h4 id="drafting-articles-of-incorporation-under-rcc" class="c-navy">A. Drafting the Articles of Incorporation under the Revised Corporation Code</h4>
+
+  <p>When clients wish to form a corporation, the foundational charter to be drafted and filed with the <strong>Securities and Exchange Commission (SEC)</strong> is the <strong>Articles of Incorporation (AOI)</strong>. While the SEC provides downloadable electronic templates and the statutory form is set forth in <span class="c-teal"><strong>Sections 13 and 14 of Republic Act No. 11232 (Revised Corporation Code of the Philippines or RCC)</strong></span>, the lawyer's primary role is <span class="c-green"><strong><u>regulatory and legal compliance</u></strong></span>.</p>
+
+  <h4 id="mandatory-contents-and-compliance-aoi" class="c-navy">B. Mandatory Contents and Compliance Checklists in the AOI</h4>
+
+  <ol>
+    <li><strong>Corporate Name:</strong> Must include the word <em>"Corporation"</em> or <em>"Incorporated"</em> (or <em>"Corp."</em> / <em>"Inc."</em>), or <strong>"OPC"</strong> for a One Person Corporation, and must be distinguishable from any existing or reserved corporate name in the SEC database (<span class="c-teal"><strong>Section 17, RCC</strong></span>).</li>
+    <li><strong>Purpose Clause (Primary and Secondary Purposes):</strong> States the specific lawful business activity for which the corporation is organized (e.g., developing and operating a memorial park or funeral chapel business).
+      <ul>
+        <li><strong>Drafting Rule:</strong> Match the stated purposes strictly to the actual intended business operations. A corporation cannot lawfully engage in acts outside its express or implied corporate purposes (<em>ultra vires</em> doctrine under <span class="c-teal"><strong>Section 44, RCC</strong></span>). Moreover, the SEC strictly scrutinizes purpose clauses to prevent entities from using a generic trading charter as a front to solicit unauthorized public investments or Ponzi scams.</li>
+      </ul>
+    </li>
+    <li><strong>Principal Office Address:</strong> Must specify the exact street address, building, barangay, <strong>city or municipality, and province within the Philippines</strong> (not merely "Metro Manila" or a general region), as this determines the <strong>venue of actions</strong> by or against the corporation and the situs for SEC notices.</li>
+    <li><strong>Corporate Term (Perpetual Existence):</strong>
+      <ul>
+        <li><strong>Old Corporation Code Rule (B.P. Blg. 68):</strong> Corporations were limited to a maximum term of <strong>fifty (50) years</strong> at any one time.</li>
+        <li><strong>Revised Corporation Code Rule (<span class="c-teal"><strong>Section 11, R.A. 11232</strong></span>):</strong> A corporation now has <span class="c-green"><strong><u>perpetual existence</u></strong></span> by default, <strong>unless its Articles of Incorporation provide otherwise</strong>. If the incorporators wish to limit the corporate lifespan (e.g., to 25 or 50 years for a specific project), the drafter must expressly state that fixed term; otherwise, the AOI simply declares that the corporation shall have perpetual existence.</li>
+      </ul>
+    </li>
+    <li><strong>Incorporators and Directors (Nationality and Qualification Compliance):</strong> Lists the names, nationalities, and residences of the incorporators (up to 15 natural persons, partnerships, associations, or corporations) and initial directors/trustees.
+      <ul>
+        <li><strong>Foreign Equity and Constitutional Restrictions:</strong> The corporate lawyer acts as a compliance gatekeeper. Before listing foreign nationals as incorporators, directors, or subscribers, the drafter must check the <strong>1987 Constitution</strong> and the <strong>Foreign Investments Act (R.A. 7042, as amended) / Regular Foreign Investment Negative List (FINL)</strong>. For instance, mass media requires <span class="c-rust"><strong>100% Filipino ownership</strong></span>, while land-owning corporations or public utilities (subject to recent statutory amendments for non-public utilities) traditionally require at least <span class="c-green"><strong><u>60% Filipino and maximum 40% foreign equity</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><strong>Capital Stock, Subscriptions, and Contributions:</strong> In a stock corporation, the AOI must state the <strong>Authorized Capital Stock (ACS)</strong> in Philippine Pesos, the number of shares into which it is divided, the par value per share (or if no-par value), the names, nationalities, and residences of the subscribers, and the exact number of shares and monetary amount <strong>subscribed</strong> and <strong>paid-in</strong> by each.
+      <ul>
+        <li><strong>Mathematical Reconciliation:</strong> Although Section 12 of the RCC removed the general minimum capital stock requirement (except as required by special laws or for specific industries/foreign equity rules, and during capital increases where the <span class="c-green"><strong><u>25% subscribed and 25% paid-up rule</u></strong></span> strictly applies under Sec. 37), traditional SEC table formatting still requires exact mathematical reconciliation among Authorized, Subscribed, and Paid-up Capital figures. A single arithmetic discrepancy will cause the SEC examiner to reject the filing.</li>
+      </ul>
+    </li>
+    <li><strong>Signatures, Treasurer's Certification, and Undertakings:</strong> Incorporators and the Corporate Treasurer must sign the AOI, including the statutory undertaking to change the corporate name if another person or entity has acquired a prior right to it.</li>
+  </ol>
+
+  <blockquote>
+    <strong>Professor's Illustration: Compliance Checking in Corporate Drafting</strong><br>
+    Suppose a group of clients—two Filipinos and three foreign investors—hires you to draft Articles of Incorporation to acquire raw land in Pangasinan and develop a <strong>memorial park and funeral chapel business</strong>. Because developing a memorial park involves <strong>acquiring ownership of private land</strong>, the corporation is subject to the constitutional restriction requiring at least <span class="c-green"><strong><u>60% Filipino ownership</u></strong></span> of the outstanding capital stock. If you blindly draft the AOI giving the three foreigners 70% of the subscribed shares without checking nationality laws, the SEC will reject the incorporation or the corporation will be barred from registering land titles.
+  </blockquote>
+
+  <h4 id="opc-vs-sole-proprietorship" class="c-navy">C. The One Person Corporation (OPC) vs. Sole Proprietorship</h4>
+
+  <p>A major innovation introduced by the <span class="c-teal"><strong>Revised Corporation Code (Title XIII, Chapter III, Sections 115–132 of R.A. 11232)</strong></span> is the <strong>One Person Corporation (OPC)</strong>—a corporation with a <span class="c-green"><strong><u>single stockholder</u></strong></span> (who must be a natural person, trust, or estate). When advising an individual entrepreneur, the lawyer must explain the critical legal distinction between registering a <strong>Sole Proprietorship</strong> with the Department of Trade and Industry (DTI) and incorporating an <strong>OPC</strong> with the SEC:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Point of Comparison</th>
+        <th>Sole Proprietorship</th>
+        <th>One Person Corporation (OPC)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Juridical Personality</strong></td>
+        <td><span class="c-rust"><strong>None.</strong></span> Has <strong>no separate and distinct juridical personality</strong> apart from the individual owner/proprietor.</td>
+        <td><span class="c-green"><strong><u>Possesses a separate and distinct juridical personality</u></strong></span> apart from the single stockholder upon issuance of the SEC Certificate of Incorporation.</td>
+      </tr>
+      <tr>
+        <td><strong>Terminology for Owner</strong></td>
+        <td>Sole Proprietor / Business Owner (there are <strong>no stockholders</strong> in a sole proprietorship).</td>
+        <td><strong>Single Stockholder</strong> (who also serves as the sole Director and President).</td>
+      </tr>
+      <tr>
+        <td><strong>Liability for Business Debts</strong></td>
+        <td><span class="c-rust"><strong>Unlimited Personal Liability.</strong></span> If the business goes bankrupt, creditors can levy upon and attach the proprietor's <strong>personal properties</strong> (house, family car, personal bank accounts).</td>
+        <td><span class="c-green"><strong><u>Limited Liability Shield.</u></strong></span> Corporate creditors can only pursue properties registered in the name of the OPC; the single stockholder's <strong>personal assets are protected</strong> (provided the stockholder proves the corporation was adequately financed and corporate property is independent of personal property under Sec. 130, RCC).</td>
+      </tr>
+      <tr>
+        <td><strong>Regulatory Agency & Charter</strong></td>
+        <td>Department of Trade and Industry (DTI) Business Name Registration (easiest form for small <em>sari-sari</em> stores or micro-enterprises).</td>
+        <td>Securities and Exchange Commission (SEC); requires filing <strong>Articles of Incorporation of an OPC</strong> (indicating a Nominee and Alternate Nominee).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Professor's Illustration: Asset Protection via an OPC</strong><br>
+    Client X wants to open a high-risk construction supply business by himself without taking in any business partners. If X registers a <strong>Sole Proprietorship</strong>, and the business suffers heavy losses and defaults on a PhP 10 Million supplier loan, the creditor can attach X's personal residence and family vehicles because X and the business are one and the same in the eyes of the law. By advising X to incorporate an <strong>OPC</strong> instead, X establishes a separate juridical entity; only the assets contributed to and owned by the OPC are answerable to corporate creditors, keeping X's personal estate safe.
+  </blockquote>
+
+  <!-- Diagram 5: Business Entity Comparison -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 5: BUSINESS VEHICLE SELECTION & LIABILITY SHIELD COMPARISON <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Client Seeks Business Vehicle Advisory"] --> B{"Number of Founders / Investors?"}
+            
+            B -- Single Individual --> C{"Asset Protection Priority?"}
+            C -- Low Risk / Simple micro-business --> C1["SOLE PROPRIETORSHIP<br>Register DTI Business Name"]
+            C1 --> C1a["NO separate juridical personality<br>UNLIMITED personal liability for business debts"]
+            
+            C -- High Risk / Capital Intensive --> C2["ONE PERSON CORPORATION (OPC)<br>File AOI with SEC (R.A. 11232)"]
+            C2 --> C2a["Separate Juridical Personality<br>LIMITED LIABILITY SHIELD protects personal assets"]
+            
+            B -- Two to Three Close Friends --> D["PARTNERSHIP<br>(Art. 1767, Civil Code)"]
+            D --> D1["Based on Delectus Personae<br>Dissolves upon death/withdrawal of any partner"]
+            D --> D2["General Partners personally liable pro rata & subsidiarily"]
+            
+            B -- 4+ Investors / Freely Transferable Capital --> E["STOCK CORPORATION<br>File AOI with SEC (RCC)"]
+            E --> E1["Separate Juridical Entity + Perpetual Life Default<br>Limited Liability strictly to subscribed shares"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B navy;
+            class C,D,E teal;
+            class C1a,D2 rust;
+            class C2a,E1 green;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="part-3-heading" class="c-navy">PART 3: PARTNERSHIP AGREEMENTS, LEASE CONTRACTS, SERVICE & RETAINER AGREEMENTS, AND SPECIAL COMMERCIAL FORMS</h2>
+
+  <!-- Part 3 Roadmap Card -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">PARTNERSHIPS</div>
+        <div class="ui-sub">Partner Classes, Inventory Rule (Art. 1773), & SEC</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">LEASE CONTRACTS</div>
+        <div class="ui-sub">Premises, Deposits, Repairs, & Sublease/Airbnb</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">SERVICE & RETAINERSHIP</div>
+        <div class="ui-sub">Scope, Tiered Fees, CPRA Secrecy, & Control Test</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">SPECIAL INSTRUMENTS</div>
+        <div class="ui-sub">Loans (Art. 1956), NDAs, & Compromise (Art. 2028)</div>
+      </div>
+    </div>
+  </div>
+
+  <p id="part-3-overview"><strong>Part 3 Overview & Scope of Topics:</strong></p>
+  <ul>
+    <li><strong>VII. Articles of Partnership and Joint Venture Arrangements:</strong> Nature of partnership (<span class="c-teal"><strong>Civil Code, Art. 1767</strong></span>); Classifications of partners; Essential clauses in an Articles of Partnership; Mandatory formalities and SEC registration thresholds (PhP 3,000.00 capital rule under <span class="c-teal"><strong>Art. 1772</strong></span>; Immovable property contribution and signed inventory rule under <span class="c-teal"><strong>Arts. 1771 and 1773</strong></span>); Non-binding effect of internal liability limits on third-party creditors.</li>
+    <li><strong>VIII. Drafting Contracts of Lease (Real and Personal Property):</strong> Essential protective clauses (specific premises, permitted use, short-term vs. long-term commercial leases, security deposit vs. advance rent, major vs. minor repairs, utilities, sublease/Airbnb restrictions, and return in good and tenantable condition).</li>
+    <li><strong>IX. Service Contracts and Legal Retainership Agreements:</strong> Defining scope of work, deliverables, and fee structures; Tiered legal appearance fees across the hierarchy of courts; Attorney-client confidentiality extending to law office staff; Independent contractor stipulations vs. Labor Law tests and government COS workers.</li>
+    <li><strong>X. Other Common Business and Dispute Resolution Instruments:</strong> Memoranda of Agreement/Understanding (MOA/MOU); Loans and Promissory Notes (written interest rule under <span class="c-teal"><strong>Art. 1956</strong></span> and 6% legal interest); Supply Agreements and NDAs; Compromise Agreements (<span class="c-teal"><strong>Art. 2028</strong></span>) in civil and criminal cases vs. archaic trial by ordeal.</li>
+    <li><strong>Administrative Matters & Professor's Asides:</strong> Final non-doctrinal summary of class instructions, handwritten contract assignment, and practical commentary.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="articles-of-partnership-and-joint-ventures" class="c-navy">VII. ARTICLES OF PARTNERSHIP AND JOINT VENTURE ARRANGEMENTS</h3>
+
+  <h4 id="nature-of-partnership-and-business-vehicle" class="c-navy">A. Nature of Partnership and Choosing the Right Business Vehicle</h4>
+
+  <p>Under <span class="c-teal"><strong>Article 1767 of the Civil Code</strong></span>, by the contract of partnership <span class="c-green"><strong><u>two or more persons bind themselves to contribute money, property, or industry to a common fund, with the intention of dividing the profits among themselves</u></strong></span>.</p>
+
+  <ul>
+    <li><strong>Intimate Relationship (<em>Delectus Personae</em>) vs. Corporation:</strong> Unlike a corporation where ownership is impersonal and shares of stock are freely transferable among numerous unknown investors, a partnership is built on mutual trust and confidence (<em>delectus personae</em>).</li>
+    <li><strong>Practical Advisory Rule:</strong> When a small group of <strong>two to three close friends</strong> approaches a lawyer to pool funds for a small venture (such as a specialty <em>ube</em> or <em>matcha</em> café), a <strong>Partnership</strong> is appropriate. However, if there are <strong>four, five, or more investors</strong>, the lawyer should generally advise forming a <strong>Corporation</strong> instead, because the withdrawal, death, or insolvency of any single partner easily triggers the <span class="c-rust"><strong><u>dissolution</u></strong></span> of a partnership (<span class="c-teal"><strong>Article 1830, Civil Code</strong></span>).</li>
+  </ul>
+
+  <h4 id="classifications-of-partners" class="c-navy">B. Classifications of Partners and Their Drafting Implications</h4>
+
+  <p>When drafting the <strong>Articles of Partnership</strong>, the lawyer must accurately classify each partner under the Civil Code, as their classification dictates their contributions, management rights, and liability to creditors:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Classification of Partner</th>
+        <th>Definition & Role in the Partnership</th>
+        <th>Key Legal & Drafting Consequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Capitalist Partner</strong></td>
+        <td>Contributes <strong>money or property</strong> (cash or in-kind assets with monetary value, such as a building or equipment) to the common fund.</td>
+        <td>Shares in both profits and losses; cannot engage in the same kind of business as the partnership for his own account without consent (<span class="c-teal"><strong>Art. 1808</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Industrial Partner</strong></td>
+        <td>Contributes only his <strong>industry, skill, labor, or personal talent</strong> (e.g., culinary expertise, salesmanship, or management skill), without contributing cash or property.</td>
+        <td><span class="c-green"><strong><u>Exempt from partnership losses</u></strong></span> <em>inter se</em> (<span class="c-teal"><strong>Art. 1797</strong></span>); cannot engage in <em>any</em> other business for himself unless expressly permitted (<span class="c-teal"><strong>Art. 1789</strong></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>General Partner</strong></td>
+        <td>Liability for partnership obligations extends to his <span class="c-rust"><strong><u>separate personal property</u></strong></span> (<em>pro rata</em> and subsidiarily) after partnership assets are exhausted (<span class="c-teal"><strong>Art. 1816</strong></span>).</td>
+        <td>All partners in a General Partnership are general partners; at least one partner in a Limited Partnership must be a general partner.</td>
+      </tr>
+      <tr>
+        <td><strong>Limited Partner</strong></td>
+        <td>Exists only in a <strong>Limited Partnership</strong> (<span class="c-teal"><strong>Art. 1843</strong></span>); liability is limited strictly to the amount of his capital contribution.</td>
+        <td>Cannot participate in management or contribute mere industry; surname cannot appear in the partnership name; requires strict statutory filing.</td>
+      </tr>
+      <tr>
+        <td><strong>Managing Partner</strong></td>
+        <td>Designated in the Articles of Partnership (or subsequently) to execute all <strong>acts of administration</strong> and sign on behalf of the firm (<span class="c-teal"><strong>Art. 1800</strong></span>).</td>
+        <td>If appointed in the Articles of Partnership, his power is <span class="c-green"><strong><u>irrevocable without just or lawful cause</u></strong></span> and requires the vote of controlling interest to revoke.</td>
+      </tr>
+      <tr>
+        <td><strong>Nominal / Silent / Dormant</strong></td>
+        <td><strong>Nominal:</strong> Partner by name/estoppel only; <strong>Silent:</strong> Does not participate in management though known as a partner; <strong>Dormant:</strong> Both secret and silent.</td>
+        <td>Drafting must specify who holds actual <strong>management and bank signing authority</strong> versus passive profit-sharing rights.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="essential-clauses-contract-of-partnership" class="c-navy">C. Essential Clauses in a Contract of Partnership</h4>
+
+  <ol>
+    <li><strong>Partnership Name and Purpose:</strong> States the firm name (adding <em>"Ltd."</em> if it is a limited partnership) and the specific business purpose.</li>
+    <li><strong>Extent and Nature of Contributions:</strong> Explicitly itemizes what each partner contributes—whether <strong>cash</strong>, <strong>property in kind</strong> (with its appraised monetary value), or <strong>industry/services</strong>.</li>
+    <li><strong>Management and Signing Authority:</strong> Identifies the <strong>Managing Partner(s)</strong> and specifies whether two or more managers must act jointly or may act separately in signing checks, contracts, and official documents.</li>
+    <li><strong>Profit and Loss Sharing Agreement:</strong> The primary motive of a partnership is to earn <strong>profit</strong>, not loss, though both contingencies must be governed by the contract:
+      <ul>
+        <li>Under <span class="c-teal"><strong>Article 1797 of the Civil Code</strong></span>, losses and profits are distributed in conformity with the agreement. If only the share of each partner in the profits has been agreed upon, the share of each in the losses shall be in the same proportion. In the absence of stipulation, the share of each partner in the profits and losses shall be in proportion to what he may have contributed, while the industrial partner receives such share as may be just and equitable (and is not liable for losses among the partners).</li>
+        <li><strong>Prohibition Against <em>Pactum Leonina</em> (<span class="c-teal"><strong>Art. 1799</strong></span>):</strong> A stipulation which excludes one or more partners from any share in the profits or losses is <span class="c-rust"><strong><u>void</u></strong></span> (except as to an industrial partner regarding losses).</li>
+      </ul>
+    </li>
+    <li><strong>Record-Keeping, Withdrawal of Contributions, Dissolution, and Liquidation:</strong> Specifies accounting periods, audit rights, rules on partner withdrawal, and the order of distribution of assets upon dissolution and winding up under the Civil Code.</li>
+  </ol>
+
+  <h4 id="mandatory-formalities-sec-registration-partnerships" class="c-navy">D. Mandatory Formalities and SEC Registration Rules for Partnerships</h4>
+
+  <p>While <span class="c-teal"><strong>Article 1771 of the Civil Code</strong></span> states the general rule that a partnership may be constituted in any form, the drafter must strictly enforce two statutory exceptions:</p>
+
+  <ol>
+    <li><strong>Capital Contribution of PhP 3,000.00 or More (<span class="c-teal"><strong>Article 1772, Civil Code</strong></span>):</strong> Every contract of partnership having a capital of <strong>Three Thousand Pesos (PhP 3,000.00) or more</strong>, in money or property, <strong>shall appear in a public instrument, which must be recorded in the Office of the Securities and Exchange Commission (SEC)</strong>.
+      <ul>
+        <li><em>Practical Note & Legal Effect:</em> Because the 1950 Civil Code threshold of PhP 3,000.00 has not been amended to account for inflation, virtually <strong>all modern partnerships</strong> exceed PhP 3,000.00 in capital and should be notarized and registered with the SEC. However, under the second paragraph of Article 1772 in relation to <span class="c-teal"><strong>Article 1768</strong></span>, failure to comply with the PhP 3,000.00 public instrument and SEC registration requirement <span class="c-green"><strong><u>does not prevent the partnership from acquiring juridical personality</u></strong></span> and does not affect the liability of the partnership and its members to third persons.</li>
+      </ul>
+    </li>
+    <li><strong>Contribution of Immovable Property or Real Rights (<span class="c-teal"><strong>Articles 1771 & 1773, Civil Code</strong></span>):</strong> Whenever <strong>immovable property</strong> (e.g., land, a building, or a condominium unit) or real rights are contributed to the partnership, two absolute requirements must concur regardless of the value of the property:
+      <ul>
+        <li>(a) The contract of partnership must be in a <strong>public instrument</strong> (notarized); and</li>
+        <li>(b) An <span class="c-rust"><strong><u>inventory of said immovable property, signed by the parties</u></strong></span>, must be <span class="c-rust"><strong><u>attached</u></strong></span> to the public instrument.</li>
+        <li><strong>Fatal Consequence of Non-Compliance:</strong> Under <span class="c-teal"><strong>Article 1773</strong></span>, if the contract is not in a public instrument or if the signed inventory of the immovable property is not attached, the <span class="c-rust"><strong><u>contract of partnership is VOID</u></strong></span> and acquires no juridical personality whatsoever.</li>
+      </ul>
+    </li>
+    <li><strong>Internal Agreements Limiting Liability Do Not Bind Creditors (<span class="c-teal"><strong>Article 1817, Civil Code</strong></span>):</strong> Any stipulation among the partners exempting a partner (even an industrial partner) from liability beyond their capital contribution is valid <strong>only among the partners themselves (<em>inter se</em>)</strong>, and <span class="c-rust"><strong><u>cannot bind or prejudice third-party creditors</u></strong></span>, who may still hold all general partners subsidiarily and <em>pro rata</em> liable with their personal assets.</li>
+  </ol>
+
+  <!-- Partnership Immovable Inventory Workflow Card -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Partnership Formed with Contribution of Real Property (Land/Building)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Requirement 1: Articles Must Appear in a Public Instrument (Notarized)</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Requirement 2: Inventory of Immovable Signed by Parties & Attached</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Both Requisites Met</div>
+        <div class="ui-sub">VALID Partnership with Juridical Personality</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Either Requisite Missing</div>
+        <div class="ui-sub">VOID AB INITIO (Art. 1773); No Juridical Personality</div>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>
+    <strong>Professor's Illustration: Immovable Contribution vs. PhP 3,000.00 Threshold</strong><br>
+    Suppose A and B form a partnership to operate an <em>ube</em> café, with A contributing PhP 500,000.00 in cash and B contributing a commercial lot and building. If they merely execute a private unnotarized agreement—or even if they notarize the Articles of Partnership but forget to attach a <strong>signed inventory</strong> describing B's commercial lot and building—the entire partnership contract is <span class="c-rust"><strong><u>void ab initio</u></strong></span> under <span class="c-teal"><strong>Article 1773</strong></span>. By contrast, if both A and B contributed only cash totaling PhP 100,000.00 (no real property) and failed to register the notarized deed with the SEC under <span class="c-teal"><strong>Article 1772</strong></span>, the partnership remains <strong>valid</strong> and possesses juridical personality under <span class="c-teal"><strong>Article 1768</strong></span>, though the lawyer should always advise SEC registration for tax, banking, and licensing compliance.
+  </blockquote>
+
+  <!-- Diagram 6: Partnership Formation & Registration Rules -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 6: PARTNERSHIP FORMALITIES, STATUTORY THRESHOLDS & INVENTORY RULE <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+          flowchart TD
+            A["Formation of Partnership (Art. 1767)"] --> B{"Is Immovable Property or Real Right Contributed?<br>(Arts. 1771 & 1773)"}
+            
+            B -- YES (Land, Building, Condo) --> C{"Are BOTH Requisites Met?<br>1. Public Instrument AND<br>2. Signed Inventory Attached"}
+            C -- Either Requisite Missing --> C1["PARTNERSHIP IS VOID AB INITIO<br>(Art. 1773, Civil Code)<br>No Juridical Personality Acquired"]
+            C -- Both Met --> C2["VALID PARTNERSHIP<br>Acquires Juridical Personality"]
+            
+            B -- NO (Cash or Personal Property Only) --> D{"Capital >= PhP 3,000.00?<br>(Art. 1772)"}
+            D -- Yes --> E["Must be in Public Instrument & Recorded with SEC"]
+            E --> E1{"Was SEC Registration Omitted?"}
+            E1 -- Yes --> E2["STILL VALID & Retains Juridical Personality<br>(Art. 1768 & Art. 1772 Par. 2)<br>Partners remain liable to third parties"]
+            E1 -- No --> E3["Fully Compliant Registered Partnership"]
+            
+            D -- Under PhP 3,000.00 --> F["May be constituted in any form (Art. 1771)"]
+
+            classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+            classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+            classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+            classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+            class A,B,D navy;
+            class C,E,E1,F teal;
+            class C1 rust;
+            class C2,E2,E3 green;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="drafting-contracts-of-lease" class="c-navy">VIII. DRAFTING CONTRACTS OF LEASE (REAL AND PERSONAL PROPERTY)</h3>
+
+  <p>Under <span class="c-teal"><strong>Article 1643 of the Civil Code</strong></span>, in the lease of things, one of the parties (<strong>Lessor</strong>) binds himself to give to another (<strong>Lessee</strong>) the enjoyment or use of a thing for a price certain, and for a period which may be definite or indefinite. Because lease disputes are ubiquitous in residential boarding houses, commercial offices, and industrial land leases, the drafter must include specific protective clauses for both Lessor and Lessee:</p>
+
+  <!-- Lease Pillars UI Box -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📍</div>
+        <div class="ui-title">Premises Specificity</div>
+        <div class="ui-sub">Unit, floor, building & exact area boundaries</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">Permitted Use</div>
+        <div class="ui-sub">Strict residential vs commercial; prohibits drug dens & loud live-selling</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">💰</div>
+        <div class="ui-title">Security Deposit</div>
+        <div class="ui-sub">Answers for unpaid utilities & damage; never applied as rent</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">Sublease Ban</div>
+        <div class="ui-sub">Express prohibition required under Art. 1650 to block Airbnb arbitrage</div>
+      </div>
+    </div>
+  </div>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Lease Clause</th>
+        <th>Protection for the Lessor (Landlord)</th>
+        <th>Protection for the Lessee (Tenant)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Leased Premises Description</strong></td>
+        <td>Prevents the tenant from encroaching on unleased common areas or adjoining lots.</td>
+        <td>Prevents the landlord from restricting access to agreed spaces or overcharging for undefined areas.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Permitted Use & Restrictions</strong></td>
+        <td>Prohibits conversion of residential units into commercial hubs, warehouses, or illicit drug dens.</td>
+        <td>Guarantees peaceful and adequate enjoyment (<em>peaceful possession</em>) of the premises for the agreed purpose.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Advance Rent & Security Deposit</strong></td>
+        <td><strong>Security deposit</strong> answers for unpaid utility bills (electricity, water, Wi-Fi) and physical damages upon vacating; <span class="c-rust"><strong>cannot be applied by the tenant as monthly rent</strong></span>.</td>
+        <td>Entitles the tenant to a <strong>full refund of the remaining security deposit</strong> within a fixed period after vacating and settling final utility bills.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Repairs and Maintenance</strong></td>
+        <td>Shifts <strong>minor, ordinary wear-and-tear repairs</strong> (e.g., replacing busted lightbulbs or faucet washers) to the Lessee.</td>
+        <td>Obligates the Lessor to shoulder <span class="c-green"><strong><u>major or structural repairs</u></strong></span> (e.g., replacing a roof blown away by a typhoon) under <span class="c-teal"><strong>Art. 1654(2)</strong></span>.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Sublease and Assignment</strong></td>
+        <td>Expressly <strong>prohibits subleasing (e.g., Airbnb arbitrage)</strong> or assignment of lease without the Lessor's prior written consent.</td>
+        <td>Clarifies whether the Lessee is permitted to sublease portions of the property to recoup rent.</td>
+      </tr>
+      <tr>
+        <td><strong>6. Return of Premises</strong></td>
+        <td>Requires return of the premises in <strong>"good and tenantable condition,"</strong> allowing deduction for trash or intentional damage.</td>
+        <td>Excludes liability for <strong>ordinary wear and tear</strong> or fortuitous events (e.g., earthquake or typhoon damage without tenant fault).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="c-navy">Key Statutory and Practical Drafting Rules in Leases</h4>
+
+  <ol>
+    <li><strong>Specificity of Leased Premises:</strong> Never describe the premises vaguely as <em>"a property located in Barangay Lingsat, San Fernando City, La Union."</em> Specify the exact Unit/Door Number, Floor, Building Name, Street Address, and approximate floor area in square meters.</li>
+    <li><strong>Term of Lease and Long-Term Commercial Land Leases:</strong> Residential and office leases typically run for <strong>six (6) months to one (1) year</strong>, subject to renewal upon mutual written agreement (where rental rates may be renegotiated). In contrast, commercial leases of vacant strategic land—such as for <strong>gasoline stations</strong>—frequently run for <strong>five (5) to ten (10) years or more</strong>, with stipulations allowing the Lessee to construct permanent or semi-permanent structures and obligating the Lessee to remove them and restore the land upon termination.</li>
+    <li><strong>Sublease vs. Assignment of Lease (<span class="c-teal"><strong>Articles 1649 & 1650, Civil Code</strong></span>):</strong>
+      <ul>
+        <li><strong>Assignment of Lease (<span class="c-teal"><strong>Art. 1649</strong></span>):</strong> The lessee cannot assign the lease without the consent of the lessor, unless there is a stipulation to the contrary.</li>
+        <li><strong>Sublease (<span class="c-teal"><strong>Art. 1650</strong></span>):</strong> When in the contract of lease of things there is <span class="c-green"><strong><u>no express prohibition, the lessee may sublease</u></strong></span> the thing leased, in whole or in part, without prejudice to his responsibility for the performance of the contract toward the lessor. Therefore, if a landlord wants to prevent a tenant from renting a house, renovating it, and subleasing it on <strong>Airbnb</strong>, the lawyer <span class="c-rust"><strong><u>must insert an express prohibition against subleasing</u></strong></span> in the contract.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <blockquote>
+    <strong>Professor's Illustration: Typhoon Roof Damage, Security Deposits, and Live-Selling Breaches</strong><br>
+    Suppose Student X rents a residential apartment in San Fernando City under a one-year Contract of Lease with "one month advance, one month security deposit." During <strong>Typhoon Emong</strong>, the apartment's roof is blown off. Because replacing a roof is a <strong>major structural repair</strong> necessary to keep the premises fit for habitation (<span class="c-teal"><strong>Article 1654[2], Civil Code</strong></span>), the <strong>Lessor</strong> must shoulder the cost, not the tenant. However, if X converts the strictly residential apartment into a noisy commercial warehouse for online "live-selling" (<em>"Mine!"</em> auctions) or abandons the unit leaving unpaid electricity, water, and PLDT/Converge Wi-Fi bills, the Lessor may terminate the lease for breach of permitted use and forfeit the <strong>security deposit</strong> to cover the unpaid utility bills.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="service-contracts-and-legal-retainership" class="c-navy">IX. SERVICE CONTRACTS AND LEGAL RETAINERSHIP AGREEMENTS</h3>
+
+  <h4 id="essential-elements-service-consultancy" class="c-navy">A. Essential Elements of Service and Consultancy Agreements</h4>
+
+  <p>A <strong>Service Contract</strong> governs an obligation <em>to do</em>—where an independent contractor, service provider, or professional consultant (e.g., construction contractor, janitorial/cleaning agency, laundry service, medical consultant, or <strong>retained legal counsel</strong>) binds himself to render specific services in exchange for compensation. To prevent scope creep and billing disputes, the drafter must clearly define:</p>
+
+  <ol>
+    <li><strong>Scope of Work and Deliverables:</strong> Explicitly enumerate what services are included and excluded (e.g., whether a legal consultant's monthly retainer includes contract drafting and notarization, or only verbal legal advice). Specify tangible <strong>deliverables</strong> (e.g., monthly accomplishment reports, number of barangay medical missions, or specific engineering plans) and <strong>deadlines</strong>.</li>
+    <li><strong>Professional Fees and Tiered Appearance Rates (Legal Retainership):</strong> In a <strong>Legal Retainership Agreement</strong>, the lawyer must clearly state the monthly retainer fee and the separate schedule of <strong>appearance fees</strong> and pleading fees. Appearance fees should be <span class="c-green"><strong><u>graduated upward according to the hierarchy of courts</u></strong></span>—charging a base rate for appearances before the Municipal Trial Court (MTC), a higher rate before the Regional Trial Court (RTC), and premium rates for oral arguments or appearances before the Court of Appeals or Supreme Court Justices.</li>
+    <li><strong>Client Responsibilities, Revisions, and Defect Correction:</strong> State the client's obligation to pay fees on time and provide necessary documents. In construction, engineering, or janitorial contracts, specify whether <strong>re-work, plan changes, or correction of defects</strong> (e.g., re-cleaning a dirty facility or revising architectural designs) will incur additional charges or must be performed free of charge as warranty rectification.</li>
+    <li><strong>Confidentiality and Attorney-Client Privilege:</strong> Every legal retainership and consultancy contract must contain a strict <strong>Confidentiality Clause</strong>. For lawyers, the <strong>Attorney-Client Privilege</strong> prohibits disclosing client confidences even to the lawyer's own spouse. Under the <span class="c-burgundy"><strong>Code of Professional Responsibility and Accountability (CPRA)</strong></span>, this duty of confidentiality <span class="c-rust"><strong><u>extends to the lawyer's secretary, paralegals, and office staff</u></strong></span>, who must be bound to keep all office matters strictly within the four walls of the law firm.</li>
+  </ol>
+
+  <h4 id="independent-contractor-vs-labor-law" class="c-navy">B. Independent Contractor Clause vs. Labor Law Reality</h4>
+
+  <p>Service contracts routinely include a stipulation stating: <em>"Nothing herein shall be construed as creating an employer-employee relationship between the Client and the Contractor."</em></p>
+
+  <ul>
+    <li><strong>Substance Over Form in Labor Law:</strong> Calling someone an "independent contractor" in a written contract <span class="c-rust"><strong>does not conclusively settle their legal status</strong></span>. Under Philippine Labor Law, the existence of an employer-employee relationship is determined by the <span class="c-green"><strong><u>Four-Fold Test</u></strong></span> (particularly the <span class="c-green"><strong><u>Control Test</u></strong></span>—whether the principal controls not only the end result but also the means and methods by which the work is accomplished) and the actual factual relationship of the parties. (By way of policy critique, while private corporations are strictly penalized for illegal labor-only contracting or <em>endo</em>, government agencies widely utilize <strong>Contract of Service [COS]</strong> templates that classify long-term personnel as independent contractors lacking security of tenure and statutory benefits.)</li>
+  </ul>
+
+  <blockquote>
+    <strong>Professor's Illustration: Drafting a Legal Retainership Contract for a School</strong><br>
+    Suppose you are hired as the Legal Consultant of Saint Louis College for a renewable one-year term. If your Retainership Contract merely states <em>"The Lawyer shall render legal services for PhP 25,000.00 a month,"</em> the client might demand that you handle twenty litigation cases, draft fifty contracts, and appear in court from MTC up to the Supreme Court without paying a single centavo more. A properly drafted Retainership Contract defines the <strong>Scope of Work</strong> covered by the monthly retainer (e.g., up to 10 hours of consultation and 3 simple contracts per month) and sets a separate <strong>tiered fee schedule</strong> for court appearances, major litigation, and out-of-town travel.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="other-common-business-instruments" class="c-navy">X. OTHER COMMON BUSINESS AND DISPUTE RESOLUTION INSTRUMENTS</h3>
+
+  <p>When a commercial transaction or settlement does not fit neatly into the preceding categories, the lawyer may draft one of the following specialized instruments:</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Instrument</th>
+        <th>Primary Legal Purpose</th>
+        <th>Critical Statutory & Drafting Rules</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Memorandum of Agreement (MOA) / Understanding (MOU)</strong></td>
+        <td>Used for collaborative partnerships, institutional linkages, or complex multi-party ventures that do not fit strict Civil Code nominate labels (like pure sale or lease).</td>
+        <td>Designate parties as <em>First Party</em>, <em>Second Party</em>, etc. (or by institutional acronyms); clearly define mutual undertakings, cost-sharing, and duration.</td>
+      </tr>
+      <tr>
+        <td><strong>Loan Agreement & Promissory Note</strong></td>
+        <td>Evidences a contract of simple loan (<em>mutuum</em> under <span class="c-teal"><strong>Art. 1933</strong></span>) and the debtor's unconditional promise to pay a sum certain on a fixed maturity date.</td>
+        <td><span class="c-teal"><strong>Article 1956, Civil Code:</strong></span> <span class="c-rust"><strong><u>"No interest shall be due unless it has been expressly stipulated in writing."</u></strong></span> In the absence of a specific rate, legal interest is <strong>6% <em>per annum</em></strong> (BSP Circular No. 799).</td>
+      </tr>
+      <tr>
+        <td><strong>Supply Agreement</strong></td>
+        <td>Governs recurring delivery of goods or raw materials (e.g., rice, canteen supplies, or office equipment) by a Supplier to a Buyer.</td>
+        <td>Must specify product specifications, quantity, unit pricing, <strong>delivery schedules</strong>, inspection/acceptance protocols, and remedies for late or defective delivery.</td>
+      </tr>
+      <tr>
+        <td><strong>Confidentiality / Non-Disclosure Agreement (NDA)</strong></td>
+        <td>Protects proprietary data, trade secrets, and internal records disclosed to employees, researchers, or student practicum/intern observers.</td>
+        <td>Defines "Confidential Information," specifies permitted use (e.g., academic research only), duration of non-disclosure, and liquidated damages for breach.</td>
+      </tr>
+      <tr>
+        <td><strong>Compromise Agreement</strong></td>
+        <td>A contract whereby the parties, by making <span class="c-green"><strong><u>reciprocal concessions</u></strong></span>, avoid a litigation or put an end to one already commenced (<span class="c-teal"><strong>Article 2028, Civil Code</strong></span>).</td>
+        <td>Must state the settlement amount, <strong>mutual concessions</strong>, a <strong>Release, Waiver, and Quitclaim clause</strong>, and an agreement to withdraw or move for the <strong>dismissal of the pending case</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="deep-dive-loans-and-compromise-agreements" class="c-navy">Deep-Dive: Loans and Compromise Agreements</h4>
+
+  <ol>
+    <li><strong>The Strict Written Interest Rule in Loans (<span class="c-teal"><strong>Article 1956, Civil Code</strong></span>):</strong> When drafting a Loan Agreement or Promissory Note for a lender, the lawyer must never forget to put the <span class="c-rust"><strong><u>interest stipulation in writing</u></strong></span>. Under <span class="c-teal"><strong>Article 1956</strong></span>, even if the borrower verbally agreed to pay monthly interest, <span class="c-rust"><strong><u>the lender cannot collect any compensatory interest if it is not expressly reduced to writing</u></strong></span>. Furthermore, if the parties stipulate in writing that interest is payable without specifying the exact rate (or as damages upon default after demand), the prevailing <strong>legal interest rate of six percent (6%) <em>per annum</em></strong> applies.</li>
+    <li><strong>Compromise Agreements in Civil and Criminal Cases:</strong>
+      <ul>
+        <li><strong>Civil Disputes:</strong> Parties before the court or assisted by the Integrated Bar of the Philippines (IBP) Legal Aid office execute a Compromise Agreement to settle boundary disputes, collection suits, or damages claims without undergoing protracted trial.</li>
+        <li><strong>Civil Liability in Criminal Cases (<span class="c-teal"><strong>Article 2034, Civil Code</strong></span>):</strong> There may be a compromise upon the <span class="c-green"><strong><u>civil liability</u></strong></span> arising from an offense, although such compromise shall not automatically extinguish the public action for the imposition of the legal penalty. In practice—such as in theft cases where stolen items are restituted in cash, or in <strong>Reckless Imprudence Resulting in Homicide</strong> where the bereaved family executes a Compromise Agreement and Affidavit of Desistance upon receiving financial compensation—victims often opt for settlement out of practical survival needs for the orphans or to avoid the psychological trauma of reliving the tragedy during trial. The drafter must clearly specify the <strong>claims released</strong> and the undertaking to manifest the settlement before the Prosecutor or the Court.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <blockquote>
+    <strong>Professor's Illustration: Legal Compromise Agreement vs. Archaic "Trial by Ordeal"</strong><br>
+    In a tragic real-life incident reported in the news, two elderly claimants disputing ownership over a parcel of land resorted to an archaic indigenous <strong>"trial by ordeal"</strong> (<em>bultong</em> / water submersion test), agreeing that whoever stayed submerged underwater the longest would be declared the rightful owner of the land. Tragically, neither claimant surfaced alive—both drowned, leaving neither with the land. Had the parties consulted a lawyer or barangay/IBP mediator to execute a civil <strong>Compromise Agreement</strong> under <span class="c-teal"><strong>Article 2028 of the Civil Code</strong></span>—dividing the land equitably or compensating one party via reciprocal concessions—both lives would have been saved and ownership legally settled.
+  </blockquote>
+
+  <hr>
+
+  <h3 id="administrative-matters-and-professors-asides" class="c-navy">Administrative Matters & Professor's Asides</h3>
+
+  <ul>
+    <li><strong>Examination Results & Asynchronous Session Follow-Up:</strong>
+      <ul>
+        <li>The Professor noted that the graded results for the previous examination have not yet been returned and will be distributed soon.</li>
+        <li>Students were reminded to ensure they have downloaded the lecture notes and handouts uploaded during the previous asynchronous session, along with the reading assignments in their prescribed textbook (<em>Suarez, Legal Forms</em>, starting at page 122 for Contracts).</li>
+      </ul>
+    </li>
+    <li><strong>Pacing & Course Roadmap for the Final Term:</strong>
+      <ul>
+        <li>Tonight's lecture completes the module on <strong>Contracts and Business Forms</strong>.</li>
+        <li>Beginning next meeting, the class will transition to the core final-term module: <strong>Judicial Forms</strong> (pleadings, motions, and court submissions).</li>
+      </ul>
+    </li>
+    <li><strong>Mandatory Take-Home Assignment (Handwritten Contract Drafting):</strong>
+      <ul>
+        <li><strong>Task:</strong> Individual contract-drafting exercise (including a Service/Retainership Contract or business agreement to be posted in detail by the Professor on <strong>Google Classroom</strong>).</li>
+        <li><strong>Format Requirement (Strictly Handwritten):</strong> The drafted contract must be <strong>handwritten ("old school")</strong> rather than typewritten or printed.</li>
+        <li><strong>Pedagogical Rationale:</strong> The Professor requires handwritten submissions to prevent students from mindlessly copy-pasting templates or generating outputs via AI tools (like ChatGPT) without reading them; writing the clauses by hand forces students to internalize the structure, wording, and essential elements of a contract (retaining at least the core drafting mechanics in memory for the Bar Exam and actual practice).</li>
+        <li><strong>Submission Deadline:</strong> Watch for the official prompt on Google Classroom tonight or tomorrow; submission will be due prior to the upcoming Undas holiday break.</li>
+      </ul>
+    </li>
+    <li><strong>Professor's Practical & Litigation Insights:</strong>
+      <ul>
+        <li><strong>Notarial Diligence on Thumbmarks:</strong> Review the assigned textbook on <em>Jurat</em> and <em>Acknowledgment</em> formats for your assignment—always modify the notarial block when a party executes via thumbmark and secure two attesting witnesses.</li>
+        <li><strong>Business Opportunities & Legal Practice:</strong> The Professor shared an anecdote about a law school schoolmate whose family operated a funeral chapel business in Pangasinan and frequently bought new cars (<em>"In death, there is money"</em>), illustrating how drafting corporate charters for memorial parks and service industries is a lucrative area of corporate practice.</li>
+        <li><strong>Health & Working Student Considerations:</strong> The Professor acknowledged the strict time-in/time-out schedules of working students (such as Philippine Judiciary Employees [PJE]) and advised everyone to wear masks, rest, and take precautions against seasonal coughs and viral outbreaks.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
