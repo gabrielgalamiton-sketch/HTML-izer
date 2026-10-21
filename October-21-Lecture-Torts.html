@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 21 Lecture - Torts: Persons Liable, Joint Tortfeasors, Motor Vehicles, Parental Authority & School Liability</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.85rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1F2937;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #1E3A8A;
+}
+.diagram-viewport {
+  width: 100%;
+  height: 480px;
+  background: #FAFAFA;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex-grow: 1;
+  height: auto;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+}
+.diagram-container pre.mermaid {
+  margin: 0;
+  padding: 1rem;
+  background: transparent;
+}
+</style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-heading">PART 1: PERSONS LIABLE, JOINT TORTFEASORS & MOTOR VEHICLES</option>
+      <option value="#concept-and-classification-of-tortfeasors">&nbsp;&nbsp;↳ I. Concept and Classification of Tortfeasors</option>
+      <option value="#definition-and-nature-of-a-tortfeasor">&nbsp;&nbsp;&nbsp;&nbsp;• Definition and Nature of a Tortfeasor</option>
+      <option value="#liability-of-artificial-or-juridical-persons">&nbsp;&nbsp;&nbsp;&nbsp;• Liability of Artificial or Juridical Persons</option>
+      <option value="#tort-liability-of-the-state-and-political-subdivisions">&nbsp;&nbsp;&nbsp;&nbsp;• Tort Liability of the State & LGUs</option>
+      <option value="#joint-tortfeasors-and-solidary-liability">&nbsp;&nbsp;↳ II. Joint Tortfeasors and Solidary Liability (Art. 2194)</option>
+      <option value="#statutory-mandate-of-solidary-liability">&nbsp;&nbsp;&nbsp;&nbsp;• Statutory Mandate of Solidary Liability</option>
+      <option value="#interplay-with-solidary-obligations-and-right-of-reimbursement">&nbsp;&nbsp;&nbsp;&nbsp;• Solidary Obligations & Right of Reimbursement</option>
+      <option value="#modes-of-becoming-joint-tortfeasors">&nbsp;&nbsp;&nbsp;&nbsp;• Modes of Becoming Joint Tortfeasors</option>
+      <option value="#liability-of-owners-in-motor-vehicle-mishaps">&nbsp;&nbsp;↳ III. Liability of Owners in Motor Vehicle Mishaps (Art. 2184)</option>
+      <option value="#statutory-framework-of-article-2184">&nbsp;&nbsp;&nbsp;&nbsp;• Statutory Framework of Article 2184</option>
+      <option value="#essential-requisites-for-owners-liability-under-article-2184-par-1">&nbsp;&nbsp;&nbsp;&nbsp;• Essential Requisites for Owner's Liability</option>
+      <option value="#doctrinal-nuances-on-passenger-owner-diligence">&nbsp;&nbsp;&nbsp;&nbsp;• Passenger-Owner Diligence Nuances</option>
+      <option value="#theoretical-foundations-of-vicarious-liability-imputed-negligence">&nbsp;&nbsp;↳ IV. Theoretical Foundations of Vicarious Liability</option>
+      <option value="#concept-of-vicarious-liability-imputed-negligence">&nbsp;&nbsp;&nbsp;&nbsp;• Concept of Imputed Negligence</option>
+      <option value="#philippine-civil-law-vicarious-liability-vs-respondeat-superior">&nbsp;&nbsp;&nbsp;&nbsp;• Philippine Vicarious Liability vs. Respondeat Superior</option>
+      <option value="#part-2-heading">PART 2: VICARIOUS LIABILITY OF PARENTS AND GUARDIANS</option>
+      <option value="#vicarious-liability-of-parents-art-2180-civil-code-family-code">&nbsp;&nbsp;↳ V. Vicarious Liability of Parents</option>
+      <option value="#primary-and-direct-nature-of-parental-liability">&nbsp;&nbsp;&nbsp;&nbsp;• Primary and Direct Nature of Parental Liability</option>
+      <option value="#statutory-evolution-civil-code-vs-family-code">&nbsp;&nbsp;&nbsp;&nbsp;• Statutory Evolution: Civil Code vs. Family Code</option>
+      <option value="#scope-and-requisites-of-parental-liability">&nbsp;&nbsp;&nbsp;&nbsp;• Scope and Requisites of Parental Liability</option>
+      <option value="#the-age-of-majority-exception-ra-no-6809-and-juvenile-delicts-ra-no-9344">&nbsp;&nbsp;↳ VI. Age of Majority Exception & Juvenile Delicts</option>
+      <option value="#the-ra-no-6809-exception-parental-liability-up-to-age-21">&nbsp;&nbsp;&nbsp;&nbsp;• R.A. 6809 Exception: Liability Up to Age 21</option>
+      <option value="#civil-liability-arising-from-delicts-of-minors-ra-no-9344-rpc">&nbsp;&nbsp;&nbsp;&nbsp;• Civil Liability from Delicts of Minors (CICL)</option>
+      <option value="#custody-adoption-and-substitute-parental-authority">&nbsp;&nbsp;↳ VII. Custody, Adoption & Substitute Authority</option>
+      <option value="#persons-exercising-substitute-parental-authority-and-guardianship">&nbsp;&nbsp;&nbsp;&nbsp;• Substitute Parental Authority & Guardianship</option>
+      <option value="#effect-of-adoption-on-parental-vicarious-liability">&nbsp;&nbsp;&nbsp;&nbsp;• Effect of Adoption on Tort Liability</option>
+      <option value="#tamargo-v-court-of-appeals-gr-no-85044-june-3-1992">&nbsp;&nbsp;&nbsp;&nbsp;• Tamargo v. Court of Appeals</option>
+      <option value="#presumption-of-negligence-defenses-of-parents-and-firearm-incidents">&nbsp;&nbsp;↳ VIII. Presumption of Negligence & Firearm Incidents</option>
+      <option value="#presumption-of-negligence-and-the-defense-of-bonus-paterfamilias">&nbsp;&nbsp;&nbsp;&nbsp;• Presumption of Negligence & Bonus Paterfamilias</option>
+      <option value="#concurrent-negligence-in-firearm-and-school-shooting-incidents">&nbsp;&nbsp;&nbsp;&nbsp;• Concurrent Negligence in Firearm Incidents</option>
+      <option value="#libi-v-intermediate-appellate-court-gr-no-70890-september-18-1992">&nbsp;&nbsp;&nbsp;&nbsp;• Libi v. Intermediate Appellate Court</option>
+      <option value="#part-3-heading">PART 3: VICARIOUS LIABILITY OF SCHOOLS, ADMIN & TEACHERS</option>
+      <option value="#statutory-framework-of-school-and-teacher-liability-civil-code-vs-family-code">&nbsp;&nbsp;↳ IX. Statutory Framework (Civil Code vs. Family Code)</option>
+      <option value="#evolution-from-civil-code-article-2180-to-family-code-articles-218219">&nbsp;&nbsp;&nbsp;&nbsp;• Evolution from Art. 2180 to Arts. 218–219</option>
+      <option value="#coverage-of-institutions-engaged-in-child-care">&nbsp;&nbsp;&nbsp;&nbsp;• Coverage of Child Care & Mall Playgrounds</option>
+      <option value="#scope-of-special-parental-authority-in-academic-and-extracurricular-activities">&nbsp;&nbsp;↳ X. Scope of Special Parental Authority</option>
+      <option value="#meaning-of-in-their-custody-and-authorized-activities">&nbsp;&nbsp;&nbsp;&nbsp;• Custody & Authorized Activities</option>
+      <option value="#landmark-jurisprudence-on-school-liability-and-culpa-contractual-for-outsider-torts">&nbsp;&nbsp;↳ XI. Landmark Jurisprudence & Outsider Torts</option>
+      <option value="#amadora-v-court-of-appeals-gr-no-l-47745-april-15-1988-160-scra-315">&nbsp;&nbsp;&nbsp;&nbsp;• Amadora v. Court of Appeals</option>
+      <option value="#st-francis-high-school-v-court-of-appeals-gr-no-82465-february-25-1991-194-scra-341">&nbsp;&nbsp;&nbsp;&nbsp;• St. Francis High School v. Court of Appeals</option>
+      <option value="#st-marys-academy-v-carpitanos-gr-no-143363-february-6-2002">&nbsp;&nbsp;&nbsp;&nbsp;• St. Mary's Academy v. Carpitanos</option>
+      <option value="#philippine-school-of-business-administration-psba-v-court-of-appeals-gr-no-84698-february-4-1992-205-scra-729">&nbsp;&nbsp;&nbsp;&nbsp;• PSBA v. Court of Appeals</option>
+      <option value="#valenzuela-v-court-of-appeals-gr-no-115024-february-7-1996-253-scra-303">&nbsp;&nbsp;&nbsp;&nbsp;• Valenzuela v. Court of Appeals</option>
+      <option value="#synthesis-liability-when-an-outsider-trespasser-injures-a-student-on-campus">&nbsp;&nbsp;&nbsp;&nbsp;• Synthesis: Outsider / Trespasser Torts</option>
+      <option value="#administrative-matters-professors-asides">&nbsp;&nbsp;↳ XII. Administrative Matters & Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+<h1 id="october-21-lecture-torts">October 21 Lecture - Torts</h1>
+
+<h2 id="part-1-heading" class="c-navy">PART 1: PERSONS LIABLE FOR TORTS, JOINT TORTFEASORS, AND MOTOR VEHICLE MISHAPS</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">I</div>
+      <div class="ui-kicker">CLASSIFY</div>
+      <div class="ui-sub">Natural, Juridical, State & LGU Tortfeasors</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">II</div>
+      <div class="ui-kicker">SOLIDARITY</div>
+      <div class="ui-sub">External Solidary vs. Internal Reimbursement</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">III</div>
+      <div class="ui-kicker">MOTOR VEHICLES</div>
+      <div class="ui-sub">Art. 2184 Passenger-Owner Vigilance</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">IV</div>
+      <div class="ui-kicker">THEORY</div>
+      <div class="ui-sub">Presumed Fault vs. Respondeat Superior</div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Part 1 Overview &amp; Scope of Topics:</strong>
+    <ul>
+      <li><strong>I. Concept and Classification of Tortfeasors:</strong> Definition of tortfeasors; capacity of natural and juridical (artificial) persons to commit torts; imputed liability of corporations through corporate officers and employees; sovereign immunity vs. tort liability of the State and its political subdivisions under <span class="c-teal">Civil Code Articles 2180 and 2189</span>.</li>
+      <li><strong>II. Joint Tortfeasors and Solidary Liability:</strong> Statutory mandate under <span class="c-teal">Civil Code Article 2194</span>; interplay with solidary obligations and extinguishment by payment under <span class="c-teal">Civil Code Article 1217</span>; external solidary liability to the injured plaintiff vs. internal right to proportionate reimbursement among co-tortfeasors; the three causal modes of becoming joint tortfeasors (concerted cooperation, single causal set, and independent concurrent causal sets).</li>
+      <li><strong>III. Liability of Owners in Motor Vehicle Mishaps:</strong> Statutory rule under <span class="c-teal">Civil Code Article 2184</span>; distinction between situations where the registered owner is present inside the vehicle vs. absent at the time of the mishap; disputable presumption of driver negligence from prior traffic violations; analysis of classroom hypotheticals on passenger-owner vigilance and overspeeding.</li>
+      <li><strong>IV. Theoretical Foundations of Vicarious Liability (Imputed Negligence):</strong> Doctrinal basis of imputed negligence under <span class="c-teal">Civil Code Article 2180</span>; distinction between the Anglo-American doctrine of <span class="c-burgundy"><em>respondeat superior</em></span> and the Philippine Civil Law principles of <span class="c-green"><em>culpa in eligendo</em></span> (negligence in selection) and <span class="c-green"><em>culpa in vigilando</em></span> (negligence in supervision).</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="concept-and-classification-of-tortfeasors">I. CONCEPT AND CLASSIFICATION OF TORTFEASORS</h3>
+
+<h4 id="definition-and-nature-of-a-tortfeasor">Definition and Nature of a Tortfeasor</h4>
+<ul>
+  <li><strong>Operative Rule:</strong> A <span class="c-green"><strong><u>tortfeasor</u></strong></span> is any person, whether natural or juridical, who commits a tortious act or omission, or upon whom the law imputes civil liability for damages arising from fault or negligence (<span class="c-green"><em>quasi-delict</em></span> or <span class="c-green"><em>culpa aquiliana</em></span>) under <span class="c-teal"><strong>Article 2176 of the New Civil Code</strong></span>.</li>
+  <li><strong>Scope of Tortious Conduct:</strong> Liability as a tortfeasor attaches not only to persons who directly inflict injury through their own positive acts or omissions, but also to persons who are held vicariously or solidarily answerable by operation of law due to their special legal relationship with the actual actor.</li>
+</ul>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">👤</div>
+      <div class="ui-title">Natural Person</div>
+      <div class="ui-sub">Direct actor liable under Art. 2176 for personal fault or negligence</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🏢</div>
+      <div class="ui-title">Juridical Entity</div>
+      <div class="ui-sub">Imputed liability via corporate officers or vicarious employer liability</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🏛️</div>
+      <div class="ui-title">The State</div>
+      <div class="ui-sub">Liable only when acting through a designated Special Agent (Art. 2180)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🛣️</div>
+      <div class="ui-title">LGUs / Cities</div>
+      <div class="ui-sub">Proprietary acts &amp; defective roads/works under LGU control (Art. 2189)</div>
+    </div>
+  </div>
+</div>
+
+<h4 id="liability-of-artificial-or-juridical-persons">Liability of Artificial or Juridical Persons</h4>
+<ul>
+  <li><strong>Imputed Corporate Liability:</strong> Although a corporation or partnership is an artificial being created by operation of law without a physical body or mind of its own, <span class="c-green"><strong><u>juridical persons are civilly liable for torts</u></strong></span>. Because an artificial entity can only act through its human instrumentalities—specifically its board of directors, corporate officers, representatives, and employees—the tortious acts committed by these representatives within the scope of their assigned functions are legally imputed to the juridical entity itself.</li>
+  <li><strong>Dual Basis of Corporate Liability:</strong> A corporation may be held liable either:
+    <ol>
+      <li><strong>Directly as a corporate tortfeasor</strong> when a corporate officer or agent performs an act specifically authorized or ratified by the governing board; or</li>
+      <li><strong>Vicariously as an employer</strong> under <span class="c-teal"><strong>Article 2180, paragraph 5 of the Civil Code</strong></span> for damages caused by its employees acting within the scope of their assigned tasks, anchored on the corporation's own presumed negligence in the selection (<span class="c-green"><em>culpa in eligendo</em></span>) and supervision (<span class="c-green"><em>culpa in vigilando</em></span>) of its personnel.</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="tort-liability-of-the-state-and-political-subdivisions">Tort Liability of the State and Political Subdivisions</h4>
+<ul>
+  <li><strong>Constitutional Baseline and Waiver:</strong> Under <span class="c-teal"><strong>Article XVI, Section 3 of the 1987 Constitution</strong></span>, the State cannot be sued without its consent. However, sovereign immunity is not an absolute shield against tort liability when the State gives express or implied consent to be sued, or when it steps down from its sovereign capacity.</li>
+  <li><strong>Statutory Rules on State and Local Government Tort Liability:</strong>
+    <ul>
+      <li><strong>State Acting Through a Special Agent (Civil Code, Art. 2180, par. 6):</strong> The State is responsible in like manner when it acts through a <span class="c-green"><strong><u>special agent</u></strong></span>, defined in jurisprudence as one who receives a definite and fixed commission foreign to the exercise of the functions of a regular official. Conversely, the State is <span class="c-rust"><strong><u>not liable</u></strong></span> when the damage has been caused by the official to whom the task done properly pertains, in which case <span class="c-teal"><strong>Article 2176</strong></span> shall be applicable against the erring public officer in a personal capacity <code>[Assumed reference to Art. 2180, par. 6 on State liability through a special agent]</code>.</li>
+      <li><strong>State or LGUs Acting in a Proprietary / Corporate Capacity (Civil Code, Art. 24, Local Government Code):</strong> Municipal corporations and local government units (LGUs) possess a dual nature: governmental (political) and proprietary (corporate or patrimonial). When the State or its political subdivisions act within their <span class="c-green"><strong><u>corporate or proprietary powers</u></strong></span>, they stand on the same footing as private corporations and can be sued and held civilly liable for tortious acts committed by their regular employees.</li>
+      <li><strong>Defective Public Works under LGU Control (Civil Code, Art. 2189):</strong> Provinces, cities, and municipalities shall be liable for damages for the death of, or injuries suffered by, any person by reason of the <span class="c-rust"><strong><u>defective condition of roads, streets, bridges, public buildings, and other public works</u></strong></span> under their control or supervision, regardless of whether they own the infrastructure <code>[Assumed reference to Art. 2189 on LGU liability for defective public works]</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Classification of Defendant</th>
+      <th>Legal Basis of Tort Liability</th>
+      <th>Key Requisites / Conditions for Liability to Attach</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Natural Person (Direct Actor)</strong></td>
+      <td><span class="c-teal">Civil Code, Art. 2176</span></td>
+      <td>Act or omission; presence of fault or negligence (or intentional wrong); damage or injury to another; direct causal connection without pre-existing contractual breach.</td>
+    </tr>
+    <tr>
+      <td><strong>Juridical / Artificial Person</strong></td>
+      <td><span class="c-teal">Civil Code, Arts. 46, 2176 &amp; 2180 (par. 5)</span></td>
+      <td>Tortious act committed by corporate officers, agents, or employees acting within the scope of their authority or assigned tasks.</td>
+    </tr>
+    <tr>
+      <td><strong>The State (Sovereign Capacity)</strong></td>
+      <td><span class="c-teal">Civil Code, Art. 2180 (par. 6)</span></td>
+      <td>The State must act through a duly commissioned <strong>special agent</strong> performing a specific task foreign to regular official duties.</td>
+    </tr>
+    <tr>
+      <td><strong>Political Subdivisions / LGUs</strong></td>
+      <td><span class="c-teal">Civil Code, Art. 2189 &amp; R.A. 7160 (Sec. 24)</span></td>
+      <td>Exercises corporate/proprietary powers, OR injury arises from the defective condition of roads, bridges, or public buildings under LGU control or supervision.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="joint-tortfeasors-and-solidary-liability">II. JOINT TORTFEASORS AND SOLIDARY LIABILITY (ART. 2194, CIVIL CODE)</h3>
+
+<h4 id="statutory-mandate-of-solidary-liability">Statutory Mandate of Solidary Liability</h4>
+<ul>
+  <li><strong>Civil Code, Art. 2194:</strong> The responsibility of two or more persons who are liable for a <em>quasi-delict</em> is <span class="c-green"><strong><u>solidary</u></strong></span>.</li>
+  <li><strong>Meaning of Solidary Liability in Torts:</strong> Where two or more persons are held liable as <span class="c-green"><strong><u>joint tortfeasors</u></strong></span>, each of them is bound to render complete satisfaction of the entire civil indemnity awarded to the injured plaintiff. The aggrieved party may proceed against <span class="c-green"><strong><u>any one of the solidary tortfeasors, some of them, or all of them simultaneously</u></strong></span>, and demand 100% of the damages without having to divide the claim proportionally among the defendants.</li>
+</ul>
+
+<h4 id="interplay-with-solidary-obligations-and-right-of-reimbursement">Interplay with Solidary Obligations and Right of Reimbursement</h4>
+<ul>
+  <li><strong>Extinguishment by Full Payment (Civil Code, Art. 1217, par. 1):</strong> Payment made by one of the solidary debtors extinguishes the obligation. Applied to <em>quasi-delict</em>, when one joint tortfeasor pays the entire judgment award to the plaintiff to prevent execution, the obligation toward the plaintiff is completely extinguished.</li>
+  <li><strong>Internal Right of Contribution / Reimbursement (Civil Code, Art. 1217, par. 2):</strong> He who made the payment may claim from his co-debtors <span class="c-green"><strong><u>only on the part corresponding to each</u></strong></span>, with the interest for the payment already made.</li>
+  <li><strong>Reconciling Art. 2194 and Art. 1217:</strong> The solidary nature of liability under <span class="c-teal"><strong>Article 2194</strong></span> governs the <strong>external relationship</strong> between the joint tortfeasors and the injured plaintiff (obligee). However, in the <strong>internal relationship</strong> among the co-tortfeasors themselves, liability is ultimately shared proportionally based on their respective degrees of fault or equal shares. The paying tortfeasor steps into the right to demand reimbursement from his co-defendant for the latter's proportionate share, without converting their external liability toward the victim into a joint (<em>mancomunada</em>) obligation.</li>
+</ul>
+
+<h4 id="modes-of-becoming-joint-tortfeasors">Modes of Becoming Joint Tortfeasors</h4>
+<ul>
+  <li><strong>Absence of Prior Conspiracy Requirement:</strong> It is <span class="c-rust"><strong><u>not a legal requirement</u></strong></span> that joint tortfeasors must have pre-planned, conspired, meditated, or actively cooperated with one another before their acts or omissions resulted in injury.</li>
+  <li><strong>Three Doctrinal Modes of Joint Tortfeasorship:</strong>
+    <ol>
+      <li><strong>By Concerted Cooperation:</strong> Two or more persons consciously act together or cooperate in executing a wrongful act or omission that directly causes injury to the plaintiff.</li>
+      <li><strong>By Contributing to a Single Causal Set:</strong> One tortfeasor's act or omission forms an indispensable link or component of a single <strong>causal set</strong> (the unified chain of events constituting the proximate cause of the injury), such as an employer whose negligent supervision combines with the employee's negligent driving.</li>
+      <li><strong>By Separate and Independent Causal Sets (Concurrent Negligence):</strong> Two or more persons act completely <strong>separately and independently</strong> of each other, without any prior arrangement or common design, yet their distinct negligent acts concur or combine as the <span class="c-green"><strong><u>proximate cause</u></strong></span> of a single, indivisible injury to a third person.</li>
+    </ol>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Dimension of Analysis</th>
+      <th>External Relationship (Tortfeasors vs. Plaintiff)</th>
+      <th>Internal Relationship (Co-Tortfeasor vs. Co-Tortfeasor)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Governing Provision</strong></td>
+      <td><span class="c-teal">Civil Code, Article 2194</span></td>
+      <td><span class="c-teal">Civil Code, Article 1217 (par. 2)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Nature of Liability</strong></td>
+      <td><span class="c-green"><strong><u>Strictly Solidary</u></strong></span> (<em>in solidum</em>); each defendant is liable for the full 100% of the damage award.</td>
+      <td><strong>Proportionate / Contributory</strong>; each co-tortfeasor is ultimately answerable only for his respective share.</td>
+    </tr>
+    <tr>
+      <td><strong>Procedural Consequence</strong></td>
+      <td>Plaintiff may sue only Tortfeasor A, or both A and B, and execute the entire judgment against A's properties alone.</td>
+      <td>Once Tortfeasor A pays the full judgment to avoid execution, A may demand reimbursement from B for B's proportionate share.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,stroke-width:1.5px;
+          classDef teal fill:#F0FDFA,stroke:#0F766E,color:#0F766E,stroke-width:1.5px;
+          classDef green fill:#F0FDF4,stroke:#166534,color:#166534,stroke-width:1.5px;
+          classDef rust fill:#FFF7ED,stroke:#C2410C,color:#C2410C,stroke-width:1.5px;
+
+          Injury["Quasi-Delict Injury Occurs<br/>(Damage Caused to Plaintiff C)"]:::navy
+
+          Injury --> Modes["3 Doctrinal Modes of Joint Tortfeasors<br/>(Absence of Conspiracy Required)"]:::teal
+
+          Modes --> M1["1. Concerted Cooperation<br/>Consciously acting together"]:::teal
+          Modes --> M2["2. Single Causal Set<br/>Indispensable link in chain<br/>(e.g., Employer Supervision + Driving)"]:::teal
+          Modes --> M3["3. Independent Concurrent Sets<br/>Unplanned separate acts concur<br/>to produce indivisible injury"]:::teal
+
+          M1 & M2 & M3 --> External["EXTERNAL RELATIONSHIP (Art. 2194)<br/><b>Strictly Solidary Liability (In Solidum)</b><br/>Plaintiff C may sue A, B, or both for 100%"]:::green
+
+          External --> A_Pays["Tortfeasor A Pays Full 100% Judgment<br/>to Plaintiff C"]:::navy
+
+          A_Pays --> ObligExt["Obligation to Plaintiff C<br/><b>COMPLETELY EXTINGUISHED</b><br/>(Civil Code, Art. 1217, par. 1)"]:::green
+
+          A_Pays --> Reimburse["INTERNAL RELATIONSHIP (Art. 1217, par. 2)<br/><b>Right of Proportionate Reimbursement</b><br/>A claims from B only B's proportionate share<br/>(+ interest from payment date)"]:::rust
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h4>Professor's Illustration</h4>
+<blockquote>
+  Suppose Tortfeasors A and B are sued for <em>quasi-delict</em> after their separate, unplanned negligent acts converged as the proximate cause of C's P1,000,000 injury. Even though A and B never met or cooperated prior to the accident, they are <strong>joint tortfeasors</strong> under <strong>Article 2194</strong> because their independent causal sets produced the single injury. C can compel A alone to pay the full P1,000,000. Under <strong>Article 1217</strong>, A's full payment extinguishes the tort obligation toward C, and A may subsequently demand P500,000 (or B's proportionate share) from B by way of reimbursement.
+</blockquote>
+
+<hr>
+
+<h3 id="liability-of-owners-in-motor-vehicle-mishaps">III. LIABILITY OF OWNERS IN MOTOR VEHICLE MISHAPS (ART. 2184, CIVIL CODE)</h3>
+
+<h4 id="statutory-framework-of-article-2184">Statutory Framework of Article 2184</h4>
+<ul>
+  <li><strong>Owner Present in the Vehicle (Civil Code, Art. 2184, par. 1):</strong> In motor vehicle mishaps, the <span class="c-green"><strong><u>owner is solidarily liable with his driver</u></strong></span>, if the former, who was in the vehicle, could have, by the use of the due diligence, prevented the misfortune.</li>
+  <li><strong>Disputable Presumption Against the Driver (Civil Code, Art. 2184, par. 2):</strong> It is disputably presumed that a driver was negligent, if he had been found guilty of reckless driving or violating traffic regulations at least twice within the next preceding two months <code>[Assumed reference to Art. 2184, par. 2 on presumption of driver negligence]</code>.</li>
+  <li><strong>Owner Not in the Vehicle (Civil Code, Art. 2184, par. 3):</strong> If the owner was not in the motor vehicle, the provisions of <span class="c-teal"><strong>Article 2180</strong></span> are applicable—meaning the owner is still primarily and solidarily liable as an employer, unless he proves due diligence in the selection and supervision of his driver <code>[Assumed reference to Art. 2184, par. 3 cross-referencing Art. 2180]</code>.</li>
+</ul>
+
+<h4 id="essential-requisites-for-owners-liability-under-article-2184-par-1">Essential Requisites for Owner's Liability Under Article 2184 (Par. 1)</h4>
+<p>To hold the motor vehicle owner solidarily liable under the specific regime of the first paragraph of <span class="c-teal"><strong>Article 2184</strong></span>, the following requisites must concur:</p>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">🚗</div>
+      <div class="ui-title">1. Mishap Occurs</div>
+      <div class="ui-sub">Motor vehicle mishap causing damage or injury to another</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">⚠️</div>
+      <div class="ui-title">2. Driver Negligence</div>
+      <div class="ui-sub">Proximate cause is the negligence of the driver</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🧍</div>
+      <div class="ui-title">3. Physical Presence</div>
+      <div class="ui-sub">Owner was physically inside the vehicle at the time</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">👁️</div>
+      <div class="ui-title">4. Opportunity to Prevent</div>
+      <div class="ui-sub">Could have prevented misfortune through due diligence</div>
+    </div>
+  </div>
+</div>
+
+<ol>
+  <li>A motor vehicle mishap occurs resulting in damage or injury to another;</li>
+  <li>The mishap is proximately caused by the negligence of the driver;</li>
+  <li>The <span class="c-green"><strong><u>owner of the motor vehicle was physically inside the vehicle</u></strong></span> at the time of the mishap; and</li>
+  <li>The owner <span class="c-green"><strong><u>could have, by the exercise of due diligence, prevented the misfortune</u></strong></span> (i.e., the owner had a reasonable opportunity to observe and correct the driver's negligent driving but failed to do so).</li>
+</ol>
+
+<h4 id="doctrinal-nuances-on-passenger-owner-diligence">Doctrinal Nuances on Passenger-Owner Diligence</h4>
+<ul>
+  <li><strong>Reasonable Opportunity to Prevent the Mishap:</strong> The law does not require an owner-passenger who does not know how to drive—or who simply chooses to rest or read in the backseat—to keep his eyes glued to the road at every single second as if he were co-driving the vehicle.</li>
+  <li><strong>Sudden vs. Continuous Negligence:</strong> If the driver has been driving prudently and suddenly commits an unexpected, split-second negligent maneuver, an owner who was reading a book <span class="c-rust"><strong><u>cannot be faulted under Article 2184, par. 1</u></strong></span> because no amount of due diligence could have prevented the instantaneous mishap. Conversely, if the driver has been continuously overspeeding or driving recklessly for a noticeable period and the owner inside the vehicle remains passive and fails to reprimand or stop the driver, the owner is solidarily liable.</li>
+</ul>
+
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">Motor Vehicle Mishap Involving Driver Negligence</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">Was the Registered Owner Physically Inside the Vehicle?</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-grid ui-split-outcome">
+    <div class="ui-col">
+      <div class="ui-badge ui-badge-yes">✓</div>
+      <div class="ui-title">YES (Art. 2184, par. 1)</div>
+      <div class="ui-sub">Did owner have reasonable opportunity to prevent misfortune? (Continuous overspeeding vs. sudden swerve)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-badge ui-badge-no">✕</div>
+      <div class="ui-title">NO (Art. 2184, par. 3)</div>
+      <div class="ui-sub">Governed by Art. 2180 (Employer) &amp; Registered Owner Rule; must prove diligence in selection &amp; supervision</div>
+    </div>
+  </div>
+</div>
+
+<h4>Professor's Illustration</h4>
+<blockquote>
+  <strong>Scenario 1 (Owner Reading a Book vs. Overspeeding):</strong> Client X owns a car driven by his chauffeur, D. During the trip, D gets into a collision. When X consults counsel, counsel must ask what both D and X were doing right before the crash. If X was reading his favorite book while D suddenly swerved, X must establish whether he had a reasonable opportunity to notice prior reckless driving. However, if X was already aware that D was overspeeding and failed to order D to slow down, X is solidarily liable under <strong>Article 2184</strong> for failing to exercise due diligence to prevent the misfortune.
+</blockquote>
+
+<h4>Application Example</h4>
+<blockquote>
+  <strong>Scenario 2 (Driver Alone in the Vehicle):</strong> Suppose Owner X was not inside the vehicle during the crash because D was driving alone on an errand, or X had rented the car out. X cannot be held liable under <strong>Article 2184, par. 1</strong> because physical presence in the vehicle is missing. However, X is not automatically absolved merely for lacking personal knowledge of the crash; under <strong>Article 2184, par. 3</strong>, liability shifts to <strong>Article 2180</strong> (if D is X's employee) or the <strong>Registered Owner Rule</strong>, where X must prove due diligence in selecting and supervising D.
+</blockquote>
+
+<hr>
+
+<h3 id="theoretical-foundations-of-vicarious-liability-imputed-negligence">IV. THEORETICAL FOUNDATIONS OF VICARIOUS LIABILITY (IMPUTED NEGLIGENCE)</h3>
+
+<h4 id="concept-of-vicarious-liability-imputed-negligence">Concept of Vicarious Liability (Imputed Negligence)</h4>
+<ul>
+  <li><strong>Civil Code, Art. 2180, par. 1:</strong> The obligation imposed by <span class="c-teal"><strong>Article 2176</strong></span> is demandable not only for one's own acts or omissions, but also for those of persons for whom one is responsible.</li>
+  <li><strong>Nature of Imputed Negligence:</strong> Under the doctrine of <span class="c-green"><strong><u>vicarious liability</u></strong></span> (also known as <span class="c-green"><strong><u>imputed negligence</u></strong></span>), a person who did not personally commit the physical act or omission that caused the injury is nevertheless held <span class="c-green"><strong><u>primarily and directly liable</u></strong></span> to the injured party because the actual tortfeasor stands under his legal care, custody, authority, or supervision.</li>
+</ul>
+
+<h4 id="philippine-civil-law-vicarious-liability-vs-respondeat-superior">Philippine Civil Law Vicarious Liability vs. <em>Respondeat Superior</em></h4>
+<ul>
+  <li><strong>Meaning of <em>Respondeat Superior</em>:</strong> Derived from Anglo-American common law, the Latin maxim <span class="c-burgundy"><em>respondeat superior</em></span> literally means <span class="c-burgundy"><strong>"let the master answer."</strong></span> Under pure <em>respondeat superior</em>, the master's liability is strictly derivative and automatic: once it is established that an employer-employee relationship exists and the servant committed a tort in the line of duty, the master must answer for the damage regardless of how careful the master was in hiring or supervising the servant.</li>
+  <li><strong>Why Articles 2180 and 2184 Are NOT Based on <em>Respondeat Superior</em>:</strong>
+    <ol>
+      <li><strong>Foundation in the Master's Own Negligence:</strong> Under the Philippine Civil Code, vicarious liability is <span class="c-rust"><strong><u>not</u></strong></span> anchored on <em>respondeat superior</em>. Instead, it is anchored on the <span class="c-green"><strong><u>direct, personal, and presumed negligence of the person exercising authority</u></strong></span>—specifically, <span class="c-green"><em>culpa in eligendo</em></span> (negligence in the selection of the employee) and <span class="c-green"><em>culpa in vigilando</em></span> (negligence in the supervision of the child, ward, student, or employee).</li>
+      <li><strong>Rationale of Article 2184:</strong> Similarly, when a vehicle owner rides with his driver under <span class="c-teal"><strong>Article 2184</strong></span>, the owner is not punished merely because he is the "master" of the servant-driver. Rather, the law punishes the <span class="c-rust"><strong><u>owner's own negligence in failing to supervise and correct the driver's reckless conduct</u></strong></span> when the owner was physically present and had the opportunity to prevent the mishap.</li>
+      <li><strong>Availability of the Defense of Due Diligence:</strong> Because Philippine vicarious liability is rooted in a disputable presumption of negligence in selection and/or supervision, <span class="c-teal"><strong>Article 2180, last paragraph</strong></span> allows parents, guardians, teachers, and employers to completely exonerate themselves from civil liability by proving that they observed all the <span class="c-green"><strong><u>diligence of a good father of a family</u></strong></span> (<span class="c-green"><em>bonus paterfamilias</em></span>) to prevent the damage—a defense that does not exist under strict Anglo-American <em>respondeat superior</em>.</li>
+    </ol>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Doctrinal Feature</th>
+      <th>Anglo-American <em>Respondeat Superior</em></th>
+      <th>Philippine Vicarious Liability (Arts. 2180 &amp; 2184)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Literal Meaning / Maxim</strong></td>
+      <td><span class="c-burgundy"><em>"Let the master answer"</em></span> (Strict derivative imputation).</td>
+      <td>Imputed negligence based on <span class="c-green"><strong>presumed fault</strong></span> (<span class="c-green"><em>culpa aquiliana</em></span>).</td>
+    </tr>
+    <tr>
+      <td><strong>Theoretical Basis of Liability</strong></td>
+      <td>The mere existence of the master-servant relationship and commission of the tort within the scope of employment.</td>
+      <td>The master, parent, or owner's <span class="c-green"><strong>own presumed negligence</strong></span> in selection (<span class="c-green"><em>culpa in eligendo</em></span>) and/or supervision (<span class="c-green"><em>culpa in vigilando</em></span>).</td>
+    </tr>
+    <tr>
+      <td><strong>Effect of Exercising Due Diligence</strong></td>
+      <td><span class="c-rust"><strong>No defense.</strong></span> Even if the employer exercised utmost care in hiring and supervising the employee, the employer remains strictly liable.</td>
+      <td><span class="c-green"><strong>Complete defense.</strong></span> Under <span class="c-teal">Art. 2180 (last par.)</span>, proving the diligence of a good father of a family in selection and supervision absolves the defendant.</td>
+    </tr>
+    <tr>
+      <td><strong>Application to Revised Penal Code</strong></td>
+      <td>Applies similarly to subsidiary liability under <span class="c-teal"><strong>Art. 103, RPC</strong></span>, where diligence in selection/supervision is not a defense once the employee is convicted and insolvent.</td>
+      <td>Governs independent civil actions for <em>quasi-delict</em> under the Civil Code and Family Code.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="part-2-heading" class="c-navy">PART 2: VICARIOUS LIABILITY OF PARENTS AND GUARDIANS</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">V</div>
+      <div class="ui-kicker">PARENTS</div>
+      <div class="ui-sub">Primary &amp; Solidary (Art. 221 FC)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VI</div>
+      <div class="ui-kicker">AGE 18-21 &amp; CICL</div>
+      <div class="ui-sub">R.A. 6809 Carve-Out &amp; R.A. 9344 Rules</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VII</div>
+      <div class="ui-kicker">CUSTODY</div>
+      <div class="ui-sub">Actual Physical Care &amp; Adoption (Tamargo)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VIII</div>
+      <div class="ui-kicker">FIREARMS</div>
+      <div class="ui-sub">Bonus Paterfamilias Defense &amp; Libi Doctrine</div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Part 2 Overview &amp; Scope of Topics:</strong>
+    <ul>
+      <li><strong>V. Vicarious Liability of Parents:</strong> Nature of parental liability as primary and direct rather than subsidiary; statutory evolution from the preferential hierarchy under <span class="c-teal">Civil Code Article 2180 (par. 2)</span> to the joint and solidary parental authority under <span class="c-teal">Family Code Articles 211 and 221</span>; coverage of both intentional and negligent acts; essential requisites for parental liability.</li>
+      <li><strong>VI. The Age of Majority Exception (R.A. No. 6809) and Juvenile Delicts (R.A. No. 9344):</strong> Effect of Republic Act No. 6809 lowering the age of majority from 21 to 18; the express statutory retention of parental and guardian vicarious liability for children aged 18 to below 21 living in their company; distinction between <em>quasi-delict</em> under <span class="c-teal">Article 2180</span> and civil liability <em>ex delicto</em> of minor offenders under <span class="c-teal">Revised Penal Code Articles 100–101</span> and <span class="c-teal">Republic Act No. 9344</span> (Juvenile Justice and Welfare Act).</li>
+      <li><strong>VII. Custody, Adoption, and Substitute Parental Authority:</strong> Persons exercising substitute parental authority under the Family Code; legal vs. court-appointed guardianship over minors and incapacitated adults; the determinative rule of actual physical custody at the time of the tort during pending adoption proceedings; analysis of <span class="c-burgundy"><em>Tamargo v. Court of Appeals</em></span>.</li>
+      <li><strong>VIII. Presumption of Negligence, Defenses of Parents, and Firearm Incidents:</strong> Disputable presumption of <span class="c-green"><em>culpa in vigilando</em></span> against parents; the defense of diligence of a good father of a family (<span class="c-green"><em>bonus paterfamilias</em></span>) directed toward preventing damage vs. mere financial provision; concurrent negligence in school shootings and unsecured firearms; analysis of <span class="c-burgundy"><em>Libi v. Intermediate Appellate Court</em></span>.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="vicarious-liability-of-parents-art-2180-civil-code-family-code">V. VICARIOUS LIABILITY OF PARENTS (ART. 2180, CIVIL CODE &amp; FAMILY CODE)</h3>
+
+<h4 id="primary-and-direct-nature-of-parental-liability">Primary and Direct Nature of Parental Liability</h4>
+<ul>
+  <li><strong>Primary vs. Subsidiary Liability:</strong> A <span class="c-rust"><strong>subsidiary liability</strong></span> (such as an employer's subsidiary liability for an employee's crime under <span class="c-teal"><strong>Article 103 of the Revised Penal Code</strong></span>) is secondary and contingent upon a <em>conditio sine qua non</em>: the principal actor must first be adjudged liable and proven <span class="c-rust"><strong>insolvent</strong></span> before the subsidiary debtor can be compelled to pay.</li>
+  <li><strong>Operative Rule for Parents:</strong> Under <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> and <span class="c-teal"><strong>Article 221 of the Family Code</strong></span>, the vicarious liability of parents for the torts of their children is <span class="c-green"><strong><u>primary, direct, and solidary—NOT subsidiary</u></strong></span>. The injured plaintiff does not need to wait for the minor child to be declared insolvent, nor is parental liability merely "shifted" after the child fails to pay. Parents are sued directly as principal defendants because the law imputes the tort to their own failure to properly supervise the child under their parental authority.</li>
+</ul>
+
+<h4 id="statutory-evolution-civil-code-vs-family-code">Statutory Evolution: Civil Code vs. Family Code</h4>
+<ul>
+  <li><strong>Old Preferential Rule (Civil Code, Art. 2180, par. 2):</strong> Under the original text of <span class="c-teal"><strong>Article 2180</strong></span>, the father, and in case of his death or incapacity, the mother, are responsible for the damages caused by the minor children who live in their company. This created an alternative qualification or order of preference where the father was exclusively liable first, and the mother became liable only upon the father's death or legal incapacity.</li>
+  <li><strong>Modern Rule of Joint Parental Authority (Family Code, Art. 211):</strong> The father and the mother shall <span class="c-green"><strong><u>jointly exercise parental authority</u></strong></span> over the persons of their common children. Because the legal basis of parental vicarious liability is the <span class="c-green"><strong><u>exercise of parental authority</u></strong></span>, the elimination of the father's exclusive preference under the Family Code repealed the sequential hierarchy of Article 2180.</li>
+  <li><strong>Primary and Solidary Parental Responsibility (Family Code, Art. 221):</strong> Parents and other persons exercising parental authority shall be civilly liable for the injuries and damages caused by the acts or omissions of their unemancipated children living in their company and under their parental authority subject to the appropriate defenses provided by law <code>[Assumed reference to Art. 221 of the Family Code on primary and solidary liability of parents]</code>.</li>
+</ul>
+
+<h4 id="scope-and-requisites-of-parental-liability">Scope and Requisites of Parental Liability</h4>
+<ul>
+  <li><strong>Both Intentional and Negligent Acts Covered:</strong> In relation to <span class="c-teal"><strong>Article 2176 of the Civil Code</strong></span> and <span class="c-teal"><strong>Article 221 of the Family Code</strong></span>, the vicarious liability of parents encompasses <span class="c-green"><strong><u>both negligent acts and intentional torts</u></strong></span> (including acts that would otherwise constitute crimes or delicts) committed by the child.</li>
+  <li><strong>Essential Requisites for Parental Liability to Attach:</strong>
+    <ol>
+      <li>The child is below <span class="c-green"><strong>21 years of age</strong></span> (unemancipated for purposes of tort liability under <span class="c-teal"><strong>R.A. No. 6809</strong></span>);</li>
+      <li>The child is <span class="c-green"><strong><u>living in the company</u></strong></span> (under the actual physical custody and supervision) of the parents at the time the tort is committed;</li>
+      <li>The child commits an act or omission causing damage or injury to another; and</li>
+      <li>The parents fail to overcome the presumption of negligence by proving that they exercised the <span class="c-green"><strong><u>diligence of a good father of a family</u></strong></span> to prevent the damage.</li>
+    </ol>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Civil Code (Art. 2180, par. 2)</th>
+      <th>Family Code (Arts. 211 &amp; 221)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Order of Liability Between Parents</strong></td>
+      <td><strong>Sequential / Preferential:</strong> The father is primarily liable; the mother is liable only in case of the father's death or incapacity.</td>
+      <td><span class="c-green"><strong>Simultaneous / Joint Authority:</strong></span> Both father and mother jointly exercise parental authority and are <span class="c-green"><strong>primarily and solidarily</strong></span> liable.</td>
+    </tr>
+    <tr>
+      <td><strong>Doctrinal Basis of Liability</strong></td>
+      <td>Presumed failure of the head of the family to supervise the minor (<span class="c-green"><em>culpa in vigilando</em></span>).</td>
+      <td>Direct legal consequence of the joint exercise of <span class="c-green"><strong>parental authority</strong></span> and custody over the child.</td>
+    </tr>
+    <tr>
+      <td><strong>Nature of Obligation to Victim</strong></td>
+      <td>Primary and direct (not dependent on the child's insolvency).</td>
+      <td>Primary, direct, and solidary with the child and between the spouses.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="the-age-of-majority-exception-ra-no-6809-and-juvenile-delicts-ra-no-9344">VI. THE AGE OF MAJORITY EXCEPTION (R.A. NO. 6809) AND JUVENILE DELICTS (R.A. NO. 9344)</h3>
+
+<h4 id="the-ra-no-6809-exception-parental-liability-up-to-age-21">The R.A. No. 6809 Exception: Parental Liability Up to Age 21</h4>
+<ul>
+  <li><strong>Statutory Lowering of Majority (R.A. No. 6809, Sec. 1, amending Family Code, Art. 234):</strong> Emancipation takes place by the attainment of majority, which commences at the age of <span class="c-green"><strong>eighteen (18) years</strong></span>.</li>
+  <li><strong>Express Statutory Carve-Out for Tort Liability (R.A. No. 6809, Sec. 3):</strong> <span class="c-teal"><em>"Nothing in this Act shall be construed to derogate from the duty or responsibility of parents and guardians for children and wards below twenty-one (21) years of age mentioned in the second and third paragraphs of Article 2180 of the Civil Code."</em></span></li>
+  <li><strong>Operative Bar Exam Rule:</strong> Even though a person aged <span class="c-green"><strong>18, 19, or 20 years old</strong></span> is already of legal age (emancipated) for all general civil transactions, <span class="c-green"><strong><u>parents and guardians remain vicariously liable under Article 2180</u></strong></span> for the tortious acts or omissions of their children or wards who are <span class="c-green"><strong>18 years old up to below 21 years old</strong></span>, provided the child continues to live in their company and under their custody.</li>
+</ul>
+
+<h4>Professor's Illustration</h4>
+<blockquote>
+  Suppose Spouses A and B have a 20-year-old son, C, who is still studying and living in his parents' home. One afternoon, C negligently injures a neighbor. If Spouses A and B argue that they are no longer vicariously liable because C is already 20 years old and no longer a minor under the Family Code, their defense will fail. Under <strong>Section 3 of R.A. No. 6809</strong>, the lowering of the age of majority to 18 expressly preserved the vicarious responsibility of parents and guardians under <strong>Article 2180 of the Civil Code</strong> for children <strong>below 21 years of age</strong> living in their company.
+</blockquote>
+
+<h4 id="civil-liability-arising-from-delicts-of-minors-ra-no-9344-rpc">Civil Liability Arising from Delicts of Minors (R.A. No. 9344 &amp; RPC)</h4>
+<ul>
+  <li><strong>Civil Liability Attaches to Every Crime (RPC, Art. 100 &amp; Art. 101):</strong> Every person criminally liable for a felony is also civilly liable. Furthermore, the exemption from criminal liability of a minor under <span class="c-teal"><strong>R.A. No. 9344 (Juvenile Justice and Welfare Act of 2006)</strong></span> does <span class="c-rust"><strong><u>not</u></strong></span> include exemption from civil liability, which shall be enforced in accordance with existing laws <code>[Assumed reference to R.A. No. 9344, Sec. 6 and Sec. 20-A]</code>.</li>
+  <li><strong>Rules on Criminal and Civil Responsibility of Children in Conflict with the Law (CICL):</strong>
+    <ol>
+      <li><strong>Child 15 Years of Age or Under (R.A. No. 9344, Sec. 6):</strong> A child fifteen (15) years of age or under at the time of the commission of the offense is <span class="c-green"><strong>completely exempt from criminal liability</strong></span> (irrespective of discernment) and is subjected to an intervention program. However, <span class="c-green"><strong><u>civil liability remains</u></strong></span>, and the parents exercising parental authority are <span class="c-green"><strong>primarily civilly liable</strong></span> for the damages caused, subject to the defense of due diligence under <span class="c-teal"><strong>Article 101 of the Revised Penal Code</strong></span> and <span class="c-teal"><strong>Article 221 of the Family Code</strong></span>.</li>
+      <li><strong>Child Above 15 Years but Below 18 Years Acting WITHOUT Discernment:</strong> Exempt from criminal liability and subjected to intervention, but the <span class="c-green"><strong><u>parents remain primarily liable for the civil damages</u></strong></span>.</li>
+      <li><strong>Child Above 15 Years but Below 18 Years Acting WITH Discernment:</strong> Not exempt from criminal liability (undergoes diversion or juvenile justice proceedings depending on the imposable penalty). <span class="c-green"><strong><u>Civil liability automatically attaches</u></strong></span>, and the parents are <span class="c-green"><strong>primarily liable</strong></span> to pay the civil indemnity for the damage caused by the minor offender living in their company.</li>
+    </ol>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Age Category of Child / Ward</th>
+      <th>Criminal Liability Status</th>
+      <th>Parental / Guardian Civil Liability Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>15 Years Old and Below</strong></td>
+      <td><span class="c-green"><strong>Absolute Exemption</strong></span> from criminal liability (discernment is immaterial; intervention applies).</td>
+      <td><span class="c-green"><strong>Parents are Primarily Liable</strong></span> for civil damages (<span class="c-teal">RPC Art. 101, R.A. 9344 Sec. 6, Civil Code Art. 2180, Family Code Art. 221</span>).</td>
+    </tr>
+    <tr>
+      <td><strong>Above 15 to Below 18 (Without Discernment)</strong></td>
+      <td><span class="c-green"><strong>Exempt</strong></span> from criminal liability (intervention applies).</td>
+      <td><span class="c-green"><strong>Parents are Primarily Liable</strong></span> for civil damages caused by the child living in their company.</td>
+    </tr>
+    <tr>
+      <td><strong>Above 15 to Below 18 (With Discernment)</strong></td>
+      <td><span class="c-rust"><strong>Criminally Liable</strong></span> (subject to diversion or suspended sentence under R.A. 9344).</td>
+      <td><span class="c-green"><strong>Parents are Primarily Liable</strong></span> to satisfy the civil liability attached to the offense or <em>quasi-delict</em>.</td>
+    </tr>
+    <tr>
+      <td><strong>18 Years Old to Below 21 Years Old</strong></td>
+      <td><strong>Full Adult Criminal Liability</strong> (parents are not liable for pure criminal indemnity <em>ex delicto</em>).</td>
+      <td><span class="c-green"><strong>Parents Remain Vicariously Liable for Quasi-Delict</strong></span> under <span class="c-teal"><strong>Civil Code Art. 2180</strong></span> per the express mandate of <span class="c-teal"><strong>R.A. 6809, Sec. 3</strong></span>, if living in their company.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="custody-adoption-and-substitute-parental-authority">VII. CUSTODY, ADOPTION, AND SUBSTITUTE PARENTAL AUTHORITY</h3>
+
+<h4 id="persons-exercising-substitute-parental-authority-and-guardianship">Persons Exercising Substitute Parental Authority and Guardianship</h4>
+<ul>
+  <li><strong>Hierarchy of Substitute Parental Authority (Family Code, Arts. 216 &amp; 222):</strong> In default of parents or a judicially appointed guardian, the following persons shall exercise <span class="c-green"><strong><u>substitute parental authority</u></strong></span> over the child in the order indicated, and consequently bear vicarious liability while the child is in their custody:
+    <ol>
+      <li>The surviving <span class="c-green"><strong>grandparent</strong></span> (as designated by the court if several survive);</li>
+      <li>The <span class="c-green"><strong>oldest brother or sister, over twenty-one (21) years of age</strong></span>, unless unfit or disqualified; and</li>
+      <li>The <span class="c-green"><strong>actual custodian of the child, over twenty-one (21) years of age</strong></span>, unless unfit or disqualified <code>[Assumed reference to Art. 216 of the Family Code]</code>.</li>
+    </ol>
+  </li>
+  <li><strong>Legal Guardianship of Parents vs. Court-Appointed Guardians:</strong>
+    <ul>
+      <li><strong>Over Minors:</strong> Biological or adoptive parents are already the <span class="c-green"><strong>legal guardians over the person</strong></span> of their minor children by operation of law; they do not need to file a petition for guardianship over the person of their own child (judicial guardianship by parents is only required when managing substantial <strong>properties</strong> of the minor under <span class="c-teal">Family Code Art. 225</span>).</li>
+      <li><strong>Over Incapacitated Adults (Civil Code, Art. 2180, par. 3):</strong> Guardians are liable for damages caused by the minors <span class="c-green"><strong>or incapacitated persons</strong></span> who are under their authority and live in their company. If a person is appointed judicial guardian over an adult who is legally <span class="c-rust"><strong>incompetent or incapacitated</strong></span> (e.g., insane, imbecile, or suffering from severe mental incapacity), the guardian is vicariously liable only if it is proven as a matter of fact that: (1) the ward is legally incapacitated; (2) the defendant is the duly appointed guardian exercising authority over the ward; and (3) the incapacitated ward <span class="c-green"><strong><u>lives in the guardian's company</u></strong></span>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="effect-of-adoption-on-parental-vicarious-liability">Effect of Adoption on Parental Vicarious Liability</h4>
+<ul>
+  <li><strong>Determinative Point in Time:</strong> Under <span class="c-teal"><strong>Article 2180</strong></span>, parental liability is anchored on <span class="c-green"><em>culpa in vigilando</em></span>—the failure to supervise the child <span class="c-green"><strong><u>at the exact moment the tortious act or omission is committed</u></strong></span>, not at the time the civil complaint is filed or decided.</li>
+  <li><strong>Pending Adoption vs. Trial Custody:</strong>
+    <ul>
+      <li>If a minor commits a tort while a petition for adoption is pending, the court must determine <span class="c-green"><strong><u>who had actual physical custody and was actually exercising parental authority over the child at the time of the injury</u></strong></span>.</li>
+      <li>If the child was still living with his <span class="c-green"><strong>biological (natural) parents</strong></span> when the tort occurred, the biological parents are solely liable, even if the adoption decree is subsequently granted and made retroactive to the filing of the petition.</li>
+      <li>Conversely, if the child had already been transferred to the physical care of the <span class="c-green"><strong>prospective adoptive parents under supervised trial custody</strong></span> (or under DSWD custody) when the tort was committed, the party exercising actual custody and supervision at that moment bears the responsibility.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tamargo-v-court-of-appeals-gr-no-85044-june-3-1992"><span class="c-burgundy"><em>Tamargo v. Court of Appeals</em></span> (G.R. No. 85044, June 3, 1992)</h4>
+<ul>
+  <li><strong>Facts:</strong> On October 20, 1982, 10-year-old Adelberto Bundoc shot and killed Jennifer Tamargo with an air rifle while Adelberto was still physically living with his natural parents, Spouses Victor and Clara Bundoc. The natural parents disclaimed liability by pointing out that prior to the shooting, a petition to adopt Adelberto had already been filed in December 1981 by adopting parents (Spouses Rapisura), and the final decree of adoption was granted in November 1982 after the shooting.</li>
+  <li><strong>Issue:</strong> May the natural parents of a minor tortfeasor be absolved of vicarious liability under Article 2180 by invoking the retroactive effect of an adoption decree when the minor was still in their actual physical custody at the time of the shooting?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No.</u></strong></span> Parental liability under <span class="c-teal"><strong>Article 2180</strong></span> is based on presumed failure to exercise due supervision (<span class="c-green"><em>culpa in vigilando</em></span>) over a child living in the parents' company at the time the tort was committed. While a decree of adoption generally retroacts to the date of the filing of the petition for the welfare of the child, <span class="c-rust"><strong><u>retroactivity cannot be applied to impose vicarious tort liability upon adopting parents who did not yet have actual physical custody and control over the child</u></strong></span> when the shooting happened, nor can it absolve the natural parents who had actual custody at that time.</li>
+</ul>
+
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,stroke-width:1.5px;
+          classDef teal fill:#F0FDFA,stroke:#0F766E,color:#0F766E,stroke-width:1.5px;
+          classDef green fill:#F0FDF4,stroke:#166534,color:#166534,stroke-width:1.5px;
+          classDef rust fill:#FFF7ED,stroke:#C2410C,color:#C2410C,stroke-width:1.5px;
+
+          TortDone["Minor Commits Tort / Crime<br/>(Air Rifle Shooting in Tamargo v. CA)"]:::navy
+
+          TortDone --> CheckCustody{"Who exercised ACTUAL PHYSICAL CUSTODY<br/>and supervision at the exact moment<br/>the tort was committed?"}:::teal
+
+          CheckCustody -->|Living with Natural Parents| NaturalLiable["<b>NATURAL PARENTS SOLELY LIABLE</b><br/>(Art. 2180, par. 2 &amp; Art. 221 FC)<br/>Presumption of Culpa in Vigilando Attaches"]:::rust
+
+          CheckCustody -->|Transferred to Adoptive Parents under Supervised Trial Custody| AdoptiveLiable["<b>PROSPECTIVE ADOPTIVE PARENTS LIABLE</b><br/>Party exercising actual custody and care<br/>bears vicarious responsibility"]:::green
+
+          NaturalLiable --> ClaimRetro{"Natural Parents Claim Absolution:<br/>Petition to Adopt was already pending<br/>and decree retroacts to filing date?"}:::navy
+
+          ClaimRetro --> TamargoDoctrine["<b>TAMARGO DOCTRINE:</b><br/>Retroactivity of adoption decree CANNOT impose<br/>tort liability on adopting parents who lacked physical custody,<br/>NOR absolve natural parents who had custody!"]:::rust
+      </pre>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h3 id="presumption-of-negligence-defenses-of-parents-and-firearm-incidents">VIII. PRESUMPTION OF NEGLIGENCE, DEFENSES OF PARENTS, AND FIREARM INCIDENTS</h3>
+
+<h4 id="presumption-of-negligence-and-the-defense-of-bonus-paterfamilias">Presumption of Negligence and the Defense of <em>Bonus Paterfamilias</em></h4>
+<ul>
+  <li><strong>Disputable Presumption of Negligence (Civil Code, Art. 2180, last par.):</strong> The responsibility treated of in this article shall cease when the persons herein mentioned prove that they observed all the <span class="c-green"><strong><u>diligence of a good father of a family to prevent damage</u></strong></span>.</li>
+  <li><strong>Burden of Proof on the Parents:</strong> Once the plaintiff proves that a child below 21 living in the company of his parents caused damage to another, the <span class="c-green"><strong><u>law immediately presumes that the parents were negligent</u></strong></span> in supervising the child. The burden of evidence shifts entirely to the parents to prove due diligence.</li>
+  <li><strong>Nature of the Required Diligence:</strong> Proving that a parent is a "good provider" who pays for the child's tuition, food, shelter, and allowance is <span class="c-rust"><strong><u>completely irrelevant and insufficient</u></strong></span> as a defense. The diligence of a good father of a family must be <span class="c-green"><strong><u>specifically directed toward the prevention of the damage</u></strong></span>—such as instilling proper moral discipline, actively monitoring the child's behavior and companions, instructing the child on the consequences of wrongful acts, and keeping dangerous instrumentalities out of the child's reach.</li>
+</ul>
+
+<h4 id="concurrent-negligence-in-firearm-and-school-shooting-incidents">Concurrent Negligence in Firearm and School Shooting Incidents</h4>
+<ul>
+  <li><strong>Unsecured Firearms Obtained by Minors:</strong> When a minor obtains a firearm belonging to a parent (e.g., a Bureau of Customs employee keeping a gun at home) or a relative (e.g., an aunt who is a police officer) and uses it in a school shooting:
+    <ol>
+      <li><strong>Liability of the Parents:</strong> The parents of the minor shooter are <span class="c-green"><strong><u>primarily and solidarily liable under Article 2180</u></strong></span> for failing to exercise the diligence of a good father of a family in supervising the minor under their care and custody. If the firearm belonged to the father and was kept accessible inside the house, the father is doubly negligent—both as an irresponsible firearm owner and as a remiss parent.</li>
+      <li><strong>Liability of the Third-Party Firearm Owner (e.g., Police Officer Aunt):</strong> Even if the aunt does not exercise parental authority over the minor, the victims' heirs may hold the aunt solidarily liable as a <span class="c-green"><strong><u>joint tortfeasor under Articles 2176 and 2194</u></strong></span> if her independent negligence in failing to safely secure her service firearm formed part of the <span class="c-green"><strong><u>causal set</u></strong></span> that enabled the minor to commit the shooting.</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="libi-v-intermediate-appellate-court-gr-no-70890-september-18-1992"><span class="c-burgundy"><em>Libi v. Intermediate Appellate Court</em></span> (G.R. No. 70890, September 18, 1992)</h4>
+<ul>
+  <li><strong>Facts:</strong> Wendell Libi, a minor living with his parents Spouses Cresencio and Amelia Libi, was spurned by his former sweetheart, Julie Ann Gotiong, whom he persistently pestered to reconcile. Wendell surreptitiously took his father Cresencio's Smith &amp; Wesson revolver from a safety deposit box at home and shot Julie Ann at her friend's boarding house before turning the gun on himself, killing them both with a single bullet.</li>
+  <li><strong>Issue:</strong> Are the parents of Wendell Libi primarily and solidarily liable for damages under Article 2180, and did they successfully prove the defense of diligence of a good father of a family?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes, the parents are primarily and solidarily liable, and they failed to prove due diligence.</u></strong></span> The liability of parents for the torts of their minor children under <span class="c-teal"><strong>Article 2180</strong></span> is <span class="c-green"><strong><u>primary and direct, not subsidiary</u></strong></span>, and covers both negligent acts and intentional felonies. Spouses Libi failed to exercise the diligence of a good father of a family to prevent the damage because they left the key to the safety deposit box containing a lethal firearm in a handbag accessible to their son and failed to closely monitor him despite knowing of his behavioral problems.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-3-heading" class="c-navy">PART 3: VICARIOUS LIABILITY OF SCHOOLS, ADMINISTRATORS, AND TEACHERS</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">IX</div>
+      <div class="ui-kicker">STATUTORY BASES</div>
+      <div class="ui-sub">CC Art. 2180 vs. FC Arts. 218–219</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">X</div>
+      <div class="ui-kicker">SCOPE &amp; WAIVERS</div>
+      <div class="ui-sub">Custody, Outings &amp; Void Liability Waivers</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XI</div>
+      <div class="ui-kicker">LANDMARK JURISPRUDENCE</div>
+      <div class="ui-sub">Amadora, St. Francis, St. Mary's &amp; PSBA</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XII</div>
+      <div class="ui-kicker">ADMIN &amp; ASIDES</div>
+      <div class="ui-sub">Reading List, Case Citations &amp; Quiz 1</div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Part 3 Overview &amp; Scope of Topics:</strong>
+    <ul>
+      <li><strong>IX. Statutory Framework of School and Teacher Liability (Civil Code vs. Family Code):</strong> Comparison between <span class="c-teal">Civil Code Article 2180 (par. 7)</span> and <span class="c-teal">Family Code Articles 218 and 219</span>; distinction between academic institutions and establishments of arts and trades; expansion of special parental authority to schools, administrators, teachers, and child-care institutions (including daycare centers and commercial mall play areas); primary and solidary liability of school authorities vs. subsidiary liability of parents.</li>
+      <li><strong>X. Scope of Special Parental Authority in Academic and Extracurricular Activities:</strong> Meaning of custody and supervision under the Civil Code and Family Code; application to authorized activities inside and outside school premises; invalidity of student waivers of tort liability; analysis of classroom hypotheticals (classroom science experiment, visiting parish catechist, semestral break basketball training by the beach, and unauthorized semestral break social outing).</li>
+      <li><strong>XI. Landmark Jurisprudence on School Liability and <em>Culpa Contractual</em> for Outsider Torts:</strong> Compact case briefs of <span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span>, <span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span>, <span class="c-burgundy"><em>St. Mary's Academy v. Carpitanos</em></span>, <span class="c-burgundy"><em>Philippine School of Business Administration (PSBA) v. Court of Appeals</em></span>, and <span class="c-burgundy"><em>Valenzuela v. Court of Appeals</em></span>; liability of schools when a trespasser or outsider injures a student based on breach of the enrollment contract (<span class="c-green"><em>culpa contractual</em></span>) and the implied obligation to maintain a safe learning environment.</li>
+      <li><strong>XII. Administrative Matters &amp; Professor's Asides:</strong> Summary of class directives, grading announcements, case citation rules, and upcoming assessments.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="statutory-framework-of-school-and-teacher-liability-civil-code-vs-family-code">IX. STATUTORY FRAMEWORK OF SCHOOL AND TEACHER LIABILITY (CIVIL CODE VS. FAMILY CODE)</h3>
+
+<h4 id="evolution-from-civil-code-article-2180-to-family-code-articles-218219">Evolution from Civil Code Article 2180 to Family Code Articles 218–219</h4>
+<ul>
+  <li><strong>Civil Code, Art. 2180, par. 7:</strong> Lastly, <span class="c-teal"><strong>teachers or heads of establishments of arts and trades</strong></span> shall be liable for damages caused by their pupils and students or apprentices, <span class="c-green"><strong><u>so long as they remain in their custody</u></strong></span>.
+    <ul>
+      <li><strong>Doctrinal Interpretation of Art. 2180 (Par. 7):</strong> Under the Civil Code, where the school is <strong>academic</strong> in nature, the responsibility for the tort committed by the student attaches to the <span class="c-green"><strong>teacher in charge</strong></span>; where the institution is an <span class="c-green"><strong>establishment of arts and trades</strong></span> (technical or vocational), the responsibility attaches to the <span class="c-green"><strong>head of the establishment</strong></span>. Moreover, because <span class="c-teal"><strong>Article 2180</strong></span> was preserved by <span class="c-teal"><strong>R.A. No. 6809</strong></span>, it continues to apply to students <span class="c-green"><strong>18 to below 21 years of age</strong></span> (and even adult students in arts and trades under classic jurisprudence, though primarily applied to unemancipated students in academic settings).</li>
+    </ul>
+  </li>
+  <li><strong>Family Code, Art. 218 (Special Parental Authority):</strong> The <span class="c-green"><strong><u>school, its administrators and teachers</u></strong></span>, or the <span class="c-green"><strong><u>individual, entity or institution engaged in child care</u></strong></span> shall have <span class="c-green"><strong><u>special parental authority and responsibility</u></strong></span> over the <span class="c-green"><strong>minor child</strong></span> while under their supervision, instruction or custody. Authority and responsibility shall apply to <span class="c-green"><strong><u>all authorized activities whether inside or outside the premises</u></strong></span> of the school, entity or institution.</li>
+  <li><strong>Family Code, Art. 219 (Nature of Liability):</strong> Those given the authority and responsibility under the preceding Article shall be <span class="c-green"><strong><u>principally and solidarily liable</u></strong></span> for damages caused by the acts or omissions of the unemancipated minor. The <span class="c-rust"><strong><u>parents, judicial guardians or the persons exercising substitute parental authority</u></strong></span> over said minor shall be <span class="c-rust"><strong><u>subsidiarily liable</u></strong></span> <code>[Assumed reference to Art. 219 of the Family Code]</code>.</li>
+  <li><strong>Defense of Due Diligence:</strong> The respective liabilities of those referred to in Articles 218 and 219 shall <span class="c-rust"><strong><u>not apply</u></strong></span> if it is proved that they exercised the <span class="c-green"><strong><u>proper diligence required under the particular circumstances</u></strong></span>.</li>
+</ul>
+
+<h4 id="coverage-of-institutions-engaged-in-child-care">Coverage of Institutions Engaged in Child Care</h4>
+<ul>
+  <li><strong>Daycare Facilities and Commercial Play Areas:</strong> Under <span class="c-teal"><strong>Article 218 of the Family Code</strong></span>, special parental authority is not limited to traditional elementary or high schools. It expressly extends to any <span class="c-green"><strong>"individual, entity or institution engaged in child care."</strong></span></li>
+  <li><strong>Application to Corporate Daycares and Mall Playgrounds:</strong> This statutory phrase encompasses community or DSWD daycare centers, 24-hour or workplace daycare facilities provided by private companies or government agencies for employees' children, and <span class="c-green"><strong><u>commercial play areas inside shopping malls</u></strong></span> (such as indoor playground establishments like <em>Kidzoona</em> that charge on a per-hour basis to take custody of and supervise minor children while their parents shop). While a minor child is left inside such a facility under the staff's care, the establishment exercises special parental authority and is <span class="c-green"><strong><u>principally and solidarily liable</u></strong></span> for injuries caused by or to the children under its supervision.</li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Statutory Dimension</th>
+      <th>Civil Code, Art. 2180 (Par. 7)</th>
+      <th>Family Code, Arts. 218 &amp; 219</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Age of Student Covered</strong></td>
+      <td>Students <span class="c-green"><strong>below 21 years of age</strong></span> (pursuant to the R.A. 6809 exception preserving Art. 2180).</td>
+      <td>Strictly <span class="c-green"><strong>minor children</strong></span> (below 18 years of age).</td>
+    </tr>
+    <tr>
+      <td><strong>Persons Held Primarily Liable</strong></td>
+      <td><span class="c-green"><strong>Teachers</strong></span> (for academic schools) OR <span class="c-green"><strong>Heads of establishments</strong></span> (for schools of arts and trades); the school itself may be liable as employer under par. 5.</td>
+      <td><span class="c-green"><strong>The school, its administrators, and teachers</strong></span>, OR any <span class="c-green"><strong>entity/institution engaged in child care</strong></span>, are <span class="c-green"><strong>principally and solidarily liable</strong></span> together.</td>
+    </tr>
+    <tr>
+      <td><strong>Liability of Parents / Guardians</strong></td>
+      <td>Parents are not liable while custody is transferred to the teacher/head under Art. 2180 par. 7.</td>
+      <td>Parents, judicial guardians, or substitute parents are <span class="c-rust"><strong>subsidiarily liable</strong></span> if the school/teachers are insolvent (Art. 219).</td>
+    </tr>
+    <tr>
+      <td><strong>Geographic / Activity Scope</strong></td>
+      <td>So long as the pupils, students, or apprentices <span class="c-green"><strong>"remain in their custody"</strong></span> (attendance in school or official recess/dormitory).</td>
+      <td>Applies to <span class="c-green"><strong>all authorized activities</strong></span>, whether conducted <span class="c-green"><strong>inside or outside the premises</strong></span> of the school or institution.</td>
+    </tr>
+    <tr>
+      <td><strong>Available Legal Defense</strong></td>
+      <td>Observance of all the <span class="c-green"><strong>diligence of a good father of a family</strong></span> to prevent damage (Art. 2180, last par.).</td>
+      <td>Exercise of the <span class="c-green"><strong>proper diligence required under the particular circumstances</strong></span> (Art. 219, par. 2).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="scope-of-special-parental-authority-in-academic-and-extracurricular-activities">X. SCOPE OF SPECIAL PARENTAL AUTHORITY IN ACADEMIC AND EXTRACURRICULAR ACTIVITIES</h3>
+
+<h4 id="meaning-of-in-their-custody-and-authorized-activities">Meaning of "In Their Custody" and "Authorized Activities"</h4>
+<ul>
+  <li><strong>Custody Does Not Require Boarding:</strong> For a student to be considered "in the custody" of the school or teacher under <span class="c-teal"><strong>Article 2180</strong></span> or <span class="c-teal"><strong>Article 218 of the Family Code</strong></span>, it is <span class="c-rust"><strong><u>not required</u></strong></span> that the student be boarding or living in a school dormitory. A student is in the custody of the school and its teachers from the moment the student enters the school premises to attend classes, throughout class hours, during official recess or breaks between classes, and while remaining on campus for legitimate school purposes.</li>
+  <li><strong>Authorized Extracurricular Activities Outside Campus:</strong> Under <span class="c-teal"><strong>Article 218 of the Family Code</strong></span>, special parental authority and solidary liability attach to <span class="c-green"><strong><u>all authorized activities</u></strong></span>, even when held <span class="c-green"><strong>outside the school premises</strong></span> (e.g., field trips, official athletic trainings, retreats) and even during <span class="c-green"><strong>semestral breaks</strong></span>, provided the activity was sanctioned, approved, or authorized by the school administration. Conversely, if teachers organize a purely private, unauthorized social outing with students without official school sanction, the school itself is not vicariously liable under Article 218, though the negligent teachers who spearheaded the outing remain personally liable.</li>
+  <li><strong>Invalidity of Waivers of Liability:</strong> A written waiver or parental consent form signed prior to a training or field trip absolving the school or coach from liability in case of injury or death is <span class="c-rust"><strong><u>void and ineffective</u></strong></span> as against public policy (<span class="c-teal"><strong>Article 1171 and Article 6, Civil Code</strong></span>) to the extent that it seeks to excuse future negligence of the school, its administrators, or its teachers/coaches.</li>
+</ul>
+
+<h4>Professor's Illustration</h4>
+<blockquote>
+  <strong>Scenario 1 (Classroom Science Experiment):</strong> Teacher A conducts a science experiment inside a regular classroom (not a laboratory) without providing safety goggles. Instructed by her group leader to check if the mixed sulfur chemicals are reacting, Student B peers directly into the test tube, which erupts and blinds her eye. <strong>Both Teacher A and the School are solidarily liable.</strong> Even though the group leader gave the foolish instruction, Teacher A failed to exercise due diligence in actively supervising a hazardous experiment under her special parental authority, and the School was negligent both as an educational institution and employer for allowing chemical experiments in an ordinary classroom without safety gear or protocols.
+</blockquote>
+
+<h4>Application Example</h4>
+<blockquote>
+  <strong>Scenario 2 (Visiting Parish Catechist):</strong> Suppose a public or private school allows a volunteer catechist (employed by the local church parish, not the school) to conduct religion classes inside a classroom. If one minor student beats up a classmate during that period, or if the catechist physically hits a student, <strong>the school and its administrators remain solidarily liable</strong> alongside the catechist. By admitting the catechist into the classroom and entrusting the students to him during school hours, the school did not divest itself of its special parental authority and continuous duty under <strong>Article 218</strong> to supervise the students and ensure their safety on campus.
+</blockquote>
+
+<h4>Professor's Illustration</h4>
+<blockquote>
+  <strong>Scenario 3 (Semestral Break Basketball Beach Training vs. Social Outing):</strong> During semestral break, a school's varsity basketball coach conducts physical training by the beach in Agoo, La Union, with the knowledge and approval of the school, where a player drowns. Even though the coach is not an academic teacher, the school is on semestral break, and the player signed a waiver, <strong>both the coach and the school are solidarily liable</strong>. The training is an <strong>authorized extracurricular activity outside school premises</strong> under <strong>Article 218</strong>, and a waiver cannot excuse negligence. Conversely, if teachers and players merely went on a purely social beach outing during semestral break outside the teachers' official functions, only the negligent teachers who spearheaded the outing—and not the school—are liable.
+</blockquote>
+
+<hr>
+
+<h3 id="landmark-jurisprudence-on-school-liability-and-culpa-contractual-for-outsider-torts">XI. LANDMARK JURISPRUDENCE ON SCHOOL LIABILITY AND <em>CULPA CONTRACTUAL</em> FOR OUTSIDER TORTS</h3>
+
+<h4 id="compact-case-law-analysis-of-assigned-jurisprudence">Compact Case Law Analysis of Assigned Jurisprudence</h4>
+
+<h4 id="amadora-v-court-of-appeals-gr-no-l-47745-april-15-1988-160-scra-315"><span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span> (G.R. No. L-47745, April 15, 1988, 160 SCRA 315)</h4>
+<ul>
+  <li><strong>Facts:</strong> Three days before high school graduation, 17-year-old Alfredo Amadora went to the auditorium of Colegio de San Jose-Recoletos to submit his required physics report and was fatally shot by his classmate, Pablito Daffon.</li>
+  <li><strong>Issue:</strong> Does Article 2180 (par. 7) of the Civil Code apply to academic educational institutions as well as schools of arts and trades, and is the teacher-in-charge liable here?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Article 2180 applies to all schools, both academic and non-academic</u></strong></span>, with the distinction that for academic schools, liability attaches to the <span class="c-green"><strong>teacher-in-charge</strong></span>, whereas for establishments of arts and trades, liability attaches to the <span class="c-green"><strong>head of the establishment</strong></span>. Furthermore, a student remains in the school's custody whenever he is on campus for a legitimate student purpose (even during semestral break or just before graduation to submit a physics report); however, none of the respondents were held liable here because the physics teacher was not present or in charge of the auditorium and the school had no notice of the concealed gun.</li>
+</ul>
+
+<h4 id="st-francis-high-school-v-court-of-appeals-gr-no-82465-february-25-1991-194-scra-341"><span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span> (G.R. No. 82465, February 25, 1991, 194 SCRA 341)</h4>
+<ul>
+  <li><strong>Facts:</strong> Thirteen-year-old Ferdinand Castillo drowned during a picnic at Tala Beach, Sariaya, Quezon, organized by several high school teachers during a non-school day without the official sanction or approval of the school administration, though the principal knew of the plan.</li>
+  <li><strong>Issue:</strong> Are the school, its principal, and the teachers who organized the beach picnic solidarily liable for the drowning of the student?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Only the teachers who actually organized and attended the picnic</u></strong></span>—and failed to bring life-saving equipment or closely supervise the students in deep water—are solidarily liable under <span class="c-teal"><strong>Article 2176</strong></span>. The <span class="c-rust"><strong><u>school and the principal are not vicariously liable</u></strong></span> under Article 2180 because the picnic was a purely social, extracurricular outing that was neither an official school function nor officially sanctioned by the school, and mere knowledge by the principal without official authorization does not bind the school.</li>
+</ul>
+
+<h4 id="st-marys-academy-v-carpitanos-gr-no-143363-february-6-2002"><span class="c-burgundy"><em>St. Mary's Academy v. Carpitanos</em></span> (G.R. No. 143363, February 6, 2002)</h4>
+<ul>
+  <li><strong>Facts:</strong> During an enrollment campaign authorized by St. Mary's Academy, 15-year-old student Sherwin Carpitanos died when a jeep owned by Vivencio Villanueva and driven by another minor student, James Daniel II, turned turtle after its steering wheel guide pin detached.</li>
+  <li><strong>Issue:</strong> Can St. Mary's Academy be held solidarily liable under Articles 218 and 219 of the Family Code when the proximate cause of the accident was a mechanical defect in the vehicle rather than the negligence of the school or the minor student-driver?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No.</u></strong></span> For a school to be held liable under <span class="c-teal"><strong>Articles 218 and 219 of the Family Code</strong></span>, the negligence of the school or the tortious act of the minor student under its special parental authority must be the <span class="c-green"><strong><u>proximate cause</u></strong></span> of the injury. Because the investigating traffic officer established that the proximate cause of the crash was the sudden detachment of the jeep's steering wheel guide pin—attributed to the registered vehicle owner rather than the school's negligence—the school was absolved of liability.</li>
+</ul>
+
+<h4 id="philippine-school-of-business-administration-psba-v-court-of-appeals-gr-no-84698-february-4-1992-205-scra-729"><span class="c-burgundy"><em>Philippine School of Business Administration (PSBA) v. Court of Appeals</em></span> (G.R. No. 84698, February 4, 1992, 205 SCRA 729)</h4>
+<ul>
+  <li><strong>Facts:</strong> Carlitos Bautista, a third-year commerce student at PSBA, was stabbed to death on the second-floor premises of the school by assailants who were outsiders and not students of PSBA.</li>
+  <li><strong>Issue:</strong> May an educational institution be held civilly liable when a student is killed on campus by outsiders/trespassers, and what is the legal basis of such liability?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes, on the basis of breach of contract (culpa contractual) and/or quasi-delict under Article 2176, but NOT under Article 2180.</u></strong></span> Article 2180 (par. 7) applies only when the injury is caused <span class="c-rust"><strong>by a student</strong></span> of the school, not by an outsider. However, when a student enrolls, a <span class="c-green"><strong><u>contract of education</u></strong></span> is perfected between the school and the student; as a necessary and natural consequence of the school's principal obligation to impart education, the school undertakes an <span class="c-green"><strong><u>implied contractual obligation to maintain peace and order and provide an atmosphere conducive to learning and safety</u></strong></span> on campus, the negligent breach of which renders the school liable for damages.</li>
+</ul>
+
+<h4 id="valenzuela-v-court-of-appeals-gr-no-115024-february-7-1996-253-scra-303"><span class="c-burgundy"><em>Valenzuela v. Court of Appeals</em></span> (G.R. No. 115024, February 7, 1996, 253 SCRA 303)</h4>
+<ul>
+  <li><strong>Facts:</strong> Ma. Lourdes Valenzuela suffered a traumatic amputation of her legs after being hit by a speeding car driven by Richard Li while she was parked on the side of Aurora Boulevard, and Li's employer, Alexander Commercial, Inc., was impleaded as co-defendant because Li was driving a company-provided car.</li>
+  <li><strong>Issue:</strong> What is the nature and basis of an employer's vicarious liability under Article 2180 when an employee causes injury while using a company-assigned vehicle?</li>
+  <li><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>The employer is primarily and solidarily liable with the employee under Article 2180 (par. 5) in relation to Article 2194.</u></strong></span> The employer's liability is not based on <em>respondeat superior</em>, but on its own presumed <span class="c-green"><em>culpa in eligendo</em></span> and <span class="c-green"><em>culpa in vigilando</em></span> (<em>paterfamilias</em> standard); by furnishing the employee with a company car without enforcing strict supervisory rules on its safe operation, the employer failed to prove the diligence of a good father of a family and is solidarily liable for the full damages.</li>
+</ul>
+
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,stroke-width:1.5px;
+          classDef teal fill:#F0FDFA,stroke:#0F766E,color:#0F766E,stroke-width:1.5px;
+          classDef green fill:#F0FDF4,stroke:#166534,color:#166534,stroke-width:1.5px;
+          classDef rust fill:#FFF7ED,stroke:#C2410C,color:#C2410C,stroke-width:1.5px;
+
+          StudentHarm["Student Suffers Physical Injury / Death<br/>On Campus or During School Activity"]:::navy
+
+          StudentHarm --> SourceCheck{"Who is the tortfeasor / direct cause of injury?"}:::teal
+
+          SourceCheck -->|Fellow Student / Pupil| StudentActor["TORT BY STUDENT<br/>(Arts. 218-219 FC / Art. 2180 CC)"]:::teal
+          SourceCheck -->|Outsider / Non-Student Trespasser| OutsiderActor["TORT BY OUTSIDER / TRESPASSER<br/>(PSBA Doctrine)"]:::rust
+
+          StudentActor --> ActivityCheck{"Was the activity an officially authorized function?"}:::navy
+
+          ActivityCheck -->|Authorized: On Campus or Off-Campus| AuthLiable["<b>SCHOOL, ADMIN &amp; TEACHERS SOLIDARILY LIABLE</b><br/>(Art. 218 FC: Special Parental Authority)<br/>Parents are Subsidiarily Liable (Art. 219)<br/><i>Liability Waivers are VOID</i>"]:::rust
+
+          ActivityCheck -->|Unauthorized Social Outing / Beach Picnic| UnauthLiable["<b>SCHOOL &amp; PRINCIPAL ABSOLVED</b><br/>Only organizing teachers liable under Art. 2176<br/>(St. Francis High School v. CA)"]:::teal
+
+          StudentActor --> ProxCheck{"Was the proximate cause negligence<br/>or third-party mechanical defect?"}:::navy
+
+          ProxCheck -->|Mechanical Defect in Vehicle| AbsolveSchool["<b>SCHOOL ABSOLVED</b><br/>Proximate cause was steering defect, not negligence<br/>(St. Mary's Academy v. Carpitanos)"]:::green
+
+          OutsiderActor --> PSBARule["<b>PSBA v. CA DOCTRINE:</b><br/>• Art. 2180, par. 7 DOES NOT APPLY (non-student)<br/>• <b>BREACH OF CONTRACT (Culpa Contractual):</b><br/>Implied covenant to provide safe learning environment<br/>• <b>QUASI-DELICT (Art. 2176):</b> Negligent campus security"]:::rust
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h4 id="synthesis-liability-when-an-outsider-trespasser-injures-a-student-on-campus">Synthesis: Liability When an Outsider / Trespasser Injures a Student on Campus</h4>
+<ul>
+  <li><strong>Inapplicability of Vicarious Liability Under Art. 2180 (Par. 7):</strong> When a trespasser or non-student enters the school campus and shoots or stabs a student, <span class="c-rust"><strong><u>Article 2180, par. 7 does not apply</u></strong></span> because the attacker is not a pupil or student under the teacher's or school's custody.</li>
+  <li><strong>Dual Basis of Direct School Liability (<em>PSBA</em> Doctrine):</strong>
+    <ol>
+      <li><strong>Breach of Contract (<em>Culpa Contractual</em> under Arts. 1170 &amp; 1172, Civil Code):</strong> Enrollment creates a bilateral contract between the student and the school. In exchange for tuition, the school obligates itself to provide education. Although a school is not an insurer of safety or a security agency, <span class="c-green"><strong><u>providing a safe and secure campus environment is a necessary inclusion and natural consequence of the obligation to educate</u></strong></span>, because no student can study effectively if armed trespassers can freely enter the classrooms. If the school was negligent in enforcing campus security protocols, it is liable for breach of contract.</li>
+      <li><strong>Quasi-Delict (<em>Culpa Aquiliana</em> under Arts. 2176 &amp; 2180 par. 5, Civil Code):</strong> Even alongside the enrollment contract, if the school's own negligence or the negligence of its security personnel breaks the contract by allowing an armed intruder onto the premises, the school may also be held liable under <span class="c-green"><em>quasi-delict</em></span> (since the act that breaks the contract may itself be a tort).</li>
+    </ol>
+  </li>
+</ul>
+
+<h4>Application Example</h4>
+<blockquote>
+  Suppose an armed non-student walks through the unguarded gate of a college campus and shoots Student S inside a lecture hall. S's parents sue the school. The school cannot be held vicariously liable for the shooter's act under <strong>Article 2180, par. 7</strong> because the shooter is an outsider. However, under <em><strong>PSBA v. Court of Appeals</strong></em>, the school is directly liable for <strong>breach of contract (<em>culpa contractual</em>)</strong> and <strong>quasi-delict (Article 2176)</strong>: enrollment perfected a contract to educate S, which necessarily includes the obligation to maintain reasonable campus security so students can learn in a safe environment.
+</blockquote>
+
+<hr>
+
+<h3 id="administrative-matters-professors-asides">XII. ADMINISTRATIVE MATTERS &amp; PROFESSOR'S ASIDES</h3>
+
+<ul>
+  <li><strong>Assignments &amp; Deadlines:</strong>
+    <ul>
+      <li><strong>Mandatory Jurisprudence Reading List:</strong> Students are directed to read the full text of the following landmark Supreme Court decisions on vicarious liability for the next meeting:
+        <ol>
+          <li><span class="c-burgundy"><em>Tamargo v. Court of Appeals</em></span> (G.R. No. 85044, June 3, 1992)</li>
+          <li><span class="c-burgundy"><em>Libi v. Intermediate Appellate Court</em></span> (G.R. No. 70890, September 18, 1992)</li>
+          <li><span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span> (194 SCRA 341)</li>
+          <li><span class="c-burgundy"><em>Valenzuela v. Court of Appeals</em></span> (253 SCRA 303)</li>
+          <li><span class="c-burgundy"><em>St. Mary's Academy v. Carpitanos</em></span> (G.R. No. 143363, February 6, 2002)</li>
+          <li><span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span> (160 SCRA 315)</li>
+          <li><span class="c-burgundy"><em>Philippine School of Business Administration (PSBA) v. Court of Appeals</em></span> (205 SCRA 729)</li>
+        </ol>
+      </li>
+      <li><strong>Submission of Case Digests:</strong> Case digests assigned for the session (including <em>Holy Trinity School</em> and the school liability cases) were collected at the conclusion of the class.</li>
+    </ul>
+  </li>
+  <li><strong>Administrative Instructions &amp; Upcoming Assessments:</strong>
+    <ul>
+      <li><strong>Preliminary / Midterm Grades:</strong> The Professor announced that following the completion of the pre-test and midterm checking, preliminary grades are targeted for publication by <strong>Wednesday</strong>.</li>
+      <li><strong>Next Session Agenda:</strong> The class was dismissed early at 7:30 PM. At the next meeting, the Professor will deliver a comprehensive synthesis lecture clarifying the exact boundaries of vicarious liability among schools, administrators, and teachers (specifically distinguishing when only the school is liable, when only the teacher is liable, when both teacher and administrator are liable, and when the institution is an establishment of arts and trades vs. an academic school).</li>
+      <li><strong>First Quiz for the Finals Period:</strong> Immediately after completing the synthesis discussion at the next meeting, the class will take the <span class="c-rust"><strong><u>First Quiz for the Finals (Second Part of the Course)</u></strong></span>.</li>
+    </ul>
+  </li>
+  <li><strong>Professor's Commentary &amp; Exam Tips:</strong>
+    <ul>
+      <li><strong>Strict Rule on Case Citations in Exams:</strong> While checking the midterm examinations, the Professor noted that several students cited case titles without their corresponding docket numbers. <span class="c-rust"><strong><u>Do not cite a specific case title in an exam unless you know and write its exact G.R. Number and Promulgation Date.</u></strong></span> Many cases share identical party names (e.g., numerous cases entitled <em>Republic v. Court of Appeals</em>), making a bare title citation legally imprecise and unacceptable.</li>
+      <li><strong>Attendance Remark:</strong> Before the formal start of the lecture, the Professor noted the initially low headcount inside the room (around 10 to 16 students out of 46 enrolled) and jokingly asked the class, <em>"Is this a boycott?"</em> before the remaining students settled in.</li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
