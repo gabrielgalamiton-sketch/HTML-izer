@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torts under Human Relations: Articles 19, 20, and 21</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  scroll-margin-top: 5rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  scroll-margin-top: 5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  cursor: pointer;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 280px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#overview-purpose-human-relations">Overview &amp; Purpose of the Chapter on Human Relations</option>
+      <option value="#reason-for-chapter">&nbsp;&nbsp;↳ Reason for the Chapter on Human Relations</option>
+      <option value="#catch-all-provisions">The Catch-All Provisions: Articles 19, 20, and 21</option>
+      <option value="#art-19-abuse-of-rights">&nbsp;&nbsp;↳ 1. Article 19 (Principle of Abuse of Rights)</option>
+      <option value="#art-20-violation-of-law">&nbsp;&nbsp;↳ 2. Article 20 (Violation of Law)</option>
+      <option value="#art-21-acts-contra-bonus-mores">&nbsp;&nbsp;↳ 3. Article 21 (Acts Contrary to Morals, Good Customs, or Public Policy)</option>
+      <option value="#triad-statutory-table">&nbsp;&nbsp;↳ Statutory Comparison: Arts. 19, 20, and 21</option>
+      <option value="#key-concepts-elements-requisites">Key Concepts, Elements, and Requisites</option>
+      <option value="#requisites-distinctions-19-20-21">&nbsp;&nbsp;↳ 1. Requisites &amp; Distinctions Among Articles 19, 20, and 21</option>
+      <option value="#principle-no-wrong-without-remedy">&nbsp;&nbsp;↳ 2. Principle of "No Wrong Without a Remedy" (Article 21)</option>
+      <option value="#requisites-damage-essential-element">&nbsp;&nbsp;↳ 3. Requisites for Damage as an Essential Element</option>
+      <option value="#requisites-good-faith-state-of-mind">&nbsp;&nbsp;↳ 4. Requisites Regarding Good Faith &amp; State of Mind</option>
+      <option value="#examples-author-case-law">Examples Given by the Author &amp; Referenced Case Law</option>
+      <option value="#case-ruiz-sec-defense">&nbsp;&nbsp;↳ 1. Enrique J.L. Ruiz et al. v. The Secretary of National Defense</option>
+      <option value="#case-llorente-sandiganbayan">&nbsp;&nbsp;↳ 2. Llorente v. Sandiganbayan</option>
+      <option value="#case-abuse-legal-rights-velayo-sevilla">&nbsp;&nbsp;↳ 3. Abuse of Legal Rights (Velayo, Sevilla, Valenzuela)</option>
+      <option value="#case-grand-union-espino">&nbsp;&nbsp;↳ 4. Grand Union Supermarket, Inc. v. Espino, Jr.</option>
+      <option value="#concept-foundation-abuse-of-right">I. Concept and Foundation of Abuse of Right</option>
+      <option value="#elements-abuse-of-right">II. Elements of Abuse of Right</option>
+      <option value="#elements-albenson">&nbsp;&nbsp;↳ 1. Elements under Philippine Jurisprudence (Albenson Enterprises)</option>
+      <option value="#elements-spain">&nbsp;&nbsp;↳ 2. Elements cited from the Supreme Court of Spain</option>
+      <option value="#cases-abuse-committed">III. Examples of Cases Where Abuse of Right WAS Committed</option>
+      <option value="#abuse-creditors">&nbsp;&nbsp;↳ 1. Abuse of Rights of Creditors</option>
+      <option value="#abuse-principal">&nbsp;&nbsp;↳ 2. Abuse of Right of Principal</option>
+      <option value="#abuse-agents">&nbsp;&nbsp;↳ 3. Abuse of Right of Agents</option>
+      <option value="#abuse-public-officers">&nbsp;&nbsp;↳ 4. Abuse of Right of Public Officers</option>
+      <option value="#abuse-court-processes">&nbsp;&nbsp;↳ 5. Abuse of Court Processes</option>
+      <option value="#abuse-contracting-parties">&nbsp;&nbsp;↳ 6. Abuse of Right by Contracting Parties</option>
+      <option value="#abuse-water-service">&nbsp;&nbsp;↳ 7. Deprivation of Water Service</option>
+      <option value="#abuse-educational-institutions">&nbsp;&nbsp;↳ 8. Abuse of Right by Educational Institutions</option>
+      <option value="#abuse-spouse">&nbsp;&nbsp;↳ 9. Abuse of Right of Spouse</option>
+      <option value="#cases-abuse-not-committed">IV. Examples of Cases Where Abuse of Right WAS NOT Committed</option>
+      <option value="#not-abuse-absolute-rights">&nbsp;&nbsp;↳ 1. Absolute Rights</option>
+      <option value="#not-abuse-corps-directors">&nbsp;&nbsp;↳ 2. Rights of Corporations and Directors</option>
+      <option value="#not-abuse-ownership">&nbsp;&nbsp;↳ 3. Exercise of Rights Included in Ownership</option>
+      <option value="#not-abuse-schools-teachers">&nbsp;&nbsp;↳ 4. Rights of Schools, Teachers, and Administrators</option>
+      <option value="#not-abuse-sue-litigate">&nbsp;&nbsp;↳ 5. Right to Sue and Litigate</option>
+      <option value="#not-abuse-business-decisions">&nbsp;&nbsp;↳ 6. Legitimate Business Decisions of Contracting Parties</option>
+      <option value="#acts-contra-bonus-mores-general">V. Acts Contra Bonus Mores (Article 21) &amp; General Concepts</option>
+      <option value="#breach-promise-marry">2. Breach of Promise to Marry</option>
+      <option value="#seduction-sexual-assault">3. Seduction and Sexual Assault</option>
+      <option value="#breach-marital-obligations">4. Breach of Marital Obligations</option>
+      <option value="#trespass-deprivation-property">5. Trespass and Deprivation of Property</option>
+      <option value="#real-property-trespass">&nbsp;&nbsp;↳ 5.01. Real Property Trespass</option>
+      <option value="#personal-property-trespass">&nbsp;&nbsp;↳ 5.02. Personal Property Trespass</option>
+      <option value="#disconnection-utilities">&nbsp;&nbsp;↳ 5.03. Disconnection of Utility Services</option>
+      <option value="#abortion-wrongful-death">6. Abortion and Wrongful Death</option>
+      <option value="#illegal-dismissal">7. Illegal Dismissal</option>
+      <option value="#malicious-prosecution">8. Malicious Prosecution &amp; Abuse of Process</option>
+      <option value="#malicious-prosecution-bases">&nbsp;&nbsp;↳ 8.01. Definition &amp; Bases</option>
+      <option value="#malicious-prosecution-requisites">&nbsp;&nbsp;↳ 8.02. Requisites / Elements of Malicious Prosecution</option>
+      <option value="#abuse-of-process-sec">&nbsp;&nbsp;↳ 8.03. Abuse of Process</option>
+      <option value="#public-humiliation">9. Public Humiliation</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">TORTS UNDER THE PRELIMINARY TITLE: CHAPTER ON HUMAN RELATIONS (ARTICLES 19, 20, AND 21)</h1>
+
+  <!-- UI Section Roadmap -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num c-navy">19</div>
+        <div class="ui-kicker">ABUSE OF RIGHT</div>
+        <div class="ui-sub">Norm of Justice &amp; Good Faith</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-teal">20</div>
+        <div class="ui-kicker">VIOLATION OF LAW</div>
+        <div class="ui-sub">Willful or Negligent Legal Breach</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-burgundy">21</div>
+        <div class="ui-kicker">CONTRA BONUS MORES</div>
+        <div class="ui-sub">Willful Moral Wrong &amp; Gap-Filler</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="overview-purpose-human-relations" class="c-navy">Overview &amp; Purpose of the Chapter on Human Relations</h3>
+
+  <p>Chapter 8 of the New Civil Code covers <span class="c-navy"><strong>torts under Chapter 2 of the Preliminary Title ("Human Relations")</strong></span>. Although this chapter encompasses both negligent and intentional acts, the torts discussed here are predominantly <span class="c-rust"><strong>intentional in nature or involve malice and bad faith</strong></span>.</p>
+
+  <h4 id="reason-for-chapter" class="c-navy">Reason for the Chapter on Human Relations</h4>
+
+  <ul>
+    <li><span class="c-navy"><strong>Historical Background:</strong></span> Chapter 2 of the Preliminary Title on "Human Relations" was introduced by the Code Commission and was not present in the Old Civil Code.</li>
+    <li><span class="c-green"><strong>Core Purpose:</strong></span> It formulates fundamental principles necessary for the rightful relationship between human beings and the stability of the social order.</li>
+    <li><span class="c-teal"><strong>Guiding Norms:</strong></span> It establishes norms of good conscience to run as "golden threads" through society, ensuring that the law approaches its ideal of the sway and dominance of justice by requiring everyone to respect the rights of others.</li>
+  </ul>
+
+  <!-- UI Pillar Card: The Three Golden Threads -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Honeste Vivere</div>
+        <div class="ui-sub">To live honestly</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">Alterum Non Laedere</div>
+        <div class="ui-sub">Not to injure another</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🤝</div>
+        <div class="ui-title">Jus Suum Cuique Tribuere</div>
+        <div class="ui-sub">To render to everyone his due</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="catch-all-provisions" class="c-navy">The Catch-All Provisions: Articles 19, 20, and 21</h3>
+
+  <p>Articles 19, 20, and 21 form the legal bedrock for awarding damages whenever a person commits an act in violation of positive law or rudimentary human rights.</p>
+
+  <h4 id="art-19-abuse-of-rights" class="c-navy">1. Article 19 (Principle of Abuse of Rights)</h4>
+
+  <blockquote>
+    "Every person must, in the exercise of his rights and in the performance of his duties, act with justice, give everyone his due, and observe honesty and good faith."
+  </blockquote>
+
+  <ul>
+    <li><span class="c-navy"><strong>Role &amp; Nature:</strong></span> It declares a principle of law and sets the standard or degree of care required in human relations.</li>
+    <li><span class="c-rust"><strong>Limitation:</strong></span> By itself, <span class="c-rust"><strong><u>Article 19 does not provide a remedy or serve as a standalone basis for an actionable tort</u></strong></span>. An actionable tort arises only when Article 19 is alleged together with Article 20 or Article 21.</li>
+  </ul>
+
+  <h4 id="art-20-violation-of-law" class="c-navy">2. Article 20 (Violation of Law)</h4>
+
+  <blockquote>
+    "Every person who, contrary to law, wilfully or negligently causes damage to another, shall indemnify the latter for the same."
+  </blockquote>
+
+  <ul>
+    <li><span class="c-navy"><strong>Role &amp; Nature:</strong></span> Concerns violations of existing positive law as the basis for an injury.</li>
+    <li><span class="c-teal"><strong>Scope:</strong></span> Pervades the entire legal system, ensuring that anyone who suffers damage from a legal violation is not left without relief.</li>
+    <li><span class="c-green"><strong>State of Mind:</strong></span> Uniquely covers acts done either <span class="c-green"><strong>willfully</strong></span> (intentional) or <span class="c-teal"><strong>negligently</strong></span> (consciously done without intending the harmful result).</li>
+  </ul>
+
+  <h4 id="art-21-acts-contra-bonus-mores" class="c-navy">3. Article 21 (Acts Contrary to Morals, Good Customs, or Public Policy)</h4>
+
+  <blockquote>
+    "Any person who wilfully causes loss or injury to another in a manner that is contrary to morals, good customs or public policy shall compensate the latter for damages."
+  </blockquote>
+
+  <ul>
+    <li><span class="c-navy"><strong>Role &amp; Nature:</strong></span> Addresses injuries caused by acts <span class="c-burgundy"><strong>not explicitly prohibited by positive law</strong></span>.</li>
+    <li><span class="c-rust"><strong>State of Mind:</strong></span> Requires the act to be <span class="c-rust"><strong><u>willful</u></strong></span> (there must be an intention to perform the act and a desire to achieve the outcome).</li>
+  </ul>
+
+  <!-- Interactive Diagram 1: The Human Relations Torts Architecture -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 1: TRIAD OF HUMAN RELATIONS TORTS (ARTS. 19, 20, 21) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    A["Article 19: Abuse of Right<br/>(Declaratory Norm & Standard of Care)<br/>• Act with justice • Give everyone his due • Observe honesty & good faith"] -->|Sets standard but provides NO standalone remedy| B{"Is there positive legal violation or moral injury?"}
+    
+    B -->|Positive Law Violated| C["Article 20: Violation of Law<br/>(Contrary to Positive Law)<br/>State of Mind: Willful OR Negligent"]
+    B -->|Moral / Social Norm Violated| D["Article 21: Contra Bonus Mores<br/>(Legal Act contrary to Morals/Public Policy)<br/>State of Mind: WILLFUL ONLY"]
+
+    C --> E["ACTIONABLE TORT FOR DAMAGES<br/>(Indemnification under positive statute)"]
+    D --> E
+
+    style A fill:#EEF2FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+    style B fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style C fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E
+    style D fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C
+    style E fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statutory Comparison Table -->
+  <h4 id="triad-statutory-table" class="c-navy">Statutory Comparison: Articles 19, 20, and 21</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Provision</th>
+        <th>Substantive Nature</th>
+        <th>Controlling Basis</th>
+        <th>Required State of Mind</th>
+        <th>Independent Actionability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong class="c-navy">Article 19</strong></td>
+        <td>Declaratory principle; sets standard of conduct</td>
+        <td>Fundamental duties in exercise of rights</td>
+        <td>Bad faith / intent to prejudice</td>
+        <td><span class="c-rust"><strong>No standalone remedy</strong></span> (must tie to Art. 20 or 21)</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Article 20</strong></td>
+        <td>Sanction &amp; remedial provision</td>
+        <td>Contravention of positive statutory law</td>
+        <td><span class="c-teal"><strong>Willful OR Negligent</strong></span></td>
+        <td><span class="c-green"><strong>Yes</strong></span> (sanctions legal violations)</td>
+      </tr>
+      <tr>
+        <td><strong class="c-burgundy">Article 21</strong></td>
+        <td>Sanction &amp; remedial gap-filler</td>
+        <td>Acts contrary to morals, good customs, or public policy</td>
+        <td><span class="c-rust"><strong>Willful ONLY</strong></span> (intentional)</td>
+        <td><span class="c-green"><strong>Yes</strong></span> (compensates moral injuries)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Stacked Workflow: Legal Formula -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title"><span class="c-navy"><strong>Article 19: Standard of Conduct &amp; Duty</strong></span></div>
+      <div class="ui-sub">Must act with justice, give everyone due, observe honesty &amp; good faith</div>
+    </div>
+    <div class="ui-connector">+</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><span class="c-teal"><strong>Article 20 (Violation of Law)</strong></span> <em>OR</em> <span class="c-burgundy"><strong>Article 21 (Contra Bonus Mores)</strong></span></div>
+      <div class="ui-sub">Positive legal infraction OR intentional moral injury not forbidden by statute</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title"><span class="c-green"><strong>ACTIONABLE TORT FOR DAMAGES (CIVIL INDEMNITY)</strong></span></div>
+      <div class="ui-sub">Valid complaint for actual, moral, nominal, or temperate damages</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="key-concepts-elements-requisites" class="c-navy">Key Concepts, Elements, and Requisites</h3>
+
+  <h4 id="requisites-distinctions-19-20-21" class="c-navy">1. Requisites &amp; Distinctions Among Articles 19, 20, and 21</h4>
+
+  <ul>
+    <li><span class="c-rust"><strong>Common Element (Articles 19 &amp; 21):</strong></span> The act causing injury must be <span class="c-rust"><strong><u>intentional</u></strong></span>.</li>
+    <li><span class="c-teal"><strong>Distinction under Article 20:</strong></span> The act may be <span class="c-teal"><strong><u>either willful or negligent</u></strong></span>.</li>
+    <li><span class="c-navy"><strong>Abuse of Right as a Legal Violation:</strong></span> Abuse of right under Article 19 can serve as a basis for recovery under Article 20 because an abuse of right is contrary to law—the law being Article 19 itself.</li>
+  </ul>
+
+  <h4 id="principle-no-wrong-without-remedy" class="c-navy">2. Principle of "No Wrong Without a Remedy" (Article 21)</h4>
+
+  <ul>
+    <li><span class="c-green"><strong>Fills Statutory Gaps:</strong></span> Designed to remedy "countless gaps in the statutes" where human foresight cannot anticipate every form of human misconduct or moral wrong.</li>
+    <li><span class="c-teal"><strong>Transmutes Morality into Law:</strong></span> Transmutes moral norms into legal rules, ensuring no person can cause damage to another with impunity simply because no specific statute was broken.</li>
+    <li><span class="c-burgundy"><strong>Comparative Law:</strong></span> A similar provision exists under <span class="c-teal"><strong>Article 826 of the German Civil Code</strong></span>.</li>
+    <li><span class="c-navy"><strong>Public Policy Violations:</strong></span> Applies to acts contrary to public policy not forbidden by statute, such as unfair/oppressive business practices or oppressive actions by landholders/employers against tenants/employees.</li>
+  </ul>
+
+  <h4 id="requisites-damage-essential-element" class="c-navy">3. Requisites for Damage as an Essential Element</h4>
+
+  <ul>
+    <li><span class="c-rust"><strong>Requirement of Injury/Damage:</strong></span> To sustain an action under Articles 19, 20, and 21, the plaintiff <span class="c-rust"><strong><u>must suffer actual damage or injury</u></strong></span> (material, moral, honor, or credit). A complaint seeking purely abstract judicial recognition without alleging damage will be dismissed.</li>
+    <li><span class="c-green"><strong>Moral Damages Exception:</strong></span> It is <span class="c-green"><strong><u>not necessary to prove actual or compensatory physical damages</u></strong></span> to recover moral damages under the Chapter on Human Relations (Arts. 19 to 36). Moral injury alone suffices.</li>
+  </ul>
+
+  <h4 id="requisites-good-faith-state-of-mind" class="c-navy">4. Requisites Regarding Good Faith &amp; State of Mind</h4>
+
+  <ul>
+    <li><span class="c-navy"><strong>Evil Intent Not Required:</strong></span> A defendant can be liable under Articles 19 and 21 even if they acted without bad intentions, ill-will, or evil intent. Actionable wrong is judged independently of the actor's state of mind.</li>
+    <li><span class="c-green"><strong>Effect on Exemplary Damages:</strong></span> While good faith does not excuse liability for moral or compensatory damages, <span class="c-green"><strong><u>acting in good faith shields the defendant from exemplary damages</u></strong></span>.</li>
+    <li><span class="c-rust"><strong>Wrongful Means Destroy Good Faith:</strong></span> A person is not acting in good faith if they willfully adopt wrongful means that are substantially certain to cause humiliation, even if the underlying motive (e.g., protecting one's property) was legitimate. Both the means and the ends must be right.</li>
+  </ul>
+
+  <!-- UI Workflow: Effect of State of Mind on Damages -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Act Violates Human Relations Norms (Arts. 19, 20, 21)</div>
+      <div class="ui-sub">Causes actual, material, moral, or reputational damage</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Defendant Acted in Good Faith</div>
+        <div class="ui-sub">Still liable for <strong>Moral / Compensatory Damages</strong>; shielded from <strong>Exemplary Damages</strong></div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Defendant Used Wrongful Means</div>
+        <div class="ui-sub">Destroys good faith defense; liable for <strong>Moral + Exemplary Damages</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="examples-author-case-law" class="c-navy">Examples Given by the Author &amp; Referenced Case Law</h3>
+
+  <h4 id="case-ruiz-sec-defense" class="c-burgundy">1. <em>Enrique J.L. Ruiz et al. v. The Secretary of National Defense</em> (Damage as an Essential Element)</h4>
+
+  <ul>
+    <li><span class="c-navy"><strong>Facts:</strong></span> Plaintiffs filed an action under Article 21 seeking a judicial declaration/recognition that they were the co-architects of a hospital building to enhance their professional prestige.</li>
+    <li><span class="c-burgundy"><strong>Ruling:</strong></span> The Supreme Court dismissed the action because the plaintiffs did not show or allege that they suffered any material, moral, or credit damage. <span class="c-rust"><strong><u>Courts will not entertain actions that merely seek abstract recognition without damage.</u></strong></span></li>
+  </ul>
+
+  <h4 id="case-llorente-sandiganbayan" class="c-burgundy">2. <em>Llorente v. Sandiganbayan</em> (Bad Faith and Undue Discrimination)</h4>
+
+  <ul>
+    <li><span class="c-navy"><strong>Facts:</strong></span> A public official refused to issue a clearance to a retiring employee who was forced to resign due to the abolition of his position. The official claimed he was merely following procedures and lacked ill-will or a personal grudge.</li>
+    <li><span class="c-burgundy"><strong>Ruling:</strong></span> The Supreme Court held that ill-will is not required. The facts demonstrated unfairness and undue discrimination, constituting bad faith and a violation of Article 19 in relation to Article 27.</li>
+  </ul>
+
+  <h4 id="case-abuse-legal-rights-velayo-sevilla" class="c-burgundy">3. Abuse of Legal Rights (<em>Velayo v. Shell Co.</em>, <em>Sevilla v. CA</em>, <em>Valenzuela v. CA</em>)</h4>
+
+  <ul>
+    <li><span class="c-green"><strong>Principle:</strong></span> Exercising a legally recognized right becomes illegal when executed contrary to the norms of Article 19.</li>
+    <li><span class="c-navy"><strong>Examples:</strong></span>
+      <ul>
+        <li>Disposing of corporate property (a legal act) specifically to place it beyond the reach of a creditor (<span class="c-burgundy"><em>Velayo</em></span>).</li>
+        <li>Terminating an agency contract (a legal act) when done improperly to deprive the agent of their legitimate business (<span class="c-burgundy"><em>Sevilla</em></span>; <span class="c-burgundy"><em>Valenzuela</em></span>).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="case-grand-union-espino" class="c-burgundy">4. <em>Grand Union Supermarket, Inc. v. Espino, Jr.</em> (Public Humiliation vs. Good Faith Defense)</h4>
+
+  <ul>
+    <li><span class="c-navy"><strong>Facts:</strong></span> A customer at a supermarket placed a small item (a $1.50 file) in his pocket while shopping, forgot to pay for it at the checkout, and was stopped outside. Supermarket security guards detained him, shouted at him, fined him, and threatened to call the police in front of a crowd of onlookers, causing him intense embarrassment and mental anguish.</li>
+    <li><span class="c-burgundy"><strong>Rulings on Liability &amp; Damages:</strong></span>
+      <ul>
+        <li><span class="c-green"><strong>Moral Damages Awarded:</strong></span> The supermarket willfully caused loss and injury contrary to morals, good customs, or public policy under Articles 19 and 21, entitling the customer to moral damages for humiliation and besmirched reputation.</li>
+        <li><span class="c-teal"><strong>Contributory Negligence:</strong></span> The customer's forgetfulness contributed to the incident, acting as a factor that reduced the amount of recoverable damages under Article 2214.</li>
+        <li><span class="c-rust"><strong>Exemplary Damages Denied:</strong></span> The supermarket acted with probable cause in attempting to protect its property under Article 429. Because it acted in good faith without deliberate intent to parade or humiliate him, <span class="c-rust"><strong><u>exemplary damages were denied</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><span class="c-navy"><strong>Author's Analysis:</strong></span> The author notes that even if there was no ill intent to humiliate, using wrongful, disproportionate means that are substantially certain to cause public embarrassment constitutes an intentional tort, as a person cannot be considered in good faith when employing wrongful means.</li>
+  </ul>
+
+  <p>This chapter covers <strong>Abuse of Right</strong> under Article 19 of the New Civil Code and introduces <strong>Acts Contra Bonus Mores</strong> under Article 21.</p>
+
+  <hr>
+
+  <h3 id="concept-foundation-abuse-of-right" class="c-navy">I. Concept and Foundation of Abuse of Right</h3>
+
+  <p>The principle of abuse of rights is a departure from the traditional maxim <span class="c-rust"><em><strong>qui iure suo utitur neminem laedit</strong></em></span> ("he who exercises his own right harms nobody"). Instead, it restates the fundamental Roman law principles:</p>
+
+  <ul>
+    <li><span class="c-navy"><em><strong>Honeste vivere</strong></em></span> (to live honestly);</li>
+    <li><span class="c-teal"><em><strong>Alterum non laedere</strong></em></span> (not to injure another); and</li>
+    <li><span class="c-green"><em><strong>Jus suum cuique tribuere</strong></em></span> (to render to everyone his due).</li>
+  </ul>
+
+  <p>While a right may be legal because it is recognized or granted by law, its exercise must conform to the norms enshrined in <span class="c-teal"><strong>Article 19</strong></span>. Under Article 19, every person must:</p>
+
+  <ol>
+    <li><span class="c-navy"><strong>Act with justice;</strong></span></li>
+    <li><span class="c-teal"><strong>Give everyone his due; and</strong></span></li>
+    <li><span class="c-green"><strong>Observe honesty and good faith.</strong></span></li>
+  </ol>
+
+  <p>When a right is exercised in a manner that fails to conform to these standards and causes damage to another, a legal wrong is committed, and the wrongdoer is held responsible. Article 19 sets the standard, while <span class="c-teal"><strong>Article 20</strong></span> (for violations of law) and <span class="c-burgundy"><strong>Article 21</strong></span> (for acts contrary to morals, good customs, or public policy) provide the sanction and basis for awarding damages.</p>
+
+  <hr>
+
+  <h3 id="elements-abuse-of-right" class="c-navy">II. Elements of Abuse of Right</h3>
+
+  <h4 id="elements-albenson" class="c-navy">1. Elements under Philippine Jurisprudence (<em>Albenson Enterprises v. Court of Appeals</em>)</h4>
+
+  <p>To successfully maintain an action for abuse of right under Article 19, the following <span class="c-green"><strong>three requisites</strong></span> must be present:</p>
+
+  <!-- UI Pillar Card: Elements of Abuse of Right -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📜</div>
+        <div class="ui-title">Legal Right / Duty</div>
+        <div class="ui-sub">There is a legal right or duty</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚠️</div>
+        <div class="ui-title">Bad Faith Exercise</div>
+        <div class="ui-sub">The legal right or duty is exercised in bad faith</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎯</div>
+        <div class="ui-title">Sole Intent to Injure</div>
+        <div class="ui-sub">The exercise is for the sole intent of prejudicing or injuring another</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><span class="c-green"><strong>There is a legal right or duty</strong></span>;</li>
+    <li><span class="c-rust"><strong>The legal right or duty is exercised in bad faith</strong></span>; and</li>
+    <li><span class="c-rust"><strong>The exercise is for the sole intent of prejudicing or injuring another</strong></span>.</li>
+  </ul>
+
+  <h4 id="elements-spain" class="c-navy">2. Elements cited from the Supreme Court of Spain</h4>
+
+  <ul>
+    <li>The exercise of a right which is objective and apparently legal;</li>
+    <li>Damage or injury to an interest not specifically protected by a legal precept; and</li>
+    <li>Immorality or antisocial character of the damage or injury caused, either with intent to injure or without a serious or legitimate purpose.</li>
+  </ul>
+
+  <!-- Interactive Diagram 2: Abuse of Right Analytical Framework -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 2: ABUSE OF RIGHT VS. DAMNUM ABSQUE INJURIA <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    Start["Party exercises an apparently legal right or duty"] --> Test1{"Is the exercise done in good faith or with legitimate purpose?"}
+    
+    Test1 -->|Yes: Good Faith / Legitimate Purpose| NoLiab["DAMNUM ABSQUE INJURIA<br/>(Damage without legal injury)<br/>No actionable tort • Loss lies where it falls"]
+    
+    Test1 -->|No: Bad Faith / Selfish Motive| Test2{"Was the exercise done for the sole intent of injuring or prejudicing another?"}
+    
+    Test2 -->|Yes: Albenson Requisites Met| Abuse["ABUSE OF RIGHT (Art. 19)<br/>Coupled with Art. 20 / Art. 21<br/>Liable for Damages"]
+    Test2 -->|No: Lacks proof of bad faith / malice| NoLiab
+
+    style Start fill:#EEF2FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+    style Test1 fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style Test2 fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style NoLiab fill:#F1F5F9,stroke:#475569,stroke-width:2px,color:#334155
+    style Abuse fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,color:#991B1B
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="cases-abuse-committed" class="c-navy">III. Examples of Cases Where Abuse of Right WAS Committed</h3>
+
+  <h4 id="abuse-creditors" class="c-navy">1. Abuse of Rights of Creditors</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Velayo v. Shell Co. of the Philippines</strong></em></span>: A creditor took advantage of inside knowledge regarding impending insolvency proceedings and schemed to transfer its credit to a sister company in the United States, which then attached the debtor’s aircraft. This deprived other creditors of their lawful share in the insolvent's assets.</li>
+    <li><span class="c-burgundy"><em><strong>Philippine National Bank v. Court of Appeals</strong></em></span>: A bank twice disapproved a debtor’s proposed lease of a sugar quota to force an increase in the consideration, knowing that the agricultural year was about to expire and that the debtor would be unable to utilize the quota.</li>
+    <li><span class="c-burgundy"><em><strong>Uypitching v. Quiamco</strong></em></span>: A mortgagee, accompanied by policemen, forcibly seized a mortgaged motorcycle from the debtor's establishment without a court order or search warrant, rather than bringing a proper civil action for foreclosure.</li>
+  </ul>
+
+  <h4 id="abuse-principal" class="c-navy">2. Abuse of Right of Principal</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Valenzuela v. CA</strong></em></span> / <span class="c-burgundy"><em><strong>Sevilla v. CA</strong></em></span>: A principal unreasonably and in bad faith terminated an agency agreement for selfish reasons.</li>
+  </ul>
+
+  <h4 id="abuse-agents" class="c-navy">3. Abuse of Right of Agents</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Jose Arlegui v. Court of Appeals</strong></em></span>: Officers of an apartment tenants' association secretly purchased the building for themselves, violating the trust reposed in them by the other tenant-members.</li>
+  </ul>
+
+  <h4 id="abuse-public-officers" class="c-navy">4. Abuse of Right of Public Officers</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Llorente v. Court of Appeals</strong></em></span>: A public officer withheld the issuance of a clearance to a resigning employee while routinely issuing clearances to other similarly situated employees.</li>
+    <li><span class="c-burgundy"><em><strong>Villanueva v. Rosqueta</strong></em></span>: A superior officer prevented a subordinate from performing her official duties despite a court injunction enjoining such replacement.</li>
+  </ul>
+
+  <h4 id="abuse-court-processes" class="c-navy">5. Abuse of Court Processes</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Sergio Amonoy v. Spouses Jose Gutierrez</strong></em></span>: Petitioners proceeded with demolishing the respondents' house despite a Temporary Restraining Order (TRO) issued by the Court of Appeals. The principle of <span class="c-rust"><em><strong>damnum absque injuria</strong></em></span> (damage without injury) did not apply because the act exceeded the bounds of a valid exercise of a right.</li>
+  </ul>
+
+  <h4 id="abuse-contracting-parties" class="c-navy">6. Abuse of Right by Contracting Parties</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Petrophil Corporation v. Court of Appeals</strong></em></span>: A corporation arbitrarily terminated a hauling contract without giving the contractor an opportunity to be heard, purely as retaliation because the contractor sympathized with picketing workers.</li>
+    <li><span class="c-burgundy"><em><strong>Yalung, Sr. v. Magsaysay Films International Corp.</strong></em></span>: Movie post-production services produced a disastrous, unwatchable film. The defendants conveniently reassured the producers instead of correcting the defects, causing unquantifiable financial and reputational losses.</li>
+  </ul>
+
+  <h4 id="abuse-water-service" class="c-navy">7. Deprivation of Water Service</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>MWSS v. Act Theater, Inc.</strong></em></span> / <span class="c-burgundy"><em><strong>Metroheights Subdivision Homeowners Assoc. v. CMS Construction</strong></em></span>: Cutting off or disconnecting a customer's water supply without prior notice.</li>
+  </ul>
+
+  <h4 id="abuse-educational-institutions" class="c-navy">8. Abuse of Right by Educational Institutions</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>University of the East v. Jader</strong></em></span>: A law school allowed a student to attend graduation ceremonies, celebrate with a party, and enroll in bar review classes, only to belatedly inform him months later that he had failed a removal exam and could not take the bar.</li>
+    <li><span class="c-burgundy"><em><strong>Saint Louis University, Inc. v. Olairez</strong></em></span>: A university suddenly imposed harsher, punitive graduation requirements (Revised Comprehensive Oral and Written Examination) in the middle of the final school year.</li>
+  </ul>
+
+  <h4 id="abuse-spouse" class="c-navy">9. Abuse of Right of Spouse</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Navarro-Banaria v. Banaria</strong></em></span>: A wife promised to bring her frail, 90-year-old husband to a birthday party organized by his children from a prior marriage, but failed to bring him or send an explanation, leaving 200 guests stranded.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="cases-abuse-not-committed" class="c-navy">IV. Examples of Cases Where Abuse of Right WAS NOT Committed</h3>
+
+  <p>When a party legitimately exercises a right in good faith, no action for damages will prosper, even if inconvenience or damage results (<span class="c-navy"><em>damnum absque injuria</em></span>).</p>
+
+  <h4 id="not-abuse-absolute-rights" class="c-navy">1. Absolute Rights</h4>
+
+  <ul>
+    <li>The <span class="c-green"><strong>refusal to enter into a contract</strong></span> is an absolute right; courts cannot inquire into the motives for refusing to contract.</li>
+  </ul>
+
+  <h4 id="not-abuse-corps-directors" class="c-navy">2. Rights of Corporations and Directors</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Mita Pardo de Tavera v. Philippine Tuberculosis Society</strong></em></span>: Board directors declared an executive position vacant in strict accordance with the society's constitution and bylaws.</li>
+    <li><span class="c-burgundy"><em><strong>Manzanal v. Illusorio</strong></em></span>: A non-stock corporation sent standard demand letters to a member for unpaid charges following routine enforcement practices.</li>
+  </ul>
+
+  <h4 id="not-abuse-ownership" class="c-navy">3. Exercise of Rights Included in Ownership</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Custodio v. Court of Appeals</strong></em></span>: A landowner fenced his property adjoining a highway, blocking inner tenants who had no easement of right of way.</li>
+  </ul>
+
+  <h4 id="not-abuse-schools-teachers" class="c-navy">4. Rights of Schools, Teachers, and Administrators</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Virginia M. Andrade v. CA</strong></em></span>: Placing a teacher on a list of excess staff without undue motives.</li>
+    <li><span class="c-burgundy"><em><strong>University of San Carlos v. CA</strong></em></span>: Withholding graduation honors in accordance with established rules.</li>
+    <li><span class="c-burgundy"><em><strong>Garciano v. Court of Appeals</strong></em></span>: School administrators were not liable when a teacher voluntarily ceased teaching after colleagues threatened to resign upon her reinstatement; the colleagues were merely exercising free speech and dissent.</li>
+  </ul>
+
+  <h4 id="not-abuse-sue-litigate" class="c-navy">5. Right to Sue and Litigate</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Antonio Diaz v. Davao Light and Power Co., Inc.</strong></em></span> / <span class="c-burgundy"><em><strong>UCPB v. Basco</strong></em></span>: Commencing a lawsuit or submitting a case for prosecution does not <em>per se</em> make the action wrongful. The right to litigate serves as a peaceful escape valve in society.</li>
+    <li><span class="c-burgundy"><em><strong>Baron's Marketing Corporation v. Court of Appeals</strong></em></span>: A creditor rejected a debtor's offer to pay via post-dated checks/installments and instead filed a collection suit.</li>
+  </ul>
+
+  <h4 id="not-abuse-business-decisions" class="c-navy">6. Legitimate Business Decisions of Contracting Parties</h4>
+
+  <ul>
+    <li><span class="c-burgundy"><em><strong>Dart Philippines, Inc. v. Spouses Calogcog</strong></em></span>: Refusing to renew a distributorship agreement based on legitimate audit findings.</li>
+    <li><span class="c-burgundy"><em><strong>Astroland Developers, Inc. v. GSIS</strong></em></span>: Unilaterally cancelling a project management agreement pursuant to an express contractual provision.</li>
+    <li><span class="c-burgundy"><em><strong>Development Bank of the Philippines v. CA</strong></em></span>: Extrajudicially foreclosing a mortgage upon default as authorized by contract.</li>
+    <li><span class="c-burgundy"><em><strong>Chevron Philippines, Inc. v. Mendoza</strong></em></span>: Denying a dealership application based on reasonable commercial grounds.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="acts-contra-bonus-mores-general" class="c-navy">V. Acts Contra Bonus Mores (Article 21) &amp; General Concepts</h3>
+
+  <p>Article 21 expands civil liability to cover moral wrongs. It applies to acts that are <span class="c-green"><strong>not explicitly forbidden by positive law</strong></span>, ensuring that every imaginable wrong is compensable.</p>
+
+  <p>This source covers <span class="c-teal"><strong>Acts Contra Bonus Mores (Article 21 of the New Civil Code)</strong></span> and its various application scenarios in Philippine tort law.</p>
+
+  <p>Below is a detailed breakdown of all the concepts, requisites, elements, legal rules, and author-provided examples discussed in this chapter:</p>
+
+  <h4>1. Acts Contra Bonus Mores (General Concepts)</h4>
+
+  <p>Article 21 expands civil liability beyond statutory violations by providing a legal remedy for moral wrongs that are not explicitly forbidden by positive law. It embodies the principle that <em>"every good law draws its breath of life from morals"</em>.</p>
+
+  <!-- UI Pillar Card: Elements of Article 21 -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Legal Act</div>
+        <div class="ui-sub">There is an act which is legal</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">Contrary to Morals</div>
+        <div class="ui-sub">Contrary to morals, good customs, public order, or public policy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎯</div>
+        <div class="ui-title">Intent to Injure</div>
+        <div class="ui-sub">The act is done with intent to injure</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><span class="c-green"><strong>Elements of Acts <em>Contra Bonus Mores</em></strong></span> (<span class="c-burgundy"><em>Albenson Enterprises v. Court of Appeals</em></span>):
+      <ul>
+        <li><span class="c-green"><strong>There is an act which is legal</strong></span>;</li>
+        <li><span class="c-rust"><strong>The act is contrary to morals, good customs, public order, or public policy</strong></span>; and</li>
+        <li><span class="c-rust"><strong>The act is done with intent to injure</strong></span>.</li>
+      </ul>
+    </li>
+    <li><span class="c-navy"><strong>Key Concepts &amp; Definitions</strong></span>:
+      <ul>
+        <li><span class="c-teal"><strong>Morals &amp; Good Customs:</strong></span> Generally accepted principles of morality that have received social and practical confirmation.</li>
+        <li><span class="c-navy"><strong>Public Order &amp; Public Policy:</strong></span> Principles aimed at promoting the public weal, safety, health, and general well-being of society.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>The terms <em>morals</em>, <em>good customs</em>, <em>public order</em>, and <em>public policy</em> are general legal concepts that elude precise definitions and are interpreted flexibly by courts depending on the circumstances of each case.</p>
+
+  <hr>
+
+  <h3 id="breach-promise-marry" class="c-navy">2. Breach of Promise to Marry</h3>
+
+  <ul>
+    <li><span class="c-rust"><strong>General Rule:</strong></span> A mere breach of promise to marry is <span class="c-rust"><strong><u>not actionable per se</u></strong></span> because marriage is a fundamental human right involving personal autonomy and choice (<span class="c-burgundy"><em>Guevarra v. Banach</em></span>).</li>
+    <li><span class="c-green"><strong>Requisites / Exceptions (When Actionable under Arts. 19, 20, 21, or 2176):</strong></span>
+      <ul>
+        <li><span class="c-green"><strong>Financial Damage Incurred:</strong></span> Formal wedding preparations were made, invitations printed/distributed, dresses bought, or reception venues booked (<span class="c-burgundy"><em>De Jesus v. Syquia</em></span>; <span class="c-burgundy"><em>Wassmer v. Velez</em></span>—where the groom walked out two days before the wedding).</li>
+        <li><span class="c-green"><strong>Social Humiliation Caused:</strong></span> Formally setting a date and publicly backing out at the last minute.</li>
+        <li><span class="c-green"><strong>Moral Seduction / Deceit:</strong></span> Where a promise to marry was a fraudulent device used to induce a person into sexual intercourse (<span class="c-burgundy"><em>Gashem Shookat Baksh v. CA</em></span>; <span class="c-burgundy"><em>Bunag, Jr. v. CA</em></span>).</li>
+      </ul>
+    </li>
+    <li><span class="c-rust"><strong>When NOT Actionable:</strong></span>
+      <ul>
+        <li>Sexual intercourse resulting from voluntariness, mutual desire, or passion without moral seduction (<span class="c-burgundy"><em>Constantino v. Mendez</em></span>; <span class="c-burgundy"><em>Tanjanco v. CA</em></span>).</li>
+      </ul>
+    </li>
+    <li><span class="c-teal"><strong>Inapplicability of <em>In Pari Delicto</em>:</strong></span>
+      <ul>
+        <li>In cases of moral seduction, the seduced party is not <em>in pari delicto</em> because her consent was procured through fraud and deceit (<span class="c-burgundy"><em>Baksh v. CA</em></span>).</li>
+      </ul>
+    </li>
+    <li><span class="c-burgundy"><strong>Author's Illustrative Case (<em>Jhanna Guevarra et al. v. Jan Banach</em>, 2021):</strong></span>
+      <ul>
+        <li><span class="c-navy"><em>Facts:</em></span> Banach, a German citizen, concealed his existing marriage and true identity, wooed Guevarra, and gave her ₱500,000 to buy a conjugal home. When Guevarra discovered his lies, she broke off the engagement. Banach sued for the return of the money.</li>
+        <li><span class="c-burgundy"><em>Ruling:</em></span> The Supreme Court ruled that because Banach acted in bad faith and deceit, he could not claim damages or force the return of the ₱500,000 gift under human relations rules.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Interactive Diagram 3: Breach of Promise to Marry Decision Tree -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 3: BREACH OF PROMISE TO MARRY — ACTIONABILITY FRAMEWORK <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn reset-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    Start["Party breaches promise to marry"] --> GenRule{"General Rule:<br/>NOT Actionable Per Se<br/>(Personal autonomy & choice)"}
+    
+    GenRule -->|Are there exceptional aggravating factors?| Exceptions{"Identify Exception:"}
+    
+    Exceptions -->|Actual Financial Outlay| Fin["Financial Damage Incurred<br/>(Invitations, gowns, reception expenses)<br/>Wassmer v. Velez / De Jesus v. Syquia"]
+    Exceptions -->|Extreme Public Humiliation| Hum["Social Humiliation<br/>(Walking out 2 days before wedding)"]
+    Exceptions -->|Fraudulent Seduction| Sed["Moral Seduction / Deceit<br/>(Promise used solely to procure intercourse)<br/>Baksh v. CA / Bunag v. CA"]
+    
+    Fin --> Liab["ACTIONABLE FOR DAMAGES<br/>(Arts. 19, 21, or 2176)<br/>Compensatory & Moral Damages Awarded"]
+    Hum --> Liab
+    Sed --> Liab
+
+    GenRule -->|Mutual passion / voluntary intercourse without deceit| NoLiab["NOT ACTIONABLE<br/>(Tanjanco v. CA; Constantino v. Mendez)<br/>Volenti non fit injuria"]
+
+    style Start fill:#EEF2FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+    style GenRule fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style Exceptions fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style Fin fill:#FEF2F2,stroke:#C2410C,stroke-width:1.5px,color:#C2410C
+    style Hum fill:#FEF2F2,stroke:#C2410C,stroke-width:1.5px,color:#C2410C
+    style Sed fill:#FEF2F2,stroke:#C2410C,stroke-width:1.5px,color:#C2410C
+    style Liab fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+    style NoLiab fill:#F1F5F9,stroke:#475569,stroke-width:2px,color:#334155
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="seduction-sexual-assault" class="c-navy">3. Seduction and Sexual Assault</h3>
+
+  <ul>
+    <li><span class="c-rust"><strong>Seduction:</strong></span> Accomplishing sexual intercourse through deceit, enticement, superior power, or abuse of confidence is actionable under Article 21, even without a promise to marry.</li>
+    <li><span class="c-rust"><strong>Sexual Assault &amp; Harassment:</strong></span> Includes crimes like rape, acts of lasciviousness, seduction under the Revised Penal Code, or non-criminal sexual coercion (e.g., a married man coercing a woman to yield to his lust in <span class="c-burgundy"><em>Quimiguingu v. Icao</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="breach-marital-obligations" class="c-navy">4. Breach of Marital Obligations</h3>
+
+  <ul>
+    <li><span class="c-rust"><strong>General Rule:</strong></span> Civil actions for damages between spouses solely for a breach of marital obligations are <span class="c-rust"><strong><u>not permissible</u></strong></span> (<span class="c-burgundy"><em>Ty v. Court of Appeals</em></span>).</li>
+    <li><span class="c-green"><strong>Exception:</strong></span> Actionable when a spouse willfully deserts the other, denies consortium, or refuses to perform marital duties in a manner contrary to law, morals, or good customs (<span class="c-burgundy"><em>Pastor B. Tenchavez v. Vicenta F. Escaño</em></span>—where the wife abandoned her husband and obtained an invalid foreign divorce).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="trespass-deprivation-property" class="c-navy">5. Trespass and Deprivation of Property</h3>
+
+  <h4 id="real-property-trespass" class="c-navy">5.01. Real Property Trespass</h4>
+
+  <ul>
+    <li>Unlawful invasion of real property or possession in bad faith (Art. 451).</li>
+    <li><span class="c-rust"><strong>Builder/Planter/Sower in Bad Faith:</strong></span> <span class="c-rust"><strong><u>Directly liable for damages</u></strong></span> under Articles 448 and 456.</li>
+    <li><span class="c-green"><strong>Builder/Planter/Sower in Good Faith:</strong></span> <span class="c-green"><strong><u>Not liable for damages</u></strong></span> under Article 448 (subject only to statutory option rules), unless negligent under Article 2176.</li>
+  </ul>
+
+  <h4 id="personal-property-trespass" class="c-navy">5.02. Personal Property Trespass</h4>
+
+  <ul>
+    <li>Depriving a person of movable property in bad faith or to force compliance (e.g., <span class="c-burgundy"><em>Magbanua v. IAC</em></span>—where a landlord cut off tenants' water supply to force them off the land).</li>
+    <li>Unlawfully taking over business operations or vehicles (<span class="c-burgundy"><em>Cogeo-Cubao Operators and Drivers Assoc. v. CA</em></span>).</li>
+  </ul>
+
+  <h4 id="disconnection-utilities" class="c-navy">5.03. Disconnection of Utility Services</h4>
+
+  <ul>
+    <li>Unjustified disconnection of electricity or gas service without mandatory prior notice required by rules constitutes an actionable tort under Article 21 and Abuse of Right (<span class="c-burgundy"><em>Meralco v. CA</em></span>; <span class="c-burgundy"><em>Ardiente v. Pastorfide</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="abortion-wrongful-death" class="c-navy">6. Abortion and Wrongful Death</h3>
+
+  <ul>
+    <li><span class="c-rust"><strong>Civil Liability:</strong></span> Damages are recoverable against a physician or person who intentionally or negligently performs an abortion (<span class="c-burgundy"><em>Geluz v. Court of Appeals</em></span>).</li>
+    <li><span class="c-green"><strong>Requisite for Moral Damages:</strong></span> The plaintiff (such as a spouse/parent) <span class="c-green"><strong><u>must present factual proof of actual distress or mental anguish</u></strong></span> caused by the loss of the unborn child.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="illegal-dismissal" class="c-navy">7. Illegal Dismissal</h3>
+
+  <ul>
+    <li><span class="c-teal"><strong>General Rule:</strong></span> Employers have a legal right to terminate employees for just or authorized causes under labor laws.</li>
+    <li><span class="c-rust"><strong>When Actionable under Arts. 19 &amp; 21:</strong></span>
+      <ul>
+        <li>When dismissal is carried out in an <span class="c-rust"><strong><u>antisocial, oppressive, or abusive manner</u></strong></span> (<span class="c-burgundy"><em>Quisaba v. Sta. Ines-Melale</em></span>; <span class="c-burgundy"><em>Globe Mackay v. CA</em></span>).</li>
+        <li>When dismissal is based on <span class="c-rust"><strong><u>false imputations or fabricated grounds</u></strong></span> (e.g., falsely claiming serious financial losses in <span class="c-burgundy"><em>AHSI v. NLRC</em></span>).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="malicious-prosecution" class="c-navy">8. Malicious Prosecution &amp; Abuse of Process</h3>
+
+  <h4 id="malicious-prosecution-bases" class="c-navy">8.01. Definition &amp; Bases</h4>
+
+  <p>Instituting criminal or civil proceedings maliciously and without probable cause for the purpose of vexation or injury.</p>
+
+  <h4 id="malicious-prosecution-requisites" class="c-navy">8.02. Requisites / Elements of Malicious Prosecution (<em>Albenson Enterprises</em>; <em>Drilon v. CA</em>):</h4>
+
+  <!-- UI Pillar Card: Requisites of Malicious Prosecution -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num c-navy">1</div>
+        <div class="ui-kicker">PROSECUTION &amp; ACQUITTAL</div>
+        <div class="ui-sub">Defendant was prosecutor &amp; action ended with acquittal</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-teal">2</div>
+        <div class="ui-kicker">NO PROBABLE CAUSE</div>
+        <div class="ui-sub">Prosecutor acted without probable cause</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-rust">3</div>
+        <div class="ui-kicker">LEGAL MALICE</div>
+        <div class="ui-sub">Impelled by sinister motive or intent to vex/injure</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><span class="c-navy"><strong>The fact of prosecution</strong></span> and that the defendant was himself the prosecutor, and the action was finally terminated with an acquittal;</li>
+    <li><span class="c-teal"><strong>That in bringing the action, the prosecutor acted without probable cause</strong></span>; and</li>
+    <li><span class="c-rust"><strong>The prosecutor was actuated or impelled by legal malice</strong></span>.</li>
+  </ol>
+
+  <ul>
+    <li><span class="c-navy"><strong>Key Definitions:</strong></span>
+      <ul>
+        <li><span class="c-rust"><strong>Malice:</strong></span> An inexcusable intent to injure, oppress, vex, annoy, or humiliate (<span class="c-burgundy"><em>Pro Line Sports Center v. CA</em></span>; <span class="c-burgundy"><em>Manila Gas Corp. v. CA</em></span>).</li>
+        <li><span class="c-teal"><strong>Probable Cause:</strong></span> Facts and circumstances that excite belief in a reasonable mind that the person charged is guilty.</li>
+        <li><span class="c-green"><strong>Acquittal:</strong></span> Includes a final court dismissal or a prosecutor's dismissal during preliminary investigation.</li>
+        <li><span class="c-navy"><strong>Civil Cases:</strong></span> Applies equally to baseless civil suits filed strictly to harass or humiliate (<span class="c-burgundy"><em>Inhelder Corp. v. CA</em></span>).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Interactive Diagram 4: Malicious Prosecution Framework -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 4: MALICIOUS PROSECUTION &amp; ABUSE OF PROCESS <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn reset-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    Action["Criminal or Civil Proceeding Commenced"] --> R1{"Was there final termination with acquittal or dismissal?"}
+    
+    R1 -->|No: Pending or Convicted| NoMP["NOT MALICIOUS PROSECUTION<br/>(Prerequisite acquittal absent)"]
+    R1 -->|Yes: Final Acquittal / Dismissal| R2{"Did prosecutor act WITHOUT probable cause?"}
+    
+    R2 -->|No: Probable Cause Existed| Damnum["DAMNUM ABSQUE INJURIA<br/>(Right to litigate exercised peacefully in good faith)"]
+    R2 -->|Yes: Total Absence of Probable Cause| R3{"Was prosecutor impelled by LEGAL MALICE?"}
+    
+    R3 -->|No: Honest Mistake / Mere Overzealousness| Damnum
+    R3 -->|Yes: Inexcusable intent to vex, annoy, or injure| MP["MALICIOUS PROSECUTION PROSPERS<br/>(Arts. 19, 21, 2217, 2219)<br/>Damages for besmirched reputation, humiliation & expenses"]
+
+    style Action fill:#EEF2FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+    style R1 fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style R2 fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style R3 fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#1F2937
+    style NoMP fill:#F1F5F9,stroke:#475569,stroke-width:2px,color:#334155
+    style Damnum fill:#F1F5F9,stroke:#475569,stroke-width:2px,color:#334155
+    style MP fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,color:#991B1B
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="abuse-of-process-sec" class="c-navy">8.03. Abuse of Process</h4>
+
+  <p>Actionable under Articles 2176 and 26 when gross negligence or improper process causes false arrest or indictment (<span class="c-burgundy"><em>Gregorio v. CA</em></span>—where a non-signatory was wrongly arrested under B.P. 22 due to failure to verify identity/address).</p>
+
+  <hr>
+
+  <h3 id="public-humiliation" class="c-navy">9. Public Humiliation</h3>
+
+  <p>Actionable under Article 21 when positive acts directed against a person cause public embarrassment, humiliation, or personal affront.</p>
+
+  <ul>
+    <li><span class="c-rust"><strong>Examples of Actionable Public Humiliation:</strong></span>
+      <ul>
+        <li>Slapping someone in public (<span class="c-burgundy"><em>Patricio v. Leviste</em></span>; <span class="c-burgundy"><em>Maria Ford v. CA</em></span>—slapping a public school teacher/COMELEC deputy at a polling station).</li>
+        <li>False shoplifting accusations accompanied by public verbal abuse and accusatory letters sent to an employer (<span class="c-burgundy"><em>Grand Union Supermarket v. Espino</em></span>; <span class="c-burgundy"><em>California Clothing, Inc. v. Quiñones</em></span>).</li>
+      </ul>
+    </li>
+    <li><span class="c-green"><strong>Counter-Example (No Liability):</strong></span>
+      <ul>
+        <li><span class="c-burgundy"><em>Hotel Nikko Manila Garden v. Reyes ("Amay Bisaya")</em></span>: Politely and discreetly asking an uninvited guest to leave an exclusive party without rudeness or bad faith does not constitute abusive conduct.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
