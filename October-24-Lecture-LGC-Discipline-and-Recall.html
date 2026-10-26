@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 24 Lecture: Grounds for Disciplinary Action, Jurisdictional Hierarchy, Preventive Suspension, Condonation Doctrine, and Recall (LGC Secs. 60–74)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-step-outcome-warning {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+}
+.zoom-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+.zoom-btn:active {
+  background: #E2E8F0;
+}
+.diagram-viewport {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #FAFAFA;
+  overflow: hidden;
+  cursor: grab;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  height: auto;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diagram-container pre.mermaid {
+  margin: 0;
+  background: transparent;
+}
+
+/* Callout & Illustration Styling */
+.professor-box {
+  border-left: 4px solid #1E3A8A;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #EFF6FF;
+  border-radius: 0 8px 8px 0;
+}
+.professor-box-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.application-box {
+  border-left: 4px solid #0F766E;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #F0FDFA;
+  border-radius: 0 8px 8px 0;
+}
+.application-box-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0F766E;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.aside-card {
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #6366F1;
+  background: #F8FAFC;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+.aside-title {
+  font-weight: 700;
+  color: #4338CA;
+  margin-bottom: 0.25rem;
+}
+  </style>
+</head>
+<body>
+
+<!-- STICKY TOPIC NAVIGATION BAR -->
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-grounds">PART 1: Grounds, Hierarchy, and Power to Remove</option>
+      <option value="#sec-i-framework">&nbsp;&nbsp;↳ I. Statutory Framework & Disciplinary Nature</option>
+      <option value="#scope-section-60">&nbsp;&nbsp;&nbsp;&nbsp;- Scope & Exclusivity of Section 60</option>
+      <option value="#quantum-of-proof">&nbsp;&nbsp;&nbsp;&nbsp;- Quantum of Proof (Substantial Evidence)</option>
+      <option value="#case-aguinaldo-santos">&nbsp;&nbsp;&nbsp;&nbsp;- Aguinaldo v. Santos</option>
+      <option value="#case-ang-tibay">&nbsp;&nbsp;&nbsp;&nbsp;- Ang Tibay v. CIR</option>
+      <option value="#complainants-desistance">&nbsp;&nbsp;&nbsp;&nbsp;- Effect of Complainant's Desistance</option>
+      <option value="#case-abenojar">&nbsp;&nbsp;&nbsp;&nbsp;- Abenojar v. Lopez</option>
+      <option value="#case-estreller">&nbsp;&nbsp;&nbsp;&nbsp;- Estreller v. Manatad, Jr.</option>
+      <option value="#sec-ii-grounds">&nbsp;&nbsp;↳ II. Enumerated Grounds for Disciplinary Action (Sec. 60)</option>
+      <option value="#ground-1-disloyalty">&nbsp;&nbsp;&nbsp;&nbsp;- 1. Disloyalty to the Republic (Sec. 60[a])</option>
+      <option value="#ground-2-culpable-violation">&nbsp;&nbsp;&nbsp;&nbsp;- 2. Culpable Violation of Constitution (Sec. 60[b])</option>
+      <option value="#ground-3-misconduct">&nbsp;&nbsp;&nbsp;&nbsp;- 3. Dishonesty, Oppression, Misconduct, etc. (Sec. 60[c])</option>
+      <option value="#case-lacson-roque">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Lacson v. Roque</option>
+      <option value="#case-salocan-alarde">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Salocan v. Alarde</option>
+      <option value="#ground-4-moral-turpitude">&nbsp;&nbsp;&nbsp;&nbsp;- 4. Moral Turpitude / Prision Mayor (Sec. 60[d])</option>
+      <option value="#case-dela-torre">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Dela Torre v. COMELEC</option>
+      <option value="#ground-5-abuse-authority">&nbsp;&nbsp;&nbsp;&nbsp;- 5. Abuse of Authority (Sec. 60[e])</option>
+      <option value="#ground-6-unauthorized-absence">&nbsp;&nbsp;&nbsp;&nbsp;- 6. Unauthorized Absence (Sec. 60[f])</option>
+      <option value="#ground-7-foreign-citizenship">&nbsp;&nbsp;&nbsp;&nbsp;- 7. Foreign Citizenship / Immigrant (Sec. 60[g])</option>
+      <option value="#case-caasi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Caasi v. Court of Appeals</option>
+      <option value="#ground-8-other-grounds">&nbsp;&nbsp;&nbsp;&nbsp;- 8. Other Grounds in LGC & Special Laws (Sec. 60[h])</option>
+      <option value="#table-sec-60-grounds">&nbsp;&nbsp;&nbsp;&nbsp;- Statutory Summary Table: Grounds</option>
+      <option value="#sec-iii-power-to-remove">&nbsp;&nbsp;↳ III. Power to Remove vs. Suspend: Courts & Ombudsman</option>
+      <option value="#exclusive-judicial-removal">&nbsp;&nbsp;&nbsp;&nbsp;- Exclusive Judicial Prerogative to Remove</option>
+      <option value="#case-pablico-villapando">&nbsp;&nbsp;&nbsp;&nbsp;- Pablico v. Villapando</option>
+      <option value="#ombudsman-concurrent-jurisdiction">&nbsp;&nbsp;&nbsp;&nbsp;- Ombudsman Concurrent Jurisdiction (R.A. 6770)</option>
+      <option value="#case-hagad-gozo-dadole">&nbsp;&nbsp;&nbsp;&nbsp;- Hagad v. Gozo-Dadole</option>
+      <option value="#table-lgc-vs-ombudsman">&nbsp;&nbsp;&nbsp;&nbsp;- Comparative Table: LGC Authorities vs. Ombudsman</option>
+      <option value="#sec-iv-form-filing">&nbsp;&nbsp;↳ IV. Form, Filing, and Jurisdictional Hierarchy (Sec. 61)</option>
+      <option value="#formal-requirements-verification">&nbsp;&nbsp;&nbsp;&nbsp;- Formal Requisites: Verification & Forum Shopping</option>
+      <option value="#case-joson-torres">&nbsp;&nbsp;&nbsp;&nbsp;- Joson v. Executive Secretary Torres</option>
+      <option value="#jurisdictional-hierarchy-sec-61">&nbsp;&nbsp;&nbsp;&nbsp;- Hierarchy of Disciplining Authorities (Sec. 61[a]–[c])</option>
+      <option value="#functional-capacity-rule">&nbsp;&nbsp;&nbsp;&nbsp;- Functional Capacity Rule: Ex Officio Members</option>
+      <option value="#diagram-jurisdiction-appeal">&nbsp;&nbsp;&nbsp;&nbsp;- Diagram: Hierarchy & Appellate Flow</option>
+      <option value="#part-2-procedural-due-process">PART 2: Due Process, Preventive Suspension, Rights, Appeals</option>
+      <option value="#sec-v-notice-venue-ban">&nbsp;&nbsp;↳ V. Notice, Venue, and 90-Day Pre-Election Ban (Sec. 62)</option>
+      <option value="#timelines-7-15-10">&nbsp;&nbsp;&nbsp;&nbsp;- 7–15–10 Day Procedural Timeline (Sec. 62[a])</option>
+      <option value="#distinction-verifications">&nbsp;&nbsp;&nbsp;&nbsp;- Complaint Verification vs. Answer Verification</option>
+      <option value="#venue-rules">&nbsp;&nbsp;&nbsp;&nbsp;- Venue of Administrative Investigations (Sec. 62[b])</option>
+      <option value="#pre-election-ban-90-days">&nbsp;&nbsp;&nbsp;&nbsp;- 90-Day Pre-Election Ban (Sec. 62[c])</option>
+      <option value="#sec-vi-preventive-suspension">&nbsp;&nbsp;↳ VI. Preventive Suspension (Secs. 63–64)</option>
+      <option value="#non-penal-nature">&nbsp;&nbsp;&nbsp;&nbsp;- Non-Penal Nature & Purpose</option>
+      <option value="#case-castillo-co">&nbsp;&nbsp;&nbsp;&nbsp;- Castillo-Co v. Barbers</option>
+      <option value="#case-garcia-mojica">&nbsp;&nbsp;&nbsp;&nbsp;- Garcia v. Mojica</option>
+      <option value="#authorities-preventive-suspension">&nbsp;&nbsp;&nbsp;&nbsp;- Empowered Chief Executives (Sec. 63[a])</option>
+      <option value="#concurring-requisites-ps">&nbsp;&nbsp;&nbsp;&nbsp;- Concurring Statutory Requisites (Sec. 63[b])</option>
+      <option value="#duration-limits-ps">&nbsp;&nbsp;&nbsp;&nbsp;- Duration Limits: 60-Day & 90-Day Caps</option>
+      <option value="#case-ganzon-ca">&nbsp;&nbsp;&nbsp;&nbsp;- Ganzon v. Court of Appeals</option>
+      <option value="#reinstatement-salary-rules">&nbsp;&nbsp;&nbsp;&nbsp;- Reinstatement, Delays & Full Back Salaries</option>
+      <option value="#table-preventive-vs-penalty">&nbsp;&nbsp;&nbsp;&nbsp;- Comparative Table: Preventive vs. Penalty Suspension</option>
+      <option value="#diagram-due-process-ps">&nbsp;&nbsp;&nbsp;&nbsp;- Diagram: Procedural Timelines & Suspension</option>
+      <option value="#sec-vii-respondents-rights">&nbsp;&nbsp;↳ VII. Rights of the Respondent (Sec. 65)</option>
+      <option value="#core-due-process-rights">&nbsp;&nbsp;&nbsp;&nbsp;- Due Process: Counsel, Confrontation & Subpoenas</option>
+      <option value="#absence-contempt-power">&nbsp;&nbsp;&nbsp;&nbsp;- Absence of Contempt Power in Sanggunians</option>
+      <option value="#case-noreco-ii">&nbsp;&nbsp;&nbsp;&nbsp;- NORECO II v. SP of Dumaguete</option>
+      <option value="#sec-viii-decision-appeals">&nbsp;&nbsp;↳ VIII. Decision, Penalties, Appeals & Execution (Secs. 66–68)</option>
+      <option value="#timelines-decision">&nbsp;&nbsp;&nbsp;&nbsp;- 90-Day Investigation & 30-Day Decision Period</option>
+      <option value="#limits-penalties-candidacy">&nbsp;&nbsp;&nbsp;&nbsp;- Suspension vs. Removal as Bar to Candidacy</option>
+      <option value="#appellate-hierarchy-sec-67">&nbsp;&nbsp;&nbsp;&nbsp;- Appellate Hierarchy (Sec. 67)</option>
+      <option value="#execution-pending-appeal">&nbsp;&nbsp;&nbsp;&nbsp;- Execution Pending Appeal & Discretion to Stay</option>
+      <option value="#case-berces-guingona">&nbsp;&nbsp;&nbsp;&nbsp;- Berces, Sr. v. Guingona, Jr.</option>
+      <option value="#permanent-acting-succession">&nbsp;&nbsp;&nbsp;&nbsp;- Permanent vs. Acting Succession (Ombudsman)</option>
+      <option value="#part-3-condonation-recall">PART 3: Condonation Doctrine, Recall & Summaries</option>
+      <option value="#sec-ix-condonation-doctrine">&nbsp;&nbsp;↳ IX. Evolution & Abandonment of Condonation</option>
+      <option value="#origin-aguinaldo-condonation">&nbsp;&nbsp;&nbsp;&nbsp;- Origin: Aguinaldo Doctrine</option>
+      <option value="#inapplicability-criminal">&nbsp;&nbsp;&nbsp;&nbsp;- Inapplicability to Criminal Liability</option>
+      <option value="#case-conducto-monzon">&nbsp;&nbsp;&nbsp;&nbsp;- Conducto v. Monzon</option>
+      <option value="#definitive-abandonment">&nbsp;&nbsp;&nbsp;&nbsp;- Abandonment: Carpio-Morales v. CA & Binay, Jr.</option>
+      <option value="#table-condonation-regimes">&nbsp;&nbsp;&nbsp;&nbsp;- Comparative Table: Pre- vs. Post-Carpio-Morales</option>
+      <option value="#sec-x-nature-recall">&nbsp;&nbsp;↳ X. Nature, Scope, and Ground for Recall (Sec. 69)</option>
+      <option value="#concept-basis-recall">&nbsp;&nbsp;&nbsp;&nbsp;- Constitutional Concept of Recall</option>
+      <option value="#exclusivity-local-officials">&nbsp;&nbsp;&nbsp;&nbsp;- Exclusivity to Local Officials (Exclusion of House)</option>
+      <option value="#loss-of-confidence">&nbsp;&nbsp;&nbsp;&nbsp;- Loss of Confidence as Political Question</option>
+      <option value="#case-evardone-comelec">&nbsp;&nbsp;&nbsp;&nbsp;- Evardone v. COMELEC</option>
+      <option value="#sec-xi-initiation-recall">&nbsp;&nbsp;↳ XI. Initiation of Recall & Abolition of PRA (Secs. 70–71)</option>
+      <option value="#abolition-pra-ra-9244">&nbsp;&nbsp;&nbsp;&nbsp;- Abolition of Preparatory Recall Assembly (R.A. 9244)</option>
+      <option value="#percentage-thresholds-table">&nbsp;&nbsp;&nbsp;&nbsp;- Statutory Percentage Tiers Table (Sec. 70)</option>
+      <option value="#mechanics-legislative-district">&nbsp;&nbsp;&nbsp;&nbsp;- Mechanics & District Sanggunian Members</option>
+      <option value="#sec-xii-conduct-limitations-recall">&nbsp;&nbsp;↳ XII. Conduct, Resignation Ban & Limitations (Secs. 72–74)</option>
+      <option value="#conduct-effectivity-recall">&nbsp;&nbsp;&nbsp;&nbsp;- Automatic Candidacy & Effectivity of Recall</option>
+      <option value="#prohibition-resignation">&nbsp;&nbsp;&nbsp;&nbsp;- Prohibition Against Resignation (Sec. 73)</option>
+      <option value="#limitations-recall">&nbsp;&nbsp;&nbsp;&nbsp;- Once-Per-Term & Dual 1-Year Temporal Bans</option>
+      <option value="#case-paras-comelec">&nbsp;&nbsp;&nbsp;&nbsp;- Paras v. COMELEC</option>
+      <option value="#case-claudio-comelec">&nbsp;&nbsp;&nbsp;&nbsp;- Claudio v. COMELEC</option>
+      <option value="#diagram-recall-workflow">&nbsp;&nbsp;&nbsp;&nbsp;- Diagram: Recall Workflow & Limitations</option>
+      <option value="#administrative-matters">&nbsp;&nbsp;↳ Administrative Matters & Professor's Asides</option>
+      <option value="#exam-pointers">&nbsp;&nbsp;&nbsp;&nbsp;- Key Examination Pointers</option>
+      <option value="#litigation-insights">&nbsp;&nbsp;&nbsp;&nbsp;- Practical Litigation Insights</option>
+      <option value="#class-announcements">&nbsp;&nbsp;&nbsp;&nbsp;- Class Schedule & Announcements</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <!-- MAIN DOCUMENT HEADER -->
+  <h1 class="c-navy">October 24 Lecture</h1>
+  <p class="c-teal" style="font-weight: 700; font-size: 1.1rem; margin-top: -0.5rem; letter-spacing: 0.03em;">
+    LOCAL GOVERNMENT CODE OF 1991 (R.A. 7160): SECTIONS 60 TO 74
+  </p>
+
+  <!-- OVERARCHING ROADMAP CARD -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num c-navy">I–IV</div>
+        <div class="ui-kicker">DISCIPLINE</div>
+        <div class="ui-sub">Grounds, Quantum, Judicial Removal & Hierarchy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-teal">V–VIII</div>
+        <div class="ui-kicker">PROCEDURE</div>
+        <div class="ui-sub">7-15-10 Days, Preventive Suspension & Appeals</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num c-burgundy">IX–XII</div>
+        <div class="ui-kicker">RECALL & CONDONATION</div>
+        <div class="ui-sub">Carpio-Morales Rule & Electoral Recall Mechanics</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ========================================================================= -->
+  <!-- PART 1 -->
+  <!-- ========================================================================= -->
+  <h2 id="part-1-grounds" class="c-navy">PART 1: GROUNDS FOR DISCIPLINARY ACTION, JURISDICTIONAL HIERARCHY, AND THE POWER TO REMOVE ELECTIVE LOCAL OFFICIALS</h2>
+
+  <!-- PART 1 SCOPE & OVERVIEW -->
+  <div class="ui-box" style="background: #F8FAFC; border-color: #CBD5E1;">
+    <div style="font-weight: 700; color: #1E3A8A; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Part 1 Overview & Scope of Topics
+    </div>
+    <ul style="margin: 0; padding-left: 1.25rem;">
+      <li><span class="c-navy"><strong>I. Statutory Framework and Nature of Administrative Disciplinary Proceedings:</strong></span> Scope of <span class="c-teal">Section 60 of Republic Act No. 7160</span> (Local Government Code of 1991); distinction between elective and appointive local officials; quantum of proof (<span class="c-burgundy"><em>Aguinaldo v. Santos</em></span>; <span class="c-burgundy"><em>Ang Tibay v. Court of Industrial Relations</em></span>); and the legal effect of a complainant's desistance (<span class="c-burgundy"><em>Abenojar v. Lopez</em></span>; <span class="c-burgundy"><em>Estreller v. Manatad, Jr.</em></span>).</li>
+      <li><span class="c-navy"><strong>II. Enumerated Grounds for Disciplinary Action (Section 60, R.A. 7160):</strong></span> Substantive analysis of paragraphs (a) through (h) of Section 60; treasonous disloyalty (<span class="c-burgundy"><em>Francisco, Jr. v. House of Representatives</em></span>); culpable violation of the Constitution; dishonesty, oppression, misconduct in office, gross negligence, and dereliction of duty (<span class="c-burgundy"><em>Lacson v. Roque</em></span>; <span class="c-burgundy"><em>Salocan v. Alarde</em></span>); moral turpitude and offenses punishable by at least <em>prision mayor</em> (<span class="c-burgundy"><em>Dela Torre v. COMELEC</em></span>); abuse of authority; unauthorized absences; acquisition of foreign citizenship or immigrant status (<span class="c-burgundy"><em>Caasi v. Court of Appeals</em></span>); and violations of the LGC and special laws.</li>
+      <li><span class="c-navy"><strong>III. The Power to Remove vs. The Power to Suspend: Judicial Prerogative and Ombudsman Concurrent Jurisdiction:</strong></span> Exclusive judicial prerogative to remove elective local officials under the LGC (<span class="c-burgundy"><em>Pablico v. Villapando</em></span>) contrasted with the concurrent administrative disciplinary authority of the Office of the Ombudsman under R.A. 6770 (<span class="c-burgundy"><em>Hagad v. Gozo-Dadole</em></span>).</li>
+      <li><span class="c-navy"><strong>IV. Form, Filing, and Jurisdictional Hierarchy Over Administrative Complaints (Section 61, R.A. 7160):</strong></span> Formal requisites of verification and certification against forum shopping (<span class="c-burgundy"><em>Joson v. Executive Secretary</em></span>); jurisdictional allocation among the Office of the President, the <em>Sangguniang Panlalawigan</em>, and the <em>Sangguniang Panlungsod</em> or <em>Sangguniang Bayan</em>; the special jurisdictional status of the Municipality of Pateros; and the functional capacity rule governing <em>ex officio</em> <em>Sanggunian</em> members.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION I -->
+  <h3 id="sec-i-framework" class="c-navy">I. STATUTORY FRAMEWORK AND NATURE OF ADMINISTRATIVE DISCIPLINARY PROCEEDINGS</h3>
+
+  <h4 id="scope-section-60" class="c-navy">Scope and Exclusivity of Section 60 to Elective Local Officials</h4>
+  <p>
+    Under <span class="c-teal">Section 60 of Republic Act No. 7160</span>, otherwise known as the <span class="c-teal">Local Government Code of 1991 (LGC)</span>, an <span class="c-green"><strong><u>elective local official</u></strong></span> may be disciplined, suspended, or removed from office strictly on the statutory grounds enumerated therein. The disciplinary regime under Sections 60 to 68 of the LGC applies <span class="c-rust"><strong><u>exclusively to local elective officials</u></strong></span> (i.e., Governors, Vice Governors, <em>Sangguniang Panlalawigan</em> members, City and Municipal Mayors, Vice Mayors, <em>Sangguniang Panlungsod</em> and <em>Sangguniang Bayan</em> members, <em>Punong Barangays</em>, and <em>Sangguniang Barangay</em> members). Appointive local officials and employees are governed separately by the Administrative Code of 1987, Civil Service laws, rules, and regulations, and Section 84 of the LGC under the disciplinary authority of the local chief executive and the Civil Service Commission.
+  </p>
+
+  <!-- Requisite Card: Elective vs Appointive -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🗳️</div>
+        <div class="ui-title">Elective Local Officials</div>
+        <div class="ui-sub"><span class="c-teal">LGC Secs. 60–68</span><br>Governed exclusively by LGC statutory regime & courts</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📑</div>
+        <div class="ui-title">Appointive Local Officials</div>
+        <div class="ui-sub"><span class="c-teal">LGC Sec. 84 / CSC Law</span><br>Governed by Administrative Code of 1987 & CSC rules</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Concurrent Body</div>
+        <div class="ui-sub"><span class="c-teal">R.A. 6770</span><br>Ombudsman exercises concurrent power over all officials</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="quantum-of-proof" class="c-navy">Quantum of Proof in Administrative Disciplinary Cases</h4>
+  <p>
+    Administrative disciplinary proceedings against elective local officials are neither civil nor criminal in nature; they are administrative inquiries designed to protect public service integrity rather than to punish the official as a felon. Consequently, the stringent criminal standard of proof beyond reasonable doubt does not apply.
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Operative Rule on Quantum of Proof:</strong></span> To warrant the administrative suspension or discipline of an elective local official, the law requires only <span class="c-green"><strong><u>substantial evidence</u></strong></span>, which is that amount of relevant evidence that a reasonable mind might accept as adequate to support a conclusion.
+    </li>
+  </ul>
+
+  <!-- Case: Aguinaldo v. Santos -->
+  <div id="case-aguinaldo-santos" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Aguinaldo v. Santos</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 94115, August 21, 1992, 212 SCRA 768)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Provincial Governor Rodolfo Aguinaldo of Cagayan was administratively charged and ordered removed from office by the Secretary of Local Government for participating in a failed coup d'état against the national government. Aguinaldo challenged the administrative proceedings, arguing among others that the evidence required to discipline an elected official should match criminal standards.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> What is the quantum of proof required to sustain an administrative disciplinary sanction against an elective local official?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that the quantum of proof required in administrative proceedings for the suspension or discipline of a local elective official is merely <span class="c-green"><strong><u>substantial evidence</u></strong></span>, not proof beyond reasonable doubt. Administrative accountability proceedings are distinct from criminal prosecutions and require only such relevant evidence as a reasonable mind might accept as adequate to support a conclusion.</li>
+    </ul>
+  </div>
+
+  <!-- Case: Ang Tibay v. CIR -->
+  <div id="case-ang-tibay" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Ang Tibay v. Court of Industrial Relations</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. L-46496, February 27, 1940, 69 Phil. 635)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> In an industrial dispute before the Court of Industrial Relations, the Solicitor General moved for a new trial, prompting the respondent union to challenge the procedural and evidentiary standards governing administrative tribunals. The Supreme Court took the opportunity to lay down the cardinal primary rights of administrative due process.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> What constitutes the minimum evidentiary threshold required to support a valid decision rendered by an administrative body?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> While administrative tribunals are free from the rigid technicalities of regular court rules of evidence, their decisions must nonetheless be supported by <span class="c-green"><strong><u>substantial evidence</u></strong></span>. Mere uncorroborated hearsay or rumor does not constitute substantial evidence; there must be relevant, credible proof that a reasonable mind would accept as adequate to justify a legal conclusion.</li>
+    </ul>
+  </div>
+
+  <h4 id="complainants-desistance" class="c-navy">Effect of Complainant's Desistance on Administrative Proceedings</h4>
+  <p>
+    Because public office is a public trust under Article XI, Section 1 of the 1987 Constitution, an administrative complaint against an erring local official is not a purely private dispute between the complainant and the respondent. Once the disciplinary machinery of the State is set in motion, the public interest in maintaining honest local governance supersedes the private whims of the complaining party.
+  </p>
+
+  <!-- Case: Abenojar v. Lopez -->
+  <div id="case-abenojar" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Abenojar v. Lopez</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(A.M. No. P-2230, October 23, 1982, 118 SCRA 1)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> An administrative complaint was filed against a public officer, after which the private complainant executed an affidavit of desistance withdrawing the charges in favor of the respondent. The respondent invoked the desistance to seek the immediate dismissal of the administrative case.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the desistance of the complainant operate as a legal bar to taking disciplinary action against a public official?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that the desistance of a complainant in an administrative case is <span class="c-rust"><strong><u>not a bar</u></strong></span> to taking disciplinary action against an erring officer or employee, including an elective local official. An affidavit of desistance does not automatically warrant the dismissal of the administrative charge where the records or evidence independently establish administrative culpability.</li>
+    </ul>
+  </div>
+
+  <!-- Case: Estreller v. Manatad, Jr. -->
+  <div id="case-estreller" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Estreller v. Manatad, Jr.</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(A.M. No. P-94-1034, February 21, 1997, 268 SCRA 608)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Following the filing of a sworn administrative complaint for grave misconduct, the complainant lost interest and sought to withdraw the charges against the respondent official. The respondent moved to terminate the investigation solely on the basis of the complainant's withdrawal.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> May administrative disciplinary proceedings be terminated solely upon the withdrawal or caprice of the private complainant?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that administrative disciplinary proceedings cannot be made to depend upon the whims and caprices of private complainants, who are Treated in law merely as witnesses for the government. So long as there is <span class="c-green"><strong><u>substantial evidence</u></strong></span> on record establishing the respondent's liability, the investigation must proceed and the appropriate penalty must be imposed despite an affidavit of desistance.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION II -->
+  <h3 id="sec-ii-grounds" class="c-navy">II. ENUMERATED GROUNDS FOR DISCIPLINARY ACTION (SECTION 60, R.A. 7160)</h3>
+  <p>
+    <span class="c-teal">Section 60 of the LGC</span> provides eight specific categories of administrative offenses for which an elective local official may be disciplined, suspended, or removed from office:
+  </p>
+
+  <h4 id="ground-1-disloyalty" class="c-navy">1. Disloyalty to the Republic of the Philippines (Section 60[a])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Doctrinal Definition:</strong></span> Disloyalty to the Republic contemplates the commission of <span class="c-rust"><strong><u>treasonous acts</u></strong></span> or acts manifesting allegiance to a foreign power in betrayal of the Philippine State. It encompasses conduct akin to treason under Article 114 of the Revised Penal Code or acts undermining Philippine sovereignty, viewed through the constitutional lens of high crimes and betrayal of public trust as discussed in <span class="c-burgundy"><em>Francisco, Jr. v. House of Representatives</em></span> (G.R. No. 160261, November 10, 2003).
+    </li>
+  </ul>
+
+  <!-- Professor's Illustration -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration</div>
+    <p style="margin: 0;">
+      Suppose an incumbent Municipal Mayor openly aligns with a foreign state aggressively claiming Philippine maritime territory, actively aids foreign operatives in undermining national defense installations within his municipality, and publicly renounces Philippine sovereignty over the West Philippine Sea in exchange for foreign funding. Such overt, treasonous conduct constitutes <span class="c-rust"><strong><u>disloyalty to the Republic of the Philippines</u></strong></span> under Section 60(a) of the LGC, subjecting the local chief executive to administrative disciplinary proceedings and judicial removal from office.
+    </p>
+  </div>
+
+  <h4 id="ground-2-culpable-violation" class="c-navy">2. Culpable Violation of the Constitution (Section 60[b])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Doctrinal Definition:</strong></span> Culpable violation of the Constitution means a <span class="c-green"><strong><u>willful, intentional, and deliberate transgression</u></strong></span> of a constitutional command or prohibition. An unintentional error of judgment, or a good-faith mistake arising from the legal complexity or ambiguity of a constitutional provision, does not constitute a "culpable" violation and cannot ground disciplinary liability under Section 60(b).
+    </li>
+  </ul>
+
+  <h4 id="ground-3-misconduct" class="c-navy">3. Dishonesty, Oppression, Misconduct in Office, Gross Negligence, or Dereliction of Duty (Section 60[c])</h4>
+  <ul>
+    <li><span class="c-navy"><strong>Dishonesty:</strong></span> The disposition to lie, cheat, deceive, or defraud; untrustworthiness; lack of integrity; or acting fraudulently and insincerely in the performance of official powers, functions, or duties.</li>
+    <li><span class="c-navy"><strong>Oppression:</strong></span> An act of cruelty, severity, unlawful exaction, or excessive and harsh domination in the exercise of official authority.</li>
+    <li><span class="c-navy"><strong>Misconduct in Office:</strong></span> Any unlawful behavior by a public officer in relation to the duties of his office, willful in character, which affects his performance of official duties and not merely his private character as an individual.</li>
+    <li><span class="c-navy"><strong>Gross Negligence:</strong></span> Culpable carelessness characterized by the want of even slight care, acting or omitting to act in a situation where there is a duty to act, not inadvertently but willfully and intentionally, with a conscious indifference to consequences.</li>
+    <li><span class="c-navy"><strong>Dereliction of Duty:</strong></span> Willful neglect, refusal, or abandonment of the performance of one's statutory and official duties.</li>
+  </ul>
+
+  <!-- Case: Lacson v. Roque -->
+  <div id="case-lacson-roque" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Lacson v. Roque</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. L-6225, January 10, 1953, 92 Phil. 456)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Manila Mayor Arsenio Lacson was suspended by the President following charges arising from a radio broadcast in which Lacson criticized a judge who had acquitted a deputy chief of police. Lacson challenged the suspension, arguing that his public statements did not constitute misconduct in office.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> What is the legal standard for "misconduct in office" sufficient to justify disciplinary action against an elective local chief executive?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that <span class="c-green"><strong><u>misconduct in office</u></strong></span> refers to such misconduct as affects the officer's performance of his official duties as an officer and not only affects his character as a private individual. In such cases, it is necessary to separate the character of the man from the character of the officer; the act charged must have a direct relation to and be connected with the performance of official duties.</li>
+    </ul>
+  </div>
+
+  <!-- Case: Salocan v. Alarde -->
+  <div id="case-salocan-alarde" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Salocan v. Alarde</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 107271, September 10, 2003 [as cited in lecture])</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> A local chief executive unjustifiably and persistently refused to sign municipal checks required for the payment of valid, legally subsisting financial obligations of the local government unit. An administrative complaint was instituted against the mayor for obstructing the settlement of the LGU's lawful obligations.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the unjustified refusal of a local chief executive to sign checks for the payment of valid LGU obligations constitute misconduct in office?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that the deplorable act of a local chief executive in obstinately refusing to sign checks for the payment of the local government unit's valid obligations constitutes actionable <span class="c-green"><strong><u>misconduct in office</u></strong></span>. Once an obligation is lawfully incurred and supported by complete appropriations and vouchers, the signing of the check is a ministerial duty whose bad-faith refusal disrupts public service.</li>
+    </ul>
+  </div>
+
+  <h4 id="ground-4-moral-turpitude" class="c-navy">4. Commission of Any Offense Involving Moral Turpitude or Punishable by at Least <em>Prision Mayor</em> (Section 60[d])</h4>
+  <ul>
+    <li><span class="c-navy"><strong>Moral Turpitude:</strong></span> Everything which is done contrary to justice, honesty, modesty, or good morals; an act of baseness, vileness, or depravity in the private and social duties which a man owes his fellowmen, or to society in general, contrary to the accepted and customary rule of right and duty between man and man.</li>
+    <li><span class="c-navy"><strong>Offense Punishable by at Least <em>Prision Mayor</em>:</strong></span> Refers to any crime penalized under the Revised Penal Code or special laws with an afflictive penalty of at least six (6) years and one (1) day to twelve (12) years imprisonment.</li>
+  </ul>
+
+  <!-- Case: Dela Torre v. COMELEC -->
+  <div id="case-dela-torre" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Dela Torre v. COMELEC</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 121592, July 5, 1996, 258 SCRA 483)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Rolando Dela Torre's certificate of candidacy for Mayor of Cavinti, Laguna, was disqualified by the COMELEC under Section 40(a) of the LGC due to his prior conviction for Violation of the Anti-Fencing Law (P.D. No. 1612). Dela Torre argued that fencing did not involve moral turpitude.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> How is "moral turpitude" determined in administrative and election law, and does the crime of fencing involve moral turpitude?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court defined moral turpitude as an act of baseness, vileness, or depravity in the private duties which a man owes his fellowmen. While whether a crime involves moral turpitude is ultimately a question of fact and law depending on the surrounding circumstances and elements of the offense, fencing inherently involves moral turpitude because actual knowledge that property was stolen—an essential element of fencing—demonstrates clear moral depravity and dishonesty.</li>
+    </ul>
+  </div>
+
+  <h4 id="ground-5-abuse-authority" class="c-navy">5. Abuse of Authority (Section 60[e])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Doctrinal Definition:</strong></span> The excessive, arbitrary, or improper use of official power vested in an elective local official while in the performance of his duties and functions. Under <span class="c-teal">Section 63(d) of the LGC</span>, any abuse in the exercise of the power to impose preventive suspension is explicitly penalized as <span class="c-rust"><strong><u>abuse of authority</u></strong></span>.
+    </li>
+  </ul>
+
+  <h4 id="ground-6-unauthorized-absence" class="c-navy">6. Unauthorized Absence for Fifteen (15) Consecutive Working Days (Section 60[f])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Operative Rule and Statutory Exception:</strong></span> An elective local official who incurs unauthorized absences for <span class="c-green"><strong><u>fifteen (15) consecutive working days</u></strong></span> is subject to disciplinary action. However, Section 60(f) explicitly <span class="c-rust"><strong><u>exempts members of the Sangguniang Panlalawigan, Sangguniang Panlungsod, Sangguniang Bayan, and Sangguniang Barangay</u></strong></span>, whose attendance and absences at legislative sessions are governed instead by their respective internal rules of procedure under Section 50 of the LGC (which require a four-consecutive-session unauthorized absence rule).
+    </li>
+  </ul>
+
+  <h4 id="ground-7-foreign-citizenship" class="c-navy">7. Application for, or Acquisition of, Foreign Citizenship or Residence or the Status of an Immigrant of Another Country (Section 60[g])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Doctrinal Definition:</strong></span> Public officials owe undivided allegiance to the Republic of the Philippines. Merely applying for, or acquiring, foreign citizenship, permanent foreign residency, or immigrant status ("green card" holder status) in another country constitutes a ground for administrative discipline and disqualification.
+    </li>
+  </ul>
+
+  <!-- Case: Caasi v. Court of Appeals -->
+  <div id="case-caasi" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Caasi v. Court of Appeals</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 88831, November 8, 1990, 191 SCRA 229) [Assumed reference for transcript citation "People v. Caasi"]</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Mateo Caasi was elected Municipal Mayor in Pangasinan, but his election was contested upon discovery that he was a holder of a "green card" granting him permanent resident and immigrant status in the United States of America. Caasi claimed he never intended to abandon his Philippine domicile and only obtained the visa for convenient travel and medical treatment.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the acquisition or possession of immigrant status ("green card") in a foreign country disqualify an individual from holding an elective local office?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that a "green card" holder is an immigrant of another country who has waived his status as a permanent resident of the Philippines. Unless he has formally waived his immigrant status prior to filing his candidacy, his retention of foreign permanent residency demonstrates divided allegiance and disqualifies him from serving as a local elective official.</li>
+    </ul>
+  </div>
+
+  <h4 id="ground-8-other-grounds" class="c-navy">8. Other Grounds Provided by the LGC and Applicable Laws (Section 60[h])</h4>
+  <p>
+    Section 60(h) serves as a catch-all clause incorporating specific administrative offenses scattered throughout the LGC and special statutes:
+  </p>
+  <ol>
+    <li><span class="c-teal"><strong>Section 58, LGC:</strong></span> Enforcement by a local chief executive or official of a <span class="c-rust"><strong><u>disapproved ordinance or resolution</u></strong></span> after it has been declared invalid by the reviewing <em>Sanggunian</em>.</li>
+    <li><span class="c-teal"><strong>Section 190, LGC:</strong></span> Attempt to enforce a <span class="c-rust"><strong><u>void or suspended tax ordinance or revenue measure</u></strong></span> after its disapproval or suspension by the Secretary of Justice.</li>
+    <li><span class="c-teal"><strong>Section 318, LGC:</strong></span> Failure of the local chief executive to prepare and submit the <span class="c-green"><strong><u>executive budget</u></strong></span> on or before October 16 of each year.</li>
+    <li><span class="c-teal"><strong>Special Penal and Administrative Statutes:</strong></span> Violations of Republic Act No. 3019 (Anti-Graft and Corrupt Practices Act), Republic Act No. 6713 (Code of Conduct and Ethical Standards for Public Officials and Employees), Batas Pambansa Blg. 881 (Omnibus Election Code), and the Revised Penal Code.</li>
+  </ol>
+
+  <!-- Statutory Table: Section 60 Grounds -->
+  <h4 id="table-sec-60-grounds" class="c-navy">Statutory Comparison Table: Section 60 Grounds</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Ground under Section 60, LGC</th>
+        <th>Core Legal Requisite / Operative Element</th>
+        <th>Key Statutory Exception / Qualifier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(a): Disloyalty to the Republic</strong></td>
+        <td>Overt treasonous acts or betrayal of national sovereignty and allegiance.</td>
+        <td>Mere political dissent or policy criticism does not constitute disloyalty.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(b): Culpable Violation of the Constitution</strong></td>
+        <td>Willful, intentional, and deliberate transgression of a constitutional provision.</td>
+        <td>Excludes good-faith errors arising from constitutional complexity or ambiguity.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(c): Misconduct in Office</strong></td>
+        <td>Unlawful, willful behavior directly related to the performance of official duties (<em>Lacson v. Roque</em>).</td>
+        <td>Purely private indiscretions unrelated to official functions do not constitute misconduct in office.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(d): Moral Turpitude / <em>Prision Mayor</em></strong></td>
+        <td>Act of baseness, vileness, or depravity (<em>Dela Torre</em>), or crime punishable by at least 6 years and 1 day.</td>
+        <td>Whether an offense not inherently vile involves moral turpitude is a question of fact requiring proof.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(f): Unauthorized Absence</strong></td>
+        <td>Continuous absence without official leave for <strong>15 consecutive working days</strong>.</td>
+        <td><span class="c-rust"><strong>Exempts</strong></span> all members of the <em>Sangguniang Panlalawigan</em>, <em>Panlungsod</em>, <em>Bayan</em>, and <em>Barangay</em>.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Sec. 60(g): Foreign Citizenship / Immigrant Status</strong></td>
+        <td>Mere <em>application</em> for or <em>acquisition</em> of foreign citizenship, residence, or immigrant status (<em>Caasi</em>).</td>
+        <td>Requires formal, prior waiver of immigrant status before running for or holding office.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- SECTION III -->
+  <h3 id="sec-iii-power-to-remove" class="c-navy">III. THE POWER TO REMOVE VS. THE POWER TO SUSPEND: JUDICIAL PREROGATIVE AND OMBUDSMAN CONCURRENT JURISDICTION</h3>
+
+  <h4 id="exclusive-judicial-removal" class="c-navy">Exclusive Judicial Prerogative to Remove Under the LGC</h4>
+  <p>
+    A critical bar exam distinction lies in the last paragraph of Section 60 of the LGC, which explicitly provides: <span class="c-rust"><em>"An elective local official may be removed from office on the grounds enumerated above <strong><u>by order of the proper court</u></strong>."</em></span>
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Limitation on LGC Disciplining Authorities:</strong></span> When an administrative complaint is filed pursuant to Section 61 of the LGC before the <strong>Office of the President</strong>, the <strong>Sangguniang Panlalawigan</strong>, the <strong>Sangguniang Panlungsod</strong>, or the <strong>Sangguniang Bayan</strong>, these executive and legislative bodies possess <span class="c-rust"><strong><u>no legal authority to remove</u></strong></span> an elective local official from office. Their disciplinary power is strictly limited to imposing a <span class="c-green"><strong><u>reprimand, censure, or suspension</u></strong></span> not exceeding six (6) months per offense or the unexpired term of the respondent.
+    </li>
+  </ul>
+
+  <!-- Case: Pablico v. Villapando -->
+  <div id="case-pablico-villapando" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Pablico v. Villapando</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 147870, July 31, 2002, 385 SCRA 601) [Also transcribed phonetically in Part 1 of lecture as "Pablico v. Biliran"]</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Solomon Villapando, Mayor of San Vicente, Palawan, was administratively charged before the <em>Sangguniang Panlalawigan</em> of Palawan for abuse of authority and culpable violation of the Constitution, resulting in a resolution developed by the <em>Sangguniang Panlalawigan</em> and affirmed by the Office of the President ordering his dismissal from office. Vice Mayor Alejandro Pablico took his oath as Mayor, prompting Villapando to challenge the validity of his administrative removal.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Do the <em>Sangguniang Panlalawigan</em> and the Office of the President possess the authority under the Local Government Code to remove an elective local official from office?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that under the last paragraph of Section 60 of the LGC, the power to remove an elective local official from office is lodged <span class="c-rust"><strong><u>exclusively in the proper court</u></strong></span>. Where the disciplining authority is granted only the power to suspend and not the power to remove, it cannot be permitted to manipulate the law by usurping a judicial prerogative; Congress intentionally removed the power of dismissal from the President and the <em>Sanggunians</em> to prevent partisan political harassment.</li>
+    </ul>
+  </div>
+
+  <h4 id="ombudsman-concurrent-jurisdiction" class="c-navy">Concurrent Jurisdiction and Power of Removal of the Office of the Ombudsman</h4>
+  <p>
+    While the Office of the President and the <em>Sanggunians</em> cannot order removal under the LGC, the <span class="c-teal"><strong>Office of the Ombudsman</strong></span> exercises concurrent administrative disciplinary jurisdiction over all elective local officials pursuant to Republic Act No. 6770 (The Ombudsman Act of 1989).
+  </p>
+
+  <!-- Case: Hagad v. Gozo-Dadole -->
+  <div id="case-hagad-gozo-dadole" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Hagad v. Gozo-Dadole</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 108072, December 12, 1995, 251 SCRA 242)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Mayor Alfredo Ouano, Vice Mayor Paterno Cañete, and Councilor Rafael Mayol of Mandaue City were administratively charged before the Office of the Deputy Ombudsman for the Visayas for violating R.A. 3019 and the LGC. They moved to dismiss the complaint, arguing that the enactment of the LGC of 1991 divested the Ombudsman of jurisdiction over elective city officials and vested it exclusively in the Office of the President under Sections 61 and 63 of the LGC.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Did the enactment of the Local Government Code of 1991 repeal or divest the Office of the Ombudsman of its administrative disciplinary jurisdiction—including the power to preventive suspend and remove—over elective local officials?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that there is nothing in the LGC of 1991 that indicates an intent to repeal or abrogate the disciplinary authority vested in the Office of the Ombudsman under R.A. 6770. The Ombudsman and the disciplining authorities under Section 61 of the LGC exercise <span class="c-green"><strong><u>concurrent administrative jurisdiction</u></strong></span> over elective local officials, and the body that first takes cognizance of the complaint acquires jurisdiction to the exclusion of the other. Moreover, when the complaint is filed before the Ombudsman under R.A. 6770, the Ombudsman retains the full statutory power not only to suspend, but also to <span class="c-green"><strong><u>remove and dismiss</u></strong></span> an elective local official from office.</li>
+    </ul>
+  </div>
+
+  <!-- Comparative Table: LGC Authorities vs. Ombudsman -->
+  <h4 id="table-lgc-vs-ombudsman" class="c-navy">Comparative Table: Disciplining Authorities Under LGC vs. Office of the Ombudsman</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Disciplining Authorities under the LGC (R.A. 7160, Sec. 60–68)</th>
+        <th>Office of the Ombudsman (R.A. 6770 / 1987 Constitution)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Investigating / Disciplining Body</strong></td>
+        <td>Office of the President, <em>Sangguniang Panlalawigan</em>, <em>Sangguniang Panlungsod</em>, or <em>Sangguniang Bayan</em>.</td>
+        <td>Ombudsman and Deputy Ombudsmen (Overall, Luzon, Visayas, Mindanao, MOLEO).</td>
+      </tr>
+      <tr>
+        <td><strong>Power to Impose Penalty of Removal</strong></td>
+        <td><span class="c-rust"><strong>NO.</strong></span> Only the "proper court" may order removal under Sec. 60, last par. (<em>Pablico v. Villapando</em>).</td>
+        <td><span class="c-green"><strong>YES.</strong></span> R.A. 6770 expressly empowers the Ombudsman to dismiss elective local officials (<em>Hagad v. Gozo-Dadole</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Maximum Preventive Suspension</strong></td>
+        <td><strong>60 days</strong> for a single suspension; <strong>90 days</strong> aggregate in a single year (Sec. 63[b], LGC).</td>
+        <td><strong>6 months</strong> without pay under Section 24 of R.A. 6770.</td>
+      </tr>
+      <tr>
+        <td><strong>90-Day Pre-Election Ban on Suspension</strong></td>
+        <td><span class="c-rust"><strong>Applies strictly</strong></span> under Sec. 62(c) of the LGC.</td>
+        <td>Does not restrict the Ombudsman's independent constitutional and statutory mandate under R.A. 6770.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- SECTION IV -->
+  <h3 id="sec-iv-form-filing" class="c-navy">IV. FORM, FILING, AND JURISDICTIONAL HIERARCHY OVER ADMINISTRATIVE COMPLAINTS (SECTION 61, R.A. 7160)</h3>
+
+  <h4 id="formal-requirements-verification" class="c-navy">Formal Requirements: Verification and Certification Against Forum Shopping</h4>
+  <p>
+    <span class="c-teal">Section 61 of the LGC</span> mandates that an administrative complaint against any erring local elective official must be a <span class="c-green"><strong><u>verified complaint</u></strong></span>. In accordance with regular procedural practice, the complaint—whether signed by the complainant personally or assisted by counsel—must contain:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>Verification:</strong></span> A sworn attestation by the complainant that he caused the preparation of the complaint, has read and understood its contents, and that the allegations therein are true and correct of his personal knowledge or based on authentic documents; and</li>
+    <li><span class="c-navy"><strong>Certification Against Forum Shopping:</strong></span> A sworn statement certifying that the complainant has not commenced any other action or proceeding involving the same issues in the Supreme Court, the Court of Appeals, or any other tribunal or agency; that if he learns of a similar pending action, he undertakes to report the same within five (5) days to the disciplining body; and that the filing is not designed to harass the respondent or needlessly increase the cost of litigation.</li>
+  </ol>
+
+  <!-- Case: Joson v. Executive Secretary Torres -->
+  <div id="case-joson-torres" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Joson v. Executive Secretary Torres</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 131255, May 20, 1998, 290 SCRA 279)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Nueva Ecija Governor Eduardo Joson was administratively charged before the Office of the President by several provincial board members for allegedly barging into the session hall and threatening them. Joson challenged the proceedings on the ground that the letter-complaint initially filed against him was unverified.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Is the verification requirement under Section 61 of the LGC jurisdictional, such that its absence renders the administrative complaint fatally defective and subject to outright dismissal?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that the requirement that an administrative complaint be verified is merely <span class="c-green"><strong><u>formal, not jurisdictional</u></strong></span>. Consequently, the investigating officer or body should not dismiss an unverified complaint outright, but may still act on it and simply direct the complainant to submit a proper verification so that substantial justice may be served.</li>
+    </ul>
+  </div>
+
+  <h4 id="jurisdictional-hierarchy-sec-61" class="c-navy">Jurisdictional Hierarchy of Disciplining Authorities (Section 61[a]–[c])</h4>
+  <p>
+    Under Section 61 of the LGC, original administrative jurisdiction depends strictly on the local government level of the respondent official:
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>1. Office of the President (Section 61[a]):</strong></span> Exercises original disciplinary jurisdiction over complaints against any elective official of a <strong>province</strong>, a <strong>highly urbanized city (HUC)</strong>, an <strong>independent component city (ICC)</strong>, or a <strong>component city</strong>.
+      <ul>
+        <li><span class="c-burgundy"><em>Special Case of the Municipality of Pateros:</em></span> Because the Municipality of Pateros is the lone municipality in Metro Manila that does not belong to any province (and the Metropolitan Manila Development Authority is an administrative agency, not a political subdivision or higher-level LGU with a <em>Sangguniang Panlalawigan</em>), administrative complaints against elective officials of <strong>Pateros</strong> must be filed directly with the <strong>Office of the President</strong> under Section 61(a).</li>
+        <li><span class="c-burgundy"><em>Nuance on Component City Officials:</em></span> While Section 61(a) directs the filing of complaints against component city officials (e.g., City of San Fernando, La Union) with the Office of the President, Section 63(a)(2) empowers the <strong>Provincial Governor</strong> to preventively suspend component city officials, and Section 67(a)(1) refers to appeals from component cities to the <em>Sangguniang Panlalawigan</em>. In practice, after preliminary assessment of a meritorious complaint against a component city official, the Office of the President may refer or forward the case to the Provincial Governor (for preventive suspension) and the <em>Sangguniang Panlalawigan</em> for formal investigation and hearing.</li>
+      </ul>
+    </li>
+    <li>
+      <span class="c-navy"><strong>2. Sangguniang Panlalawigan (Section 61[b]):</strong></span> Exercises original disciplinary jurisdiction over complaints against any elective official of a <strong>municipality</strong> (e.g., Mayor, Vice Mayor, or <em>Sangguniang Bayan</em> member of Bauang, La Union). Its decision is appealable to the <strong>Office of the President</strong>.
+    </li>
+    <li>
+      <span class="c-navy"><strong>3. Sangguniang Panlungsod or Sangguniang Bayan (Section 61[c]):</strong></span> Exercises original disciplinary jurisdiction over complaints against any elective <strong>barangay official</strong> (<em>Punong Barangay</em>, <em>Sangguniang Barangay</em> <em>Kagawad</em>, or <em>Sangguniang Kabataan</em> Chairperson). While Section 61(c) states that its decision is "final and executory," Section 67(a)(1) allows an administrative appeal within thirty (30) days to the <em>Sangguniang Panlalawigan</em> (for component cities and municipalities) or the Office of the President (for HUCs and ICCs), meaning the decision is <span class="c-green"><strong><u>immediately executory pending appeal</u></strong></span> rather than unappealable.
+    </li>
+  </ul>
+
+  <h4 id="functional-capacity-rule" class="c-navy">The Functional Capacity Rule for <em>Ex Officio</em> Sanggunian Members</h4>
+  <p>
+    When an elective barangay official (such as a <em>Punong Barangay</em> elected as President of the Municipal Chapter of the <em>Liga ng mga Barangay</em>) sits concurrently as an <em>ex officio</em> member of the <em>Sangguniang Bayan</em>, determining whether the <strong>Sangguniang Bayan</strong> (under Section 61[c]) or the <strong>Sangguniang Panlalawigan</strong> (under Section 61[b]) has original jurisdiction over an administrative complaint against him depends on the <span class="c-green"><strong><u>official capacity in which the complained act or omission was committed</u></strong></span>.
+  </p>
+
+  <!-- Professor's Illustration: Functional Capacity -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration: Functional Capacity Rule</div>
+    <p style="margin: 0;">
+      A <em>Punong Barangay</em>, who concurrently sits as an <em>ex officio</em> member of the <em>Sangguniang Bayan</em> by virtue of being the municipal <em>Liga ng mga Barangay</em> (ABC) President, unjustifiably refused for 29 days to issue a Certificate of Indigency requested by his barangay constituents. When the constituents filed an administrative complaint for grave misconduct and abuse of authority, it was erroneously transmitted to the <em>Sangguniang Panlalawigan</em>. Applying the <span class="c-green"><strong><u>functional capacity rule</u></strong></span>, the issuance of a Certificate of Indigency is an executive barangay function performed strictly in the respondent's primary capacity as <em>Punong Barangay</em>—not a legislative duty performed as an <em>ex officio</em> <em>Sangguniang Bayan</em> member (whose function is enacting municipal ordinances and resolutions). Thus, original jurisdiction belongs exclusively to the <strong>Sangguniang Bayan</strong> under Section 61(c), and the <em>Sangguniang Panlalawigan</em> must calendar and dismiss or remand the complaint for lack of original jurisdiction.
+    </p>
+  </div>
+
+  <!-- DIAGRAM 1: JURISDICTIONAL HIERARCHY & APPELLATE FLOW -->
+  <div id="diagram-jurisdiction-appeal" class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 1: JURISDICTIONAL HIERARCHY & APPELLATE PATHWAYS <span class="diagram-hint">(Drag to pan - Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  subgraph G1["Level 1: Barangay Elective Officials"]
+    BO["Barangay Official Charged
+(PB, Kagawad, SK Chairman)"] --> O_SB["ORIGINAL FILING:
+Sangguniang Bayan / Panlungsod (Sec. 61c)"]
+    O_SB --> APP_SP["APPEAL (30 Days):
+Sangguniang Panlalawigan (Sec. 67a1)
+*For HUC/ICC, appeal lies directly to OP"]
+    APP_SP --> APP_OP1["APPEAL:
+Office of the President"]
+    APP_OP1 --> CA1["Rule 43 Appeal:
+Court of Appeals"]
+    CA1 --> SC1["Rule 45 Petition:
+Supreme Court"]
+  end
+
+  subgraph G2["Level 2: Municipal Elective Officials"]
+    MO["Municipal Official Charged
+(Mayor, Vice Mayor, SB Members)"] --> O_SP["ORIGINAL FILING:
+Sangguniang Panlalawigan (Sec. 61b)"]
+    O_SP --> APP_OP2["APPEAL (30 Days):
+Office of the President (Sec. 67a2)"]
+    APP_OP2 --> CA2["Rule 43 Appeal:
+Court of Appeals"]
+    CA2 --> SC2["Rule 45 Petition:
+Supreme Court"]
+  end
+
+  subgraph G3["Level 3: Provincial, City & Pateros Officials"]
+    PCO["Provincial / City / Pateros Official
+(Governor, HUC/ICC/Component Mayor)"] --> O_OP["ORIGINAL FILING:
+Office of the President (Sec. 61a)"]
+    O_OP --> CA3["Rule 43 Appeal:
+Court of Appeals"]
+    CA3 --> SC3["Rule 45 Petition:
+Supreme Court"]
+  end
+
+  subgraph G4["Concurrent Jurisdiction: Office of the Ombudsman"]
+    OMB["Office of the Ombudsman (R.A. 6770)"] --> OMB_JUR["Concurrent Original Jurisdiction
+Over ALL Elective Local Officials"]
+    OMB_JUR --> OMB_POW["Power to Preventively Suspend (6 Mos)
+AND Penalty of Suspension or DISMISSAL
+(Hagad v. Gozo-Dadole)"]
+    OMB_POW --> CA4["Rule 43 Appeal:
+Court of Appeals"]
+  end
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ========================================================================= -->
+  <!-- PART 2 -->
+  <!-- ========================================================================= -->
+  <h2 id="part-2-procedural-due-process" class="c-navy">PART 2: PROCEDURAL DUE PROCESS, PREVENTIVE SUSPENSION, RESPONDENT'S RIGHTS, PENALTIES, AND ADMINISTRATIVE APPEALS</h2>
+
+  <!-- PART 2 SCOPE & OVERVIEW -->
+  <div class="ui-box" style="background: #F8FAFC; border-color: #CBD5E1;">
+    <div style="font-weight: 700; color: #1E3A8A; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Part 2 Overview & Scope of Topics
+    </div>
+    <ul style="margin: 0; padding-left: 1.25rem;">
+      <li><span class="c-navy"><strong>V. Notice of Hearing, Venue, and the 90-Day Pre-Election Ban (Section 62, R.A. 7160):</strong></span> Mandatory timelines for notice, answer, and commencement of investigation (7-15-10 day rules); structural distinction between the verification of a complaint and the verification of an answer; venue rules for provincial/HUC officials versus other local officials; and the scope of the 90-day pre-election ban on investigations and preventive suspensions.</li>
+      <li><span class="c-navy"><strong>VI. Preventive Suspension: Nature, Requisites, Authority, and Duration (Sections 63–64, R.A. 7160):</strong></span> Non-penal nature of preventive suspension (<span class="c-burgundy"><em>Castillo-Co v. Barbers</em></span>; <span class="c-burgundy"><em>Garcia v. Mojica</em></span>); officials authorized to impose preventive suspension; strict statutory requisites including joinder of issues; the 60-day single suspension and 90-day annual caps; simultaneous service of suspensions (<span class="c-burgundy"><em>Ganzon v. Court of Appeals</em></span>); automatic reinstatement; and entitlement to back salaries upon exoneration.</li>
+      <li><span class="c-navy"><strong>VII. Constitutional and Statutory Rights of the Respondent (Section 65, R.A. 7160):</strong></span> Administrative due process rights; right to counsel and cross-examination; tactical waiver via "No Cross" manifestation; compulsory processes (<em>subpoena ad testificandum</em> and <em>subpoena duces tecum</em>); litigation hazards of subpoenaing reluctant witnesses without prior sworn statements; and the absence of contempt power in local <em>Sanggunians</em> (<span class="c-burgundy"><em>Negros Oriental II Electric Cooperative, Inc. v. Sangguniang Panlungsod of Dumaguete City</em></span>).</li>
+      <li><span class="c-navy"><strong>VIII. Rendition of Decision, Penalties, Administrative Appeals, and Execution Pending Appeal (Sections 66–68, R.A. 7160):</strong></span> The 90-day investigation and 30-day decision timelines; limits on the penalty of suspension vs. removal as a bar to candidacy (<span class="c-burgundy"><em>Lingkod Partylist</em></span> doctrine on post-election decisions); appellate hierarchy and reglementary periods; execution pending appeal vs. discretionary stay under A.O. No. 18 (<span class="c-burgundy"><em>Berces, Sr. v. Guingona, Jr.</em></span>); and permanent vs. acting succession upon Ombudsman dismissal.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION V -->
+  <h3 id="sec-v-notice-venue-ban" class="c-navy">V. NOTICE OF HEARING, VENUE, AND THE 90-DAY PRE-ELECTION BAN (SECTION 62, R.A. 7160)</h3>
+
+  <h4 id="timelines-7-15-10" class="c-navy">Statutory Timelines for Notice, Verified Answer, and Investigation (Section 62[a])</h4>
+  <p>
+    To satisfy the constitutional mandate of procedural due process under Article III, Section 1 of the 1987 Constitution, <span class="c-teal">Section 62(a) of the LGC</span> prescribes a strict <span class="c-green"><strong><u>7–15–10 day procedural timeline</u></strong></span>:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>Within seven (7) days</strong></span> after the administrative complaint is filed, the Office of the President or the <em>Sanggunian</em> concerned shall issue an order requiring the respondent to submit a verified answer;</li>
+    <li><span class="c-navy"><strong>Within fifteen (15) days</strong></span> from receipt of the order, the respondent must file his <span class="c-green"><strong><u>verified answer</u></strong></span>; and</li>
+    <li><span class="c-navy"><strong>Within ten (10) days</strong></span> after receipt of the respondent's answer (or after the lapse of the 15-day period to answer), the disciplining authority shall <span class="c-green"><strong><u>commence the investigation</u></strong></span> of the case.</li>
+  </ol>
+
+  <!-- Workflow Card: 7-15-10 Day Timeline -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Verified Complaint Filed (Sec. 61)</div>
+    </div>
+    <div class="ui-connector">↓ Within 7 Days</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Disciplining Authority Issues Order to Answer</div>
+    </div>
+    <div class="ui-connector">↓ Within 15 Days</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Respondent Files Verified Answer (Issues Joined)</div>
+    </div>
+    <div class="ui-connector">↓ Within 10 Days</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">FORMAL INVESTIGATION COMMENCES</div>
+      <div class="ui-sub">Subject to the 90-Day Pre-Election Ban (Sec. 62[c])</div>
+    </div>
+  </div>
+
+  <h4 id="distinction-verifications" class="c-navy">Structural Distinction Between Verification of Complaint and Verification of Answer</h4>
+  <p>
+    While both the administrative complaint (under Section 61) and the responsive answer (under Section 62[a]) must be verified under oath, their required contents differ significantly:
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Complaint Verification & Certification:</strong></span> Must include both a standard verification and a <span class="c-green"><strong><u>Certification Against Forum Shopping</u></strong></span> (stating that no similar complaint has been filed before the Supreme Court, Court of Appeals, or any other tribunal, undertaking to report any similar action, and certifying that the suit is not meant to harass or increase litigation costs).
+    </li>
+    <li>
+      <span class="c-navy"><strong>Answer Verification:</strong></span> Requires <span class="c-green"><strong><u>only a simple verification</u></strong></span> stating that the affiant is the respondent in the case, that he caused the preparation and filing of the responsive pleading, that he read and understood its contents, and that the allegations are true and correct of his own personal knowledge and/or based on authentic documents. Because a respondent is merely defending himself and not initiating an action, an answer <span class="c-rust"><strong><u>does not require a certification against forum shopping</u></strong></span>.
+    </li>
+  </ul>
+
+  <h4 id="venue-rules" class="c-navy">Venue of Administrative Investigations (Section 62[b])</h4>
+  <p>
+    Section 62(b) establishes two distinct rules on the physical venue where the administrative hearing and investigation must be conducted:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>Provincial or Highly Urbanized City (HUC) Officials:</strong></span> When the respondent is an elective official of a <strong>province</strong> or a <strong>highly urbanized city</strong>, the hearing and investigation (conducted under the authority of the Office of the President) shall be held in the <span class="c-green"><strong><u>place where the respondent renders or holds office</u></strong></span>.</li>
+    <li><span class="c-navy"><strong>All Other Elective Local Officials:</strong></span> For elective officials of independent component cities, component cities, municipalities, and barangays, the venue of the administrative investigation shall be the <span class="c-green"><strong><u>place where the Sanggunian concerned is located</u></strong></span>.</li>
+  </ol>
+
+  <h4 id="pre-election-ban-90-days" class="c-navy">The 90-Day Pre-Election Ban on Investigation and Preventive Suspension (Section 62[c])</h4>
+  <p>
+    Section 62(c) of the LGC erects a protective shield around elective local officials during the immediate run-up to local elections to prevent the weaponization of administrative cases for partisan political harassment:
+  </p>
+  <ul>
+    <li><span class="c-navy"><strong>Prohibition on Investigation:</strong></span> <span class="c-rust"><strong><u>No investigation shall be held</u></strong></span> within <span class="c-rust"><strong><u>ninety (90) days immediately prior to any local election</u></strong></span>.</li>
+    <li><span class="c-navy"><strong>Prohibition on Preventive Suspension:</strong></span> <span class="c-rust"><strong><u>No preventive suspension shall be imposed</u></strong></span> within the said 90-day period immediately preceding any local election.</li>
+    <li><span class="c-navy"><strong>Automatic Lifting of Prior Suspension:</strong></span> If a preventive suspension has been lawfully imposed on an elective local official prior to the start of the 90-day pre-election period, such preventive suspension shall be <span class="c-green"><strong><u>deemed automatically lifted</u></strong></span> by operation of law upon the commencement of the aforesaid 90-day period.</li>
+  </ul>
+
+  <!-- Application Box: Election Ban Nuance -->
+  <div class="application-box">
+    <div class="application-box-header">📌 Application Example: Scope of the 90-Day Election Ban</div>
+    <p style="margin: 0;">
+      Two weeks before the scheduled Barangay and <em>Sangguniang Kabataan</em> (BSKE) elections, barangay residents went to the Office of the Secretary to the <em>Sangguniang Bayan</em> to file a verified administrative complaint against their <em>Punong Barangay</em>. The <em>Sanggunian</em> Secretary refused to accept or docket the complaint, invoking the 90-day election ban under Section 62(c) of the LGC. The Secretary's refusal is <span class="c-rust"><strong><u>legally erroneous</u></strong></span>. Section 62(c) prohibits only the <span class="c-rust"><strong><u>holding of an investigation (trial or hearing)</u></strong></span> and the <span class="c-rust"><strong><u>imposition of preventive suspension</u></strong></span> within 90 days prior to a local election; it does <span class="c-green"><strong><u>not</u></strong></span> prohibit the ministerial act of receiving, docketing, and accepting the filing of an administrative complaint during the election period.
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- SECTION VI -->
+  <h3 id="sec-vi-preventive-suspension" class="c-navy">VI. PREVENTIVE SUSPENSION: NATURE, REQUISITES, AUTHORITY, AND DURATION (SECTIONS 63–64, R.A. 7160)</h3>
+
+  <h4 id="non-penal-nature" class="c-navy">Non-Penal Nature and Purpose of Preventive Suspension</h4>
+  <p>
+    Preventive suspension is <span class="c-rust"><strong><u>not a penalty</u></strong></span>. It is a preliminary, prophylactic measure in an administrative investigation designed to temporarily remove the respondent official from his post so that he cannot use the prestige and authority of his office to intimidate witnesses, coerce subordinates, or tamper with, conceal, or destroy official records and documentary evidence. Because it is not a penalty, its imposition after the joinder of issues does not violate the presumption of innocence or the right to due process.
+  </p>
+
+  <!-- Case: Castillo-Co v. Barbers -->
+  <div id="case-castillo-co" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Castillo-Co v. Barbers</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 129952, June 16, 1998, 290 SCRA 717)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Quirino Representative Junie Cua filed a complaint before the Ombudsman against Governor Josie Castillo-Co and the Provincial Engineer for irregularities in purchasing heavy equipment, leading to the imposition of a preventive suspension order. Castillo-Co challenged the order, claiming it was an improper punitive sanction imposed before her guilt was proven.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Is an order of preventive suspension in an administrative investigation considered a penalty?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that preventive suspension is <span class="c-rust"><strong><u>not a penalty</u></strong></span>, but merely a preliminary step in an administrative investigation. Because it is not punitive in nature, the respondent official is not entitled to a full-blown trial on the merits prior to its issuance, provided the statutory requisites for preventive suspension are satisfied.</li>
+    </ul>
+  </div>
+
+  <!-- Case: Garcia v. Mojica -->
+  <div id="case-garcia-mojica" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Garcia v. Mojica</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 139043, September 10, 1999, 314 SCRA 207)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Cebu City Mayor Alvin Garcia was placed under preventive suspension by the Office of the Ombudsman in connection with an investigation into an asphalt supply contract executed shortly before the local elections. Garcia questioned both the evidentiary basis and the timing of the preventive suspension.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Under what conditions may preventive suspension be validly decreed against an elective local official under investigation?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court reiterated that preventive suspension is a preventive measure to shield the integrity of the administrative investigation by preventing the respondent from influencing witnesses or tampering with office records. However, the power must be exercised strictly within statutory bounds and only when the evidence of guilt is strong and the statutory grounds for its issuance concur.</li>
+    </ul>
+  </div>
+
+  <h4 id="authorities-preventive-suspension" class="c-navy">Authorities Empowered to Impose Preventive Suspension (Section 63[a])</h4>
+  <p>
+    Unlike the trial of the administrative case (which is conducted by the <em>Sanggunian</em> or the Office of the President), the power to issue an order of preventive suspension under the LGC is vested in the <span class="c-green"><strong><u>chief executive</u></strong></span> of the higher supervising level of government:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>By the President:</strong></span> If the respondent is an elective official of a <strong>province</strong>, a <strong>highly urbanized city</strong>, or an <strong>independent component city</strong> (or the Municipality of Pateros).</li>
+    <li><span class="c-navy"><strong>By the Provincial Governor:</strong></span> If the respondent is an elective official of a <strong>component city</strong> or a <strong>municipality</strong>.</li>
+    <li><span class="c-navy"><strong>By the City or Municipal Mayor:</strong></span> If the respondent is an elective official of a <strong>barangay</strong>.</li>
+  </ol>
+
+  <h4 id="concurring-requisites-ps" class="c-navy">Concurring Requisites for Valid Imposition (Section 63[b])</h4>
+  <p>
+    An order of preventive suspension is valid only when <span class="c-green"><strong><u>all</u></strong></span> of the following statutory requisites concur:
+  </p>
+
+  <!-- 4 Pillars of Preventive Suspension -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📑</div>
+        <div class="ui-title">1. Issues Joined</div>
+        <div class="ui-sub">Answer filed or 15-day period elapsed. Issuance before joinder is <span class="c-rust"><strong>null and void</strong></span>.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🔍</div>
+        <div class="ui-title">2. Evidence Strong</div>
+        <div class="ui-sub">Preliminary evaluation shows strong <em>prima facie</em> culpability.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">3. Grave Offense</div>
+        <div class="ui-sub">Charge warrants severe suspension or removal from office.</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">4. Threat to Evidence</div>
+        <div class="ui-sub">Probability of influencing witnesses or tampering with records.</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="duration-limits-ps" class="c-navy">Duration Limits and Simultaneous Service (Section 63[b])</h4>
+  <ul>
+    <li><span class="c-navy"><strong>Single Preventive Suspension Cap:</strong></span> Any single preventive suspension of an elective local official shall <span class="c-rust"><strong><u>not extend beyond sixty (60) days</u></strong></span>.</li>
+    <li><span class="c-navy"><strong>Annual Aggregate Cap for Multiple Cases:</strong></span> In the event that several administrative cases are filed against an elective official, he <span class="c-rust"><strong><u>cannot be preventively suspended for more than ninety (90) days within a single year</u></strong></span> on the same ground or grounds existing and known at the time of the first suspension.</li>
+  </ul>
+
+  <!-- Case: Ganzon v. Court of Appeals -->
+  <div id="case-ganzon-ca" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Ganzon v. Court of Appeals</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 93252, August 5, 1991, 200 SCRA 271) [Corrected by the Professor from "Guanzon v. CA"]</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Iloilo City Mayor Rodolfo Ganzon was subjected to ten (10) separate administrative complaints before the Secretary of Local Government, who issued four (4) successive 60-day preventive suspension orders totaling 240 days of continuous suspension. Ganzon petitioned the courts to nullify the consecutive suspensions as a disguised, unconstitutional removal from office.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> May successive preventive suspension orders be served simultaneously rather than consecutively to prevent the constructive removal of an elective local official?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that imposing consecutive preventive suspensions that effectively eat up an elective official's entire term amounts to an unconstitutional <em>de facto</em> removal from office without judicial order. To prevent political harassment while allowing administrative investigations to proceed, <span class="c-green"><strong><u>simultaneous service of preventive suspensions is allowed</u></strong></span> where multiple charges are already known and existing at the time the first suspension is imposed.</li>
+    </ul>
+  </div>
+
+  <h4 id="reinstatement-salary-rules" class="c-navy">Automatic Reinstatement, Effect of Delay, and Salary Rules (Section 63[c]–[d]; Section 64)</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Automatic Reinstatement Upon Expiration:</strong></span> Upon the expiration of the 60-day (or 90-day aggregate) preventive suspension, the suspended elective official shall be <span class="c-green"><strong><u>deemed automatically reinstated in office</u></strong></span> without prejudice to the continuation of the administrative proceedings against him.
+    </li>
+    <li>
+      <span class="c-navy"><strong>Exclusion of Respondent-Caused Delay:</strong></span> If the delay in the administrative proceedings is due to the <span class="c-rust"><strong><u>fault, neglect, or request of the respondent</u></strong></span> (other than an appeal duly taken by him), the duration of such delay shall <span class="c-rust"><strong><u>not be counted</u></strong></span> in computing the time of suspension or the time for termination of the case.
+    </li>
+    <li>
+      <span class="c-navy"><strong>No Salary During Suspension; Full Backwages Upon Exoneration (Section 64):</strong></span> An official under preventive suspension receives <span class="c-rust"><strong><u>no salary, compensation, or emoluments</u></strong></span> during the suspension period. However, upon subsequent <span class="c-green"><strong><u>exoneration and reinstatement</u></strong></span> (or dismissal of the case), he shall be paid his <span class="c-green"><strong><u>full back salaries and emoluments</u></strong></span> accruing during the entire period of preventive suspension.
+    </li>
+  </ul>
+
+  <!-- Comparative Table: Preventive Suspension vs. Penalty of Suspension -->
+  <h4 id="table-preventive-vs-penalty" class="c-navy">Comparative Table: Preventive Suspension vs. Penalty of Suspension</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Preventive Suspension (Sections 63–64, LGC)</th>
+        <th>Penalty of Suspension (Section 66[b], LGC)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Legal Nature</strong></td>
+        <td>Preliminary, non-penal prophylactic measure (<em>Castillo-Co v. Barbers</em>).</td>
+        <td>Final administrative penalty imposed after full investigation and finding of guilt.</td>
+      </tr>
+      <tr>
+        <td><strong>When Imposed</strong></td>
+        <td>At any time <strong>after issues are joined</strong> (after answer is filed or period lapses), before final decision.</td>
+        <td>Only <strong>after termination of investigation</strong> and rendition of a written decision supported by substantial evidence.</td>
+      </tr>
+      <tr>
+        <td><strong>Imposing Authority</strong></td>
+        <td>Executive official: <strong>President</strong>, <strong>Governor</strong>, or <strong>Mayor</strong> (Sec. 63[a]).</td>
+        <td>Disciplining tribunal: <strong>Office of the President</strong> or the <strong>Sanggunian</strong> concerned (Sec. 66[a]).</td>
+      </tr>
+      <tr>
+        <td><strong>Maximum Duration</strong></td>
+        <td><strong>60 days</strong> per single suspension; <strong>90 days</strong> aggregate per year on existing grounds (Sec. 63[b]).</td>
+        <td><strong>6 months</strong> per administrative offense, or not exceeding the <strong>unexpired term</strong> of the respondent (Sec. 66[b]).</td>
+      </tr>
+      <tr>
+        <td><strong>Right to Back Salaries</strong></td>
+        <td>Paid <strong>in full</strong> upon subsequent exoneration and reinstatement (Sec. 64).</td>
+        <td><strong>Forfeited</strong> unless the conviction is reversed and the respondent is exonerated on appeal (Sec. 68).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- DIAGRAM 2: PREVENTIVE SUSPENSION & PROCEDURAL WORKFLOW -->
+  <div id="diagram-due-process-ps" class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 2: PROCEDURAL TIMELINES, PREVENTIVE SUSPENSION & DECISION WORKFLOW <span class="diagram-hint">(Drag to pan - Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  START["Filing of Verified Complaint (Sec. 61)"] --> N7["Within 7 Days:
+Notice & Order to Answer Issued (Sec. 62a)"]
+  N7 --> A15["Within 15 Days:
+Respondent Files Verified Answer (Sec. 62a)"]
+  A15 --> JOINED["ISSUES JOINED
+(Answer filed or 15-day period expires)"]
+
+  JOINED --> CHK_BAN{"Within 90 Days
+Prior to Local Election?
+(Sec. 62c)"}
+  CHK_BAN -- "YES" --> BAN_ACTIVE["90-DAY PRE-ELECTION BAN:
+- No Investigation / Trial
+- No Preventive Suspension
+- Prior Suspension Automatically Lifted"]
+  BAN_ACTIVE --> RESUME_POST["Resume Formal Proceedings
+After Local Election"]
+
+  CHK_BAN -- "NO" --> COMMENCE["Within 10 Days:
+Commence Investigation (Sec. 62a)"]
+
+  COMMENCE --> CHK_PS{"Can Preventive Suspension
+Be Imposed? (Sec. 63b)
+1. Issues joined?
+2. Strong evidence of guilt?
+3. Grave offense?
+4. Threat to witnesses/records?"}
+  CHK_PS -- "All 4 Requisites Met" --> PS_EXEC["Chief Executive Issues PS Order (Sec. 63a):
+- President / Governor / Mayor
+- Max 60 Days (Single) / 90 Days (Annual)"]
+  PS_EXEC --> REINSTATE["Automatic Reinstatement
+After 60 or 90 Days (Sec. 63c)"]
+  CHK_PS -- "Requisites Not Met" --> NO_PS["Respondent Remains in Office
+During Proceedings"]
+
+  COMMENCE --> TRIAL_PHASE["Formal Investigation Phase (Sec. 65):
+- Due Process, Counsel, Cross-Exam
+- Subpoenas (NO Contempt Power in Sanggunian)"]
+  TRIAL_PHASE --> TERM_90["Investigation Must Terminate
+Within 90 Days (Sec. 66a)"]
+  TERM_90 --> DEC_30["Written Decision Rendered
+Within 30 Days (Sec. 66a)"]
+
+  DEC_30 --> DEC_TYPE{"Disciplinary Outcome"}
+  DEC_TYPE -- "Exoneration" --> EXON_PAY["EXONERATION:
+Full Back Salaries Paid (Sec. 64)"]
+  DEC_TYPE -- "Suspension (Max 6 Mos)" --> SUSP_PEN["PENALTY OF SUSPENSION:
+Immediately Executory Pending Appeal
+NOT a bar to candidacy"]
+  DEC_TYPE -- "Attempted Removal by Sanggunian/OP" --> VOID_REM["ILLEGAL REMOVAL:
+Only Proper Court Can Remove (Sec. 60)"]
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- SECTION VII -->
+  <h3 id="sec-vii-respondents-rights" class="c-navy">VII. CONSTITUTIONAL AND STATUTORY RIGHTS OF THE RESPONDENT (SECTION 65, R.A. 7160)</h3>
+
+  <h4 id="core-due-process-rights" class="c-navy">Core Due Process Guarantees in Administrative Trials</h4>
+  <p>
+    Under <span class="c-teal">Section 65 of the LGC</span>, the respondent elective local official in an administrative investigation must be accorded full opportunity to exercise three fundamental rights:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>Right to Appear and Defend in Person or by Counsel:</strong></span> Although administrative in nature, the respondent has the constitutional and statutory right to engage and be assisted by legal counsel at every stage of the proceedings.</li>
+    <li>
+      <span class="c-navy"><strong>Right to Confront and Cross-Examine Witnesses:</strong></span> The respondent or his counsel has the right to confront and cross-examine all witnesses presented against him.
+      <ul>
+        <li><span class="c-burgundy"><em>Effect of "No Cross" Manifestation:</em></span> There is <span class="c-green"><strong><u>no denial of due process</u></strong></span> if the respondent's counsel manifests <em>"No cross-examination"</em> when given the opportunity to question an adverse witness. Due process simply requires that the <em>opportunity</em> to cross-examine be accorded; whether to exercise it is a matter of trial strategy.</li>
+      </ul>
+    </li>
+    <li><span class="c-navy"><strong>Right to Compulsory Processes:</strong></span> The respondent has the right to require the attendance of witnesses in his favor (<span class="c-teal"><strong>subpoena ad testificandum</strong></span>) and the production of documentary evidence (<span class="c-teal"><strong>subpoena duces tecum</strong></span>) through the compulsory processes of the investigating body.</li>
+  </ol>
+
+  <!-- Professor's Illustration: Trial Strategy -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration: Trial Advocacy Strategy</div>
+    <p style="margin: 0;">
+      During an administrative trial before the <em>Sangguniang Panlalawigan</em>, the complainant's witness gave a weak direct testimony that failed to establish any element of misconduct against the respondent Mayor. The Mayor's counsel stood up and manifested, <em>"No cross, Your Honors."</em> Moreover, the Mayor's counsel declined to subpoena a reluctant municipal employee who had refused to execute a prior judicial affidavit or sworn statement. Both decisions reflect sound litigation strategy: first, waiving cross-examination does not violate due process and prevents a weak witness from curing defects in his direct testimony; second, compelling a reluctant witness via <em>subpoena</em> without a prior sworn statement or judicial affidavit risks having the resentful witness turn hostile on the stand and testify <em>against</em> the respondent.
+    </p>
+  </div>
+
+  <h4 id="absence-contempt-power" class="c-navy">Absence of Contempt Power in Local Sanggunians</h4>
+  <p>
+    While Section 65 grants the respondent the right to compulsory <em>subpoena</em> processes issued by the investigating <em>Sanggunian</em>, a critical legal question arises when a subpoenaed witness refuses to appear or produce documents before the <em>Sanggunian</em>.
+  </p>
+
+  <!-- Case: NORECO II v. SP of Dumaguete -->
+  <div id="case-noreco-ii" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Negros Oriental II Electric Cooperative, Inc. (NORECO II) v. Sangguniang Panlungsod of Dumaguete</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 72492, November 5, 1987, 155 SCRA 421)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> The <em>Sangguniang Panlungsod</em> of Dumaguete City subpoenaed the Paterno and officials of NORECO II to appear at an inquiry regarding inefficient power lines, and threatened to cite them for contempt when they refused to attend. NORECO II petitioned the Supreme Court to enjoin the <em>Sanggunian</em>, arguing that local legislative bodies lack contempt powers.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Do local <em>Sanggunians</em> possess the inherent or implied power to cite non-appearing witnesses for contempt?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that local <span class="c-rust"><strong><u>Sanggunians do not possess the power to cite witnesses for contempt</u></strong></span>. Unlike the Congress of the Philippines, whose contempt power is inherent and self-preserving in a sovereign national legislature, local <em>Sanggunians</em> are mere creatures of delegated statutory authority; absent an express grant of contempt power by statute, they cannot punish disobedience to their subpoenas by contempt.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION VIII -->
+  <h3 id="sec-viii-decision-appeals" class="c-navy">VIII. RENDITION OF DECISION, PENALTIES, ADMINISTRATIVE APPEALS, AND EXECUTION PENDING APPEAL (SECTIONS 66–68, R.A. 7160)</h3>
+
+  <h4 id="timelines-decision" class="c-navy">Timelines and Formal Requirements of the Decision (Section 66[a])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>90-Day Investigation Limit & 30-Day Decision Period:</strong></span> Under <span class="c-teal">Section 66(a)</span>, the investigation of the administrative case shall be <span class="c-green"><strong><u>terminated within ninety (90) days</u></strong></span> from the start thereof. Thereafter, <span class="c-green"><strong><u>within thirty (30) days</u></strong></span> after the end of the investigation (or a total of 120 days from formal notification/start, excluding respondent-caused delays), the Office of the President or the <em>Sanggunian</em> concerned shall render a <span class="c-green"><strong><u>written decision</u></strong></span>.
+    </li>
+    <li>
+      <span class="c-navy"><strong>Constitutional Form of Decision:</strong></span> The decision must be in writing and must <span class="c-green"><strong><u>state clearly and distinctly the facts and the reasons</u></strong></span> (as well as the specific laws applied) for such decision, and copies must be immediately furnished to the respondent and all interested parties so they can intelligently prepare a motion for reconsideration or an appeal.
+    </li>
+  </ul>
+
+  <h4 id="limits-penalties-candidacy" class="c-navy">Limitations on Suspension vs. Removal as a Bar to Candidacy (Section 66[b]–[c])</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Cap on Penalty of Suspension (Section 66[b]):</strong></span> The administrative penalty of suspension shall <span class="c-rust"><strong><u>not exceed the unexpired term of the respondent or a period of six (6) months for every administrative offense</u></strong></span>, whichever is shorter. Crucially, a penalty of <span class="c-green"><strong><u>suspension is NOT a bar to the candidacy</u></strong></span> of the respondent for reelection or any other elective office, so long as he meets the qualifications required for the office.
+    </li>
+    <li>
+      <span class="c-navy"><strong>Removal as Perpetual Disqualification (Section 66[c]):</strong></span> Conversely, under Section 66(c) (in relation to Section 40[b] of the LGC), the <span class="c-rust"><strong><u>penalty of removal from office</u></strong></span> as a result of an administrative investigation (whether ordered by a proper court or by the Office of the Ombudsman) operates as an <span class="c-rust"><strong><u>absolute bar to the candidacy</u></strong></span> of the respondent for any elective position, and disqualifies him from holding local or national public office.
+    </li>
+    <li>
+      <span class="c-navy"><strong>Nuance on Post-Election Removal Decisions (<em>Lingkod Partylist</em> citation in lecture):</strong></span> As noted in the lecture's citation of <span class="c-burgundy"><em>Lingkod Partylist v. COMELEC</em></span> (G.R. No. 177777, October 10, 2017 [as cited by the Professor]), the bar to candidacy under Section 66(c) requires an operative administrative removal decision to be in force at the relevant electoral reckoning point, though once a removal decision becomes final and executory, it carries the accessory penalty of perpetual disqualification from public office.
+    </li>
+  </ul>
+
+  <h4 id="appellate-hierarchy-sec-67" class="c-navy">Appellate Hierarchy and Reglementary Period (Section 67)</h4>
+  <p>
+    Within <span class="c-green"><strong><u>thirty (30) days from receipt</u></strong></span> of the written decision, either party may file an administrative appeal following the strict statutory hierarchy:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>From the Sangguniang Bayan or Sangguniang Panlungsod of a Component City:</strong></span> Appeal lies to the <span class="c-teal"><strong>Sangguniang Panlalawigan</strong></span> (Section 67[a][1]). From the <em>Sangguniang Panlalawigan</em>, a further appeal may be elevated to the <span class="c-teal"><strong>Office of the President</strong></span>, then to the <span class="c-teal"><strong>Court of Appeals</strong></span> (via Rule 43 of the Rules of Court), and finally to the <span class="c-teal"><strong>Supreme Court</strong></span> (via Rule 45).</li>
+    <li><span class="c-navy"><strong>From the Sangguniang Panlalawigan (in original cases against municipal officials) or the Sangguniang Panlungsod of an HUC or ICC (in cases against barangay officials):</strong></span> Appeal lies directly to the <span class="c-teal"><strong>Office of the President</strong></span> (Section 67[a][2]).</li>
+    <li><span class="c-navy"><strong>From the Office of the President (in original cases against provincial, HUC, ICC, component city, or Pateros officials, or in appellate decisions):</strong></span> Appeal lies to the <span class="c-teal"><strong>Court of Appeals</strong></span>, and ultimately to the <span class="c-teal"><strong>Supreme Court</strong></span>.</li>
+  </ol>
+
+  <h4 id="execution-pending-appeal" class="c-navy">Execution Pending Appeal and Discretion to Stay Execution (Section 68)</h4>
+  <p>
+    Under <span class="c-teal">Section 68 of the LGC</span>, <span class="c-green"><strong><u>an appeal shall not prevent a decision from becoming final or executory</u></strong></span>. Thus, a disciplinary decision is <span class="c-green"><strong><u>immediately executory pending appeal</u></strong></span>. During the pendency of the appeal, the suspended respondent is legally considered as being under <span class="c-teal"><strong>preventive suspension</strong></span>, such that if his appeal results in <span class="c-green"><strong><u>exoneration</u></strong></span>, he shall be paid his <span class="c-green"><strong><u>full back salaries and emoluments</u></strong></span> accrued during the pendency of the appeal.
+  </p>
+
+  <!-- Case: Berces, Sr. v. Guingona, Jr. -->
+  <div id="case-berces-guingona" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Berces, Sr. v. Guingona, Jr.</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 112099, February 21, 1995, 241 SCRA 539) [Assumed reference for transcript citation "Garces v. Guingona"]</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Mayor Naomi Corral of Tiwi, Albay, was suspended by the <em>Sangguniang Panlalawigan</em> and appealed to the Office of the President, which issued an Order staying the execution of her suspension pending appeal pursuant to Section 6 of Administrative Order No. 18. Complainant Achiles Berces, Sr. argued that Section 68 of the LGC repealed A.O. No. 18 and prohibited the Office of the President from staying execution pending appeal.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Did Section 68 of the Local Government Code repeal Section 6 of Administrative Order No. 18 authorizing the Office of the President to stay the execution of an appealed decision in exceptional cases?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that Section 68 of the LGC did <span class="c-rust"><strong><u>not</u></strong></span> impliedly repeal Section 6 of Administrative Order No. 18. While Section 68 provides that an appeal does not <em>automatically</em> stay execution, it does not divest the reviewing authority (the Office of the President) of its affirmative <span class="c-green"><strong><u>discretion to issue an order staying the execution</u></strong></span> of the appealed decision for justifiable causes to prevent grave injustice.</li>
+    </ul>
+  </div>
+
+  <h4 id="permanent-acting-succession" class="c-navy">Permanent vs. Acting Succession Upon Ombudsman Dismissal</h4>
+  <p>
+    When the Office of the Ombudsman renders a decision <span class="c-rust"><strong><u>dismissing</u></strong></span> a local chief executive from the service, the decision is immediately executory even pending a motion for reconsideration or appeal to the Court of Appeals. Because dismissal creates a <span class="c-green"><strong><u>permanent vacancy</u></strong></span> under Section 44 of the LGC (rather than a temporary incapacity under Section 46), the succeeding officials assume office in a <span class="c-green"><strong><u>permanent capacity, not merely in an acting capacity</u></strong></span>, unless and until a higher court reverses or modifies the dismissal.
+  </p>
+
+  <!-- Professor's Illustration: Permanent Succession -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration: Permanent Succession on Dismissal</div>
+    <p style="margin: 0;">
+      In the City of San Fernando, La Union (and similarly in Urdaneta City, Pangasinan, where the Mayor, Vice Mayor, and six councilors were ordered dismissed), the Office of the Ombudsman ordered the dismissal from service of incumbent City Mayor Dong Gualberto. Because an Ombudsman dismissal is immediately executory and creates a permanent vacancy, Vice Mayor Alf Ortega succeeded as <span class="c-green"><strong><u>full-fledged City Mayor</u></strong></span>, and first-ranked <em>Sangguniang Panlungsod</em> member Chary Nisce succeeded as <span class="c-green"><strong><u>full-fledged Vice Mayor</u></strong></span>—both serving in permanent, not acting, capacities. Later, when the Court of Appeals downgraded Mayor Gualberto's offense to simple neglect of duty (carrying only a 30-day suspension which he had already fully served) and ordered his immediate reinstatement, Gualberto reclaimed the mayoralty, while Ortega and Nisce legally reverted to their former posts as Vice Mayor and City Councilor, respectively.
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- ========================================================================= -->
+  <!-- PART 3 -->
+  <!-- ========================================================================= -->
+  <h2 id="part-3-condonation-recall" class="c-navy">PART 3: THE CONDONATION DOCTRINE, THE POWER OF RECALL, AND NON-DOCTRINAL SUMMARY</h2>
+
+  <!-- PART 3 SCOPE & OVERVIEW -->
+  <div class="ui-box" style="background: #F8FAFC; border-color: #CBD5E1;">
+    <div style="font-weight: 700; color: #1E3A8A; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Part 3 Overview & Scope of Topics
+    </div>
+    <ul style="margin: 0; padding-left: 1.25rem;">
+      <li><span class="c-navy"><strong>IX. Evolution and Abandonment of the Condonation Doctrine:</strong></span> Historical origin of the <em>Aguinaldo</em> condonation rule (<span class="c-burgundy"><em>Aguinaldo v. Santos</em></span>; <span class="c-burgundy"><em>Salalima v. Guingona</em></span>); inapplicability of condonation to criminal liability (<span class="c-burgundy"><em>Conducto v. Monzon</em></span>); and the definitive abandonment and prospective application of the condonation doctrine (<span class="c-burgundy"><em>Carpio-Morales v. Court of Appeals and Binay, Jr.</em></span>).</li>
+      <li><span class="c-navy"><strong>X. Nature, Scope, and Ground for Recall of Elective Local Officials (Section 69, R.A. 7160):</strong></span> Constitutional and statutory concept of recall; exclusivity of recall to local elective officials versus national officials (exclusion of District Representatives); and "loss of confidence" as a non-justiciable political question (<span class="c-burgundy"><em>Evardone v. COMELEC</em></span>).</li>
+      <li><span class="c-navy"><strong>XI. Initiation of the Recall Process and Abolition of the Preparatory Recall Assembly (Sections 70–71, R.A. 7160, as amended by R.A. 9244):</strong></span> Legislative abolition of the Preparatory Recall Assembly (PRA) under R.A. 9244; the four statutory voter percentage tiers and minimum signature thresholds; procedural mechanics before the COMELEC; and the legal meaning of "legislative district" in recall petitions.</li>
+      <li><span class="c-navy"><strong>XII. Conduct, Effectivity, Prohibition Against Resignation, and Limitations on Recall (Sections 72–74, R.A. 7160):</strong></span> Automatic candidacy of the official sought to be recalled and effectivity of recall; tactical counter-recall petitions; prohibition against resignation pending recall; the once-per-term and one-year temporal bans; and jurisprudential construction of "regular local election" and "recall" (<span class="c-burgundy"><em>Paras v. COMELEC</em></span>; <span class="c-burgundy"><em>Claudio v. COMELEC</em></span>; <span class="c-burgundy"><em>Angobung v. COMELEC</em></span>; <span class="c-burgundy"><em>Goh v. COMELEC</em></span>).</li>
+      <li><span class="c-navy"><strong>Administrative Matters & Professor's Asides:</strong></span> Consolidated summary of examination pointers, litigation advice, and class schedule announcements.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION IX -->
+  <h3 id="sec-ix-condonation-doctrine" class="c-navy">IX. EVOLUTION AND ABANDONMENT OF THE CONDONATION DOCTRINE</h3>
+
+  <h4 id="origin-aguinaldo-condonation" class="c-navy">Historical Origin: The <em>Aguinaldo</em> Condonation Doctrine</h4>
+  <p>
+    For over half a century (originating in <span class="c-burgundy"><em>Pascual v. Provincial Board of Nueva Ecija</em></span>, 106 Phil. 466 [1959], and reiterated under the 1987 Constitution in <span class="c-burgundy"><em>Aguinaldo v. Santos</em></span>, 212 SCRA 768 [1992], and <span class="c-burgundy"><em>Salalima v. Guingona, Jr.</em></span>, 257 SCRA 55 [1996]), Philippine jurisprudence adhered to the <span class="c-teal"><strong>condonation doctrine</strong></span>. Under this old rule, the <span class="c-green"><strong><u>reelection of a public official operated as a condonation or forgiveness by the electorate of any administrative misconduct committed during a prior term</u></strong></span>, thereby barring his administrative removal or discipline for those prior acts.
+  </p>
+
+  <h4 id="inapplicability-criminal" class="c-navy">Inapplicability of Condonation to Criminal Liability</h4>
+  <p>
+    Even during the heyday of the <em>Aguinaldo</em> doctrine, condonation by reelection was strictly confined to administrative cases and never extended to criminal prosecutions.
+  </p>
+
+  <!-- Case: Conducto v. Monzon -->
+  <div id="case-conducto-monzon" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Conducto v. Monzon</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(A.M. No. MTJ-98-1147, July 2, 1998, 291 SCRA 619)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> A complainant charged a judge with ignorance of the law for refusing to dismiss a criminal complaint against a reelected local official who invoked the <em>Aguinaldo</em> condonation doctrine. The official claimed his subsequent reelection erased both his administrative and criminal liabilities for acts committed during his previous term.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the reelection of a local elective official extinguish his criminal liability for offenses committed during a previous term?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court emphatically held that <span class="c-rust"><strong><u>reelection does not extinguish criminal liability</u></strong></span>. A crime is an offense against the State, and only the State—through the statutory modes of extinguishing criminal liability under Article 89 of the Revised Penal Code—can pardon or extinguish a crime; the electorate of a single locality has no power to absolve a public officer of a criminal violation of national law.</li>
+    </ul>
+  </div>
+
+  <h4 id="definitive-abandonment" class="c-navy">Definitive Abandonment of the Condonation Doctrine</h4>
+  <p>
+    In 2015, the Supreme Court thoroughly reexamined the condonation doctrine against the accountability provisions of the 1987 Constitution and the Local Government Code, resulting in its total abandonment.
+  </p>
+
+  <!-- Case: Carpio-Morales v. Court of Appeals and Binay, Jr. -->
+  <div id="case-carpio-morales" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Carpio-Morales v. Court of Appeals (Sixth Division) and Jejomar Erwin S. Binay, Jr.</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. Nos. 217126-27, November 10, 2015, 774 SCRA 431)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Makati City Mayor Jejomar Erwin S. Binay, Jr. was placed under preventive suspension by the Office of the Ombudsman for alleged anomalies in the procurement and construction of the Makati City Hall Parking Building spanning his prior and current terms. The Court of Appeals enjoined the suspension by invoking the <em>Aguinaldo</em> condonation doctrine, prompting Ombudsman Conchita Carpio-Morales to elevate the case to the Supreme Court.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the doctrine of condonation have any constitutional or statutory basis under the 1987 Constitution and the Local Government Code of 1991?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court <span class="c-rust"><strong><u>explicitly and definitively abandoned the condonation doctrine</u></strong></span>, declaring it bereft of any legal foundation under the 1987 Constitution—which proclaims under Article XI, Section 1 that <em>"public office is a public trust"</em>—and contrary to Section 40(b) and Section 66(c) of the LGC, which disqualify officials removed via administrative investigation from running for elective office. However, to protect the reliance interests of officials elected under the old jurisprudential rule, the abandonment of the condonation doctrine was made <span class="c-green"><strong><u>prospective in application</u></strong></span>—meaning that for administrative offenses committed <span class="c-green"><strong><u>after the finality of the Carpio-Morales decision on April 12, 2016</u></strong></span>, reelection no longer condones prior administrative misconduct.</li>
+    </ul>
+  </div>
+
+  <!-- Application Box: 2025 Mayor Application -->
+  <div class="application-box">
+    <div class="application-box-header">📌 Application Example: Post-2016 Reelection and Disciplinary Sanction</div>
+    <p style="margin: 0;">
+      In 2025, an incumbent Municipal Mayor was found guilty in an administrative case of simple misconduct and meted the penalty of <span class="c-teal"><strong>six (6) months suspension</strong></span> under Section 66(b) of the LGC. While serving his suspension, he filed his certificate of candidacy for reelection in the May 2025 local elections and won overwhelmingly. Two legal consequences follow: first, under Section 66(b), his candidacy and victory are <span class="c-green"><strong><u>valid</u></strong></span> because only the penalty of <em>removal</em> (under Section 66[c]), and not <em>suspension</em>, bars candidacy for elective office; second, because the offense was committed long after April 12, 2016, his reelection <span class="c-rust"><strong><u>does not condone</u></strong></span> his administrative liability under the <em>Carpio-Morales</em> ruling.
+    </p>
+  </div>
+
+  <!-- Comparative Table: Pre- vs. Post-Carpio-Morales -->
+  <h4 id="table-condonation-regimes" class="c-navy">Comparative Summary: Pre- vs. Post-<em>Carpio-Morales</em> Regimes</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Pre-<em>Carpio-Morales</em> Regime (On or Before April 12, 2016)</th>
+        <th>Post-<em>Carpio-Morales</em> Regime (After April 12, 2016)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Effect of Reelection on Administrative Liability</strong></td>
+        <td>Operates as complete <strong>condonation/forgiveness</strong> of prior-term administrative misconduct (<em>Aguinaldo v. Santos</em>).</td>
+        <td><span class="c-rust"><strong>No condonation.</strong></span> Administrative cases for prior-term acts proceed to final judgment and penalty (<em>Carpio-Morales</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of Reelection on Criminal Liability</strong></td>
+        <td><span class="c-rust"><strong>Never condoned.</strong></span> Criminal cases proceed regardless of reelection (<em>Conducto v. Monzon</em>).</td>
+        <td><span class="c-rust"><strong>Never condoned.</strong></span> Criminal liability remains completely unaffected by reelection.</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of Penalty of Suspension on Candidacy</strong></td>
+        <td>Not a bar to running for elective office (Sec. 66[b], LGC).</td>
+        <td>Still <span class="c-green"><strong>not a bar</strong></span> to running for elective office, provided qualifications are met (Sec. 66[b], LGC).</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of Penalty of Removal on Candidacy</strong></td>
+        <td><span class="c-rust"><strong>Perpetual bar</strong></span> to running for any elective position (Sec. 40[b] & Sec. 66[c], LGC).</td>
+        <td><span class="c-rust"><strong>Perpetual bar</strong></span> to running for any elective position (Sec. 40[b] & Sec. 66[c], LGC).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- SECTION X -->
+  <h3 id="sec-x-nature-recall" class="c-navy">X. NATURE, SCOPE, AND GROUND FOR RECALL OF ELECTIVE LOCAL OFFICIALS (SECTION 69, R.A. 7160)</h3>
+
+  <h4 id="concept-basis-recall" class="c-navy">Definition and Constitutional Basis of Recall</h4>
+  <p>
+    Under Article X, Section 3 of the 1987 Constitution and <span class="c-teal">Section 69 of the LGC</span>, <span class="c-green"><strong><u>recall</u></strong></span> is a constitutional and statutory mode of removing a local elective official from office <span class="c-green"><strong><u>by the registered voters themselves</u></strong></span> prior to the expiration of his term on the sole ground of <span class="c-green"><strong><u>loss of confidence</u></strong></span>. It is a direct exercise of sovereign power by the local electorate, resting on the principle that the power to elect carries the correlative power to remove when public trust is forfeited.
+  </p>
+
+  <h4 id="exclusivity-local-officials" class="c-navy">Exclusivity to Local Elective Officials vs. National Elective Officials</h4>
+  <p>
+    Section 69 expressly provides that the power of recall shall be exercised by the registered voters of a local government unit to which the <span class="c-green"><strong><u>local elective official</u></strong></span> subject to such recall belongs.
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Exclusion of Members of the House of Representatives (Congressmen):</strong></span> A Representative of a legislative district <span class="c-rust"><strong><u>cannot be subjected to recall</u></strong></span> under the LGC. Although a District Representative is elected exclusively by the registered voters of a specific geographic congressional district within a province or city, he is legally classified as a <span class="c-teal"><strong>national elective official</strong></span> (a member of the national legislature under Article VI of the Constitution), not a local official of an LGU.
+    </li>
+  </ul>
+
+  <h4 id="loss-of-confidence" class="c-navy">Loss of Confidence as a Non-Justiciable Political Question</h4>
+  <p>
+    The sole statutory ground for recall is <span class="c-green"><strong><u>loss of confidence</u></strong></span>. While petitioners may narrate specific grievances, incidents, or reasons in their recall petition to persuade fellow voters to sign, the substantive validity or truth of those reasons cannot be reviewed by any court or administrative agency.
+  </p>
+
+  <!-- Case: Evardone v. COMELEC -->
+  <div id="case-evardone-comelec" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Evardone v. COMELEC</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 94010, December 2, 1991, 204 SCRA 464)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Mayor Felipe Evardone of Sulat, Eastern Samar, challenged a petition for recall initiated against him by registered voters, questioning the sufficiency of the grounds for loss of confidence and the validity of the COMELEC resolutions governing the recall proceedings.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> What is the legal nature of "loss of confidence" as a ground for recall, and is it subject to judicial or administrative inquiry?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court defined <span class="c-green"><strong><u>loss of confidence</u></strong></span> as the formal withdrawal by the electorate of their trust in a person's ability to discharge the office previously bestowed upon him by the same electorate. Whether the electorate has lost confidence in an incumbent local official is a <span class="c-green"><strong><u>purely political question</u></strong></span> belonging to the exclusive prerogative of the sovereign voters; neither the courts nor the COMELEC may inquire into the merits of the voters' loss of confidence, as COMELEC's role is strictly limited to verifying whether the statutory procedural and signature thresholds have been met.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- SECTION XI -->
+  <h3 id="sec-xi-initiation-recall" class="c-navy">XI. INITIATION OF THE RECALL PROCESS AND ABOLITION OF THE PREPARATORY RECALL ASSEMBLY (SECTIONS 70–71, R.A. 7160, AS AMENDED BY R.A. 9244)</h3>
+
+  <h4 id="abolition-pra-ra-9244" class="c-navy">Abolition of the Preparatory Recall Assembly (PRA) by R.A. 9244</h4>
+  <p>
+    As originally enacted in 1991, Section 70 of R.A. 7160 provided <strong>two modes</strong> of initiating recall: (1) by a <strong>Preparatory Recall Assembly (PRA)</strong> composed of lower-level elective local officials within the LGU (e.g., all <em>Punong Barangays</em> and <em>Sangguniang Barangay</em> members in a municipality voting in assembly to recall a Mayor or Vice Mayor); and (2) by a <strong>direct petition of the registered voters</strong>.
+  </p>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Enactment of Republic Act No. 9244 (February 19, 2004):</strong></span> Because the PRA was widely criticized as vulnerable to political manipulation by small cliques of local politicians rather than reflecting the true will of the electorate, Congress enacted <span class="c-teal"><strong>R.A. 9244</strong></span>, which <span class="c-rust"><strong><u>abolished the Preparatory Recall Assembly</u></strong></span>, dismissed all pending PRA petitions upon its effectivity, and repealed all inconsistent laws and issuances. Today, there is <span class="c-green"><strong><u>only one valid mode of initiating recall</u></strong></span>: a <span class="c-green"><strong><u>written petition signed by the registered voters</u></strong></span> of the LGU concerned.
+    </li>
+  </ul>
+
+  <!-- Professor's Illustration: Agoo PRA -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration: The Agoo, La Union PRA Episode</div>
+    <p style="margin: 0;">
+      Prior to the enactment of R.A. 9244, the Preparatory Recall Assembly (PRA) was actually utilized in the Province of La Union to oust the incumbent Vice Mayor of the Municipality of Agoo. In connection with that recall proceeding, concerned citizens of Agoo filed a judicial complaint against the members of the <em>Sangguniang Panlalawigan</em> of La Union for appropriating provincial funds in support of the PRA process (though the case was eventually dismissed after the complainants lost interest in prosecuting it). Recognizing how easily the PRA mechanism generated political friction and bypassed the broader electorate, Congress passed R.A. 9244 to abolish the PRA permanently.
+    </p>
+  </div>
+
+  <h4 id="percentage-thresholds-table" class="c-navy">Statutory Percentage Thresholds of Registered Voters (Section 70, as amended by R.A. 9244)</h4>
+  <p>
+    Under R.A. 9244, the recall of any provincial, city, municipal, or barangay official is commenced by a written petition of a required percentage of the <span class="c-green"><strong><u>registered voters in the LGU during the election in which the local official sought to be recalled was elected</u></strong></span>:
+  </p>
+
+  <!-- Statutory Table: 4 Tiers of Recall -->
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Voting Population of the Local Government Unit (LGU)</th>
+        <th>Required Minimum Percentage of Registered Voters</th>
+        <th>Absolute Minimum Number of Petitioner Signatures</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong class="c-teal">Tier 1</strong></td>
+        <td><strong>Not more than 20,000</strong> (20,000 and below)</td>
+        <td>At least <strong class="c-green">25%</strong> of the registered voters</td>
+        <td>No statutory floor other than the 25% computation.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Tier 2</strong></td>
+        <td><strong>At least 20,000 but not more than 75,000</strong></td>
+        <td>At least <strong class="c-green">20%</strong> of the registered voters</td>
+        <td>In no case shall petitioners be less than <strong class="c-rust">5,000</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Tier 3</strong></td>
+        <td><strong>At least 75,000 but not more than 300,000</strong></td>
+        <td>At least <strong class="c-green">15%</strong> of the registered voters</td>
+        <td>In no case shall petitioners be less than <strong class="c-rust">15,000</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong class="c-teal">Tier 4</strong></td>
+        <td><strong>Over 300,000</strong></td>
+        <td>At least <strong class="c-green">10%</strong> of the registered voters</td>
+        <td>In no case shall petitioners be less than <strong class="c-rust">45,000</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="mechanics-legislative-district" class="c-navy">Procedural Mechanics and the Meaning of "Legislative District" in Recall Petitions</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Filing and Verification Procedure:</strong></span> The written petition for recall must be duly signed by the representatives of the petitioners before the local <span class="c-teal"><strong>Election Registrar (Election Officer)</strong></span> or his representative, and filed with the <span class="c-teal"><strong>COMELEC</strong></span> through its field office in the LGU concerned (e.g., a recall petition against a barangay official is filed before the Municipal Election Officer of the municipality where the barangay is a component). The petition must state the legible names, addresses, and signatures of the petitioners, together with their barangay, city/municipality, local legislative district, and province. The COMELEC then independently verifies the authenticity of the signatures.
+    </li>
+    <li>
+      <span class="c-navy"><strong>Why "Local Legislative District" Appears in Section 70:</strong></span> The statutory reference to a <em>"local legislative district"</em> in Section 70 does <span class="c-rust"><strong><u>not</u></strong></span> mean that District Congressmen are subject to recall. Rather, it applies to <span class="c-green"><strong><u>Sanggunian members who are elected by district</u></strong></span> rather than at large—such as the <em>Sangguniang Panlungsod</em> councilors of the City of Manila (which is divided into six legislative districts), or the <em>Sangguniang Panlalawigan</em> members (<em>vocales</em> or Board Members) of provinces divided into legislative districts, such as the six districts of Pangasinan or the First and Second Districts of La Union. Only the registered voters of the specific district that elected that <em>Sanggunian</em> member may sign a recall petition against him.
+    </li>
+  </ul>
+
+  <hr>
+
+  <!-- SECTION XII -->
+  <h3 id="sec-xii-conduct-limitations-recall" class="c-navy">XII. CONDUCT, EFFECTIVITY, PROHIBITION AGAINST RESIGNATION, AND LIMITATIONS ON RECALL (SECTIONS 72–74, R.A. 7160)</h3>
+
+  <h4 id="conduct-effectivity-recall" class="c-navy">Conduct and Effectivity of Recall Elections (Sections 71–72)</h4>
+  <ul>
+    <li>
+      <span class="c-navy"><strong>Automatic Candidacy of the Official Sought to be Recalled (Section 71):</strong></span> Once the COMELEC finds the recall petition sufficient in form and substance and schedules the recall election, the official sought to be recalled is <span class="c-green"><strong><u>automatically considered a duly registered candidate</u></strong></span> in the recall election to defend his mandate, while other qualified challengers may file their certificates of candidacy to run against him.
+    </li>
+    <li>
+      <span class="c-navy"><strong>When Recall Takes Effect (Section 72):</strong></span> The recall of an elective local official shall be effective <span class="c-green"><strong><u>only upon the election and proclamation of a successor</u></strong></span> in the person of the candidate receiving the highest number of votes cast during the recall election. If the official sought to be recalled receives the highest number of votes, confidence in him is deemed reaffirmed, the recall fails, and he continues in office for the remainder of his term.
+    </li>
+  </ul>
+
+  <!-- Professor's Illustration: Bacnotan Recall -->
+  <div class="professor-box">
+    <div class="professor-box-header">⚖️ Professor's Illustration: Counter-Recall Strategy in Bacnotan, La Union</div>
+    <p style="margin: 0;">
+      In the first barangay recall election in La Union—held in Barangay Bussaoit, Bacnotan—a petition for recall was filed against the incumbent <em>Punong Barangay</em>, orchestrated by the first-ranked <em>Sangguniang Barangay</em> <em>Kagawad</em> who intended to run against him for <em>Punong Barangay</em> in the recall election. Upon consulting counsel, the besieged <em>Punong Barangay</em>'s allies counter-filed valid petitions for recall against <strong>all seven (7) Barangay Kagawads</strong> simultaneously. Because Section 71 automatically makes every official under recall a mandatory candidate for his <em>own</em> contested post, the number one <em>Kagawad</em> was legally locked into defending his <em>Kagawad</em> seat and could not run for <em>Punong Barangay</em>, enabling the incumbent <em>Punong Barangay</em> to defeat a former barangay captain and retain his post.
+    </p>
+  </div>
+
+  <h4 id="prohibition-resignation" class="c-navy">Prohibition Against Resignation Pending Recall (Section 73)</h4>
+  <p>
+    Under <span class="c-teal">Section 73 of the LGC</span>, an elective local official sought to be recalled <span class="c-rust"><strong><u>shall not be allowed to resign while the recall process is in progress</u></strong></span>. This prohibition prevents the official from aborting the recall election via tactical resignation in order to hand over the office to a political ally (such as the Vice Mayor or first-ranked <em>Kagawad</em>) by succession, thereby frustrating the sovereign right of the electorate to choose his replacement at the ballot box.
+  </p>
+
+  <h4 id="limitations-recall" class="c-navy">Substantive and Temporal Limitations on Recall (Section 74)</h4>
+  <p>
+    Section 74 of the LGC imposes two strict limitations on the exercise of the power of recall:
+  </p>
+  <ol>
+    <li><span class="c-navy"><strong>Once-Per-Term Limitation (Section 74[a]):</strong></span> Any elective local official may be the subject of a <span class="c-rust"><strong><u>recall election only once during his term of office</u></strong></span> for loss of confidence.</li>
+    <li>
+      <span class="c-navy"><strong>Dual One-Year Temporal Bans (Section 74[b]):</strong></span> No recall shall take place:
+      <ul>
+        <li>Within <span class="c-rust"><strong><u>one (1) year from the date of the official's assumption to office</u></strong></span>; or</li>
+        <li>Within <span class="c-rust"><strong><u>one (1) year immediately preceding a regular local election</u></strong></span>.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h4 class="c-navy">Jurisprudential Construction of "Regular Local Election" and "Recall"</h4>
+
+  <!-- Case: Paras v. COMELEC -->
+  <div id="case-paras-comelec" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Paras v. COMELEC</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 123169, November 4, 1996, 264 SCRA 49)</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Punong Barangay Danilo Paras of Pula, Cabanatuan City, sought to block a recall election scheduled against him by arguing that the approaching Sangguniang Kabataan (SK) election—and alternatively the regular national and local elections for provincial and municipal officials—barred his recall under the one-year pre-election ban of Section 74(b).</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> What is the legal meaning of the phrase "regular local election" under Section 74(b) of the Local Government Code?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court held that the phrase <span class="c-green"><strong><u>"regular local election"</u></strong></span> in Section 74(b) refers exclusively to the regular election <span class="c-green"><strong><u>where the specific office held by the local elective official sought to be recalled is contested and to be filled by the electorate</u></strong></span>. Thus, for a <em>Punong Barangay</em>, the one-year pre-election ban applies only with respect to the approaching regular <em>Barangay</em> election, and not to an SK election or a regular election for provincial, city, and municipal officials.</li>
+    </ul>
+  </div>
+
+  <!-- Case: Claudio v. COMELEC -->
+  <div id="case-claudio-comelec" style="margin-top: 1.5rem;">
+    <h4 class="c-burgundy"><em>Claudio v. COMELEC</em> <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">(G.R. No. 140560, May 4, 2000, 331 SCRA 388) [Reconciled with Angobung v. COMELEC and Goh v. COMELEC]</span></h4>
+    <ul>
+      <li><span class="c-navy"><strong>Facts:</strong></span> Preparatory steps and signature gathering to recall Pasay City Mayor Jovito Claudio were commenced within his first year in office, although the recall petition itself was filed and the recall election was scheduled well <em>after</em> one year from his assumption of office. Claudio argued that the word "recall" in Section 74(b) prohibited even the preliminary gathering of signatures within the first year of his term.</li>
+      <li><span class="c-navy"><strong>Issue:</strong></span> Does the word "recall" in the one-year temporal bans under Section 74(b) refer to the preliminary initiation process or to the actual recall election itself?</li>
+      <li><span class="c-navy"><strong>Ruling / Ratio:</strong></span> The Supreme Court ruled that the word <span class="c-green"><strong><u>"recall"</u></strong></span> in Section 74(b) refers specifically to the <span class="c-green"><strong><u>recall election itself</u></strong></span>, and not to the preliminary proceedings or preparatory gathering of signatures by voters. While a formal recall petition cannot be entertained by COMELEC to subject an official to a recall election within one year from his assumption of office (giving him at least one full year to demonstrate his governance free from electoral upheaval, as emphasized in <em>Angobung v. COMELEC</em>), and no recall election may be held within one year immediately preceding the next regular election for that office, preparatory voter discussions and signature drives outside the formal election window do not violate Section 74(b) (and as later addressed in <em>Goh v. Bayron / COMELEC</em>, COMELEC must perform its constitutional mandate when a valid recall petition satisfies all statutory timelines).</li>
+    </ul>
+  </div>
+
+  <!-- DIAGRAM 3: RECALL WORKFLOW & LIMITATIONS -->
+  <div id="diagram-recall-workflow" class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM 3: RECALL INITIATION, VERIFICATION, ELECTION & LIMITATIONS <span class="diagram-hint">(Drag to pan - Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  START_REC["Petition of Registered Voters (Sec. 70, R.A. 9244)
+*Sole Mode: Preparatory Recall Assembly Abolished"] --> CHK_LIMITS{"Check Temporal Bans (Sec. 74b):
+1. Within 1 yr from assumption of office?
+2. Within 1 yr preceding regular election for that office?"}
+
+  CHK_LIMITS -- "Violates 1-Year Ban" --> BAN_DISMISS["RECALL BARRED:
+Petition dismissed under Paras / Claudio doctrines"]
+  CHK_LIMITS -- "Outside 1-Year Bans" --> CHK_TIERS{"Verify Statutory Signature Tier (Sec. 70):
+- <=20k pop: At least 25%
+- 20,000 to 75,000: At least 20% (Min 5,000)
+- 75,000 to 300,000: At least 15% (Min 15,000)
+- >300k: At least 10% (Min 45,000)"}
+
+  CHK_TIERS -- "Signatures Insufficient" --> PET_DISMISS["Petition Denied / Insufficient Signatures"]
+  CHK_TIERS -- "Signatures Verified by COMELEC" --> COM_ORDER["COMELEC Finds Petition Sufficient
+Schedules Recall Election (Sec. 71)"]
+
+  COM_ORDER --> CAND_RULES["CANDIDACY RULES (Secs. 71-73):
+- Incumbent Official is AUTOMATIC CANDIDATE
+- Challengers file Certificates of Candidacy
+- Incumbent PROHIBITED from resigning (Sec. 73)"]
+
+  CAND_RULES --> ELECTION_DAY["Conduct of Recall Election by COMELEC (Sec. 72)"]
+  ELECTION_DAY --> COUNT_RESULT{"Election Results (Sec. 72)"}
+
+  COUNT_RESULT -- "Incumbent Wins Plurality" --> REAFFIRMED["CONFIDENCE REAFFIRMED:
+Recall fails; Official retains office for remainder of term"]
+  COUNT_RESULT -- "Challenger Wins Plurality" --> RECALL_SUCCESS["RECALL EFFECTIVE:
+Successor proclaimed and assumes office"]
+
+  REAFFIRMED --> ONCE_LIMIT["Once-Per-Term Bar: Official cannot be recalled again (Sec. 74a)"]
+  RECALL_SUCCESS --> ONCE_LIMIT
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ADMINISTRATIVE MATTERS -->
+  <h2 id="administrative-matters" class="c-navy">Administrative Matters & Professor's Asides</h2>
+
+  <!-- Exam Pointers -->
+  <div id="exam-pointers" class="aside-card">
+    <div class="aside-title">🎯 Key Examination Pointers & Potential Quiz/Final Exam Questions</div>
+    <ul style="margin: 0; padding-left: 1.25rem;">
+      <li>
+        <span class="c-navy"><strong>Midterm Review & Final Exam Crossover (Section 58, LGC):</strong></span> Recall from the midterm examination that an elective official who enforces a disapproved ordinance or resolution commits an actionable administrative offense under Section 58 in relation to Section 60(h) of the LGC.
+      </li>
+      <li>
+        <span class="c-navy"><strong>High-Probability Final Exam / Quiz Problem (<em>Ex Officio</em> Jurisdiction):</strong></span> Expect a problem in the upcoming quiz or final examination patterned after the actual October 2026 <em>Sangguniang Panlalawigan</em> of La Union legal opinion: Where a <em>Punong Barangay</em> who sits as an <em>ex officio</em> member of the <em>Sangguniang Bayan</em> (as <em>Liga ng mga Barangay</em> / ABC President) is charged with grave misconduct and abuse of authority for refusing for 29 days to issue a <span class="c-teal"><strong>Certificate of Indigency</strong></span>, original jurisdiction belongs to the <span class="c-green"><strong><u>Sangguniang Bayan</u></strong></span> under Section 61(c)—and <span class="c-rust"><strong><u>not</u></strong></span> the <em>Sangguniang Panlalawigan</em> under Section 61(b)—because issuing barangay certifications is an executive function of a <em>Punong Barangay</em>, not a legislative function of a <em>Sangguniang Bayan</em> member.
+      </li>
+      <li>
+        <span class="c-navy"><strong>Election Ban Nuance (Section 62[c], LGC):</strong></span> Remember for the exam that the 90-day pre-election ban prohibits only the <em>trial/investigation</em> and the <em>imposition of preventive suspension</em>; a <em>Sanggunian</em> Secretary cannot refuse to <em>receive or docket</em> an administrative complaint during the election ban.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Litigation Insights -->
+  <div id="litigation-insights" class="aside-card" style="border-left-color: #0F766E;">
+    <div class="aside-title" style="color: #0F766E;">💼 Practical Litigation & Trial Advocacy Insights</div>
+    <ul style="margin: 0; padding-left: 1.25rem;">
+      <li>
+        <span class="c-navy"><strong>Drafting Responsive Pleadings:</strong></span> When representing a respondent in an administrative case under Section 62, remember that while a <em>complaint</em> requires both a verification and a certification against forum shopping, an <em>answer</em> requires only a simple verification.
+      </li>
+      <li>
+        <span class="c-navy"><strong>Cross-Examination Strategy:</strong></span> In administrative and judicial trials, <em>"the best cross-examination is often no cross-examination."</em> If an adverse witness's direct testimony has not proven anything damaging against your client, manifest <em>"No cross"</em> rather than risking questions that allow the witness to repair his testimony.
+      </li>
+      <li>
+        <span class="c-navy"><strong>Subpoenaing Reluctant Witnesses:</strong></span> Never ask the investigating body to issue a <em>subpoena ad testificandum</em> to compel the attendance of a reluctant defense witness who has not previously executed a sworn statement or judicial affidavit; a witness dragged to a hearing against his will may resent your client and testify against him on the stand.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Class Announcements -->
+  <div id="class-announcements" class="aside-card" style="border-left-color: #991B1B;">
+    <div class="aside-title" style="color: #991B1B;">📢 Class Schedule & Administrative Announcements</div>
+    <p style="margin: 0; padding-left: 0.25rem;">
+      The next Saturday session may still be conducted via <span class="c-green"><strong><u>online class</u></strong></span> rather than face-to-face, as the interment of the Professor's late daughter is scheduled for Friday, October 30, 2026, in Dagupan. The Professor expressed his heartfelt gratitude to the Dean, the College of Law officers, and the students for their visit, prayers, and condolences.
+    </p>
+  </div>
+
+</div>
+
+<!-- MERMAID JS & INTERACTIVE DIAGRAM CONTROLS SCRIPT -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
