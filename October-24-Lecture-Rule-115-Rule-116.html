@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 24 Lecture: Rights of the Accused (Rule 115) & Arraignment and Plea (Rule 116)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-step-outcome-warning {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-title">PART 1: CONSTITUTIONAL & STATUTORY RIGHTS OF THE ACCUSED (RULE 115)</option>
+      <option value="#part-1-framework">I. General Framework of the Rights of the Accused</option>
+      <option value="#part-1-foundations">&nbsp;&nbsp;↳ Constitutional Foundations & Statutory Reiteration</option>
+      <option value="#part-1-waiver">&nbsp;&nbsp;↳ Personal Nature & Doctrine of Waiver</option>
+      <option value="#part-1-illustration">&nbsp;&nbsp;↳ Professor's Illustration (Delay & Bail)</option>
+      <option value="#part-1-presumption">II. Presumption of Innocence, Quantum of Proof & Equipoise</option>
+      <option value="#part-1-innocence-doctrine">&nbsp;&nbsp;↳ Presumption & Burden of Proof</option>
+      <option value="#part-1-duration">&nbsp;&nbsp;↳ Duration of Presumption Until Finality</option>
+      <option value="#part-1-equipoise">&nbsp;&nbsp;↳ The Equipoise Rule & Alibi</option>
+      <option value="#part-1-equipoise-example">&nbsp;&nbsp;↳ Application Example</option>
+      <option value="#part-1-identification">III. Positive Identification & Corpus Delicti</option>
+      <option value="#part-1-twofold-burden">&nbsp;&nbsp;↳ Two-Fold Burden of Prosecution</option>
+      <option value="#part-1-pretrial-stipulation">&nbsp;&nbsp;↳ Pre-Trial Stipulation on Identity</option>
+      <option value="#part-1-modes-identification">&nbsp;&nbsp;↳ In-Court vs. Out-of-Court Identification</option>
+      <option value="#part-1-totality-test">&nbsp;&nbsp;↳ Totality of Circumstances Test</option>
+      <option value="#part-1-chain-of-custody">&nbsp;&nbsp;↳ Chain of Custody Rule (Sec. 21, R.A. 9165)</option>
+      <option value="#part-1-drug-illustration">&nbsp;&nbsp;↳ Professor's Illustration (Evaporated Shabu)</option>
+      <option value="#part-1-informed">IV. Right to be Informed of Nature & Cause (Rule 115, Sec. 1[b])</option>
+      <option value="#part-1-due-process">&nbsp;&nbsp;↳ Constitutional Due Process Underpinnings</option>
+      <option value="#part-1-drafting-translation">&nbsp;&nbsp;↳ Simplicity of Language & Mandatory Translation</option>
+      <option value="#part-1-family-court">&nbsp;&nbsp;↳ Confidentiality in Family Court Proceedings</option>
+      <option value="#part-2-title">PART 2: RIGHT TO COUNSEL, SPEEDY TRIAL, SELF-INCRIMINATION & TRIAL RIGHTS</option>
+      <option value="#part-2-counsel">V. Right to Competent and Independent Counsel (Sec. 1[c])</option>
+      <option value="#part-2-counsel-attachment">&nbsp;&nbsp;↳ Attachment: Custodial Investigation & Inquest</option>
+      <option value="#part-2-extrajudicial">&nbsp;&nbsp;↳ Exceptions: Line-Up & Barangay Statements</option>
+      <option value="#part-2-counsel-standards">&nbsp;&nbsp;↳ Standards of Competent & Independent Counsel</option>
+      <option value="#part-2-counsel-illustration">&nbsp;&nbsp;↳ Professor's Illustration (Lawyer Refusing to Defend)</option>
+      <option value="#part-2-speedy">VI. Right to Speedy Trial & Continuous Trial Guidelines (Sec. 1[h])</option>
+      <option value="#part-2-timelines">&nbsp;&nbsp;↳ Constitutional Mandate & Continuous Trial Timelines</option>
+      <option value="#part-2-judicial-accountability">&nbsp;&nbsp;↳ Judicial Accountability & Inexcusable Delays</option>
+      <option value="#part-2-postponements">&nbsp;&nbsp;↳ Strict Rules on Postponements & Fines</option>
+      <option value="#part-2-four-steps">&nbsp;&nbsp;↳ Strategic Counting of Delays (4-Step Strategy)</option>
+      <option value="#part-2-self-incrimination">VII. Privilege Against Self-Incrimination (Sec. 1[f])</option>
+      <option value="#part-2-privilege-scope">&nbsp;&nbsp;↳ Nemo Tenetur Seipsum Accusare & Policy</option>
+      <option value="#part-2-compulsion-distinction">&nbsp;&nbsp;↳ Testimonial Compulsion vs. Mechanical Acts</option>
+      <option value="#part-2-proceedings-immunity">&nbsp;&nbsp;↳ Timing, Waiver & Immunity Statutes</option>
+      <option value="#part-2-trial-rights">VIII. Trial in Absentia, Confrontation, Compulsory Process & Appeal</option>
+      <option value="#part-2-absentia">&nbsp;&nbsp;↳ Trial in Absentia & Accused Jumping Bail</option>
+      <option value="#part-2-confrontation-appeal">&nbsp;&nbsp;↳ Confrontation, Compulsory Process & Statutory Appeal</option>
+      <option value="#part-3-title">PART 3: ARRAIGNMENT AND PLEA (RULE 116)</option>
+      <option value="#part-3-concept">IX. Concept, Importance & Mandatory Timelines of Arraignment</option>
+      <option value="#part-3-nature-importance">&nbsp;&nbsp;↳ Twin Purposes & Absconding Accused</option>
+      <option value="#part-3-timelines">&nbsp;&nbsp;↳ Mandatory Timelines & Simultaneous Pre-Trial</option>
+      <option value="#part-3-fourfold-duty">&nbsp;&nbsp;↳ Four-Fold Court Duty Regarding Counsel</option>
+      <option value="#part-3-pre-arraignment">X. Pre-Arraignment Remedies, Prohibitions & Suspension</option>
+      <option value="#part-3-remedies">&nbsp;&nbsp;↳ Authorized Pre-Arraignment Remedies</option>
+      <option value="#part-3-prohibited-motions">&nbsp;&nbsp;↳ Strictly Prohibited Dilatory Motions</option>
+      <option value="#part-3-suspension">&nbsp;&nbsp;↳ Three Exclusive Grounds for Suspension</option>
+      <option value="#part-3-mechanics">XI. Mechanics of Arraignment, Presence & Pleas</option>
+      <option value="#part-3-presence-waiver">&nbsp;&nbsp;↳ Personal Presence & Waiver in Multi-Count Cases</option>
+      <option value="#part-3-offended-party">&nbsp;&nbsp;↳ Presence of Offended Party</option>
+      <option value="#part-3-not-guilty-pleas">&nbsp;&nbsp;↳ Mandatory Entry of "Not Guilty" Pleas</option>
+      <option value="#part-3-double-jeopardy">&nbsp;&nbsp;↳ Effect of Void Arraignment on Double Jeopardy</option>
+      <option value="#part-3-plea-bargaining">XII. Plea Bargaining & Plea of Guilty to Capital vs. Non-Capital</option>
+      <option value="#part-3-bargaining-requisites">&nbsp;&nbsp;↳ Requisites, Timing & Procedure of Plea Bargaining</option>
+      <option value="#part-3-capital-plea">&nbsp;&nbsp;↳ Three-Fold Duty in Capital Offenses (Searching Inquiry)</option>
+      <option value="#part-3-capital-example">&nbsp;&nbsp;↳ Application Example</option>
+      <option value="#administrative-matters">Administrative Matters & Professor's Asides</option>
+      <option value="#admin-midterms">&nbsp;&nbsp;↳ Midterm Results & Adjustments</option>
+      <option value="#admin-roleplay">&nbsp;&nbsp;↳ Graded Courtroom Roleplay Simulation</option>
+      <option value="#admin-clep">&nbsp;&nbsp;↳ Academic Calendar & CLEP Practicum</option>
+      <option value="#admin-ethics">&nbsp;&nbsp;↳ Ethical & Practical Litigation Insights</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+<h1 id="october-24-lecture">October 24 Lecture</h1>
+
+<!-- PART 1 -->
+<h1 id="part-1-title" class="c-navy">PART 1: CONSTITUTIONAL AND STATUTORY RIGHTS OF THE ACCUSED (<span class="c-teal">RULE 115</span>): PRESUMPTION OF INNOCENCE, IDENTIFICATION, AND THE RIGHT TO BE INFORMED</h1>
+
+<!-- SECTION ROADMAP CARD 1 -->
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">I</div>
+      <div class="ui-kicker">FRAMEWORK</div>
+      <div class="ui-sub">Rule 115 & Bill of Rights Foundations, Duty to Invoke & Waiver</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">II</div>
+      <div class="ui-kicker">INNOCENCE</div>
+      <div class="ui-sub">Quantum of Proof, Subsistence Pending Appeal & Equipoise Rule</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">III</div>
+      <div class="ui-kicker">IDENTIFICATION</div>
+      <div class="ui-sub">Corpus Delicti, Totality Test & Sec. 21 Chain of Custody</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">IV</div>
+      <div class="ui-kicker">INFORMED</div>
+      <div class="ui-sub">Due Process, Simple Language, Translation & Family Court</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-1-overview">Part 1 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>I. General Framework of the Rights of the Accused (<span class="c-teal">Rule 115</span> in Relation to <span class="c-teal">Article III, 1987 Constitution</span>):</strong> Constitutional foundations, nature of the rights under <span class="c-teal">Section 1 of Rule 115</span>, personal character of the rights, and the doctrine of waiver by silence or inaction.</li>
+  <li><strong>II. Presumption of Innocence, Quantum of Proof, and the Equipoise Rule (<span class="c-teal">Rule 115, Sec. 1[a]</span>):</strong> Burden of proof in criminal prosecutions, proof beyond reasonable doubt, duration of the presumption of innocence until finality of judgment, bail pending appeal, and the Equipoise Doctrine in relation to alibi and denial.</li>
+  <li><strong>III. Positive Identification of the Accused and Establishment of <span class="c-burgundy"><em>Corpus Delicti</em></span>:</strong> Pre-trial stipulations on identity, in-court versus out-of-court identification (show-up, mug shots, police line-up), the Totality of Circumstances Test, trial <span class="c-burgundy"><em>in absentia</em></span> identification dilemmas, and strict compliance with the Chain of Custody Rule under <span class="c-teal">Section 21 of R.A. 9165</span>.</li>
+  <li><strong>IV. Right to be Informed of the Nature and Cause of the Accusation (<span class="c-teal">Rule 115, Sec. 1[b]</span>):</strong> Due process underpinnings, simplicity of language in the Information (<span class="c-teal">Rule 110, Sec. 6</span>), mandatory translation into a known dialect or sign language during arraignment, and confidentiality rules in Family Court proceedings involving minor victims.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-1-framework">I. GENERAL FRAMEWORK OF THE RIGHTS OF THE ACCUSED (<span class="c-teal">RULE 115</span> IN RELATION TO <span class="c-teal">ARTICLE III, 1987 CONSTITUTION</span>)</h2>
+
+<h3 id="part-1-foundations">Constitutional Foundations and Statutory Reiteration</h3>
+
+<ul>
+  <li><strong>Constitutional Basis:</strong> <span class="c-teal">Rule 115</span> of the Revised Rules of Criminal Procedure is a procedural codification and reiteration of the fundamental guarantees enshrined in <span class="c-teal"><strong>Article III (Bill of Rights) of the 1987 Constitution</strong></span>, specifically Sections 1 (Due Process), 12 (Custodial Investigation Rights), 14 (Rights of the Accused at Trial), 16 (Speedy Disposition of Cases), and 17 (Privilege Against Self-Incrimination).</li>
+  <li><strong>Operative Purpose:</strong> <span class="c-teal">Rule 115</span> enumerates the statutory and constitutional protections automatically accorded to any person indicted for a criminal offense, ensuring that the coercive power of the State is exercised strictly within the bounds of <span class="c-green"><strong><u>procedural and substantive due process</u></strong></span>.</li>
+</ul>
+
+<h3 id="part-1-waiver">Personal Nature of the Rights and the Doctrine of Waiver</h3>
+
+<ul>
+  <li><strong>Duty to Invoke:</strong> The rights enumerated under <span class="c-teal">Section 1 of Rule 115</span> are <span class="c-green"><strong><u>personal to the accused</u></strong></span>. The prosecution has no duty to assert these defenses on the accused's behalf; rather, it is incumbent upon the accused, through defense counsel, to vigilance-test the State's compliance and timely claim these rights at the earliest opportunity.</li>
+  <li><strong>Effect of Silence or Inaction (Waiver):</strong> Whenever a waivable right of the accused is not seasonably raised or claimed before the trial court, <span class="c-rust"><strong><u>it is deemed waived</u></strong></span>. Strategic complacency by defense counsel—such as remaining silent when a case suffers multiple unexcused postponements or when the accused remains unarraigned for an extended period simply because the accused is enjoying provisional liberty on bail—operates as an implied waiver of the right to a speedy trial or speedy disposition.</li>
+</ul>
+
+<h4 id="part-1-illustration">Professor's Illustration</h4>
+
+<blockquote>
+  An accused charged with a bailable offense posts bail and enjoys provisional liberty. For over a year, the trial court fails to schedule his arraignment due to docket congestion, and the prosecution repeatedly resets the initial hearing. The defense counsel remains completely silent, thinking the delay benefits his client who remains out of jail. Because the right to a speedy trial must be positively asserted, the accused's prolonged silence and acquiescence constitute an implied waiver, barring him from belatedly moving to dismiss the case on that ground without first objecting to the postponements on record.
+</blockquote>
+
+<hr>
+
+<h2 id="part-1-presumption">II. PRESUMPTION OF INNOCENCE, QUANTUM OF PROOF, AND THE EQUIPOISE RULE (<span class="c-teal">RULE 115, SEC. 1[a]</span>)</h2>
+
+<h3 id="part-1-innocence-doctrine">The Constitutional Presumption of Innocence</h3>
+
+<ul>
+  <li><strong>Statutory Rule (<span class="c-teal">Rule 115, Sec. 1[a]</span>; <span class="c-teal">Art. III, Sec. 14[2], Constitution</span>):</strong> In all criminal prosecutions, the accused is <span class="c-green"><strong><u>presumed innocent until the contrary is proved beyond reasonable doubt</u></strong></span>.</li>
+  <li><strong>Shift from Lay Perception to Legal Standard:</strong> While a layperson immediately assumes a neighbor arrested by police is guilty, legal training mandates the opposite perspective: arrest and indictment merely initiate a formal judicial process. A person is legally innocent until the State validly presents admissible evidence and the court formally adjudges guilt after a full evaluation of the record.</li>
+  <li><strong>Burden of Proof and Quantum of Evidence:</strong> The <strong>burden of proof (<span class="c-burgundy"><em>onus probandi</em></span>)</strong> rests squarely upon the prosecution to establish each element of the offense and the identity of the perpetrator by <span class="c-green"><strong><u>proof beyond reasonable doubt</u></strong></span>. The prosecution must rely on the strength of its own evidence and cannot draw strength from the weakness of the defense.</li>
+  <li><strong>Corollary Right to Bail:</strong> The constitutional presumption of innocence is the direct doctrinal foundation of the right to bail under <span class="c-teal">Rule 114</span>. Because an indicted individual is presumed innocent, the State cannot arbitrarily deprive him of liberty prior to conviction if the offense charged is bailable.</li>
+</ul>
+
+<h3 id="part-1-duration">Duration of the Presumption of Innocence</h3>
+
+<ul>
+  <li><strong>Termination Only Upon Finality of Judgment:</strong> The presumption of innocence does <span class="c-rust"><strong><u>not</u></strong></span> terminate upon the mere promulgation of a judgment of conviction by the trial court. If the accused timely files an appeal, the presumption of innocence continues to shield him throughout the appellate proceedings until the judgment of conviction becomes <span class="c-green"><strong><u>final and executory</u></strong></span>.</li>
+  <li><strong>Impact on Bail Pending Appeal:</strong> Because the presumption of innocence subsists pending appeal (albeit weakened by a trial court conviction), an accused convicted of an offense not punishable by <span class="c-burgundy"><em>reclusion perpetua</em></span> or life imprisonment may still enjoy provisional liberty on bail pending appeal, unless the prosecution establishes the presence of bail-negating circumstances under <span class="c-teal">Section 5, Rule 114</span>.</li>
+</ul>
+
+<h3 id="part-1-equipoise">The Equipoise Rule (Doctrine of Equipoise)</h3>
+
+<ul>
+  <li><strong>Core Doctrinal Rule:</strong> Under the <strong>Equipoise Rule</strong>, where the evidence presented by the prosecution and the defense is evenly balanced, or where the inculpatory facts and circumstances are capable of two or more explanations—one consistent with the innocence of the accused and the other consistent with his guilt—the evidence is deemed insufficient to fulfill the test of moral certainty, and <span class="c-green"><strong><u>the scales of justice must tilt in favor of the acquittal of the accused</u></strong></span>.</li>
+  <li><strong>Interplay with Denial and Alibi:</strong> Although denial and alibi are inherently the weakest defenses in criminal law because they are easily fabricated, they acquire decisive weight under the Equipoise Rule when corroborated by credible, independent evidence establishing the <span class="c-green"><strong><u>physical impossibility</u></strong></span> of the accused being at the <span class="c-burgundy"><em>locus criminis</em></span> at the time of the commission of the offense.</li>
+  <li><strong>Duty of Prosecution to Present Rebuttal Evidence:</strong> Once the defense presents convincing and credible evidence proving that the accused was elsewhere (e.g., documentary proof of foreign travel, plane tickets, and authenticated photographs during a nighttime crime with poor visibility), the burden of evidence shifts back to the prosecution to present <strong>rebuttal evidence</strong> (e.g., proving fabrication or digital manipulation). Failure by the prosecution to rebut credible exculpatory evidence creates an evidentiary equipoise mandating acquittal.</li>
+</ul>
+
+<!-- EQUIPOISE RULE WORKFLOW BOX -->
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">Prosecution Evidence vs. Credible Corroborated Defense Evidence</div>
+    <div class="ui-sub">Evenly balanced evidence or facts capable of two explanations</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">Insufficient to Fulfill the Test of Moral Certainty</div>
+    <div class="ui-sub">Burden of proof (onus probandi) remains unfulfilled by the State</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-outcome">
+    <div class="ui-title">SCALES OF JUSTICE TILT IN FAVOR OF ACQUITTAL</div>
+    <div class="ui-sub">Presumption of innocence prevails over unproven allegations</div>
+  </div>
+</div>
+
+<h4 id="part-1-equipoise-example">Application Example</h4>
+
+<blockquote>
+  In a murder prosecution involving a nighttime shooting in an unlit alley, a lone prosecution eyewitness testifies that he saw the accused pull the trigger, and the prosecution proves the firearm is registered to the accused. In defense, the accused presents independent witnesses, boarding passes, and immigration records proving he was abroad on the exact date and time of the shooting, asserting someone else used his gun. If the prosecution fails to present rebuttal evidence to discredit the travel records, the evidence stands in equipoise, requiring the trial court to tilt the scales of justice toward acquittal.
+</blockquote>
+
+<hr>
+
+<h2 id="part-1-identification">III. POSITIVE IDENTIFICATION OF THE ACCUSED AND ESTABLISHMENT OF <span class="c-burgundy"><em>CORPUS DELICTI</em></span></h2>
+
+<h3 id="part-1-twofold-burden">Two-Fold Burden of the Prosecution</h3>
+
+<ul>
+  <li><strong>Dual Requirement for Conviction:</strong> In every criminal prosecution, the State must prove beyond reasonable doubt two fundamental propositions:
+    <ol>
+      <li><strong>The commission of the crime (<span class="c-burgundy"><em>corpus delicti</em></span>)</strong>; and</li>
+      <li><strong>The positive identification of the accused</strong> as the perpetrator of the crime.</li>
+    </ol>
+  </li>
+  <li><strong>Effect of Failure to Identify:</strong> Positive identification of the culprit is just as indispensable as proving the <span class="c-burgundy"><em>corpus delicti</em></span> itself. Even if the commission of the crime is indisputably established, <span class="c-rust"><strong><u>the failure of the prosecution to prove the identity of the accused as the perpetrator beyond reasonable doubt inevitably results in acquittal</u></strong></span>.</li>
+</ul>
+
+<h3 id="part-1-pretrial-stipulation">Pre-Trial Stipulation on the Identity of the Accused</h3>
+
+<ul>
+  <li><strong>When Identity Must Be Questioned:</strong> Any objection or challenge regarding the identity of the person arrested and brought before the court as the person named in the Information must be raised <span class="c-rust"><strong><u>before arraignment</u></strong></span> (such as via a motion to quash or motion to dismiss based on mistaken identity). Once the accused enters a plea at arraignment without objection, any defect regarding his personal identity as the person arraigned is waived.</li>
+  <li><strong>Strategic Purpose of Pre-Trial Stipulation:</strong> During the pre-trial conference (which immediately follows arraignment), the public prosecutor routinely proposes for stipulation the <strong>identity of the accused</strong>. Defense counsel typically admits this with a qualified manifestation: <em>"We admit the identity of the accused as the person who was arraigned."</em></li>
+  <li><strong>Preventing the Trial <span class="c-burgundy"><em>In Absentia</em></span> Dilemma:</strong> This pre-trial stipulation is vital for the prosecution. If the accused subsequently jumps bail and absconds after arraignment, the court will proceed with <strong>trial <span class="c-burgundy"><em>in absentia</em></span></strong>. Without a prior pre-trial stipulation admitting identity, prosecution eyewitnesses testifying in an empty courtroom cannot point to the absent accused in open court, forcing the prosecutor to rely on authenticated photographs or secondary identification to link the person arraigned to the perpetrator described by the witnesses.</li>
+</ul>
+
+<h3 id="part-1-modes-identification">In-Court vs. Out-of-Court Identification</h3>
+
+<ul>
+  <li><strong>Mechanics of In-Court Identification:</strong> When the accused is physically present during trial, the prosecutor conducts direct examination by asking the eyewitness if he knows the perpetrator and if he can identify him inside the courtroom. Once the witness points to the accused, the prosecutor places the identification on the official record: <em>"May the record reflect that the witness pointed to a person wearing a [color] shirt who, when asked by the court to stand up and state his name, identified himself as the accused, Juan Dela Cruz."</em></li>
+  <li><strong>Defense Manifestation to Avoid Embarrassment:</strong> To spare the accused the courtroom indignity of being pointed at and ordered by the judge to stand up and state his name, defense counsel frequently stands up and manifests: <em>"Your Honor, to obviate the necessity of pointing to the accused, we admit that the accused Juan Dela Cruz is inside the courtroom."</em> However, the prosecution must still ensure that the eyewitness's testimony substantively identifies the accused as the actual author of the crime, not merely that he is sitting in the courtroom.</li>
+  <li><strong>Three Modes of Out-of-Court Identification:</strong>
+    <ol>
+      <li><strong>Show-Up:</strong> The suspect alone is brought face-to-face before the witness for identification.</li>
+      <li><strong>Mug Shots:</strong> Photographs of suspects are shown to the witness to identify the perpetrator.</li>
+      <li><strong>Police Line-Up:</strong> The witness selects the suspect from a group of persons lined up for the purpose of identification.</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="part-1-totality-test">The Totality of Circumstances Test</h3>
+
+<ul>
+  <li><strong>Operative Standard for Admissibility:</strong> To determine whether an out-of-court identification is valid and admissible—and whether a subsequent in-court identification has been fatally tainted by an impermissibly suggestive out-of-court procedure in violation of due process—courts apply the <span class="c-green"><strong><u>Totality of Circumstances Test</u></strong></span>, evaluating six (6) mandatory factors:
+    <ol>
+      <li><strong>The witness's opportunity to view the criminal</strong> at the time of the crime;</li>
+      <li><strong>The witness's degree of attention</strong> at that time;</li>
+      <li><strong>The accuracy of any prior description</strong> given by the witness;</li>
+      <li><strong>The level of certainty demonstrated</strong> by the witness at the confrontation;</li>
+      <li><strong>The length of time</strong> between the crime and the confrontation; and</li>
+      <li><strong>The suggestiveness of the identification procedure</strong> employed by law enforcement.</li>
+    </ol>
+  </li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Identification Modality</th>
+      <th>Procedural Mechanics</th>
+      <th>Evidentiary & Constitutional Considerations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>In-Court Identification</strong></td>
+      <td>Witness points to the accused in open court during direct examination; accused states his name for the record.</td>
+      <td>Impossible to execute physically if the accused jumps bail; requires prior pre-trial stipulation or photographic identification during trial <span class="c-burgundy"><em>in absentia</em></span>.</td>
+    </tr>
+    <tr>
+      <td><strong>Show-Up</strong></td>
+      <td>Suspect is presented singly and alone to the eyewitness by police officers.</td>
+      <td>Inherently the most suggestive out-of-court mode; strictly scrutinized under the Totality of Circumstances Test to prevent due process violations.</td>
+    </tr>
+    <tr>
+      <td><strong>Mug Shots</strong></td>
+      <td>Witness examines police photographic files or rogue's gallery to pick out the culprit.</td>
+      <td>Must be free from police prompting or markings that single out a specific suspect's photograph.</td>
+    </tr>
+    <tr>
+      <td><strong>Police Line-Up</strong></td>
+      <td>Suspect stands among several individuals of roughly similar appearance for witness selection.</td>
+      <td>Generally non-adversarial; right to counsel does not yet attach unless custodial interrogation actually commences during the line-up.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- INTERACTIVE MERMAID DIAGRAM 1: IDENTIFICATION & TOTALITY TEST -->
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: OUT-OF-COURT IDENTIFICATION & TOTALITY TEST <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef primary fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1F2937;
+          classDef process fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+          classDef warning fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+          classDef success fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
+
+          A["Out-of-Court Identification Modes"]:::primary
+          A --> B["Show-Up<br/>(Suspect presented singly)"]:::warning
+          A --> C["Mug Shots<br/>(Police rogues gallery)"]:::process
+          A --> D["Police Line-Up<br/>(Group of similar persons)"]:::process
+
+          B & C & D --> E["Evaluation Under Totality of Circumstances Test<br/>1. Opportunity to view | 2. Degree of attention<br/>3. Accuracy of prior description | 4. Level of certainty<br/>5. Time lapse | 6. Suggestiveness of police procedure"]:::primary
+
+          E --> F{"Impermissibly Suggestive / Due Process Violated?"}:::primary
+          F -- "YES (Impermissibly Suggestive)" --> G["Tainted Out-of-Court Identification<br/>In-Court ID inadmissible unless proven independent"]:::warning
+          F -- "NO (Reliable Under Totality)" --> H["Valid Out-of-Court Identification<br/>Admissible corroboration for In-Court ID"]:::success
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-1-chain-of-custody">Strict Compliance with the Chain of Custody Rule in Drug Cases (<span class="c-teal">Sec. 21, R.A. 9165</span>)</h3>
+
+<ul>
+  <li><strong>Preserving the <span class="c-burgundy"><em>Corpus Delicti</em></span>:</strong> In prosecutions under the Comprehensive Dangerous Drugs Act (<span class="c-teal">R.A. 9165</span>), the dangerous drug itself constitutes the very <span class="c-burgundy"><em>corpus delicti</em></span> of the offense. Under <span class="c-teal"><strong>Section 21 of R.A. 9165</strong></span> (as amended by <span class="c-teal">R.A. 10640</span>), the prosecution must strictly establish an unbroken <span class="c-green"><strong><u>Chain of Custody</u></strong></span>—accounting for the seizure, marking, physical inventory, photographing, turnover to the forensic chemist, and presentation of the seized sachet in court.</li>
+  <li><strong>Insulating Witnesses Requirement:</strong> During the physical inventory and photographing immediately after seizure and confiscation (particularly in buy-bust operations), the law requires the presence of insulating witnesses (an elected public official and a representative of the National Prosecution Service or the media).</li>
+  <li><strong>Saving Clause for Non-Compliance:</strong> While strict compliance with Section 21 is the general rule—and unjustified breaches result in high rates of acquittal on appeal before the Supreme Court—non-compliance does not automatically render the seizure void <strong>provided the prosecution proves both:</strong> (1) <span class="c-green"><strong><u>justifiable grounds</u></strong></span> for the non-attendance of the required witnesses (e.g., a buy-bust operation conducted at 1:00 AM where prior earnest coordination efforts were made but witnesses refused or failed to arrive), and (2) that the <span class="c-green"><strong><u>integrity and evidentiary value</u></strong></span> of the seized items were properly preserved.</li>
+</ul>
+
+<h4 id="part-1-drug-illustration">Professor's Illustration</h4>
+
+<blockquote>
+  In an actual drug prosecution before Regional Trial Court Branch 28, the prosecution presented the forensic chemist to identify the seized plastic sachet of methamphetamine hydrochloride (<em>shabu</em>) in open court. Upon inspection of the evidentiary sachet, there was no crystalline substance inside, and the forensic chemist testified that the <em>shabu</em> had "evaporated." Because the dangerous drug itself is the <em>corpus delicti</em> and <em>shabu</em> cannot physically evaporate inside a sealed evidence bag, the prosecution utterly failed to establish the identity and integrity of the <em>corpus delicti</em> under Section 21 of R.A. 9165, resulting in the immediate acquittal of the accused.
+</blockquote>
+
+<hr>
+
+<h2 id="part-1-informed">IV. RIGHT TO BE INFORMED OF THE NATURE AND CAUSE OF THE ACCUSATION (<span class="c-teal">RULE 115, SEC. 1[b]</span>)</h2>
+
+<h3 id="part-1-due-process">Constitutional Due Process Underpinnings</h3>
+
+<ul>
+  <li><strong>Statutory Rule (<span class="c-teal">Rule 115, Sec. 1[b]</span>; <span class="c-teal">Art. III, Sec. 14[2], Constitution</span>):</strong> The accused has the <span class="c-green"><strong><u>right to be informed of the nature and cause of the accusation against him</u></strong></span>.</li>
+  <li><strong>Effect of Violation:</strong> Failure to inform the accused of the nature and cause of the accusation constitutes a fatal <span class="c-rust"><strong><u>denial of constitutional due process</u></strong></span>, rendering any subsequent trial and conviction <span class="c-rust"><strong><u>null and void</u></strong></span>.</li>
+  <li><strong>Stage of Compliance:</strong> This constitutional right is formally satisfied during <strong>arraignment</strong> (<span class="c-teal">Rule 116</span>), which is the first procedural stage in court where the accused is officially furnished a copy of the complaint or Information and hears the specific criminal charges read against him.</li>
+</ul>
+
+<h3 id="part-1-drafting-translation">Simplicity of Language in the Information and Mandatory Translation</h3>
+
+<ul>
+  <li><strong>Drafting Standards (<span class="c-teal">Rule 110, Sec. 6</span>):</strong> A complaint or Information is sufficient if it states the name of the accused, the designation of the offense given by statute, the acts or omissions complained of as constituting the offense, the name of the offended party, the approximate date, and the place of commission. Prosecutors must draft the Information in <span class="c-green"><strong><u>ordinary, simple, and concise language</u></strong></span>—avoiding obscure or highfalutin vocabulary—so that a person of common understanding can readily comprehend the exact acts he must defend against and the court can pronounce proper judgment.</li>
+  <li><strong>Translation into a Known Dialect:</strong> During arraignment, the judge or clerk of court asks defense counsel what language or dialect the accused speaks and understands. If the accused does not understand English, the court interpreter must read and translate the Information <span class="c-green"><strong><u>verbatim into a language or dialect known to him</u></strong></span> (e.g., Tagalog, Ilocano, Bisaya), which is particularly demanding in sensitive prosecutions like rape where exact anatomical and factual allegations must be translated aloud.</li>
+  <li><strong>Accommodating Deaf-Mute Accused:</strong> If the accused is deaf and mute, the court must engage the services of a <strong>Supreme Court-accredited sign language interpreter</strong> to communicate the contents of the Information and relay the accused's plea, ensuring full compliance with the right to be informed.</li>
+</ul>
+
+<h3 id="part-1-family-court">Confidentiality in Family Court Proceedings</h3>
+
+<ul>
+  <li><strong>Exclusion of the Public and Identity Protection:</strong> While criminal proceedings are generally public, prosecutions before Family Courts involving minor victims (such as child abuse or statutory rape) are strictly <strong>confidential</strong>. During arraignment and trial, the judge excludes the general public from the courtroom to protect the minor from trauma and embarrassment, and court decisions redact the real names of minor victims and their immediate family members, substituting fictitious initials to preserve statutory confidentiality.</li>
+</ul>
+
+<hr>
+
+<!-- PART 2 -->
+<h1 id="part-2-title" class="c-navy">PART 2: RIGHT TO COUNSEL, SPEEDY TRIAL, SELF-INCRIMINATION, AND TRIAL RIGHTS (<span class="c-teal">RULE 115, CONTINUED</span>)</h1>
+
+<!-- SECTION ROADMAP CARD 2 -->
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">V</div>
+      <div class="ui-kicker">COUNSEL</div>
+      <div class="ui-sub">Custodial Inquest, Line-Up Exception & Standards of Competence</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VI</div>
+      <div class="ui-kicker">SPEEDY TRIAL</div>
+      <div class="ui-sub">A.M. No. 15-06-10-SC, Timelines, Postponement Limits & Acquittal</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VII</div>
+      <div class="ui-kicker">SELF-INCRIMINATION</div>
+      <div class="ui-sub">Testimonial Compulsion vs. Physical Acts & Immunity Types</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VIII</div>
+      <div class="ui-kicker">TRIAL RIGHTS</div>
+      <div class="ui-sub">Trial In Absentia, Confrontation, Compulsory Process & Appeal</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-2-overview">Part 2 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>V. Right to Competent and Independent Counsel (<span class="c-teal">Rule 115, Sec. 1[c]</span>):</strong> Attachment of the right during custodial investigation and inquest, the police line-up exception, extrajudicial confessions versus spontaneous statements before a Barangay Chairman, standards of competence and independence, and consequences of counsel's gross negligence.</li>
+  <li><strong>VI. Right to Speedy Trial and the Continuous Trial Guidelines (<span class="c-teal">Rule 115, Sec. 1[h]</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span>):</strong> Mandatory timelines for arraignment and rendition of judgment, administrative liability of judges, strict limitations on postponements, strategic counting of prosecution delays, and dismissal as tantamount to acquittal.</li>
+  <li><strong>VII. Privilege Against Self-Incrimination (<span class="c-teal">Rule 115, Sec. 1[f]</span>; <span class="c-teal">Art. III, Sec. 17</span>):</strong> Scope of <span class="c-burgundy"><em>nemo tenetur seipsum accusare</em></span>, testimonial compulsion versus mechanical/physical examination (DNA, blood, clothing, demonstrations, handwriting), covered proceedings, waiver by testifying, and transactional versus use immunity.</li>
+  <li><strong>VIII. Right to Defend, Presence at Trial, Confrontation, Compulsory Process, and Appeal (<span class="c-teal">Rule 115, Sec. 1[c], [d], [f], [g], [i]</span>):</strong> Trial <span class="c-burgundy"><em>in absentia</em></span> mechanics when the accused jumps bail, defense waiver of evidence, admissibility of testimony of a deceased witness, compulsory processes, and the statutory nature of the right to appeal.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-2-counsel">V. RIGHT TO COMPETENT AND INDEPENDENT COUNSEL (<span class="c-teal">RULE 115, SEC. 1[c]</span>)</h2>
+
+<h3 id="part-2-counsel-attachment">Attachment of the Right to Counsel: Custodial Investigation and Inquest</h3>
+
+<ul>
+  <li><strong>Constitutional Mandate (<span class="c-teal">Art. III, Sec. 12[1], Constitution</span>):</strong> Any person under investigation for the commission of an offense shall have the right to be informed of his right to remain silent and to have <span class="c-green"><strong><u>competent and independent counsel preferably of his own choice</u></strong></span>. If the person cannot afford the services of counsel, he must be provided with one.</li>
+  <li><strong>Custodial Investigation and Inquest Proceedings:</strong> The right to counsel attaches the moment a person is taken into custody and law enforcement officers begin an interrogation that is no longer a general inquiry into an unsolved crime, but has begun to focus on a particular suspect. When a suspect is arrested without a warrant (such as <span class="c-burgundy"><em>in flagrante delicto</em></span>), <span class="c-rust"><strong><u>no inquest proceeding can be validly conducted without the presence and assistance of counsel</u></strong></span>.</li>
+  <li><strong>Weekend Duty of Inquest Prosecutors, PAO, and Courts:</strong> Because <span class="c-teal">Article 125 of the Revised Penal Code</span> strictly penalizes arbitrary detention beyond 12, 18, or 36 hours without delivering the detained person to the proper judicial authorities, the National Prosecution Service, the Public Attorney's Office (PAO), and the trial courts maintain mandatory <strong>Saturday (and on-call holiday) skeletal duties</strong>. If the Information is not filed within the statutory period during inquest, the police officers have no legal alternative but to release the detainee.</li>
+</ul>
+
+<h3 id="part-2-extrajudicial">Exceptions and Special Rules on Extrajudicial Statements</h3>
+
+<ul>
+  <li><strong>The Police Line-Up Exception:</strong> A police line-up is <span class="c-rust"><strong><u>not</u></strong></span> considered part of custodial inquest or interrogation because the suspect at that stage is merely being exhibited for visual identification and is not yet being questioned to elicit incriminating statements. Consequently, <span class="c-green"><strong><u>the right to counsel does not attach during a standard police line-up</u></strong></span>, unless police officers actively interrogate the suspect during the procedure.</li>
+  <li><strong>Validity of Extrajudicial Confessions:</strong> Because police investigators historically resorted to coercion or intimidation to extract quick admissions and close cases, an <strong>extrajudicial confession</strong> (made outside of court prior to or independent of trial) is admissible in evidence only if it is:
+    <ol>
+      <li><strong>Voluntary</strong>;</li>
+      <li><strong>Reduced into writing</strong>; and</li>
+      <li><span class="c-green"><strong><u>Executed in the presence and with the active assistance of a competent and independent counsel</u></strong></span>, who must fully explain to the declarant the legal consequences and effects of admitting the crime.</li>
+    </ol>
+  </li>
+  <li><strong>Judicial Confessions Distinguished:</strong> A <strong>judicial confession</strong> (made inside the courtroom before the judge, with the prosecutor and defense counsel present, such as during arraignment or testimony) is inherently valid and admissible without requiring the special formalities of <span class="c-teal">Republic Act No. 7438</span>.</li>
+  <li><strong>Admissibility of Uncounseled Statements Before a Barangay Chairman:</strong> The Supreme Court has consistently ruled that a <span class="c-green"><strong><u>Barangay Chairman (<em>Punong Barangay</em>) is not deemed a law enforcement officer</u></strong></span> for purposes of applying <span class="c-teal">Section 12, Article III of the Constitution</span>. Therefore, a suspect's spontaneous, voluntary, and uncounseled admission or confession made before a Barangay Chairman is <span class="c-green"><strong><u>admissible in evidence</u></strong></span>.</li>
+</ul>
+
+<h3 id="part-2-counsel-standards">Standards of a "Competent and Independent" Counsel</h3>
+
+<ul>
+  <li><strong>Beyond Mere Formal Qualification:</strong> Being a "competent and independent counsel" requires far more than holding a license to practice law, being compliant with Mandatory Continuing Legal Education (MCLE), or merely being physically present in the room to sign documents.</li>
+  <li><strong>Active Safeguarding of Rights:</strong> A counsel is <span class="c-green"><strong><u>competent and independent</u></strong></span> only when he is willing and able to <span class="c-green"><strong><u>fully safeguard the constitutional rights of the accused</u></strong></span> from the beginning to the end of the proceeding. A PAO lawyer or counsel <span class="c-burgundy"><em>de oficio</em></span> who treats an inquest as an inconvenience and merely instructs the detainee, <em>"Just sign that document quickly so we can finish,"</em> without explaining its consequences violates the accused's right to counsel.</li>
+  <li><strong>Duties of Competent Counsel During Inquest:</strong> When assisting an arrested respondent during inquest, a competent counsel must actively confer with the client in a language he understands and advise him on:
+    <ol>
+      <li>The legality or illegality of his warrantless arrest;</li>
+      <li>His option to demand a <strong>preliminary investigation</strong> by executing a <strong>waiver of Article 125 of the Revised Penal Code</strong> in the presence of counsel; and</li>
+      <li>His right to apply for <strong>bail</strong> (and the different forms of bail bonds available) to secure provisional liberty if the offense is bailable.</li>
+    </ol>
+  </li>
+  <li><strong>Consequence of Gross Incompetence or Refusal to Defend:</strong> Even if a defense lawyer privately believes his client is guilty, he is bound by his legal and ethical duty to represent the client zealously within the bounds of the law. If counsel refuses to present defense evidence out of a personal belief in his client's guilt, the resulting conviction violates <span class="c-rust"><strong><u>due process</u></strong></span> and will be <span class="c-rust"><strong><u>set aside and remanded</u></strong></span> by the appellate court for reception of defense evidence, while the erring lawyer faces administrative suspension.</li>
+</ul>
+
+<h4 id="part-2-counsel-illustration">Professor's Illustration</h4>
+
+<blockquote>
+  In a real case recounted by the Professor, a defense lawyer privately believed his client was guilty of the crime charged and consequently refused to present the accused or any defense evidence during trial, leading to a judgment of conviction. On appeal, a newly retained counsel invoked the violation of the accused's constitutional right to due process and competent counsel. The Supreme Court set aside the conviction, remanded the case to the trial court to allow the accused to present his defense, and administratively suspended the former defense counsel from the practice of law for six months.
+</blockquote>
+
+<hr>
+
+<h2 id="part-2-speedy">VI. RIGHT TO SPEEDY TRIAL AND THE CONTINUOUS TRIAL GUIDELINES (<span class="c-teal">RULE 115, SEC. 1[h]</span>; <span class="c-teal">A.M. NO. 15-06-10-SC</span>)</h2>
+
+<h3 id="part-2-timelines">Constitutional Mandate and Continuous Trial Timelines</h3>
+
+<ul>
+  <li><strong>Statutory and Constitutional Basis:</strong> Under <span class="c-teal">Section 1(h) of Rule 115</span> and <span class="c-teal">Article III, Section 14(2) of the Constitution</span>, the accused has the right to a <span class="c-green"><strong><u>speedy, impartial, and public trial</u></strong></span>. Parallel to this, <span class="c-teal">Article III, Section 16</span> guarantees all persons the right to a <span class="c-green"><strong><u>speedy disposition of their cases</u></strong></span> before all judicial, quasi-judicial, or administrative bodies.</li>
+  <li><strong>Eradication of Prolonged Litigation:</strong> To eliminate decades-long criminal trials, the Supreme Court promulgated the <span class="c-teal"><strong>Revised Guidelines for Continuous Trial of Criminal Cases (A.M. No. 15-06-10-SC)</strong></span>, imposing strict, mandatory periods for arraignment, trial, and rendition of judgment.</li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Procedural Stage / Case Category</th>
+      <th>Mandatory Statutory / Reglementary Period</th>
+      <th>Governing Rule & Administrative Consequence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Arraignment of Detention Prisoner</strong></td>
+      <td>Within <span class="c-green"><strong>10 calendar days</strong></span> from the date the court acquires jurisdiction over the person / raffle.</td>
+      <td><span class="c-teal">Rule 116, Sec. 1(e)</span>; Continuous Trial Guidelines. Unexcused delay subjects the judge to administrative sanctions.</td>
+    </tr>
+    <tr>
+      <td><strong>Arraignment of Non-Detention Prisoner (Out on Bail)</strong></td>
+      <td>Within <span class="c-green"><strong>30 calendar days</strong></span> from the date the court acquires jurisdiction over the person / raffle.</td>
+      <td><span class="c-teal">Rule 116, Sec. 1(g)</span>; Continuous Trial Guidelines. Arraignment and Pre-Trial are conducted simultaneously.</td>
+    </tr>
+    <tr>
+      <td><strong>Rendition of Judgment: Ordinary Criminal Cases</strong></td>
+      <td>Within <span class="c-green"><strong>90 calendar days</strong></span> from submission of the case for decision.</td>
+      <td><span class="c-teal">Art. VIII, Sec. 15, Constitution</span>; Continuous Trial Guidelines. Judge must request SC extension if unable to comply.</td>
+    </tr>
+    <tr>
+      <td><strong>Rendition of Judgment: Rules on Summary Procedure</strong></td>
+      <td>Within <span class="c-green"><strong>30 calendar days</strong></span> from termination of trial / submission for resolution.</td>
+      <td>Revised Rule on Summary Procedure / Expedited Procedures in First Level Courts.</td>
+    </tr>
+    <tr>
+      <td><strong>Rendition of Judgment: Drug Cases (<span class="c-teal">R.A. 9165</span>)</strong></td>
+      <td>Within <span class="c-green"><strong>15 calendar days</strong></span> from submission of the case for resolution.</td>
+      <td><span class="c-teal">Sec. 90, R.A. 9165</span>; Continuous Trial Guidelines. Strictly enforced by the Office of the Court Administrator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="part-2-judicial-accountability">Judicial Accountability and Inexcusable Judicial Delays</h3>
+
+<ul>
+  <li><strong>Invalid Excuses for Delayed Decisions:</strong> A trial judge cannot justify failing to decide a criminal case within the mandatory reglementary period by invoking:
+    <ol>
+      <li>Personal illness or sickness of the judge;</li>
+      <li>Additional designation as acting presiding judge of another <span class="c-burgundy"><em>sala</em></span> or station;</li>
+      <li>Absence or vacancy in the position of the Branch Clerk of Court; or</li>
+      <li>Lack of completed <strong>Transcript of Stenographic Notes (TSN)</strong>, because a judge who personally presided over the trial is expected to take notes and know how to resolve the case without waiting for the stenographer.</li>
+    </ol>
+  </li>
+  <li><strong>Proper Judicial Remedy:</strong> When a judge suffers from a serious illness or faces an overwhelming docket of complex cases, the sole valid remedy to avoid administrative liability is to <span class="c-green"><strong><u>formally petition the Supreme Court for an extension of time to decide the case</u></strong></span> before the reglementary period expires.</li>
+</ul>
+
+<h3 id="part-2-postponements">Strict Rules on Postponements and Fines</h3>
+
+<ul>
+  <li><strong>Two Exclusive Grounds for Postponement:</strong> Under the Continuous Trial Guidelines, motions for postponement are generally prohibited, except when based exclusively on:
+    <ol>
+      <li><span class="c-green"><strong><u>Acts of God / <em>Force Majeure</em></u></strong></span> (e.g., severe typhoons or impassable flooded expressways preventing counsel from reaching the courthouse); or</li>
+      <li><span class="c-green"><strong><u>Physical inability of the witness or counsel to appear</u></strong></span> (e.g., recent surgical operation or hospitalization, which must be substantiated by a valid <strong>medical certificate</strong>; minor ailments like a common cold do not suffice).</li>
+    </ol>
+  </li>
+  <li><strong>Personal Celebrations Prohibited:</strong> Personal excuses such as celebrating a 50th wedding anniversary or a 60th birthday are strictly disallowed as grounds for postponement.</li>
+  <li><strong>Mandatory Postponement Fines and Courtesy to the Court:</strong> Even when a party files a motion for postponement, it must be accompanied by proof of payment of a <strong>postponement fine</strong> (which escalates depending on the number of prior postponements). If a lawyer fails to appear at a scheduled hearing without even filing a prior motion for postponement, the judge will impose a stiffer fine (e.g., Php 500 to Php 1,000) for disrespect and lack of courtesy to the court.</li>
+</ul>
+
+<h3 id="part-2-four-steps">Strategic Counting of Delays and Invoking Speedy Trial</h3>
+
+<ul>
+  <li><strong>Excusable vs. Inexcusable Trial Delays:</strong> Not every resetting of a hearing violates the right to a speedy trial. Delays caused by the accused himself, or <strong>excusable delays beyond the control of the prosecution</strong>—such as the presiding judge attending an official Supreme Court seminar, the prosecutor or defense counsel attending mandatory MCLE, the declaration of a movable national holiday (e.g., <span class="c-burgundy"><em>Eid al-Fitr</em></span> or <span class="c-burgundy"><em>Eid al-Adha</em></span>), or <span class="c-burgundy"><em>force majeure</em></span>—are excluded when computing vexatious, capricious, and oppressive delays.</li>
+  <li><strong>Defense Counsel's Four-Step Courtroom Strategy:</strong> When the prosecution repeatedly fails to present its witnesses without justifiable cause (e.g., five months have elapsed since pre-trial without initial presentation of prosecution evidence), a vigilant defense counsel must systematically build the record across consecutive settings:
+    <ol>
+      <li><strong>First Postponement:</strong> When the prosecutor moves to reset due to an absent witness, defense counsel may courteously manifest <em>"No objection, Your Honor."</em></li>
+      <li><strong>Second Postponement:</strong> Upon a second consecutive failure by the prosecution to present evidence, counsel may grant one final courtesy while noting the second resetting on record.</li>
+      <li><strong>Third Postponement (The Conditional Warning):</strong> On the third consecutive postponement by the prosecutor, defense counsel must place an explicit warning on the record: <em>"Your Honor, we interpose no objection to the postponement today, provided that if the Honorable Prosecutor still fails to present his witness at the next scheduled hearing, the defense will move for the dismissal of the case based on the violation of the accused's constitutional right to a speedy trial."</em></li>
+      <li><strong>Fourth Postponement (Invocation and Dismissal):</strong> If the prosecutor fails to present a witness on the fourth setting despite the prior warning, defense counsel must formally <span class="c-rust"><strong><u>object to any further resetting and move for the immediate dismissal of the case</u></strong></span> on the ground of violation of the right to a speedy trial.</li>
+    </ol>
+  </li>
+  <li><strong>Legal Consequence of Dismissal (Tantamount to Acquittal):</strong> A dismissal of a criminal case predicated on the violation of the accused's right to a speedy trial is <span class="c-green"><strong><u>tantamount to an acquittal on the merits</u></strong></span>. Consequently, first jeopardy attaches, and the accused can never be indicted or prosecuted again for the same offense without violating the constitutional prohibition against <span class="c-rust"><strong><u>Double Jeopardy</u></strong></span>.</li>
+</ul>
+
+<!-- FOUR-STEP SPEEDY TRIAL WORKFLOW BOX -->
+<div class="ui-box ui-workflow">
+  <div class="ui-step-card">
+    <div class="ui-title">1st Postponement: Courteous Manifestation</div>
+    <div class="ui-sub">"No objection, Your Honor" — accommodation of prosecution's initial reset</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">2nd Postponement: Final Courtesy on Record</div>
+    <div class="ui-sub">Interpose no objection but formally place second consecutive resetting on record</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">3rd Postponement: Explicit Conditional Warning</div>
+    <div class="ui-sub">"Provided that if witness is not presented next setting, defense will move for dismissal"</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">4th Postponement: Formal Motion to Dismiss</div>
+    <div class="ui-sub">Object to further resetting; invoke constitutional violation of right to speedy trial</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-outcome">
+    <div class="ui-title">DISMISSAL TANTAMOUNT TO ACQUITTAL ON THE MERITS</div>
+    <div class="ui-sub">First jeopardy attaches; re-prosecution barred by constitutional Double Jeopardy</div>
+  </div>
+</div>
+
+<hr>
+
+<h2 id="part-2-self-incrimination">VII. PRIVILEGE AGAINST SELF-INCRIMINATION (<span class="c-teal">RULE 115, SEC. 1[f]</span>; <span class="c-teal">ART. III, SEC. 17</span>)</h2>
+
+<h3 id="part-2-privilege-scope">Nature, Policy Rationale, and Personal Scope</h3>
+
+<ul>
+  <li><strong>Statutory and Constitutional Rule (<span class="c-burgundy"><em>Nemo Tenetur Seipsum Accusare</em></span>):</strong> Under <span class="c-teal">Section 1(f) of Rule 115</span> and <span class="c-teal">Section 17, Article III of the 1987 Constitution</span>, <span class="c-green"><strong><u>no person shall be compelled to be a witness against himself</u></strong></span>.</li>
+  <li><strong>Twin Policy Purposes:</strong> The privilege is designed to: (1) prevent the State, with all its coercive machinery, from extracting a self-convicting testimony from a suspect by force or intimidation; and (2) spare an individual from the cruel trilemma of self-accusation, contempt of court, or committing <strong>perjury</strong> to protect himself.</li>
+  <li><strong>Limited to Natural Persons:</strong> The privilege against self-incrimination is purely personal and <span class="c-green"><strong><u>applies only to natural persons</u></strong></span>. A juridical entity or corporation cannot invoke the privilege to resist a subpoena for corporate books or records.</li>
+</ul>
+
+<h3 id="part-2-compulsion-distinction">Testimonial Compulsion vs. Mechanical or Physical Acts</h3>
+
+<ul>
+  <li><strong>Core Distinction:</strong> The constitutional privilege protects an individual solely against <span class="c-green"><strong><u>testimonial compulsion</u></strong></span> or the forced production of evidence of a <strong>communicative nature</strong> (extorting communications from the accused's own lips or requiring the exercise of his intellectual faculties). It does <span class="c-rust"><strong><u>not</u></strong></span> prohibit the compulsion of purely <strong>mechanical, physical, or corporeal acts</strong> where the body of the accused is merely exhibited or examined as physical evidence.</li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Compelled Act / Evidence</th>
+      <th>Covered by Self-Incrimination?</th>
+      <th>Doctrinal Ratio & Evidentiary Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Handwriting / Signature Exemplars</strong></td>
+      <td><span class="c-rust"><strong>YES (Protected)</strong></span></td>
+      <td>Writing or signing requires the application of intelligence, muscular coordination, and mental attention; it is communicative and testimonial in nature.</td>
+    </tr>
+    <tr>
+      <td><strong>Forced Crime Re-Enactment</strong></td>
+      <td><span class="c-rust"><strong>YES (Protected)</strong></span></td>
+      <td>Compelling a suspect to re-enact how he committed a crime is a communicative admission of guilt and is unconstitutional unless assisted by counsel.</td>
+    </tr>
+    <tr>
+      <td><strong>In-Court Physical Demonstration</strong></td>
+      <td><span class="c-green"><strong>NO (Permissible)</strong></span></td>
+      <td>Asking a testifying witness to demonstrate how a gun was drawn from a pocket, indicate a 3-meter distance in the courtroom, or describe body positions is valid.</td>
+    </tr>
+    <tr>
+      <td><strong>Withdrawal of Blood / DNA Samples</strong></td>
+      <td><span class="c-green"><strong>NO (Permissible)</strong></span></td>
+      <td>Purely mechanical and physical extraction of bodily fluids or tissue (e.g., DNA paternity testing of a child born from rape) involves no testimonial compulsion.</td>
+    </tr>
+    <tr>
+      <td><strong>Trying On Shoes or Measuring Clothing</strong></td>
+      <td><span class="c-green"><strong>NO (Permissible)</strong></span></td>
+      <td>Compelling the accused to try on shoes or garments left at the crime scene to see if they fit uses the body purely as physical evidence.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- INTERACTIVE MERMAID DIAGRAM 2: SELF-INCRIMINATION BOUNDARIES -->
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: PRIVILEGE AGAINST SELF-INCRIMINATION <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef primary fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1F2937;
+          classDef protected fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+          classDef permissible fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
+
+          A["Compelled Evidence / Act from Accused"]:::primary
+          A --> B{"Nature of the Compulsion"}:::primary
+
+          B -- "Testimonial / Communicative" --> C["PROTECTED UNDER PRIVILEGE<br/>(Nemo tenetur seipsum accusare)"]:::protected
+          C --> C1["Oral Testimony / Admissions"]:::protected
+          C --> C2["Handwriting / Signature Exemplars<br/>(Requires intellect & mental faculties)"]:::protected
+          C --> C3["Compelled Crime Re-Enactments"]:::protected
+
+          B -- "Mechanical / Physical / Corporeal" --> D["OUTSIDE SCOPE OF PRIVILEGE<br/>(Body merely physical evidence)"]:::permissible
+          D --> D1["DNA / Blood Extraction / Bodily Fluids"]:::permissible
+          D --> D2["Trying On Shoes / Garments"]:::permissible
+          D --> D3["In-Court Physical Demonstrations"]:::permissible
+          D --> D4["Exhibition of Scars, Tattoos or Body"]:::permissible
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-2-proceedings-immunity">Proceedings Covered, Waiver, and Immunity Statutes</h3>
+
+<ul>
+  <li><strong>Universal Application Across Proceedings:</strong> The privilege against self-incrimination may be claimed in <span class="c-green"><strong><u>all kinds of proceedings</u></strong></span>—whether criminal, civil, administrative, investigatory, adjudicatory, or legislative/impeachment inquiries.</li>
+  <li><strong>Distinction in Timing of Invocation:</strong> In a criminal case, the <span class="c-rust"><strong><u>accused himself cannot even be subpoenaed or called to the witness stand</u></strong></span> by the prosecution; he may refuse to take the stand altogether. By contrast, an ordinary witness (or a respondent in a non-criminal/administrative or impeachment proceeding) must obey a subpoena, take the witness stand, and <span class="c-green"><strong><u>invoke the privilege only as each specific incriminating question is propounded</u></strong></span>.</li>
+  <li><strong>Waiver by Testifying on One's Own Behalf:</strong> The privilege is waived if not timely objected to. Furthermore, when the accused voluntarily takes the witness stand to testify in his own behalf during the presentation of defense evidence, he <span class="c-green"><strong><u>waives the privilege as to all matters covered by his direct examination</u></strong></span> and may be thoroughly cross-examined thereon by the prosecutor.</li>
+  <li><strong>Transactional Immunity vs. Use and Derivative Use Immunity:</strong>
+    <ol>
+      <li><strong>Transactional Immunity:</strong> Grants broader, <span class="c-green"><strong><u>total immunity</u></strong></span> that completely protects the witness from any future criminal prosecution for any offense related to the transaction concerning which he testified.</li>
+      <li><strong>Use and Derivative Use Immunity:</strong> Narrower immunity that prohibits only the <span class="c-green"><strong><u>use of the witness's compelled testimony and any evidence derived therefrom</u></strong></span> against him in a subsequent criminal case, though he may still be prosecuted if the State obtains completely independent evidence of his guilt.</li>
+    </ol>
+  </li>
+  <li><strong>Contrast with State Immunity from Suit:</strong> While witness immunity shields individuals from criminal prosecution in exchange for testimony, the <strong>doctrine of State Immunity from suit</strong> protects the State from being sued without its consent—a shield that the State impliedly waives when it descends to the level of a private individual by entering into commercial or proprietary contracts.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-2-trial-rights">VIII. RIGHT TO DEFEND, PRESENCE AT TRIAL, CONFRONTATION, COMPULSORY PROCESS, AND APPEAL (<span class="c-teal">RULE 115, SEC. 1[c], [d], [f], [g], [i]</span>)</h2>
+
+<h3 id="part-2-absentia">Trial <span class="c-burgundy"><em>In Absentia</em></span> and Defense Counsel's Duties When Accused Jumps Bail</h3>
+
+<ul>
+  <li><strong>Waiver of Right to Be Present (Trial <span class="c-burgundy"><em>In Absentia</em></span>):</strong> While the accused has the right to be present at every stage of the proceedings from arraignment to promulgation of judgment, he may waive his presence after arraignment. Under the Constitution, <span class="c-green"><strong><u>trial <em>in absentia</em> is valid</u></strong></span> provided three requisites concur: (1) the accused has already been validly <strong>arraigned</strong>; (2) he has been <strong>duly notified</strong> of the trial dates; and (3) his failure to appear is <span class="c-rust"><strong><u>unjustified</u></strong></span>.</li>
+  <li><strong>Continuous Right to Counsel:</strong> Even if the accused jumps bail and absconds after arraignment and pre-trial, <span class="c-green"><strong><u>he does not lose his right to be represented by counsel</u></strong></span>. His defense counsel (whether <span class="c-burgundy"><em>de parte</em></span> or PAO) must continue to appear at all stages of the trial to cross-examine prosecution witnesses and protect the runaway client's rights.</li>
+  <li><strong>Procedure When Defense Cannot Present Evidence Due to Accused's Absence:</strong> Once the prosecution rests its case during a trial <span class="c-burgundy"><em>in absentia</em></span>, the defense counsel faces a practical dilemma if the absconding accused cannot be contacted to identify or produce defense witnesses. To prevent indefinite delay, defense counsel must manifest in open court: <em>"Your Honor, in view of the unjustified absence of the accused and counsel's inability to confer with him, we are constrained to waive the presentation of defense evidence and submit the case for decision based on the evidence on record."</em></li>
+  <li><strong>Estoppel on Appeal:</strong> If the trial court convicts the absconding accused (assuming he surrenders or is recaptured to regain standing to appeal), the accused can still appeal the merits of the conviction, but <span class="c-rust"><strong><u>he is strictly barred from claiming a violation of due process on appeal</u></strong></span>. Having been afforded the opportunity to be heard and having forfeited it through his own flight, he cannot blame the court for his failure to present defense evidence.</li>
+</ul>
+
+<h3 id="part-2-confrontation-appeal">Confrontation, Compulsory Process, and Statutory Appeal</h3>
+
+<ul>
+  <li><strong>Right to Confront and Cross-Examine Witnesses (<span class="c-teal">Rule 115, Sec. 1[f]</span>):</strong> The accused has the right to meet the witnesses face to face and test their credibility through cross-examination. As a statutory exception, <span class="c-green"><strong><u>either party may utilize the testimony of a witness who is deceased, out of or cannot with due diligence be found in the Philippines, unavailable, or otherwise unable to testify</u></strong></span>, provided that: (1) the testimony was given in a <strong>prior case or proceeding</strong> (judicial or administrative); (2) it involved the <strong>same parties and subject matter</strong>; and (3) the adverse party had the <strong>opportunity to cross-examine</strong> the witness in that prior proceeding.</li>
+  <li><strong>Right to Compulsory Process (<span class="c-teal">Rule 115, Sec. 1[g]</span>):</strong> The accused is entitled to the issuance of <span class="c-burgundy"><em>subpoena ad testificandum</em></span> and <span class="c-burgundy"><em>subpoena duces tecum</em></span> to compel the attendance of unwilling witnesses and the production of material documents or physical evidence in his behalf.</li>
+  <li><strong>Statutory Nature of the Right to Appeal (<span class="c-teal">Rule 115, Sec. 1[i]</span>):</strong> Unlike the rights under Article III of the 1987 Constitution, <span class="c-rust"><strong><u>the right to appeal is NOT a constitutional right</u></strong></span>; it is a mere <span class="c-green"><strong><u>statutory privilege</u></strong></span>. While <span class="c-teal">Rule 115, Section 1(i)</span> recognizes the right to appeal in all cases allowed and in the manner prescribed by law, a party who seeks to avail of it must strictly comply with the reglementary periods and procedural requirements of the Rules of Court, failing which the right is lost without violating constitutional due process.</li>
+</ul>
+
+<hr>
+
+<!-- PART 3 -->
+<h1 id="part-3-title" class="c-navy">PART 3: ARRAIGNMENT AND PLEA: PRE-ARRAIGNMENT REMEDIES, PLEA BARGAINING, AND SEARCHING INQUIRY (<span class="c-teal">RULE 116</span>)</h1>
+
+<!-- SECTION ROADMAP CARD 3 -->
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">IX</div>
+      <div class="ui-kicker">ARRAIGNMENT</div>
+      <div class="ui-sub">Nature, Timelines (10/30 Days) & 4-Fold Duty on Counsel</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">X</div>
+      <div class="ui-kicker">REMEDIES</div>
+      <div class="ui-sub">Bill of Particulars, Quashal & 3 Grounds for Suspension</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XI</div>
+      <div class="ui-kicker">PLEA MECHANICS</div>
+      <div class="ui-sub">Videoconferencing, BP 22 Waiver & Involuntary "Not Guilty" Pleas</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XII</div>
+      <div class="ui-kicker">PLEA BARGAINING</div>
+      <div class="ui-sub">Lesser Offense, Capital Searching Inquiry & Improvident Pleas</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-3-overview">Part 3 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>IX. Concept, Importance, and Mandatory Timelines of Arraignment (<span class="c-teal">Rule 116, Secs. 1, 6–8</span>):</strong> Twin purposes of arraignment, effect of absence of arraignment (archiving, warrant of arrest, confiscation of bail), simultaneous arraignment and pre-trial, and mandatory appointment and duties of counsel <span class="c-burgundy"><em>de oficio</em></span>.</li>
+  <li><strong>X. Pre-Arraignment Remedies, Prohibited Motions, and Suspension of Arraignment (<span class="c-teal">Rule 116, Secs. 9–11</span>):</strong> Bill of particulars, motion to quash, motion for preliminary investigation after inquest, strictly prohibited motions under the Continuous Trial Guidelines, and the three exclusive grounds for suspending arraignment.</li>
+  <li><strong>XI. Mechanics of Arraignment, Presence of Parties, and Valid vs. Conditional Pleas (<span class="c-teal">Rule 116, Secs. 1, 3, 4</span>):</strong> Personal presence vs. videoconferencing, waiver of reading in multi-count B.P. 22 cases, presence of the offended party, mandatory entry of "not guilty" pleas (silence, conditional pleas, exculpatory evidence), and impact on Double Jeopardy.</li>
+  <li><strong>XII. Plea Bargaining and Plea of Guilty to Capital vs. Non-Capital Offenses (<span class="c-teal">Rule 116, Secs. 2–5</span>):</strong> Requisites and examples of plea bargaining to a lesser offense, effect on mitigating circumstances and probation, mandatory three-fold duty of the court in capital offenses (<span class="c-burgundy"><em>searching inquiry</em></span>), and withdrawal of an improvident plea of guilty.</li>
+  <li><strong>Administrative Matters & Professor's Asides:</strong> Midterm exam results, upcoming courtroom roleplay instructions, CLEP community seminar notes, and ethical/practical litigation insights.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-3-concept">IX. CONCEPT, IMPORTANCE, AND MANDATORY TIMELINES OF ARRAIGNMENT (<span class="c-teal">RULE 116, SECS. 1, 6–8</span>)</h2>
+
+<h3 id="part-3-nature-importance">Nature and Indispensable Importance of Arraignment</h3>
+
+<ul>
+  <li><strong>Definition and Twin Purposes:</strong> <span class="c-green"><strong><u>Arraignment</u></strong></span> is the formal mode and procedural mechanism implementing the constitutional right of the accused to be informed of the nature and cause of the accusation against him. It serves two indispensable functions in criminal procedure:
+    <ol>
+      <li><strong>Constitutional Compliance:</strong> It officially apprises the accused of the exact crime charged by furnishing him a copy of the complaint or Information, reading it to him in a language or dialect he understands, and asking him whether he pleads guilty or not guilty.</li>
+      <li><strong>Procedural Jumpstart of Trial:</strong> Arraignment is the indispensable prerequisite to a valid trial. <span class="c-rust"><strong><u>Without a valid arraignment, trial cannot proceed</u></strong></span>, because issues are not yet joined and trial <span class="c-burgundy"><em>in absentia</em></span> is legally impossible prior to arraignment.</li>
+    </ol>
+  </li>
+  <li><strong>Consequence When Accused Absconds Prior to Arraignment:</strong> If the accused jumps bail or fails to appear for arraignment despite due notice, the court <span class="c-rust"><strong><u>cannot</u></strong></span> try him <span class="c-burgundy"><em>in absentia</em></span>. Instead, the trial court will:
+    <ol>
+      <li>Direct the issuance of a <strong>warrant of arrest</strong> (or alias warrant) against the accused;</li>
+      <li>Order the <strong>confiscation and forfeiture of his bail bond</strong> in favor of the government; and</li>
+      <li>Order the case <strong>archived</strong> after the lapse of the statutory period without the accused being apprehended, to be revived only upon his arrest or voluntary surrender.</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="part-3-timelines">Mandatory Timelines and Simultaneous Pre-Trial</h3>
+
+<ul>
+  <li><strong>Reglementary Periods (<span class="c-teal">Rule 116, Sec. 1[e], [g]</span>):</strong> Unless a shorter period is provided by special law or Supreme Court circular:
+    <ol>
+      <li><strong>Detention Prisoner:</strong> The accused must be arraigned within <span class="c-green"><strong>ten (10) days</strong></span> from the date of the raffle of the case to the court.</li>
+      <li><strong>Non-Detention Prisoner (Out on Bail):</strong> The accused must be arraigned within <span class="c-green"><strong>thirty (30) days</strong></span> from the date the court acquires jurisdiction over the person of the accused.</li>
+    </ol>
+  </li>
+  <li><strong>Simultaneous Arraignment and Pre-Trial:</strong> Under the Continuous Trial Guidelines (<span class="c-teal">A.M. No. 15-06-10-SC</span>), <span class="c-green"><strong><u>arraignment and pre-trial conference are scheduled and conducted simultaneously on the same day</u></strong></span>. Defense counsel appearing at arraignment must be fully prepared to proceed immediately with pre-trial (stipulations of facts, marking of documentary exhibits, and listing of witnesses).</li>
+  <li><strong>Deferment for Amicable Settlement of Civil Aspect:</strong> The court may briefly defer the pre-trial conference after arraignment only if the parties manifest in good faith that there is a genuine, concrete prospect of amicably settling the <strong>civil aspect</strong> of the criminal case.</li>
+</ul>
+
+<h3 id="part-3-fourfold-duty">Mandatory Court Duty Regarding Counsel Before Arraignment</h3>
+
+<ul>
+  <li><strong>Four-Fold Duty of the Trial Court (<span class="c-teal">Rule 116, Secs. 6–8</span>):</strong> Before arraigning the accused, the judge must personally:
+    <ol>
+      <li>Inform the accused of his right to counsel;</li>
+      <li>Ask him if he desires to have the aid of counsel;</li>
+      <li>Assign a <strong>counsel <span class="c-burgundy"><em>de oficio</em></span></strong> (typically from the Public Attorney's Office) to defend him if he desires counsel but is unable to employ one, or if the offense is punishable by <span class="c-burgundy"><em>reclusion perpetua</em></span> or higher and he appears without counsel; and</li>
+      <li>Grant the newly appointed counsel <span class="c-burgundy"><em>de oficio</em></span> a reasonable time to consult with the accused as to his plea before proceeding with the arraignment.</li>
+    </ol>
+  </li>
+  <li><strong>When Judicial Inquiry Is Dispensed With:</strong> While this duty is mandatory, if the case is called for arraignment and a private <strong>counsel <span class="c-burgundy"><em>de parte</em></span> immediately stands up and formally enters his appearance</strong> for the accused on record, the judge may dispense with asking the accused if he has a lawyer, since his chosen counsel is already visibly representing him.</li>
+  <li><strong>Duration of Counsel <span class="c-burgundy"><em>De Oficio</em></span>'s Obligation:</strong> Once the court appoints the PAO as counsel <span class="c-burgundy"><em>de oficio</em></span>, that public attorney is obligated to represent the accused across <strong>all stages of the proceedings</strong>, unless and until the accused subsequently retains a private counsel of his own choice who formally enters an appearance in substitution of the PAO.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-3-pre-arraignment">X. PRE-ARRAIGNMENT REMEDIES, PROHIBITED MOTIONS, AND SUSPENSION OF ARRAIGNMENT (<span class="c-teal">RULE 116, SECS. 9–11</span>)</h2>
+
+<h3 id="part-3-remedies">Authorized Pre-Arraignment Remedies of the Accused</h3>
+
+<p>Before entering a plea at arraignment, the accused may avail of specific procedural remedies to clarify the charge, challenge procedural defects, or assert statutory rights:</p>
+
+<ol>
+  <li><strong>Motion for Bill of Particulars (<span class="c-teal">Rule 116, Sec. 9</span>):</strong> The accused may, before arraignment, move for a bill of particulars to enable him to properly plead and prepare for trial. The motion must specify the alleged defects in the complaint or Information (such as vague, ambiguous, or indefinite factual allegations or unclarified attached documents) and the details desired.</li>
+  <li><strong>Motion to Quash the Information (<span class="c-teal">Rule 117, Secs. 1 & 3</span>):</strong> At any time before entering his plea, the accused may move to quash the complaint or Information based on the grounds enumerated under <span class="c-teal">Section 3 of Rule 117</span> (e.g., lack of jurisdiction over the offense or the person of the accused due to an illegal arrest, facts charged do not constitute an offense, extinction of criminal liability, or double jeopardy). Any challenge to the <span class="c-rust"><strong><u>legality of the arrest</u></strong></span> or the <span class="c-rust"><strong><u>identity of the accused</u></strong></span> must be raised prior to arraignment; otherwise, it is deemed waived.</li>
+  <li><strong>Motion for Preliminary Investigation / Reinvestigation (<span class="c-teal">Rule 112, Sec. 6</span>):</strong> When an Information is filed directly in court via <strong>inquest proceedings</strong> following a warrantless arrest (and the accused did not execute a waiver of Article 125 RPC during inquest), the accused may ask for a preliminary investigation <span class="c-green"><strong><u>within five (5) days from the time he learns of the filing of the Information</u></strong></span>. However, defense counsel must never file this motion in cases governed by the Rules on Summary Procedure or where the imposable penalty does not require a preliminary investigation (e.g., offenses punishable by imprisonment of one year or less).</li>
+</ol>
+
+<h3 id="part-3-prohibited-motions">Strictly Prohibited Pre-Arraignment Motions</h3>
+
+<p>Under the Revised Guidelines for Continuous Trial of Criminal Cases, the following dilatory motions are <span class="c-rust"><strong><u>strictly prohibited</u></strong></span> and must be denied outright by the court without waiting for comment:</p>
+
+<ol>
+  <li><strong>Motion for Judicial Redetermination of Probable Cause:</strong> Once the presiding judge personally evaluates the prosecutor's resolution and supporting evidence and issues a warrant of arrest, there is a conclusive legal presumption that the judge has already performed his constitutional duty to determine probable cause. Filing a motion for "redetermination" insults the court by implying the judge neglected his duty and is strictly prohibited.</li>
+  <li><strong>Motion to Withhold the Issuance of a Warrant of Arrest:</strong> Under <span class="c-teal">Rule 112</span>, the judge is mandated to personally evaluate the record and determine probable cause within <span class="c-green"><strong>five (5) calendar days</strong></span> from the filing or raffle of the Information. A motion asking the judge to withhold or defer issuing a warrant of arrest asks the court to violate its mandatory reglementary duty and is prohibited.</li>
+</ol>
+
+<h3 id="part-3-suspension">Three Exclusive Grounds for Suspension of Arraignment (<span class="c-teal">Rule 116, Sec. 11</span>)</h3>
+
+<p>Upon motion by the proper party, the arraignment shall be suspended <span class="c-green"><strong><u>only</u></strong></span> in the following three statutory instances:</p>
+
+<ol>
+  <li><strong>The Accused Appears to Be Suffering from an Unsound Mind (<span class="c-teal">Sec. 11[a]</span>):</strong> Because arraignment requires the accused to fully comprehend the Information read to him, arraignment must be suspended if the accused exhibits abnormal behavior in court (e.g., talking to himself, laughing inappropriately, or giving incoherent answers) and defense counsel substantiates this with psychiatric evidence. To guard against feigned insanity ("drama"), the court will order the mental examination of the accused by a competent <strong>psychiatrist</strong> (not merely a psychologist) and, if necessary, order his confinement in a government mental institution (such as the National Center for Mental Health in Mandaluyong) until he recovers enough to understand the charge.</li>
+  <li><strong>There Exists a Valid Prejudicial Question (<span class="c-teal">Sec. 11[b]</span>):</strong> When a previously instituted civil action involves an issue intimately related to the issue raised in the subsequent criminal action, the resolution of which determines whether or not the criminal action may proceed (<span class="c-teal">Rule 111, Secs. 6–7</span>).</li>
+  <li><strong>There Is a Pending Petition for Review Before the DOJ or the Office of the Regional State Prosecutor (<span class="c-teal">Sec. 11[c]</span>):</strong> When the accused has appealed the investigating prosecutor's finding of probable cause to the Secretary of Justice or the Regional State Prosecutor, the court shall suspend the arraignment, <span class="c-rust"><strong><u>provided that the period of suspension shall not exceed sixty (60) days counted from the filing of the petition with the reviewing office</u></strong></span>. Upon the expiration of the 60-day period, the trial court is duty-bound to proceed with the arraignment even if the DOJ has not yet resolved the petition.</li>
+</ol>
+
+<!-- 3 EXCLUSIVE GROUNDS WORKFLOW BOX -->
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">🧠</div>
+      <div class="ui-title">Unsound Mind</div>
+      <div class="ui-kicker">RULE 116, SEC. 11[a]</div>
+      <div class="ui-sub">Mental examination by psychiatrist; confinement in mental institution (NCMH) until recovery</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">⚖️</div>
+      <div class="ui-title">Prejudicial Question</div>
+      <div class="ui-kicker">RULE 116, SEC. 11[b]</div>
+      <div class="ui-sub">Prior civil action with determinative issue intimately related to subsequent criminal case</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">⏱️</div>
+      <div class="ui-title">DOJ Petition for Review</div>
+      <div class="ui-kicker">RULE 116, SEC. 11[c]</div>
+      <div class="ui-sub">Suspension limited to a strict maximum of 60 calendar days from filing of petition</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2 id="part-3-mechanics">XI. MECHANICS OF ARRAIGNMENT, PRESENCE OF PARTIES, AND VALID VS. CONDITIONAL PLEAS (<span class="c-teal">RULE 116, SECS. 1, 3, 4</span>)</h2>
+
+<h3 id="part-3-presence-waiver">Personal Presence of the Accused and Waiver of Reading</h3>
+
+<ul>
+  <li><strong>Mandatory Presence of the Accused (<span class="c-teal">Rule 116, Sec. 1[b]</span>):</strong> The accused must be <span class="c-green"><strong><u>personally present at the arraignment</u></strong></span> and must <span class="c-green"><strong><u>personally enter his plea</u></strong></span>. Defense counsel can never substitute for the accused to enter a plea on his behalf (<em>"Your Honor, I will plead guilty for my client"</em> is strictly void). Under current Supreme Court guidelines, appearance via <strong>authorized videoconferencing</strong> (particularly for high-risk or detained prisoners) satisfies the requirement of personal presence.</li>
+  <li><strong>Waiver of Reading of Information in Multi-Count Cases:</strong> While the Information must generally be read aloud in open court, in prosecutions involving voluminous multiple counts (e.g., 5 to 100 counts of violation of <span class="c-teal"><strong>Batas Pambansa Blg. 22</strong></span> where each bounced check constitutes a separate Information), reading every single Information aloud would consume an entire court day. Under Supreme Court circulars and the Continuous Trial Guidelines, the court may allow a <span class="c-green"><strong><u>waiver of the reading of the Information</u></strong></span> in multiple-count cases, provided the accused and his counsel execute a formal certification in open court stating that they have personally read and understood the Informations, waive the oral reading thereof, and enter a plea of not guilty.</li>
+</ul>
+
+<h3 id="part-3-offended-party">Presence of the Offended Party at Arraignment</h3>
+
+<ul>
+  <li><strong>Statutory Purposes of Offended Party's Presence (<span class="c-teal">Rule 116, Sec. 1[f]</span>):</strong> The private offended party (or the complaining public officer/agency in special laws, such as police officers or DENR representatives in environmental offenses) is required to appear at the arraignment for three specific purposes:
+    <ol>
+      <li><strong>Plea Bargaining</strong> (since a plea to a lesser offense requires the offended party's consent);</li>
+      <li><strong>Determination of Civil Liability</strong> (in case the accused enters an unconditional plea of guilty to the offense charged, the offended party will immediately testify to prove damages, unless the civil action was waived or reserved); and</li>
+      <li><strong>Other matters requiring the offended party's presence</strong>.</li>
+    </ol>
+  </li>
+  <li><strong>Effect of Offended Party's Failure to Appear Despite Due Notice:</strong> If the private offended party fails to appear at the arraignment despite due notice, <span class="c-green"><strong><u>the trial court may allow the accused to enter a plea of guilty to a lesser offense which is necessarily included in the offense charged with the conformity of the trial prosecutor alone</u></strong></span>.</li>
+</ul>
+
+<h3 id="part-3-not-guilty-pleas">Instances Where the Court Must Enter a Plea of "Not Guilty"</h3>
+
+<p>Under <span class="c-teal">Rule 116</span>, the trial court is mandated to enter a <span class="c-green"><strong><u>plea of not guilty</u></strong></span> into the record in the following three situations:</p>
+
+<ol>
+  <li><strong>Refusal to Plead or Remaining Silent (<span class="c-teal">Sec. 1[c]</span>):</strong> When the accused refuses to plead or remains completely silent when asked for his plea (e.g., upon advice of counsel in high-profile Sandiganbayan corruption trials).</li>
+  <li><strong>Conditional Plea of Guilt (<span class="c-teal">Sec. 1[c]</span>):</strong> When the accused makes a conditional plea of guilty—such as offering to plead guilty <em>provided</em> that the judge imposes only a specific light penalty or grants probation. A valid plea of guilty must be unconditional; any condition attached converts it into a plea of not guilty.</li>
+  <li><strong>Plea of Guilty Accompanied by Exculpatory Evidence (<span class="c-teal">Sec. 2</span>):</strong> When the accused pleads guilty to the crime charged, but simultaneously presents or manifests <strong>exculpatory evidence</strong> that negates criminal liability—such as invoking <strong>self-defense</strong> during the inquiry into civil liability or penalty. In such a case, the guilty plea shall be <span class="c-rust"><strong><u>deemed withdrawn</u></strong></span>, a <span class="c-green"><strong><u>plea of not guilty shall be entered</u></strong></span> for him, and the case will proceed to trial (where an invocation of self-defense triggers a <strong>reverse order of trial</strong>).</li>
+</ol>
+
+<h3 id="part-3-double-jeopardy">Effect of an Invalid Arraignment or Void Plea on Double Jeopardy</h3>
+
+<ul>
+  <li><strong>Nullity of Proceedings:</strong> A valid arraignment and a valid plea are jurisdictional prerequisites for a valid judgment. If the entry of plea is fatally defective or erroneous (or if the court lacks jurisdiction), the subsequent proceedings are <span class="c-rust"><strong><u>null and void</u></strong></span>.</li>
+  <li><strong>Inapplicability of Double Jeopardy:</strong> Because a valid arraignment and a valid plea are essential requisites for the attachment of <strong>first jeopardy</strong>, an accused whose prior conviction or dismissal was rendered under a void arraignment or invalid plea <span class="c-rust"><strong><u>cannot invoke the constitutional right against Double Jeopardy</u></strong></span> to bar a re-prosecution or remand of the case.</li>
+</ul>
+
+<hr>
+
+<h2 id="part-3-plea-bargaining">XII. PLEA BARGAINING AND PLEA OF GUILTY TO CAPITAL VS. NON-CAPITAL OFFENSES (<span class="c-teal">RULE 116, SECS. 2–5</span>)</h2>
+
+<h3 id="part-3-bargaining-requisites">Plea Bargaining: Plea of Guilty to a Lesser Offense (<span class="c-teal">Rule 116, Sec. 2</span>)</h3>
+
+<ul>
+  <li><strong>Concept and Strategic Purpose:</strong> <span class="c-green"><strong><u>Plea bargaining</u></strong></span> in criminal cases is the process whereby the accused and the prosecution work out a mutually satisfactory disposition of the case, subject to court approval, by allowing the accused to plead guilty to a <strong>lesser offense</strong>. Its primary practical purposes are: (1) to secure the <strong>speedy disposition of cases</strong>, and (2) to lower the imposable penalty so that the accused can qualify to <strong>avail of the Probation Law (<span class="c-teal">P.D. No. 968</span>)</strong>.</li>
+  <li><strong>Mandatory Requisites for Valid Plea Bargaining:</strong>
+    <ol>
+      <li>The lesser offense to which the accused offers to plead guilty must be <span class="c-green"><strong><u>necessarily included in the offense charged</u></strong></span> in the Information (<span class="c-teal">Rule 120, Sec. 5</span>: some of the essential elements of the offense charged constitute the lesser offense);</li>
+      <li>The plea must be made with the <span class="c-green"><strong><u>consent of both the offended party and the prosecutor</u></strong></span> (except when the offended party fails to appear at arraignment despite due notice, in which case the prosecutor's consent alone suffices); and</li>
+      <li>It must be <span class="c-green"><strong><u>approved by the trial court</u></strong></span> in the exercise of its sound discretion.</li>
+    </ol>
+  </li>
+  <li><strong>Timing of Plea Bargaining:</strong> Plea bargaining is <span class="c-rust"><strong><u>not</u></strong></span> limited to the arraignment stage. Under jurisprudence and the Continuous Trial Guidelines, the accused may offer to plead guilty to a lesser offense <span class="c-green"><strong><u>at any stage of the proceedings prior to the rendition/promulgation of judgment</u></strong></span> (including during pre-trial or even after the prosecution has rested its case, if the evidence presented turns out to be insufficient for the higher offense).</li>
+  <li><strong>Procedural Mechanics (No Amendment of Information Required):</strong> When a plea bargain is approved after the accused has already pleaded not guilty:
+    <ol>
+      <li>There is <span class="c-rust"><strong><u>no need to file an amended Information</u></strong></span>;</li>
+      <li>The accused's previous plea of not guilty is formally <strong>withdrawn</strong>;</li>
+      <li>The accused is <strong>re-arraigned</strong> by reading the <strong>exact same original Information</strong>; and</li>
+      <li>Immediately after the reading, defense counsel manifests on record that the accused is entering a <strong>plea of guilty to the specified lesser offense</strong> (e.g., <em>"Your Honor, my client is entering a plea of guilty to the lesser offense of Unjust Vexation"</em>).</li>
+    </ol>
+  </li>
+  <li><strong>No Mitigating Circumstance of Voluntary Plea of Guilt:</strong> Under <span class="c-teal">Article 13(7) of the Revised Penal Code</span>, to be appreciated as an ordinary mitigating circumstance, the voluntary plea of guilty must be made to the <strong>offense as originally charged in the Information</strong> prior to the presentation of prosecution evidence. Consequently, <span class="c-rust"><strong><u>a plea of guilty to a lesser offense via plea bargaining does NOT entitle the accused to the mitigating circumstance of voluntary plea of guilt</u></strong></span> (unless the reduced penalty itself is still divisible and the prosecution agrees to credit it, though doctrinally a plea to a lesser offense is already a concession in itself).</li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Original Offense Charged</th>
+      <th>Permissible / Impermissible Lesser Offense</th>
+      <th>Doctrinal Basis under Necessary Inclusion Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Murder</strong></td>
+      <td><strong>Homicide</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>Homicide is necessarily included in Murder once qualifying circumstances (treachery, evident premeditation) are dropped.</td>
+    </tr>
+    <tr>
+      <td><strong>Homicide</strong></td>
+      <td><strong>Serious Physical Injuries</strong> (<span class="c-rust"><em>Impermissible</em></span>)</td>
+      <td><span class="c-rust"><strong>NOT allowed</strong></span> because the victim is already dead (<span class="c-burgundy"><em>corpus delicti</em></span> of homicide); one cannot plead to mere physical injuries when death resulted.</td>
+    </tr>
+    <tr>
+      <td><strong>Attempted / Frustrated Homicide</strong></td>
+      <td><strong>Serious / Less Serious Physical Injuries</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>The victim survived; dropping the element of <span class="c-burgundy"><em>animus interficendi</em></span> (intent to kill) leaves the actual physical injuries inflicted.</td>
+    </tr>
+    <tr>
+      <td><strong>Robbery</strong></td>
+      <td><strong>Theft</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>Theft is necessarily included in Robbery once the element of violence against or intimidation of persons or force upon things is removed.</td>
+    </tr>
+    <tr>
+      <td><strong>Theft (High Value)</strong></td>
+      <td><strong>Theft of a Lower Amount</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>Because no distinct lesser crime exists below simple theft, parties stipulate to a lower value of the stolen property to reduce the graduated penalty.</td>
+    </tr>
+    <tr>
+      <td><strong>Rape / Acts of Lasciviousness</strong></td>
+      <td><strong>Acts of Lasciviousness / Unjust Vexation</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>Rape may be reduced to Acts of Lasciviousness; Acts of Lasciviousness may be reduced to Unjust Vexation.</td>
+    </tr>
+    <tr>
+      <td><strong>Grave Threats</strong></td>
+      <td><strong>Light Threats / Other Light Threats</strong> (<span class="c-green"><em>Permissible</em></span>)</td>
+      <td>Essential elements of intimidation are common, differing only in severity or conditionality.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="part-3-capital-plea">Plea of Guilty to a Capital Offense vs. Non-Capital Offense (<span class="c-teal">Rule 116, Secs. 3–5</span>)</h3>
+
+<ul>
+  <li><strong>Capital Offenses Defined:</strong> In contemporary Philippine criminal procedure (following the prohibition on the imposition of the death penalty under <span class="c-teal">R.A. 9346</span>), the stringent rules on "capital offenses" under <span class="c-teal">Section 3 of Rule 116</span> apply to heinous offenses punishable by <span class="c-burgundy"><em><strong>reclusion perpetua</strong></em></span> <strong>or life imprisonment</strong> (such as Murder, Qualified Rape, Treason, Piracy, and Kidnapping).</li>
+  <li><strong>Mandatory Three-Fold Duty of the Trial Court in Capital Offenses (<span class="c-teal">Rule 116, Sec. 3</span>):</strong> When the accused pleads guilty to a capital offense, the trial court <span class="c-rust"><strong><u>cannot</u></strong></span> immediately render a judgment of conviction based solely on the plea. Instead, the judge must strictly perform three mandatory duties:
+    <ol>
+      <li><span class="c-green"><strong><u>Conduct a <em>Searching Inquiry</em></u></strong></span>: The judge must personally examine the accused and his counsel in open court to ascertain the <strong>voluntariness</strong> of the plea and whether the accused has <strong>full comprehension of the exact legal consequences</strong> of his plea (confirming that defense counsel thoroughly explained the penalty of <span class="c-burgundy"><em>reclusion perpetua</em></span> or life imprisonment);</li>
+      <li><span class="c-green"><strong><u>Require the Prosecution to Present Evidence</u></strong></span>: Even though the accused has already admitted guilt, <span class="c-rust"><strong><u>the prosecutor must still present evidence</u></strong></span> to prove the guilt of the accused beyond reasonable doubt and to determine his <strong>precise degree of culpability</strong> (e.g., where there are multiple accused, to determine who acted as principal, accomplice, or accessory, and to establish aggravating or mitigating circumstances for the proper penalty); and</li>
+      <li><span class="c-green"><strong><u>Ask the Accused if He Desires to Present Evidence</u></strong></span>: The court must inquire whether the accused wishes to present evidence in his behalf and allow him to do so if he desires.</li>
+    </ol>
+  </li>
+  <li><strong>Contrast with Non-Capital Offenses (<span class="c-teal">Rule 116, Sec. 4</span>):</strong> When the accused pleads guilty to a <strong>non-capital offense</strong>, the prosecution is <span class="c-rust"><strong><u>not required</u></strong></span> to present evidence to prove criminal guilt; the court may immediately pronounce judgment and require only the presentation of evidence on the <strong>civil aspect</strong> (or receive evidence for the limited purpose of determining the penalty if needed).</li>
+  <li><strong>Improvident Plea of Guilty and Withdrawal (<span class="c-teal">Rule 116, Sec. 5</span>):</strong> An <strong>improvident plea of guilty</strong> occurs when the trial court fails to conduct the mandatory <span class="c-burgundy"><em>searching inquiry</em></span> or when the accused pleaded guilty without truly understanding the nature of the charge and the consequences of his plea. At any time <span class="c-green"><strong><u>before the judgment of conviction becomes final</u></strong></span>, the court may permit an improvident plea of guilty to be <span class="c-green"><strong><u>withdrawn</u></strong></span> and be substituted by a plea of not guilty.</li>
+</ul>
+
+<!-- INTERACTIVE MERMAID DIAGRAM 3: PLEA CLASSIFICATION & PROCEDURE -->
+<div class="diagram-wrapper">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: ARRAIGNMENT PLEA SYSTEM & CONSEQUENCES <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          classDef primary fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1F2937;
+          classDef process fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+          classDef warning fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+          classDef success fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
+
+          A["Arraignment Plea Entered"]:::primary
+          A --> B["Plea of Not Guilty<br/>(Or Silence / Conditional / Exculpatory)"]:::process
+          A --> C["Plea Bargaining<br/>(Lesser Necessarily Included Offense)"]:::process
+          A --> D["Unconditional Plea of Guilty"]:::warning
+
+          B --> B1["Mandatory Simultaneous Pre-Trial<br/>& Regular Trial on the Merits"]:::primary
+
+          C --> C1{"Consents Obtained?<br/>Offended Party + Prosecutor + Court"}:::primary
+          C1 -- "YES" --> C2["Withdraw Prior Plea<br/>Re-arraign on Same Info & Sentence"]:::success
+          C1 -- "NO" --> B1
+
+          D --> E{"Penalty Imposable for Crime?"}:::primary
+          E -- "Capital Offense<br/>(Reclusion Perpetua / Life)" --> F["Three-Fold Mandatory Duty<br/>1. Searching inquiry on voluntariness<br/>2. Prosecution MUST still present evidence<br/>3. Ask accused if presenting evidence"]:::warning
+          E -- "Non-Capital Offense" --> G["Court May Immediately Pronounce Judgment<br/>(Receive evidence on civil liability if needed)"]:::success
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h4 id="part-3-capital-example">Application Example</h4>
+
+<blockquote>
+  Three co-accused are jointly arraigned for Murder and all three enter an unconditional plea of guilty. Despite their judicial admission, the trial judge cannot immediately sentence them. Under Section 3 of Rule 116, the judge must first conduct a <em>searching inquiry</em> with the accused and their counsel to verify voluntariness and full comprehension of the consequences, and must then order the public prosecutor to present eyewitnesses and forensic evidence to establish the <em>corpus delicti</em> and determine each co-accused's exact participation—whether as principal by direct participation, accomplice, or accessory—before rendering judgment.
+</blockquote>
+
+<hr>
+
+<h2 id="administrative-matters">Administrative Matters & Professor's Asides</h2>
+
+<h3 id="admin-midterms">Midterm Examination Results & Grading Adjustment</h3>
+
+<ul>
+  <li>Everyone in the class passed the Midterm Examination. Because the five-point adjustment could not be directly edited inside the ExamSoft portal interface, <span class="c-green"><strong>five (5) bonus points</strong></span> will be manually added to each student's raw ExamSoft score.</li>
+  <li><strong>Midterm Topnotchers Announced:</strong> (1) Mr. Dagohoy, (2) Mr. Jeremy Andrada, (3) Mr. Sakay, (4) Mr. Galapon, (5) Ms. Gumabay, and Mr. Volante.</li>
+</ul>
+
+<h3 id="admin-roleplay">Upcoming Graded Courtroom Roleplay (<span class="c-teal">Rule 116</span> Arraignment & Pre-Trial)</h3>
+
+<ul>
+  <li><strong>Grouping & Roles:</strong> The class is divided into two groups (Group 1 and Group 2, with five students each, plus Mr. Gerimy acting as the Clerk of Court / Assistant Interpreter for both groups). Each group must assign roles for the <span class="c-navy"><strong>Presiding Judge, Public Prosecutor, Defense Counsel, Accused, and Court Interpreter</strong></span>.</li>
+  <li><strong>Mechanics & Dialect Translation:</strong> The Professor will distribute two distinct criminal Informations one day before the next session. During the graded simulation, the accused must manifest an inability to understand English (<em>"Hanak makaawat ti English, apo"</em>), requiring the Court Interpreter to translate the Information <span class="c-green"><strong>verbatim into Ilocano or Tagalog</strong></span>. No waiver of the reading of the Information will be allowed during the simulation.</li>
+  <li><strong>Attire & Continuation:</strong> Students must wear appropriate courtroom attire (the student playing the Judge should borrow a judicial robe). Following the arraignment simulation, the same groups will proceed to simulate the <strong>Pre-Trial Conference</strong>, presentation of one witness per side, and filing of a Notice of Appeal, while the remaining two hours of the next session will cover <span class="c-teal"><strong>Rule 117 (Motion to Quash)</strong></span> and <span class="c-teal"><strong>Rule 118 (Pre-Trial)</strong></span>.</li>
+</ul>
+
+<h3 id="admin-clep">Academic Calendar & Clinical Legal Education Program (CLEP)</h3>
+
+<ul>
+  <li><strong>Final Exam Schedule:</strong> Final examinations are scheduled for <span class="c-green"><strong>December 12</strong></span>. A final quiz will be administered by a proctor during an upcoming session when the Professor is away on official business.</li>
+  <li><strong>Student Practice (Level 1 vs. Level 2) & CLEP Seminar:</strong> Second-year students currently hold Level 1 CLEP certification and are completing their required 60–90 practicum hours (including organizing a half-day <span class="c-burgundy"><em>Katarungang Pambarangay</em></span> seminar with DILG and IBP lawyers in Luna for <span class="c-burgundy"><em>Lupong Tagapamayapa</em></span> officials). Once students reach Level 2 certification in their fourth year (<span class="c-burgundy"><em>Practice Court</em></span>), they will be authorized to appear in actual court hearings for arraignment and pre-trial.</li>
+</ul>
+
+<h3 id="admin-ethics">Professor's Ethical & Practical Litigation Insights</h3>
+
+<ul>
+  <li><strong>Pro Bono Spirit & Updated IBP Tariff of Fees:</strong> While the newly released IBP schedule of minimum attorney's fees sets high rates (e.g., Php 800 for a simple affidavit and Php 500 just to notarize a prepared affidavit), future lawyers should always show compassion by waiving or reducing fees for indigent clients and sharing their blessings with court personnel and security guards, while charging standard or premium rates to affluent corporate clients.</li>
+  <li><strong>Integrity in Litigation ("Rules of Court" vs. "Rules in Court"):</strong> Law students must be aware of the real-world pressures of litigation, including judicial errors and systemic corruption (as illustrated by the ongoing Sandiganbayan prosecution of a dismissed judge and clerk of court over millions in bribes). Young lawyers must never sacrifice their professional name and integrity for illicit money; when faced with an erroneous trial judge, the proper remedy is to build a solid record and elevate the error on appeal rather than resorting to bribery or filing vindictive administrative complaints against fellow classmates.</li>
+</ul>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
