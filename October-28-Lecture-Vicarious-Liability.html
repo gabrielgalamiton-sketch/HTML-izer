@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 28 Lecture - Vicarious Liability, Parental Authority, Liability of Schools & Employers, Spousal Regimes, and Public Officers</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.85rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.25rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote p {
+  margin: 0.4rem 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1F2937;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #1E3A8A;
+}
+.diagram-viewport {
+  width: 100%;
+  height: 500px;
+  background: #FAFAFA;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex-grow: 1;
+  height: auto;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+}
+.diagram-container pre.mermaid {
+  margin: 0;
+  padding: 1rem;
+  background: transparent;
+}
+</style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1-heading">PART 1: FOUNDATIONS OF VICARIOUS LIABILITY, PARENTAL AUTHORITY & SCHOOLS</option>
+      <option value="#part-1-overview">&nbsp;&nbsp;↳ Part 1 Overview & Scope of Topics</option>
+      <option value="#i-general-principles">&nbsp;&nbsp;↳ I. General Principles of Vicarious Liability</option>
+      <option value="#concept-theoretical-basis">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Concept and Theoretical Basis of Vicarious Liability</option>
+      <option value="#nature-of-liability">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Nature of Liability: Primary, Direct, and Solidary</option>
+      <option value="#prof-illustration-solidary-subsidiary">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Illustration: Solidary vs. Subsidiary Enforcement</option>
+      <option value="#ii-parents-guardians">&nbsp;&nbsp;↳ II. Vicarious Liability of Parents and Guardians</option>
+      <option value="#statutory-basis-imputation">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Statutory Basis and Basis of Imputation</option>
+      <option value="#requisites-parental-liability">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Requisites for Parental and Guardian Liability</option>
+      <option value="#twenty-one-year-threshold">&nbsp;&nbsp;&nbsp;&nbsp;• 3. The 21-Year-Old Age Threshold Retention Rule</option>
+      <option value="#iii-teachers-heads">&nbsp;&nbsp;↳ III. Vicarious Liability of Teachers and Heads of Establishments</option>
+      <option value="#in-loco-parentis">&nbsp;&nbsp;&nbsp;&nbsp;• 1. The Principle of In Loco Parentis</option>
+      <option value="#scope-of-custody">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Evolution and Scope of "Custody" in Jurisprudence</option>
+      <option value="#case-amadora">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Case Law Analysis: Amadora v. Court of Appeals</option>
+      <option value="#academic-vs-arts-trades">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Academic Schools vs. Establishments of Arts and Trades</option>
+      <option value="#age-distinction-teachers-schools">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Age Distinction: Teachers (Art. 2180 CC) vs. Schools (Art. 218 FC)</option>
+      <option value="#iv-multi-tiered-schools">&nbsp;&nbsp;↳ IV. Multi-Tiered Liability of Schools and Educational Institutions</option>
+      <option value="#schools-general-rule-exceptions">&nbsp;&nbsp;&nbsp;&nbsp;• 1. General Rule and the Three Doctrinal Exceptions</option>
+      <option value="#exception-1-special-parental">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Exception 1: Special Parental Authority (Arts. 218 & 219 FC)</option>
+      <option value="#exception-2-st-francis">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Exception 2: Employer-Employee Liability (St. Francis High School)</option>
+      <option value="#exception-3-psba">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Exception 3: Breach of Contract (PSBA v. CA)</option>
+      <option value="#diagram-schools-liability">&nbsp;&nbsp;&nbsp;&nbsp;• DIAGRAM: Multi-Tiered Liability of Schools & Educational Institutions</option>
+      <option value="#summary-matrix-schools">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Summary Matrix: Determining Proper Cause of Action Against a School</option>
+      <option value="#part-2-heading">PART 2: EMPLOYERS ACROSS CIVIL, CRIMINAL & CONTRACTUAL FRAMEWORKS, & MOTOR VEHICLES</option>
+      <option value="#part-2-overview">&nbsp;&nbsp;↳ Part 2 Overview & Scope of Topics</option>
+      <option value="#v-employers-quasi-delict">&nbsp;&nbsp;↳ V. Vicarious Liability of Employers Under Quasi-Delict (Art. 2180)</option>
+      <option value="#statutory-distinction-par-4-5">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Statutory Distinction Between Paragraph 4 and Paragraph 5</option>
+      <option value="#technical-meaning-manager">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Technical Meaning of the Term "Manager" in Article 2180</option>
+      <option value="#essential-requisites-employer">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Essential Requisites for Employer Vicarious Liability</option>
+      <option value="#special-business-benefit-test">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Scope of Assigned Tasks and "Special Business Benefit Test"</option>
+      <option value="#case-castillex">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Case Law Analysis: Castillex Industrial Corp. v. Vasquez, Jr.</option>
+      <option value="#vi-employer-defenses">&nbsp;&nbsp;↳ VI. Defenses of the Employer: Due Diligence in Selection and Supervision</option>
+      <option value="#dual-requirement-diligence">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Dual Requirement: Selection AND Supervision</option>
+      <option value="#proving-selection-diligence">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Proving Due Diligence in the Selection of Employees</option>
+      <option value="#proving-supervision-diligence">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Proving Due Diligence in the Supervision of Employees</option>
+      <option value="#vii-comparative-employer">&nbsp;&nbsp;↳ VII. Comparative Employer Liability: Delict (Art. 103 RPC) and Contract (Art. 1759 CC)</option>
+      <option value="#subsidiary-liability-art-103">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Employer's Subsidiary Liability Under Art. 103 RPC (Ex Delicto)</option>
+      <option value="#procedural-enforcement-subsidiary">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Procedural Rule on Enforcing Subsidiary Liability (Writ of Subsidiary Execution)</option>
+      <option value="#common-carrier-art-1759">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Employer Liability as a Common Carrier Under Art. 1759 CC (Culpa Contractual)</option>
+      <option value="#three-way-master-comparison">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Three-Way Master Comparison of Employer Liability</option>
+      <option value="#viii-registered-owner-kabit">&nbsp;&nbsp;↳ VIII. Registered Owner Rule, Kabit System, and Right of Reimbursement</option>
+      <option value="#registered-owner-rule">&nbsp;&nbsp;&nbsp;&nbsp;• 1. The Registered Owner Rule in Motor Vehicle Mishaps</option>
+      <option value="#open-deeds-of-sale">&nbsp;&nbsp;&nbsp;&nbsp;• 2. The Legal Trap of "Open Deeds of Sale"</option>
+      <option value="#kabit-system">&nbsp;&nbsp;&nbsp;&nbsp;• 3. The Kabit System in Public Transportation</option>
+      <option value="#right-of-reimbursement">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Right of Reimbursement (Article 2181, Civil Code)</option>
+      <option value="#diagram-motor-vehicles">&nbsp;&nbsp;&nbsp;&nbsp;• DIAGRAM: Motor Vehicle Liability, Registered Owner Rule & Kabit System</option>
+      <option value="#part-3-heading">PART 3: SPECIAL IMPUTED LIABILITIES, STATE & LGUs, PUBLIC OFFICERS & IMMUNITY</option>
+      <option value="#part-3-overview">&nbsp;&nbsp;↳ Part 3 Overview & Scope of Topics</option>
+      <option value="#ix-innkeepers-partnerships">&nbsp;&nbsp;↳ IX. Special Imputed Liabilities: Innkeepers and Partnerships</option>
+      <option value="#subsidiary-liability-innkeepers">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Subsidiary Liability of Innkeepers and Hotelkeepers (Art. 102 RPC)</option>
+      <option value="#partnerships-mutual-agency">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Vicarious Liability in Partnerships: Doctrine of Mutual Agency</option>
+      <option value="#x-spousal-property">&nbsp;&nbsp;↳ X. Tort and Delictual Liability Across Spousal Property Regimes</option>
+      <option value="#overview-property-regimes">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Overview of Property Regimes Between Spouses</option>
+      <option value="#charging-liabilities-acp">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Charging Liabilities Under Absolute Community of Property (ACP)</option>
+      <option value="#charging-liabilities-cpg">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Charging Liabilities Under Conjugal Partnership of Gains (CPG)</option>
+      <option value="#charging-liabilities-separation">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Charging Tort Liabilities Under Complete Separation of Property</option>
+      <option value="#comparative-table-spousal">&nbsp;&nbsp;&nbsp;&nbsp;• 5. Comparative Table of Spousal Property Regimes and Tort Liability</option>
+      <option value="#xi-state-and-lgus">&nbsp;&nbsp;↳ XI. Vicarious Liability of the State and Local Government Units</option>
+      <option value="#state-special-vs-ordinary-agent">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Liability of the State: Special Agent vs. Ordinary Agent (Art. 2180 Par. 6)</option>
+      <option value="#lgu-defective-public-works">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Liability of LGUs for Defective Public Works (Art. 2189 CC & Sec. 24 LGC)</option>
+      <option value="#case-law-art-2189">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Case Law Analyses on Article 2189 (Defective Roads and Manholes)</option>
+      <option value="#case-guililatco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▪ A. Guililatco v. City of Dagupan</option>
+      <option value="#case-san-juan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▪ B. Municipality of San Juan v. Court of Appeals</option>
+      <option value="#xii-public-officers-immunity">&nbsp;&nbsp;↳ XII. Personal Liability of Public Officers and Immunity of Judicial Officers</option>
+      <option value="#personal-liability-public-officers">&nbsp;&nbsp;&nbsp;&nbsp;• 1. Personal Liability of Public Officers for Tortious or Illegal Acts</option>
+      <option value="#immunity-judicial-officers">&nbsp;&nbsp;&nbsp;&nbsp;• 2. Immunity of Judges and Officers Performing Quasi-Judicial Functions</option>
+      <option value="#case-cadiz">&nbsp;&nbsp;&nbsp;&nbsp;• 3. Case Law Analysis: Cadiz v. Presiding Judge / IBP Immunity Doctrine</option>
+      <option value="#bridge-strict-liability">&nbsp;&nbsp;&nbsp;&nbsp;• 4. Bridge to Next Topic: Strict Liability Torts</option>
+      <option value="#diagram-public-officers">&nbsp;&nbsp;&nbsp;&nbsp;• DIAGRAM: Public Officer Tort Liability vs. Judicial Immunity</option>
+      <option value="#administrative-matters">&nbsp;&nbsp;↳ Administrative Matters & Professor's Asides</option>
+      <option value="#midterm-grading-mechanics">&nbsp;&nbsp;&nbsp;&nbsp;• Midterm Grading Breakdown and Score Computation Adjustment</option>
+      <option value="#upcoming-quiz-announcement">&nbsp;&nbsp;&nbsp;&nbsp;• Upcoming Assessment / Quiz Announcement</option>
+      <option value="#mandatory-case-readings">&nbsp;&nbsp;&nbsp;&nbsp;• Mandatory Case Reading Assignments</option>
+      <option value="#practical-litigation-insights">&nbsp;&nbsp;&nbsp;&nbsp;• Professor's Practical Legal & Litigation Insights</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+<h1 id="document-title">October 28 Lecture</h1>
+
+<!-- ========================================================================= -->
+<!-- PART 1 -->
+<!-- ========================================================================= -->
+<h2 id="part-1-heading" class="c-navy">PART 1: FOUNDATIONS OF VICARIOUS LIABILITY, PARENTAL AUTHORITY, AND THE LIABILITY OF SCHOOLS, ADMINISTRATORS, AND TEACHERS</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">I</div>
+      <div class="ui-kicker">FOUNDATION</div>
+      <div class="ui-title">General Principles</div>
+      <div class="ui-sub">Respondeat Superior vs. Bonus Paterfamilias; Solidary vs. Subsidiary</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">II</div>
+      <div class="ui-kicker">FAMILY</div>
+      <div class="ui-title">Parents & Guardians</div>
+      <div class="ui-sub">Arts. 2180, 221 FC; 21-year retention threshold (RA 6809)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">III</div>
+      <div class="ui-kicker">CUSTODY</div>
+      <div class="ui-title">Teachers & Heads</div>
+      <div class="ui-sub">In loco parentis, Amadora doctrine, Academic vs. Arts & Trades</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">IV</div>
+      <div class="ui-kicker">INSTITUTIONS</div>
+      <div class="ui-title">Schools & Entities</div>
+      <div class="ui-sub">Art. 218 FC, St. Francis (Employer), PSBA (Culpa Contractual)</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-1-overview" class="c-navy">Part 1 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>I. General Principles of Vicarious Liability (Imputed Negligence):</strong> Theoretical foundations under <span class="c-teal">Civil Code Article 2180</span> (<em>Respondeat Superior</em> vs. <em>Bonus Paterfamilias</em>), the nature of direct, primary, and solidary liability, and its distinction from subsidiary liability.</li>
+  <li><strong>II. Vicarious Liability of Parents and Guardians:</strong> Statutory basis under <span class="c-teal">Civil Code Article 2180 (Paragraphs 2 and 3)</span> and <span class="c-teal">Family Code Articles 211 and 221</span>, the retention of the 21-year-old age threshold despite <span class="c-teal">Republic Act No. 6809</span>, and the requirement of company and custody.</li>
+  <li><strong>III. Vicarious Liability of Teachers and Heads of Establishments:</strong> The principle of <em>in loco parentis</em>, judicial expansion of "protective and supervisory custody" (<span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span>), academic versus arts and trades institutions, and age qualification distinctions between teachers and schools.</li>
+  <li><strong>IV. Multi-Tiered Liability of Schools and Educational Institutions:</strong> The general rule of school non-liability under <span class="c-teal">Article 2180</span> and the three doctrinal exceptions: <span class="c-teal">Family Code Article 218</span> (Special Parental Authority), <span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span> (Employer-Employee Liability), and <span class="c-burgundy"><em>Philippine School of Business Administration (PSBA) v. Court of Appeals</em></span> (Culpa Contractual).</li>
+</ul>
+
+<hr>
+
+<h3 id="i-general-principles" class="c-navy">I. GENERAL PRINCIPLES OF VICARIOUS LIABILITY (IMPUTED NEGLIGENCE)</h3>
+
+<h4 id="concept-theoretical-basis" class="c-navy">1. Concept and Theoretical Basis of Vicarious Liability</h4>
+
+<p>Under <span class="c-teal"><strong>Article 2180 of the New Civil Code</strong></span>, the obligation imposed by <span class="c-teal"><strong>Article 2176</strong></span> (quasi-delict) is demandable not only for one's own acts or omissions, but also for those of persons for whom one is responsible. This doctrine is known in tort law as <span class="c-green"><strong><u>vicarious liability</u></strong></span> or the <span class="c-green"><strong><u>rule on imputed negligence</u></strong></span>.</p>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">🔍</div>
+      <div class="ui-title">Culpa in Eligendo</div>
+      <div class="ui-sub">Fault in selection; failure to exercise bonus paterfamilias in vetting</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">👁️</div>
+      <div class="ui-title">Culpa in Vigilando</div>
+      <div class="ui-sub">Fault in supervision; failure to maintain active operational oversight</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🛡️</div>
+      <div class="ui-title">Rebuttable Presumption</div>
+      <div class="ui-sub">Ceases upon proof of all diligence of a good father of a family</div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Theoretical Foundation (<em>Culpa in Eligendo</em> and <em>Culpa in Vigilando</em>):</strong> While loosely referred to in classroom discussions alongside the Anglo-American doctrine of <em>respondeat superior</em> ("let the master answer"), Philippine civil law anchors vicarious liability under <span class="c-teal">Article 2180</span> on the responsible person's <span class="c-green"><strong><u>own negligence</u></strong></span>—specifically, the failure to exercise the diligence of a good father of a family (<em>bonus paterfamilias</em>) in the <strong>selection</strong> (<em>culpa in eligendo</em>) and/or <strong>supervision</strong> (<em>culpa in vigilando</em>) of the person under their care, authority, or employment.</li>
+  <li><strong>True Source of Liability:</strong> The law does not automatically penalize the parent, guardian, teacher, or employer merely because the ward, student, or servant was negligent <em>per se</em>. Rather, the law presumes that because the person under their authority committed a tort, the person exercising authority was remiss in their duty of supervision or selection.</li>
+  <li><strong>Rebuttable Presumption of Negligence:</strong> Under the last paragraph of <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span>, <span class="c-green"><strong><u>the responsibility treated of in this article shall cease when the persons therein mentioned prove that they observed all the diligence of a good father of a family to prevent damage</u></strong></span>.</li>
+</ul>
+
+<h4 id="nature-of-liability" class="c-navy">2. Nature of Liability: Primary, Direct, and Solidary</h4>
+
+<p>A critical bar examination principle is that the vicarious liability of persons enumerated under <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> is <span class="c-green"><strong><u>primary, direct, and solidary</u></strong></span>, not subsidiary.</p>
+
+<ul>
+  <li><strong>Primary and Direct Liability:</strong> <span class="c-green"><strong><u>The injured plaintiff does not need to wait for the actual tortfeasor (e.g., the negligent child, student, or employee) to be declared insolvent before suing the person vicariously responsible.</u></strong></span> The plaintiff may sue the parent, teacher, or employer directly, either alone or jointly with the actual tortfeasor.</li>
+  <li><strong>Solidary Obligation:</strong> Pursuant to <span class="c-teal"><strong>Article 2194 of the Civil Code</strong></span>, <span class="c-green"><strong><u>the responsibility of two or more persons who are liable for a quasi-delict is solidary</u></strong></span>. Once the vicariously liable person is unable to overcome the presumption of negligence in selection or supervision, they become <span class="c-green"><strong><u>solidarily liable</u></strong></span> with the actual tortfeasor for the full amount of damages awarded to the victim.</li>
+  <li><strong>Contrast with Subsidiary Liability:</strong> In <span class="c-rust"><strong><u>subsidiary liability</u></strong></span> (such as an employer's civil liability arising from a crime under <span class="c-teal"><strong>Article 103 of the Revised Penal Code</strong></span>), the liability is secondary. The subsidiarily liable party can only be compelled to pay if the primarily liable party (the convicted employee) is first adjudged guilty and proven to be <span class="c-rust"><strong><u>insolvent</u></strong></span>.</li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Solidary Vicarious Liability (Art. 2180, Civil Code)</th>
+      <th>Subsidiary Liability (Art. 103, Revised Penal Code)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Source of Obligation</strong></td>
+      <td><em>Quasi-delict</em> (<em>culpa aquiliana</em>) based on the responsible person's own presumed negligence in selection/supervision.</td>
+      <td><em>Delict</em> (<em>culpa criminal</em> / <em>ex delicto</em>) arising from a felony or crime committed by the employee.</td>
+    </tr>
+    <tr>
+      <td><strong>Nature of Liability</strong></td>
+      <td><span class="c-green"><strong>Primary and Direct.</strong></span> The employer, parent, or teacher is an immediate debtor alongside the tortfeasor.</td>
+      <td><span class="c-rust"><strong>Secondary and Conditional.</strong></span> The employer is a guarantor whose obligation attaches only upon default/insolvency of the convict.</td>
+    </tr>
+    <tr>
+      <td><strong>Precondition of Insolvency</strong></td>
+      <td><span class="c-green"><strong>Not required.</strong></span> The injured party may proceed directly against the vicariously liable party regardless of the tortfeasor's solvency.</td>
+      <td><span class="c-rust"><strong>Strictly required.</strong></span> Execution against the employer cannot issue unless the employee is first proven insolvent via a Sheriff's Return.</td>
+    </tr>
+    <tr>
+      <td><strong>Availability of Due Diligence Defense</strong></td>
+      <td><span class="c-green"><strong>Available.</strong></span> Proof of <em>bonus paterfamilias</em> in selection and supervision completely absolves the defendant.</td>
+      <td><span class="c-rust"><strong>Not available.</strong></span> Once the requisites of Art. 103 are met, the employer cannot raise due diligence in selection or supervision as a defense.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote id="prof-illustration-solidary-subsidiary">
+  <p><span class="c-burgundy"><strong>Professor's Illustration: Solidary vs. Subsidiary Enforcement</strong></span></p>
+  <p>Suppose Employee X negligently crashes a delivery van into Pedestrian Y. If Pedestrian Y files an independent civil action for <strong>quasi-delict</strong> under <span class="c-teal"><strong>Articles 2176 and 2180 of the Civil Code</strong></span>, Employer Z's liability is <strong>primary and solidary</strong>; Y can immediately implead and collect the entire judgment from Z without proving X is bankrupt, unless Z proves due diligence in selecting and supervising X. Conversely, if Y prosecutes X criminally for Reckless Imprudence under the <span class="c-teal"><strong>Revised Penal Code</strong></span>, Employer Z's civil liability under <span class="c-teal"><strong>Article 103</strong></span> is <strong>subsidiary</strong>—meaning Y must first convict X and prove X is insolvent before collecting from Z.</p>
+</blockquote>
+
+<hr>
+
+<h3 id="ii-parents-guardians" class="c-navy">II. VICARIOUS LIABILITY OF PARENTS AND GUARDIANS</h3>
+
+<h4 id="statutory-basis-imputation" class="c-navy">1. Statutory Basis and Basis of Imputation</h4>
+
+<p>Under <span class="c-teal"><strong>Paragraphs 2 and 3 of Article 2180 of the Civil Code</strong></span> (as modified by <span class="c-teal"><strong>Article 221 of the Family Code</strong></span>), parents and guardians are vicariously liable for the quasi-delicts committed by children and wards under their authority:</p>
+
+<ol>
+  <li><strong>Parents:</strong> Under <span class="c-teal"><strong>Article 221 of the Family Code</strong></span>, parents and other persons exercising parental authority shall be civilly liable for the injuries and damages caused by the acts or omissions of their unemancipated children <span class="c-green"><strong><u>living in their company and under their parental authority</u></strong></span>, subject to the appropriate defenses provided by law.</li>
+  <li><strong>Guardians:</strong> Under <span class="c-teal"><strong>Article 2180, Paragraph 3 of the Civil Code</strong></span>, guardians are liable for damages caused by the minors or incapacitated persons who are <span class="c-green"><strong><u>under their authority and live in their company</u></strong></span>.</li>
+</ol>
+
+<h4 id="requisites-parental-liability" class="c-navy">2. Requisites for Parental and Guardian Liability</h4>
+
+<p>To hold parents or legal guardians vicariously liable for the tortious acts of a child or ward, three concurring requisites must be established:</p>
+
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">1. Child below statutory age threshold (or incapacitated ward)</div>
+  </div>
+  <div class="ui-connector">+</div>
+  <div class="ui-step-card">
+    <div class="ui-title">2. Child or ward living in the company of parents or guardian</div>
+  </div>
+  <div class="ui-connector">+</div>
+  <div class="ui-step-card">
+    <div class="ui-title">3. Under parental authority or legal custody at time of tort</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-outcome">
+    <div class="ui-title">VICARIOUS LIABILITY ATTACHES (PRIMARY & SOLIDARY)</div>
+    <div class="ui-sub">Art. 2180 Pars. 2 & 3 CC in rel. to Art. 221 FC (Rebuttable by due diligence)</div>
+  </div>
+</div>
+
+<ul>
+  <li><span class="c-green"><strong><u>First:</u></strong></span> The child must be below the statutory age threshold (or incapacitated, in the case of guardianship).</li>
+  <li><span class="c-green"><strong><u>Second:</u></strong></span> The child or ward must be <span class="c-green"><strong><u>living in the company</u></strong></span> of the parents or guardian.</li>
+  <li><span class="c-green"><strong><u>Third:</u></strong></span> The child or ward must be <span class="c-green"><strong><u>under the parental authority or legal custody</u></strong></span> of the parents or guardian at the time the tort was committed.</li>
+</ul>
+
+<h4 id="twenty-one-year-threshold" class="c-navy">3. The 21-Year-Old Age Threshold Retention Rule</h4>
+
+<p>A crucial statutory nuance highlighted in the lecture concerns the effect of <span class="c-teal"><strong>Republic Act No. 6809</strong></span>, which lowered the age of majority from twenty-one (21) to eighteen (18) years old.</p>
+
+<ul>
+  <li><strong>Survival of the 21-Year-Old Rule for Parental Tort Liability:</strong> While R.A. No. 6809 emancipated children at the age of 18, <span class="c-teal"><strong>Section 3 of R.A. No. 6809</strong></span> (amending <span class="c-teal"><strong>Article 236 of the Family Code</strong></span>) expressly inserted a proviso stating: <span class="c-rust"><em>"Nothing in this Code shall be construed to derogate from the duty or responsibility of parents and guardians for children and wards below twenty-one years of age mentioned in the second and third paragraphs of Article 2180 of the Civil Code."</em></span></li>
+  <li><strong>Operative Rule:</strong> Consequently, parents remain vicariously liable under <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> for the torts committed by their unmarried children who are <span class="c-green"><strong><u>18 years old or above, up to 21 years old</u></strong></span>, provided that such children are still <span class="c-green"><strong><u>living in their company</u></strong></span> and dependent upon them for support and supervision.</li>
+</ul>
+
+<hr>
+
+<h3 id="iii-teachers-heads" class="c-navy">III. VICARIOUS LIABILITY OF TEACHERS AND HEADS OF ESTABLISHMENTS</h3>
+
+<h4 id="in-loco-parentis" class="c-navy">1. The Principle of <em>In Loco Parentis</em></h4>
+
+<p>Under <span class="c-teal"><strong>Paragraph 7 of Article 2180 of the Civil Code</strong></span>, teachers or heads of establishments of arts and trades shall be liable for damages caused by their pupils and students or apprentices, so long as they remain in their custody.</p>
+
+<ul>
+  <li><strong>Doctrinal Rationale:</strong> The liability of teachers and heads of establishments is anchored on the principle of <span class="c-green"><strong><em>in loco parentis</em></strong></span> ("in the place of a parent"). When parents enroll their child in an educational institution and send them to campus, parental authority and the corresponding duty of supervision are temporarily delegated and shifted to the teacher or head of the school.</li>
+  <li><strong>Protective and Supervisory Capacity:</strong> Because teachers stand as "second parents" to their students, the law imposes upon them the obligation to exercise reasonable supervision and restraint over their students' conduct while the students remain within their protective and supervisory capacity.</li>
+</ul>
+
+<h4 id="scope-of-custody" class="c-navy">2. Evolution and Scope of "Custody" in Jurisprudence</h4>
+
+<p>Under <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span>, the phrase <em>"so long as they remain in their custody"</em> does not require that the student be boarding or living literally inside the school premises (unlike the rule for parents, which requires living in their company). Supreme Court jurisprudence has progressively broadened the concept of <span class="c-green"><strong><u>supervisory custody</u></strong></span>:</p>
+
+<ol>
+  <li><strong>Recess and Official Class Breaks:</strong> Even when formal classroom instruction is paused for recess, the student remains inside the campus under the protective and supervisory custody of the teacher and school (<span class="c-burgundy"><em>Palisoc v. Brillantes</em></span>; <span class="c-burgundy"><em>Exconde v. Capuno</em></span>).</li>
+  <li><strong>Post-Academic Year, Clearances, and Graduation Practices:</strong> Custody extends beyond the final day of formal lectures. If a student returns to campus after finals week or after the formal close of the academic year to use the library, submit case digests or projects, process graduation clearances, or attend commencement rehearsals, the student remains within the protective and supervisory custody of the school and teachers.</li>
+  <li><strong>Authorized Outside Activities and Notified Outings:</strong> Pursuant to <span class="c-teal"><strong>Article 218 of the Family Code</strong></span> and related jurisprudence, special parental authority and responsibility apply to <span class="c-green"><strong><u>all authorized activities, whether inside or outside the premises</u></strong></span> of the school, entity, or institution. Furthermore, even if an outing or excursion is not strictly academic, if the school administration was <span class="c-green"><strong><u>notified and had official knowledge</u></strong></span> of the activity, the school may still incur liability if it fails to exercise due diligence in warning and supervising the participants.</li>
+</ol>
+
+<h4 id="case-amadora" class="c-navy">3. Case Law Analysis: <span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span> (G.R. No. L-47745, April 15, 1988, 160 SCRA 315)</h4>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Amadora v. Court of Appeals (160 SCRA 315)</strong></span></p>
+  <p><strong>Facts:</strong> Alfredo Amadora was a graduating high school student at Colegio de San Jose-Recoletos whose commencement exercises were scheduled for April 16, 1972. On April 13, 1972—after the semester had formally ended—Amadora went to the school auditorium to submit a required physics report for his graduation clearance, where he was fatally shot by his classmate, Pablito Daffon.</p>
+  <p><strong>Issue:</strong> Was the student still "in the custody" of the school and its teachers under <span class="c-teal">Article 2180 of the Civil Code</span> even though the semester had formally closed?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes. The Supreme Court ruled that a student is deemed in the custody of the school authorities and teachers as long as he is under the control and influence of the school and within its premises, whether the semester has not yet begun or has already ended, provided his presence is for a legitimate student purpose (such as completing graduation requirements).</u></strong></span> However, on the merits, the Court absolved the teachers and school officials because none of the impleaded respondents was the <em>teacher-in-charge</em> of the offending student at the time, and there was no showing of negligence in enforcing school discipline.</p>
+</blockquote>
+
+<h4 id="academic-vs-arts-trades" class="c-navy">4. Academic Schools vs. Establishments of Arts and Trades</h4>
+
+<p>In <span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span>, the Supreme Court laid down the definitive rules distinguishing the person liable in <strong>academic institutions</strong> versus <strong>establishments of arts and trades</strong> (non-academic/vocational schools) under <span class="c-teal"><strong>Article 2180, Paragraph 7 of the Civil Code</strong></span>:</p>
+
+<ul>
+  <li><strong>General Rule (Academic Institutions):</strong> Where the school is <strong>academic</strong> in nature, responsibility for the tort committed by the student attaches to the <span class="c-green"><strong><u>teacher-in-charge</u></strong></span> of the student, and <span class="c-rust"><strong><u>not</u></strong></span> to the head of the school or the school itself (unless the school is separately liable under Family Code Article 218).</li>
+  <li><strong>Exception (Schools of Arts and Trades):</strong> Where the institution is an <strong>establishment of arts and trades</strong> (e.g., technical-vocational institutions like TESDA centers or driving schools where students handle machinery, tools, or motor vehicles as apprentices), it is the <span class="c-green"><strong><u>head of the establishment</u></strong></span>, and not the teacher, who is held vicariously liable under Article 2180.</li>
+  <li><strong>Subsistence of Teacher Liability:</strong> Notwithstanding the distinction above, the general duty of teachers to exercise supervision subsists whether the school is academic or non-academic, provided the student is under their immediate charge and custody.</li>
+</ul>
+
+<h4 id="age-distinction-teachers-schools" class="c-navy">5. Age Distinction: Teachers (Art. 2180 CC) vs. Schools (Art. 218 FC)</h4>
+
+<p>A vital distinction emphasized in the lecture lies in the age of the offending student depending on whether the suit is anchored on <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> (against teachers/heads) or <span class="c-teal"><strong>Article 218 of the Family Code</strong></span> (against schools/administrators):</p>
+
+<ul>
+  <li><strong>Liability of Teachers (Article 2180, Civil Code):</strong> Teachers (and heads of schools of arts and trades) are vicariously liable for the torts of their students <span class="c-green"><strong><u>even if the student is no longer a minor</u></strong></span> (i.e., already 18 years old or above, such as college or law students). Majority age of the student is <span class="c-rust"><strong><u>not a defense</u></strong></span> for the teacher-in-charge.</li>
+  <li><strong>Liability of Schools and Administrators (Article 218, Family Code):</strong> The statutory special parental authority and solidary liability of the <strong>school itself and its administrators</strong> under the Family Code are expressly limited to <span class="c-rust"><strong><u>minor children</u></strong></span> (below 18 years of age) under their supervision, instruction, or custody.</li>
+</ul>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Professor's Illustration: Law School Classroom Altercation and Driving Schools</strong></span></p>
+  <p>If two 25-year-old law students suddenly stab each other during a Torts lecture, the law professor (as the <strong>teacher-in-charge</strong> under <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span>) cannot raise the defense that the students are already of legal age; the teacher may still be held vicariously liable unless the teacher proves the exercise of due diligence to prevent the injury. Conversely, if an apprentice student in a <strong>driving school</strong> (a school of arts and trades) negligently hits a pedestrian during a driving lesson, vicarious liability under Article 2180 attaches to the <strong>head or administrator of the driving school</strong>, rather than the driving instructor.</p>
+</blockquote>
+
+<hr>
+
+<h3 id="iv-multi-tiered-schools" class="c-navy">IV. MULTI-TIERED LIABILITY OF SCHOOLS AND EDUCATIONAL INSTITUTIONS</h3>
+
+<h4 id="schools-general-rule-exceptions" class="c-navy">1. General Rule and the Three Doctrinal Exceptions</h4>
+
+<p>Under the literal text of <span class="c-teal"><strong>Article 2180, Paragraph 7 of the Civil Code</strong></span>, the <strong>school itself</strong> is not among the persons enumerated as vicariously liable (only "teachers or heads of establishments of arts and trades" are mentioned). Hence, as a <strong>general rule under the Civil Code</strong>, the school as a corporate entity is not directly liable under Article 2180(7).</p>
+
+<p>However, through statutory enactment and landmark jurisprudence, the school itself can be held directly liable under <strong>three distinct legal frameworks</strong> depending on the identity of the culprit and the nature of the cause of action:</p>
+
+<ol>
+  <li><strong>Exception 1: Special Parental Authority over Minors (<span class="c-teal">Articles 218 & 219, Family Code</span>)</strong></li>
+  <li><strong>Exception 2: Vicarious Liability as an Employer of Negligent Teachers (<span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span>)</strong></li>
+  <li><strong>Exception 3: Contractual Liability to Provide a Safe Learning Environment (<span class="c-burgundy"><em>PSBA v. Court of Appeals</em></span>)</strong></li>
+</ol>
+
+<h4 id="exception-1-special-parental" class="c-navy">2. Exception 1: Special Parental Authority (Articles 218 and 219, Family Code)</h4>
+
+<p>Under <span class="c-teal"><strong>Article 218 of the Family Code</strong></span>, the <span class="c-green"><strong><u>school, its administrators, and teachers</u></strong></span>, or the individual, entity, or institution engaged in <span class="c-green"><strong><u>child care</u></strong></span> (expanding coverage beyond purely academic institutions to daycares, orphanages, and child-caring agencies), shall have <span class="c-green"><strong><u>special parental authority and responsibility</u></strong></span> over the <span class="c-rust"><strong><u>minor child</u></strong></span> while under their supervision, instruction, or custody. This authority applies to all authorized activities, whether inside or outside the premises of the school, entity, or institution.</p>
+
+<ul>
+  <li><strong>Solidary and Principally Liable (Article 219, Family Code):</strong> Those given the authority and responsibility under Article 218 shall be <span class="c-green"><strong><u>principally and solidarily liable</u></strong></span> for damages caused by the acts or omissions of the unemancipated minor. The parents, judicial guardians, or persons exercising substitute parental authority over said minor shall be <span class="c-rust"><strong><u>subsidiarily liable</u></strong></span>.</li>
+  <li><strong>Defense:</strong> Neither the school, administrator, teacher, nor parent shall be liable if it is proved that they exercised the <span class="c-green"><strong><u>proper diligence required under the particular circumstances</u></strong></span>.</li>
+</ul>
+
+<h4 id="exception-2-st-francis" class="c-navy">3. Exception 2: Employer-Employee Liability (<span class="c-burgundy"><em>St. Francis High School v. Court of Appeals</em></span>, G.R. No. 82465, February 25, 1991, 194 SCRA 341)</h4>
+
+<p>When the negligent party is a <strong>teacher or school employee</strong> (rather than a student), the school may be sued as an <strong>employer</strong> under <span class="c-teal"><strong>Paragraphs 4 and 5 of Article 2180 of the Civil Code</strong></span>.</p>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>St. Francis High School v. Court of Appeals (194 SCRA 341)</strong></span></p>
+  <p><strong>Facts:</strong> Ferdinand Castillo, a 13-year-old freshman student of St. Francis High School, drowned during a beach picnic at Talaan Beach, Sariaya, Quezon, organized by several teachers and students. The parents sued the school and the teachers, arguing that the school was vicariously liable as the employer of the negligent teachers.</p>
+  <p><strong>Issue:</strong> Can St. Francis High School be held vicariously liable as an employer under Article 2180 for the negligence of its teachers during the beach picnic?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No. For an employer (the school) to be held vicariously liable under Article 2180, Paragraphs 4 and 5, the employee (the teacher) must have committed the negligent act within the scope of their assigned tasks or in the service of the branches in which they are employed.</u></strong></span> Because the beach picnic was a <span class="c-rust"><strong><u>purely private affair neither sanctioned, authorized, nor known by the school administration</u></strong></span>, and going on a picnic is not within the assigned tasks of a teacher, the school incurred no vicarious liability as an employer.</p>
+</blockquote>
+
+<h4 id="exception-3-psba" class="c-navy">4. Exception 3: Breach of Contract (<span class="c-burgundy"><em>PSBA v. Court of Appeals</em></span>, G.R. No. 84698, February 4, 1992, 205 SCRA 729)</h4>
+
+<p>When a student is injured or killed inside the campus by an <strong>outsider or stranger</strong> (where <em>in loco parentis</em> under Article 2180 does not apply because the culprit is not a student), the school may be held liable for <span class="c-green"><strong><u>breach of contract (<em>culpa contractual</em>)</u></strong></span>.</p>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>PSBA v. Court of Appeals (205 SCRA 729)</strong></span></p>
+  <p><strong>Facts:</strong> Carlitos Bautista, a third-year commerce student at the Philippine School of Business Administration (PSBA), was stabbed to death on the second-floor premises of the school by assailants who were <strong>not students of PSBA</strong> (strangers/outsiders from another school). The victim's parents sued PSBA and its corporate officers for damages.</p>
+  <p><strong>Issue:</strong> May the school be held liable under Article 2180 (<em>in loco parentis</em>), or under some other legal basis, when the killer is an outsider rather than a student of the school?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-teal">Article 2180</span> (<em>in loco parentis</em>) does not apply because the damage was caused by <strong>strangers</strong>, not by pupils or students of PSBA. However, when an academic institution accepts students for enrollment, a <span class="c-green"><strong><u>contract</u></strong></span> is established between them creating <span class="c-green"><strong><u>bilateral obligations</u></strong></span>: the student agrees to pay tuition and abide by academic rules, while the school undertakes to provide an <span class="c-green"><strong><u>environment conducive to learning</u></strong></span>, which necessarily includes <span class="c-green"><strong><u>adequate security measures</u></strong></span> to keep the campus safe. If the school breaches this contractual duty through a negligent security lapse allowing armed outsiders to enter, the school is liable for <span class="c-green"><strong><u>breach of contract (<em>culpa contractual</em>)</u></strong></span> under <span class="c-teal"><strong>Article 1170 of the Civil Code</strong></span>, as well as quasi-delict under <span class="c-teal"><strong>Article 2176</strong></span> in relation to <span class="c-teal"><strong>Article 2180 (as an employer of negligent security personnel)</strong></span>.</p>
+</blockquote>
+
+<!-- MERMAID DIAGRAM: SCHOOLS LIABILITY -->
+<div class="diagram-wrapper" id="diagram-schools-liability">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: MULTI-TIERED LIABILITY OF SCHOOLS & EDUCATIONAL INSTITUTIONS <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+flowchart TD
+    Start["Student Injured / Harm Committed on Campus or in School Activity"] --> Tortfeasor{"Identify Culprit / Cause of Harm"}
+    
+    Tortfeasor -->|"Culprit is a Minor Student (<18)"| CatA["Special Parental Authority<br><b>Arts. 218 & 219, Family Code</b>"]
+    CatA --> ResA["School, Administrators & Teachers<br><b>Principally & Solidarily Liable</b><br>(Parents Subsidiarily Liable)"]
+    
+    Tortfeasor -->|"Culprit is a Student of Legal Age (18+)"| CatB["Academic vs. Arts & Trades<br><b>Art. 2180, Par. 7, Civil Code</b><br><i>Amadora v. CA</i>"]
+    CatB --> TypeSchool{"Type of Institution?"}
+    TypeSchool -->|"Academic Institution"| ResB1["<b>Teacher-in-Charge Liable</b><br>(School entity not vicariously liable)"]
+    TypeSchool -->|"School of Arts / Trades"| ResB2["<b>Head of Establishment Liable</b><br>(Vocational / Technical / Driving)"]
+    
+    Tortfeasor -->|"Culprit is a Teacher / School Employee"| CatC["Employer-Employee Vicarious Liability<br><b>Art. 2180, Pars. 4 & 5, Civil Code</b><br><i>St. Francis High School v. CA</i>"]
+    CatC --> TestC{"Within Scope of Assigned Tasks?"}
+    TestC -->|"Yes (Official Academic Function)"| ResC1["<b>School Solidarily Liable as Employer</b><br>Unless Due Diligence in Selection & Supervision Proven"]
+    TestC -->|"No (Purely Private Picnic / Unauthorized)"| ResC2["<b>School Absolved</b><br>(Employee Personally Liable)"]
+    
+    Tortfeasor -->|"Culprit is an Outsider / Stranger"| CatD["Breach of Contract (Culpa Contractual)<br><b>Art. 1170 & Art. 2176, Civil Code</b><br><i>PSBA v. CA</i>"]
+    CatD --> ResD["<b>School Liable for Breach of Enrollment Contract</b><br>Duty to Provide Safe Learning Environment & Adequate Security"]
+
+    classDef primary fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+    
+    class Start,Tortfeasor,TypeSchool,TestC primary;
+    class CatA,CatB,CatC,CatD teal;
+    class ResA,ResB1,ResB2,ResC1,ResD green;
+    class ResC2 rust;
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h4 id="summary-matrix-schools" class="c-navy">5. Summary Matrix: Determining the Proper Cause of Action Against a School</h4>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Identity of the Tortfeasor / Culprit</th>
+      <th>Applicable Legal Provision & Jurisprudence</th>
+      <th>Nature of the School's Liability & Requisites</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Culprit is a Student (Minor)</strong></td>
+      <td><span class="c-teal"><strong>Art. 218 & 219, Family Code</strong></span> (in relation to <span class="c-teal"><strong>Art. 2180, Civil Code</strong></span>)</td>
+      <td><strong>Special Parental Authority (<em>In Loco Parentis</em>).</strong> School, administrators, and teachers are <span class="c-green"><strong>principally and solidarily liable</strong></span> if the minor was under their supervision, instruction, or custody during an authorized activity (inside or outside campus).</td>
+    </tr>
+    <tr>
+      <td><strong>2. Culprit is a Student (Of Legal Age)</strong></td>
+      <td><span class="c-teal"><strong>Art. 2180, Par. 7, Civil Code</strong></span> (<span class="c-burgundy"><em>Amadora v. CA</em></span>)</td>
+      <td><strong>Teacher-in-Charge or Head of Arts & Trades.</strong> The <span class="c-green"><strong>teacher-in-charge</strong></span> (in academic schools) or <span class="c-green"><strong>head of establishment</strong></span> (in arts/trades) is solidarily liable; the school itself is not liable under Art. 218 FC because the student is no longer a minor, unless sued for independent negligence or breach of contract.</td>
+    </tr>
+    <tr>
+      <td><strong>3. Culprit is a Teacher or School Employee</strong></td>
+      <td><span class="c-teal"><strong>Art. 2180, Pars. 4 & 5, Civil Code</strong></span> (<span class="c-burgundy"><em>St. Francis High School v. CA</em></span>)</td>
+      <td><strong>Employer-Employee Vicarious Liability.</strong> The school is liable as an <strong>employer</strong> only if the teacher committed the negligent act <span class="c-green"><strong>within the scope of assigned tasks</strong></span> or functions, and the school failed to prove due diligence in selection and supervision.</td>
+    </tr>
+    <tr>
+      <td><strong>4. Culprit is a Stranger / Outsider</strong></td>
+      <td><span class="c-teal"><strong>Art. 1170, Civil Code</strong></span> (<span class="c-burgundy"><em>PSBA v. CA</em></span>)</td>
+      <td><strong>Breach of Contract (<em>Culpa Contractual</em>).</strong> The school is liable for breaching its bilateral contractual obligation upon enrollment to provide a safe environment conducive to learning through adequate campus security measures.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<!-- ========================================================================= -->
+<!-- PART 2 -->
+<!-- ========================================================================= -->
+<h2 id="part-2-heading" class="c-navy">PART 2: VICARIOUS LIABILITY OF EMPLOYERS ACROSS CIVIL, CRIMINAL, AND CONTRACTUAL FRAMEWORKS, AND MOTOR VEHICLE REGIMES</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">V</div>
+      <div class="ui-kicker">QUASI-DELICT</div>
+      <div class="ui-title">Employers (Art. 2180)</div>
+      <div class="ui-sub">Pars. 4 & 5, "Manager" definition, Castillex Special Benefit Test</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VI</div>
+      <div class="ui-kicker">DEFENSES</div>
+      <div class="ui-title">Due Diligence</div>
+      <div class="ui-sub">Dual proof: Selection & Supervision; DOLE GIP vs. Academic OJT</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VII</div>
+      <div class="ui-kicker">COMPARATIVE</div>
+      <div class="ui-title">Delict & Contract</div>
+      <div class="ui-sub">Art. 103 RPC (Subsidiary) vs. Art. 1759 CC (Common Carriers)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">VIII</div>
+      <div class="ui-kicker">VEHICLES</div>
+      <div class="ui-title">Registered Owner</div>
+      <div class="ui-sub">Open deeds of sale trap, Kabit system, Art. 2181 Reimbursement</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-2-overview" class="c-navy">Part 2 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>V. Vicarious Liability of Employers Under Quasi-Delict (Article 2180, Paragraphs 4 and 5):</strong> Distinction between Paragraphs 4 and 5, the civil law meaning of "manager," the three essential requisites of employer tort liability, and the <em>Special Business Benefit Test</em> (<span class="c-burgundy"><em>Castillex Industrial Corporation v. Vasquez, Jr.</em></span>).</li>
+  <li><strong>VI. Defenses of the Employer: Due Diligence in Selection and Supervision:</strong> Evidentiary standards for proving <em>culpa in eligendo</em> and <em>culpa in vigilando</em> absolution, documentary requirements, clearances, qualification standards, DOLE GIP versus academic OJT, and operational supervision protocols.</li>
+  <li><strong>VII. Comparative Employer Liability: Delict (Art. 103 RPC) and Contract (Art. 1759 Civil Code):</strong> Subsidiary criminal liability of employers, procedural enforcement via a Writ of Subsidiary Execution, strict contractual liability of common carriers for employee acts under <span class="c-teal">Article 1759</span>, and a comprehensive three-way comparison.</li>
+  <li><strong>VIII. Registered Owner Rule, the <em>Kabit</em> System, and Right of Reimbursement:</strong> Imputation of employer status to the registered vehicle owner, legal risks of "open deeds of sale," prohibition and liability under the <em>kabit</em> system, and the right of reimbursement under <span class="c-teal">Article 2181 of the Civil Code</span>.</li>
+</ul>
+
+<hr>
+
+<h3 id="v-employers-quasi-delict" class="c-navy">V. VICARIOUS LIABILITY OF EMPLOYERS UNDER QUASI-DELICT (ARTICLE 2180, PARAGRAPHS 4 AND 5)</h3>
+
+<h4 id="statutory-distinction-par-4-5" class="c-navy">1. Statutory Distinction Between Paragraph 4 and Paragraph 5 of Article 2180</h4>
+
+<p><span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> contains two separate paragraphs governing the vicarious liability of employers:</p>
+
+<ul>
+  <li><strong>Paragraph 4 (Owners and Managers of an Establishment or Enterprise):</strong> <em>"The owners and managers of an establishment or enterprise are likewise responsible for damages caused by their employees in the service of the branches in which the latter are employed or on the occasion of their functions."</em></li>
+  <li><strong>Paragraph 5 (Employers in General and Household Helpers):</strong> <em>"Employers shall be liable for the damages caused by their employees and household helpers acting within the scope of their assigned tasks, even though the former are not engaged in any business or industry."</em></li>
+</ul>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Article 2180, Paragraph 4</th>
+      <th>Article 2180, Paragraph 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Persons Made Liable</strong></td>
+      <td>Owners and managers of an establishment or enterprise.</td>
+      <td>Employers in general (including heads of households).</td>
+    </tr>
+    <tr>
+      <td><strong>Engagement in Business or Industry</strong></td>
+      <td>Must be engaged in an <span class="c-green"><strong>establishment or enterprise</strong></span> (commercial, industrial, or business undertaking).</td>
+      <td>Liable <span class="c-green"><strong>even though NOT engaged in any business or industry</strong></span> (e.g., a private homeowner employing a family driver or <em>kasambahay</em>).</td>
+    </tr>
+    <tr>
+      <td><strong>Covered Employees</strong></td>
+      <td>Regular business or enterprise employees.</td>
+      <td>Employees in general and <span class="c-green"><strong>household helpers</strong></span>.</td>
+    </tr>
+    <tr>
+      <td><strong>Statutory Scope of Act</strong></td>
+      <td>Acts committed <em>"in the service of the branches in which the latter are employed or on the occasion of their functions."</em></td>
+      <td>Acts committed while <em>"acting within the scope of their assigned tasks."</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="technical-meaning-manager" class="c-navy">2. Technical Meaning of the Term "Manager" in Article 2180</h4>
+
+<p>A recurring bar exam trap involves the word <strong>"managers"</strong> in Paragraph 4 of Article 2180:</p>
+
+<ul>
+  <li><strong>Civil Code Meaning vs. Labor Code Meaning:</strong> The term <em>"manager"</em> in <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span> does <span class="c-rust"><strong>not</strong></span> refer to a "managerial employee" as defined under the Labor Code (who is merely a high-ranking employee or agent of the company). Instead, the word <em>"manager"</em> in Article 2180 is an erroneous English translation of the Spanish term <em>"directores"</em>, which refers to the <span class="c-green"><strong><u>employer, proprietor, or owner of the enterprise itself</u></strong></span>.</li>
+  <li><strong>Exclusion of Intermediate Superiors:</strong> Consequently, <span class="c-rust"><strong><u>a mere corporate manager, supervisor, or intermediate superior officer cannot be held vicariously liable under Article 2180 for the negligence of a subordinate co-employee</u></strong></span>, because there is no employer-employee relationship between the manager and the subordinate; both are merely employees of the same corporate employer (<span class="c-burgundy"><em>Philippine Rabbit Bus Lines, Inc. v. Phil-American Forwarders, Inc.</em></span>).</li>
+</ul>
+
+<h4 id="essential-requisites-employer" class="c-navy">3. Essential Requisites for Employer Vicarious Liability Under Article 2180</h4>
+
+<p>To hold an employer vicariously liable for a quasi-delict under <span class="c-teal"><strong>Article 2180</strong></span>, the plaintiff must establish three essential requisites:</p>
+
+<ol>
+  <li><strong>Existence of an Employer-Employee Relationship (EER):</strong> There must be a valid employer-employee relationship between the defendant sought to be held vicariously liable and the negligent tortfeasor (determined using the Labor Law four-fold test, particularly the <span class="c-green"><strong>control test</strong></span>).</li>
+  <li><strong>Liability for <em>Quasi-Delict</em> of the Employee:</strong> The employee must have committed an actionable quasi-delict (all elements of <span class="c-teal"><strong>Article 2176</strong></span>—act or omission, fault or negligence, damage, and proximate cause—must be proven against the employee). <span class="c-rust"><strong>If the plaintiff fails to prove negligence on the part of the employee, the employer's vicarious liability never arises.</strong></span></li>
+  <li><strong>Performance of Assigned Tasks or Functions:</strong> The tortious act or omission must have been committed by the employee while <span class="c-green"><strong><u>acting within the scope of their assigned tasks</u></strong></span> (or in the service of the branches / on the occasion of their functions).</li>
+</ol>
+
+<h4 id="special-business-benefit-test" class="c-navy">4. Scope of Assigned Tasks and the "Special Business Benefit Test"</h4>
+
+<p>When an employee is issued a <strong>company service vehicle</strong> and figures in a vehicular accident outside the workplace or outside regular working hours, is the employer automatically liable?</p>
+
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">Employee operating company-owned service vehicle outside regular office hours</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">Apply the "Special Business Benefit Test" (Castillex Doctrine)</div>
+    <div class="ui-sub">Did the specific excursion, errand, or journey confer a special business benefit to the employer?</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-grid ui-split-outcome">
+    <div class="ui-col">
+      <div class="ui-badge ui-badge-yes">✓</div>
+      <div class="ui-title">Special Benefit Found</div>
+      <div class="ui-sub">Within scope of assigned task; Employer vicariously liable under Art. 2180</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-badge ui-badge-no">✕</div>
+      <div class="ui-title">No Benefit (Personal / Lunch / Detour)</div>
+      <div class="ui-sub">Purely personal routine; Employer absolved; Driver personally liable (Art. 2176)</div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>No <em>Ipso Facto</em> Liability from Company Car Use:</strong> The mere fact that an employee was driving a company-issued motor vehicle at the time of the accident does <span class="c-rust"><strong>not</strong></span> <em>ipso facto</em> mean the employee was acting within the scope of his assigned tasks.</li>
+  <li><strong>Routine Commutes and Meal Breaks Excluded:</strong> Jurisprudence establishes that an employee driving a company vehicle <span class="c-rust"><strong>going to or coming from work</strong></span>, or leaving the workplace to take <span class="c-rust"><strong>lunch or coffee breaks</strong></span> (e.g., driving to a fast-food restaurant like Jollibee), or running <span class="c-rust"><strong>personal errands</strong></span> (e.g., paying personal utility bills) is <span class="c-rust"><strong>not</strong></span> ordinarily acting within the scope of employment.</li>
+  <li><strong>The Decisive Factor — Special Business Benefit Test:</strong> To determine whether an employee's operation of a vehicle falls within the "performance of an assigned task," the court examines whether the specific trip or activity at the time of the tortious incident conferred a <span class="c-green"><strong><u>special business benefit or served the business interest of the employer</u></strong></span>. If the trip was purely for the personal routine, convenience, or recreation of the employee without any special business benefit to the employer, the employer is <span class="c-rust"><strong><u>not</u></strong></span> vicariously liable under Article 2180.</li>
+</ul>
+
+<h4 id="case-castillex" class="c-navy">5. Case Law Analysis: <span class="c-burgundy"><em>Castillex Industrial Corporation v. Vasquez, Jr.</em></span> (G.R. No. 132266, December 21, 1999, 321 SCRA 393)</h4>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Castillex Industrial Corporation v. Vasquez, Jr. (321 SCRA 393)</strong></span></p>
+  <p><strong>Facts:</strong> Benjamin Abad, a production manager of Castillex Industrial Corporation, was provided a company-owned Toyota Hi-Lux pick-up. Around 2:00 a.m. on August 28, 1988—long after he had finished working overtime at the office—Abad drove the company pick-up to a high-end restaurant/pub (Fuente Osmeña) with a female companion, and while driving home therefrom, negligently ran over and killed Romeo Vasquez.</p>
+  <p><strong>Issue:</strong> Was Castillex Industrial Corporation vicariously liable under Article 2180 of the Civil Code for the fatal accident caused by its manager while driving the company vehicle after hours?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No. The Supreme Court ruled that an employer who lends a company vehicle to an employee is not liable for the employee's negligent operation thereof outside regular working hours unless the employee was acting within the scope of his assigned tasks.</u></strong></span> The Court synthesized the rules on company vehicles: (1) traveling to and from work, (2) going to and from meals, and (3) using the vehicle after working hours for personal entertainment are outside the scope of employment unless they yield a <span class="c-green"><strong><u>special business benefit</u></strong></span> to the employer. Because Abad was engaged in a purely personal nocturnal excursion with no business benefit to Castillex, the corporation could not be held vicariously liable.</p>
+</blockquote>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Professor's Illustration: The Lunch Break and Utility Bill Detour</strong></span></p>
+  <p>Employee M is issued a company sedan by XYZ Corp. At 12:15 p.m., M drives the company car to Jollibee to buy his personal lunch, and on the way back, detours to pay his home electricity bill. While pulling out of the payment center, M negligently hits a motorcycle rider. Under the <span class="c-burgundy"><strong><em>Castillex</em> doctrine</strong></span>, XYZ Corp. is <span class="c-rust"><strong>not</strong></span> vicariously liable under <span class="c-teal"><strong>Article 2180</strong></span>. Eating lunch and paying personal utility bills are normal daily personal routines that confer no <span class="c-green"><strong>special business benefit</strong></span> upon the employer, even if performed using a company-owned vehicle.</p>
+</blockquote>
+
+<hr>
+
+<h3 id="vi-employer-defenses" class="c-navy">VI. DEFENSES OF THE EMPLOYER: DUE DILIGENCE IN SELECTION AND SUPERVISION</h3>
+
+<h4 id="dual-requirement-diligence" class="c-navy">1. Dual Requirement: Selection (<em>Culpa in Eligendo</em>) AND Supervision (<em>Culpa in Vigilando</em>)</h4>
+
+<p>Once the plaintiff establishes that an employee committed a quasi-delict within the scope of his assigned tasks, a disputable presumption of negligence immediately arises against the employer. To be absolved of vicarious liability under the last paragraph of <span class="c-teal"><strong>Article 2180 of the Civil Code</strong></span>, the employer must prove by <span class="c-green"><strong><u>concrete, documentary, and preponderance of evidence</u></strong></span> (not mere self-serving testimonial claims) that it exercised the diligence of a good father of a family in <strong>both</strong>:</p>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">📋</div>
+      <div class="ui-kicker">STEP 1</div>
+      <div class="ui-title">Diligence in Selection</div>
+      <div class="ui-sub">Clearances, exams, verified credentials, accredited experience prior to hiring</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">🛡️</div>
+      <div class="ui-kicker">STEP 2</div>
+      <div class="ui-title">Diligence in Supervision</div>
+      <div class="ui-sub">SOPs, safety manuals, regular training seminars, continuous performance appraisals</div>
+    </div>
+  </div>
+</div>
+
+<ol>
+  <li><span class="c-green"><strong><u>The Selection of the Employee (<em>Diligence in Selection</em>); AND</u></strong></span></li>
+  <li><span class="c-green"><strong><u>The Supervision of the Employee (<em>Diligence in Supervision</em>).</u></strong></span></li>
+</ol>
+
+<p><span class="c-rust"><strong><u>Proving only one without the other is fatal to the defense.</u></strong></span></p>
+
+<h4 id="proving-selection-diligence" class="c-navy">2. Proving Due Diligence in the Selection of Employees</h4>
+
+<p>To prove due diligence in selection, corporate counsel representing the employer must present documentary evidence of the rigorous screening process conducted <strong>prior to hiring</strong> the employee, including:</p>
+
+<ul>
+  <li><strong>Clearances of Good Moral Character and Law-Abiding Conduct:</strong> Barangay clearance, local police clearance, National Bureau of Investigation (NBI) clearance, and Prosecutor's Office / court clearances showing no pending criminal or reckless imprudence records.</li>
+  <li><strong>Qualification Standards and Licenses:</strong> Verification that the applicant met specific educational, technical, or professional qualification standards matching the job description (e.g., a valid Professional Driver's License with the appropriate restriction codes, or TESDA National Certifications).</li>
+  <li><strong>Pre-Employment Examinations and Interviews:</strong> Written psychological, theoretical, and practical driving or technical examinations, medical and drug test clearances, and documented panel interview assessments.</li>
+  <li><strong>Verified Prior Work Experience:</strong> Proof of prior relevant work experience (e.g., minimum one-year actual work experience, or accredited government internship programs such as the six-month DOLE <span class="c-green"><strong>Government Internship Program [GIP]</strong></span>, contrasted with undergraduate On-the-Job Training [OJT] which is merely part of an academic curriculum and not credited as formal work experience under Civil Service rules).</li>
+</ul>
+
+<h4 id="proving-supervision-diligence" class="c-navy">3. Proving Due Diligence in the Supervision of Employees</h4>
+
+<p>To prove due diligence in supervision, the employer must present documented proof of continuous monitoring, training, and enforcement of safety and operational standards <strong>after hiring</strong>, including:</p>
+
+<ul>
+  <li><strong>Standard Operating Procedures (SOPs) and Manuals:</strong> Promulgation and distribution of written Manuals of Operations, Manuals of Instructions, Company Codes of Ethics, and safety rules.</li>
+  <li><strong>Regular Trainings and Seminars:</strong> Attendance sheets and certificates showing the employee underwent regular safety seminars, defensive driving workshops, or technical refresher courses.</li>
+  <li><strong>Periodic Performance Appraisals and Monitoring:</strong> Documented performance evaluation systems—such as the <span class="c-green"><strong>Individual Performance Commitment and Review (IPCR)</strong></span> in government service or periodic performance appraisals in the private sector—alongside disciplinary records showing that the employer actively monitors compliance and sanctions rule violations.</li>
+</ul>
+
+<hr>
+
+<h3 id="vii-comparative-employer" class="c-navy">VII. COMPARATIVE EMPLOYER LIABILITY: DELICT (ART. 103 RPC) AND CONTRACT (ART. 1759 CIVIL CODE)</h3>
+
+<h4 id="subsidiary-liability-art-103" class="c-navy">1. Employer's Subsidiary Liability Under Article 103 of the Revised Penal Code (<em>Ex Delicto</em>)</h4>
+
+<p>When an employee commits a felony or crime (such as Reckless Imprudence Resulting in Homicide or Physical Injuries under Article 365 of the RPC) and the offended party pursues civil liability arising from the crime (<em>ex delicto</em>), the employer's liability is governed by <span class="c-teal"><strong>Article 103 of the Revised Penal Code</strong></span>.</p>
+
+<ul>
+  <li><strong>Statutory Requisites Under Article 103, RPC:</strong>
+    <ol>
+      <li>The employer is <span class="c-green"><strong>engaged in any kind of industry</strong></span> (business, trade, or enterprise; note that hospitals and commercial schools qualify when operating as an industry/enterprise);</li>
+      <li>The employee committed an <span class="c-green"><strong>offense (felony/crime) in the discharge of his duties</strong></span> (established by a final judgment of conviction against the employee); and</li>
+      <li>The convicted employee is <span class="c-rust"><strong>insolvent</strong></span> (unable to satisfy his civil liability <em>ex delicto</em>).</li>
+    </ol>
+  </li>
+  <li><strong>Crucial Defenses in Article 103 RPC:</strong>
+    <ul>
+      <li><span class="c-rust"><strong>Due Diligence is NOT a Defense:</strong></span> Unlike <span class="c-teal">Article 2180 of the Civil Code</span>, the employer <span class="c-rust"><strong>cannot</strong></span> raise the defense that it exercised the diligence of a good father of a family in the selection and supervision of the employee.</li>
+      <li><strong>Valid Defenses Available:</strong> The employer can only defend itself by disproving one of the three requisites: (a) there is no employer-employee relationship; (b) the employer is not engaged in any industry; (c) the employee was <span class="c-rust"><strong>not acting in the discharge of his duties</strong></span> when the crime occurred (e.g., a truck driver who took out a truck on a day he was strictly off-schedule and unauthorized to drive); or (d) the employee is <span class="c-green"><strong>solvent</strong></span> and has sufficient assets to pay the judgment.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="procedural-enforcement-subsidiary" class="c-navy">2. Procedural Rule on Enforcing Subsidiary Liability (The Hospital/Doctor Illustration)</h4>
+
+<p>In a criminal prosecution against an employee (e.g., <span class="c-burgundy"><em>People of the Philippines v. Dr. AAA</em></span> for criminal negligence/malpractice), the employer (the hospital) is <span class="c-rust"><strong>not a party/accused</strong></span> in the criminal case.</p>
+
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">1. Criminal prosecution & conviction of employee becomes FINAL & EXECUTORY</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">2. Writ of Execution issued against the convicted employee</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">3. Sheriff issues Return certifying employee is INSOLVENT</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">4. Offended party files Motion for Writ of Subsidiary Execution against employer</div>
+    <div class="ui-sub">Notice and hearing granted to employer to contest the 3 statutory requisites of Art. 103 RPC</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-outcome">
+    <div class="ui-title">WRIT OF SUBSIDIARY EXECUTION ENFORCED AGAINST EMPLOYER</div>
+    <div class="ui-sub">Carillo v. People; Philippine Rabbit Bus Lines v. People</div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Error of Holding Employer Solidarily Liable in the Criminal Judgment:</strong> A Regional Trial Court (RTC) commits reversible error if it includes the un-impleaded hospital in the dispositive portion (<em>fallo</em>) of the criminal decision and declares the hospital <em>"jointly and severally (solidarily) liable"</em> with the convicted doctor. First, the employer's liability under Article 103 RPC is <span class="c-rust"><strong>subsidiary</strong></span>, not solidary; second, at the moment of promulgation of judgment, the employee's insolvency has not yet been determined.</li>
+  <li><strong>Proper Procedural Remedy — Motion for Writ of Subsidiary Execution:</strong> Under settled jurisprudence (<span class="c-burgundy"><em>Carillo v. People</em></span>; <span class="c-burgundy"><em>Philippine Rabbit Bus Lines v. People</em></span>), the employer need not be formally impleaded as an accused during the trial of the criminal action, though the employer has an interest in the defense. Once the judgment of conviction against the employee becomes <span class="c-green"><strong>final and executory</strong></span>, a Writ of Execution is issued against the employee. Only after the Sheriff issues a <span class="c-rust"><strong>Return showing that the employee is insolvent</strong></span> may the offended party file a <span class="c-green"><strong><u>Motion for the Issuance of a Writ of Subsidiary Execution</u></strong></span> against the employer in the same criminal case, where the employer will be given a hearing (due process) to contest the three requisites of Article 103 RPC.</li>
+</ul>
+
+<h4 id="common-carrier-art-1759" class="c-navy">3. Employer Liability as a Common Carrier Under Article 1759 of the Civil Code (<em>Culpa Contractual</em>)</h4>
+
+<p>When the employer is a <strong>common carrier</strong> (engaged in the business of transporting passengers by land, water, or air for compensation) and a passenger is injured or killed, the carrier's liability for the acts of its employees is governed by <span class="c-teal"><strong>Article 1759 of the Civil Code</strong></span> (under the contract of carriage):</p>
+
+<ul>
+  <li><strong>Operative Rule (Article 1759, Civil Code):</strong> <span class="c-green"><strong><u>Common carriers are liable for the death of or injuries to passengers through the negligence or willful acts of the former's employees, although such employees may have acted beyond the scope of their authority or in violation of the orders of the common carriers.</u></strong></span></li>
+  <li><strong>Unavailability of the Due Diligence Defense:</strong> The second paragraph of <span class="c-teal"><strong>Article 1759</strong></span> explicitly provides that this liability of the common carrier <span class="c-rust"><strong><u>does not cease</u></strong></span> upon proof that they exercised all the diligence of a good father of a family in the selection and supervision of their employees.</li>
+  <li><strong>Contrast with Quasi-Delict and Delict:</strong> Unlike <span class="c-teal"><strong>Article 2180 CC</strong></span> (quasi-delict) and <span class="c-teal"><strong>Article 103 RPC</strong></span> (delict), both of which require that the employee was performing his assigned task or discharging his duty, <span class="c-teal"><strong>Article 1759 CC</strong></span> holds a common carrier liable to its passengers <span class="c-green"><strong><u>even if the employee acted beyond his authority or violated company orders</u></strong></span>, and bars the defense of due diligence in selection and supervision. (Note: Diligence in selection and supervision is only relevant under <span class="c-teal"><strong>Article 1763</strong></span> when the injury is caused by a <em>stranger or fellow passenger</em>, not by the carrier's own employee).</li>
+</ul>
+
+<h4 id="three-way-master-comparison" class="c-navy">4. Three-Way Master Comparison of Employer Liability</h4>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Feature / Parameter</th>
+      <th>Quasi-Delict (<em>Culpa Aquiliana</em>) (Art. 2180, Civil Code)</th>
+      <th>Criminal Negligence (<em>Ex Delicto</em>) (Art. 103, Revised Penal Code)</th>
+      <th>Breach of Contract of Carriage (<em>Culpa Contractual</em>) (Art. 1759, Civil Code)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Applicable Employer</strong></td>
+      <td>All employers (whether or not engaged in business/industry under Par. 5).</td>
+      <td>Employers <span class="c-green"><strong>engaged in any kind of industry</strong></span>.</td>
+      <td><span class="c-teal"><strong>Common carriers</strong></span> only (in relation to their passengers).</td>
+    </tr>
+    <tr>
+      <td><strong>Nature of Liability</strong></td>
+      <td><span class="c-green"><strong>Primary, Direct, and Solidary</strong></span> with the negligent employee.</td>
+      <td><span class="c-rust"><strong>Subsidiary</strong></span> (secondary to the convicted employee).</td>
+      <td><span class="c-green"><strong>Primary and Direct</strong></span> (only the carrier is a party to the contract of carriage).</td>
+    </tr>
+    <tr>
+      <td><strong>Precondition of Employee Conviction & Insolvency</strong></td>
+      <td><span class="c-green"><strong>None.</strong></span> Independent civil action; employee's solvency is immaterial.</td>
+      <td><span class="c-rust"><strong>Required.</strong></span> Final criminal conviction of employee + proof of <span class="c-rust"><strong>insolvency</strong></span> via Sheriff's Return.</td>
+      <td><span class="c-green"><strong>None.</strong></span> Action is based directly on the breach of the contract of carriage.</td>
+    </tr>
+    <tr>
+      <td><strong>Must Employee Act Within Scope of Assigned Tasks?</strong></td>
+      <td><span class="c-green"><strong>Yes.</strong></span> Must be within the scope of assigned tasks / special business benefit (<span class="c-burgundy"><em>Castillex</em></span>).</td>
+      <td><span class="c-green"><strong>Yes.</strong></span> Offense must be committed in the <span class="c-green"><strong>discharge of his duties</strong></span>.</td>
+      <td><span class="c-rust"><strong>No.</strong></span> Carrier is liable <span class="c-green"><strong>even if employee acted beyond authority or violated orders</strong></span>.</td>
+    </tr>
+    <tr>
+      <td><strong>Defense of Due Diligence in Selection & Supervision</strong></td>
+      <td><span class="c-green"><strong>Yes (Complete Defense).</strong></span> Proving both selection and supervision absolves the employer.</td>
+      <td><span class="c-rust"><strong>No.</strong></span> Not an available defense once the 3 requisites of Art. 103 RPC are proven.</td>
+      <td><span class="c-rust"><strong>No.</strong></span> Expressly barred by Art. 1759, Par. 2; carrier must prove extraordinary diligence in carriage.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="viii-registered-owner-kabit" class="c-navy">VIII. REGISTERED OWNER RULE, THE <em>KABIT</em> SYSTEM, AND RIGHT OF REIMBURSEMENT</h3>
+
+<h4 id="registered-owner-rule" class="c-navy">1. The Registered Owner Rule in Motor Vehicle Mishaps</h4>
+
+<p>In vehicular accidents involving private or public motor vehicles driven by someone other than the owner, Philippine jurisprudence strictly enforces the <span class="c-green"><strong><u>Registered Owner Rule</u></strong></span> (<span class="c-burgundy"><em>Erezo v. Jepte</em></span>; <span class="c-burgundy"><em>Caravan Travel and Tours International, Inc. v. Abejar</em></span>):</p>
+
+<ul>
+  <li><strong>Conclusive Imputation of Employer Status:</strong> In case of motor vehicle mishaps, the <span class="c-green"><strong><u>registered owner</u></strong></span> of the motor vehicle (the person whose name appears on the Land Transportation Office [LTO] Certificate of Registration [CR]) is <span class="c-green"><strong><u>conclusively deemed the employer of the actual driver</u></strong></span> insofar as third persons and the injured public are concerned.</li>
+  <li><strong>Primary and Direct Liability Under Art. 2176 in Relation to Art. 2180:</strong> Even if there is no actual employment relationship between the registered owner and the driver (e.g., the owner merely lent the car to a friend, or leased it out), the law imputes an employer-employee relationship between them and holds the <span class="c-green"><strong><u>registered owner primarily and directly liable</u></strong></span> under <span class="c-teal"><strong>Article 2176 in relation to Article 2180 of the Civil Code</strong></span>.</li>
+  <li><strong>Public Policy Rationale:</strong> The registration of motor vehicles is required not to make the LTO a registry of property titles per se, but to easily <span class="c-green"><strong>identify the person legally responsible</strong></span> to the public in the event of an accident caused by the operation of the vehicle on public highways.</li>
+</ul>
+
+<h4 id="open-deeds-of-sale" class="c-navy">2. The Legal Trap of "Open Deeds of Sale"</h4>
+
+<p>A widespread practice in the Philippines is selling a secondhand vehicle via a notarized or unnotarized <strong>"Open Deed of Sale"</strong> without transferring the LTO Certificate of Registration to the buyer's name (often to save on transfer fees prior to a subsequent resale).</p>
+
+<ul>
+  <li><strong>Continuing Liability of the Seller-Registered Owner:</strong> If the vehicle has already been sold and delivered to Buyer B, and Buyer B (or B's driver) negligently runs over a pedestrian or an expensive dog while the LTO Certificate of Registration is still in Seller A's name, <span class="c-rust"><strong><u>Seller A (the registered owner) remains primarily and directly liable</u></strong></span> to the injured victim.</li>
+  <li><strong>Inability to Evade Public Accountability:</strong> Seller A <span class="c-rust"><strong><u>cannot</u></strong></span> ask for the dismissal of the victim's complaint on the ground that he had already sold the car prior to the accident. His only protection prior to an accident is to ensure immediate transfer of registration at the LTO; after an accident, his recourse is limited to seeking <span class="c-green"><strong>reimbursement</strong></span> (via a third-party complaint or separate action) from the actual buyer/driver.</li>
+</ul>
+
+<h4 id="kabit-system" class="c-navy">3. The <em>Kabit</em> System in Public Transportation</h4>
+
+<p>The <span class="c-rust"><strong><em>kabit</em> system</strong></span> is an arrangement whereby a person who has been granted a <span class="c-teal"><strong>Certificate of Public Convenience (CPC)</strong></span> (popularly referred to as a <em>prangkisa</em> or franchise to operate public utility vehicles along a route) allows other persons who actually own motor vehicles to operate under his license/CPC, usually in exchange for a fee or a percentage of earnings (e.g., individual bus owners painting their buses with the uniform name and trade dress of a single transport cooperative or company to ply a designated route).</p>
+
+<ul>
+  <li><strong>Illegality and Public Policy Condemnation:</strong> Although not outright penalized as a criminal offense by statute, the Supreme Court has consistently declared the <em>kabit</em> system <span class="c-rust"><strong><u>contrary to public policy, therefore void and inexistent</u></strong></span> under <span class="c-teal"><strong>Article 1409 of the Civil Code</strong></span>. It is a pernicious system that deceives the riding public and regulatory agencies regarding accountability and financial capacity.</li>
+  <li><strong>Liability Under the <em>Kabit</em> System:</strong> For the safety of passengers and the public who may have been wronged and deceived through the baneful <em>kabit</em> system, <span class="c-rust"><strong><u>the registered owner of the vehicle and/or the grantee of the Certificate of Public Convenience is estopped and not allowed to prove that another person is the real owner</u></strong></span> in order to relieve himself of responsibility. Both the CPC holder/registered owner and the actual operator/owner are held solidarily accountable to the injured public, while between themselves, being <em>in pari delicto</em> in an illegal contract, neither can enforce the <em>kabit</em> agreement against the other.</li>
+</ul>
+
+<h4 id="right-of-reimbursement" class="c-navy">4. Right of Reimbursement (Article 2181, Civil Code)</h4>
+
+<p>Because vicarious liability under <span class="c-teal"><strong>Article 2180</strong></span> (and the Registered Owner Rule) makes a person pay for damages factually caused by the negligence of another, the law grants a statutory right of recovery:</p>
+
+<ul>
+  <li><strong>Statutory Rule (Article 2181, Civil Code):</strong> <span class="c-teal"><em>"Whoever pays for the damage caused by his dependents or employees may recover from the latter what he has paid or delivered in satisfaction of the claim."</em></span></li>
+  <li><strong>Application:</strong> Once the employer, parent, teacher, or registered owner pays the injured plaintiff the judgment award under Article 2180, they have the legal right to demand <span class="c-green"><strong><u>100% reimbursement</u></strong></span> from the actual negligent employee, dependent, or driver who caused the injury.</li>
+</ul>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Professor's Illustration: The Unregistered Car Sale and Art. 2181 Recourse</strong></span></p>
+  <p>AAA is the LTO-registered owner of a sedan. He sells and delivers the car to BBB under an "open deed of sale," leaving AAA's name on the LTO Certificate of Registration. BBB lends the car to CCC, who negligently hits and kills a prize-winning pedigree dog owned by DDD. Under the <strong>Registered Owner Rule</strong>, DDD can sue <strong>AAA</strong> directly and hold him <strong>primarily liable</strong> as the constructive employer of CCC under <span class="c-teal"><strong>Articles 2176 and 2180</strong></span>. AAA cannot evade DDD's claim by presenting the deed of sale, though once AAA pays DDD, AAA may recover the full amount paid from BBB/CCC pursuant to <span class="c-teal"><strong>Article 2181 of the Civil Code</strong></span>.</p>
+</blockquote>
+
+<!-- MERMAID DIAGRAM: MOTOR VEHICLES -->
+<div class="diagram-wrapper" id="diagram-motor-vehicles">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: MOTOR VEHICLE LIABILITY, REGISTERED OWNER RULE & KABIT SYSTEM <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+flowchart TD
+    Accident["Motor Vehicle Mishap Involving Third Party / Pedestrian"] --> RO["Registered Owner (LTO Certificate of Registration)<br><b>Conclusively Imputed as Employer</b><br><i>Erezo v. Jepte; Caravan Travel v. Abejar</i>"]
+    
+    RO --> Status{"Registration & Operational Status"}
+    
+    Status -->|"Lent to Friend / Leased / Open Deed of Sale"| Unreg["Unregistered Sale / Permissive Use"]
+    Unreg --> RuleUnreg["<b>Registered Owner Primarily & Directly Liable</b><br>Cannot evade liability by presenting deed of sale"]
+    RuleUnreg --> Recourse1["<b>Right of Reimbursement (Art. 2181 CC)</b><br>May recover 100% from actual buyer / negligent driver"]
+    
+    Status -->|"Illegal 'Kabit' System (Franchise Concealment)"| Kabit["Kabit Arrangement (Void & Inexistent - Art. 1409 CC)"]
+    Kabit --> RuleKabit["<b>Franchise/CPC Holder & Actual Operator Solidarily Liable</b><br>Estopped from proving real ownership against public"]
+    RuleKabit --> Recourse2["<b>Between Themselves: In Pari Delicto</b><br>No court recourse or enforcement between parties"]
+    
+    Status -->|"Company Vehicle Driven Outside Working Hours"| Company["Company Service Vehicle<br><i>Castillex Industrial Corp. v. Vasquez</i>"]
+    Company --> BenefitTest{"Special Business Benefit Test"}
+    BenefitTest -->|"Personal Routine / Lunch / Bill Payment / Night Out"| NoBenefit["<b>Employer Not Vicariously Liable</b><br>Driver personally liable under Art. 2176"]
+    BenefitTest -->|"Trip Conferred Special Business Benefit to Employer"| YesBenefit["<b>Employer Presumed Solidarily Liable</b><br>Unless due diligence in selection & supervision proven"]
+
+    classDef primary fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+    class Accident,RO,Status,BenefitTest primary;
+    class Unreg,Kabit,Company teal;
+    class RuleUnreg,RuleKabit,YesBenefit green;
+    class NoBenefit,Recourse2 rust;
+    class Recourse1 teal;
+      </pre>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ========================================================================= -->
+<!-- PART 3 -->
+<!-- ========================================================================= -->
+<h2 id="part-3-heading" class="c-navy">PART 3: SPECIAL IMPUTED LIABILITIES (INNKEEPERS, PARTNERSHIPS, SPOUSES) AND LIABILITY OF THE STATE AND PUBLIC OFFICERS</h2>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-num">IX</div>
+      <div class="ui-kicker">SPECIAL</div>
+      <div class="ui-title">Innkeepers & Firms</div>
+      <div class="ui-sub">Art. 102 RPC subsidiary; Partnership Mutual Agency (Arts. 1822-1824)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">X</div>
+      <div class="ui-kicker">MARRIAGE</div>
+      <div class="ui-title">Spousal Regimes</div>
+      <div class="ui-sub">Charging order: ACP advances (Art. 94) vs. CPG restrictions (Art. 122)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XI</div>
+      <div class="ui-kicker">GOVERNMENT</div>
+      <div class="ui-title">State & LGUs</div>
+      <div class="ui-sub">Special Agent (Art. 2180[6]); LGU Defective Roads (Art. 2189 CC)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-num">XII</div>
+      <div class="ui-kicker">IMMUNITY</div>
+      <div class="ui-title">Public Officers</div>
+      <div class="ui-sub">Ultra vires personal liability; Judicial & Quasi-Judicial good faith immunity</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="part-3-overview" class="c-navy">Part 3 Overview & Scope of Topics</h3>
+
+<ul>
+  <li><strong>IX. Special Imputed Liabilities: Innkeepers and Partnerships:</strong> Subsidiary civil liability of innkeepers, tavernkeepers, and proprietors of establishments under <span class="c-teal">Article 102 of the Revised Penal Code</span>, and solidary tort liability of partnerships and partners under the Doctrine of Mutual Agency (<span class="c-teal">Articles 1822–1824, Civil Code</span>).</li>
+  <li><strong>X. Tort and Delictual Liability Across Spousal Property Regimes:</strong> Rules on charging civil liability arising from quasi-delict and crime under the Absolute Community of Property (<span class="c-teal">Article 94[9], Family Code</span>), Conjugal Partnership of Gains (<span class="c-teal">Articles 121–122, Family Code</span>), and Complete Separation of Property.</li>
+  <li><strong>XI. Vicarious Liability of the State and Local Government Units:</strong> State immunity exception under <span class="c-teal">Article 2180, Paragraph 6</span> (Special Agent vs. Ordinary Agent), and the direct statutory liability of Local Government Units for defective roads, manholes, and public works under <span class="c-teal">Article 2189 of the Civil Code</span> (<span class="c-burgundy"><em>City of Dagupan</em></span> and <span class="c-burgundy"><em>Municipality of San Juan</em></span> cases).</li>
+  <li><strong>XII. Personal Liability of Public Officers and Immunity of Judicial Officers:</strong> Personal liability of public officials for <em>ultra vires</em> or tortious acts (<span class="c-burgundy"><em>Valera v. Revales</em></span> doctrine), immunity of judges and quasi-judicial officers from Article 32 damage suits for honest errors of judgment (<span class="c-burgundy"><em>Cadiz v. Presiding Judge</em></span>), and a preview of Strict Liability Torts.</li>
+  <li><strong>Administrative Matters & Professor's Asides:</strong> Midterm exam grading mechanics, raw-to-percentage score adjustments, upcoming quiz announcement, and assigned readings.</li>
+</ul>
+
+<hr>
+
+<h3 id="ix-innkeepers-partnerships" class="c-navy">IX. SPECIAL IMPUTED LIABILITIES: INNKEEPERS AND PARTNERSHIPS</h3>
+
+<h4 id="subsidiary-liability-innkeepers" class="c-navy">1. Subsidiary Liability of Innkeepers and Hotelkeepers (Article 102, Revised Penal Code)</h4>
+
+<p>Under <span class="c-teal"><strong>Article 102 of the Revised Penal Code</strong></span>, innkeepers, tavernkeepers, and any other persons or corporations shall be <span class="c-rust"><strong>civilly liable (subsidiarily)</strong></span> for crimes committed in their establishments under two distinct scenarios:</p>
+
+<ul>
+  <li><strong>First Paragraph (Violation of Ordinances or Police Regulations):</strong> In all cases where a crime is committed inside the inn, hotel, resort, or tavern, and a <span class="c-rust"><strong>violation of municipal ordinances or some general or special police regulation</strong></span> shall have been committed by the innkeeper or their employees, the innkeeper is <span class="c-rust"><strong>subsidiarily liable</strong></span> (in default of the persons criminally liable) for the restitution of the thing taken or reparation of the damage caused.</li>
+  <li><strong>Second Paragraph (Loss of Guests' Effects via Robbery or Theft):</strong> Innkeepers are also subsidiarily liable for the restitution of goods taken by robbery or theft within their houses from guests lodging therein, or for the payment of the value thereof, provided that:
+    <ol>
+      <li>Such guests shall have <span class="c-green"><strong>notified in advance</strong></span> the innkeeper himself, or the person representing him, of the deposit of such goods within the inn; and</li>
+      <li>The guests shall have <span class="c-green"><strong>followed the directions</strong></span> which such innkeeper or his representative may have given them with respect to the care and vigilance over such goods.</li>
+    </ol>
+  </li>
+  <li><strong>Exception for Robbery with Violence or Intimidation:</strong> <span class="c-rust"><strong><u>No liability attaches in case of robbery with violence against or intimidation of persons unless committed by the innkeeper's own employees.</u></strong></span></li>
+</ul>
+
+<h4 id="partnerships-mutual-agency" class="c-navy">2. Vicarious Liability in Partnerships: The Doctrine of Mutual Agency</h4>
+
+<p>In the Law on Partnership (under <span class="c-teal"><strong>Articles 1822, 1823, and 1824 of the Civil Code</strong></span>), imputed liability for torts is governed by the <span class="c-green"><strong><u>Doctrine of Mutual Agency</u></strong></span>, wherein every partner is an agent of the partnership and of his co-partners for the purpose of its business.</p>
+
+<ul>
+  <li><strong>Operative Rule (Article 1822 in relation to Article 1824, Civil Code):</strong> Where, by any wrongful act or omission of any partner <span class="c-green"><strong><u>acting in the ordinary course of the business of the partnership</u></strong></span> or with the authority of his co-partners, loss or injury is caused to any person (not being a partner in the partnership), the <span class="c-green"><strong><u>partnership is liable</u></strong></span> therefor to the same extent as the partner so acting or omitting to act, and <span class="c-green"><strong><u>all partners are liable solidarily with the partnership</u></strong></span> for everything chargeable to the partnership.</li>
+  <li><strong>Liability Independent of Personal Fault or Knowledge:</strong> Even if the other partners did not participate in, ratify, or have any knowledge of the tortious act committed by the erring partner, they and the partnership are <span class="c-green"><strong><u>solidarily liable</u></strong></span> to the injured third party, provided the tort was committed <span class="c-green"><strong><u>within the scope of the firm's business</u></strong></span>.</li>
+  <li><strong>Inapplicability of the Due Diligence Defense:</strong> Unlike employers under Article 2180, co-partners <span class="c-rust"><strong><u>cannot</u></strong></span> raise the defense of due diligence in the selection and supervision of the erring partner. Because partners stand in a fiduciary relationship of <span class="c-green"><strong>mutual agency</strong></span> as co-principals rather than employer and employee, the negligence of one partner in the ordinary course of partnership business is legally the act of all partners.</li>
+</ul>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Professor's Illustration: Law Firm Partner's Negligence</strong></span></p>
+  <p>Attorneys A, B, and C are partners in a general professional partnership. While driving to the Regional Trial Court to file an urgent pleading for a firm client, Attorney A negligently runs over Pedestrian X. Because Attorney A committed the tort while acting <span class="c-green"><strong>within the scope of the partnership's business</strong></span>, the partnership itself as well as Attorneys A, B, and C are <span class="c-green"><strong>solidarily liable</strong></span> to Pedestrian X under the <span class="c-green"><strong>Doctrine of Mutual Agency</strong></span>. Attorneys B and C cannot evade liability by claiming they had no knowledge of the accident or that they exercised due diligence in selecting and supervising Attorney A.</p>
+</blockquote>
+
+<hr>
+
+<h3 id="x-spousal-property" class="c-navy">X. TORT AND DELICTUAL LIABILITY ACROSS SPOUSAL PROPERTY REGIMES</h3>
+
+<h4 id="overview-property-regimes" class="c-navy">1. Overview of Property Regimes Between Spouses</h4>
+
+<p>When a married person commits a quasi-delict (<em>culpa aquiliana</em>) or a crime (<em>ex delicto</em>) resulting in civil liability for damages, determining <strong>which property</strong> answers for the judgment debt depends on the <strong>property regime</strong> governing the marriage under the <span class="c-teal"><strong>Family Code</strong></span>:</p>
+
+<ol>
+  <li><strong>Absolute Community of Property (ACP):</strong> The default property regime for marriages celebrated on or after August 3, 1988 (absent a marriage settlement). All properties owned by the spouses <strong>before</strong> the marriage and those acquired <strong>during</strong> the marriage form part of a single community fund, except those expressly excluded by law (<span class="c-teal">Article 92, Family Code</span>).</li>
+  <li><strong>Conjugal Partnership of Gains (CPG):</strong> Properties owned by each spouse <strong>prior</strong> to the marriage remain their <strong>exclusive/separate property</strong>, while the proceeds, products, fruits, and income from their separate properties and those acquired by either or both spouses through their efforts or by chance <strong>during</strong> the marriage form a common conjugal fund (<span class="c-teal">Article 106, Family Code</span>).</li>
+  <li><strong>Regime of Complete Separation of Property:</strong> Both present and future properties of each spouse remain completely separate and exclusive to each spouse (<span class="c-teal">Articles 143–145, Family Code</span>).</li>
+</ol>
+
+<h4 id="charging-liabilities-acp" class="c-navy">2. Charging Tort and Criminal Liabilities Under Absolute Community of Property (ACP)</h4>
+
+<p>Under <span class="c-teal"><strong>Paragraph 9 of Article 94 of the Family Code</strong></span>, the Absolute Community of Property shall be liable for:</p>
+
+<ul>
+  <li><strong>Rule:</strong> <span class="c-teal"><em>"Antenuptial debts of either spouse other than those falling under paragraph (7) of this Article, the support of illegitimate children of either spouse, and <strong>liabilities incurred by either spouse by reason of a crime or a quasi-delict</strong>, in case of <strong>absence or insufficiency of the exclusive property of the debtor-spouse</strong>, the payment of which shall be considered as <strong>advances</strong> to be deducted from the share of the debtor-spouse upon liquidation of the community."</em></span></li>
+  <li><strong>Two-Step Order of Charging in ACP:</strong>
+    <ol>
+      <li><strong>Primary Recourse:</strong> Charge the <span class="c-green"><strong>exclusive/separate property</strong></span> of the guilty/tortfeasor spouse first.</li>
+      <li><strong>Subsidiary Recourse (Immediate Advance by ACP):</strong> If the debtor-spouse has <span class="c-rust"><strong>no exclusive property, or if his/her exclusive property is insufficient</strong></span>, the injured victim can immediately enforce the judgment against the <span class="c-green"><strong><u>Absolute Community of Property</u></strong></span>. Whatever the ACP pays is treated as an <span class="c-green"><strong>advance</strong></span> to be deducted from the guilty spouse's net share when the community is eventually liquidated.</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="charging-liabilities-cpg" class="c-navy">3. Charging Tort and Criminal Liabilities Under Conjugal Partnership of Gains (CPG)</h4>
+
+<p>Under <span class="c-teal"><strong>Articles 121 and 122 of the Family Code</strong></span>, the Conjugal Partnership of Gains is much more restrictive regarding personal fines and pecuniary indemnities imposed upon either spouse for crimes or quasi-delicts:</p>
+
+<ul>
+  <li><strong>General Rule:</strong> Fines and pecuniary indemnities imposed upon either spouse (arising from torts or crimes that did <span class="c-rust"><strong>not</strong></span> redound to the benefit of the family) <span class="c-rust"><strong><u>cannot be charged directly to the conjugal partnership property</u></strong></span>; they are chargeable to the <span class="c-green"><strong>exclusive/separate property of the guilty/tortfeasor spouse</strong></span>.</li>
+  <li><strong>Conditional Exception Under Article 122, Par. 3, Family Code:</strong> However, if the debtor-spouse has <span class="c-rust"><strong>no exclusive property or if it is insufficient</strong></span>, such pecuniary indemnities may be enforced against the partnership assets <span class="c-rust"><strong><u>only after the responsibilities enumerated in Article 121</u></strong></span> (support of the family, education of children, taxes, expenses of administration) <span class="c-rust"><strong><u>have been covered</u></strong></span>, and the spouse is charged for what has been paid at the time of liquidation. (In contrast to ACP where Art. 94[9] expressly lists quasi-delict liabilities inside the primary enumeration when exclusive property is insufficient, CPG strictly protects conjugal assets until all Article 121 family charges are first satisfied).</li>
+</ul>
+
+<h4 id="charging-liabilities-separation" class="c-navy">4. Charging Tort Liabilities Under Complete Separation of Property</h4>
+
+<p>Under the <span class="c-teal"><strong>Regime of Separation of Property</strong></span>, there is no community or conjugal fund. Any civil liability arising from a crime or quasi-delict committed by a spouse is chargeable <span class="c-green"><strong><u>exclusively to the separate property of the guilty/tortfeasor spouse</u></strong></span>.</p>
+
+<div class="ui-box ui-workflow">
+  <div class="ui-step-plain">
+    <div class="ui-title">Tort / Delict Committed by a Married Spouse</div>
+  </div>
+  <div class="ui-connector">↓</div>
+  <div class="ui-step-card">
+    <div class="ui-title">Step 1: Always exhaust the exclusive / separate property of the tortfeasor spouse</div>
+  </div>
+  <div class="ui-connector">↓ (If exclusive property absent or insufficient)</div>
+  <div class="ui-grid ui-split-outcome">
+    <div class="ui-col">
+      <div class="ui-kicker">ACP (ART. 94[9] FC)</div>
+      <div class="ui-title">Direct Advance by ACP</div>
+      <div class="ui-sub">Community pays immediately; deducted as advances from debtor spouse's share upon liquidation</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-kicker">CPG (ART. 122 FC)</div>
+      <div class="ui-title">Strictly Conditional CPG</div>
+      <div class="ui-sub">Conjugal assets answer ONLY AFTER all Art. 121 family obligations & support are fully satisfied</div>
+    </div>
+  </div>
+</div>
+
+<h4 id="comparative-table-spousal" class="c-navy">5. Comparative Table of Spousal Property Regimes and Tort Liability</h4>
+
+<table class="ui-table">
+  <thead>
+    <tr>
+      <th>Property Regime</th>
+      <th>Ownership of Pre-Marital & Marital Properties</th>
+      <th>Primary Property Liable for Spouse's Tort / Crime</th>
+      <th>Subsidiary Recourse Against Common Property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Absolute Community of Property (ACP)</strong> (<span class="c-teal">Arts. 88–104, FC</span>)</td>
+      <td>Properties acquired <span class="c-green"><strong>before and during</strong></span> marriage merge into the community property (subject to Art. 92 exclusions).</td>
+      <td><span class="c-green"><strong>Exclusive property</strong></span> of the debtor/tortfeasor spouse (Unless the tort benefited the family under Art. 94[10]).</td>
+      <td><span class="c-green"><strong>Yes (Art. 94, Par. 9, FC).</strong></span> Upon absence or insufficiency of exclusive property, the <span class="c-green"><strong>ACP directly answers</strong></span> as an advance deductible upon liquidation.</td>
+    </tr>
+    <tr>
+      <td><strong>Conjugal Partnership of Gains (CPG)</strong> (<span class="c-teal">Arts. 105–133, FC</span>)</td>
+      <td>Properties brought <span class="c-green"><strong>into</strong></span> marriage remain <span class="c-green"><strong>separate</strong></span>; properties/fruits acquired <span class="c-green"><strong>during</strong></span> marriage are <span class="c-green"><strong>conjugal</strong></span>.</td>
+      <td><span class="c-green"><strong>Separate/Exclusive property</strong></span> of the guilty/tortfeasor spouse.</td>
+      <td><span class="c-rust"><strong>Restricted (Art. 122, FC).</strong></span> Conjugal assets answer only if exclusive property is insufficient <span class="c-rust"><strong>AND</strong></span> only after all Art. 121 family obligations have first been covered.</td>
+    </tr>
+    <tr>
+      <td><strong>Complete Separation of Property</strong> (<span class="c-teal">Arts. 143–146, FC</span>)</td>
+      <td>All properties (present and future, before and during marriage) remain <span class="c-green"><strong>separate</strong></span>.</td>
+      <td><span class="c-green"><strong>Separate property</strong></span> of the guilty/tortfeasor spouse exclusively.</td>
+      <td><span class="c-rust"><strong>None.</strong></span> The innocent spouse's separate properties can never be held liable for the other spouse's personal tort.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 id="xi-state-and-lgus" class="c-navy">XI. VICARIOUS LIABILITY OF THE STATE AND LOCAL GOVERNMENT UNITS</h3>
+
+<h4 id="state-special-vs-ordinary-agent" class="c-navy">1. Liability of the State: Special Agent vs. Ordinary Agent (Article 2180, Paragraph 6)</h4>
+
+<p>Under <span class="c-teal"><strong>Article XVI, Section 3 of the 1987 Constitution</strong></span>, the State may not be sued without its consent. However, <span class="c-teal"><strong>Paragraph 6 of Article 2180 of the Civil Code</strong></span> provides a statutory waiver and exception to State immunity for quasi-delicts under a strict qualification:</p>
+
+<ul>
+  <li><strong>Codal Rule (Article 2180, Paragraph 6):</strong> <span class="c-teal"><em>"The State is responsible in like manner when it acts through a <strong>special agent</strong>; but not when the damage has been caused by the official to whom the task done properly pertains, in which case what is provided in Article 2176 shall be applicable."</em></span></li>
+  <li><strong>Distinction Between a Special Agent and an Ordinary Public Official (<span class="c-burgundy"><em>Merritt v. Government of the Philippine Islands</em></span>):</strong>
+    <ol>
+      <li><strong>Special Agent (State is Liable):</strong> A <span class="c-green"><strong><u>special agent</u></strong></span> is one who receives a <span class="c-green"><strong><u>definite and fixed order or commission, foreign to the exercise of the duties of his office</u></strong></span> if he is a public official (or a private non-official specially commissioned by the government to perform a specific non-regular task). When a tort is committed by a special agent in carrying out that special commission, the <span class="c-green"><strong><u>State is vicariously liable</u></strong></span>.</li>
+      <li><strong>Ordinary Official / Agent (Official is Personally Liable under Art. 2176):</strong> When a government employee or public official causes damage while performing the <span class="c-rust"><strong><u>regular, official duties that properly pertain to his office</u></strong></span>, he is <span class="c-rust"><strong>not</strong></span> a special agent. In such case, the <span class="c-rust"><strong><u>State is NOT liable</u></strong></span>; only the negligent employee is <span class="c-rust"><strong><u>personally liable</u></strong></span> in his private capacity under <span class="c-teal"><strong>Article 2176 of the Civil Code</strong></span>.</li>
+    </ol>
+  </li>
+</ul>
+
+<div class="ui-box">
+  <div class="ui-grid">
+    <div class="ui-col">
+      <div class="ui-icon">🏛️</div>
+      <div class="ui-kicker">SPECIAL AGENT (STATE LIABLE)</div>
+      <div class="ui-title">Foreign Commission</div>
+      <div class="ui-sub">Definite, fixed order foreign to the regular duties of the office (e.g. clerk ordered to drive pick-up)</div>
+    </div>
+    <div class="ui-col">
+      <div class="ui-icon">👤</div>
+      <div class="ui-kicker">ORDINARY AGENT (STATE IMMUNE)</div>
+      <div class="ui-title">Inherent Duty</div>
+      <div class="ui-sub">Performing regular tasks properly pertaining to office (e.g. official chauffeur); Officer personally liable</div>
+    </div>
+  </div>
+</div>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Professor's Illustration: The Government Clerk Ordered to Drive</strong></span></p>
+  <p>Suppose Employee C holds the official Civil Service item of an <strong>Administrative Clerk</strong> in a national government agency (whose regular duties consist solely of filing documents inside the office). One afternoon, the Regional Director issues a definite order commanding Clerk C to drive a government pick-up truck to deliver a letter to a distant provincial office. On the way, Clerk C negligently hits a pedestrian. Because driving a vehicle is <span class="c-green"><strong>foreign to the regular official duties of a clerk</strong></span>, Clerk C was acting as a <span class="c-green"><strong>special agent</strong></span> at that moment, rendering the <span class="c-green"><strong>State vicariously liable</strong></span> under <span class="c-teal"><strong>Article 2180(6)</strong></span>. Conversely, if the vehicle was driven by a regular <strong>Government Chauffeur/Driver</strong> whose official job description is to drive, the driver is an ordinary official, and <span class="c-rust"><strong>only the driver is personally liable under Article 2176</strong></span>, not the State.</p>
+</blockquote>
+
+<h4 id="lgu-defective-public-works" class="c-navy">2. Liability of Local Government Units for Defective Public Works (Article 2189, Civil Code & Section 24, LGC)</h4>
+
+<p>Under <span class="c-teal"><strong>Article 2189 of the Civil Code</strong></span> (and reiterated in <span class="c-teal"><strong>Section 24 of the Local Government Code of 1991</strong></span>), local government units (LGUs) are directly liable for injuries caused by defective public infrastructure:</p>
+
+<ul>
+  <li><strong>Statutory Rule (Article 2189, Civil Code):</strong> <span class="c-teal"><em>"Provinces, cities and municipalities shall be liable for damages for the death of, or injuries suffered by, any person by reason of the <strong>defective condition of roads, streets, bridges, public buildings, and other public works under their control or supervision</strong>."</em></span></li>
+  <li><strong>Ownership Not Required; Control or Supervision Suffices:</strong> To hold a province, city, or municipality liable under <span class="c-teal"><strong>Article 2189</strong></span>, it is <span class="c-green"><strong><u>not necessary</u></strong></span> that the defective road, street, or manhole belongs to or was constructed by the LGU. Even if the road is a <span class="c-green"><strong>national highway owned and being repaired by the Department of Public Works and Highways (DPWH)</strong></span>, as long as it is located within the territorial jurisdiction of the city or municipality and is under its general <span class="c-green"><strong><u>control or supervision</u></strong></span> to regulate traffic and ensure public safety, the LGU is liable if it fails to install adequate warning signs, barricades, or lighting devices.</li>
+</ul>
+
+<h4 id="case-law-art-2189" class="c-navy">3. Case Law Analyses on Article 2189 (Defective Roads and Manholes)</h4>
+
+<h4 id="case-guililatco" class="c-navy">A. <span class="c-burgundy"><em>Guililatco v. City of Dagupan</em></span> (G.R. No. L-61516, March 21, 1989, 171 SCRA 382)</h4>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Guililatco v. City of Dagupan (171 SCRA 382)</strong></span></p>
+  <p><strong>Facts:</strong> Florentina Guililatco, a court interpreter of the Court of First Instance of Dagupan, was about to board a motorized tricycle on a sidewalk along Perez Boulevard (a national road in Dagupan City) when she accidentally fell into an uncovered and unmarked drainage manhole, fracturing her right leg and rendering her unable to perform her duties. Dagupan City argued it was not liable because Perez Boulevard was a national road owned and maintained by the national government (Ministry of Public Highways / DPWH), not the city.</p>
+  <p><strong>Issue:</strong> Is Dagupan City liable under <span class="c-teal">Article 2189 of the Civil Code</span> for injuries caused by an uncovered manhole on a national highway within its territory?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes. Under Article 2189 of the Civil Code, liability attaches not from ownership of the road, but from control or supervision over it.</u></strong></span> Because the charter of Dagupan City grants its city engineer supervision over the maintenance and lighting of all streets and public places within the city to ensure the safety of the public, the city was negligent in failing to cover the manhole or post warning signs.</p>
+</blockquote>
+
+<h4 id="case-san-juan" class="c-navy">B. <span class="c-burgundy"><em>Municipality of San Juan v. Court of Appeals</em></span> (G.R. No. 121920, August 9, 2005, 466 SCRA 78)</h4>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Municipality of San Juan v. Court of Appeals (466 SCRA 78)</strong></span></p>
+  <p><strong>Facts:</strong> During a heavy downpour at night on May 26, 1988, Assistant City Prosecutor Laura Biglang-awa was driving along Santolan Road (a national road in San Juan, Metro Manila) when her car's right front wheel fell into an open, unbarricaded excavation/manhole dug for water pipe repairs, causing her vehicle to flip and sustaining serious injuries. The local government defense claimed they had placed a <em>gasera</em> (kerosene lamp) covered to keep the rain from extinguishing it as a warning device.</p>
+  <p><strong>Issue:</strong> Can the Municipality of San Juan be held liable under <span class="c-teal">Article 2189 of the Civil Code</span> for failing to install adequate warning signs on the Santolan Road excavation?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-green"><strong><u>Yes. A covered gasera during a torrential night rain is grossly inadequate and invisible to motorists, defeating its very function as a warning device.</u></strong></span> Under <span class="c-teal"><strong>Article 2189 of the Civil Code</strong></span>, the municipality has the statutory duty to keep streets within its territorial supervision safe and to provide <span class="c-green"><strong><u>sufficient, visible warning signs and barricades</u></strong></span> around road excavations to prevent injury to the traveling public.</p>
+</blockquote>
+
+<hr>
+
+<h3 id="xii-public-officers-immunity" class="c-navy">XII. PERSONAL LIABILITY OF PUBLIC OFFICERS AND IMMUNITY OF JUDICIAL OFFICERS</h3>
+
+<h4 id="personal-liability-public-officers" class="c-navy">1. Personal Liability of Public Officers for Tortious or Illegal Acts</h4>
+
+<p>Public officers who commit <span class="c-rust"><strong><u>tortious conduct, <em>ultra vires</em> acts, or acted with malice, bad faith, or gross negligence</u></strong></span> are <span class="c-rust"><strong><u>personally liable</u></strong></span> in their private capacity for damages and <span class="c-rust"><strong><u>cannot invoke the defense of State Immunity from Suit</u></strong></span>.</p>
+
+<ul>
+  <li><strong>Doctrine in <span class="c-burgundy"><em>Valera v. Revales</em></span> / <span class="c-burgundy"><em>Vinzons-Chato v. Fortune Tobacco</em></span>:</strong> When a public officer (such as a City Mayor who wrongfully and arbitrarily issues a notice of termination against an employee, causing mental torture, anguish, sleepless nights, and wounded feelings) is sued for moral and exemplary damages, the suit is against the officer in his <span class="c-rust"><strong>personal capacity</strong></span>, even if the caption of the complaint includes his official title ("City Mayor").</li>
+  <li><strong>Rationale:</strong> The <span class="c-green"><strong><u>State can never be the author of illegal or wrongful acts</u></strong></span>. When a public officer steps outside the bounds of law and commits an actionable tort or violates a citizen's rights under <span class="c-teal"><strong>Articles 19, 20, 21, or 32 of the Civil Code</strong></span>, the officer strips himself of the cloak of official immunity and answers personally with his own funds.</li>
+</ul>
+
+<h4 id="immunity-judicial-officers" class="c-navy">2. Immunity of Judges and Officers Performing Quasi-Judicial Functions (Article 32, Civil Code)</h4>
+
+<p>While <span class="c-teal"><strong>Article 32 of the Civil Code</strong></span> renders any public officer or private individual directly liable for damages for obstructing, defeating, violating, or in any manner impeding or impairing a citizen's constitutional rights and liberties, it contains an <span class="c-rust"><strong>express statutory exception</strong></span> in its first paragraph: <em>"(...) unless such responsibility is clearly excluded by law, as in the case of <span class="c-green"><strong>judges</strong></span>."</em></p>
+
+<ul>
+  <li><strong>Judicial and Quasi-Judicial Immunity:</strong> Judges exercising judicial functions, as well as public officers and commissioners exercising <span class="c-green"><strong>quasi-judicial functions</strong></span>, <span class="c-green"><strong><u>cannot be held civilly liable for moral or other damages</u></strong></span> under Article 32 or general tort provisions for <span class="c-green"><strong><u>honest errors of judgment</u></strong></span> committed in good faith in the performance of their official adjudicatory duties.</li>
+  <li><strong>Proper Recourse of an Aggrieved Litigant:</strong> If a party loses a case and suffers sleepless nights or mental anguish because they believe the judge or quasi-judicial officer promulgated an erroneous decision, the losing party <span class="c-rust"><strong><u>cannot file a civil action for damages</u></strong></span> against the judge. The proper legal remedy is to avail of judicial remedies under the Rules of Court—such as an <span class="c-teal"><strong>appeal (Rule 45)</strong></span> or a special civil action for <span class="c-teal"><strong>certiorari (Rule 65)</strong></span> based on grave abuse of discretion. <span class="c-rust">Allowing losing litigants to sue judges for damages would paralyze the administration of justice and trigger endless retaliatory litigation.</span></li>
+</ul>
+
+<h4 id="case-cadiz" class="c-navy">3. Case Law Analysis: <span class="c-burgundy"><em>Cadiz v. Presiding Judge, RTC Branch 48, Puerto Princesa</em></span> / IBP Disbarment Immunity Doctrine</h4>
+
+<blockquote>
+  <p><span class="c-burgundy"><strong>Cadiz v. Presiding Judge / IBP Disbarment Immunity Doctrine</strong></span></p>
+  <p><strong>Facts:</strong> In a disbarment complaint investigated by the Integrated Bar of the Philippines (IBP), the Investigating Commissioner and the members of the IBP Board of Governors recommended the disbarment or disciplinary sanction of a private respondent lawyer. Aggrieved by the recommendation, the respondent lawyer filed a civil action for damages in the Regional Trial Court against the IBP Investigating Commissioner and the Board of Governors.</p>
+  <p><strong>Issue:</strong> Can the IBP Investigating Commissioner and the members of the IBP Board of Governors be sued for damages in a regular court for acts and recommendations made in the performance of their quasi-judicial disciplinary functions?</p>
+  <p><strong>Ruling / Ratio:</strong> <span class="c-rust"><strong><u>No. Investigating Commissioners and the Board of Governors of the IBP perform quasi-judicial functions as an arm of the Supreme Court in administrative disciplinary proceedings against lawyers.</u></strong></span> Like judges, officers performing quasi-judicial functions are <span class="c-green"><strong><u>immune from civil liability for honest errors of judgment</u></strong></span> committed in the discharge of their official duties, and any error in their findings is reviewable exclusively by the Supreme Court, not through a damage suit in the RTC.</p>
+</blockquote>
+
+<h4 id="bridge-strict-liability" class="c-navy">4. Bridge to Next Topic: Strict Liability Torts</h4>
+
+<p>Whereas <span class="c-green"><strong>vicarious liability</strong></span> under Article 2180 is anchored on a rebuttable presumption of negligence in selection or supervision, <span class="c-green"><strong>strict liability torts</strong></span> (covered under <span class="c-teal">Articles 2183 to 2193 of the Civil Code</span> and special laws) impose civil liability <span class="c-green"><strong><u>independent of fault or negligence</u></strong></span> by reason of the inherent risk or nature of certain relationships, possessions (such as animals or falling objects), or business activities.</p>
+
+<!-- MERMAID DIAGRAM: PUBLIC OFFICERS & JUDICIAL IMMUNITY -->
+<div class="diagram-wrapper" id="diagram-public-officers">
+  <div class="diagram-toolbar">
+    <span class="diagram-label">DIAGRAM VIEW: PUBLIC OFFICER TORT LIABILITY VS. JUDICIAL IMMUNITY <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+    <div class="diagram-controls">
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+      <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+      <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+      <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="diagram-viewport">
+    <div class="diagram-container">
+      <pre class="mermaid">
+flowchart TD
+    Act["Act or Omission of Public Officer / Adjudicator"] --> Classification{"Nature of Act & Official Capacity"}
+    
+    Classification -->|"Executive / Administrative: Tortious / Ultra Vires"| Exec["Tortious Conduct, Malice, Bad Faith, Gross Negligence<br><i>Valera v. Revales; Vinzons-Chato v. Fortune Tobacco</i>"]
+    Exec --> Strip["<b>Stripped of Official Immunity Cloak</b><br>State can never be author of illegal acts"]
+    Strip --> ExecLiable["<b>Officer Personally Liable in Private Capacity</b><br>Answers with personal assets (Arts. 19, 20, 21, 32 CC)"]
+    
+    Classification -->|"Performance of Regular Official Duties (Ordinary Agent)"| OrdAgent["Ordinary Public Official Performing Inherent Job Tasks"]
+    OrdAgent --> OrdLiable["<b>State Not Liable (State Immunity)</b><br>Employee personally liable under Art. 2176 CC"]
+    
+    Classification -->|"Definite Order Foreign to Office Duties (Special Agent)"| SpecAgent["Special Agent Acting Under Fixed Executive Commission<br><b>Art. 2180, Par. 6, Civil Code</b><br><i>Merritt v. GPI</i>"]
+    SpecAgent --> StateLiable["<b>State Vicariously Liable</b><br>(Statutory waiver of state immunity)"]
+    
+    Classification -->|"Judicial / Quasi-Judicial Adjudication (Judges & IBP Board)"| Judic["Judicial & Quasi-Judicial Officers<br><b>Art. 32 Statutory Exception; Cadiz Doctrine</b>"]
+    Judic --> JudTest{"Honest Error of Judgment in Good Faith?"}
+    JudTest -->|"Yes (Official Adjudicatory Act)"| JudImmune["<b>Immune from Civil Damage Suits</b><br>Damage suits prohibited to prevent paralyzing justice"]
+    JudImmune --> JudRemedy["<b>Exclusive Recourse: Judicial Remedies</b><br>Appeal (Rule 45) or Certiorari (Rule 65)"]
+    JudTest -->|"No (Corrupt Extortion / Bad Faith)"| JudLiable["Subject to Administrative Sanction / Criminal Prosecution"]
+
+    classDef primary fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+
+    class Act,Classification,JudTest primary;
+    class Exec,OrdAgent,SpecAgent,Judic teal;
+    class ExecLiable,StateLiable,JudRemedy green;
+    class Strip,OrdLiable,JudImmune,JudLiable rust;
+      </pre>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ========================================================================= -->
+<!-- ADMINISTRATIVE MATTERS & PROFESSOR'S ASIDES -->
+<!-- ========================================================================= -->
+<h3 id="administrative-matters" class="c-navy">Administrative Matters & Professor's Asides</h3>
+
+<h4 id="midterm-grading-mechanics" class="c-navy">Midterm Grading Breakdown and Score Computation Adjustment</h4>
+
+<ul>
+  <li><strong>Grading Formula:</strong> The midterm grade is composed of <span class="c-green"><strong>50% Class Standing</strong></span> (which aggregates Quizzes [over 60], Recitation, and Other Requirements/Digests) and <span class="c-green"><strong>50% Midterm Exam Score</strong></span>.</li>
+  <li><strong>Raw Score vs. Percentage Re-computation:</strong> The professor announced that the Midterm Exam was graded over <strong>80 points</strong> (not 100 points). However, in the initial grade slips distributed during class (with privacy strips attached for Data Privacy compliance), the <strong>third-to-the-last column</strong> mistakenly reflected the students' <strong>raw score</strong> over 80 instead of the <strong>percentage score</strong> (e.g., a raw score of 60/80 was encoded as 60 instead of its percentage equivalent).</li>
+  <li><strong>Expected Grade Increase:</strong> The professor will re-compute and divide each student's raw midterm exam score by 80 to obtain the proper percentage score on the official grading sheet, meaning students' final midterm grades will <span class="c-green"><strong>increase</strong></span> once adjusted. Physical exam booklets will be returned at the next meeting.</li>
+  <li><strong>Case Digests:</strong> The professor noted she had temporarily forgotten to factor in or bring the submitted case digests earlier, which students had inquired about during the Teachers' Day greeting.</li>
+</ul>
+
+<h4 id="upcoming-quiz-announcement" class="c-navy">Upcoming Assessment / Quiz Announcement</h4>
+
+<ul>
+  <li><strong>One-Hour Quiz Next Meeting:</strong> There will be a mandatory <span class="c-rust"><strong><u>one-hour quiz</u></strong></span> at the start of the next class session covering the entirety of <span class="c-green"><strong>Vicarious Liability</strong></span>, immediately before the lecture transitions to <span class="c-green"><strong>Strict Liability Torts</strong></span>.</li>
+</ul>
+
+<h4 id="mandatory-case-readings" class="c-navy">Mandatory Case Reading Assignments</h4>
+
+<ul>
+  <li><span class="c-burgundy"><em><strong>Amadora v. Court of Appeals</strong></em></span>, 160 SCRA 315 (Supervisory custody of schools and teachers after the close of the semester / graduation rehearsals).</li>
+  <li><span class="c-burgundy"><em><strong>St. Francis High School v. Court of Appeals</strong></em></span>, 194 SCRA 341 (Explicitly assigned during the lecture; liability of a school as an employer during an unsanctioned private beach picnic).</li>
+  <li><span class="c-burgundy"><em><strong>Philippine School of Business Administration (PSBA) v. Court of Appeals</strong></em></span>, 205 SCRA 729 (Contractual liability of a school to provide a safe learning environment when the assailant is an outsider).</li>
+  <li><span class="c-burgundy"><em><strong>Castillex Industrial Corporation v. Vasquez, Jr.</strong></em></span>, G.R. No. 132266, December 21, 1999 (Company-issued vehicles and the Special Business Benefit Test).</li>
+  <li><span class="c-burgundy"><em><strong>Valera v. Revales</strong></em></span>, G.R. No. 171705, July 19, 2010 (Personal liability of a City Mayor sued for moral damages arising from wrongful acts).</li>
+  <li><strong>Professor's Follow-up Verification:</strong> The professor noted she will re-verify the full text of the Supreme Court decision involving the hospital/doctor subsidiary execution under <span class="c-teal"><strong>Article 103 of the Revised Penal Code</strong></span> to confirm the exact procedural mechanics of filing a Motion for the Issuance of a Writ of Subsidiary Execution after the Sheriff's Return of insolvency.</li>
+</ul>
+
+<h4 id="practical-litigation-insights" class="c-navy">Professor's Practical Legal & Litigation Insights</h4>
+
+<ul>
+  <li><strong>Corporate Defense Practice Tip:</strong> When retained as legal counsel for corporate employers, always advise management to maintain a paper trail of pre-employment clearances (Barangay, Police, NBI, Prosecutor), written exams, SOPs, Operations Manuals, and periodic performance appraisals (such as IPCRs in government or private appraisal forms). Oral claims of due diligence in court will fail without documentary proof under <span class="c-teal"><strong>Article 2180</strong></span>.</li>
+  <li><strong>Civil Service Hiring Aside (DOLE GIP vs. Academic OJT):</strong> While discussing pre-employment qualification standards, the professor shared a real-world recruitment dilemma in her office regarding hiring fresh Social Work graduates when the Civil Service position requires one (1) year of relevant work experience. Undergraduate On-the-Job Training (OJT) cannot be credited as work experience because it is merely part of the academic curriculum, whereas a six-month internship under the <span class="c-green"><strong>DOLE Government Internship Program (GIP)</strong></span> is formally credited as government work experience.</li>
+  <li><strong>Motor Vehicle Sales Advice:</strong> Never leave a sold vehicle under an "Open Deed of Sale" without transferring the LTO Certificate of Registration to the buyer; otherwise, under the <span class="c-green"><strong>Registered Owner Rule</strong></span>, you remain the primary defendant in any future road accident involving that vehicle.</li>
+  <li><strong>Recitation Etiquette:</strong> During class distribution of grade slips, the professor reminded students (specifically Mr. Ontang, who answered that he came from Sagada on Sunday when asked why he was absent on Monday) to always make their answers <span class="c-rust"><strong>responsive</strong></span> to the question asked—a crucial habit for both oral recitations and the Bar Examinations.</li>
+</ul>
+
+</div> <!-- .document-container -->
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#EFF6FF', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
