@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rule 117: Motion to Quash, Double Jeopardy &amp; Provisional Dismissal</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.95rem;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  color: #1E3A8A;
+  font-size: 1.45rem;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin-top: 1.85rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 4.5rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 4.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.25rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+li > ul, li > ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  cursor: pointer;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1.05rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 2px solid #CBD5E1;
+  background-color: #F8FAFC;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+.ui-table tr:hover td {
+  background-color: #F8FAFC;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 280px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+@media print {
+  .sticky-nav, .diagram-toolbar { display: none; }
+  .document-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
+}
+  </style>
+</head>
+<body>
+
+<!-- STICKY TOPIC NAVIGATION BAR -->
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#nature-of-a-motion-to-quash">1. Nature of a Motion to Quash (Bar 2016)</option>
+      <option value="#grounds-not-waived">2. Grounds Not Waived (Sec. 9)</option>
+      <option value="#time-for-filing-the-motion-to-quash">3. Time for Filing the Motion to Quash (Bar 1994)</option>
+      <option value="#form-and-contents-of-the-motion-to-quash">4. Form and Contents (Sec. 2)</option>
+      <option value="#motion-to-quash-vs-demurrer-to-evidence">5. Motion to Quash vs. Demurrer to Evidence (Bar 2013)</option>
+      <option value="#court-to-consider-only-those-grounds-stated">6. Court Confined to Stated Grounds</option>
+      <option value="#grounds-for-a-motion-to-quash">7. Grounds for a Motion to Quash (9 Grounds)</option>
+      <option value="#affidavit-of-desistance">8. Affidavit of Desistance Not a Ground</option>
+      <option value="#absence-of-probable-cause">9. Absence of Probable Cause Not a Ground (Bar 2015)</option>
+      <option value="#matters-of-defense">10. Matters of Defense Not Grounds</option>
+      <option value="#absence-of-preliminary-investigation">11. Absence of Preliminary Investigation (Bar 2009)</option>
+      <option value="#test-in-appreciating-motion-to-quash">12. Test in Appreciating a Motion to Quash</option>
+      <option value="#alternative-actions-of-the-court">13. Alternative Actions of the Court</option>
+      <option value="#amendment-of-the-information">14. Amendment of the Information (Sec. 4)</option>
+      <option value="#quashal-of-the-information-refiling">15. Quashal: Re-filing &amp; Custody Rules (Bar 1994)</option>
+      <option value="#denial-of-a-motion-to-quash">16. Denial of a Motion to Quash</option>
+      <option value="#diagram-procedural-lifecycle">&nbsp;&nbsp;↳ DIAGRAM: Motion to Quash Procedural Lifecycle</option>
+      <option value="#double-jeopardy-foundations">I. Double Jeopardy: Scope &amp; Foundations</option>
+      <option value="#fundamental-concepts-of-double-jeopardy">17. Fundamental Concepts of Double Jeopardy</option>
+      <option value="#inapplicability-in-non-criminal-proceedings">18. Inapplicability in Non-Criminal Proceedings</option>
+      <option value="#requisites-for-double-jeopardy-to-attach">19. Requisites for Double Jeopardy to Attach (5 Elements)</option>
+      <option value="#detailed-analysis-of-each-requisite">20. Detailed Analysis of Each Requisite</option>
+      <option value="#req-valid-complaint">&nbsp;&nbsp;↳ Requisite 1: Valid Complaint or Information</option>
+      <option value="#req-competent-court">&nbsp;&nbsp;↳ Requisite 2: Court of Competent Jurisdiction</option>
+      <option value="#req-arraignment-plea">&nbsp;&nbsp;↳ Requisites 3 &amp; 4: Arraignment and Valid Plea</option>
+      <option value="#req-termination-mode">&nbsp;&nbsp;↳ Requisite 5: Prior Conviction, Acquittal, or Dismissal</option>
+      <option value="#express-consent-vs-acquittal">21. Express Consent vs. Dismissals Equivalent to Acquittal</option>
+      <option value="#effects-and-finality-of-acquittal">22. Effects &amp; Finality-of-Acquittal Doctrine</option>
+      <option value="#double-jeopardy-in-quasi-offenses">23. Quasi-Offenses &amp; The Ivler Doctrine</option>
+      <option value="#exceptions-to-double-jeopardy">24. Statutory Exceptions (Sec. 7)</option>
+      <option value="#same-offense-vs-different-offenses">25. "Same Offense" vs. "Different Offenses"</option>
+      <option value="#diagram-double-jeopardy">&nbsp;&nbsp;↳ DIAGRAM: Double Jeopardy Architecture &amp; Exceptions</option>
+      <option value="#provisional-dismissal">26. Provisional Dismissal (Rule 117, Sec. 8)</option>
+      <option value="#the-time-bar-rule">27. The Time-Bar Rule (1-Year &amp; 2-Year Limits)</option>
+      <option value="#congested-jail-guidelines">28. Congested Jail Guidelines (A.M. No. 12-11-2-SC)</option>
+      <option value="#withdrawal-vs-provisional-dismissal">29. Withdrawal of Information vs. Motion to Dismiss</option>
+      <option value="#diagram-provisional-dismissal">&nbsp;&nbsp;↳ DIAGRAM: Provisional Dismissal Procedure &amp; Time-Bar</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1>CHAPTER IX: MOTION TO QUASH (Rule 117)</h1>
+
+  <!-- EXECUTIVE ROADMAP UI BOX -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">ASSAIL</div>
+        <div class="ui-title">Motion to Quash</div>
+        <div class="ui-sub">Facial defects &amp; omnibus rule before plea</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">ADJUDICATE</div>
+        <div class="ui-title">Court Action</div>
+        <div class="ui-sub">Order amendment, sustain, or interlocutory denial</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">SHIELD</div>
+        <div class="ui-title">Double Jeopardy</div>
+        <div class="ui-sub">5 concurring requisites &amp; acquittal finality</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">COUNTDOWN</div>
+        <div class="ui-title">Provisional Dismissal</div>
+        <div class="ui-sub">Consent + notice &amp; the 1/2-year time-bar</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="nature-of-a-motion-to-quash">1. Nature of a Motion to Quash (Bar 2016)</h3>
+
+  <p>A <span class="c-navy"><strong>motion to quash</strong></span> is a special procedural remedy governed by <span class="c-teal"><strong>Rule 117 of the Revised Rules of Criminal Procedure</strong></span>. Jurisprudence highlights the following key characteristics:</p>
+
+  <!-- KEY CHARACTERISTICS UI PILLARS -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">📜</div>
+        <div class="ui-title">Facial Validity</div>
+        <div class="ui-sub">Attacks insufficiency apparent on the face of the charge sheet</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Hypothetical Admission</div>
+        <div class="ui-sub">Averred facts assumed true to test legal sufficiency</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">No Matters <em>Aliunde</em></div>
+        <div class="ui-sub">Extrinsic evidence excluded (save double jeopardy &amp; prescription)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📥</div>
+        <div class="ui-title">Omnibus Rule</div>
+        <div class="ui-sub">All available grounds must be raised or deemed waived</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Mode of Assailing Validity</strong>: It is the procedural mode by which an accused assails the validity of a criminal complaint or information filed against him for <span class="c-rust"><strong><u>insufficiency on its face in point of law</u></strong></span>, or for defects that are apparent on the face of the charge sheet.</li>
+    <li><strong>Hypothetical Admission</strong>: Filing a motion to quash operates as a <span class="c-green"><strong><u>hypothetical admission</u></strong></span> of the facts alleged in the information.
+      <ul>
+        <li><em>The Fundamental Test</em>: The court determines the sufficiency of the averments in the information by assessing whether the facts alleged, <span class="c-green"><strong><u>if hypothetically admitted to be true, would establish the essential elements of the crime defined by law</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><strong>Exclusion of Extrinsic Evidence (General Rule)</strong>: Evidence <em>aliunde</em> or matters extrinsic to the information are generally <span class="c-rust"><strong><u>not considered</u></strong></span>. The motion must be decided based solely on the face of the information.
+      <ul>
+        <li><em>Exceptions</em>: Motions to quash anchored on <span class="c-teal"><strong>double jeopardy</strong></span> or <span class="c-teal"><strong>extinction of criminal action/liability</strong></span> may, by their nature, be proved using facts outside the allegations of the information.</li>
+      </ul>
+    </li>
+    <li><strong>Omnibus Motion Principle</strong>: Under <span class="c-teal"><strong>Section 8, Rule 15</strong></span> in relation to <span class="c-teal"><strong>Section 9, Rule 117</strong></span>, a motion to quash functions as an omnibus motion. An accused must include all available objections in the motion; any objection not included is deemed <span class="c-rust"><strong><u>waived</u></strong></span>.
+      <ul>
+        <li><em>Waiver mechanisms</em>: A ground is waived if the accused either (1) fails to file a motion to quash before entering a plea, or (2) files a motion to quash but omits an available ground. For example, failure to object to duplicity of offenses or formal defects before entering a plea waives those objections, and they cannot be raised for the first time on appeal.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="grounds-not-waived">2. Grounds Not Waived</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 9, Rule 117</strong></span>, while the general rule mandates that any ground not asserted prior to a plea is deemed waived, there are <span class="c-green"><strong>four (4) explicit exceptions</strong></span>—grounds that are <span class="c-rust"><strong><u>NOT waived</u></strong></span> even if omitted from a motion to quash or raised for the first time later:</p>
+
+  <!-- FOUR NON-WAIVED GROUNDS CARDS -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">1️⃣</div>
+        <div class="ui-title">No Offense Charged</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 3(a)</span>: Facts charged do not constitute an offense</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">2️⃣</div>
+        <div class="ui-title">Subject-Matter Jurisdiction</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 3(b)</span>: Court has no jurisdiction over offense charged</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">3️⃣</div>
+        <div class="ui-title">Extinction of Liability</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 3(g)</span>: Criminal action or liability extinguished</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">4️⃣</div>
+        <div class="ui-title">Double Jeopardy</div>
+        <div class="ui-sub"><span class="c-teal">Sec. 3(i)</span>: Previous conviction, acquittal, or dismissal</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Failure to Charge an Offense</strong>: That the facts charged do not constitute an offense (<span class="c-teal">Sec. 3[a], Rule 117</span>).</li>
+    <li><strong>Lack of Subject-Matter Jurisdiction</strong>: That the court trying the case has no jurisdiction over the offense charged (<span class="c-teal">Sec. 3[b], Rule 117</span>).</li>
+    <li><strong>Extinction of Liability</strong>: That the criminal action or liability has been extinguished (<span class="c-teal">Sec. 3[g], Rule 117</span>).</li>
+    <li><strong>Double Jeopardy</strong>: That the accused has been previously convicted or acquitted of the offense charged, or the case against him was dismissed or otherwise terminated without his express consent (<span class="c-teal">Sec. 3[i], Rule 117</span>).</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="time-for-filing-the-motion-to-quash">3. Time for Filing the Motion to Quash (Bar 1994)</h3>
+
+  <ul>
+    <li><strong>General Rule</strong>: A motion to quash may be made <span class="c-green"><strong><u>at any time before the accused enters his plea</u></strong></span> (<span class="c-teal">Sec. 1, Rule 117</span>).</li>
+    <li><strong>Cases Subject to Summary Procedure</strong>: Under <span class="c-teal"><strong>Section 19 of the 1991 Rule on Summary Procedure</strong></span>, a motion to quash is <span class="c-rust"><strong><u>prohibited</u></strong></span>, <strong>EXCEPT</strong> on two specific grounds:
+      <ol>
+        <li>Lack of jurisdiction over the subject matter; or</li>
+        <li>Failure to comply with mandatory <em>barangay</em> conciliation proceedings under <span class="c-teal">Section 18 of the Rule on Summary Procedure</span>.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <!-- SUMMARY PROCEDURE EXCEPTION WORKFLOW -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Cases Governed by the 1991 Rule on Summary Procedure</div>
+      <div class="ui-sub">General Rule: Motion to Quash is a Prohibited Pleading</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Exception 1</div>
+        <div class="ui-sub">Lack of subject-matter jurisdiction</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Exception 2</div>
+        <div class="ui-sub">Non-compliance with mandatory <em>Katarungang Pambarangay</em></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="form-and-contents-of-the-motion-to-quash">4. Form and Contents of the Motion to Quash</h3>
+
+  <p>A motion to quash cannot be made orally in open court. Under <span class="c-teal"><strong>Section 2, Rule 117</strong></span>, the motion must strictly comply with three (3) statutory requisites:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">✍️</div>
+        <div class="ui-title">1. In Writing</div>
+        <div class="ui-sub">Oral motions in open court are strictly unauthorized</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🖋️</div>
+        <div class="ui-title">2. Signed</div>
+        <div class="ui-sub">Must be subscribed by the accused or counsel of record</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🎯</div>
+        <div class="ui-title">3. Distinct Grounds</div>
+        <div class="ui-sub">Distinctly specify factual and legal grounds relied upon</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li>It must be <span class="c-green"><strong><u>in writing</u></strong></span>;</li>
+    <li>It must be <span class="c-green"><strong><u>signed by the accused or his counsel</u></strong></span>; and</li>
+    <li>It must <span class="c-green"><strong><u>distinctly specify the factual and legal grounds</u></strong></span> upon which it is based.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="motion-to-quash-vs-demurrer-to-evidence">5. Motion to Quash vs. Demurrer to Evidence (Distinctions) (Bar 2013)</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Feature</th>
+        <th style="width: 39%;">Motion to Quash (Rule 117)</th>
+        <th style="width: 39%;">Demurrer to Evidence (Rule 119)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Time of Filing</strong></td>
+        <td>Filed <span class="c-green"><strong>before the accused enters a plea</strong></span> (<span class="c-teal">Sec. 1, Rule 117</span>).</td>
+        <td>Filed <span class="c-burgundy"><strong>after the prosecution rests its case</strong></span> (<span class="c-teal">Sec. 23, Rule 119</span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Leave of Court</strong></td>
+        <td>Does <span class="c-green"><strong>not require</strong></span> prior leave of court.</td>
+        <td>May be filed either <span class="c-teal"><strong>with or without leave of court</strong></span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Grounds</strong></td>
+        <td>Based exclusively on the statutory grounds enumerated in <span class="c-teal"><strong>Section 3, Rule 117</strong></span>.</td>
+        <td>Based solely on the <span class="c-rust"><strong>insufficiency of evidence</strong></span> to sustain conviction.</td>
+      </tr>
+      <tr>
+        <td><strong>Basis of Determination</strong></td>
+        <td>Generally determined from the <span class="c-navy"><strong>face of the complaint or information</strong></span>.</td>
+        <td>Predicated on <span class="c-navy"><strong>matters outside the information</strong></span>, specifically the prosecution's evidence (or lack thereof).</td>
+      </tr>
+      <tr>
+        <td><strong>Effect of Granting</strong></td>
+        <td>Does <span class="c-green"><strong>not automatically dismiss</strong></span> or terminate the case; the court may order an amendment or the filing of a new information (generally not a bar to re-prosecution).</td>
+        <td>Results in an outright <span class="c-rust"><strong><u>dismissal on the merits</u></strong></span>, which operates as an <span class="c-green"><strong>acquittal</strong></span> and bars re-prosecution under double jeopardy.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="court-to-consider-only-those-grounds-stated">6. Court to Consider Only Those Grounds Stated in the Motion</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 2, Rule 117</strong></span>, the trial court is strictly confined to the motion's contents:</p>
+
+  <ul>
+    <li><strong>General Rule</strong>: The court shall consider <span class="c-rust"><strong><u>no ground other than those expressly stated</u></strong></span> in the motion to quash.</li>
+    <li><strong>Sole Statutory Exception</strong>: <span class="c-teal"><strong><u>Lack of jurisdiction over the offense charged</u></strong></span>. The court may consider and dismiss the case on this ground <span class="c-green"><em>motu proprio</em></span> even if omitted from the motion.</li>
+    <li><em>Application</em>: Even if an information contains statements showing a legal excuse or justification, the court cannot quash the case on that basis unless the accused explicitly stated that ground in his motion.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="grounds-for-a-motion-to-quash">7. Grounds for a Motion to Quash (Bar 1987, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1998, 1999, 2000, 2002, 2003, 2004, 2005, 2009, 2010, 2016)</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 3, Rule 117</strong></span>, a complaint or information may be quashed on any of the following <span class="c-green"><strong>nine (9) statutory grounds</strong></span>:</p>
+
+  <ol>
+    <li><span class="c-teal"><strong>Sec. 3(a)</strong></span>: That the facts charged do not constitute an offense.</li>
+    <li><span class="c-teal"><strong>Sec. 3(b)</strong></span>: That the court trying the case has no jurisdiction over the offense charged.</li>
+    <li><span class="c-teal"><strong>Sec. 3(c)</strong></span>: That the court trying the case has no jurisdiction over the person of the accused.</li>
+    <li><span class="c-teal"><strong>Sec. 3(d)</strong></span>: That the officer who filed the information had no authority to do so.</li>
+    <li><span class="c-teal"><strong>Sec. 3(e)</strong></span>: That it does not conform substantially to the prescribed form.</li>
+    <li><span class="c-teal"><strong>Sec. 3(f)</strong></span>: That more than one offense is charged, except when a single punishment for various offenses is prescribed by law (duplicity of offenses).</li>
+    <li><span class="c-teal"><strong>Sec. 3(g)</strong></span>: That the criminal action or liability has been extinguished.</li>
+    <li><span class="c-teal"><strong>Sec. 3(h)</strong></span>: That it contains averments which, if true, would constitute a legal excuse or justification.</li>
+    <li><span class="c-teal"><strong>Sec. 3(i)</strong></span>: That the accused has been previously convicted or acquitted of the offense charged, or the case against him was dismissed or otherwise terminated without his express consent (Double Jeopardy).</li>
+  </ol>
+
+  <ul>
+    <li><strong>Continuous Trial Rule Note</strong>: Under the <span class="c-teal"><em>Revised Guidelines for Continuous Trial of Criminal Cases</em> (A.M. No. 15-06-10-SC)</span>, a motion to quash based on any ground <span class="c-rust"><strong><u>other than those listed above</u></strong></span> is classified as a <span class="c-rust"><strong>prohibited motion</strong></span>.</li>
+  </ul>
+
+  <!-- SUMMARY TABLE OF THE 9 GROUNDS -->
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 15%;">Ground</th>
+        <th style="width: 35%;">Statutory Description</th>
+        <th style="width: 25%;">Waivability (Sec. 9)</th>
+        <th style="width: 25%;">Effect on Re-filing (Sec. 6)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sec. 3(a)</strong></td>
+        <td>Facts charged do not constitute an offense</td>
+        <td><span class="c-rust"><strong>NOT WAIVED</strong></span> (Raised anytime)</td>
+        <td>May be amended or re-filed</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(b)</strong></td>
+        <td>No jurisdiction over offense charged</td>
+        <td><span class="c-rust"><strong>NOT WAIVED</strong></span> (Court may act <em>motu proprio</em>)</td>
+        <td>Re-filing in proper court allowed</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(c)</strong></td>
+        <td>No jurisdiction over person of accused</td>
+        <td>Waived if not raised prior to plea</td>
+        <td>Cured by arrest or voluntary submission</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(d)</strong></td>
+        <td>Officer had no authority to file information</td>
+        <td>Waived if not raised prior to plea</td>
+        <td>Authorized prosecutor may re-file</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(e)</strong></td>
+        <td>Does not conform substantially to prescribed form</td>
+        <td>Waived if not raised prior to plea</td>
+        <td>Curable by amendment (Sec. 4)</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(f)</strong></td>
+        <td>Duplicity of offenses charged</td>
+        <td>Waived if not raised prior to plea</td>
+        <td>Curable by severance/amendment</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(g)</strong></td>
+        <td>Extinction of criminal action or liability</td>
+        <td><span class="c-rust"><strong>NOT WAIVED</strong></span> (Raised anytime)</td>
+        <td><span class="c-rust"><strong><u>PERMANENTLY BARRED</u></strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(h)</strong></td>
+        <td>Contains averments of legal excuse/justification</td>
+        <td>Waived if not raised prior to plea</td>
+        <td>Dismissal without bar, or amended</td>
+      </tr>
+      <tr>
+        <td><strong>Sec. 3(i)</strong></td>
+        <td>Double jeopardy (Prior conviction, acquittal, dismissal)</td>
+        <td><span class="c-rust"><strong>NOT WAIVED</strong></span> (Raised anytime)</td>
+        <td><span class="c-rust"><strong><u>PERMANENTLY BARRED</u></strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="affidavit-of-desistance">8. Execution of an Affidavit of Desistance Is Not a Ground for a Motion to Quash</h3>
+
+  <ul>
+    <li><strong>Not a Statutory Ground</strong>: An affidavit of desistance is <span class="c-rust"><strong>not</strong></span> among the grounds enumerated under <span class="c-teal">Section 3 of Rule 117</span>.</li>
+    <li><strong>Incurable Once Instituted</strong>: Once a criminal action has been instituted in court, an affidavit of desistance or pardon executed by the complainant does <span class="c-rust"><strong>not</strong></span> warrant the dismissal of the case (<span class="c-burgundy"><em>People v. Ramirez</em></span>; <span class="c-burgundy"><em>People v. Salazar</em></span>).</li>
+    <li><strong>Low Probative Value</strong>: Recantations and retractions are viewed with extreme suspicion and disfavor by the Supreme Court (<span class="c-burgundy"><em>People v. Lamsen</em></span>). A retraction executed after conviction is treated as an unreliable afterthought because affidavits of retraction are easily secured through intimidation or monetary consideration.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="absence-of-probable-cause">9. Absence of Probable Cause Not a Ground to Quash an Information (Bar 2015)</h3>
+
+  <ul>
+    <li><strong>Proper Action vs. Quashal</strong>: The absence of probable cause for the issuance of a warrant of arrest is a ground for the <span class="c-green"><strong>dismissal of the case</strong></span>, but it is <span class="c-rust"><strong><u>NOT a ground for quashing the information</u></strong></span> (<span class="c-burgundy"><em>People v. Sandiganbayan</em></span>).</li>
+    <li><strong>Legal Meaning of "Quash"</strong>: "To quash" means to annul, vacate, or overthrow. Quashing an information attacks the formal or substantive validity of the charge sheet itself. When a motion to quash is sustained, the court may simply order the prosecutor to file a corrected complaint or information under <span class="c-teal">Sections 5 and 6 of Rule 117</span>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="matters-of-defense">10. Matters of Defense Are Not Grounds for a Motion to Quash</h3>
+
+  <ul>
+    <li><strong>General Rule</strong>: Affirmative defenses cannot be raised in a motion to quash; they must be proved by the accused during a full-blown trial (<span class="c-burgundy"><em>Soriano v. People</em></span>).
+      <ul>
+        <li><em>Example</em>: If an accused charged with homicide files a motion to quash claiming he acted in <span class="c-rust"><strong>self-defense</strong></span>, but self-defense is not stated on the face of the information, the motion must be denied. The court must proceed to trial to evaluate the defense.</li>
+      </ul>
+    </li>
+    <li><strong>Exceptions</strong>: Defenses explicitly authorized by Section 3 of Rule 117 as statutory grounds to quash, specifically <span class="c-teal"><strong>double jeopardy</strong> (Sec. 3[i])</span> and <span class="c-teal"><strong>extinction of criminal liability</strong> (Sec. 3[g])</span>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="absence-of-preliminary-investigation">11. Absence of a Preliminary Investigation Is Not a Ground to Quash an Information (Bar 2009)</h3>
+
+  <ul>
+    <li><strong>Non-Jurisdictional Defect</strong>: The absence, denial, or deficiency of a preliminary investigation does <span class="c-rust"><strong>not</strong></span> impair the court's jurisdiction over the case nor affect the legal validity of the information (<span class="c-burgundy"><em>Rodis v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>Vasquez v. Hobilia-Alinio</em></span>). Consequently, it is <span class="c-rust"><strong>not a valid ground</strong></span> for a motion to quash.</li>
+    <li><strong>Proper Remedy</strong>: The accused must file a <span class="c-green"><strong>motion for reinvestigation</strong></span> or a motion to suspend proceedings. The trial court should hold the criminal case in abeyance and remand the records to the prosecutor or Ombudsman to conduct or complete the preliminary investigation.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="test-in-appreciating-motion-to-quash">12. Test in Appreciating a Motion to Quash</h3>
+
+  <p>The analytical approach taken by the court depends on the specific ground invoked:</p>
+
+  <ol>
+    <li><strong>When Based on "Facts Charged Do Not Constitute an Offense" (Sec. 3[a])</strong>:
+      <ul>
+        <li><strong>The Determinative Test</strong>: The court looks strictly at the sufficiency of the averments in the information. The test is whether the facts alleged, if <span class="c-green"><strong><u>hypothetically admitted</u></strong></span>, would establish the essential elements of the crime as defined by law, without considering matters <em>aliunde</em> (<span class="c-burgundy"><em>Lazarte v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>Santiago v. Sandiganbayan</em></span>).</li>
+      </ul>
+    </li>
+    <li><strong>When Based on Extinction of Liability (Sec. 3[g]) or Double Jeopardy (Sec. 3[i])</strong>:
+      <ul>
+        <li>Because Section 2 of Rule 117 requires the motion to state factual and legal grounds, facts and evidence outside the four corners of the information (matters <em>aliunde</em>) <span class="c-green"><strong><u>may be introduced and evaluated</u></strong></span> by the court to determine these specific defenses (<span class="c-burgundy"><em>Garcia v. Court of Appeals</em></span>).</li>
+      </ul>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3 id="alternative-actions-of-the-court">13. Alternative Actions of the Court When a Motion to Quash Is Filed</h3>
+
+  <p>When faced with a motion to quash, the trial court has <span class="c-green"><strong>three (3) alternative options</strong></span> (<span class="c-burgundy"><em>De Lima v. Guerrero</em></span>):</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">CURABLE DEFECT</div>
+        <div class="ui-title">Order Amendment</div>
+        <div class="ui-sub">Grant prosecution period to supply missing averment (<span class="c-teal">Sec. 4</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">INCURABLE / UNCORRECTED</div>
+        <div class="ui-title">Sustain (Grant)</div>
+        <div class="ui-sub">Quash charge sheet; determine refiling and custody (<span class="c-teal">Sec. 5 &amp; 6</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">SUFFICIENT IN LAW</div>
+        <div class="ui-title">Deny Motion</div>
+        <div class="ui-sub">Interlocutory order; accused must proceed to trial</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><span class="c-green"><strong>Order the amendment</strong></span> of the complaint or information;</li>
+    <li><span class="c-rust"><strong>Sustain (grant)</strong></span> the motion to quash; or</li>
+    <li><span class="c-navy"><strong>Deny</strong></span> the motion to quash.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="amendment-of-the-information">14. Amendment of the Information</h3>
+
+  <ul>
+    <li><strong>Duty to Allow Amendment (Sec. 4, Rule 117)</strong>: If a motion to quash is based on a defect in the information that <span class="c-green"><strong>can be cured by amendment</strong></span>, the court shall <span class="c-rust"><strong>not</strong></span> immediately dismiss the case. Instead, it must order the prosecution to amend the charge sheet within a specified time (<span class="c-burgundy"><em>De Lima v. Guerrero</em></span>).</li>
+    <li><strong>Arbitrary Dismissal</strong>: A trial judge who outrightly quashes an information without giving the prosecution an opportunity to correct a curable defect commits an arbitrary act correctible by <span class="c-teal"><em>certiorari</em></span> (<span class="c-burgundy"><em>De Lima v. Guerrero</em></span>; <span class="c-burgundy"><em>Go v. BSP</em></span>).</li>
+    <li><strong>Application to Sec. 3(a)</strong>: Even when the ground is "facts charged do not constitute an offense," the court must grant the prosecution a chance to supply the missing averment by amendment.</li>
+    <li><strong>When Quashal Proceeds</strong>: If the prosecution (a) fails or refuses to make the ordered amendment, or (b) files an amended information that still suffers from the same defect, the court shall then grant the motion to quash.</li>
+  </ul>
+
+  <!-- WORKFLOW: AMENDMENT OR QUASHAL -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Motion to Quash filed on a Curable Defect (e.g. Sec. 3[a])</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Court Orders Prosecution to Amend Information within specified period</div>
+      <div class="ui-sub">Mandatory duty under Section 4, Rule 117 (Outright dismissal is grave abuse)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">Defect Cured by Amendment</div>
+        <div class="ui-sub">Motion to Quash Denied → Case Proceeds to Arraignment/Trial</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Prosecution Fails / Refuses to Amend</div>
+        <div class="ui-sub">Court Grants Motion &amp; Quashes Information</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="quashal-of-the-information-refiling">15. Quashal of the Information (Bar 1994): Filing of Another Complaint or Information</h3>
+
+  <p>When the court sustains a motion to quash and orders the information quashed, the following rules govern re-prosecution and custody:</p>
+
+  <h4 id="refiling-rules">A. Refiling Rules (Sec. 5 &amp; 6, Rule 117)</h4>
+
+  <ul>
+    <li><strong>General Rule</strong>: An order sustaining a motion to quash is <span class="c-rust"><strong>not an acquittal</strong></span> and does <span class="c-green"><strong>not bar the filing of another complaint or information</strong></span> for the same offense (<span class="c-burgundy"><em>De Lima v. Guerrero</em></span>).</li>
+    <li><strong>Exceptions (Refiling Permanently BARRED - Sec. 6, Rule 117)</strong>: Another complaint or information <span class="c-rust"><strong><u>CANNOT</u></strong></span> be filed if the motion to quash was sustained on either of these two grounds:
+      <ol>
+        <li><span class="c-rust"><strong>Extinction of criminal action or liability</strong></span> (<span class="c-teal">Sec. 3[g]</span>); or</li>
+        <li><span class="c-rust"><strong>Double Jeopardy</strong></span> (<span class="c-teal">Sec. 3[i]</span>).</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="custody-rules">B. Custody Rules of the Accused (Sec. 5, Rule 117)</h4>
+
+  <ol>
+    <li><strong>If Another Information Is Ordered Filed</strong>: An accused who is in custody <span class="c-rust"><strong>shall not be discharged or released</strong></span>, unless he is admitted to bail.</li>
+    <li><strong>If No Order Is Made / Time Lapses</strong>: If the court does not order the filing of another information, or if the prosecutor fails to file the new complaint/information within the time specified by the court, the accused in custody <span class="c-green"><strong><u>shall be released immediately</u></strong></span>, unless he is being held under another charge.</li>
+  </ol>
+
+  <!-- REFILING & CUSTODY OUTCOME WORKFLOW -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Motion to Quash Sustained by Court</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Check Underlying Statutory Ground</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">✕</div>
+        <div class="ui-title">Extinction (3[g]) or Double Jeopardy (3[i])</div>
+        <div class="ui-sub"><span class="c-rust"><strong><u>PERMANENT BAR</u></strong></span> (Sec. 6) — Accused Released Immediately</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">✓</div>
+        <div class="ui-title">All Other Statutory Grounds</div>
+        <div class="ui-sub">Refiling Allowed (Sec. 5) — Custody maintained if new info ordered; release if time lapses</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="denial-of-a-motion-to-quash">16. Denial of a Motion to Quash</h3>
+
+  <ul>
+    <li><strong>Interlocutory Order</strong>: An order denying a motion to quash is <span class="c-navy"><strong>interlocutory</strong></span> in nature.</li>
+    <li><strong>Prohibition Against Appeal / Certiorari</strong>: Under <span class="c-teal"><strong>Section 1(b), Rule 41 of the Rules of Court</strong></span>, an interlocutory order is <span class="c-rust"><strong><u>not appealable</u></strong></span>, nor can it generally be the subject of a petition for <em>certiorari</em> (<span class="c-burgundy"><em>Miranda v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>De Lima v. Guerrero</em></span>).</li>
+    <li><strong>Proper Remedy</strong>: The accused must <span class="c-green"><strong><u>proceed to trial</u></strong></span>. If an adverse judgment of conviction is subsequently rendered, the accused can appeal the conviction and assign the improper denial of the motion to quash as an error committed by the trial court.</li>
+    <li><strong>Strict Exception (<em>Certiorari</em> under Rule 65)</strong>: A petition for <em>certiorari</em> against an order denying a motion to quash lies <span class="c-rust"><strong><u>only</u></strong></span> when the denial was tainted with <span class="c-rust"><strong>grave abuse of discretion</strong></span> amounting to lack or excess of jurisdiction (<span class="c-burgundy"><em>Cagang v. Sandiganbayan</em></span>).</li>
+  </ul>
+
+  <!-- DIAGRAM 1: PROCEDURAL LIFECYCLE -->
+  <div class="diagram-wrapper" id="diagram-procedural-lifecycle">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">PROCEDURAL LIFECYCLE: MOTION TO QUASH (RULE 117) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+    classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+
+    START["Criminal Complaint / Information Filed"]:::navy --> TIME{"Accused Entered Plea?"}:::navy
+
+    TIME -- "No (Before Plea)" --> MTQ["Motion to Quash Filed (Sec. 1, Rule 117)<br/>Must be in Writing, Signed & Specific (Sec. 2)"]:::teal
+    TIME -- "Yes (After Plea)" --> WAIVE{"Is Ground One of the 4 Exceptions (Sec. 9)?"}:::rust
+
+    WAIVE -- "No" --> BARRED["Deemed Waived Forever (Omnibus Motion Principle)"]:::rust
+    WAIVE -- "Yes" --> NON_WAIVED["May be Raised Even After Plea / On Appeal:<br/>1. Facts do not constitute offense (3a)<br/>2. Lack of Subject-Matter Jurisdiction (3b)<br/>3. Extinction of Liability (3g)<br/>4. Double Jeopardy (3i)"]:::green
+
+    MTQ --> JUDGE{"Trial Court Judicial Action (De Lima v. Guerrero)"}:::navy
+    NON_WAIVED --> JUDGE
+
+    JUDGE -- "Option 1: Order Amendment" --> AMEND["Prosecution Given Time to Amend (Sec. 4)"]:::teal
+    AMEND --> AMEND_RES{"Amended Successfully?"}:::navy
+    AMEND_RES -- "Yes" --> ARRAIGN["Proceed to Arraignment & Trial"]:::green
+    AMEND_RES -- "No / Refuses" --> SUSTAIN
+
+    JUDGE -- "Option 2: Deny Motion" --> DENY["Order Denying Motion to Quash (Interlocutory)"]:::rust
+    DENY --> REMEDY["Remedy: Proceed to Trial<br/>(No Appeal / Certiorari ONLY for Grave Abuse)"]:::rust
+
+    JUDGE -- "Option 3: Sustain Motion" --> SUSTAIN["Motion to Quash Sustained / Granted"]:::teal
+    SUSTAIN --> GROUND_CHECK{"Ground for Quashal?"}:::navy
+
+    GROUND_CHECK -- "Extinction (3g) or Double Jeopardy (3i)" --> PERM_BAR["PERMANENT BAR TO RE-FILING (Sec. 6)<br/>Accused Discharged / Released Immediately"]:::rust
+    GROUND_CHECK -- "All Other Grounds" --> REFILE["Re-filing Allowed (Sec. 5)<br/>New Complaint/Information may be filed"]:::teal
+
+    REFILE --> CUSTODY{"New Info Ordered within Specified Time?"}:::navy
+    CUSTODY -- "Yes" --> HOLD["Accused Remains in Custody (unless bailed)"]:::teal
+    CUSTODY -- "No / Lapsed" --> RELEASE["Accused Released Immediately (Sec. 5)"]:::green
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="double-jeopardy-foundations">Comprehensive Guide: Rule 117 (Motion to Quash — Double Jeopardy &amp; Provisional Dismissal)</h3>
+
+  <hr>
+
+  <h4>I. Concept, Nature, and Scope of Double Jeopardy</h4>
+
+  <h4>1. Constitutional and Statutory Foundations</h4>
+
+  <p>Double jeopardy is anchored in <span class="c-teal"><strong>Section 21, Article III of the 1987 Constitution</strong></span>, which provides:</p>
+
+  <blockquote>
+    "No person shall be twice put in jeopardy of punishment for the same offense. If an act is punished by a law and an ordinance, conviction or acquittal under either shall constitute a bar to another prosecution for the same act."
+  </blockquote>
+
+  <p>This constitutional command is mirrored in <span class="c-teal"><strong>Section 7, Rule 117 of the Revised Rules of Criminal Procedure</strong></span>:</p>
+
+  <blockquote>
+    "When an accused has been convicted or acquitted, or the case against him dismissed or otherwise terminated without his express consent by a court of competent jurisdiction, upon a valid complaint or information or other formal charge sufficient in form and substance to sustain a conviction and after the accused had pleaded to the charge, the conviction or acquittal of the accused or the dismissal...
+  </blockquote>
+
+  <h3>Comprehensive Discussion: Double Jeopardy and Provisional Dismissal (Rule 117)</h3>
+
+  <hr>
+
+  <h3 id="fundamental-concepts-of-double-jeopardy">17. Fundamental Concepts of Double Jeopardy</h3>
+
+  <h4 id="definition-and-nature">A. Definition and Nature</h4>
+
+  <p>The guarantee against <span class="c-navy"><strong>double jeopardy</strong></span> is a fundamental constitutional protection under <span class="c-teal"><strong>Article III, Section 21 of the 1987 Constitution</strong></span>. It prohibits the State from placing an individual in danger of conviction and punishment twice for the exact same offense.</p>
+
+  <ul>
+    <li><strong>The Essence of the Guarantee</strong>: The doctrine prevents the State, with all its resources and power, from subjecting a citizen to repeated criminal prosecutions for an alleged act. Repeated trials subject the accused to anxiety, expense, and continuous embarrassment, while raising the risk that an innocent person might ultimately be found guilty.</li>
+    <li><strong>Jeopardy Defined</strong>: In legal terms, "jeopardy" refers to the danger of conviction and punishment that an accused incurs when charged under a valid indictment before a competent tribunal.</li>
+  </ul>
+
+  <h4 id="res-judicata-in-prison-grey">B. Res Judicata vs. Double Jeopardy ("Res Judicata in Prison Grey")</h4>
+
+  <ul>
+    <li>While <span class="c-navy"><em><strong>res judicata</strong></em></span> is a doctrine originating in civil law, double jeopardy is often described in jurisprudence as <span class="c-burgundy"><strong>"res judicata in prison grey"</strong></span>.</li>
+    <li>It bars the prosecution from re-litigating a criminal charge once the accused has been validly convicted, acquitted, or when the case has been terminated without the accused's express consent.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="inapplicability-in-non-criminal-proceedings">18. Inapplicability of Double Jeopardy in Non-Criminal Proceedings</h3>
+
+  <!-- THREE STANDARDS OF PROOF CARDS -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">CRIMINAL</div>
+        <div class="ui-title">Beyond Reasonable Doubt</div>
+        <div class="ui-sub">Moral certainty of guilt required</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">CIVIL</div>
+        <div class="ui-title">Preponderance of Evidence</div>
+        <div class="ui-sub">Superior weight of evidence</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">ADMINISTRATIVE</div>
+        <div class="ui-title">Substantial Evidence</div>
+        <div class="ui-sub">Relevant evidence a reasonable mind might accept</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="administrative-cases">A. Administrative Cases</h4>
+
+  <p>Double jeopardy <span class="c-rust"><strong>does not apply</strong></span> to administrative proceedings.</p>
+
+  <ul>
+    <li><strong>Separate Remedies</strong>: A single wrongful act by a public officer may give rise to civil, criminal, and administrative liabilities. These three avenues are independent and distinct.</li>
+    <li><strong>Different Standards of Proof</strong>:
+      <ol>
+        <li><strong>Criminal cases</strong>: Requires proof beyond reasonable doubt.</li>
+        <li><strong>Civil cases</strong>: Requires a preponderance of evidence.</li>
+        <li><strong>Administrative cases</strong>: Requires only substantial evidence.</li>
+      </ol>
+    </li>
+    <li><em>Key Principle</em>: Dismissal or acquittal in an administrative case does not bar a criminal prosecution for the same underlying conduct (<span class="c-burgundy"><em>Icasiano v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>Cayao-Lasam v. Ramolete</em></span>). Conversely, a criminal dismissal does not automatically dismiss an administrative complaint.</li>
+  </ul>
+
+  <h4 id="preliminary-investigation">B. Preliminary Investigation</h4>
+
+  <p>Double jeopardy <span class="c-rust"><strong>does not apply</strong></span> during a preliminary investigation.</p>
+
+  <ul>
+    <li><strong>Executive and Inquisitorial Nature</strong>: A preliminary investigation is purely executive and inquisitorial, designed merely to determine whether there is probable cause to hold a suspect for trial.</li>
+    <li><strong>Not a Judicial Trial</strong>: Because a preliminary investigation is not a trial on the merits and does not involve an indictment before a court, jeopardy does not attach. Dismissing a complaint at the preliminary investigation stage does not prevent the prosecutor from re-investigating or refiling the case upon fresh evidence (<span class="c-burgundy"><em>Tandoc v. Resultan</em></span>; <span class="c-burgundy"><em>Torres v. Aguinaldo</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="requisites-for-double-jeopardy-to-attach">19. Requisites for Double Jeopardy to Attach</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 7, Rule 117 of the Rules of Court</strong></span> and established jurisprudence, double jeopardy attaches only when the following <span class="c-green"><strong>five (5) concurring elements</strong></span> are present:</p>
+
+  <!-- FIVE REQUISITES PILLAR CARDS -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">CHARGE</div>
+        <div class="ui-title">Valid Information</div>
+        <div class="ui-sub">Sufficient in form &amp; substance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">FORUM</div>
+        <div class="ui-title">Competent Court</div>
+        <div class="ui-sub">Territorial &amp; subject jurisdiction</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">NOTICE</div>
+        <div class="ui-title">Arraignment</div>
+        <div class="ui-sub">Accused formally arraigned</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">PLEA</div>
+        <div class="ui-title">Valid Plea</div>
+        <div class="ui-sub">Unconditional standing plea</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">5</div>
+        <div class="ui-kicker">TERMINATION</div>
+        <div class="ui-title">Final Termination</div>
+        <div class="ui-sub">Conviction, acquittal, or dismissal w/o consent</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li>A <span class="c-green"><strong><u>valid complaint or information</u></strong></span> (or other formal charge);</li>
+    <li>Filed before a <span class="c-green"><strong><u>court of competent jurisdiction</u></strong></span>;</li>
+    <li>The accused has been <span class="c-green"><strong><u>validly arraigned</u></strong></span>;</li>
+    <li>The accused entered a <span class="c-green"><strong><u>valid plea</u></strong></span>; and</li>
+    <li>The case against the accused was <span class="c-green"><strong><u>terminated by conviction, acquittal, or dismissal without the express consent of the accused</u></strong></span>.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="detailed-analysis-of-each-requisite">20. Detailed Analysis of Each Requisite</h3>
+
+  <h4 id="req-valid-complaint">A. Requisite 1: Valid Complaint or Information</h4>
+
+  <ul>
+    <li>The initial charge sheet must be sufficient in form and substance to sustain a conviction under <span class="c-teal"><strong>Section 6, Rule 110</strong></span>.</li>
+    <li><strong>Defective Information</strong>: If the original information fails to state an offense, double jeopardy cannot set in because the accused was never in peril of a valid conviction under that defective document.</li>
+    <li><strong>Officer Lacking Authority</strong>: An information filed by a prosecutor who lacks territorial or subject-matter authority is a <span class="c-rust"><strong><u>complete nullity</u></strong></span> (<span class="c-burgundy"><em>Cudia v. Court of Appeals</em></span>). Dismissal of a void information does not bar a subsequent prosecution.</li>
+  </ul>
+
+  <h4 id="req-competent-court">B. Requisite 2: Court of Competent Jurisdiction</h4>
+
+  <ul>
+    <li>The court that rendered the decision or dismissed the case must possess valid jurisdiction over the subject matter and territory.</li>
+    <li><strong>Lack of Territorial Jurisdiction (Venue)</strong>: Because venue in criminal law is jurisdictional, a dismissal by a court lacking territorial jurisdiction over the place of commission does not trigger double jeopardy.</li>
+    <li><strong>Lack of Subject-Matter Jurisdiction</strong>: If a court tries a case over which it has no jurisdiction (e.g., a Municipal Trial Court trying a murder case punishable by <em>reclusion perpetua</em>), the entire proceeding is <span class="c-rust"><strong><u>void ab initio</u></strong></span>. Subsequent indictment in the proper court (e.g., Regional Trial Court) is not barred by double jeopardy.</li>
+  </ul>
+
+  <h4 id="req-arraignment-plea">C. Requisite 3 &amp; 4: Arraignment and Valid Plea</h4>
+
+  <ul>
+    <li>An accused must be formally arraigned and enter a <span class="c-green"><strong>valid plea</strong></span> for first jeopardy to attach.</li>
+    <li><strong>Withdrawal Before Arraignment</strong>: If the prosecution withdraws an information before the accused is arraigned, double jeopardy cannot be invoked when a new charge is filed.</li>
+    <li><strong>Invalid or Conditional Plea</strong>: A plea must be unconditional.
+      <ul>
+        <li><em>Void Plea Bargain</em>: In <span class="c-burgundy"><em>People v. Magat</em></span>, the accused entered a conditional guilty plea under an illegal plea bargain. The Supreme Court held that a conviction based on a void, conditional plea is void <em>ab initio</em>, meaning double jeopardy did not attach to bar a re-trial.</li>
+        <li><em>Exculpatory Testimony</em>: In <span class="c-burgundy"><em>People v. Balisacan</em></span>, the accused pleaded guilty but testified that he acted in self-defense. The Supreme Court ruled that testifying on self-defense vacated his guilty plea. Because the trial court acquitted him without entering a "not guilty" plea and conducting a trial, there was no standing plea, and double jeopardy did not bar the prosecution's appeal.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="req-termination-mode">D. Requisite 5: Prior Conviction, Acquittal, or Dismissal Without Express Consent</h4>
+
+  <p>First jeopardy terminates only upon:</p>
+  <ol>
+    <li><span class="c-navy"><strong>Conviction</strong></span>;</li>
+    <li><span class="c-green"><strong>Acquittal</strong></span>; or</li>
+    <li><span class="c-teal"><strong>Dismissal/Termination without the express consent of the accused</strong></span>.</li>
+  </ol>
+  <ul>
+    <li><strong>Pending Cases</strong>: If a prior criminal case for the same act is still pending and has not been terminated by conviction, acquittal, or dismissal, double jeopardy cannot be pleaded (<span class="c-burgundy"><em>Tangan v. People</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="express-consent-vs-acquittal">21. Express Consent vs. Dismissals Equivalent to Acquittal</h3>
+
+  <h4 id="meaning-of-express-consent">A. Meaning of "Express Consent"</h4>
+
+  <ul>
+    <li>As a rule, if a case is dismissed <span class="c-rust"><strong>upon the motion or with the express consent</strong></span> of the accused, he is deemed to have waived his right against double jeopardy.</li>
+    <li><strong>Standard for Consent</strong>: Consent must be direct, positive, explicit, and unequivocal (<span class="c-burgundy"><em>People v. Vergara</em></span>).</li>
+    <li><strong>Provisional Dismissal</strong>: A dismissal requested or consented to by the accused operates as a waiver of double jeopardy for subsequent revival (<span class="c-burgundy"><em>Andres v. Cacdac</em></span>; <span class="c-burgundy"><em>Saldariega v. Panganiban</em></span>).</li>
+    <li><strong>Ex Parte Dismissals</strong>: In <span class="c-burgundy"><em>People v. Espinosa</em></span>, the prosecution moved <em>ex parte</em> to withdraw charges after the accused entered a simple, unconditional plea. Because the dismissal occurred without the knowledge or express consent of the accused, double jeopardy attached to bar reinstatement.</li>
+  </ul>
+
+  <h4 id="acquittal-vs-dismissal">B. Distinction Between Acquittal and Dismissal</h4>
+
+  <ul>
+    <li><strong>Acquittal</strong>: Always based on the <span class="c-green"><strong><u>merits of the case</u></strong></span>—either because the prosecution failed to prove guilt beyond reasonable doubt, or because the act/omission did not exist (<span class="c-burgundy"><em>Morillo v. People</em></span>).</li>
+    <li><strong>Dismissal</strong>: Terminates the proceeding on <span class="c-rust"><strong>technical or jurisdictional grounds</strong></span> (e.g., lack of territorial jurisdiction or defective information) without resolving the guilt or innocence of the accused (<span class="c-burgundy"><em>Morillo v. People</em></span>).</li>
+  </ul>
+
+  <h4 id="dismissals-equivalent-to-acquittal">C. Dismissals Equivalent to Acquittal (Even With Consent of Accused)</h4>
+
+  <p>Generally, a dismissal granted upon motion of the accused does not bar re-prosecution. However, <span class="c-green"><strong>three major exceptions</strong></span> treat a dismissal as an <span class="c-green"><strong><u>acquittal on the merits</u></strong></span>, barring re-prosecution even if initiated by the accused:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">1. Demurrer to Evidence</div>
+        <div class="ui-sub">Granted for insufficiency of prosecution evidence (<span class="c-teal">Rule 119</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⏱️</div>
+        <div class="ui-title">2. Speedy Trial Violation</div>
+        <div class="ui-sub">Inordinate delay / failure of prosecution to proceed</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🤝</div>
+        <div class="ui-title">3. State Witness Discharge</div>
+        <div class="ui-sub">Discharge of accused under <span class="c-teal">Sec. 18, Rule 119</span></div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Dismissal Based on Demurrer to Evidence</strong>: Granted due to insufficiency of prosecution evidence under Rule 119 (<span class="c-burgundy"><em>People v. Tan</em></span>).</li>
+    <li><strong>Dismissal Based on Violation of Right to Speedy Trial / Inordinate Delay</strong>: When the prosecution fails to present evidence or proceed to trial despite the insistence of the accused (<span class="c-burgundy"><em>Esmeña v. Pogoy</em></span>; <span class="c-burgundy"><em>Coscolluela v. Sandiganbayan</em></span>).</li>
+    <li><strong>Discharge as a State Witness</strong>: Under Section 18, Rule 119, discharging an accused to serve as a state witness operates as an acquittal.</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="effects-and-finality-of-acquittal">22. Effects of Double Jeopardy &amp; The Finality-of-Acquittal Doctrine</h3>
+
+  <h4 id="criminal-aspect-and-finality">A. The Criminal Aspect &amp; Finality-of-Acquittal Doctrine</h4>
+
+  <ul>
+    <li><strong>Immediate Finality</strong>: A judgment of acquittal in a criminal case is <span class="c-green"><strong><u>immediately final, unappealable, and executory</u></strong></span> upon promulgation.</li>
+    <li><strong>No Appeal by Prosecution</strong>: The State <span class="c-rust"><strong><u>cannot appeal an acquittal</u></strong></span>, whether by ordinary appeal or petition for review under Rule 45, as doing so puts the accused twice in peril.</li>
+    <li><strong>Purposes of the Doctrine</strong>:
+      <ol>
+        <li>Prevents the State from harassing citizens through repeated prosecutions.</li>
+        <li>Prevents the State from retrying an acquitted defendant to refine its evidence.</li>
+        <li>Guarantees the defendant's right to repose.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="appeals-by-accused">B. Appeals by the Accused</h4>
+
+  <ul>
+    <li>When an accused appeals a judgment of <span class="c-navy"><strong>conviction</strong></span>, he <span class="c-rust"><strong>waives</strong></span> his protection against double jeopardy. The appellate court opens the entire case for review and may increase the penalty, modify the offense, or correct legal errors (<span class="c-burgundy"><em>People v. Caraang</em></span>).</li>
+  </ul>
+
+  <h4 id="certiorari-review">C. Exception: Review of Erroneous Acquittal via Rule 65 Certiorari</h4>
+
+  <p>An acquittal may be assailed by the prosecution <span class="c-rust"><strong><u>ONLY through a Special Civil Action for Certiorari under Rule 65</u></strong></span>, subject to strict conditions:</p>
+
+  <ul>
+    <li><strong>Grounds Required</strong>: The prosecution must prove that the trial court acted with <span class="c-rust"><strong>grave abuse of discretion amounting to lack or excess of jurisdiction</strong></span>, or that there was a <span class="c-rust"><strong><u>denial of due process (mistrial)</u></strong></span> (<span class="c-burgundy"><em>Galman v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>People v. Asis</em></span>).</li>
+    <li><strong>Void Judgment</strong>: A decision rendered with grave abuse of discretion or in a sham/mock trial is <span class="c-rust"><strong><u>void ab initio</u></strong></span>. In legal contemplation, double jeopardy does not set in because a void judgment cannot terminate the first jeopardy.</li>
+  </ul>
+
+  <h4 id="civil-aspect">D. Effect of Double Jeopardy on the Civil Aspect</h4>
+
+  <ul>
+    <li><strong>No Bar to Civil Appeals</strong>: Double jeopardy applies <span class="c-green"><strong>strictly to criminal liability</strong></span> (<em>ex delicto</em>), not civil liability.</li>
+    <li><strong>Victim's Right to Appeal</strong>: Either the private offended party or the accused may appeal the civil aspect of a criminal judgment despite an acquittal (<span class="c-burgundy"><em>Cruz v. Court of Appeals</em></span>; <span class="c-burgundy"><em>Salazar v. People</em></span>).</li>
+    <li><strong>Extinction of Accused</strong>: If an accused dies pending appeal, criminal liability is extinguished, but independent civil actions survive against his estate under <span class="c-teal">Rule 111, Section 4</span>.</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="double-jeopardy-in-quasi-offenses">23. Double Jeopardy in Quasi-Offenses (Article 365, RPC)</h3>
+
+  <h4 id="ivler-doctrine">The Ivler Doctrine (<em>Ivler v. Modesto-San Pedro</em>)</h4>
+
+  <p>In <span class="c-burgundy"><em>Ivler v. Modesto-San Pedro</em></span>, the Supreme Court established landmark principles governing reckless imprudence under <span class="c-teal"><strong>Article 365 of the Revised Penal Code</strong></span>:</p>
+
+  <!-- IVLER DOCTRINE WORKFLOW BOX -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Single Careless or Reckless Act (Art. 365, RPC)</div>
+      <div class="ui-sub">The negligent act itself is penalized, NOT the resulting consequences</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Prior Conviction or Acquittal for ANY Resulting Consequence</div>
+      <div class="ui-sub">e.g., Reckless Imprudence Resulting in Slight Physical Injuries</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">ABSOLUTE BAR TO SUBSEQUENT PROSECUTION</div>
+      <div class="ui-sub">Bars prosecution for homicide, damage to property, or serious injuries arising from the same negligent act</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Single Quasi-Offense</strong>: Reckless imprudence under Art. 365 is a <span class="c-green"><strong><u>single quasi-offense in itself</u></strong></span>, not merely a modality for committing other crimes.</li>
+    <li><strong>The Negligent Act is Penalized</strong>: The law penalizes the single negligent or careless act, regardless of the number or severity of resulting consequences (e.g., physical injuries, homicide, or damage to property).</li>
+    <li><strong>Bar to Subsequent Prosecution</strong>: Conviction or acquittal of a quasi-offense (e.g., reckless imprudence resulting in slight physical injuries) <span class="c-rust"><strong><u>bars any subsequent prosecution for another consequence arising from the exact same negligent act</u></strong></span> (e.g., reckless imprudence resulting in homicide).</li>
+    <li><em>Inaccurate Designations</em>: Designating a crime as "falsification through reckless imprudence" is inaccurate; quasi-offenses must explicitly allege the resulting damage or injury (<span class="c-burgundy"><em>Sevilla v. People</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="exceptions-to-double-jeopardy">24. Exceptions: When Double Jeopardy Does NOT Apply Despite Prior Conviction</h3>
+
+  <p>Under <span class="c-teal"><strong>Section 7, Rule 117</strong></span>, a prior conviction does <span class="c-rust"><strong><u>NOT</u></strong></span> bar a second prosecution for an offense that necessarily includes the former under <span class="c-green"><strong>three (3) statutory exceptions</strong></span>:</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">⚡</div>
+        <div class="ui-title">1. Supervening Fact</div>
+        <div class="ui-sub">Graver offense developed from a fact arising later (e.g., victim dies)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🔍</div>
+        <div class="ui-title">2. Newly Discovered Facts</div>
+        <div class="ui-sub">Facts constituting graver charge discovered only after plea</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🚫</div>
+        <div class="ui-title">3. Invalid Plea to Lesser Offense</div>
+        <div class="ui-sub">Plea to lesser offense without consent of prosecutor/victim</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><strong>Supervening Fact</strong>: The graver offense developed due to a supervening fact arising from the same act or omission.
+      <ul>
+        <li><em>Example</em>: A conviction for serious physical injuries does not bar a subsequent prosecution for homicide if the victim dies later from the same injuries.</li>
+      </ul>
+    </li>
+    <li><strong>Newly Discovered Facts</strong>: Facts constituting the graver charge became known or were discovered only after a plea was entered in the former case.</li>
+    <li><strong>Invalid Plea to Lesser Offense</strong>: The plea of guilty to a lesser offense was made without the consent of the prosecutor or offended party (except as provided under <span class="c-teal">Sec. 1[f], Rule 116</span>).</li>
+  </ol>
+
+  <hr>
+
+  <h3 id="same-offense-vs-different-offenses">25. Meaning of "Same Offense" vs. "Different Offenses"</h3>
+
+  <h4 id="test-for-identity">A. The Test for Identity of Offenses</h4>
+
+  <p>Double jeopardy prohibits prosecution for the <span class="c-green"><strong>same offense</strong></span>, not the same act. Two offenses are not the same if there is a variance between their essential legal elements.</p>
+
+  <h4 id="illustrative-examples-table">B. Illustrative Examples of Separate Offenses From Identical Acts</h4>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Acts / Offenses</th>
+        <th style="width: 30%;">Governing Laws</th>
+        <th style="width: 45%;">Why Double Jeopardy Does Not Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Theft of Electricity vs. PD 401 Violation</strong></td>
+        <td><span class="c-teal">Art. 308, RPC</span> vs. <span class="c-teal">P.D. 401 (Special Law)</span></td>
+        <td>Theft requires criminal intent (<em>dolo</em>); P.D. 401 is <em>malum prohibitum</em>. Elements differ (<span class="c-burgundy"><em>Diaz v. Davao Light</em></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Illegal Recruitment vs. Estafa</strong></td>
+        <td><span class="c-teal">Labor Code (Art. 34)</span> vs. <span class="c-teal">Art. 315, RPC</span></td>
+        <td>Illegal recruitment is <em>malum prohibitum</em>; Estafa requires fraudulent intent (<em>malum in se</em>) (<span class="c-burgundy"><em>People v. Comila</em></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>B.P. 22 Violation vs. Estafa</strong></td>
+        <td><span class="c-teal">B.P. Blg. 22</span> vs. <span class="c-teal">Art. 315(2-d), RPC</span></td>
+        <td>B.P. 22 penalizes dishonor of check (<em>malum prohibitum</em>); Estafa requires deceit and damage (<span class="c-burgundy"><em>Nierras v. Dacuycuy</em></span>).</td>
+      </tr>
+      <tr>
+        <td><strong>Direct Bribery vs. RA 3019 Sec. 3(b)</strong></td>
+        <td><span class="c-teal">Art. 210, RPC</span> vs. <span class="c-teal">R.A. 3019</span></td>
+        <td>Elements differ; Sec. 3(b) requires contracts with monetary consideration, while Art. 210 has a broader scope (<span class="c-burgundy"><em>Merencillo v. People</em></span>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- DIAGRAM 2: DOUBLE JEOPARDY FRAMEWORK -->
+  <div class="diagram-wrapper" id="diagram-double-jeopardy">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DOUBLE JEOPARDY: CONSTITUTIONAL &amp; PROCEDURAL FRAMEWORK <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn reset-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+    classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+
+    DJ_INIT["First Prosecution Initiated"]:::navy --> REQ_CHECK{"5 Concurring Requisites Present?<br/>1. Valid Charge Sheet<br/>2. Competent Court<br/>3. Arraignment<br/>4. Valid Plea<br/>5. Valid Termination"}:::navy
+
+    REQ_CHECK -- "No (Any Element Missing)" --> NO_DJ["No First Jeopardy Attached<br/>(Re-prosecution NOT Barred)"]:::rust
+    REQ_CHECK -- "Yes" --> TERM_CHECK{"Mode of Termination"}:::teal
+
+    TERM_CHECK -- "Acquittal on Merits" --> ACQ["Acquittal Promulgated"]:::green
+    TERM_CHECK -- "Conviction" --> CONV["Judgment of Conviction"]:::navy
+    TERM_CHECK -- "Dismissal without Consent" --> DISM["Dismissal w/o Express Consent<br/>(or Equated: Demurrer, Speedy Trial, State Witness)"]:::green
+
+    ACQ --> FINALITY["FINALITY-OF-ACQUITTAL DOCTRINE<br/>Immediately Final, Executory & Unappealable"]:::green
+    FINALITY --> DJ_BAR["DOUBLE JEOPARDY OPERATES AS ABSOLUTE BAR<br/>State Cannot Re-prosecute for Same Offense"]:::green
+
+    FINALITY -. "Narrow Exception" .-> RULE65["Rule 65 Certiorari ONLY:<br/>Grave Abuse of Discretion / Sham Trial (Mistrial)"]:::rust
+
+    CONV --> EXC_CHECK{"Exceptions under Sec. 7?"}:::teal
+    EXC_CHECK -- "Supervening Fact / Newly Discovered / Invalid Plea to Lesser" --> EXCEPTION_PROCEED["Second Prosecution Permitted (Sec. 7)"]:::teal
+    EXC_CHECK -- "None of the Exceptions" --> DJ_BAR
+
+    DISM --> DJ_BAR
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="provisional-dismissal">26. Provisional Dismissal (Rule 117, Section 8)</h3>
+
+  <h4 id="pd-definition-purpose">A. Definition and Purpose</h4>
+
+  <p>Provisional dismissal is a temporary dismissal of a criminal case that does not terminate the action permanently and may be revived within specified statutory periods. It prevents cases from hanging indefinitely due to prosecutorial or judicial inaction (<span class="c-burgundy"><em>People v. Lacson</em></span>).</p>
+
+  <h4 id="pd-requisites">B. Requisites for Valid Provisional Dismissal</h4>
+
+  <p>Under <span class="c-teal"><strong>Section 8, Rule 117</strong></span>, <span class="c-green"><strong>two (2) mandatory requisites</strong></span> must concur:</p>
+
+  <!-- TWO REQUISITES WORKFLOW -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🗣️</div>
+        <div class="ui-title">1. Express Consent</div>
+        <div class="ui-sub">Direct, positive, and unequivocal consent of the accused</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">📬</div>
+        <div class="ui-title">2. Notice to Offended Party</div>
+        <div class="ui-sub">Mandatory written notice to the private complainant</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><span class="c-green"><strong><u>Express consent</u></strong></span> of the accused; and</li>
+    <li><span class="c-green"><strong><u>Notice</u></strong></span> to the offended party.</li>
+  </ol>
+
+  <h4 id="pd-not-acquittal">C. Why It Does Not Operate as an Acquittal</h4>
+
+  <p>Because a provisional dismissal requires the <span class="c-green"><strong>express consent of the accused</strong></span>, the accused <span class="c-rust"><strong>waives the right to invoke double jeopardy</strong></span> upon revival of the case (<span class="c-burgundy"><em>Saldariega v. Panganiban</em></span>).</p>
+
+  <hr>
+
+  <h3 id="the-time-bar-rule">27. The Time-Bar Rule</h3>
+
+  <p>Under <span class="c-teal">Section 8, Rule 117</span> and the <span class="c-teal"><em>Guidelines for Continuous Trial</em> (A.M. No. 15-06-10-SC)</span>, a provisional dismissal becomes <span class="c-rust"><strong><u>permanently barred</u></strong></span> if the prosecution fails to revive the case within the following timelines:</p>
+
+  <!-- TIME-BAR SPLIT UI CARD -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1 YEAR</div>
+        <div class="ui-kicker">PENALTY ≤ 6 YEARS / FINE</div>
+        <div class="ui-title">One (1) Year Time-Bar</div>
+        <div class="ui-sub">Offenses punishable by imprisonment not exceeding 6 years, or fine of any amount, or both</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2 YEARS</div>
+        <div class="ui-kicker">PENALTY > 6 YEARS</div>
+        <div class="ui-title">Two (2) Years Time-Bar</div>
+        <div class="ui-sub">Offenses punishable by imprisonment exceeding 6 years</div>
+      </div>
+    </div>
+  </div>
+
+  <ol>
+    <li><span class="c-rust"><strong>One (1) Year</strong></span>: For offenses punishable by imprisonment <span class="c-green"><strong><u>not exceeding six (6) years</u></strong></span>, or a fine of any amount, or both.</li>
+    <li><span class="c-rust"><strong>Two (2) Years</strong></span>: For offenses punishable by imprisonment of <span class="c-green"><strong><u>more than six (6) years</u></strong></span>.</li>
+  </ol>
+
+  <ul>
+    <li><strong>Computation</strong>: The period is reckoned strictly from the <span class="c-green"><strong><u>issuance of the order of provisional dismissal</u></strong></span> (<span class="c-teal">A.M. No. 12-11-2-SC</span>).</li>
+    <li><strong>Effect of Expiration</strong>: Upon the lapse of 1 or 2 years without revival, the dismissal becomes <span class="c-rust"><strong><u>permanent <em>ipso facto</em></u></strong></span>, operating as an adjudication on the merits (<span class="c-burgundy"><em>People v. Lacson</em></span>).</li>
+  </ul>
+
+  <hr>
+
+  <h3 id="congested-jail-guidelines">28. Additional Rules on Provisional Dismissal (A.M. No. 12-11-2-SC, Sec. 10)</h3>
+
+  <p>In detention cases, provisional dismissal is governed by specific congested jail guidelines:</p>
+
+  <ol>
+    <li><strong>Unknown Witness</strong>: If delays stem from the absence of an essential witness whose whereabouts are unknown or cannot be determined, and trial exceeds <span class="c-rust"><strong>180 days</strong></span>, the court shall provisionally dismiss the case with the express consent of the detained accused.</li>
+    <li><strong>Known Witness Unobtainable</strong>: If the essential witness's whereabouts are known but presence cannot be obtained despite due diligence, provisional dismissal proceeds provided:
+      <ul>
+        <li>The case was <span class="c-rust"><strong>twice postponed</strong></span> due to non-appearance of the witness;</li>
+        <li>Warning notices were issued for the third hearing; and</li>
+        <li>Proof of service of subpoenas/notices exists.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3 id="withdrawal-vs-provisional-dismissal">29. Withdrawal of Information vs. Motion to Dismiss</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Feature</th>
+        <th style="width: 39%;">Withdrawal of Information</th>
+        <th style="width: 39%;">Motion to Dismiss (Provisional Dismissal)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Filed By</strong></td>
+        <td>Filed by the <span class="c-navy"><strong>prosecutor</strong></span> before trial.</td>
+        <td>Filed by <span class="c-navy"><strong>either party or ordered by court</strong></span> under <span class="c-teal">Sec. 8, Rule 117</span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Finality Effect</strong></td>
+        <td>Becomes final <span class="c-green"><strong>15 days after receipt</strong></span>, without prejudice to re-filing upon reinvestigation.</td>
+        <td>Becomes final <span class="c-green"><strong>15 days after receipt</strong></span>, subject to the <span class="c-rust"><strong>time-bar rule</strong></span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Time-Bar Applicability</strong></td>
+        <td><span class="c-rust"><strong><u>NOT subject to the 1/2-year time-bar rule</u></strong></span> under <span class="c-teal">Sec. 8, Rule 117</span> (<span class="c-burgundy"><em>Torres v. Aguinaldo</em></span>).</td>
+        <td><span class="c-rust"><strong><u>STRICTLY subject to the 1/2-year time-bar rule</u></strong></span>.</td>
+      </tr>
+      <tr>
+        <td><strong>Requisites</strong></td>
+        <td>Does <span class="c-green"><strong>not require</strong></span> consent of accused or notice under Sec. 8.</td>
+        <td>Mandatorily requires <span class="c-green"><strong><u>express consent of accused</u></strong></span> and <span class="c-green"><strong><u>notice to offended party</u></strong></span>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- DIAGRAM 3: PROVISIONAL DISMISSAL -->
+  <div class="diagram-wrapper" id="diagram-provisional-dismissal">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">PROVISIONAL DISMISSAL &amp; THE TIME-BAR RULE (SEC. 8, RULE 117) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+    classDef navy fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
+    classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+    classDef green fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534;
+    classDef rust fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+
+    PD_START["Motion for Provisional Dismissal Filed"]:::navy --> REQ_CHECK{"Two Mandatory Requisites Concur?<br/>1. Express Consent of Accused<br/>2. Notice to Offended Party"}:::navy
+
+    REQ_CHECK -- "No" --> VOID["Dismissal is Defective / Void ab initio<br/>(Time-bar will NOT run; Double jeopardy may attach if w/o consent)"]:::rust
+    REQ_CHECK -- "Yes" --> ORDER["Order of Provisional Dismissal Issued<br/>(Clock begins strictly from date of issuance)"]:::teal
+
+    ORDER --> PENALTY_SPLIT{"Penalty of Offense Charged"}:::navy
+
+    PENALTY_SPLIT -- "Imprisonment ≤ 6 Years or Fine" --> ONE_YEAR["Time-Bar Period: ONE (1) YEAR"]:::teal
+    PENALTY_SPLIT -- "Imprisonment > 6 Years" --> TWO_YEAR["Time-Bar Period: TWO (2) YEARS"]:::teal
+
+    ONE_YEAR --> ACTION_CHECK{"Prosecution Action within Applicable Time-Bar"}:::navy
+    TWO_YEAR --> ACTION_CHECK
+
+    ACTION_CHECK -- "Case Revived / Re-filed within Period" --> REVIVED["Case Revived Successfully<br/>Accused Cannot Plead Double Jeopardy<br/>(Waiver by Express Consent)"]:::green
+    ACTION_CHECK -- "Period Lapses Without Revival" --> PERMANENT["DISMISSAL BECOMES PERMANENT IPSO FACTO<br/>Operates as Adjudication on the Merits<br/>Double Jeopardy Bar Completely Attaches"]:::rust
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MERMAID JS & INTERACTIVE CANVAS CONTROLLER SCRIPTS -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
