@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torts Quick Reviewer · October 21 + 28 - Vicarious Liability & Special Torts Master Guide</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.85rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.85rem 1.25rem;
+  background: #FFF7ED;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote p {
+  margin: 0.35rem 0;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1.1rem;
+  color: #64748B;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1.5px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1F2937;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #1E3A8A;
+}
+.diagram-viewport {
+  width: 100%;
+  height: 520px;
+  background: #FAFAFA;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex-grow: 1;
+  height: auto;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+}
+.diagram-container pre.mermaid {
+  margin: 0;
+  padding: 1.5rem;
+  background: transparent;
+}
+
+/* Callout Note Boxes */
+.callout-box {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #1E3A8A;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+
+.ext-link {
+  color: #0F766E;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.ext-link:hover {
+  color: #1E3A8A;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    padding: 1.5rem 1.25rem;
+    margin: 0.5rem auto;
+  }
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#exam-sequence-framework">EXAM SEQUENCE: Actor → Authority → Scope → Diligence → Liability</option>
+      <option value="#interactive-decision-matrix">&nbsp;&nbsp;↳ Interactive Diagram: Vicarious Liability & Torts Decision Matrix</option>
+      <option value="#four-articles-to-recall-first">1. The Four Articles to Recall First</option>
+      <option value="#articles-table">&nbsp;&nbsp;↳ Articles 2176, 2180, 2194+1217, 2181 Comparison Table</option>
+      <option value="#joint-tortfeasors-csi">&nbsp;&nbsp;↳ Three Paths to Joint Tortfeasorship (C–S–I)</option>
+      <option value="#parents-and-guardians">2. Parents and Guardians · Age, Company, Authority</option>
+      <option value="#parents-fc-211-221">&nbsp;&nbsp;↳ Parents — Arts. 211 and 221, Family Code</option>
+      <option value="#guardians-art-2180-3">&nbsp;&nbsp;↳ Guardians — Art. 2180(3) & Substitute Authority (G–S–C)</option>
+      <option value="#age-thresholds-15-18-21">&nbsp;&nbsp;↳ Age Thresholds: 15–18–21 (RA 9344 & RA 6809)</option>
+      <option value="#case-triggers-parents">&nbsp;&nbsp;↳ Key Jurisprudential Triggers: Tamargo & Libi</option>
+      <option value="#schools-who-caused-injury">3. Schools · Who Caused the Injury?</option>
+      <option value="#schools-rules-table">&nbsp;&nbsp;↳ Governing Rules by Actor: Minor, Pupil in Custody, Teacher, Outsider</option>
+      <option value="#schools-case-triggers">&nbsp;&nbsp;↳ Four Case Triggers Worth Memorizing (Amadora, St. Francis, St. Mary's, PSBA)</option>
+      <option value="#employers-and-vehicles">4. Employers and Vehicles · Task, Duty, Passenger</option>
+      <option value="#employers-bases-table">&nbsp;&nbsp;↳ Bases of Liability: Quasi-Delict, Ex Delicto, Contract of Carriage</option>
+      <option value="#company-car-business">&nbsp;&nbsp;↳ Company Car & Scope of Assigned Tasks (Castilex & Valenzuela)</option>
+      <option value="#vehicle-owner-art-2184">&nbsp;&nbsp;↳ Motor Vehicle Owner Liability: Art. 2184 (Present vs. Absent)</option>
+      <option value="#registered-owner-kabit">&nbsp;&nbsp;↳ Registered Owner Rule & The Kabit System Prohibition</option>
+      <option value="#special-liabilities">5. Special Liabilities · One-Line Recall</option>
+      <option value="#special-liabilities-table">&nbsp;&nbsp;↳ Special Liabilities Table (Innkeepers, Partners, Spouses, State, LGU, Officers)</option>
+      <option value="#rapid-recall-challenge">&nbsp;&nbsp;↳ 30-Second Recall Challenge & Answers</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 id="torts-quick-reviewer-header">Torts Quick Reviewer · October 21 + 28</h1>
+
+  <!-- Section Roadmap / Numbered Concept Cards -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">CORE ARTICLES</div>
+        <div class="ui-title">Four Pillars</div>
+        <div class="ui-sub">2176, 2180, 2194+1217, 2181</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">FAMILY</div>
+        <div class="ui-title">Parents & Guardians</div>
+        <div class="ui-sub">Age, Company, Authority</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">ACADEME</div>
+        <div class="ui-title">Schools & Teachers</div>
+        <div class="ui-sub">Special Parental vs. Custody</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">ENTERPRISE</div>
+        <div class="ui-title">Employers & Cars</div>
+        <div class="ui-sub">Task, Duty, Passenger</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">5</div>
+        <div class="ui-kicker">SPECIAL</div>
+        <div class="ui-title">Entities & Officials</div>
+        <div class="ui-sub">Inn, Partners, Spouses, State</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="exam-sequence-framework" class="c-navy">Exam Sequence: Actor → Authority → Scope → Diligence → Liability</h3>
+
+  <p><strong>Exam sequence: Actor → Authority → Scope → Diligence → Liability.</strong> Identify who caused the injury, who had authority over that person, whether the act fell within that authority, what defense applies, and who answers for the damages.</p>
+
+  <!-- Stacked Step-by-Step Workflow Box -->
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title"><strong>Step 1: ACTOR</strong></div>
+      <div class="ui-sub">Identify who directly caused the injury (minor, student, employee, partner, driver)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Step 2: AUTHORITY</strong></div>
+      <div class="ui-sub">Identify who possessed legal authority, custody, or supervision over that person</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Step 3: SCOPE</strong></div>
+      <div class="ui-sub">Determine whether the act fell within parental company, authorized activity, or assigned tasks</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Step 4: DILIGENCE DEFENSE</strong></div>
+      <div class="ui-sub">Test applicability of defense: diligence of a good father of a family to prevent damage (selection & supervision)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title c-green"><strong>Step 5: LIABILITY DETERMINATION</strong></div>
+      <div class="ui-sub">Primary & direct (solidary with tortfeasor under Art. 2194) vs. Subsidiary execution (RPC Art. 103)</div>
+    </div>
+  </div>
+
+  <!-- Interactive Pan-and-Zoom Mermaid Diagram -->
+  <div class="diagram-wrapper" id="interactive-decision-matrix">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: VICARIOUS LIABILITY & TORTS DECISION MATRIX <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["TORT / INJURY OCCURS<br/>Exam Sequence: Actor → Authority → Scope → Diligence → Liability"] --> Actor{"1. Who caused the injury? (ACTOR)"}
+
+  Actor -->|Minor or Incapacitated Ward| BranchFamily["PARENTS / GUARDIANS<br/>Arts. 211, 221 FC & Art. 2180(2)-(3) CC"]
+  Actor -->|Student / Pupil / School Agent| BranchSchool["SCHOOLS & TEACHERS<br/>FC 218-219 vs. Art. 2180(7) vs. Contract"]
+  Actor -->|Employee / Driver / Helper| BranchEmployer["EMPLOYERS & VEHICLES<br/>Art. 2180 vs. RPC 103 vs. Carriage"]
+  Actor -->|Special Legal Entity| BranchSpecial["SPECIAL LIABILITIES<br/>Innkeepers, Partners, Spouses, State, LGU"]
+
+  %% Branch Family
+  BranchFamily --> CondFamily{"Living in company & under parental authority?<br/>(Preserved below 21 by RA 6809 §3)"}
+  CondFamily -->|YES| DilFamily{"Proved preventive diligence of a good father?<br/>(Tuition & support NOT enough - Libi)"}
+  CondFamily -->|NO| NoParentLiab["Adopters lacking custody not liable - Tamargo<br/>Offender answers personally"]
+  DilFamily -->|NO: Defense Fails| LiabParents["PARENTS DIRECTLY & SOLIDARILY LIABLE<br/>Primary liability with minor under Art. 2194"]
+  DilFamily -->|YES: Proven| ExonerateParents["Parents Exonerated from Civil Liability"]
+
+  %% Branch School
+  BranchSchool --> SchoolType{"Who is the actor & what context?"}
+  SchoolType -->|Unemancipated minor in authorized activity| SchFC["Family Code Arts. 218-219<br/>School, admin & teachers: PRINCIPALLY & SOLIDARILY liable<br/>Parents: SUBSIDIARILY liable"]
+  SchoolType -->|Pupil in custody including adult| SchCC["Art. 2180(7) CC: Academic → Teacher-in-charge<br/>Arts & Trades → Head of establishment<br/>Custody is protective & supervisory (Amadora)"]
+  SchoolType -->|Teacher's own negligence| SchTeacher["Test Art. 2176 personal;<br/>Art. 2180(4)-(5) employer if in scope of tasks"]
+  SchoolType -->|Outsider assault / crime on campus| SchOutsider["Culpa Contractual (Arts. 1170 & 1173)<br/>Implied duty for campus safety (PSBA v. CA)"]
+
+  %% Branch Employer
+  BranchEmployer --> EmpType{"Under what legal basis is claim filed?"}
+  EmpType -->|Quasi-Delict: Art. 2180(4)-(5)| QD["Employment + Assigned task + Presumption of fault<br/>Defense: Dual proof of SELECTION & SUPERVISION<br/>Liability: Primary, direct, solidary (Art. 2194)"]
+  EmpType -->|Ex Delicto: RPC Art. 103| ED["Felony in discharge of duties + Insolvency<br/>Subsidiary execution in criminal case<br/>Careful hiring/supervision is NO defense!"]
+  EmpType -->|Contract of Carriage: Art. 1759| CC["Common Carrier answers for willful/negligent acts<br/>Careful hiring & supervision DO NOT excuse carrier"]
+  EmpType -->|Motor Vehicle: Art. 2184 & Reg Owner| MV["Owner in vehicle: Solidary if could prevent<br/>Owner absent: Art. 2180<br/>Registered Owner directly liable (Kabit is VOID)"]
+
+  %% Branch Special
+  BranchSpecial --> SpecCat{"Entity Category"}
+  SpecCat -->|Innkeepers: RPC 102| Innk["Subsidiary for crime (violated reg.)<br/>Theft: Prior notice of deposit + directions required"]
+  SpecCat -->|Partnership: Arts. 1822-1824| Partn["Ordinary business or authority → Solidary liability"]
+  SpecCat -->|Spouses: Debt Payment| Spous["Exclusive property first → ACP/CPG advances shortfall"]
+  SpecCat -->|State / LGU: Art. 2180(6) & 2189| StLgu["State: Special agent only<br/>LGU: Control or supervision of defective works (Guilatco)"]
+
+  classDef primary fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
+  classDef statutory fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold;
+  classDef rule fill:#166534,stroke:#166534,color:#FFFFFF,font-weight:bold;
+  classDef warning fill:#C2410C,stroke:#C2410C,color:#FFFFFF,font-weight:bold;
+  classDef nodeBase fill:#FFFFFF,stroke:#CBD5E1,color:#1F2937;
+
+  class Start,Actor primary;
+  class BranchFamily,BranchSchool,BranchEmployer,BranchSpecial,CondFamily,SchoolType,EmpType,SpecCat nodeBase;
+  class SchFC,SchCC,QD,ED,CC,MV statutory;
+  class LiabParents,Partn,StLgu rule;
+  class NoParentLiab,ExonerateParents,SchTeacher,SchOutsider,Innk,Spous warning;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="four-articles-to-recall-first">1. The four articles to recall first</h3>
+
+  <div id="articles-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">Article</th>
+          <th style="width: 25%;">Memory cue</th>
+          <th style="width: 57%;">Rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="c-teal"><strong>2176</strong></span></td>
+          <td><span class="c-navy"><strong>AFDC</strong></span></td>
+          <td><span class="c-green"><strong><u>Act or omission + fault or negligence + damage + proximate cause</u></strong></span>. A juridical person acts through its officers or agents and may also answer as an employer.</td>
+        </tr>
+        <tr>
+          <td><span class="c-teal"><strong>2180</strong></span></td>
+          <td><span class="c-navy"><strong>Select and supervise</strong></span></td>
+          <td><span class="c-burgundy"><em>Culpa in eligendo</em></span> and <span class="c-burgundy"><em>culpa in vigilando</em></span>. Once the requisites are shown, negligence is presumed. Prove the <span class="c-green"><strong><u>diligence of a good father of a family to prevent damage</u></strong></span>. Liability is <span class="c-green"><strong><u>primary and direct</u></strong></span>, and <span class="c-green"><strong><u>solidary</u></strong></span> where <span class="c-teal">Art. 2194</span> applies. Under strict <span class="c-burgundy"><em>respondeat superior</em></span>, <span class="c-rust"><strong><u>careful selection and supervision do not excuse the employer</u></strong></span>.</td>
+        </tr>
+        <tr>
+          <td><span class="c-teal"><strong>2194 + 1217</strong></span></td>
+          <td><span class="c-navy"><strong>Whole outside, shares inside</strong></span></td>
+          <td>The victim may collect the whole from <span class="c-green"><strong><u>any one, some, or all</u></strong></span> solidary tortfeasors. Full payment extinguishes the obligation to the victim. The payer may recover each co-debtor’s corresponding share, with interest on the payment made.</td>
+        </tr>
+        <tr>
+          <td><span class="c-teal"><strong>2181</strong></span></td>
+          <td><span class="c-navy"><strong>Recover what was paid</strong></span></td>
+          <td>One who pays for damage caused by a <span class="c-green"><strong><u>dependent or employee</u></strong></span> may recover from that person what was paid or delivered in satisfaction of the claim.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- UI Pillar Box for Joint Tortfeasors C-S-I -->
+  <div class="ui-box" id="joint-tortfeasors-csi">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">C</div>
+        <div class="ui-title">Concerted Cooperation</div>
+        <div class="ui-sub">Joint enterprise or common concerted scheme</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">S</div>
+        <div class="ui-title">Single Causal Set</div>
+        <div class="ui-sub">Concurrent contributions producing unified harm</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">I</div>
+        <div class="ui-title">Independent Acts</div>
+        <div class="ui-sub">Separate proximate causes of one indivisible injury</div>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Three paths to joint tortfeasorship: C–S–I.</strong> <span class="c-green"><strong><u>Concerted cooperation, contributions to a single causal set, or independent acts that concur as proximate causes of one indivisible injury</u></strong></span>. Conspiracy is unnecessary. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></p>
+
+  <hr>
+
+  <h3 id="parents-and-guardians">2. Parents and guardians · <strong>Age, Company, Authority</strong></h3>
+
+  <!-- UI Pillar Box for Age, Company, Authority -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🎂</div>
+        <div class="ui-title">Age Thresholds</div>
+        <div class="ui-sub">15, 18, 21 Rules (RA 9344 & RA 6809)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏡</div>
+        <div class="ui-title">Living in Company</div>
+        <div class="ui-sub">Actual physical cohabitation & custody</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">Parental Authority</div>
+        <div class="ui-sub">Joint legal power of governance & discipline</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li id="parents-fc-211-221">
+      <strong>Parents — <span class="c-teal">Arts. 211 and 221, Family Code</span>.</strong> Both parents jointly exercise parental authority. For a child <span class="c-green"><strong><u>living in their company and under their parental authority</u></strong></span>, liability may be <span class="c-green"><strong><u>primary, direct, and solidary</u></strong></span> for negligent or intentional acts. The defense is diligence <span class="c-green"><strong><u>to prevent the damage</u></strong></span>. <span class="c-rust"><strong><u>Paying tuition and providing support do not establish preventive supervision</u></strong></span>. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/5/95173?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a>
+    </li>
+    <li id="guardians-art-2180-3">
+      <strong>Guardians — <span class="c-teal">Art. 2180(3)</span>.</strong> The minor or incapacitated ward must be <span class="c-green"><strong><u>under their authority and living in their company</u></strong></span>. In default of parents or a judicial guardian, remember <span class="c-navy"><strong>G–S–C</strong></span> under <span class="c-teal">Art. 216</span>: surviving <span class="c-navy"><strong>g</strong></span>randparent → oldest qualified <span class="c-navy"><strong>s</strong></span>ibling over 21 → qualified actual <span class="c-navy"><strong>c</strong></span>ustodian over 21. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a>
+    </li>
+    <li id="age-thresholds-15-18-21">
+      <strong>15–18–21.</strong> Under <span class="c-teal"><strong>R.A. 9344, §6</strong></span>, <span class="c-green"><strong><u>15 or under</u></strong></span> is exempt from criminal liability. <span class="c-green"><strong><u>Over 15 but below 18</u></strong></span> is exempt if acting <span class="c-rust"><strong><u>without discernment</u></strong></span>. Criminal exemption leaves civil liability enforceable under existing law, including <span class="c-teal"><strong>RPC Arts. 100–101</strong></span> as applicable. <span class="c-navy"><strong>18</strong></span> is majority. <span class="c-teal"><strong>R.A. 6809, §3</strong></span> preserves <span class="c-teal">Art. 2180(2)–(3)</span> responsibility for children and wards <span class="c-rust"><strong><u>below 21</u></strong></span>. <a class="ext-link" href="https://www.lawphil.net/statutes/repacts/ra2006/ra_9344_2006.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a>
+    </li>
+  </ul>
+
+  <div id="case-triggers-parents">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">Case trigger</th>
+          <th style="width: 70%;">Recall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="c-rust"><strong>Pending adoption</strong></span></td>
+          <td><span class="c-burgundy"><em>Tamargo v. CA</em>, G.R. No. 85044, June 3, 1992</span>. Ask <span class="c-green"><strong><u>who had actual custody when the tort occurred</u></strong></span>. <span class="c-rust"><strong><u>Retroactive adoption did not shift liability to adopters who lacked custody then</u></strong></span>. <a class="ext-link" href="https://lawphil.net/judjuris/juri1992/jun1992/gr_85044_1992.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+        <tr>
+          <td><span class="c-rust"><strong>Gun locked, key accessible</strong></span></td>
+          <td><span class="c-burgundy"><em>Libi v. IAC</em>, G.R. No. 70890, September 18, 1992</span>. Parents failed to prove preventive diligence. A third-party gun owner may separately answer under <span class="c-teal"><strong>Arts. 2176 and 2194</strong></span> if negligent storage was a concurrent proximate cause. <a class="ext-link" href="https://lawphil.net/judjuris/juri1992/sep1992/gr_70890_1992.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <h3 id="schools-who-caused-injury">3. Schools · <strong>Who caused the injury?</strong></h3>
+
+  <div id="schools-rules-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">Actor</th>
+          <th style="width: 70%;">Governing rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="school-unemancipated-minor"><span class="c-navy"><strong>Unemancipated minor</strong></span></td>
+          <td><span class="c-teal"><strong>Family Code Arts. 218–219.</strong></span> School, administrators and teachers, or the person or entity engaged in child care, have <span class="c-green"><strong><u>special parental authority</u></strong></span> during supervision, instruction or custody in <span class="c-green"><strong><u>all authorized activities</u></strong></span>, on or off premises. For damage <span class="c-green"><strong><u>caused by</u></strong></span> the minor, they are <span class="c-green"><strong><u>principally and solidarily liable</u></strong></span>. Parents, judicial guardians or substitute parents are <span class="c-rust"><strong><u>subsidiarily liable</u></strong></span>. Defense for each is <span class="c-green"><strong><u>proper diligence required under the particular circumstances</u></strong></span>. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/5/95173?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td id="school-pupil-in-custody"><span class="c-navy"><strong>Pupil, student or apprentice in custody, including an adult</strong></span></td>
+          <td><span class="c-teal"><strong>Art. 2180(7).</strong></span> Academic school → <span class="c-navy"><strong>teacher-in-charge</strong></span>. Arts and trades → <span class="c-navy"><strong>head of the establishment</strong></span>. Custody is <span class="c-green"><strong><u>protective and supervisory</u></strong></span> and can include recess or a legitimate campus purpose after classes end. The school entity may answer on a separate legal basis. <a class="ext-link" href="https://lawphil.net/judjuris/juri1988/apr1988/gr_l-47745_1988.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+        <tr>
+          <td id="school-teacher-employee"><span class="c-navy"><strong>Teacher or school employee</strong></span></td>
+          <td><span class="c-teal"><strong>Art. 2180(4)–(5).</strong></span> Ask if the act was <span class="c-green"><strong><u>within the scope of assigned tasks</u></strong></span>. For the teacher’s own negligence, test <span class="c-teal"><strong>Art. 2176</strong></span>. <span class="c-rust"><strong><u>An injury suffered by a student does not by itself establish Art. 219 liability</u></strong></span>. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td id="school-outsider"><span class="c-navy"><strong>Outsider</strong></span></td>
+          <td><span class="c-navy"><strong>Culpa contractual</strong></span>, <span class="c-teal"><strong>Arts. 1170 and 1173.</strong></span> Enrollment includes an implied duty to take reasonable measures for campus safety. Establish breach and causation. <span class="c-rust"><strong><u>The outsider’s act falls outside Art. 2180(7)</u></strong></span>. <a class="ext-link" href="https://lawphil.net/judjuris/juri1992/feb1992/gr_84698_1992.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 id="schools-case-triggers" class="c-navy">Four case triggers worth memorizing</h4>
+
+  <ul>
+    <li>
+      <strong>Physics report</strong> — <span class="c-burgundy"><em>Amadora v. CA</em>, G.R. No. L-47745, April 15, 1988</span>. Custody can continue after classes end. <span class="c-rust"><strong><u>The teacher-in-charge of the offending student was not established</u></strong></span>. <a class="ext-link" href="https://lawphil.net/judjuris/juri1988/apr1988/gr_l-47745_1988.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a>
+    </li>
+    <li>
+      <strong>Private picnic</strong> — <span class="c-burgundy"><em>St. Francis High School v. CA</em>, G.R. No. 82465, February 25, 1991</span>. <span class="c-rust"><strong><u>The principal’s awareness did not amount to authorization</u></strong></span>. The Supreme Court <span class="c-green"><strong><u>also absolved the petitioning teachers</u></strong></span>, who proved diligence. <a class="ext-link" href="https://lawphil.net/judjuris/juri1991/feb1991/gr_82465_1991.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a>
+    </li>
+    <li>
+      <strong>Steering defect</strong> — <span class="c-burgundy"><em>St. Mary’s Academy v. Carpitanos</em>, G.R. No. 143363, February 6, 2002</span>. <span class="c-rust"><strong><u>Authorization alone does not establish proximate cause</u></strong></span>. The Court excluded the academy and remanded to determine the remaining defendants’ liability. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/50211?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a>
+    </li>
+    <li>
+      <strong>Outsider stabbing</strong> — <span class="c-burgundy"><em>PSBA v. CA</em>, G.R. No. 84698, February 4, 1992</span>. The Court allowed the contractual claim to <span class="c-green"><strong><u>proceed to trial</u></strong></span>. <span class="c-rust"><strong><u>It did not adjudge the school liable for damages</u></strong></span>. <span class="c-rust"><strong><u>A consent form likewise does not by itself establish diligence</u></strong></span>. <span class="c-teal"><strong>Art. 1171 expressly addresses future fraud.</strong></span> <a class="ext-link" href="https://lawphil.net/judjuris/juri1992/feb1992/gr_84698_1992.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="employers-and-vehicles">4. Employers and vehicles · <strong>Task, Duty, Passenger</strong></h3>
+
+  <div id="employers-bases-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">Basis</th>
+          <th style="width: 75%;">What to remember</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="c-navy"><strong>Quasi-delict</strong></span> · <span class="c-teal"><strong>Art. 2180(4)–(5)</strong></span></td>
+          <td><span class="c-green"><strong><u>Employment + employee’s quasi-delict + assigned task</u></strong></span>. Par. 4 covers owners and managers of an enterprise and acts in the service of the branch or on the occasion of functions. <span class="c-rust"><strong><u>A mere managerial employee does not become the employer</u></strong></span>. Par. 5 includes <span class="c-navy"><strong>household helpers</strong></span>, even without a business. Defense requires proof of <span class="c-green"><strong><u>both selection and supervision</u></strong></span>. Think verified qualifications and testing <span class="c-green"><strong><u>before hiring</u></strong></span>, then actual training, monitoring and enforcement <span class="c-green"><strong><u>after hiring</u></strong></span>. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td><span class="c-navy"><strong>Ex delicto</strong></span> · <span class="c-teal"><strong>RPC Art. 103</strong></span></td>
+          <td><span class="c-green"><strong><u>Employment + industry + final conviction for a felony in discharge of duties + insolvency</u></strong></span>. Liability is <span class="c-rust"><strong><u>subsidiary</u></strong></span>. After unsuccessful execution against the employee, move for <span class="c-green"><strong><u>subsidiary execution in the same criminal case</u></strong></span>, with an opportunity for the employer to be heard. <span class="c-rust"><strong><u>Diligence in hiring or supervision is unavailable as a defense</u></strong></span>. <a class="ext-link" href="https://www.lawphil.net/statutes/acts/act1930/act_3815_1930b.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+        <tr>
+          <td><span class="c-navy"><strong>Contract of carriage</strong></span> · <span class="c-teal"><strong>Art. 1759</strong></span></td>
+          <td>Carrier answers for passenger injury or death through employee <span class="c-green"><strong><u>negligence or willful acts</u></strong></span>, even beyond authority or against orders. <span class="c-rust"><strong><u>Careful hiring and supervision do not excuse it</u></strong></span>. <span class="c-teal"><strong>Art. 1763</strong></span> covers strangers and fellow passengers if carrier employees could have prevented or stopped the act through the required diligence. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul>
+    <li id="company-car-business">
+      <strong>Company car → ask whose business the trip served.</strong> <span class="c-burgundy"><em>Castilex Industrial Corp. v. Vasquez, Jr.</em>, G.R. No. 132266, December 21, 1999</span>. Ordinary commutes, meals and personal errands generally fall outside assigned tasks absent a <span class="c-green"><strong><u>special business benefit</u></strong></span>. <span class="c-burgundy"><em>Valenzuela v. CA</em>, G.R. No. 115024, February 7, 1996</span>, illustrates company-car use serving the employer’s business and inadequate proof of supervision. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/37055?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a>
+    </li>
+    <li id="vehicle-owner-art-2184">
+      <strong><span class="c-teal">Art. 2184</span> → In? Could prevent?</strong> An owner <span class="c-green"><strong><u>in the vehicle</u></strong></span> is <span class="c-green"><strong><u>solidarily liable</u></strong></span> with the negligent driver if due diligence could have prevented the mishap. Think <span class="c-rust"><strong>sustained speeding</strong></span> versus a <span class="c-rust"><strong>sudden swerve</strong></span> with no reasonable chance to intervene. Owner <span class="c-rust"><strong>absent</strong></span> → <span class="c-teal">Art. 2180</span>. <span class="c-green"><strong><u>Two findings of guilt in the preceding two months</u></strong></span> for reckless driving or traffic violations create a disputable presumption of driver negligence. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a>
+    </li>
+    <li id="registered-owner-kabit">
+      <strong>Registered owner → check the LTO record.</strong> An open deed of sale or unregistered lease does not defeat an injured third party’s claim. Where the registered-owner rule and <span class="c-teal">Art. 2180</span> both apply, <span class="c-burgundy"><em>Caravan</em></span> treats registration as raising a <span class="c-green"><strong><u>disputable presumption</u></strong></span> and shifts the evidentiary burden to the registered owner. Keep the victim’s claim separate from any recourse against the buyer, lessee or driver. <span class="c-rust"><strong><u>Kabit is void as against public policy</u></strong></span>. The CPC holder cannot hide behind the arrangement, and <span class="c-rust"><strong><u>parties in pari delicto cannot enforce it between themselves</u></strong></span>. <a class="ext-link" href="https://lawphil.net/judjuris/juri1957/sep1957/gr_l-9605_1957.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3 id="special-liabilities">5. Special liabilities · One-line recall</h3>
+
+  <div id="special-liabilities-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 28%;">Topic</th>
+          <th style="width: 72%;">Memory rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="innkeepers-rpc-102"><span class="c-navy"><strong>Innkeepers</strong></span> · <span class="c-teal"><strong>RPC Art. 102</strong></span></td>
+          <td><span class="c-navy"><strong>Regulation, or Notice + Directions.</strong></span> Subsidiary liability for a crime in the establishment when the keeper or employee violated an ordinance or police regulation. For theft or robbery of a lodging guest’s goods, require <span class="c-green"><strong><u>prior notice of deposit + compliance with directions</u></strong></span>. <span class="c-rust"><strong><u>Violent or intimidating robbery is excluded unless committed by the keeper’s employees</u></strong></span>. <a class="ext-link" href="https://www.lawphil.net/statutes/acts/act1930/act_3815_1930b.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+        <tr>
+          <td id="partnership-arts-1822-1824"><span class="c-navy"><strong>Partnership</strong></span> · <span class="c-teal"><strong>Arts. 1822–1824</strong></span></td>
+          <td><span class="c-green"><strong><u>Ordinary course or authority → solidary</u></strong></span>. Partnership and all partners answer for a partner’s wrongful act within ordinary business or with co-partners’ authority, and for covered misapplication of third-party money or property. <span class="c-navy"><strong>Mutual agency</strong></span> governs. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td id="spouses-property-regimes"><span class="c-navy"><strong>Spouses</strong></span> · Which property pays?</td>
+          <td><span class="c-green"><strong><u>Exclusive property first</u></strong></span>. <span class="c-navy"><strong>ACP</strong></span>, <span class="c-teal">Art. 94(9)</span> → if insufficient, community advances payment, deducted at liquidation. <span class="c-navy"><strong>CPG</strong></span>, <span class="c-teal">Arts. 121–122</span> → same shortfall rule, <span class="c-green"><strong><u>after Art. 121 charges are covered</u></strong></span>. <span class="c-navy"><strong>Complete separation</strong></span> → debtor-spouse’s separate property. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/5/95173?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td id="state-special-agent"><span class="c-navy"><strong>State</strong></span> · Consent and commission</td>
+          <td><span class="c-teal"><strong>Const., Art. XVI, §3</strong></span> → consent to suit is distinct from liability. <span class="c-teal"><strong>Art. 2180(6)</strong></span> → State answers for a <span class="c-green"><strong><u>special agent</u></strong></span> with a definite commission foreign to regular duties. For the official whose regular task it was, test personal liability under <span class="c-teal"><strong>Art. 2176</strong></span>. <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/45/25590?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[Supreme Court E-Library]</a></td>
+        </tr>
+        <tr>
+          <td id="lgu-defective-public-works"><span class="c-navy"><strong>LGU</strong></span> · Control or supervision</td>
+          <td><span class="c-teal"><strong>Art. 2189</strong></span> → provinces, cities and municipalities answer for death or injury caused by defective public works <span class="c-green"><strong><u>under their control or supervision</u></strong></span>. <span class="c-rust"><strong><u>National ownership does not decide the issue</u></strong></span>. Recall <span class="c-burgundy"><em>Guilatco</em></span>’s open manhole and <span class="c-burgundy"><em>San Juan</em></span>’s inadequate <span class="c-burgundy"><em>gasera</em></span>. Also check the LGU’s proprietary capacity and <span class="c-teal"><strong>LGC §24</strong></span>. <a class="ext-link" href="https://lawphil.net/judjuris/juri1989/mar1989/gr_61516_1989.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+        <tr>
+          <td id="public-officers-personal"><span class="c-navy"><strong>Public officers</strong></span> · Personal capacity</td>
+          <td>Actionable <span class="c-rust"><strong><em>ultra vires</em></strong></span> conduct, bad faith, malice or gross negligence can support personal liability. <span class="c-teal"><strong>Arts. 19–21 and 32</strong></span> have distinct requisites. <span class="c-burgundy"><em>Varela v. Revalez</em>, G.R. No. 171705, <strong>July 29, 2010</strong></span>. <span class="c-burgundy"><em>Cadiz v. Presiding Judge</em>, G.R. No. 178941, April 27, 2011</span>, protects honest errors in the exercise of quasi-judicial functions. <a class="ext-link" href="https://lawphil.net/judjuris/juri2010/jul2010/gr_171705_2010.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">[lawphil.net]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-box" id="rapid-recall-challenge">
+    <p><strong>30-second recall.</strong> A 20-year-old lives with his parents and injures a neighbor. Which law preserves possible parental liability? An adult student injures a classmate during recess. Who had supervisory custody? A delivery driver is convicted and insolvent. Which article governs subsidiary execution?</p>
+    <p style="margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px dashed #CBD5E1;"><strong>Answers:</strong> <span class="c-teal">R.A. 6809, §3</span> with <span class="c-teal">Art. 2180(2)</span> → <span class="c-navy"><strong>teacher-in-charge</strong></span> in an academic school under <span class="c-teal">Art. 2180(7)</span>, subject to diligence → <span class="c-teal">RPC Art. 103</span>, if its other requisites are met.</p>
+  </div>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
