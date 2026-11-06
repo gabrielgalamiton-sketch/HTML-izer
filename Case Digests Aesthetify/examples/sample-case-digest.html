@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torts & Damages: Vicarious Liability & Quasi-Delict Case Digests</title>
+  <style>
+    :root {
+      --color-navy: #1E3A8A;
+      --color-teal: #0F766E;
+      --color-green: #166534;
+      --color-burgundy: #991B1B;
+      --color-rust: #C2410C;
+      --color-text: #1F2937;
+      --color-bg: #FFFFFF;
+      --color-page-bg: #F3F4F6;
+      --color-quote-bg: #F8FAFC;
+      --color-sidebar-bg: #F8FAFC;
+      --color-border: #E2E8F0;
+      --nav-height: 52px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--color-text);
+      background-color: var(--color-page-bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* STICKY TOP NAVIGATION */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+    .nav-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-navy);
+      white-space: nowrap;
+    }
+    .nav-select {
+      flex: 1;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text);
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.35rem 0.6rem;
+      outline: none;
+      cursor: pointer;
+      text-overflow: ellipsis;
+    }
+    .nav-select:focus { border-color: var(--color-navy); }
+
+    /* DOCUMENT CONTAINER */
+    .document-container {
+      max-width: 1200px;
+      margin: 1.5rem auto 4rem auto;
+      background: #FFFFFF;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.04);
+    }
+    
+    h1, h3, h4 {
+      scroll-margin-top: calc(var(--nav-height) + 1.25rem);
+    }
+    h1 {
+      color: var(--color-navy);
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-navy);
+    }
+    h3 { color: var(--color-navy); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { color: var(--color-navy); font-size: 1.05rem; font-weight: 700; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+    hr { border: 0; height: 1px; background-color: var(--color-border); margin: 2rem 0; }
+    p { margin: 0.75rem 0; }
+    ul, ol { margin: 0.5rem 0 0.75rem 1.25rem; padding: 0; }
+    li { margin-bottom: 0.35rem; }
+    blockquote {
+      background-color: var(--color-quote-bg);
+      border-left: 4px solid var(--color-burgundy);
+      margin: 1rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+    }
+
+    /* COLOR PALETTE CLASSES */
+    .c-navy { color: var(--color-navy); }
+    .c-teal { color: var(--color-teal); }
+    .c-green { color: var(--color-green); }
+    .c-burgundy { color: var(--color-burgundy); }
+    .c-rust { color: var(--color-rust); }
+
+    /* CASE DUAL-COLUMN LAYOUT & STICKY PANEL */
+    .case-section {
+      margin: 2.25rem 0;
+      padding-bottom: 2rem;
+      border-bottom: 1px dashed var(--color-border);
+    }
+    .case-section:last-of-type { border-bottom: none; }
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 2rem;
+      align-items: start;
+    }
+    .case-main { min-width: 0; }
+    
+    .case-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 1.25rem);
+    }
+    .case-quick-card {
+      background: var(--color-sidebar-bg);
+      border: 1px solid var(--color-border);
+      border-top: 3px solid var(--color-navy);
+      border-radius: 6px;
+      padding: 1rem 1.15rem;
+      font-size: 0.83rem;
+      line-height: 1.45;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .quick-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .quick-group { margin-bottom: 0.75rem; }
+    .quick-group:last-child { margin-bottom: 0; }
+    .quick-label {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-bottom: 0.25rem;
+    }
+    .label-facts { background: #E0E7FF; color: var(--color-navy); }
+    .label-issue { background: #FEF3C7; color: #92400E; }
+    .label-ruling { background: #DCFCE7; color: var(--color-green); }
+    .quick-text { margin: 0; color: #374151; }
+
+    /* DIAGRAM STYLING */
+    .diagram-container {
+      background: var(--color-quote-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      text-align: center;
+    }
+
+    /* RESPONSIVE & PRINT */
+    @media (max-width: 900px) {
+      .document-container { padding: 1.5rem 1.25rem; }
+      .case-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .case-sidebar { position: static; }
+      .nav-label { display: none; }
+    }
+    @media print {
+      .sticky-nav { display: none !important; }
+      body { background: #FFF; padding: 0; }
+      .document-container { box-shadow: none; padding: 0; max-width: 100%; margin: 0; }
+      .case-grid { display: block; }
+      .case-sidebar { position: static; margin-top: 1rem; page-break-inside: avoid; }
+      .diagram-container { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY TOP NAVIGATION -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <span class="nav-label">Navigation:</span>
+      <select id="toc-select" class="nav-select">
+        <option value="" disabled selected>Jump to Topic / Case...</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="document-container">
+    <h1>Torts & Damages: Quasi-Delict & Vicarious Liability</h1>
+
+    <h3 id="statutory-foundations">I. Statutory Foundations: Articles 2176 & 2180</h3>
+    <p>
+      Under <span class="c-teal">Article 2176 of the Civil Code</span>, whoever by act or omission causes damage to another, there being fault or negligence, is obliged to pay for the damage done. Such fault or negligence, if there is no pre-existing contractual relation between the parties, is called a quasi-delict.
+    </p>
+
+    <!-- MERMAID WORKFLOW DIAGRAM -->
+    <div class="diagram-container">
+      <pre class="mermaid">
+        flowchart TD
+          A["Quasi-Delict Claim (Art. 2176)"] --> B["Prove Primary Negligence of Tortfeasor"]
+          B --> C{"Is Tortfeasor an Employee / Minor / Ward?"}
+          C -- "YES" --> D["Impute Vicarious Liability (Art. 2180)"]
+          C -- "NO" --> E["Sole Personal Liability of Tortfeasor"]
+          D --> F{"Did Employer / Parent exercise Diligence of Good Father of Family?"}
+          F -- "YES (Proved)" --> G["Defense Exonerates Employer / Parent"]
+          F -- "NO (Unproven)" --> H["Solidary Liability with Tortfeasor"]
+
+          style A fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+          style B fill:#F0FDF4,stroke:#166534,stroke-width:2px,color:#166534
+          style C fill:#FFFBEB,stroke:#D97706,stroke-width:2px,color:#92400E
+          style D fill:#EEF2FF,stroke:#4338CA,stroke-width:2px,color:#4338CA
+          style E fill:#F8FAFC,stroke:#64748B,stroke-width:2px,color:#334155
+          style F fill:#FFFBEB,stroke:#D97706,stroke-width:2px,color:#92400E
+          style G fill:#ECFDF5,stroke:#059669,stroke-width:2px,color:#065F46
+          style H fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
+      </pre>
+    </div>
+
+    <hr>
+
+    <h3 id="vicarious-liability-cases">II. Landmark Jurisprudence on Special Parental & Institutional Authority</h3>
+
+    <!-- CASE 1 -->
+    <section class="case-section">
+      <div class="case-grid">
+        <div class="case-main">
+          <h4 id="st-marys-academy-v-carpitanos">1. St. Mary's Academy v. Carpitanos</h4>
+          <p class="case-meta">
+            <span class="c-burgundy"><em>St. Mary's Academy v. Carpitanos and Guingona</em></span>, 
+            <span class="c-teal">G.R. No. 143363</span>, February 27, 2002
+          </p>
+
+          <p>
+            During a religious campaign organized by St. Mary's Academy, high school students were being transported in a vehicle driven by an enrolled minor student, James Daniel II. The jeep overturned, resulting in the death of fellow student Sherwin Carpitanos. The parents of Sherwin filed an action for damages against St. Mary's Academy and the parents of the minor driver under <span class="c-teal">Article 218 of the Family Code</span>.
+          </p>
+
+          <p>
+            The Court of Appeals held St. Mary's Academy liable for damages on the ground that it had custody and supervision over the students during an official school activity. St. Mary's Academy appealed, arguing that it was neither the owner of the vehicle nor was James Daniel II authorized to drive, and that a mechanical defect in the vehicle's steering was an intervening cause.
+          </p>
+
+          <blockquote>
+            "Under Article 218 of the Family Code, the school, its administrators and teachers, or the individual, entity or institution engaged in child care shall have special parental authority and responsibility over the minor child while under their supervision, instruction or custody. However, for liability to attach, there must be a showing that the negligence of the school was the proximate cause of the injury."
+          </blockquote>
+
+          <p>
+            The Supreme Court reversed the appellate court's finding of liability against the school. The Court clarified that <span class="c-green"><strong><u>special parental authority under Article 218 requires proximate causation</u></strong></span> between the school's lack of supervision and the resulting accident. The detached steering wheel was an unanticipated mechanical failure that constituted the immediate cause of the accident, negating the finding that lack of faculty supervision was proximate.
+          </p>
+        </div>
+
+        <aside class="case-sidebar">
+          <div class="case-quick-card">
+            <div class="quick-title">Quick Snapshot • G.R. 143363</div>
+
+            <div class="quick-group">
+              <span class="quick-label label-facts">Facts</span>
+              <p class="quick-text">A minor student drove a jeep during a school-sponsored religious activity; the steering wheel detached, the vehicle flipped, and another minor student died.</p>
+            </div>
+
+            <div class="quick-group">
+              <span class="quick-label label-issue">Main Issue</span>
+              <p class="quick-text">Is the school liable under Art. 218 of the Family Code for the student's death during an official school event?</p>
+            </div>
+
+            <div class="quick-group">
+              <span class="quick-label label-ruling">SC Ruling</span>
+              <p class="quick-text"><strong>NO.</strong> For special parental liability under Art. 218 to attach, the school's negligence must be the <span class="c-green"><strong><u>proximate cause</u></strong></span>. The mechanical steering detachment was the proximate cause, not lack of teacher supervision.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CASE 2 -->
+    <section class="case-section">
+      <div class="case-grid">
+        <div class="case-main">
+          <h4 id="amadora-v-court-of-appeals">2. Amadora v. Court of Appeals</h4>
+          <p class="case-meta">
+            <span class="c-burgundy"><em>Amadora v. Court of Appeals</em></span>, 
+            <span class="c-teal">G.R. No. L-47745</span>, April 15, 1988
+          </p>
+
+          <p>
+            Alfredo Amadora was fatally shot by his classmate, Pablito Daffon, inside the auditorium of Colegio de San Jose-Recoletos. The incident occurred after classes had ended for the semester, but while the students were in school to complete graduation requirements, specifically the physics experiment report.
+          </p>
+
+          <p>
+            The trial court found the school and its rector, dean, and teachers liable under <span class="c-teal">Article 2180 of the Civil Code</span>. The Court of Appeals reversed on the ground that the academic school year had concluded, Daffon was not in physical class session, and Article 2180 applies exclusively to schools of arts and trades.
+          </p>
+
+          <blockquote>
+            "Article 2180 of the Civil Code applies to all schools, academic as well as non-academic. The student is under the custody of the school so long as he is inside school premises for a legitimate educational reason, whether within or outside semester classes."
+          </blockquote>
+
+          <p>
+            Justice Cruz, speaking for the Court en banc, held that <span class="c-green"><strong><u>custody persists as long as the student remains in school for a legitimate school activity</u></strong></span>, even after regular class hours. Furthermore, <span class="c-teal">Article 2180</span> applies broadly to all schools. However, the teachers and school administrators were ultimately exonerated because they successfully demonstrated that they exercised the <span class="c-green"><strong><u>diligence of a good father of a family</u></strong></span> in maintaining campus security.
+          </p>
+        </div>
+
+        <aside class="case-sidebar">
+          <div class="case-quick-card">
+            <div class="quick-title">Quick Snapshot • G.R. L-47745</div>
+
+            <div class="quick-group">
+              <span class="quick-label label-facts">Facts</span>
+              <p class="quick-text">A graduating student was fatally shot inside the school auditorium by a classmate submitting physics requirements during post-semester clearance.</p>
+            </div>
+
+            <div class="quick-group">
+              <span class="quick-label label-issue">Main Issue</span>
+              <p class="quick-text">Does Art. 2180 apply to academic schools after regular class hours when students are finishing requirements?</p>
+            </div>
+
+            <div class="quick-group">
+              <span class="quick-label label-ruling">SC Ruling</span>
+              <p class="quick-text"><strong>YES.</strong> Art. 2180 applies to all schools (academic or vocational) whenever students are on campus for legitimate purposes. However, the school was exonerated upon showing exercise of <span class="c-green"><strong><u>due diligence of a good father of a family</u></strong></span>.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <!-- TOC OBSERVER & MERMAID SCRIPT -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#F8FAFC',
+        primaryBorderColor: '#1E3A8A',
+        primaryTextColor: '#1F2937',
+        lineColor: '#1E3A8A',
+        fontFamily: 'sans-serif'
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('toc-select');
+      const headings = document.querySelectorAll('.document-container h1, .document-container h3, .document-container h4');
+      
+      headings.forEach((heading, idx) => {
+        if (!heading.id) {
+          heading.id = 'sec-' + idx + '-' + heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30);
+        }
+        
+        const option = document.createElement('option');
+        option.value = heading.id;
+        
+        const isH1 = heading.tagName.toLowerCase() === 'h1';
+        const isH3 = heading.tagName.toLowerCase() === 'h3';
+        const indent = isH1 ? '' : isH3 ? '▪ ' : '    ↳ ';
+        option.textContent = indent + heading.textContent.trim();
+        select.appendChild(option);
+      });
+
+      select.addEventListener('change', (e) => {
+        const target = document.getElementById(e.target.value);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            select.value = entry.target.id;
+          }
+        });
+      }, { rootMargin: '0px 0px -75% 0px' });
+
+      headings.forEach(heading => observer.observe(heading));
+    });
+  </script>
+</body>
+</html>

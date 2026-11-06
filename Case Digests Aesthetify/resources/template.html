@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Study Document & Case Digests</title>
+  <style>
+    :root {
+      --color-navy: #1E3A8A;
+      --color-teal: #0F766E;
+      --color-green: #166534;
+      --color-burgundy: #991B1B;
+      --color-rust: #C2410C;
+      --color-text: #1F2937;
+      --color-bg: #FFFFFF;
+      --color-page-bg: #F3F4F6;
+      --color-quote-bg: #F8FAFC;
+      --color-sidebar-bg: #F8FAFC;
+      --color-border: #E2E8F0;
+      --nav-height: 52px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--color-text);
+      background-color: var(--color-page-bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* STICKY TOP NAVIGATION */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+    .nav-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-navy);
+      white-space: nowrap;
+    }
+    .nav-select {
+      flex: 1;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text);
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.35rem 0.6rem;
+      outline: none;
+      cursor: pointer;
+      text-overflow: ellipsis;
+    }
+    .nav-select:focus { border-color: var(--color-navy); }
+
+    /* DOCUMENT CONTAINER */
+    .document-container {
+      max-width: 1200px;
+      margin: 1.5rem auto 4rem auto;
+      background: #FFFFFF;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.04);
+    }
+    
+    h1, h3, h4 {
+      scroll-margin-top: calc(var(--nav-height) + 1.25rem);
+    }
+    h1 {
+      color: var(--color-navy);
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-navy);
+    }
+    h3 { color: var(--color-navy); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { color: var(--color-navy); font-size: 1.05rem; font-weight: 700; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+    hr { border: 0; height: 1px; background-color: var(--color-border); margin: 2rem 0; }
+    p { margin: 0.75rem 0; }
+    ul, ol { margin: 0.5rem 0 0.75rem 1.25rem; padding: 0; }
+    li { margin-bottom: 0.35rem; }
+    blockquote {
+      background-color: var(--color-quote-bg);
+      border-left: 4px solid var(--color-burgundy);
+      margin: 1rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+    }
+
+    /* COLOR PALETTE CLASSES */
+    .c-navy { color: var(--color-navy); }
+    .c-teal { color: var(--color-teal); }
+    .c-green { color: var(--color-green); }
+    .c-burgundy { color: var(--color-burgundy); }
+    .c-rust { color: var(--color-rust); }
+
+    /* CASE DUAL-COLUMN LAYOUT & STICKY PANEL */
+    .case-section {
+      margin: 2.25rem 0;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--color-border);
+    }
+    .case-section:last-of-type { border-bottom: none; }
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 2rem;
+      align-items: start;
+    }
+    .case-main { min-width: 0; }
+    
+    .case-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 1.25rem);
+    }
+    .case-quick-card {
+      background: var(--color-sidebar-bg);
+      border: 1px solid var(--color-border);
+      border-top: 3px solid var(--color-navy);
+      border-radius: 6px;
+      padding: 1rem;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .quick-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .quick-group { margin-bottom: 0.75rem; }
+    .quick-group:last-child { margin-bottom: 0; }
+    .quick-label {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-bottom: 0.25rem;
+    }
+    .label-facts { background: #E0E7FF; color: var(--color-navy); }
+    .label-issue { background: #FEF3C7; color: #92400E; }
+    .label-ruling { background: #DCFCE7; color: var(--color-green); }
+    .quick-text { margin: 0; color: #374151; }
+
+    /* DIAGRAM STYLING */
+    .diagram-container {
+      background: var(--color-quote-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      text-align: center;
+    }
+
+    /* RESPONSIVE & PRINT */
+    @media (max-width: 900px) {
+      .document-container { padding: 1.5rem 1.25rem; }
+      .case-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .case-sidebar { position: static; }
+      .nav-label { display: none; }
+    }
+    @media print {
+      .sticky-nav { display: none !important; }
+      body { background: #FFF; padding: 0; }
+      .document-container { box-shadow: none; padding: 0; max-width: 100%; margin: 0; }
+      .case-grid { display: block; }
+      .case-sidebar { position: static; margin-top: 1rem; page-break-inside: avoid; }
+      .diagram-container { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY TOP NAVIGATION -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <span class="nav-label">Navigation:</span>
+      <select id="toc-select" class="nav-select">
+        <option value="" disabled selected>Jump to Topic / Case...</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="document-container">
+    <h1>Document Title</h1>
+
+    <h3 id="module-1">I. Major Topic Title</h3>
+    <p>Narrative introductory discussion or statutory provisions...</p>
+
+    <!-- CASE DIGEST SECTION EXAMPLE -->
+    <section class="case-section">
+      <div class="case-grid">
+        <div class="case-main">
+          <h4 id="case-sample">Sample Petitioner v. Sample Respondent</h4>
+          <p class="case-meta">
+            <span class="c-burgundy"><em>Sample Petitioner v. Sample Respondent</em></span>, 
+            <span class="c-teal">G.R. No. 000000</span>, January 1, 2026
+          </p>
+          <p>Full case facts and procedural history...</p>
+          <blockquote>
+            "Verbatim quotation of the court's core doctrinal pronouncement..."
+          </blockquote>
+          <p>Full legal reasoning, ratio decidendi, and conclusion...</p>
+        </div>
+
+        <aside class="case-sidebar">
+          <div class="case-quick-card">
+            <div class="quick-title">Quick Snapshot • G.R. No. 000000</div>
+            
+            <div class="quick-group">
+              <span class="quick-label label-facts">Facts</span>
+              <p class="quick-text">Material facts summarized in 1-3 bullet points or short paragraph.</p>
+            </div>
+            
+            <div class="quick-group">
+              <span class="quick-label label-issue">Main Issue</span>
+              <p class="quick-text">Pivotal legal question resolved by the Court.</p>
+            </div>
+            
+            <div class="quick-group">
+              <span class="quick-label label-ruling">SC Ruling</span>
+              <p class="quick-text">Doctrinal rule, operative test, and dispositive action.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <!-- TOC OBSERVER & MERMAID SCRIPT -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#F8FAFC',
+        primaryBorderColor: '#1E3A8A',
+        primaryTextColor: '#1F2937',
+        lineColor: '#1E3A8A',
+        fontFamily: 'sans-serif'
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('toc-select');
+      const headings = document.querySelectorAll('.document-container h1, .document-container h3, .document-container h4');
+      
+      headings.forEach((heading, idx) => {
+        if (!heading.id) {
+          heading.id = 'sec-' + idx + '-' + heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30);
+        }
+        
+        const option = document.createElement('option');
+        option.value = heading.id;
+        
+        const isH1 = heading.tagName.toLowerCase() === 'h1';
+        const isH3 = heading.tagName.toLowerCase() === 'h3';
+        const indent = isH1 ? '' : isH3 ? '▪ ' : '    ↳ ';
+        option.textContent = indent + heading.textContent.trim();
+        select.appendChild(option);
+      });
+
+      select.addEventListener('change', (e) => {
+        const target = document.getElementById(e.target.value);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            select.value = entry.target.id;
+          }
+        });
+      }, { rootMargin: '0px 0px -75% 0px' });
+
+      headings.forEach(heading => observer.observe(heading));
+    });
+  </script>
+</body>
+</html>
