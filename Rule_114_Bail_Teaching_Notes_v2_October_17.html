@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rule 114: Bail — Teaching Notes (October 17 Lecture)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-1">PART 1: THE RIGHT TO BAIL, ITS FORMS, &amp; COURT CONTROL</option>
+      <option value="#sec-1-foundations">&nbsp;&nbsp;↳ I. Constitutional Foundations and Statutory Concept of Bail</option>
+      <option value="#why-bail-necessary">&nbsp;&nbsp;&nbsp;&nbsp;• Why is bail necessary if State has arrested accused?</option>
+      <option value="#custody-vs-jurisdiction">&nbsp;&nbsp;&nbsp;&nbsp;• Custody of the law vs. jurisdiction over the person</option>
+      <option value="#who-puts-up-security">&nbsp;&nbsp;&nbsp;&nbsp;• Who puts up security—and who bears the risk?</option>
+      <option value="#excessive-bail">&nbsp;&nbsp;&nbsp;&nbsp;• Excessive bail and prosecutor's recommended amount</option>
+      <option value="#sec-2-special-proceedings">&nbsp;&nbsp;↳ II. Right to Bail in Special and Non-Judicial Proceedings</option>
+      <option value="#military-courts-martial">&nbsp;&nbsp;&nbsp;&nbsp;• Military courts-martial</option>
+      <option value="#extradition">&nbsp;&nbsp;&nbsp;&nbsp;• Extradition: surrender to another State</option>
+      <option value="#deportation">&nbsp;&nbsp;&nbsp;&nbsp;• Deportation: removal under immigration law</option>
+      <option value="#sec-3-four-forms">&nbsp;&nbsp;↳ III. Four Forms of Bail and Release on Recognizance</option>
+      <option value="#corporate-surety">&nbsp;&nbsp;&nbsp;&nbsp;• Corporate surety: pay premium, not face amount</option>
+      <option value="#cash-deposit">&nbsp;&nbsp;&nbsp;&nbsp;• Cash deposit: full amount now, possible refund later</option>
+      <option value="#property-bond">&nbsp;&nbsp;&nbsp;&nbsp;• Property bond: land secures someone else's appearance</option>
+      <option value="#recognizance">&nbsp;&nbsp;&nbsp;&nbsp;• Recognizance: release based on lawful undertaking</option>
+      <option value="#sec-4-fixing-bail">&nbsp;&nbsp;↳ IV. Fixing Bail, Conditions, Duration, and Custodial Transfers</option>
+      <option value="#how-judge-determines-amount">&nbsp;&nbsp;&nbsp;&nbsp;• How a judge determines a reasonable amount</option>
+      <option value="#what-bond-requires">&nbsp;&nbsp;&nbsp;&nbsp;• What the bond continues to require</option>
+      <option value="#part-2">PART 2: WHEN RELEASE IS AVAILABLE, MANDATORY, OR DISCRETIONARY</option>
+      <option value="#sec-5-not-required-vs-not-allowed">&nbsp;&nbsp;↳ V. When Bail is Not Required vs. When Bail is Not Allowed</option>
+      <option value="#cases-bail-not-required">&nbsp;&nbsp;&nbsp;&nbsp;• Cases in which bail is not required</option>
+      <option value="#cases-bail-legally-unavailable">&nbsp;&nbsp;&nbsp;&nbsp;• Cases in which bail is legally unavailable</option>
+      <option value="#other-lawful-cause">&nbsp;&nbsp;&nbsp;&nbsp;• The 'other lawful cause' limitation</option>
+      <option value="#sec-6-matter-of-right">&nbsp;&nbsp;↳ VI. Bail as a Matter of Right and Practical Early Surrender</option>
+      <option value="#three-situations-sec-4">&nbsp;&nbsp;&nbsp;&nbsp;• Three situations governed by Section 4</option>
+      <option value="#pre-warrant-strategy">&nbsp;&nbsp;&nbsp;&nbsp;• The professor's pre-warrant strategy</option>
+      <option value="#sec-7-severe-penalties">&nbsp;&nbsp;↳ VII. Petition for Bail when Charge Carries Most Severe Penalties</option>
+      <option value="#non-bailable-shorthand">&nbsp;&nbsp;&nbsp;&nbsp;• 'Non-bailable offense' is often shorthand</option>
+      <option value="#what-happens-hearing">&nbsp;&nbsp;&nbsp;&nbsp;• What happens at the hearing?</option>
+      <option value="#illustration-judge-reasoning">&nbsp;&nbsp;&nbsp;&nbsp;• Illustration of the judge's legal reasoning</option>
+      <option value="#remedy-erroneous-order">&nbsp;&nbsp;&nbsp;&nbsp;• Remedy against an erroneous bail order</option>
+      <option value="#sec-8-leviste-post-conviction">&nbsp;&nbsp;↳ VIII. Bail After RTC Conviction: Discretion and Leviste Test</option>
+      <option value="#why-conviction-changes-position">&nbsp;&nbsp;&nbsp;&nbsp;• Why conviction changes the legal position</option>
+      <option value="#five-bail-negating-circumstances">&nbsp;&nbsp;&nbsp;&nbsp;• Five listed bail-negating circumstances</option>
+      <option value="#leviste-case">&nbsp;&nbsp;&nbsp;&nbsp;• Leviste v. Court of Appeals — central post-conviction case</option>
+      <option value="#which-court-hears-request">&nbsp;&nbsp;&nbsp;&nbsp;• Which court hears the post-conviction request?</option>
+      <option value="#part-3">PART 3: WHERE TO POST BAIL, FORFEITURE, &amp; SURVIVING RIGHTS</option>
+      <option value="#sec-9-venue-hierarchy">&nbsp;&nbsp;↳ IX. Venue and Hierarchy of Courts in Filing Bail</option>
+      <option value="#where-case-pending">&nbsp;&nbsp;&nbsp;&nbsp;• Begin with simple question: where is case pending?</option>
+      <option value="#four-court-names">&nbsp;&nbsp;&nbsp;&nbsp;• Four commonly confused local court names</option>
+      <option value="#arrest-outside-place">&nbsp;&nbsp;&nbsp;&nbsp;• Arrest outside the place where case is pending</option>
+      <option value="#inquest-custody">&nbsp;&nbsp;&nbsp;&nbsp;• Inquest custody before Information is filed</option>
+      <option value="#discretionary-venue">&nbsp;&nbsp;&nbsp;&nbsp;• When the court must exercise discretion</option>
+      <option value="#sec-10-forfeiture-cancellation">&nbsp;&nbsp;↳ X. Required Presence, Forfeiture, and Cancellation of Bail</option>
+      <option value="#must-accused-attend">&nbsp;&nbsp;&nbsp;&nbsp;• Must an accused attend every hearing?</option>
+      <option value="#four-stage-forfeiture">&nbsp;&nbsp;&nbsp;&nbsp;• The four-stage forfeiture procedure</option>
+      <option value="#mendoza-alarma">&nbsp;&nbsp;&nbsp;&nbsp;• Mendoza v. Alarma: why premature auction was void</option>
+      <option value="#cancellation-vs-forfeiture">&nbsp;&nbsp;&nbsp;&nbsp;• Cancellation is different from forfeiture</option>
+      <option value="#sec-11-waiver-objections">&nbsp;&nbsp;↳ XI. Bail Does Not Waive Objections (Section 26)</option>
+      <option value="#dilemma-before-sec-26">&nbsp;&nbsp;&nbsp;&nbsp;• Apparent dilemma before Rule 114, Section 26</option>
+      <option value="#lavides-arraignment">&nbsp;&nbsp;&nbsp;&nbsp;• Lavides: court may not force arraignment as bail condition</option>
+      <option value="#borlongan-pena">&nbsp;&nbsp;&nbsp;&nbsp;• Borlongan v. Peña: waiver requires more than paying bond</option>
+      <option value="#final-application-drills">&nbsp;&nbsp;&nbsp;&nbsp;• Final application drills</option>
+      <option value="#administrative-matters">&nbsp;&nbsp;↳ Administrative Matters &amp; Professor's Asides</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">RULE 114: BAIL — TEACHING NOTES</h1>
+  <p class="c-teal" style="font-weight: 700; margin-top: -0.5rem; letter-spacing: 0.05em;">CRIMINAL PROCEDURE • BAR REVIEW LECTURE COMPENDIUM</p>
+
+  <h2 id="part-1" class="c-navy">PART 1: THE RIGHT TO BAIL, ITS FORMS, AND THE COURT'S CONTROL OVER RELEASE</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">I</div>
+        <div class="ui-kicker">FOUNDATIONS</div>
+        <div class="ui-sub">Constitutional base, custody, &amp; bondsmen</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">II</div>
+        <div class="ui-kicker">SPECIAL FORUMS</div>
+        <div class="ui-sub">Military, extradition, &amp; deportation</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">III</div>
+        <div class="ui-kicker">FOUR FORMS</div>
+        <div class="ui-sub">Surety, cash, property, &amp; recognizance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">IV</div>
+        <div class="ui-kicker">JUDICIAL CONTROL</div>
+        <div class="ui-sub">Fixing amount, conditions, &amp; transfers</div>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Part 1 Overview &amp; Scope of Topics:</strong> <strong>I.</strong> Constitutional foundation, meaning, custody, and bondsmen; <strong>II.</strong> bail in military, extradition, and deportation cases; <strong>III.</strong> corporate surety, cash, property bonds, and recognizance; <strong>IV.</strong> reasonable bail, its conditions, and judicial control of detainees.</p>
+
+  <h3 id="sec-1-foundations" class="c-navy">I. CONSTITUTIONAL FOUNDATIONS AND STATUTORY CONCEPT OF BAIL</h3>
+
+  <h4 id="why-bail-necessary" class="c-navy">Why is bail necessary if the State has already arrested the accused?</h4>
+
+  <p>Imagine a man charged with homicide. His trial might last years, but the prosecution has not yet proved him guilty beyond reasonable doubt. Should he necessarily spend those years in jail? <span class="c-green"><strong><u>Bail is the law's compromise:</u></strong></span> the accused may enjoy <em>provisional liberty</em>, while the court receives security to ensure he returns when required. Bail is <span class="c-rust"><strong><u>not an acquittal</u></strong></span>, a declaration that the prosecution is weak, or permission to ignore court processes.</p>
+
+  <p>The foundation is <span class="c-teal"><strong>Article III, Section 13 of the 1987 Constitution</strong></span>, read with the <span class="c-green"><strong>presumption of innocence</strong></span> in <span class="c-teal"><strong>Article III, Section 14(2)</strong></span>. In general, before conviction, a person is bailable except when charged with an offense punishable by <em>reclusion perpetua</em> and the evidence of guilt is strong. <span class="c-teal"><strong>Rule 114, Section 7</strong></span> also addresses capital offenses and offenses punishable by life imprisonment. Bail is protected even during suspension of the privilege of the writ of <em>habeas corpus</em>, and <span class="c-rust"><strong><u>excessive bail is prohibited</u></strong></span>. Do not equate an accusation with a conviction: the former starts the prosecution; the latter results from adjudication.</p>
+
+  <p><span class="c-teal"><strong>Rule 114, Section 1</strong></span> defines bail as the <span class="c-green"><strong><u>security given for the release of a person in custody of the law</u></strong></span>, furnished by that person or a bondsman, guaranteeing appearance before any court when required. Three phrases carry the rule: <strong>security</strong>, <strong>custody of the law</strong>, and <strong>appearance</strong>. The court holds security because it cannot simply rely upon the accused's promise; custody matters because bail releases someone from legal restraint; appearance is the performance secured by the undertaking. The accused retains obligations after release.</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-icon">🛡️</div>
+        <div class="ui-title">1. Security</div>
+        <div class="ui-sub">Court holds monetary or real guarantee; cannot rely on bare promise</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">⚖️</div>
+        <div class="ui-title">2. Custody of the Law</div>
+        <div class="ui-sub">Prerequisite restraint; bail operates to release from legal restraint</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-icon">🏛️</div>
+        <div class="ui-title">3. Appearance</div>
+        <div class="ui-sub">The core undertaking; guaranteed attendance whenever required</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="custody-vs-jurisdiction" class="c-navy">Custody of the law versus jurisdiction over the person</h4>
+
+  <blockquote><strong>Professor's Illustration:</strong> Accused A is abroad. His lawyer appears with sufficient cash and offers to post bail without producing A. Accused B is seriously ill in a hospital but, through counsel, discloses his whereabouts and unequivocally submits to the court. The professor contrasts the two situations to show why <strong>custody cannot be bypassed by money alone</strong>.</blockquote>
+
+  <p>Ordinarily custody arises from <strong>actual arrest</strong> under a warrant or a lawful warrantless arrest, or <strong>voluntary surrender</strong> to competent authorities. A fugitive who remains beyond the court's reach cannot simply purchase release from custody never acquired. However, <em>constructive custody</em> may exist even without physical presence inside the courtroom. In <span class="c-burgundy"><em>Paderanga v. Court of Appeals</em></span>, the accused's hospital confinement, disclosure of his location, and unmistakable submission to the court's jurisdiction were material. These are <strong>fact-sensitive requirements</strong>, not a standing rule that every bedridden applicant can merely send counsel to pay cash. <a href="https://lawphil.net/judjuris/juri1997/oct1997/am_97_1139_1997.html" target="_blank">[See the Supreme Court's discussion of <em>Paderanga</em> in this judicial decision.]</a></p>
+
+  <p><span class="c-rust"><strong><u>Do not conflate</u></strong></span> <strong>jurisdiction over the person</strong> (authority to bind the accused) with <strong>custody of the law</strong> (restraint from which bail may release him). Arrest or voluntary surrender may establish both, but counsel must still demonstrate custody to support release.</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>Legal Definition &amp; Scope</th>
+        <th>Key Distinction for Bail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jurisdiction Over the Person</strong></td>
+        <td>Court's legal power and authority to try, bind, and render judgment over the individual accused.</td>
+        <td>Can be acquired by voluntary appearance or pleadings, but is <em>insufficient alone</em> to grant bail without custodial submission.</td>
+      </tr>
+      <tr>
+        <td><strong>Custody of the Law</strong></td>
+        <td>Actual restraint of the person (arrest/surrender) or constructive submission (e.g. bedridden hospital confinement in <em>Paderanga</em>).</td>
+        <td><strong>Indispensable condition precedent</strong> for bail; a fugitive cannot purchase provisional liberty from abroad.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="who-puts-up-security" class="c-navy">Who puts up the security—and who bears the risk?</h4>
+
+  <p><span class="c-teal"><strong>Section 1</strong></span> expressly permits the <strong>accused or a bondsman</strong> to furnish bail. Thus, a spouse, relative, or unrelated person may provide the money, and a corporate surety may undertake the obligation under the rules. The bondsman is sometimes called the accused's <strong>"jailer"</strong> because the bondsman undertakes to produce the accused whenever the court requires him. This is a legal metaphor: the bondsman does not receive police powers or physically imprison the accused.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> A lawyer advances ₱100,000 in bail for a client and has the deposit made in the lawyer’s own name as security for unpaid legal fees. <span class="c-rust"><strong><u>If the accused absconds, the bond may be forfeited.</u></strong></span> But counsel must not treat client funds or a bail refund as an automatic fee collection device; professional-responsibility rules and the actual deposit arrangement matter.</blockquote>
+
+  <h4 id="excessive-bail" class="c-navy">Excessive bail and the prosecutor's recommended amount</h4>
+
+  <p><strong>Professor's computation:</strong> A crime carries a maximum of six years' imprisonment. The lecture uses an illustrative <strong>₱6,000 per year × 6 years = ₱36,000</strong> prosecutorial recommendation. Understand the arithmetic, but <span class="c-rust"><strong><u>do not recite ₱6,000 per year as a timeless statutory formula</u></strong></span>. Bail guides, prosecutorial policies, and amounts can be changed. More importantly, a recommendation on the Information is <span class="c-rust"><strong><u>not the judge's independent determination under Rule 114, Section 9</u></strong></span>.</p>
+
+  <p>The constitutional ban on <span class="c-rust"><strong><u>excessive bail</u></strong></span> requires reasonableness in light of the person and circumstances, not unquestioning adoption of the fiscal’s suggested amount. <strong>Recitation:</strong> <em>Bail secures appearance without unnecessarily sacrificing provisional liberty.</em></p>
+
+  <hr>
+
+  <h3 id="sec-2-special-proceedings" class="c-navy">II. THE RIGHT TO BAIL IN SPECIAL AND NON-JUDICIAL PROCEEDINGS</h3>
+
+  <p>The presumption-of-innocence explanation fits an <strong>ordinary criminal prosecution</strong>. But what if the person is detained under military discipline, an extradition request, or immigration law? First ask <strong>what proceeding is involved</strong>. Applying ordinary Rule 114 automatically to every form of detention gives the wrong answer.</p>
+
+  <h4 id="military-courts-martial" class="c-navy">Military courts-martial</h4>
+
+  <p><strong>Professor's discussion:</strong> Soldiers facing <strong>service-related court-martial charges</strong> do not enjoy the ordinary constitutional bail guarantee in the same manner. The professor connects this distinction with <strong>military discipline and security</strong>, particularly access to troops or weapons. The lecture identifies <span class="c-burgundy"><em>Comendador v. De Villa</em></span> as an assumed reference. Identify the <strong>forum and charge</strong>; the doctrine does not turn every civilian criminal case against a soldier into a court-martial. The right to speedy disposition remains relevant.</p>
+
+  <h4 id="extradition" class="c-navy">Extradition: surrender to another State</h4>
+
+  <p>Imagine a foreign government asking the Philippines to surrender a person wanted abroad. An <span class="c-green"><strong>extradition court is not determining guilt</strong></span>; it is deciding whether surrender is authorized by the applicable treaty and law. Therefore, bail in extradition is <strong>discretionary</strong>, not the same entitlement as ordinary pre-conviction criminal bail.</p>
+
+  <p>The current <span class="c-teal"><strong>Rules on Extradition Proceedings, A.M. No. 22-03-29-SC</strong></span>, effective <strong>November 10, 2025</strong>, expressly provide in <span class="c-teal"><strong>Rule 3, Section 1</strong></span> that the extraditee must prove by <span class="c-green"><strong><u>clear and convincing evidence</u></strong></span> that (1) the person is <span class="c-green"><strong>not a flight risk</strong></span>, and (2) the person <span class="c-green"><strong>will obey the extradition court's orders and processes</strong></span>. <em>Clear and convincing</em> is stronger than preponderance but less than proof beyond reasonable doubt. An important additional restriction: <span class="c-rust"><strong><u>bail shall not be granted</u></strong></span> to an extraditee sought to serve a prior sentence or already convicted abroad but not yet sentenced. This qualification is absent from the lecture's simplified twin-requisite account. <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/11/100128" target="_blank">[Supreme Court E-Library: A.M. No. 22-03-29-SC.]</a></p>
+
+  <blockquote><strong>Professor's Illustration:</strong> The lecture mentions Jose Maria Sison in the Netherlands to explain extradition treaties and the <strong>political-offense exception</strong>. Its historical claims require case- and treaty-specific verification. The principle to retain is that extradition depends on the <strong>applicable agreement, law, and charge</strong>, not a foreign government’s unilateral demand.</blockquote>
+
+  <h4 id="deportation" class="c-navy">Deportation: removal under immigration law</h4>
+
+  <p>Deportation concerns an alien's immigration status, not a criminal judgment on the underlying facts. The professor explains that release pending deportation is <span class="c-rust"><strong><u>not constitutional bail as a matter of right</u></strong></span>. Rather, provisional release depends on <strong>immigration authority and the governing law</strong>; the discussion cites <span class="c-burgundy"><em>Harvey v. Defensor-Santiago</em></span> as a possible authority. Remember the distinction: a criminal trial adjudicates criminal liability; an extradition case evaluates a request for surrender; deportation administers immigration law.</p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Proceeding</th>
+        <th>Governing bail idea</th>
+        <th>What to remember</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ordinary criminal case</strong></td>
+        <td>Right, discretion, or denial depending on charge and stage</td>
+        <td><span class="c-green"><strong>Rule 114 + presumption of innocence</strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Court-martial</strong></td>
+        <td>Ordinary constitutional bail guarantee does not apply in the same manner</td>
+        <td><span class="c-navy"><strong>Military forum and discipline</strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Extradition</strong></td>
+        <td><span class="c-teal"><strong>Discretionary</strong></span>, subject to the 2025 rules and exclusions</td>
+        <td><span class="c-green"><strong>No flight risk + obey orders</strong></span>, clear and convincing proof</td>
+      </tr>
+      <tr>
+        <td><strong>Deportation</strong></td>
+        <td>Administrative provisional release, <span class="c-rust"><strong><u>not Rule 114 bail as of right</u></strong></span></td>
+        <td><span class="c-rust"><strong>Immigration-law discretion</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3 id="sec-3-four-forms" class="c-navy">III. FOUR FORMS OF BAIL AND RELEASE ON RECOGNIZANCE</h3>
+
+  <p>A client asks, "Do I have to deposit the entire ₱100,000?" Your first answer should not be yes or no. <span class="c-teal"><strong>Section 1</strong></span> recognizes four forms: <strong>corporate surety, property bond, cash deposit, and recognizance</strong>. All pursue appearance, but their financial consequences differ.</p>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-badge" style="background:#EFF6FF;color:#1E3A8A;border:1.5px solid #1E3A8A;">1</div>
+        <div class="ui-title">Corporate Surety</div>
+        <div class="ui-sub"><strong>Sec. 10:</strong> Non-refundable premium paid; SC-accredited insurer undertakes obligation</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge" style="background:#ECFDF5;color:#0F766E;border:1.5px solid #0F766E;">2</div>
+        <div class="ui-title">Cash Deposit</div>
+        <div class="ui-sub"><strong>Sec. 14:</strong> Full amount deposited; refundable upon cancellation less fines/costs</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge" style="background:#FFFBEB;color:#D97706;border:1.5px solid #D97706;">3</div>
+        <div class="ui-title">Property Bond</div>
+        <div class="ui-sub"><strong>Secs. 11–13:</strong> Real property encumbrance; mandatory annotation within 10 days</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge" style="background:#FDF2F8;color:#991B1B;border:1.5px solid #991B1B;">4</div>
+        <div class="ui-title">Recognizance</div>
+        <div class="ui-sub"><strong>Sec. 1 / RA 10389:</strong> Non-monetary release to qualified custodian authorized by law</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="corporate-surety" class="c-navy">Corporate surety: pay a premium, not the face amount</h4>
+
+  <p>Under <span class="c-teal"><strong>Rule 114, Section 10</strong></span>, a duly authorized and <strong>Supreme Court-accredited</strong> corporate surety undertakes the prescribed liability. The accused typically pays a <strong>premium</strong>, not the entire stated bond. <strong>Professor's practical warning:</strong> Premiums are generally <span class="c-rust"><strong><u>nonrefundable</u></strong></span>, and the surety agreement may require renewals or additional payments during a prolonged case. Annual renewal is a matter of the particular contract and administrative requirements—not a clause saying all bonds expire annually under Rule 114. If the accused fails to appear, the company faces liability and may pursue contractual recourse.</p>
+
+  <h4 id="cash-deposit" class="c-navy">Cash deposit: full amount now, possible refund later</h4>
+
+  <p>Under <span class="c-teal"><strong>Section 14</strong></span>, the accused or another person deposits the required cash and files the undertaking. This can be attractive when the depositor has liquidity: unlike a surety premium, the principal may ultimately be <strong>returned after cancellation</strong>, subject to the rules. <strong>Important qualification:</strong> Section 14 permits cash to be <span class="c-green"><strong>applied to fines and costs</strong></span>, with any excess returned to the accused or the depositor. Thus "always refunded in full" is too broad.</p>
+
+  <p><strong>Professor's practical example:</strong> Counsel arranges transport for a detainee, but the payment portal is unavailable. Coordinate the detainee’s presentation, bond documents, and authorized payment procedure. <strong>Legal clarification:</strong> The official platform is <strong>JePS</strong> (Judiciary Electronic Payment Solution), not "JudEx"; Supreme Court guidance makes <strong>JePS optional for cash bail and bond fees</strong>, regardless of amount. Thus mandatory electronic payment and guaranteed manual payment during outages must not be stated as universal requirements. <a href="https://sc.judiciary.gov.ph/important-notice-jeps-payment-guidelines/" target="_blank">[Supreme Court guidance.]</a></p>
+
+  <h4 id="property-bond" class="c-navy">Property bond: the land secures someone else's appearance</h4>
+
+  <p>Under <span class="c-teal"><strong>Sections 11–13</strong></span>, the accused offers sufficient real property as security, with necessary proof of ownership, value, and encumbrances. After approval, the lien must be properly <span class="c-green"><strong><u>annotated within ten days</u></strong></span> in the appropriate land records, or in the applicable tax declaration for unregistered land. The title is not instantly transferred to the State. Rather, the bond creates an <strong>encumbrance</strong>, and subsequent noncompliance may lead to execution <strong>after the prescribed forfeiture procedure</strong>.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> A relative allows an accused to use family land. The accused later disappears. The risk to the relative is real: a judgment on the bond may expose the property to levy and public auction. This is why a property bond often involves more paperwork and risk than the word "no cash" suggests.</blockquote>
+
+  <h4 id="recognizance" class="c-navy">Recognizance: release based on a lawful undertaking</h4>
+
+  <p>Recognizance is usually the easiest form to misunderstand. <span class="c-rust"><strong><u>It is not simply "free bail" chosen whenever cash is unavailable.</u></strong></span> It is release without monetary security <span class="c-green"><strong><u>in cases authorized by law or the Rules</u></strong></span>, normally with a responsible person or qualified custodian undertaking to ensure appearance. The lecture mentions light offenses, minor ordinance violations, preventive detention, youthful offenders, certain summary-procedure situations, and pending probation applications. Those routes arise under <strong>different legal provisions</strong>, so their eligibility requirements must not be blended together.</p>
+
+  <p><span class="c-teal"><strong>R.A. No. 10389</strong></span> governs qualified <strong>indigent</strong> accused. Section 5 speaks of recognizance as a matter of right in specified circumstances, but <span class="c-teal"><strong>Section 6 requires a motion, proof of indigency, social-welfare certification, arraignment, and sanggunian notice</strong></span>. <span class="c-teal"><strong>Section 8 qualifies the custodian</strong></span>, including restrictions on relatives and required affiliations. Thus a barangay official or lawyer does <strong>not</strong> automatically qualify merely because the professor gives that example. <a href="https://lawphil.net/statutes/repacts/ra2013/ra_10389_2013.html" target="_blank">[R.A. No. 10389.]</a></p>
+
+  <p>The law's arraignment condition for this particular recognizance scheme should not be confused with the general rule that <span class="c-rust"><strong><u>ordinary bail may not be conditioned upon prior arraignment</u></strong></span>. They are distinct routes with different statutory requirements. <strong>Memory aid:</strong> Surety = <strong>premium</strong>; Cash = <strong>deposit</strong>; Property = <strong>lien</strong>; Recognizance = <strong>qualified undertaking without monetary security</strong>.</p>
+
+  <hr>
+
+  <h3 id="sec-4-fixing-bail" class="c-navy">IV. FIXING BAIL, CONDITIONS, DURATION, AND CUSTODIAL TRANSFERS</h3>
+
+  <h4 id="how-judge-determines-amount" class="c-navy">How a judge determines a reasonable amount</h4>
+
+  <p>The <strong>judge</strong>, not the prosecutor, fixes judicial bail. <span class="c-teal"><strong>Section 9 gives ten primary considerations</strong></span>. Instead of memorizing them as disconnected words, group the questions the judge asks:</p>
+
+  <ol>
+    <li><strong>What is the charge?</strong> Nature and circumstances of the offense; penalty; and weight of the evidence.</li>
+    <li><strong>Who is the accused?</strong> Financial ability, character and reputation, and age and health.</li>
+    <li><strong>Will the accused return?</strong> Probability of appearance, other bail previously forfeited, fugitive status when arrested, and other pending cases in which the accused is on bail.</li>
+  </ol>
+
+  <p>Those groups contain <strong>all ten statutory factors</strong>. No single factor—wealth, notoriety, or seriousness of the charge—automatically fixes the amount. In the professor's comparison, a theft defendant may ask to reduce an unaffordable ₱16,000 recommendation, while a murder defendant who succeeds in a bail hearing might receive a substantially higher bond. The illustrative ₱500,000–₱1,000,000 range <strong>is not a statutory floor for murder</strong> and petitioning for bail does not prove wealth.</p>
+
+  <p>A <strong>motion to reduce bail</strong> asks the judge to exercise discretion, commonly after notice to the prosecution. <strong>Professor's courtroom observation:</strong> A fiscal sometimes writes no objection to a reduction to 50% of the recommended amount. Such concurrence can help but <span class="c-rust"><strong><u>does not compel a 50% reduction</u></strong></span> or replace the judge's responsibility to determine reasonableness. The court may also <strong>increase</strong> bail on good cause under <span class="c-teal"><strong>Section 20</strong></span>.</p>
+
+  <h4 id="what-bond-requires" class="c-navy">What the bond continues to require</h4>
+
+  <p>Under <span class="c-teal"><strong>Section 2</strong></span>, the approved undertaking remains in force, unless cancelled, through the stages specified in the Rule <span class="c-green"><strong><u>until promulgation of the RTC judgment</u></strong></span>; this wording matters when a first-level case is appealed. The accused must appear whenever required. Failure to attend trial <span class="c-rust"><strong><u>without justification and despite due notice</u></strong></span> may constitute waiver of presence for that hearing and permit trial <em>in absentia</em>, subject to its constitutional requisites. The bondsman must surrender the accused for execution of final judgment.</p>
+
+  <p><span class="c-teal"><strong>Section 3</strong></span> provides that a detainee held under legal process shall not be <span class="c-rust"><strong><u>released or transferred except by court order or admission to bail</u></strong></span>. <strong>Professor's Illustration:</strong> A warden wants to transfer an accused to another jail and allow an escorted visit to the mother’s wake. Proper <strong>judicial authority</strong> must be secured; a humanitarian <strong>furlough</strong> is discretionary, not automatic. Potential liability for unauthorized acts depends on the law and facts, not merely the occurrence of a transfer.</p>
+
+  <p><strong>Part 1 understanding check:</strong> Why can an accused in hospital sometimes seek bail while one hiding abroad cannot? Why can the same nominal ₱100,000 bail produce different financial risks under cash and corporate surety? The answers turn on <strong>custody/submission</strong> and <strong>deposit versus nonrefundable premium</strong>.</p>
+
+  <hr>
+
+  <h2 id="part-2" class="c-navy">PART 2: WHEN RELEASE IS AVAILABLE, MANDATORY, OR DISCRETIONARY</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">EXTREMES</div>
+        <div class="ui-sub">Not required vs. legally unavailable</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VI</div>
+        <div class="ui-kicker">AS OF RIGHT</div>
+        <div class="ui-sub">Section 4 scope &amp; voluntary surrender</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VII</div>
+        <div class="ui-kicker">CAPITAL CHARGES</div>
+        <div class="ui-sub">Section 7 strong evidence hearing</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">VIII</div>
+        <div class="ui-kicker">POST-CONVICTION</div>
+        <div class="ui-sub">Section 5 &amp; the <em>Leviste</em> two-stage test</div>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Part 2 Overview &amp; Scope of Topics:</strong> <strong>V.</strong> No bail required versus bail not allowed; <strong>VI.</strong> bail as a matter of right and early voluntary surrender; <strong>VII.</strong> bail hearings for capital or <em>reclusion perpetua</em> charges; <strong>VIII.</strong> post-conviction discretionary bail and the <em>Leviste</em> doctrine.</p>
+
+  <!-- Interactive Pan-and-Zoom Mermaid Diagram 1 -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: MASTER HIERARCHY &amp; MATRIX OF BAIL AVAILABILITY <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Accused in Custody of the Law"] --> Q1{"What Court & Stage?"}
+  
+  Q1 -- "First-Level Court (MeTC/MTCC/MTC)<br/>Before or After Conviction" --> Right1["BAIL AS A MATTER OF RIGHT<br/>(Sec. 4)"]
+  
+  Q1 -- "RTC: Before Conviction" --> Q2{"Penalty Imposed / Charged?"}
+  Q2 -- "Not Death, Reclusion Perpetua,<br/>or Life Imprisonment" --> Right2["BAIL AS A MATTER OF RIGHT<br/>(Sec. 4)"]
+  Q2 -- "Death, Reclusion Perpetua,<br/>or Life Imprisonment" --> Q3{"Hearing: Is Evidence<br/>of Guilt Strong? (Sec. 7)"}
+  
+  Q3 -- "YES (Prosecution proves burden)" --> DenyCap["BAIL DENIED / UNAVAILABLE<br/>(Capital Offense Exception)"]
+  Q3 -- "NO (Prosecution fails burden)" --> GrantCap["BAIL GRANTED<br/>(Discretionary evaluation Sec. 7-8)"]
+  
+  Q1 -- "RTC: After Conviction" --> Q4{"Penalty Imposed?"}
+  Q4 -- "Death, Reclusion Perpetua,<br/>or Life Imprisonment" --> DenyLife["BAIL PROHIBITED<br/>(Sec. 5, Par. 3)"]
+  Q4 -- "Lesser Penalty<br/>(Imprisonment <= 6 yrs or > 6 yrs)" --> Leviste["LEVISTE TWO-STAGE TEST<br/>(Sec. 5 Sound Discretion)"]
+  
+  Q1 -- "Final Conviction or<br/>Commenced Serving Sentence" --> FinalDeny["BAIL ABSOLUTELY PROHIBITED<br/>(Sec. 24)"]
+
+  style Start fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style Right1 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style Right2 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style GrantCap fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style DenyCap fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style DenyLife fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style FinalDeny fill:#FEF2F2,stroke:#991B1B,stroke-width:2px,color:#991B1B
+  style Leviste fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style Q1 fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+  style Q2 fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+  style Q3 fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+  style Q4 fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="sec-5-not-required-vs-not-allowed" class="c-navy">V. WHEN BAIL IS NOT REQUIRED VERSUS WHEN BAIL IS NOT ALLOWED</h3>
+
+  <p>These statements sound alike but describe <strong>opposite legal conditions</strong>. If <strong>bail is not required</strong>, the person generally need not secure release with a bond. If <strong>bail is not allowed</strong>, the person cannot obtain provisional liberty through bail at that stage. First identify <strong>whether the accused is in custody</strong>, then the <strong>offense and procedural stage</strong>.</p>
+
+  <h4 id="cases-bail-not-required" class="c-navy">Cases in which bail is not required</h4>
+
+  <p><span class="c-teal"><strong>Section 16 of Rule 114</strong></span> begins with the governing principle: no bail is required <span class="c-green"><strong>when the law or the Rules so provide</strong></span>. The lecture illustrates this through offenses punished by <strong>fine only</strong>, ordinary <strong>summary-procedure</strong> filings, and offenses with <strong>destierro</strong> as the relevant penalty. The point is not that all minor criminal cases cease to be criminal. It is that arrest or preventive detention may not be necessary when the applicable rules provide another procedure.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> In concubinage, the woman charged as the concubine faces <strong>destierro</strong> under Article 334 of the Revised Penal Code. That penalty restricts residence within designated limits; it is <span class="c-rust"><strong><u>not ordinary imprisonment</u></strong></span>. The lecture therefore contrasts a regularly filed case—where arrest may not be warranted solely to secure detention—with a scenario in which the persons are allegedly apprehended while committing the offense. But remember two qualifications: <strong>concubinage requires the offended spouse's complaint</strong>, and a purported <em>in flagrante delicto</em> arrest must still satisfy the <span class="c-teal"><strong>legal elements of Rule 113, Section 5(a)</strong></span>. Being discovered in suspicious circumstances alone does not conclusively establish lawful arrest.</blockquote>
+
+  <p>A <strong>lawfully arrested</strong> person may need bail or recognizance for release during inquest. An accused in a summary-procedure case may also face arrest for unjustified nonappearance when the rules authorize it. But <span class="c-rust"><strong><u>neither arrest nor a cash-bond requirement follows automatically</u></strong></span> from police presentation; verify the legal arrest basis and applicable special rules.</p>
+
+  <p>Section 16 contains three <strong>distinct preventive-detention thresholds</strong>:</p>
+
+  <ol>
+    <li><strong>Detention equals or exceeds the possible maximum imprisonment</strong> for the charge: <span class="c-green"><strong><u>immediate release</u></strong></span>, without preventing continuation of the case or appeal.</li>
+    <li><strong>Maximum penalty is destierro:</strong> release after <span class="c-green"><strong><u>30 days</u></strong></span> of preventive imprisonment, according to the Rule.</li>
+    <li><strong>Detention equals or exceeds the minimum principal penalty</strong> (without the Indeterminate Sentence Law or modifying circumstances): <span class="c-green"><strong><u>reduced bail or own recognizance, at the court's discretion</u></strong></span>. Under R.A. No. 10389, assess separately whether its special recognizance conditions apply.</li>
+  </ol>
+
+  <p>The distinction is <span class="c-green"><strong>maximum exhausted → immediate release; minimum reached → reduced bail or recognizance under the governing rule</strong></span>.</p>
+
+  <h4 id="cases-bail-legally-unavailable" class="c-navy">Cases in which bail is legally unavailable</h4>
+
+  <p>Now imagine the opposite: the State has a reason to keep the accused in custody and <span class="c-rust"><strong><u>bail cannot be granted</u></strong></span>. The lecture emphasizes four situations:</p>
+
+  <ul>
+    <li><strong>Before conviction</strong>, a capital offense or one punishable by <em>reclusion perpetua</em> or life imprisonment <span class="c-rust"><strong><u>when evidence of guilt is strong</u></strong></span> (<span class="c-teal"><strong>Section 7</strong></span>).</li>
+    <li><strong>After RTC conviction</strong> of an offense punishable by <em>reclusion perpetua</em> or life imprisonment, the ordinary pending-appeal discretion of <span class="c-teal"><strong>Section 5 does not apply</strong></span>.</li>
+    <li><strong>After a judgment of conviction becomes final</strong> (<span class="c-teal"><strong>Section 24</strong></span>).</li>
+    <li><strong>Once the accused has begun serving the sentence</strong>, <span class="c-rust"><strong><u>no bail may be allowed</u></strong></span> (<span class="c-teal"><strong>Section 24</strong></span>).</li>
+  </ul>
+
+  <p><strong>Legal clarification:</strong> An RTC conviction of an offense punishable by <em>reclusion perpetua</em> does <strong>not</strong> mean Rule 114 automatically transfers the accused to New Bilibid Prison during appeal. Detention location follows the proper custody and commitment orders; the relevant point here is <strong>ineligibility for ordinary pending-appeal bail</strong>.</p>
+
+  <p><strong>Section 24’s probation qualification:</strong> An application for probation <strong>before finality</strong> may permit temporary liberty on existing bail or, when appropriate, recognizance. This does not authorize ordinary bail <span class="c-rust"><strong><u>after finality or once sentence service begins</u></strong></span>.</p>
+
+  <h4 id="other-lawful-cause" class="c-navy">The 'other lawful cause' limitation</h4>
+
+  <p>Suppose an accused faces <strong>graft</strong> and a separate <strong>plunder</strong> charge. Even if he posts valid bail for graft, that does <span class="c-rust"><strong><u>not</u></strong></span> release him from lawful detention for plunder. This is the reason court release orders commonly contain the qualification <span class="c-rust"><strong>"unless detained for some other lawful cause."</strong></span></p>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Bail not required</th>
+        <th>Bail not allowed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Is security needed for liberty?</td>
+        <td><span class="c-green"><strong>No</strong></span>, under the governing exception</td>
+        <td><span class="c-rust"><strong>Security cannot secure release</strong></span></td>
+      </tr>
+      <tr>
+        <td>What is the usual cause?</td>
+        <td>No lawful need for bail or preventive custody</td>
+        <td>Prohibited stage, charge, or strong evidence</td>
+      </tr>
+      <tr>
+        <td>Can the person still be held?</td>
+        <td>Possibly, if another lawful cause exists</td>
+        <td><span class="c-rust"><strong>Yes</strong></span>, under the pending valid detention</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Recitation trap:</strong> <span class="c-rust"><strong><u>Never answer "non-bailable" merely because bail is unnecessary.</u></strong></span> One means <strong>no bond needed</strong>; the other means <strong>no provisional release on bond</strong>.</p>
+
+  <hr>
+
+  <h3 id="sec-6-matter-of-right" class="c-navy">VI. BAIL AS A MATTER OF RIGHT AND PRACTICAL EARLY SURRENDER</h3>
+
+  <h4 id="three-situations-sec-4" class="c-navy">Three situations governed by Section 4</h4>
+
+  <p>When bail is <span class="c-green"><strong><u>a matter of right</u></strong></span>, the court is not free to refuse reasonable bail to an eligible accused who complies with the Rules. This differs from a discretionary bail petition, where the court must assess whether release should be allowed at all.</p>
+
+  <p><span class="c-teal"><strong>Rule 114, Section 4</strong></span> covers: <strong>(1)</strong> before conviction in a <strong>first-level court</strong> (MeTC, MTCC, MTC, MCTC); <strong>(2)</strong> after conviction by such a court while the case proceeds on appeal; and <strong>(3)</strong> before conviction by the <strong>RTC</strong>, where the offense is <span class="c-rust"><strong><u>not punishable by death, <em>reclusion perpetua</em>, or life imprisonment</u></strong></span>. Do not group all RTC cases into the same category: a homicide charge punishable by <em>reclusion temporal</em> is different from a murder charge carrying <em>reclusion perpetua</em>.</p>
+
+  <p>Consider this timeline:</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">1. Information Filed in Court</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Judicial Determination of Probable Cause / Custodial Arrangements</div>
+      <div class="ui-sub">Arrest warrant issues OR voluntary surrender establishes custody</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Arraignment &amp; Plea</div>
+      <div class="ui-sub">Bail cannot be conditioned upon prior arraignment (<em>Lavides</em>)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">4. Trial on the Merits</div>
+      <div class="ui-sub">Undertaking remains in force through all stages</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">5. Promulgation of RTC Judgment</div>
+      <div class="ui-sub">Ends Section 4 right; shifts to Section 5 discretion &amp; <em>Leviste</em> analysis</div>
+    </div>
+  </div>
+
+  <p><strong>Information filed → judicial determination of probable cause / custodial arrangements → arraignment → trial → RTC judgment → possible appeal.</strong></p>
+
+  <p><strong>Court and stage matter.</strong> A first-level conviction remains under <span class="c-teal"><strong>Section 4</strong></span>, but RTC conviction of a lesser offense shifts the application to <span class="c-teal"><strong>Section 5 discretion</strong></span>.</p>
+
+  <h4 id="pre-warrant-strategy" class="c-navy">The professor's pre-warrant strategy</h4>
+
+  <blockquote><strong>Professor's Illustration:</strong> When attempted-homicide charges are filed, counsel promptly accompanies the client to court for <strong>voluntary surrender and bail</strong>, rather than awaiting physical arrest. This is a practical strategy to avoid unnecessary detention, not a guarantee that an e-warrant will never issue.</blockquote>
+
+  <p><strong>Voluntary surrender</strong> may create <strong>custody of the law</strong>, allowing bail, but the judge retains the duty to determine <strong>judicial probable cause</strong>. Any outstanding warrant requires the proper judicial handling. The lecture’s e-warrant discussion describes a practical possibility, <span class="c-rust"><strong><u>not a guaranteed legal outcome</u></strong></span>.</p>
+
+  <p><strong>Important:</strong> Voluntary submission for bail does <span class="c-rust"><strong><u>not automatically establish</u></strong></span> mitigating <strong>voluntary surrender under Article 13(7), Revised Penal Code</strong>. The mitigating circumstance independently requires its legal elements, including spontaneity, and is decided at sentencing.</p>
+
+  <p><strong>Professor's practical checklist:</strong> Prepare identification photographs, proof of residence and any required sketch, signed bond undertaking, fingerprints, and proof of lawful payment. Court-specific forms and charges must be <strong>verified with the clerk</strong>; the lecture’s <strong>₱500</strong> figure is not a universal statutory amount.</p>
+
+  <p>Most importantly, <span class="c-green"><strong><u>posting bail does not itself waive timely challenges to illegal arrest or missing preliminary investigation</u></strong></span>. We will return to <span class="c-teal"><strong>Section 26</strong></span> in Part 3.</p>
+
+  <hr>
+
+  <h3 id="sec-7-severe-penalties" class="c-navy">VII. PETITION FOR BAIL WHEN THE CHARGE CARRIES THE MOST SEVERE PENALTIES</h3>
+
+  <h4 id="non-bailable-shorthand" class="c-navy">'Non-bailable offense' is often shorthand, not the whole test</h4>
+
+  <p>Imagine a murder Information. A student says: "Murder is non-bailable, so the judge must automatically deny bail." That is <span class="c-rust"><strong><u>incomplete</u></strong></span>. Under <span class="c-teal"><strong>Section 7</strong></span>, the critical pre-conviction question is not simply the name of the charge. It is whether the <span class="c-green"><strong><u>evidence of guilt is strong</u></strong></span>. If the prosecution cannot meet that test, the accused may be admitted to bail notwithstanding the severe charge.</p>
+
+  <p>The court must give the prosecutor <strong>notice and an opportunity to present evidence</strong> at a bail hearing. Under <span class="c-teal"><strong>Section 8</strong></span>, the <span class="c-rust"><strong><u>prosecution has the burden</u></strong></span> of proving the evidence of guilt is strong. This differs from proof beyond reasonable doubt at trial; the bail ruling <span class="c-rust"><strong><u>does not decide guilt</u></strong></span>.</p>
+
+  <h4 id="what-happens-hearing" class="c-navy">What happens at the hearing?</h4>
+
+  <blockquote><strong>Professor's Illustration:</strong> An accused charged with murder seeks bail. The prosecution calls an eyewitness, introduces relevant video evidence, or develops circumstantial evidence. Defense counsel cross-examines and may point out contradictions or present proof supporting self-defense. The judge then assesses the record for the <strong>specific bail question</strong>: <strong>Is the prosecution's evidence of guilt strong?</strong></blockquote>
+
+  <p>The hearing previews trial evidence, but <span class="c-rust"><strong><u>denial does not guarantee conviction</u></strong></span>. The trial may present additional evidence and applies a different standard.</p>
+
+  <p>Section 8 supplies another easily overlooked consequence: <span class="c-green"><strong><u>evidence presented at the bail hearing is automatically reproduced at trial</u></strong></span>, subject to the Rule's provisions permitting the recall of a witness. This makes the hearing procedurally important beyond immediate release.</p>
+
+  <p>A bail order must <span class="c-green"><strong><u>summarize material prosecution evidence and independently explain</u></strong></span> why it is or is not strong. The source associates this with <span class="c-burgundy"><em>Cortes v. Catral</em></span> (unverified reference). A bare formulaic conclusion is inadequate.</p>
+
+  <h4 id="illustration-judge-reasoning" class="c-navy">Illustration of the judge's legal reasoning</h4>
+
+  <p><strong>Application Example:</strong> If a distant eyewitness cannot identify the accused reliably and video lacks a clear face, the judge may find the prosecution’s proof insufficiently strong and <strong>grant bail</strong>. Multiple credible, consistent witnesses may justify denial. <strong>Neither bail ruling determines guilt beyond reasonable doubt</strong>.</p>
+
+  <p><strong>Recitation line:</strong> <em>For a capital or reclusion perpetua/life-imprisonment charge, the prosecution must show at a properly noticed bail hearing that the evidence of guilt is strong; the judge must evaluate and explain the result.</em></p>
+
+  <h4 id="remedy-erroneous-order" class="c-navy">Remedy against an erroneous bail order</h4>
+
+  <p>A bail order ordinarily decides <strong>provisional liberty</strong>, not final criminal liability, and is thus <strong>interlocutory</strong>. There is generally <span class="c-rust"><strong><u>no ordinary appeal</u></strong></span> from it. <span class="c-teal"><strong>Rule 65 certiorari</strong></span> may lie for <span class="c-rust"><strong><u>grave abuse of discretion amounting to lack or excess of jurisdiction</u></strong></span>, subject to its procedural requirements.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> An RTC bail ruling is ordinarily challenged by <strong>Rule 65 certiorari in the Court of Appeals</strong>; a Sandiganbayan bail ruling may be taken to the <strong>Supreme Court</strong>. The point is <strong>jurisdictional grave abuse</strong>, not an ordinary merits appeal. The lecturer references Senators Revilla and Estrada.</blockquote>
+
+  <hr>
+
+  <h3 id="sec-8-leviste-post-conviction" class="c-navy">VIII. BAIL AFTER RTC CONVICTION: DISCRETION AND THE LEVISTE TEST</h3>
+
+  <h4 id="why-conviction-changes-position" class="c-navy">Why conviction changes the legal position</h4>
+
+  <p>A man charged with homicide received bail as a matter of right before RTC conviction. The RTC subsequently finds him <strong>guilty</strong>. Can he retain liberty simply because the judgment is on appeal? <span class="c-rust"><strong><u>No automatic entitlement follows.</u></strong></span> Under <span class="c-teal"><strong>Section 5</strong></span>, following <strong>RTC conviction of an offense not punishable by death, <em>reclusion perpetua</em>, or life imprisonment</strong>, bail is now <strong>discretionary</strong>. Conviction has displaced the pre-conviction presumption of innocence for this purpose; provisional liberty requires the court's careful judgment.</p>
+
+  <p>The court may allow continued liberty under the <strong>same bond with the bondsman's consent</strong>, or impose an appropriate different arrangement. The professor mentions increasing a ₱100,000 bond to ₱200,000 to reflect increased flight risk; <strong>doubling is not a mandatory formula</strong>. The court must still act reasonably under the Rules.</p>
+
+  <h4 id="five-bail-negating-circumstances" class="c-navy">The five listed bail-negating circumstances</h4>
+
+  <p>The third paragraph of <span class="c-teal"><strong>Section 5</strong></span> becomes especially important <span class="c-rust"><strong><u>when the RTC imposes imprisonment exceeding six years</u></strong></span>. After <strong>showing by the prosecution and notice to the accused</strong>, bail must be denied or cancelled when any listed circumstance <span class="c-rust"><strong>or another similar circumstance</strong></span> is established. The five specified circumstances concern:</p>
+
+  <ol>
+    <li><strong>Recidivism, quasi-recidivism, habitual delinquency, or <em>reiteracion</em>.</strong> They reflect prior criminality under legally defined categories; they are not interchangeable labels.</li>
+    <li><strong>Prior escape, evasion of sentence, or unjustified violation of bail conditions.</strong> History matters because bail depends on future attendance.</li>
+    <li><strong>Commission of the offense while on probation, parole, or conditional pardon.</strong> This indicates alleged misconduct while enjoying conditional liberty.</li>
+    <li><strong>Probability of flight</strong> shown by the accused's circumstances or the case.</li>
+    <li><strong>Undue risk of committing another crime</strong> while the appeal is pending.</li>
+  </ol>
+
+  <p>It is <span class="c-rust"><strong><u>not enough for the prosecutor merely to repeat these phrases</u></strong></span>. The prosecution must establish the circumstances it invokes, with the accused receiving notice. Also read the words <strong>"or other similar circumstances"</strong>: the five listed categories are not necessarily exhaustive.</p>
+
+  <h4 id="leviste-case" class="c-navy"><em>Leviste v. Court of Appeals</em> — the central post-conviction case</h4>
+
+  <p><strong>Facts:</strong> Former Batangas Governor Jose Antonio Leviste was charged with <strong>murder</strong> in a fatal shooting but convicted by the RTC of <strong>homicide</strong>. He sought bail while appealing. He argued that because none of the Section 5 bail-negating circumstances was proved, bail should follow automatically.</p>
+
+  <p><strong>Issue:</strong> <strong>Whether</strong> the absence of a listed bail-negating circumstance converts post-RTC-conviction bail into a <strong>matter of right</strong>.</p>
+
+  <p><strong>Ruling: No.</strong> In <span class="c-burgundy"><em>Leviste v. Court of Appeals</em>, G.R. No. 189122, March 17, 2010</span>, the Supreme Court described a <span class="c-green"><strong><u>two-stage analysis</u></strong></span>. <strong>Stage 1:</strong> determine whether any enumerated <strong>or similar</strong> circumstance exists, deciding whether the court operates under more <strong>stringent</strong> or ordinary <strong>sound discretion</strong>. If one exists, denial or cancellation follows under the Rule. <strong>Stage 2:</strong> if none exists, the court <span class="c-green"><strong><u>still exercises sound judicial discretion</u></strong></span> on all relevant circumstances; bail <span class="c-rust"><strong><u>does not become automatic</u></strong></span>. The decision also emphasized that the appeal should raise a substantial, fairly debatable issue rather than be merely pro forma. <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/53777" target="_blank">[Official decision.]</a></p>
+
+  <p><strong>Application:</strong> An appellant sentenced to eight years has no prior escape, other cases, or demonstrated flight risk. He nonetheless cannot simply say, "The prosecution proved none of the five; therefore release me." The appellate court examines the entire record and the credibility of the application. <strong>Bar trap:</strong> <em>Absence of grounds for mandatory denial ≠ affirmative entitlement to bail.</em></p>
+
+  <!-- Interactive Pan-and-Zoom Mermaid Diagram 2 -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: THE LEVISTE TWO-STAGE POST-CONVICTION DECISION ARCHITECTURE <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn reset-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Conv["Accused Convicted by RTC<br/>Non-Capital Offense (e.g. Homicide)"] --> Sent{"Imposed Imprisonment<br/>Exceeds 6 Years?"}
+  
+  Sent -- "YES" --> Stage1{"STAGE 1: Any Sec. 5 Bail-Negating<br/>Circumstances Established?"}
+  Sent -- "NO" --> Stage2["STAGE 2: Sound Judicial Discretion<br/>(Court evaluates all circumstances)"]
+  
+  Stage1 -- "1. Recidivism / Delinquency / Quasi-recidivism<br/>2. Escape / Evasion / Prior Breach<br/>3. Misconduct on Probation / Parole<br/>4. Probability of Flight<br/>5. Undue Risk of Another Crime" --> ManDenial["MANDATORY DENIAL / CANCELLATION<br/>(Court has no discretion to grant)"]
+  
+  Stage1 -- "None Proved by Prosecution" --> Stage2
+  
+  Stage2 --> Eval{"Appellate Court Evaluates:<br/>• Debatable / Substantial Appeal?<br/>• Good Faith &amp; Past Attendance?<br/>• Risk of Non-Appearance?"}
+  
+  Eval -- "Favorable" --> PostGrant["BAIL GRANTED PENDING APPEAL<br/>(Discretionary with terms / higher bond)"]
+  Eval -- "Unfavorable" --> PostDeny["BAIL DENIED PENDING APPEAL<br/>(Absence of 5 grounds != automatic bail)"]
+
+  style Conv fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style ManDenial fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style PostDeny fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
+  style PostGrant fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style Stage2 fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
+  style Sent fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+  style Stage1 fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+  style Eval fill:#F1F5F9,stroke:#0F766E,stroke-width:1.5px,color:#0F766E
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="which-court-hears-request" class="c-navy">Which court hears the post-conviction request?</h4>
+
+  <p>Generally, after RTC conviction, the <strong>trial court may act even after notice of appeal</strong>, provided it has <strong>not transmitted the original records</strong>. Once the records are transmitted, the <strong>appellate court</strong> acts. But there is a crucial exception: <span class="c-rust"><strong><u>if conviction changes the nature of the offense from non-bailable to bailable</u></strong></span>, the application <span class="c-green"><strong><u>must be resolved by the appellate court</u></strong></span>, regardless of where the records remain.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> Murder was charged, but the RTC convicted only of homicide. The accused moves for bail before the RTC because the records are still there. <span class="c-rust"><strong><u>Wrong court.</u></strong></span> Since the conviction has changed the offense's nature from non-bailable to bailable for purposes of the Rule, <strong>the Court of Appeals</strong> must act. This is exactly the procedural feature emphasized in <em>Leviste</em>.</blockquote>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Stage and court</th>
+        <th>Character of bail</th>
+        <th>Governing inquiry</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Before or after first-level court conviction</td>
+        <td><span class="c-green"><strong>Matter of right</strong></span> under Sec. 4</td>
+        <td>Valid bond and prescribed conditions</td>
+      </tr>
+      <tr>
+        <td>Before RTC conviction, charge below severe-penalty class</td>
+        <td><span class="c-green"><strong>Matter of right</strong></span></td>
+        <td>Compliance; reasonable amount</td>
+      </tr>
+      <tr>
+        <td>Before RTC conviction, severe-penalty charge</td>
+        <td><span class="c-rust"><strong>Depends on strength of evidence</strong></span></td>
+        <td>Prosecution's proof at bail hearing</td>
+      </tr>
+      <tr>
+        <td>After RTC conviction, lesser offense</td>
+        <td><span class="c-teal"><strong>Discretionary</strong></span></td>
+        <td>Sec. 5, including the <em>Leviste</em> analysis</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="part-3" class="c-navy">PART 3: WHERE TO POST BAIL, HOW IT IS FORFEITED, AND WHAT RIGHTS SURVIVE</h2>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">IX</div>
+        <div class="ui-kicker">VENUE</div>
+        <div class="ui-sub">Section 17 hierarchy &amp; substitute courts</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">X</div>
+        <div class="ui-kicker">FORFEITURE</div>
+        <div class="ui-sub">4-stage procedure &amp; <em>Mendoza</em> void auction</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">XI</div>
+        <div class="ui-kicker">PRESERVATION</div>
+        <div class="ui-sub">Section 26, <em>Lavides</em>, &amp; <em>Borlongan</em></div>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Part 3 Overview &amp; Scope of Topics:</strong> <strong>IX.</strong> venue and substitute judges under Section 17; <strong>X.</strong> required appearances, forfeiture, judgment on the bond, and cancellation; <strong>XI.</strong> preservation of objections under Section 26, including <em>Lavides</em> and <em>Borlongan</em>.</p>
+
+  <h3 id="sec-9-venue-hierarchy" class="c-navy">IX. VENUE AND HIERARCHY OF COURTS IN FILING BAIL</h3>
+
+  <h4 id="where-case-pending" class="c-navy">Begin with one simple question: where is the case pending?</h4>
+
+  <p>Suppose the RTC in <strong>San Fernando City, La Union</strong> issued a warrant for an accused later arrested in <strong>Dagupan City, Pangasinan</strong>. The client asks whether bail must be paid in La Union or may be posted in Pangasinan. <span class="c-teal"><strong>Rule 114, Section 17</strong></span> answers that question, but the answer changes depending on <strong>where arrest occurred, whether the case is already filed, and whether approval requires discretion</strong>.</p>
+
+  <p>The <strong>general venue</strong> is the <span class="c-green"><strong><u>court where the criminal case is pending</u></strong></span>. For bail <strong>in the amount already fixed</strong>, Section 17(a) recognizes substitute judges when the judge of that court is <strong>absent or unavailable</strong>. The professor describes an intra-territorial hierarchy, preferring another RTC judge within the relevant province or city, and then an available first-level judge. The governing text permits a judge within the <strong>province, city, or municipality</strong>, subject to the conditions in Section 17(a). <span class="c-rust"><strong><u>An unavailable judge does not justify crossing a provincial boundary just to shop for a convenient forum.</u></strong></span></p>
+
+  <p>A <strong>substitute judge</strong> accepts the <strong>fixed bond</strong>, not an application requiring fresh discretion. Courts have disciplined judges for disregarding Section 17's territorial limits. The professor's geographic illustrations are <strong>not permission to file in any convenient courthouse</strong>. <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/11/369" target="_blank">[Section 17, Rule 114.]</a></p>
+
+  <h4 id="four-court-names" class="c-navy">Four commonly confused local court names</h4>
+
+  <p>A <strong>MeTC</strong> is a Metropolitan Trial Court, operating in metropolitan Manila; an <strong>MTCC</strong> is a Municipal Trial Court in Cities, such as a first-level court of a city outside Metro Manila; an <strong>MTC</strong> serves a municipality; and an <strong>MCTC</strong> serves a circuit of multiple municipalities. All are <strong>first-level courts</strong>. For Rule 114, the essential comparison is usually <strong>RTC versus first-level court</strong>, not which abbreviation is longer.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> The MTC of Bacnotan judge is unavailable. Counsel seeks a <strong>lawful substitute within La Union</strong>, not another province merely because the courthouse is open. A substitute’s acceptance of the <strong>fixed amount</strong> does not authorize a reduction.</blockquote>
+
+  <h4 id="arrest-outside-place" class="c-navy">Arrest outside the place where the case is pending</h4>
+
+  <p>Section 17(a) makes a specific exception. When the accused is <strong>arrested elsewhere</strong>, bail in the amount fixed may also be filed with an <span class="c-teal"><strong>RTC at the place of arrest</strong></span>. <strong>If no RTC judge is available there</strong>, a first-level judge at that place may act. Here, unlike an ordinary choice of substitute judge within the place of the pending case, the <strong>place of arrest itself creates the additional venue</strong>.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> RTC San Fernando fixes estafa bail at <strong>₱40,000</strong>. When the accused is arrested in Dagupan, the bond may be filed at a <strong>Dagupan RTC</strong>, with a first-level Dagupan court as fallback <strong>only if no RTC judge there is available</strong>. This alternative arises from <strong>arrest there</strong>, not counsel’s convenience.</blockquote>
+
+  <h4 id="inquest-custody" class="c-navy">Inquest custody before an Information is filed</h4>
+
+  <p><span class="c-teal"><strong>Section 17(c)</strong></span> speaks differently: <span class="c-green"><strong><u>a person in custody who is not yet charged in court may apply for bail with any court in the province, city, or municipality where held</u></strong></span>. This is useful in <strong>inquest proceedings</strong>, including a legally detained person who has requested preliminary investigation. Because the provision says <strong>"any court"</strong>, it does not itself establish the same RTC-first requirement as the place-of-arrest exception applicable when the case is already pending elsewhere.</p>
+
+  <p>The distinction concerns the <strong>filing stage</strong>, not the seriousness of the charge alone. Ask: <strong>Has the Information been filed?</strong> If not, apply Section 17(c) to the appropriate custodian location. If filed, consult Section 17(a) and any applicable special provisions.</p>
+
+  <h4 id="discretionary-venue" class="c-navy">When the court must exercise discretion</h4>
+
+  <p>Under <span class="c-teal"><strong>Section 17(b)</strong></span>, <span class="c-rust"><strong><u>discretionary bail and release on recognizance may be applied for only in the court where the case is pending</u></strong></span>, whether in preliminary investigation, trial, or appeal. A motion to <strong>reduce bail</strong> likewise requires judicial consideration by the competent court handling the case; it is <span class="c-rust"><strong><u>not an invitation for the arrest-place judge to revise another court's amount</u></strong></span>.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> RTC San Fernando fixes bail at <strong>₱120,000</strong>. The accused is arrested in Baguio. The lawyer may tender the fixed amount before a proper Baguio judge under Section 17(a), but cannot use that judge to obtain a <strong>reduction to ₱60,000</strong>. The reduction must be sought in the proper court, and a substitute judge is not free to displace the court of origin's exercise of discretion.</blockquote>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th>Situation</th>
+        <th>Where bail application belongs</th>
+        <th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Charge filed; judge available</td>
+        <td><span class="c-green"><strong>Court where case is pending</strong></span></td>
+        <td>Primary venue</td>
+      </tr>
+      <tr>
+        <td>Charge filed; judge unavailable</td>
+        <td><span class="c-teal"><strong>Qualified substitute judge in the locality specified by Sec. 17(a)</strong></span></td>
+        <td>Limited alternative, not forum shopping</td>
+      </tr>
+      <tr>
+        <td>Arrest occurred elsewhere</td>
+        <td><span class="c-teal"><strong>RTC at place of arrest</strong></span>, then first-level court there if no RTC judge available</td>
+        <td>Special arrest-place exception</td>
+      </tr>
+      <tr>
+        <td>Inquest detainee; no case filed</td>
+        <td><span class="c-navy"><strong>Any court where detainee is held</strong></span>, within Sec. 17(c)'s territorial terms</td>
+        <td>No pending trial court yet</td>
+      </tr>
+      <tr>
+        <td>Discretionary bail or recognizance</td>
+        <td><span class="c-rust"><strong>Court where case is pending</strong></span></td>
+        <td>Its own evaluation is required</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Memory aid:</strong> <strong>Pending case → pending court; arrest elsewhere → arrest-place RTC; no charge yet → any local court of custody; discretion → pending court.</strong> These are separate questions; apply them in order.</p>
+
+  <hr>
+
+  <h3 id="sec-10-forfeiture-cancellation" class="c-navy">X. REQUIRED PRESENCE, FORFEITURE, AND CANCELLATION OF BAIL</h3>
+
+  <h4 id="must-accused-attend" class="c-navy">Must an accused attend every hearing?</h4>
+
+  <p>The accused’s <strong>right to attend</strong> does not automatically make every absence a ground for forfeiture. The professor distinguishes <strong>arraignment and plea</strong>, <strong>identification when required</strong>, and <strong>promulgation</strong> (subject to exceptions) from proceedings where presence may be waived. Proper court orders requiring appearance—including pre-trial directives—still bind the accused.</p>
+
+  <blockquote><strong>Professor's Illustration:</strong> An eyewitness is about to identify the accused in a physical-injuries case, and the court has required the accused's presence. Absence without justification matters because the accused's identity is directly at issue. Later, a billing clerk testifies about hospital expenses, with no order requiring the accused's personal presence. A properly waived or excused absence at that later hearing should not mechanically produce forfeiture.</blockquote>
+
+  <p><strong>Legal clarification:</strong> <span class="c-burgundy"><em>Lavides</em></span> describes <strong>arraignment, required identification, and promulgation</strong> as the classic compulsory stages. Pre-trial and other hearings may also involve <strong>specific court orders</strong> requiring presence under Section 2(b). Therefore, neither "every absence forfeits bail" nor "attendance at all other hearings is always optional" is correct.</p>
+
+  <h4 id="four-stage-forfeiture" class="c-navy">The four-stage forfeiture procedure</h4>
+
+  <p>Forfeiture is not an immediate transfer of money or land to the State whenever an accused misses court. The procedure under <span class="c-teal"><strong>Section 21</strong></span> protects the bondsman from summary execution without the opportunity to produce the accused and explain the absence.</p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">STAGE 1: Non-Appearance &amp; Declaration of Forfeiture (Order Nisi)</div>
+      <div class="ui-sub">Accused fails to appear when required; court declares bail forfeited &amp; directs arrest</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">STAGE 2: 30-Day Opportunity to Comply</div>
+      <div class="ui-sub">Bondsmen must: (a) produce accused or show reason, AND (b) explain non-appearance</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">STAGE 3: Separate Judgment on the Bond</div>
+      <div class="ui-sub">Court renders monetary judgment holding bondsmen jointly and severally liable</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">STAGE 4: Execution After Enforceable Judgment</div>
+      <div class="ui-sub">Writ of execution issues to collect cash or levy/auction property; premature auction is VOID (<em>Mendoza</em>)</div>
+    </div>
+  </div>
+
+  <p><strong>Stage 1 — Required appearance, notice, and declaration of forfeiture.</strong> The court or Rules require the accused's presence. The bondsmen are notified to produce the accused on the designated date and time. If the accused fails to appear, the court <span class="c-rust"><strong><u>declares bail forfeited</u></strong></span>. The court may also issue the appropriate warrant or coercive order concerning the accused. This preliminary forfeiture is sometimes called an <strong>order nisi</strong> or <strong>confiscation of bond</strong>. It is <span class="c-rust"><strong><u>not yet a final monetary judgment against the bondsmen</u></strong></span>.</p>
+
+  <p><strong>Stage 2 — Thirty-day opportunity to comply.</strong> From the declaration, the bondsmen have <span class="c-green"><strong><u>30 days</u></strong></span> to comply with <strong>two separate obligations</strong>: <strong>(a)</strong> produce the accused's person <span class="c-teal"><strong>or give an adequate reason for nonproduction</strong></span>; and <strong>(b)</strong> explain <span class="c-teal"><strong>why the accused failed to appear when first required</strong></span>. Both matter. Simply saying "we cannot find him" does not automatically excuse nonappearance, and producing him does not necessarily excuse the original breach without the necessary showing.</p>
+
+  <p><strong>Stage 3 — Judgment on the bond.</strong> If the bondsmen fail the prescribed requirements, the court renders a <span class="c-green"><strong><u>separate judgment</u></strong></span> holding them <span class="c-rust"><strong><u>jointly and severally liable</u></strong></span> for the amount. <em>Joint and several</em> means the law permits recovery of the full obligation from a liable bondsman, subject to applicable recourse between them. The court generally <span class="c-rust"><strong><u>may not reduce or mitigate liability</u></strong></span>, unless the accused has been surrendered or is acquitted, as Section 21 expressly provides.</p>
+
+  <p><strong>Stage 4 — Execution after an enforceable judgment.</strong> After the judgment on the bond becomes <strong>final and enforceable</strong>, a <span class="c-teal"><strong>writ of execution</strong></span> may issue to collect cash or levy and auction bonded property. The professor mentions a <strong>15-day finality period</strong>: verify applicable procedural rules and service, rather than treating issuance of the forfeiture order as immediate authority to sell property. The controlling distinction is <span class="c-rust"><strong><u>forfeiture order ≠ judgment on the bond</u></strong></span>.</p>
+
+  <h4 id="mendoza-alarma" class="c-navy"><em>Mendoza v. Alarma</em>: why a premature auction was void</h4>
+
+  <p><strong>Facts:</strong> Spouses Fernando and Fausta Alarma posted <strong>11.7 hectares in Iba, Zambales</strong> for Joselito Mayo. He failed to appear; the trial court <strong>declared forfeiture</strong> and gave 30 days to show cause. The court then <span class="c-rust"><strong><u>ordered an auction without rendering judgment on the bond</u></strong></span>, and purchasers Mendoza and Miclat acquired the property.</p>
+
+  <p><strong>Issue:</strong> <strong>Whether</strong> a declaration of bail forfeiture alone supports an execution sale of the property given as bond.</p>
+
+  <p><strong>Ruling: No.</strong> In <span class="c-burgundy"><em>Mendoza v. Alarma</em>, G.R. No. 151970, May 7, 2008</span>, the Supreme Court explained that an <strong>order of forfeiture is conditional and interlocutory</strong>. Because the statutorily required <span class="c-rust"><strong><u>judgment on the bond was missing</u></strong></span>, the writ of execution and the subsequent auction sale <span class="c-rust"><strong><u>could not stand</u></strong></span>. This is a <strong>due-process rule for bondsmen</strong>, not a technicality excusing the accused's unexplained disappearance. <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/45120" target="_blank">[Official decision.]</a></p>
+
+  <p><strong>Memory trigger: "Mendoza = Missing judgment."</strong> If a Bar problem gives you an order declaring bail confiscated, a 30-day directive, and then a public auction without a judgment on the bond, identify the <span class="c-rust"><strong><u>fatal missing stage</u></strong></span>.</p>
+
+  <!-- Interactive Pan-and-Zoom Mermaid Diagram 3 -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: SECTION 21 FORFEITURE LIFECYCLE VS. MENDOZA VOID AUCTION TRAP <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Fail["Accused Fails to Appear When Required<br/>(Arraignment, Plea, Identification, Promulgation)"] --> Step1["STAGE 1: Declaration of Forfeiture<br/>(Order Nisi / Confiscation of Bond)"]
+  
+  Step1 --> Step2["STAGE 2: 30-Day Show-Cause Period<br/>Bondsmen Must:<br/>1. Produce accused or give adequate reason<br/>2. Explain why accused failed to appear"]
+  
+  Step2 --> Check{"Did Bondsmen Fully Comply<br/>Within 30 Days?"}
+  
+  Check -- "YES (Accused surrendered & valid reason)" --> Disch["Forfeiture Lifted / Liability Mitigated"]
+  Check -- "NO (Failed to produce or explain)" --> Step3["STAGE 3: SEPARATE JUDGMENT ON THE BOND<br/>(Joint and several monetary judgment)"]
+  
+  Step3 --> Final{"Judgment Becomes Final<br/>(15-day period elapsed?)"}
+  
+  Final -- "YES" --> Step4["STAGE 4: WRIT OF EXECUTION<br/>Levy and Public Auction of Property / Cash"]
+  
+  Step1 -. "PREMATURE LEVY / AUCTION<br/>(Directly from Forfeiture Order)" .-> Trap["FATAL DEFECT: MENDOZA v. ALARMA TRAP<br/>Auction Sale is NULL AND VOID<br/>due to Missing Judgment on the Bond"]
+
+  style Fail fill:#FFF7ED,stroke:#C2410C,stroke-width:1.5px,color:#C2410C
+  style Step1 fill:#EFF6FF,stroke:#1E3A8A,stroke-width:1.5px,color:#1E3A8A
+  style Step2 fill:#EFF6FF,stroke:#1E3A8A,stroke-width:1.5px,color:#1E3A8A
+  style Step3 fill:#ECFDF5,stroke:#0F766E,stroke-width:2px,color:#0F766E
+  style Step4 fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
+  style Disch fill:#F0FDF4,stroke:#16A34A,stroke-width:1.5px,color:#16A34A
+  style Trap fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,color:#DC2626
+  style Check fill:#F8FAFC,stroke:#1E3A8A,stroke-width:1px,color:#1E3A8A
+  style Final fill:#F8FAFC,stroke:#1E3A8A,stroke-width:1px,color:#1E3A8A
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="cancellation-vs-forfeiture" class="c-navy">Cancellation is different from forfeiture</h4>
+
+  <p><span class="c-teal"><strong>Section 22</strong></span> provides two ways bail may be cancelled <strong>on application by the bondsmen with notice to the prosecutor</strong>: <span class="c-green"><strong><u>surrender of the accused</u></strong></span> or <span class="c-green"><strong><u>proof of death</u></strong></span>. It also provides automatic cancellation upon <span class="c-green"><strong><u>acquittal, dismissal of the case, or execution of the judgment of conviction</u></strong></span>. However, cancellation is <span class="c-rust"><strong><u>without prejudice to liability on the bond already incurred</u></strong></span>.</p>
+
+  <p>For example, if the case is dismissed after a bondsman previously breached the undertaking, do not assume all past liabilities vanish retroactively. The cancellation ends the continuing undertaking as the Rule directs; it does not magically erase a liability validly incurred before cancellation.</p>
+
+  <p><strong>Remember the order:</strong> <strong>Forfeiture</strong> declares a breach; <strong>judgment on the bond</strong> fixes liability; <strong>execution</strong> collects it; <strong>cancellation</strong> ends the undertaking.</p>
+
+  <hr>
+
+  <h3 id="sec-11-waiver-objections" class="c-navy">XI. BAIL DOES NOT WAIVE OBJECTIONS TO ARREST OR PRELIMINARY INVESTIGATION</h3>
+
+  <h4 id="dilemma-before-sec-26" class="c-navy">The apparent dilemma before Rule 114, Section 26</h4>
+
+  <p>A client seeks bail while challenging a <strong>warrantless arrest</strong>. Must counsel choose between obtaining liberty and preserving that challenge? <span class="c-teal"><strong>Section 26 avoids that dilemma</strong></span>: a bail application need not equal waiver, provided the accused objects in time.</p>
+
+  <p><span class="c-teal"><strong>Section 26</strong></span> expressly resolves that problem: <span class="c-green"><strong><u>application for or admission to bail does not bar the accused from questioning</u></strong></span> the legality of the arrest or arrest warrant, or the <strong>regularity or absence of preliminary investigation</strong>, <span class="c-green"><strong><u>provided these objections are raised before entering a plea</u></strong></span>. The court should resolve them as early as practicable, <strong>not later than the start of trial</strong>. The time requirement matters as much as the protection.</p>
+
+  <p>The old broad proposition—"posting bail automatically waives an illegal-arrest objection"—is therefore <span class="c-rust"><strong><u>not the rule under Section 26</u></strong></span>. But the Section is not a universal permission to defer procedural objections indefinitely. Counsel must <strong>raise the appropriate objection in time</strong>; the bond does not itself operate as a substitute for a motion.</p>
+
+  <h4 id="lavides-arraignment" class="c-navy"><em>Lavides</em>: the court may not force arraignment as a bail condition</h4>
+
+  <blockquote><strong>Professor's Illustration:</strong> A shoplifting accused is eligible for bail, but the judge refuses approval <strong>until arraignment</strong>, hoping to prevent disappearance. This is <span class="c-rust"><strong><u>impermissible</u></strong></span>: it pressures a plea before the accused can raise <strong>pre-plea objections</strong>, including a motion to quash.</blockquote>
+
+  <p>In <span class="c-burgundy"><em>Lavides v. Court of Appeals</em>, G.R. No. 129670</span>, the Supreme Court explained why making <span class="c-rust"><strong><u>arraignment a condition of granting bail</u></strong></span> undermines protected procedural rights. The court can secure appearance at arraignment <strong>through the conditions of bail itself</strong>. It need not use detention as leverage to accelerate plea. <a href="https://chanrobles.com/scdecisions/jurisprudence2000/feb2000/gr_129670_2000.php" target="_blank">[Decision.]</a></p>
+
+  <p>Be careful: the special statutory <strong>recognizance</strong> procedure under R.A. No. 10389 has its <strong>own arraignment condition</strong>, as discussed in Part 1. Do not flatten that distinct statute into a universal rule about the timing of ordinary bail.</p>
+
+  <h4 id="borlongan-pena" class="c-navy"><em>Borlongan v. Peña</em>: waiver requires more than paying the bond</h4>
+
+  <p><strong>Facts:</strong> Accused in an estafa case <strong>posted bail while expressly reserving objections</strong> to their arrest warrants, and pursued pre-arraignment relief. The opposing party argued that merely posting bail waived those objections.</p>
+
+  <p><strong>Issue:</strong> <strong>Whether</strong> posting bail <strong>by itself</strong> waives objections to arrest or defects in the preliminary investigation.</p>
+
+  <p><strong>Ruling: No.</strong> In <span class="c-burgundy"><em>Borlongan v. Peña</em>, G.R. No. 143591, May 5, 2010</span>, the Supreme Court applied Section 26 and rejected the automatic-waiver theory. A waiver may arise from <span class="c-rust"><strong><u>voluntarily pleading and participating in trial without timely invoking the objection</u></strong></span>; it is not presumed merely from the bail deposit. <a href="https://chanrobles.com/scdecisions/jurisprudence2010/may2010/143591.php" target="_blank">[Decision.]</a></p>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-card">
+      <div class="ui-title">1. Apply / Post Bail When Eligible</div>
+      <div class="ui-sub">Obtain provisional release without forfeiting defenses</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Identify Objections (Illegal Arrest / No Preliminary Investigation)</div>
+      <div class="ui-sub">Prepare motion to quash or motion for reinvestigation</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">3. File Objections BEFORE Entering Plea at Arraignment</div>
+      <div class="ui-sub">Sec. 26 preserves objection; waiver occurs only if plea is entered without objection</div>
+    </div>
+  </div>
+
+  <p><strong>Exam sequence:</strong> <strong>Bail when eligible → identify objection → raise before plea → distinguish custody from waiver.</strong> The legal challenge survives a deposit, but delay may defeat it.</p>
+
+  <h4 id="final-application-drills" class="c-navy">Final application drills</h4>
+
+  <div class="ui-box">
+    <p><strong>Problem A.</strong> A murder accused applies for bail and the prosecutor offers no evidence after proper opportunity. <strong>Answer:</strong> The court cannot deny bail solely on the label "murder"; the prosecution must establish <strong>strong evidence of guilt</strong> under Sections 7–8.</p>
+    <p><strong>Problem B.</strong> An RTC homicide appellant sentenced to eight years proves no prior escape or pending case and insists release is automatic. <strong>Answer:</strong> <strong>No.</strong> Under <em>Leviste</em>, absence of bail-negating circumstances leaves <strong>sound judicial discretion</strong>, not bail as a matter of right.</p>
+    <p><strong>Problem C.</strong> A property bondsman receives a forfeiture order, but the court immediately auctions the property without a separate judgment on the bond. <strong>Answer:</strong> The process violates <strong>Section 21</strong>; <em>Mendoza</em> requires the missing judgment before execution.</p>
+    <p><strong>Problem D.</strong> An accused posts bail but files a challenge to illegal arrest <strong>before entering his plea</strong>. <strong>Answer:</strong> <strong>Section 26 preserves the objection</strong>; bail alone is not waiver.</p>
+  </div>
+
+  <hr>
+
+  <h3 id="administrative-matters" class="c-navy">Administrative Matters &amp; Professor's Asides</h3>
+
+  <p>The supplied October 17 lecture material contains <strong>no identifiable quiz date, assignment deadline, submission instruction, or separate administrative announcement</strong>. Its practical observations—client preparation for bail, jail transport, electronic payment, courthouse selection, prosecutorial comments on bail reduction, and courtroom strategy—have been explained alongside the rules they illustrate. No additional administrative requirements are inferred.</p>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    // Re-center diagram upon entering or exiting fullscreen
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
