@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rule 115 &amp; Rule 116 Quick Reviewer &amp; Memory Aid (General Rule vs. Exceptions)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.8rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.65rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.55rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.1rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.93rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.65rem 0.9rem 0.65rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.7rem 0.9rem 0.7rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 1.75rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+/* Quick Reviewer: General Rule vs. Exception(s) & Memory Cue Cards */
+.gr-ex-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.15rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.gr-row {
+  padding: 0.85rem 1.2rem;
+  border-left: 4px solid #166534;
+  background: #F0FDF4;
+  border-bottom: 1px solid #E2E8F0;
+}
+.ex-row {
+  padding: 0.85rem 1.2rem;
+  border-left: 4px solid #C2410C;
+  background: #FFF7ED;
+}
+.gr-ex-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  padding: 0.55rem 1.2rem;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.badge-gr {
+  display: inline-block;
+  background: #166534;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.badge-ex {
+  display: inline-block;
+  background: #C2410C;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.badge-trap {
+  display: inline-block;
+  background: #991B1B;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.callout-box {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #1E3A8A;
+  padding: 1.15rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.25rem 0;
+}
+.ext-link {
+  color: #0F766E;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.ext-link:hover {
+  color: #1E3A8A;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    padding: 1.5rem 1.25rem;
+    margin: 0.5rem auto;
+  }
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .sticky-nav, .diagram-toolbar { display: none; }
+  body { background: #FFFFFF; }
+  .document-container { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">MEMORY AID NAV:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Jump to Rule, Exception, or Drill...</option>
+      <option value="#master-sequence">EXAM SEQUENCE &amp; MASTER FLOWCHART (Stages 1–4)</option>
+      <option value="#pillar-1-rule115">1. Rule 115 Sequence &amp; Presumption of Innocence</option>
+      <option value="#sec1-mnemonic">&nbsp;&nbsp;↳ Rule 115 Sec. 1(a)–(i) Memory Sequence &amp; Trap Fix</option>
+      <option value="#gr-ex-waiver">&nbsp;&nbsp;↳ GR / EX: Silence, Waiver &amp; Presumption of Innocence</option>
+      <option value="#gr-ex-equipoise-bail">&nbsp;&nbsp;↳ GR / EX: Equipoise, Alibi &amp; Post-RTC Conviction (Cuico vs. Leviste)</option>
+      <option value="#pillar-2-id-corpus">2. Identification, Corpus Delicti &amp; Notice</option>
+      <option value="#gr-ex-identity">&nbsp;&nbsp;↳ GR / EX: Corpus Delicti, Pre-Trial Stipulations &amp; Trial in Absentia ID</option>
+      <option value="#totality-factors">&nbsp;&nbsp;↳ Out-of-Court ID: O–A–A–C–E–S (Cariño) &amp; Drug Chain (Sec. 21)</option>
+      <option value="#gr-ex-notice">&nbsp;&nbsp;↳ GR / EX: Understandable Charge &amp; Family Court Confidentiality</option>
+      <option value="#pillar-3-counsel-inquest">3. Effective Counsel &amp; Inquest Timelines</option>
+      <option value="#gr-ex-counsel">&nbsp;&nbsp;↳ GR / EX: Custodial Counsel vs. Lineups &amp; Spontaneous Statements</option>
+      <option value="#gr-ex-inquest">&nbsp;&nbsp;↳ GR / EX: Art. 125 (12/18/36h) &amp; Rule 112 Waivers (15d / 5d)</option>
+      <option value="#pillar-4-speedy-privilege">4. Speedy Trial, Self-Incrimination &amp; Trial Rights</option>
+      <option value="#continuous-trial-numbers">&nbsp;&nbsp;↳ Continuous Trial Numbers (10d / 30d / 90d / 15d / 2022 Rules)</option>
+      <option value="#gr-ex-speedy">&nbsp;&nbsp;↳ GR / EX: Postponements &amp; Speedy Trial Dismissal</option>
+      <option value="#gr-ex-self-incrim">&nbsp;&nbsp;↳ GR / EX: Self-Incrimination (Testimonial vs. Body; Accused vs. Witness)</option>
+      <option value="#gr-ex-trial-rights">&nbsp;&nbsp;↳ GR / EX: Trial in Absentia, Confrontation, Subpoena &amp; Appeal</option>
+      <option value="#pillar-5-arraignment-pleas">5. Arraignment, Remedies, Bargaining &amp; Guilty Pleas (Rule 116)</option>
+      <option value="#gr-ex-arraignment">&nbsp;&nbsp;↳ GR / EX: Mandatory Arraignment, Flight Timing &amp; Multi-Count Waivers</option>
+      <option value="#pre-plea-table">&nbsp;&nbsp;↳ Pre-Arraignment Remedies Table &amp; Prohibited Motions</option>
+      <option value="#gr-ex-suspension">&nbsp;&nbsp;↳ GR / EX: 3 Grounds for Suspending Arraignment (Sec. 11)</option>
+      <option value="#gr-ex-not-guilty-jeopardy">&nbsp;&nbsp;↳ GR / EX: Court-Entered Not Guilty &amp; Double Jeopardy Record</option>
+      <option value="#gr-ex-bargaining">&nbsp;&nbsp;↳ GR / EX: Plea Bargaining (Lesser Included Offense &amp; Offended Party)</option>
+      <option value="#gr-ex-guilty-plea">&nbsp;&nbsp;↳ GR / EX: Capital vs. Non-Capital Guilty Pleas (3 Safeguards &amp; Sec. 5)</option>
+      <option value="#trap-busters">6. Exam Trap-Busters &amp; 30-Second Rapid Recall Drills</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">Rule 115 &amp; Rule 116 · Quick Reviewer &amp; Memory Aid</h1>
+  <p class="c-teal" style="font-weight: 700; margin-top: -0.75rem; letter-spacing: 0.04em;">GENERAL RULE VS. EXCEPTIONS • HIGH-YIELD NUMBERS, TESTS &amp; CASE TRIGGERS (OCT. 24 LECTURE)</p>
+
+  <!-- 4-PILLAR ROADMAP CARD -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">PROOF &amp; NOTICE</div>
+        <div class="ui-sub">Rule 115(a)–(b), Equipoise, <em>Corpus Delicti</em> &amp; Sec. 21</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">COUNSEL &amp; INQUEST</div>
+        <div class="ui-sub">Art. III §12, Lineups, Art. 125 (12/18/36h) &amp; Rule 112</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">TRIAL &amp; PRIVILEGE</div>
+        <div class="ui-sub">Continuous Trial, Speedy 4-Test, Self-Incrim &amp; Confrontation</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">ARRAIGNMENT &amp; PLEA</div>
+        <div class="ui-sub">Rule 116 Remedies, Sec. 11 Suspension, Bargaining &amp; Capital Pleas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTER EXAM SEQUENCE -->
+  <h3 id="master-sequence" class="c-navy">Master Chronological Anchor: Custody → Pre-Plea → Arraignment → Trial → Appeal</h3>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title"><strong>Stage 1: CUSTODY &amp; INQUEST</strong> — <span class="c-teal">Art. III §12 • Art. 125 RPC • Rule 112</span></div>
+      <div class="ui-sub">Miranda/counsel rights → 12/18/36h inquest delivery → Waiver in counsel's presence (15d PI) or 5d post-filing request</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Stage 2: PRE-ARRAIGNMENT REVIEW</strong> — <span class="c-teal">Rule 116 §§9–11 • Rule 117</span></div>
+      <div class="ui-sub">Bill of Particulars (vague) vs. Motion to Quash (legal defect) vs. Suspension (Mental / Prejudicial Q / DOJ–OP 60d)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Stage 3: ARRAIGNMENT &amp; PLEA</strong> — <span class="c-teal">Rule 116 §§1–5 • Continuous Trial</span></div>
+      <div class="ui-sub">10d (detained) / 30d (free) + Pre-trial same day → Personal plea → Plea bargain or Capital 3-Fold Safeguards</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title c-green"><strong>Stage 4: TRIAL, PROOF &amp; REVIEW</strong> — <span class="c-teal">Rule 115 • Art. III §§14, 17</span></div>
+      <div class="ui-sub">State proves Corpus Delicti + Identity beyond reasonable doubt (Equipoise acquits) → 90d/15d judgment → Appeal (<span class="c-burgundy"><em>Cuico</em></span> vs. <span class="c-burgundy"><em>Leviste</em></span>)</div>
+    </div>
+  </div>
+
+  <!-- MASTER INTERACTIVE MERMAID DIAGRAM -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">MASTER MEMORY MAP: GENERAL RULES VS. EXCEPTIONS ACROSS STAGES <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["CRIMINAL PROCESS TRIGGERED"] --> Stage1["1. CUSTODY / INQUEST<br/>Art. III §12 • Art. 125 RPC"]
+  Stage1 --> Ex1["EX: Lineups (visual) &amp; Spontaneous<br/>Admissions to Non-Police"]
+  Stage1 --> Stage2["2. PRE-ARRAIGNMENT<br/>Rule 116 §§9–11 • Rule 117"]
+  Stage2 --> Ex2["EX: 3 Suspension Grounds<br/>Mental / Prejudicial Q / DOJ–OP (60d)"]
+  Stage2 --> Stage3["3. ARRAIGNMENT &amp; PLEA<br/>10d Detained / 30d Free"]
+  Stage3 --> BranchPlea{"Plea Entered"}
+  BranchPlea -->|"Silent / Conditional / Self-Defense"| NG["Mandatory NOT GUILTY<br/>(Reverse trial if self-defense)"]
+  BranchPlea -->|"Lesser Included Offense"| PB["Plea Bargain: Prosecutor + Offended Party<br/>(EX: Prosecutor alone if offended party absent)"]
+  BranchPlea -->|"Capital Guilty Plea"| Cap["3 MANDATORY SAFEGUARDS:<br/>1. Searching Inquiry<br/>2. Mandatory Proof (Pagal)<br/>3. Defense Evidence Allowed"]
+  BranchPlea -->|"Valid Plea + Trial"| Stage4["4. TRIAL &amp; PROOF<br/>Corpus Delicti + Identity"]
+  Stage4 --> Ex4["EX: Trial in Absentia (Valid Arraign + Notice + Unjustified)<br/>Sec. 21 Saving Clause (Justified + Preserved)<br/>Equipoise → Acquittal"]
+  Stage4 --> Stage5["5. RTC CONVICTION &amp; APPEAL<br/>90d Ordinary / 15d Drug"]
+  Stage5 --> Ex5["Merits: Presumption subsists (Cuico)<br/>Bail: No longer as of right (Leviste)"]
+
+  classDef primary fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
+  classDef statutory fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold;
+  classDef rule fill:#166534,stroke:#166534,color:#FFFFFF,font-weight:bold;
+  classDef warning fill:#C2410C,stroke:#C2410C,color:#FFFFFF,font-weight:bold;
+  class Start,Stage3,Stage4 primary;
+  class Stage1,Stage2,Stage5 statutory;
+  class NG,PB,Cap rule;
+  class Ex1,Ex2,Ex4,Ex5 warning;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 1 ==================== -->
+  <h3 id="pillar-1-rule115">1. Rule 115 Sequence, Waiver &amp; Presumption of Innocence</h3>
+
+  <div id="sec1-mnemonic">
+    <p><strong>Mnemonic for Rule 115, Section 1(a)–(i):</strong> <strong>P–I–P • T–S • C–C • S–A</strong> <span class="c-rust">(<strong><u>Trap Fix:</u></strong> Self-incrimination is <strong>1(e)</strong>; Confrontation is <strong>1(f)</strong>!)</span></p>
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 10%;">Sec.</th>
+          <th style="width: 32%;">Guarantee</th>
+          <th style="width: 58%;">1-Line Recall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1(a)</strong></td><td>Presumption of Innocence</td><td>State proves guilt beyond reasonable doubt (<span class="c-green"><strong><u>moral certainty</u></strong></span>).</td></tr>
+        <tr><td><strong>1(b)</strong></td><td>Informed of Accusation</td><td>Must know factual charge &amp; cause in ordinary language.</td></tr>
+        <tr><td><strong>1(c)</strong></td><td>Presence &amp; Counsel</td><td>Defend in person and by counsel at relevant stages.</td></tr>
+        <tr><td><strong>1(d)</strong></td><td>Testify in Own Behalf</td><td>Optional; testifying exposes accused to cross-exam on direct.</td></tr>
+        <tr><td><strong>1(e)</strong></td><td><strong>Self-Incrimination</strong></td><td>Cannot be compelled to testify against self (<span class="c-burgundy"><em>nemo tenetur</em></span>).</td></tr>
+        <tr><td><strong>1(f)</strong></td><td><strong>Confrontation</strong></td><td>Test adverse witnesses face-to-face via cross-examination.</td></tr>
+        <tr><td><strong>1(g)</strong></td><td>Compulsory Process</td><td>Subpoena <em>ad testificandum</em> &amp; <em>duces tecum</em> for defense proof.</td></tr>
+        <tr><td><strong>1(h)</strong></td><td>Speedy, Impartial, Public</td><td>Protects against vexatious, capricious, or oppressive delay.</td></tr>
+        <tr><td><strong>1(i)</strong></td><td>Appeal</td><td><span class="c-rust"><strong><u>Statutory right</u></strong></span> (not constitutional); strict procedural compliance.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-waiver">
+    <div class="gr-ex-title"><span>Waiver by Silence &amp; Presumption of Innocence</span><span class="c-teal">Rule 115 §1(a) • Art. III §14(2)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Rule 115 rights are <strong>personal</strong> and must be asserted promptly on the record; remaining silent during repeated postponements weakens a speedy-trial objection. Under §1(a), the <span class="c-green"><strong><u>prosecution bears the burden of proof</u></strong></span> (offense elements + identity) beyond reasonable doubt; a weak defense cannot cure weak prosecution evidence.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Silence ≠ Automatic Waiver:</strong> Failure to object earlier does not create a rigid permanent waiver; courts still apply the <strong>4-factor balancing test</strong> (length, reason, assertion, prejudice).</li>
+        <li><strong>Alibi Shifts Burden of Production Only:</strong> Denial and alibi are weak unless corroborated to show <span class="c-green"><strong><u>physical impossibility</u></strong></span> of presence; credible alibi shifts only the practical duty of rebuttal to the State.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-equipoise-bail">
+    <div class="gr-ex-title"><span>Equipoise Doctrine &amp; Effect of RTC Conviction Pending Appeal</span><span class="c-burgundy">Cuico v. People • Leviste v. CA</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Equipoise Rule:</strong> When inculpatory and exculpatory evidence are <span class="c-green"><strong><u>evenly balanced</u></strong></span> (or support two reasonable explanations), the balance tilts to <strong>acquittal</strong> (quality &amp; reliability govern, not witness count).<br>
+      <strong>2. Merits Pending Appeal:</strong> Presumption of innocence <span class="c-green"><strong><u>continues until finality</u></strong></span>; appellate court independently reviews proof beyond reasonable doubt (<a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67047" target="_blank"><span class="c-burgundy"><em>Cuico v. People</em></span></a>).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <strong>Bail Pending Appeal:</strong> RTC conviction <span class="c-rust"><strong><u>ends bail as a matter of right</u></strong></span>; post-conviction bail becomes <strong>discretionary</strong> subject to <span class="c-teal">Rule 114, §5</span> bail-negating circumstances (<a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/53777" target="_blank"><span class="c-burgundy"><em>Leviste v. CA</em></span></a>).
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 2 ==================== -->
+  <h3 id="pillar-2-id-corpus">2. Positive Identification, <em>Corpus Delicti</em> &amp; Notice of the Charge</h3>
+
+  <div class="gr-ex-box" id="gr-ex-identity">
+    <div class="gr-ex-title"><span>Two-Fold Burden: Corpus Delicti vs. Perpetrator Identity</span><span class="c-teal">Rule 118 §2 • Trial in Absentia</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> State must prove <strong>both</strong>: (1) <strong><em>Corpus delicti</em></strong> (crime actually occurred—not necessarily a corpse) and (2) <strong>perpetrator identity</strong>. At pre-trial, admitting the accused is "the person named and arraigned" admits <strong>procedural identity only</strong>, not guilt; factual stipulations require writing and signatures of accused + counsel (<span class="c-teal">Rule 118 §2</span>).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <strong>Absence of In-Court Pointing:</strong> If accused jumps bail after valid arraignment and trial proceeds <em>in absentia</em>, lack of physical pointing does <span class="c-rust"><strong><u>not</u></strong></span> automatically acquit; identity may be proved via photographs, prior identification, and testimony.
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="totality-factors">
+    <div class="gr-ex-title"><span>Out-of-Court ID (O–A–A–C–E–S) &amp; Drug Chain of Custody</span><span class="c-teal">Cariño v. People • R.A. 9165 §21 / 10640</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Out-of-Court ID (Show-up, Mug Shots, Line-up):</strong> Evaluated via <span class="c-green"><strong><u>Totality of Circumstances Test</u></strong></span> (<a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/69650" target="_blank"><span class="c-burgundy"><em>Cariño v. People</em></span></a>): <strong>(1) O</strong>pportunity to view, <strong>(2) A</strong>ttention, <strong>(3) A</strong>ccuracy of prior description, <strong>(4) C</strong>ertainty (not conclusive alone), <strong>(5) E</strong>lapsed time, <strong>(6) S</strong>uggestiveness.<br>
+      <strong>2. Dangerous Drugs Chain (Sec. 21):</strong> Must establish all 4 custodial links (marking, inventory/photo, turnover, court exhibit). Amended law requires <strong>2 insulating witnesses</strong>: <span class="c-green"><strong><u>elected public official + NPS or media rep</u></strong></span> (with accused/rep). Exhibit must make physical sense (no "evaporated <em>shabu</em>").
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / SAVING CLAUSE</span>
+      Noncompliance with Sec. 21 is excused <strong>only if</strong> the State proves <strong>both</strong>: (1) <span class="c-green"><strong><u>justifiable grounds</u></strong></span> for noncompliance (bare "witnesses unavailable" fails) <strong>AND</strong> (2) <span class="c-green"><strong><u>integrity and evidentiary value</u></strong></span> of the seized items were properly preserved.
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-notice">
+    <div class="gr-ex-title"><span>Notice of the Charge &amp; Public Trial</span><span class="c-teal">Rule 115 §1(b), (h) • Rule 110 §§8–11</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Information must allege facts in <strong>ordinary, concise language</strong> (legal labels alone are insufficient) and be read/explained at arraignment in a <span class="c-green"><strong><u>language or dialect known to the accused</u></strong></span> (plus disability interpreter if needed). Trials are <strong>public</strong> by default.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <strong>Family Courts (Minor Victims):</strong> Confidentiality and identity protection apply to shield minors; however, <span class="c-rust"><strong><u>not every Family Court hearing is automatically closed</u></strong></span> without a court-specific legal basis.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 3 ==================== -->
+  <h3 id="pillar-3-counsel-inquest">3. Competent &amp; Independent Counsel + Inquest Timelines</h3>
+
+  <div class="gr-ex-box" id="gr-ex-counsel">
+    <div class="gr-ex-title"><span>Right to Counsel: Custody vs. Trial</span><span class="c-teal">Art. III §12 • Rule 115 §1(c)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Under <span class="c-teal">Art. III §12</span>, a suspect under <strong>custodial investigation</strong> has the right to remain silent and to <span class="c-green"><strong><u>competent and independent counsel</u></strong></span>, preferably of own choice (active protection, not a phone-scrolling bystander). Uncounseled custodial confessions are inadmissible. At trial, counsel has an active duty to defend (refusing to defend warrants suspension).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / WHEN ART. III §12 COUNSEL IS NOT REQUIRED</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Standard Police Lineup:</strong> Visual identification ordinarily needs no counsel—<em>unless</em> police elicit incriminating answers (disguised interrogation).</li>
+        <li><strong>Spontaneous Barangay Admissions:</strong> Unsolicited admissions to a barangay chair <em>not</em> acting as law-enforcement interrogator fall outside custodial interrogation (still tested for voluntariness, capacity, and agency).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-inquest">
+    <div class="gr-ex-title"><span>Warrantless Arrest, Article 125 RPC &amp; Preliminary Investigation</span><span class="c-teal">Art. 125 RPC • Rule 112 • In re Senin</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Persons arrested without warrant must be delivered to judicial authorities (via inquest filing) within <span class="c-green"><strong><u>12 hours</u></strong></span> (light), <span class="c-green"><strong><u>18 hours</u></strong></span> (correctional), or <span class="c-green"><strong><u>36 hours</u></strong></span> (afflictive/capital)—weekend/holiday duty applies.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / WAIVER &amp; POST-INQUEST REMEDIES</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Pre-Filing Waiver:</strong> Arrestee may request regular PI by signing an <span class="c-green"><strong><u>Art. 125 waiver in counsel's presence</u></strong></span>; PI must finish within <strong>15 days</strong> from inception (cannot detain indefinitely — <a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/63321" target="_blank"><span class="c-burgundy"><em>In re Senin</em></span></a>), and bail may still be sought.</li>
+        <li><strong>Post-Filing PI Request:</strong> If Information was filed after inquest without PI, accused may request PI within <strong>5 days</strong> of learning of the filing.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 4 ==================== -->
+  <h3 id="pillar-4-speedy-privilege">4. Speedy Trial, Self-Incrimination &amp; Trial Rights</h3>
+
+  <!-- CONTINUOUS TRIAL NUMBERS CARD -->
+  <div class="ui-box" id="continuous-trial-numbers">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">10d</div>
+        <div class="ui-kicker">DETAINED ARRAIGN</div>
+        <div class="ui-sub">Calendar days (with pre-trial)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">30d</div>
+        <div class="ui-kicker">FREE ARRAIGN</div>
+        <div class="ui-sub">From jurisdiction over person</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">90d</div>
+        <div class="ui-kicker">ORDINARY DECISION</div>
+        <div class="ui-sub">From case submission</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">15d</div>
+        <div class="ui-kicker">DRUG JUDGMENT</div>
+        <div class="ui-sub">R.A. 9165 special rule</div>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top: -0.75rem; font-size: 0.9rem; color: #475569;"><em>Note:</em> Check the <a class="ext-link" href="https://sc.judiciary.gov.ph/sc-issues-rules-on-expedited-procedures-in-the-first-level-courts/" target="_blank"><strong>2022 Rules on Expedited Procedures</strong></a> for first-level summary cases instead of assuming a universal 30-day rule. (<a class="ext-link" href="https://sb.judiciary.gov.ph/wp-content/uploads/2024/04/15-06-10-SC.pdf" target="_blank">A.M. No. 15-06-10-SC</a>)</p>
+
+  <div class="gr-ex-box" id="gr-ex-speedy">
+    <div class="gr-ex-title"><span>Postponements &amp; Speedy Trial Dismissal</span><span class="c-teal">Art. III §§14(2), 16 • Rule 115 §1(h)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Motions for postponement are <span class="c-rust"><strong><u>prohibited</u></strong></span> under Continuous Trial Guidelines (judge's illness, extra dockets, absent staff, or late transcripts do not excuse overdue decisions; court must request extension). Speedy trial formula: <strong>Delay + Reason + Assertion + Prejudice</strong> (must be <strong>vexatious, capricious, or oppressive</strong>).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / EFFECT OF DISMISSAL</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Permitted Postponements:</strong> Allowed <strong>only</strong> for (1) <strong>Acts of God</strong>, (2) <strong><em>Force Majeure</em></strong>, or (3) <strong>Physical inability of witness</strong> to appear and testify (subject to postponement fees).</li>
+        <li><strong>Dismissal as Acquittal:</strong> Dismissal for speedy-trial violation bars reprosecution (double jeopardy) <strong>only if</strong> delay is State-chargeable, unjustified, and <strong>first jeopardy had attached</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-self-incrim">
+    <div class="gr-ex-title"><span>Privilege Against Self-Incrimination</span><span class="c-teal">Art. III §17 • Rule 115 §1(d)–(e) • Beltran / Olvis</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> <strong><em>Nemo tenetur seipsum accusare:</em></strong> Protects <strong>natural persons</strong> against <span class="c-green"><strong><u>compelled testimonial or communicative self-incrimination</u></strong></span> (e.g., answering "Did you do it?", confession re-enactment, compelled handwriting specimen under <span class="c-burgundy"><em>Beltran v. Samson</em></span>, or uncounseled arrest signatures on evidence envelopes per <a class="ext-link" href="https://lawphil.net/judjuris/juri1999/jan1999/gr_109242_1999.html" target="_blank"><span class="c-burgundy"><em>People v. Olvis</em></span></a>). Accused cannot be forced to take the stand; ordinary witness must appear and claim privilege per specific question.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / NON-TESTIMONIAL &amp; WAIVER</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Physical / Mechanical Acts:</strong> Authorized blood/DNA samples or trying on clothes/shoes are <strong>not testimonial</strong> (other privacy/search rules apply).</li>
+        <li><strong>Corporate Records:</strong> Privilege does not allow corporations to withhold business records.</li>
+        <li><strong>Voluntary Testimony (§1[d]):</strong> Accused who testifies is subject to cross-examination <strong>on matters covered by direct</strong>.</li>
+        <li><strong>Statutory Immunity:</strong> <em>Transactional</em> (bars prosecution for transaction) vs. <em>Use &amp; derivative-use</em> (bars using testimony/fruits; independent proof allowed).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-trial-rights">
+    <div class="gr-ex-title"><span>Trial Presence, Confrontation, Compulsory Process &amp; Appeal</span><span class="c-teal">Art. III §14(2) • Rule 115 §1(f), (g), (i)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Presence:</strong> Accused has the right to be present at trial.<br>
+      <strong>2. Confrontation (§1[f]):</strong> Adverse witnesses must be cross-examined; mere death of an affiant does <span class="c-rust"><strong><u>not</u></strong></span> admit their affidavit.<br>
+      <strong>3. Compulsory Process (§1[g]) &amp; Appeal (§1[i]):</strong> Defense may seek <em>subpoena ad testificandum</em> / <em>duces tecum</em> (no fishing expeditions). Appeal is purely <strong>statutory</strong>.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Trial <em>in absentia</em>:</strong> Allowed if (1) <strong>valid arraignment</strong>, (2) <strong>due notice</strong>, and (3) <strong>unjustified absence</strong>. Waives personal attendance <em>only</em> (right to counsel &amp; State burden remain).</li>
+        <li><strong>Former Testimony:</strong> Admissible if witness is dead/unavailable from another proceeding with <strong>same parties &amp; subject matter</strong> where adverse party had opportunity to cross-examine.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 5 ==================== -->
+  <h3 id="pillar-5-arraignment-pleas">5. Arraignment, Remedies, Plea Bargaining &amp; Guilty Pleas (<span class="c-teal">Rule 116</span>)</h3>
+
+  <div class="gr-ex-box" id="gr-ex-arraignment">
+    <div class="gr-ex-title"><span>Mandatory Arraignment, Personal Plea &amp; Counsel Duty</span><span class="c-teal">Rule 116 §§1(a)–(b), 6–8</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Arraignment cannot be skipped: court furnishes copy, reads/explains in <strong>known language/dialect</strong>, and asks for plea. <span class="c-green"><strong><u>Accused must personally plead</u></strong></span> (counsel cannot enter plea; courtroom or authorized videoconference). If accused disappears <strong>before</strong> arraignment, trial <em>in absentia</em> cannot start (case archived; warrant/bail forfeiture safeguards). Court must inform of right to counsel and appoint <em>counsel de oficio</em> with reasonable time to confer.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Multi-Count Waiver (e.g., B.P. 22):</strong> Reading of Informations may be waived under Continuous Trial Guidelines if accused understands consequences, expressly consents with counsel, and waiver is documented after judicial exam (counsel alone cannot waive).</li>
+        <li><strong>Private Counsel Appearing:</strong> Repeated judicial inquiries on obtaining counsel are unnecessary if <em>counsel de parte</em> already formally appears.</li>
+        <li><strong>Flight After Arraignment:</strong> If accused absconds <strong>after</strong> valid arraignment + notice, trial <em>in absentia</em> proceeds.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="pre-plea-table">
+    <h4 class="c-navy">Pre-Arraignment Remedies (File BEFORE Plea to Avoid Waiver!)</h4>
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 34%;">Defect / Issue</th>
+          <th style="width: 30%;">Correct Pre-Plea Remedy</th>
+          <th style="width: 36%;">Key Rule / Trap</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Vague allegations (offense stated)</td><td><strong>Bill of Particulars</strong> (<span class="c-teal">Rule 116 §9</span>)</td><td>Seeks details needed to plead &amp; defend.</td></tr>
+        <tr><td>Legal defect / facts ≠ offense</td><td><strong>Motion to Quash</strong> (<span class="c-teal">Rule 117</span>)</td><td>Tests Rule 117 ground before plea.</td></tr>
+        <tr><td>Inquest filing without PI</td><td><strong>Request for PI</strong> (<span class="c-teal">Rule 112</span>)</td><td>Within <strong>5 days</strong> of learning of filing.</td></tr>
+        <tr><td>State holds material defense proof</td><td><strong>Production / Inspection</strong> (<span class="c-teal">Rule 116 §10</span>)</td><td>Court-authorized access to qualifying items.</td></tr>
+        <tr><td><span class="c-rust"><strong>Prohibited Dilatory Motions</strong></span></td><td><span class="c-rust">Judicial redetermination of probable cause</span></td><td>Banned by Continuous Trial (except genuine jurisdictional/constitutional abuse).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-suspension">
+    <div class="gr-ex-title"><span>Suspension of Arraignment (3 Exclusive Grounds)</span><span class="c-teal">Rule 116 §11</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> Arraignment proceeds strictly within the Continuous Trial schedule (10 days detained / 30 days non-detained).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTIONS — 3 EXCLUSIVE GROUNDS FOR SUSPENSION</span>
+      <ol style="margin: 0.4rem 0 0 0; padding-left: 1.35rem;">
+        <li><strong>Unsound mental condition</strong> preventing understanding/intelligent plea (court orders mental exam/confinement).</li>
+        <li><strong>Prejudicial question</strong> (previously instituted civil action determinative of criminal case — <span class="c-teal">Rule 111 §§6–7</span>).</li>
+        <li><strong>Pending Petition for Review</strong> with <span class="c-green"><strong><u>DOJ or Office of the President</u></strong></span> (<span class="c-rust"><strong>Trap Fix:</strong></span> <em>not</em> Regional State Prosecutor!) → capped at <strong>60 days</strong> from filing with reviewing office.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-not-guilty-jeopardy">
+    <div class="gr-ex-title"><span>Court-Entered "Not Guilty" &amp; Double Jeopardy Attachment</span><span class="c-teal">Rule 116 §1(b)–(d) • Rule 119 §11(e)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> An accused's plea determines the case route. First jeopardy requires valid Information + competent court + <strong>valid arraignment &amp; plea</strong> + termination without consent.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / MANDATORY NOT-GUILTY TRIGGERS</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>3 Triggers Where Court Enters "Not Guilty":</strong> (1) Refuses to plead / silent (§1[c]); (2) Conditional plea ("only if probation"); (3) Exculpatory plea ("guilty, but self-defense" — §1[d] withdraws guilty plea &amp; may trigger <strong>reverse/modified order of trial</strong> under <span class="c-teal">Rule 119 §11[e]</span>).</li>
+        <li><strong>Recording Defect ≠ Void (§1[b]):</strong> Failure to enter arraignment/plea <em>of record</em> does not affect validity of proceedings.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-bargaining">
+    <div class="gr-ex-title"><span>Plea Bargaining to a Lesser Offense</span><span class="c-teal">Rule 116 §§1(f), 2 • Sayre v. Xenos</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span> At arraignment (or after arraignment <strong>before trial</strong> upon withdrawing prior not-guilty plea), accused may plead guilty to a <span class="c-green"><strong><u>lesser offense necessarily included</u></strong></span> in the charge (e.g., Murder → Homicide; Robbery → Theft; NOT Homicide → Physical Injuries or Rape → Unjust Vexation) with consent of <strong>trial prosecutor + offended party</strong> AND <strong>court discretion</strong> (<a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/66133" target="_blank"><span class="c-burgundy"><em>Sayre v. Xenos</em></span></a>). No amended Information needed; distinct from <span class="c-teal">Art. 13(7) RPC</span> mitigating plea.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      <strong>Absent Offended Party (§1[f]):</strong> If private offended party fails to appear <strong>despite due notice</strong>, court may allow plea to necessarily included lesser offense with <strong>trial prosecutor's conformity alone</strong> (court approval still discretionary).
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-guilty-plea">
+    <div class="gr-ex-title"><span>Guilty Plea: Non-Capital vs. Capital Offenses &amp; Improvident Pleas</span><span class="c-teal">Rule 116 §§3–5 • People v. Pagal</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE (NON-CAPITAL — SEC. 4)</span> On a plea of guilty to a <strong>non-capital offense</strong>, reception of evidence to determine the penalty is <span class="c-green"><strong><u>discretionary</u></strong></span> upon the court (court must still confirm validity and civil liability).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / MANDATORY SAFEGUARDS (CAPITAL — SEC. 3 &amp; IMPROVIDENT — SEC. 5)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Capital Offense (Sec. 3 — 3 Mandatory Duties):</strong> Even with <span class="c-teal">R.A. 9346</span> abolishing death penalty (substituting <em>reclusion perpetua</em>/life), the court MUST: (1) conduct a <strong>searching inquiry</strong> (personal, substantive, role-specific); (2) require <strong>prosecution evidence</strong> proving guilt &amp; precise culpability (<a class="ext-link" href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/66584" target="_blank"><span class="c-burgundy"><em>People v. Pagal</em></span></a> — State failure = <strong>acquittal</strong>); and (3) ask if accused wants to present evidence.</li>
+        <li><strong>Improvident Plea (Sec. 5):</strong> Guilty plea entered without informed, voluntary understanding may be withdrawn and replaced by <em>not guilty</em> <strong>before judgment becomes final</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 6 ==================== -->
+  <h3 id="trap-busters">6. Exam Trap-Busters &amp; 30-Second Rapid Recall Drills</h3>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 1</span>
+        <div class="ui-title">Sec. 1(e) vs. 1(f)</div>
+        <div class="ui-sub">1(e) = Self-Incrimination<br>1(f) = Confrontation</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 2</span>
+        <div class="ui-title">Sec. 11(c) Review</div>
+        <div class="ui-sub">DOJ or <strong>Office of the President</strong><br>(NOT Regional State Prosecutor)</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 3</span>
+        <div class="ui-title">Summary Deadlines</div>
+        <div class="ui-sub">Check <strong>2022 Expedited Rules</strong><br>(Not blanket 30-day rule)</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 4</span>
+        <div class="ui-title">Plea Timing</div>
+        <div class="ui-sub">Rule 116 §2 text: At arraignment or before trial</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout-box" id="rapid-recall-challenge">
+    <p><strong>30-Second Rapid Recall Drills:</strong></p>
+    <ol style="margin-bottom: 0.75rem;">
+      <li>Pedro is convicted of Homicide by the RTC and appeals. Does he still enjoy the presumption of innocence? Can he claim bail as a matter of right?</li>
+      <li>Charged with Murder, Juan pleads "Guilty, because I acted in self-defense." Should the judge immediately conduct a Searching Inquiry under Sec. 3?</li>
+      <li>Charged with Murder, Maria enters an unequivocal guilty plea, and the prosecutor presents zero evidence assuming the plea suffices. What is the verdict?</li>
+      <li>During a drug buy-bust inventory, only an elected barangay official was present; the prosecutor says "media and NPS were unavailable" with no proof of effort. Does the saving clause apply?</li>
+    </ol>
+    <p style="margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px dashed #CBD5E1;">
+      <strong>Answers:</strong><br>
+      <strong>1.</strong> Yes on merits review (<span class="c-burgundy"><em>Cuico</em></span> — continues until finality); No on bail as of right (<span class="c-burgundy"><em>Leviste</em></span> — becomes discretionary under Rule 114 §5).<br>
+      <strong>2.</strong> No. Self-defense is an exculpatory claim; court must withdraw the plea, enter <strong>Not Guilty</strong> (Sec. 1[d]), and may apply modified/reverse order of trial (Rule 119 §11[e]).<br>
+      <strong>3.</strong> <strong>Acquittal</strong> (<span class="c-burgundy"><em>People v. Pagal</em></span> — Sec. 3 requires mandatory prosecution proof of guilt &amp; degree of culpability despite a guilty plea).<br>
+      <strong>4.</strong> No. Saving clause requires <strong>both</strong> justifiable grounds (bare "unavailable" fails) and preserved integrity/evidentiary value.
+    </p>
+  </div>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
