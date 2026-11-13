@@ -4,11 +4,15 @@ import markdown
 import os
 
 INPUT_MD_PATH = r"H:\My Drive\JD 2 - Crim Pro - Cases + Ext - Finals (Combined).md"
+SUPP_MD_PATH = r"c:\Users\IP Gaming 3\Desktop\HTML-izer\Case Digests Aesthetify\supplemental_quiz_cases.md"
 OUTPUT_HTML_PATH = r"c:\Users\IP Gaming 3\Desktop\HTML-izer\Crim-Pro-Finals-Cases-06-07-08-Consolidated.html"
 
 def read_source():
     with open(INPUT_MD_PATH, "r", encoding="utf-8") as f:
-        return f.read()
+        base = f.read()
+    with open(SUPP_MD_PATH, "r", encoding="utf-8") as f:
+        supp = f.read()
+    return base.rstrip() + "\n\n" + supp.lstrip()
 
 def highlight_legal_terms(text):
     statute_patterns = [
@@ -66,14 +70,14 @@ def enhance_out1_headings(t):
         'Brief Answers',
     ]
     for h in headers:
-        t = re.sub(rf'(?m)^(\*?\s*{re.escape(h)}:?\s*)$', rf'\n\n##### {h}\n\n', t)
-        t = re.sub(rf'(?m)^(\*?\s*{re.escape(h)}:\s*)([^\n]+)', rf'\n\n##### {h}\n\n\2', t)
+        t = re.sub(rf'(?m)^(\*?\s*(?:\*\*)?{re.escape(h)}:?(?:\*\*)?\s*)$', rf'\n\n##### {h}\n\n', t)
+        t = re.sub(rf'(?m)^(\*?\s*(?:\*\*)?{re.escape(h)}:(?:\*\*)?\s*)([^\n]+)', rf'\n\n##### {h}\n\n\2', t)
 
     sub_headers = [
-        r'1\.\s+Statutory\s*/\s*Rule\s+Breakdown',
-        r'2\.\s+Substantive\s*/\s*Procedural\s+Requirements',
-        r'3\.\s+Judicial\s+Doctrines\s+Applied',
-        r'4\.\s+Legal\s+Consequence\s*/\s*Relief(?:\s*/\s*Damages)?',
+        r'1\.\s+(?:\*\*)?Statutory\s*/\s*Rule\s+Breakdown',
+        r'2\.\s+(?:\*\*)?Substantive\s*/\s*Procedural\s+Requirements',
+        r'3\.\s+(?:\*\*)?Judicial\s+Doctrines\s+Applied',
+        r'4\.\s+(?:\*\*)?Legal\s+Consequence\s*/\s*Relief(?:\s*/\s*Damages)?',
         r'On\s+Custody\s+of\s+the\s+Law\s+and\s+Jurisdiction\s+over\s+the\s+Person',
         r"On\s+Judge\s+Anghad's\s+Grave\s+Abuse\s+of\s+Discretion",
         r'On\s+Double\s+Jeopardy\s+and\s+Venue\s+Transfer',
@@ -91,24 +95,27 @@ def enhance_out1_headings(t):
         r'On\s+Issue\s+2:\s*Nullity\s+of\s+Summary\s+Pre-Trial\s+Acquittal',
     ]
     for sh in sub_headers:
-        t = re.sub(rf'(?m)^(\*?\s*{sh}:?\s*)$', rf'\n\n###### \1\n\n', t)
-        t = re.sub(rf'(?m)^(\*?\s*{sh}:\s*)([^\n]+)', rf'\n\n###### \1\n\n\2', t)
+        t = re.sub(rf'(?m)^\s*(\*?\s*{sh}(?:\*\*)?:?(?:\*\*)?\s*)$', lambda m: f"\n\n###### {m.group(1).lstrip('* ').replace('**', '').strip().rstrip(':').strip()}\n\n", t)
+        t = re.sub(rf'(?m)^\s*(\*?\s*{sh}(?:\*\*)?:(?:\*\*)?\s*)([^\n]+)', lambda m: f"\n\n###### {m.group(1).lstrip('* ').replace('**', '').strip().rstrip(':').strip()}\n\n{m.group(2)}", t)
 
     return t
 
 def enhance_out2_sections(t):
     # Recitation Doctrine / Bar Takeaway
-    doc_m = re.search(r'(\*\s*Recitation Doctrine / Bar Takeaway:\s*)(.*)', t, re.DOTALL | re.IGNORECASE)
+    doc_m = re.search(r'(\*\s*(?:\*\*)?Recitation Doctrine / Bar Takeaway:(?:\*\*)?\s*)(.*)', t, re.DOTALL | re.IGNORECASE)
     if doc_m:
-        lead = doc_m.group(1)
         doc_body = doc_m.group(2).strip()
+        if doc_body.startswith('*') and doc_body.endswith('*') and not doc_body.startswith('**'):
+            doc_body = f"<em>{doc_body[1:-1]}</em>"
         doc_boxed = f'\n\n<div class="doctrine-card"><div class="doctrine-header">🎯 RECITATION DOCTRINE & BAR TAKEAWAY</div><div class="doctrine-body">{doc_body}</div></div>\n\n'
         t = t[:doc_m.start()] + doc_boxed
 
     # Core Recitation Issue
-    issue_m = re.search(r'(\*\s*Core Recitation Issue:\s*)([^\n]+(?:\n(?!\*)[^\n]+)*)', t, re.IGNORECASE)
+    issue_m = re.search(r'(\*\s*(?:\*\*)?Core Recitation Issue:(?:\*\*)?\s*)([^\n]+(?:\n(?!\*)[^\n]+)*)', t, re.IGNORECASE)
     if issue_m:
         issue_body = issue_m.group(2).strip().strip('"')
+        if issue_body.startswith('*') and issue_body.endswith('*') and not issue_body.startswith('**'):
+            issue_body = issue_body[1:-1].strip()
         issue_boxed = f'\n\n<div class="recit-issue-box"><span class="recit-issue-label">📌 CORE RECITATION ISSUE</span><div class="recit-issue-text">"{issue_body}"</div></div>\n\n'
         t = t[:issue_m.start()] + issue_boxed + t[issue_m.end():]
 
@@ -146,12 +153,15 @@ cases_meta = [
     ('case-08-8-ivler-v-modesto-san-pedro', '08.8. Ivler v. Modesto-San Pedro', 'Jason Ivler y Aguilar v. Judge Maria Rowena Modesto-San Pedro', 'November 17, 2010', 'G.R. No. 172716', 'Carpio, J.', 'Quasi-Offenses (Art. 365) & Prohibition Against Splitting Charges', 'Rule 117, Sec. 3(i) & 7', '08'),
     ('case-08-9-nierras-v-dacucuy', '08.9. Nierras v. Dacuycuy', 'Peter Nierras v. Judge Auxencio C. Dacuycuy & City Fiscal Lopez', 'January 11, 1990', 'G.R. Nos. 59568-76', 'Paras, J. (En Banc)', 'Same Act vs. Same Offense (Batas Pambansa Blg. 22 vs. Estafa)', 'Rule 117, Sec. 3(i)', '08'),
     ('case-08-10-people-v-lacson', '08.10. People v. Lacson', 'People of the Philippines, SOJ, PNP, et al. v. Panfilo M. Lacson', 'April 1, 2003', 'G.R. No. 149453', 'Callejo, Sr., J. (En Banc)', 'Provisional Dismissal Requisites & Prospective Two-Year Bar', 'Rule 117, Sec. 8', '08'),
+    # Quiz Watchlist Express Cases (QW.1 - QW.2)
+    ('case-qw-1-yasa-v-chavez', 'QW.1. Yasa v. Chavez', 'Francisco O. Yasa v. Mary Jean Chavez and Beberly Hoyumpa Cuasito, and People of the Philippines', 'June 23, 2026', 'G.R. No. 273948', 'Singh, J. (Third Division)', 'OSG Exclusive Authority & Demurrer Acquittal Double Jeopardy', 'Rule 119, Sec. 23 & Rule 117', 'QW'),
+    ('case-qw-2-people-v-xxx271087', 'QW.2. People v. XXX271087', 'People of the Philippines v. XXX271087', 'July 14, 2026', 'G.R. No. 271087', 'Leonen, S.A.J. (Second Division)', 'Battered Woman Syndrome (BWS) Affirmative Defense & Expert Proof', 'R.A. No. 9262, Sec. 26 & Rule 116', 'QW'),
 ]
 
 def build_case_sections(raw_text):
-    cases_raw = re.split(r'(?m)^#\s+(?=0[678]\.\d+\.)', raw_text)[1:]
+    cases_raw = re.split(r'(?m)^#\s+(?=0[678]\.\d+\.|CASE\s+\d+:)', raw_text)[1:]
     
-    sections_by_module = {'06': [], '07': [], '08': []}
+    sections_by_module = {'06': [], '07': [], '08': [], 'QW': []}
     case_toc_items = []
     case_matrix_data = []
 
@@ -159,20 +169,20 @@ def build_case_sections(raw_text):
         slug, short_title, clean_name, date_str, gr_str, ponente_str, topic_tag, rule_str, mod_num = cases_meta[idx]
         case_toc_items.append((slug, f"{short_title} ({topic_tag})", mod_num))
 
-        # Split into Outputs
-        parts = re.split(r'\[OUTPUT \d+:[^\]]+\]', c_raw)
-        header_part = parts[0].strip()
-        out1_text = parts[1].strip()
-        out2_text = parts[2].strip()
+        # Split into Outputs (handle optional markdown headings like ### [OUTPUT ...])
+        parts = re.split(r'(?:^|\n)(?:#{1,6}\s*)?\[OUTPUT \d+:[^\]]+\]', c_raw)
+        header_part = re.sub(r'\n---\s*$', '', parts[0].strip()).strip()
+        out1_text = re.sub(r'\n---\s*$', '', parts[1].strip()).strip()
+        out2_text = re.sub(r'\n---\s*$', '', parts[2].strip()).strip()
         out3_text = parts[3].strip() if len(parts) > 3 else ""
 
         # Clean trailing separator or next headers from out3
         out3_text = re.sub(r'\n---.*', '', out3_text, flags=re.DOTALL).strip()
 
         # Parse Output 3 for sticky sidebar
-        parties_m = re.search(r'\*\s*Parties\s*(?:\(and their contentions\))?:?\s*(.*?)(?=\*\s*Core Recitation Issue:|\Z)', out3_text, re.DOTALL | re.IGNORECASE)
-        issue_m = re.search(r'\*\s*Core Recitation Issue:?\s*(.*?)(?=\*\s*Short Ruling & Ratio:|\Z)', out3_text, re.DOTALL | re.IGNORECASE)
-        ruling_m = re.search(r'\*\s*Short Ruling & Ratio:?\s*(.*?)\Z', out3_text, re.DOTALL | re.IGNORECASE)
+        parties_m = re.search(r'\*\s*(?:\*\*)?Parties\s*(?:\(and their contentions\))?:?(?:\*\*)?\s*(.*?)(?=\*\s*(?:\*\*)?Core Recitation Issue:|\Z)', out3_text, re.DOTALL | re.IGNORECASE)
+        issue_m = re.search(r'\*\s*(?:\*\*)?Core Recitation Issue:?(?:\*\*)?\s*(.*?)(?=\*\s*(?:\*\*)?Short Ruling & Ratio:|\Z)', out3_text, re.DOTALL | re.IGNORECASE)
+        ruling_m = re.search(r'\*\s*(?:\*\*)?Short Ruling & Ratio:?(?:\*\*)?\s*(.*?)\Z', out3_text, re.DOTALL | re.IGNORECASE)
 
         parties_raw = parties_m.group(1).strip() if parties_m else ""
         issue_raw = issue_m.group(1).strip() if issue_m else ""
@@ -183,11 +193,11 @@ def build_case_sections(raw_text):
         ruling_html = highlight_legal_terms(parse_markdown_snippet(ruling_raw))
 
         # Extract Quick Bar Doctrine for matrix
-        bar_doctrine_m = re.search(r'\*\s*Recitation Doctrine / Bar Takeaway:\s*([^\n]+(?:\n[^\*\n]+)*)', out2_text, re.IGNORECASE)
-        bar_doctrine = bar_doctrine_m.group(1).strip().strip('"') if bar_doctrine_m else ""
+        bar_doctrine_m = re.search(r'\*\s*(?:\*\*)?Recitation Doctrine / Bar Takeaway:(?:\*\*)?\s*([^\n]+(?:\n[^\*\n]+)*)', out2_text, re.IGNORECASE)
+        bar_doctrine = bar_doctrine_m.group(1).strip().strip('"').strip('*').strip() if bar_doctrine_m else ""
 
-        core_issue_m = re.search(r'\*\s*Core Recitation Issue:\s*([^\n]+(?:\n[^\*\n]+)*)', out2_text, re.IGNORECASE)
-        core_issue = core_issue_m.group(1).strip().strip('"') if core_issue_m else issue_raw.strip('"')
+        core_issue_m = re.search(r'\*\s*(?:\*\*)?Core Recitation Issue:(?:\*\*)?\s*([^\n]+(?:\n[^\*\n]+)*)', out2_text, re.IGNORECASE)
+        core_issue = core_issue_m.group(1).strip().strip('"').strip('*').strip() if core_issue_m else issue_raw.strip('"').strip('*').strip()
 
         case_matrix_data.append({
             "num": short_title.split('.')[0] + '.' + short_title.split('.')[1],
@@ -205,7 +215,7 @@ def build_case_sections(raw_text):
         out1_proc = out1_text
 
         # Detect Trigger Words block
-        tw_match = re.search(r'Trigger Words:\s*(.*?)(?=\n[A-Z][a-zA-Z\s]+:|\n\nFacts of the Case|\Z)', out1_proc, re.DOTALL)
+        tw_match = re.search(r'(?:\*\*)?Trigger Words:(?:\*\*)?\s*(.*?)(?=\n(?:\*\*)?[A-Z][a-zA-Z\s]+:(?:\*\*)?|\n\n(?:\*\*)?Facts of the Case|\Z)', out1_proc, re.DOTALL)
         tw_html = ""
         if tw_match:
             tw_content = tw_match.group(1).strip()
@@ -217,7 +227,8 @@ def build_case_sections(raw_text):
                 elif line.startswith('-'):
                     line = line.lstrip('-').strip()
                 if line:
-                    for sub in line.split(';'):
+                    sep = ',' if (mod_num == 'QW' and ';' not in line) else ';'
+                    for sub in line.split(sep):
                         sub = sub.strip()
                         if sub:
                             pills.append(f'<span class="trigger-pill">{html.escape(sub)}</span>')
@@ -226,10 +237,10 @@ def build_case_sections(raw_text):
             out1_proc = out1_proc[:tw_match.start()] + out1_proc[tw_match.end():]
 
         # Convert Dispositive portion into blockquote accurately
-        disp_match = re.search(r'(\*?\s*Dispositive Portion:?\s*)(.*?)(?=\n\*?\s*Legal Analysis|\n\*?\s*Brief Answers|\n\n###|\Z)', out1_proc, re.DOTALL | re.IGNORECASE)
+        disp_match = re.search(r'(\*?\s*(?:\*\*)?Dispositive Portion:?(?:\*\*)?\s*)(.*?)(?=\n\*?\s*(?:\*\*)?Legal Analysis|\n\*?\s*(?:\*\*)?Brief Answers|\n\n###|\Z)', out1_proc, re.DOTALL | re.IGNORECASE)
         if disp_match:
-            disp_body = disp_match.group(2).strip()
-            disp_quoted = f"\n\n##### Dispositive Portion\n\n<blockquote class=\"dispositive-quote\">\n\n{disp_body}\n\n</blockquote>\n\n"
+            disp_body = parse_markdown_snippet(disp_match.group(2).strip())
+            disp_quoted = f"\n\n##### Dispositive Portion\n\n<blockquote class=\"dispositive-quote\">{disp_body}</blockquote>\n\n"
             out1_proc = out1_proc[:disp_match.start()] + disp_quoted + out1_proc[disp_match.end():]
 
         out1_proc = enhance_out1_headings(out1_proc)
@@ -325,7 +336,7 @@ def build_full_html():
     toc_options_html.append('<option value="#real-world-illustrations">&nbsp;&nbsp;↳ Real-World / Public-Figure Cases Used as Illustrations</option>')
     toc_options_html.append('<option value="#executive-overview">▪ I. Executive Overview & Master Procedural Flowchart</option>')
     toc_options_html.append('<option value="#three-doctrinal-pillars">▪ II. Three Procedural Pillars of Criminal Procedure Finals</option>')
-    toc_options_html.append('<option value="#statutory-comparison-matrix">▪ III. Master Landmark Jurisprudence Matrix (26 Cases)</option>')
+    toc_options_html.append('<option value="#statutory-comparison-matrix">▪ III. Master Landmark Jurisprudence Matrix (28 Cases)</option>')
     
     # Module 06
     toc_options_html.append('<option value="#module-06-heading">▪ IV. Module 06: Rule 114 (Bail) Cases</option>')
@@ -345,10 +356,17 @@ def build_full_html():
         if mnum == '08':
             toc_options_html.append(f'<option value="#{slug}">&nbsp;&nbsp;↳ {html.escape(label)}</option>')
 
+    # Quiz Watchlist Express Cases
+    toc_options_html.append('<option value="#module-qw-heading">▪ VII. Quiz Watchlist Express Cases (QW.1 – QW.2)</option>')
+    for slug, label, mnum in toc_items:
+        if mnum == 'QW':
+            toc_options_html.append(f'<option value="#{slug}">&nbsp;&nbsp;↳ {html.escape(label)}</option>')
+
     # Build Matrix Table Rows
     matrix_rows = []
     for item in matrix_data:
-        mod_badge = f'<span class="mod-badge mod-badge-{item["module"]}">MOD {item["module"]}</span>'
+        badge_text = "QUIZ" if item["module"] == "QW" else f"MOD {item['module']}"
+        mod_badge = f'<span class="mod-badge mod-badge-{item["module"]}">{badge_text}</span>'
         matrix_rows.append(f"""
         <tr>
           <td>
@@ -369,6 +387,7 @@ def build_full_html():
     mod_06_cases_html = "\n".join(sections_by_mod['06'])
     mod_07_cases_html = "\n".join(sections_by_mod['07'])
     mod_08_cases_html = "\n".join(sections_by_mod['08'])
+    mod_qw_cases_html = "\n".join(sections_by_mod['QW'])
 
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -748,6 +767,7 @@ def build_full_html():
     .mod-badge-06 {{ background: #FEF3C7; color: #92400E; }}
     .mod-badge-07 {{ background: #E0E7FF; color: #3730A3; }}
     .mod-badge-08 {{ background: #FCE7F3; color: #9D174D; }}
+    .mod-badge-QW {{ background: #FFEDD5; color: #9A3412; }}
 
     /* DUAL-COLUMN CASE GRID & STICKY PANEL */
     .case-section {{
@@ -1173,7 +1193,7 @@ def build_full_html():
 
   <div class="document-container">
     <h1>Criminal Procedure Finals: Master Landmark Jurisprudence</h1>
-    <div class="doc-subtitle">Comprehensive Academic Digests, High-Yield Recitation Briefs & Strategic Snapshot Panels • Modules 06 (Rule 114: Bail), 07 (Rule 116: Arraignment & Plea), and 08 (Rule 117: Motion to Quash, Double Jeopardy & Provisional Dismissal) — Complete 26 Cases</div>
+    <div class="doc-subtitle">Comprehensive Academic Digests, High-Yield Recitation Briefs & Strategic Snapshot Panels • Modules 06 (Rule 114: Bail), 07 (Rule 116: Arraignment & Plea), 08 (Rule 117: Motion to Quash, Double Jeopardy & Provisional Dismissal), and Quiz Watchlist Express Cases — Complete 28 Cases</div>
 
     <!-- PROFESSOR QUIZ WATCHLIST & EXPRESSLY NAMED CASES -->
     <section class="quiz-watchlist-section" id="quiz-watchlist">
@@ -1221,7 +1241,7 @@ def build_full_html():
           </ul>
         </li>
         <li>
-          <span class="c-burgundy"><strong><em>Yasa v. Chavez</em></strong></span>
+          <span class="c-burgundy"><strong><em>Yasa v. Chavez</em></strong></span> <a href="#case-qw-1-yasa-v-chavez" class="watchlist-jump">Jump to Full Digest (QW.1) ↓</a>
           <ul>
             <li><strong>Topic:</strong> Who may appeal criminal vs. civil aspects.</li>
             <li><strong>Doctrine:</strong> <span class="c-green">Only the Office of the Solicitor General (OSG) can bring an appeal or represent the People on the criminal aspect before the Court of Appeals or Supreme Court. A private complainant lacks legal standing to appeal a criminal acquittal or dismissal via demurrer to evidence (only the civil aspect may be appealed).</span></li>
@@ -1267,7 +1287,7 @@ def build_full_html():
           </ul>
         </div>
         <div class="watchlist-mini-card">
-          <strong>Unnamed Recent Supreme Court Case on Battered Woman Syndrome</strong>
+          <strong>Unnamed Recent Supreme Court Case on Battered Woman Syndrome</strong> <a href="#case-qw-2-people-v-xxx271087" class="watchlist-jump">Jump to Full Digest: People v. XXX271087 (QW.2) ↓</a>
           <ul>
             <li>Wife was acquitted of killing her husband (discussed under <span class="c-teal"><strong>Rule 117, Sec. 3(h)</strong></span> on legal excuse/justification and absolutory causes).</li>
           </ul>
@@ -1304,7 +1324,7 @@ def build_full_html():
     <!-- SECTION I: EXECUTIVE OVERVIEW & PROCEDURAL FLOWCHART -->
     <h3 id="executive-overview">I. Executive Overview & Master Procedural Flowchart</h3>
     <p>
-      This master consolidated reviewer packages the twenty-six (26) landmark Supreme Court decisions governing the entire scope of the Criminal Procedure Finals syllabus: <span class="c-teal"><strong>Rule 114 (Bail)</strong></span>, <span class="c-teal"><strong>Rule 116 (Arraignment and Plea)</strong></span>, and <span class="c-teal"><strong>Rule 117 (Motion to Quash, Double Jeopardy & Provisional Dismissal)</strong></span> of the Revised Rules of Criminal Procedure.
+      This master consolidated reviewer packages the twenty-eight (28) landmark Supreme Court decisions governing the Criminal Procedure Finals syllabus: <span class="c-teal"><strong>Rule 114 (Bail)</strong></span>, <span class="c-teal"><strong>Rule 116 (Arraignment and Plea)</strong></span>, and <span class="c-teal"><strong>Rule 117 (Motion to Quash, Double Jeopardy & Provisional Dismissal)</strong></span> of the Revised Rules of Criminal Procedure, together with the expressly named Quiz Watchlist cases (<span class="c-teal"><strong>Rule 119, Sec. 23 Demurrer & R.A. 9262, Sec. 26 BWS Defense</strong></span>).
     </p>
 
     <!-- INTERACTIVE PAN-AND-ZOOM MERMAID DIAGRAM -->
@@ -1346,6 +1366,7 @@ flowchart TD
   ARRN -- "Pre-Trial Plea Bargaining" --> PLEA_BARGAIN{{"Plea Bargaining Framework (Sec. 2)"}}
   PLEA_BARGAIN -- "Lesser Included Offense (Consent of Pros & Offended)" --> DAAN["Daan v. Sandiganbayan (07.8)<br/>• Sec. 2: Lesser included offenses (Art. 172 in 171; Art. 218 in 217)<br/>• Arbitrary refusal is grave abuse of discretion"]
   PLEA_BARGAIN -- "Unaccepted Pre-Trial Offer" --> DAWATON["People v. Dawaton (07.10)<br/>• Unaccepted offer to plead guilty to homicide does NOT mitigate murder<br/>• Treachery on sleeping/drunk victim"]
+  ARRN -- "Affirmative Defense: Battered Woman Syndrome" --> XXX_BWS["People v. XXX271087 (QW.2)<br/>• Sec. 26 RA 9262: Two full cycles of violence + expert psychiatric proof<br/>• Exempt from criminal & civil liability; police reports not mandatory"]
 
   %% RULE 117 MOTION TO QUASH & DOUBLE JEOPARDY BRANCH
   ARRN --> MTQ{{"Motion to Quash (Rule 117)"}}
@@ -1359,6 +1380,7 @@ flowchart TD
   %% DOUBLE JEOPARDY & PROVISIONAL DISMISSAL
   MTQ -- "Double Jeopardy (Sec. 3[i] & Sec. 7)" --> DJ_BRANCH{{"Double Jeopardy Invocations"}}
   DJ_BRANCH -- "Finality-of-Acquittal Rule" --> ACQUITTAL["Castro v. People (08.6) & People v. Asis (08.7)<br/>• Errors of judgment unassailable by certiorari<br/>• Acquittal is immediately final; certiorari lies only for sham trial / ouster"]
+  DJ_BRANCH -- "Demurrer Acquittal & OSG Standing" --> YASA["Yasa v. Chavez (QW.1)<br/>• Private complainant lacks standing on criminal aspect without OSG<br/>• Demurrer acquittal is adjudication on merits -> double jeopardy"]
   DJ_BRANCH -- "Quasi-Crimes (Art. 365, RPC)" --> IVLER["Ivler v. Modesto-San Pedro (08.8)<br/>• Reckless imprudence is a single indivisible quasi-offense<br/>• Splitting charges prohibited; prior conviction bars second charge"]
   DJ_BRANCH -- "Same Act vs. Same Offense" --> NIERRAS["Nierras v. Dacuycuy (08.9)<br/>• Double jeopardy bars same OFFENSE, not same ACT<br/>• BP 22 (malum prohibitum) & Estafa (malum in se) distinct"]
 
@@ -1370,9 +1392,9 @@ flowchart TD
   classDef rustNode fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
 
   class START,ARRN,BAIL_STAGE,MTQ navyNode;
-  class MAGAT_PLEA,ALBA,ACQUITTAL,IVLER,BALISACAN,SAN_MIGUEL,MENDOZA rustNode;
+  class MAGAT_PLEA,ALBA,ACQUITTAL,YASA,IVLER,BALISACAN,SAN_MIGUEL,MENDOZA rustNode;
   class LAZARTE,GO,SERANA,NIERRAS,MIRANDA,CABACANGAN,ZAPATOS tealNode;
-  class SUMMARY_HEARING,BORLONGAN,LEVISTE,COMENDADOR,DOCUMENTO,DAAN,DAWATON,PROV_DISMISS greenNode;
+  class SUMMARY_HEARING,BORLONGAN,LEVISTE,COMENDADOR,DOCUMENTO,DAAN,DAWATON,PROV_DISMISS,XXX_BWS greenNode;
           </pre>
         </div>
       </div>
@@ -1404,8 +1426,8 @@ flowchart TD
     </div>
 
     <!-- SECTION III: MASTER COMPARISON MATRIX -->
-    <h3 id="statutory-comparison-matrix">III. Master Landmark Jurisprudence Matrix (Complete 26 Cases)</h3>
-    <p>Comprehensive comparative lookup table cross-referencing all 26 decisions across Modules 06, 07, and 08:</p>
+    <h3 id="statutory-comparison-matrix">III. Master Landmark Jurisprudence Matrix (Complete 28 Cases)</h3>
+    <p>Comprehensive comparative lookup table cross-referencing all 28 decisions across Modules 06, 07, 08, and Quiz Watchlist Express Cases:</p>
 
     <div style="overflow-x: auto;">
       <table class="ui-table">
@@ -1453,6 +1475,16 @@ flowchart TD
     </div>
 
     {mod_08_cases_html}
+
+    <hr>
+
+    <!-- SECTION VII: QUIZ WATCHLIST EXPRESS CASES -->
+    <div class="module-banner" id="module-qw-heading" style="background: linear-gradient(135deg, #9A3412 0%, #C2410C 100%); border-left-color: #FEF3C7;">
+      <h2>VII. Quiz Watchlist Express Cases — Full Digests (2026 Landmark Rulings)</h2>
+      <div class="module-banner-sub">Cases QW.1 to QW.2: Private Complainant's Standing & Demurrer Acquittal Double Jeopardy (Yasa v. Chavez) • Affirmative Defense of Battered Woman Syndrome (People v. XXX271087)</div>
+    </div>
+
+    {mod_qw_cases_html}
 
   </div>
 
@@ -1631,7 +1663,7 @@ flowchart TD
     document.addEventListener('DOMContentLoaded', () => {{
       const select = document.getElementById('toc-select');
       const watchedTargets = document.querySelectorAll(
-        '#quiz-watchlist, #expressly-named-cases, #administrative-unnamed-cases, #real-world-illustrations, #executive-overview, #three-doctrinal-pillars, #statutory-comparison-matrix, #module-06-heading, #module-07-heading, #module-08-heading, .case-section'
+        '#quiz-watchlist, #expressly-named-cases, #administrative-unnamed-cases, #real-world-illustrations, #executive-overview, #three-doctrinal-pillars, #statutory-comparison-matrix, #module-06-heading, #module-07-heading, #module-08-heading, #module-qw-heading, .case-section'
       );
 
       const observer = new IntersectionObserver((entries) => {{
