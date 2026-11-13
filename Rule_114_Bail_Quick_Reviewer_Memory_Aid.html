@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rule 114 (Bail) · Quick Reviewer &amp; Memory Aid (General Rule vs. Exceptions)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.8rem;
+}
+
+h2 {
+  color: #1E3A8A;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+h3, h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.65rem;
+  scroll-margin-top: 72px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2rem 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.55rem;
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.25rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.1rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.93rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.65rem 0.9rem 0.65rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.7rem 0.9rem 0.7rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 1.75rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+/* Quick Reviewer: General Rule vs. Exception(s) & Memory Cue Cards */
+.gr-ex-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.15rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.gr-row {
+  padding: 0.85rem 1.2rem;
+  border-left: 4px solid #166534;
+  background: #F0FDF4;
+  border-bottom: 1px solid #E2E8F0;
+}
+.ex-row {
+  padding: 0.85rem 1.2rem;
+  border-left: 4px solid #C2410C;
+  background: #FFF7ED;
+}
+.xpn-xpn-row {
+  padding: 0.75rem 1.2rem;
+  border-left: 4px solid #991B1B;
+  background: #FEF2F2;
+  border-top: 1px dashed #FECACA;
+}
+.gr-ex-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  padding: 0.55rem 1.2rem;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.badge-gr {
+  display: inline-block;
+  background: #166534;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.badge-ex {
+  display: inline-block;
+  background: #C2410C;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.badge-trap {
+  display: inline-block;
+  background: #991B1B;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.callout-box {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #1E3A8A;
+  padding: 1.15rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    padding: 1.5rem 1.25rem;
+    margin: 0.5rem auto;
+  }
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .sticky-nav, .diagram-toolbar { display: none; }
+  body { background: #FFFFFF; }
+  .document-container { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
+}
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">MEMORY AID NAV:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Jump to Rule, Exception, or Drill...</option>
+      <option value="#master-sequence">MASTER CHRONOLOGY &amp; DECISION TREE</option>
+      <option value="#pillar-1-foundation">1. Constitutional Anchor, Custody &amp; Detainee Control</option>
+      <option value="#gr-ex-consti">&nbsp;&nbsp;↳ GR / EX: Constitutional Right to Bail (Art. III §13; Secs. 4, 7)</option>
+      <option value="#gr-ex-custody">&nbsp;&nbsp;↳ GR / EX: Custody of the Law vs. Motion to Quash (Paderanga; Miranda)</option>
+      <option value="#gr-ex-furnish-transfer">&nbsp;&nbsp;↳ GR / EX: Who Furnishes Bail, Release &amp; Transfers (Secs. 1–3)</option>
+      <option value="#pillar-2-forms-special">2. Four Forms (Ca-Su-Pro-Re) &amp; Special Forums (M-E-D)</option>
+      <option value="#forms-table">&nbsp;&nbsp;↳ Forms Table, JEPS Payment &amp; Posting Checklist</option>
+      <option value="#gr-ex-jeps">&nbsp;&nbsp;↳ GR / EX: Cash Bail via JEPS (JudEx) &amp; Manual Fallback</option>
+      <option value="#gr-ex-special">&nbsp;&nbsp;↳ GR / EX: Military, Extradition (A.M. 22-03-29-SC) &amp; Deportation</option>
+      <option value="#pillar-3-exempt-barred">3. Bail Not Required (Fi-Su-De) &amp; Bail Prohibited</option>
+      <option value="#gr-ex-no-bail">&nbsp;&nbsp;↳ GR / EX: Fine Only, Summary Procedure &amp; Destierro (Rule 112 §5[c])</option>
+      <option value="#gr-ex-preventive">&nbsp;&nbsp;↳ GR / EX: Mandatory Release on Preventive Imprisonment (Sec. 16)</option>
+      <option value="#gr-ex-finality">&nbsp;&nbsp;↳ GR / EX: Bail After Final Judgment &amp; Service of Sentence (Sec. 24)</option>
+      <option value="#pillar-4-right-discretion">4. Right vs. Discretion, Fixing Bail &amp; Remedies</option>
+      <option value="#right-discretion-table">&nbsp;&nbsp;↳ Court &amp; Stage Matrix (Secs. 4, 5, 7, 8)</option>
+      <option value="#gr-ex-right-rtc">&nbsp;&nbsp;↳ GR / EX: First-Level &amp; Pre-Conviction RTC Bail (Secs. 4, 7, 8)</option>
+      <option value="#gr-ex-post-conviction">&nbsp;&nbsp;↳ GR / EX: Post-Conviction Pending Appeal &amp; Venue (Sec. 5; Leviste)</option>
+      <option value="#gr-ex-amount-remedy">&nbsp;&nbsp;↳ GR / EX: Fixing Amount (Sec. 9; Enrile; DOJ) &amp; Rule 65 Remedy</option>
+      <option value="#pillar-5-venue-forfeiture">5. Where to File (Sec. 17), Forfeiture (Sec. 21) &amp; Pre-Plea (Sec. 26)</option>
+      <option value="#venue-table">&nbsp;&nbsp;↳ Section 17 Venue &amp; Hierarchy Decision Table</option>
+      <option value="#gr-ex-venue">&nbsp;&nbsp;↳ GR / EX: Venue, Territorial Limits &amp; Reduction Lock (Sec. 17)</option>
+      <option value="#gr-ex-forfeiture">&nbsp;&nbsp;↳ GR / EX: Trial Presence &amp; Two-Step Forfeiture (Sec. 21; Mendoza)</option>
+      <option value="#gr-ex-preplea">&nbsp;&nbsp;↳ GR / EX: Pre-Plea Objections Not Waived by Bail (Sec. 26; Borlongan)</option>
+      <option value="#pillar-6-cases-drills">6. Landmark Cases, Exam Trap-Busters &amp; Rapid Drills</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 class="c-navy">Rule 114 (Bail) · Quick Reviewer &amp; Memory Aid</h1>
+  <p class="c-teal" style="font-weight: 700; margin-top: -0.75rem; letter-spacing: 0.04em;">GENERAL RULE VS. EXCEPTIONS • MNEMONICS, DECISION TREES &amp; CASE TRIGGERS</p>
+
+  <!-- 4-PILLAR ROADMAP CARD -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">CUSTODY &amp; FORMS</div>
+        <div class="ui-sub"><span class="c-teal">Art. III §13 • Secs. 1–3, 10–15</span><br>Constructive Custody &amp; <em>Ca-Su-Pro-Re</em></div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">RIGHT VS. DISCRETION</div>
+        <div class="ui-sub"><span class="c-teal">Secs. 4–5, 7–9</span><br><em>Leviste</em> 2-Step &amp; <em>Enrile</em> Factors</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">VENUE &amp; EXEMPTIONS</div>
+        <div class="ui-sub"><span class="c-teal">Secs. 16–17 • M-E-D • Fi-Su-De</span><br>Hierarchy &amp; Reduction Lock</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">FORFEITURE &amp; PLEA</div>
+        <div class="ui-sub"><span class="c-teal">Secs. 21, 24, 26</span><br><em>Mendoza</em> 2-Step &amp; <em>Borlongan</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTER CHRONOLOGY -->
+  <h3 id="master-sequence" class="c-navy">Master Chronological Anchor: Custody → Filing → Hearing → Forfeiture → Appeal</h3>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title"><strong>Stage 1: CUSTODY &amp; VENUE</strong> — <span class="c-teal">Secs. 1, 17(a)–(c)</span></div>
+      <div class="ui-sub">Actual arrest or voluntary/constructive surrender (<span class="c-burgundy"><em>Paderanga</em></span>) → File in pending court (or Sec. 17 substitute/arrest-place hierarchy)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Stage 2: RIGHT vs. PETITION FOR BAIL</strong> — <span class="c-teal">Secs. 4, 7–9, 26</span></div>
+      <div class="ui-sub">Direct payment if Matter of Right (JEPS / cash fallback) vs. Petition + Summary Hearing if Capital/RP/Life → Challenge arrest/PI <strong>before plea</strong> (<span class="c-burgundy"><em>Borlongan</em></span>)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-card">
+      <div class="ui-title"><strong>Stage 3: TRIAL &amp; FORFEITURE SAFEGUARD</strong> — <span class="c-teal">Secs. 2–3, 21</span></div>
+      <div class="ui-sub">Effective until RTC judgment promulgation → Non-appearance triggers Order of Forfeiture → 30d produce/explain → Judgment on Bond → 15d → Execution (<span class="c-burgundy"><em>Mendoza</em></span>)</div>
+    </div>
+    <div class="ui-connector">↓</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title c-green"><strong>Stage 4: POST-CONVICTION &amp; FINALITY</strong> — <span class="c-teal">Secs. 5, 24</span></div>
+      <div class="ui-sub">RTC conviction: First-level still Right; RTC non-RP Discretionary (<span class="c-burgundy"><em>Leviste</em></span>); RP/Life Prohibited → Final judgment bars bail (except pre-finality probation)</div>
+    </div>
+  </div>
+
+  <!-- MASTER INTERACTIVE MERMAID DIAGRAM -->
+  <div class="diagram-wrapper">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">RULE 114 MASTER DECISION TREE <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["ACCUSED SEEKS PROVISIONAL LIBERTY"] --> Custody{"In Custody of Law?<br/>(Arrest / Surrender / Hospital)"}
+  Custody -- "NO" --> NoBail["Cannot Post Bail<br/>(May still Quash Warrant: Miranda)"]
+  Custody -- "YES" --> Exempt{"Fine Only / Summary /<br/>Destierro? (Fi-Su-De)"}
+  Exempt -- "YES (and not In Flagrante /<br/>no Failure to Appear)" --> Summons["No Bail Required<br/>(Summons / Sec. 16 Release)"]
+  Exempt -- "NO" --> Stage{"Stage of Case &amp; Court"}
+  Stage -- "First-Level Court<br/>(Before or After Conviction)" --> Right["MATTER OF RIGHT (Sec. 4a)<br/>(Exception: Reduction is Discretionary)"]
+  Stage -- "RTC Before Conviction:<br/>NOT Death / RP / Life" --> RightB["MATTER OF RIGHT (Sec. 4b)"]
+  Stage -- "RTC Before Conviction:<br/>Death / RP / Life" --> Pet["PETITION FOR BAIL (Secs. 7–8)<br/>Summary Hearing; State Has Burden"]
+  Pet -- "Evidence NOT Strong" --> GrantD["Grant Bail (High Amount)<br/>Remedy if Denied: Rule 65"]
+  Pet -- "Evidence IS Strong" --> Deny["DENY BAIL (Sec. 7)<br/>Remedy: Rule 65 Certiorari"]
+  Stage -- "RTC After Conviction" --> Conv{"Penalty of Offense"}
+  Conv -- "Death / RP / Life" --> Bar["PROHIBITED (Non-Bailable)<br/>Warrant + National Penitentiary"]
+  Conv -- "Not Death / RP / Life" --> Disc["DISCRETIONARY (Sec. 5)<br/>Leviste 2-Step Check (R-E-P-F-U)<br/>CA Only if Murder -&gt; Homicide"]
+
+  classDef primary fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
+  classDef statutory fill:#0F766E,stroke:#0F766E,color:#FFFFFF,font-weight:bold;
+  classDef rule fill:#166534,stroke:#166534,color:#FFFFFF,font-weight:bold;
+  classDef warning fill:#C2410C,stroke:#C2410C,color:#FFFFFF,font-weight:bold;
+  class Start,Stage,Conv primary;
+  class Custody,Exempt,Pet statutory;
+  class Summons,Right,RightB,GrantD rule;
+  class NoBail,Deny,Bar,Disc warning;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 1 ==================== -->
+  <h3 id="pillar-1-foundation">1. Constitutional Anchor, Custody &amp; Detainee Control</h3>
+
+  <div class="gr-ex-box" id="gr-ex-consti">
+    <div class="gr-ex-title"><span>Constitutional Right to Bail &amp; Suspension of Habeas Corpus</span><span class="c-teal">Art. III §13 • Rule 114 §§4, 7</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      All persons in custody are <span class="c-green"><strong><u>entitled to bail before conviction as a matter of right</u></strong></span>, rooted in the presumption of innocence to ensure trial appearance. The right to bail <span class="c-green"><strong><u>shall not be impaired even when the privilege of the writ of habeas corpus is suspended</u></strong></span>, and excessive bail shall not be required.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      Persons charged with a <strong>capital offense</strong>, or an offense punishable by <strong><em>reclusion perpetua</em></strong> or <strong>life imprisonment</strong>, <span class="c-rust"><strong><u>when evidence of guilt is strong</u></strong></span> (<span class="c-teal">Sec. 7</span>).
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-custody">
+    <div class="gr-ex-title"><span>Custody of the Law Requirement vs. Motion to Quash Warrant</span><span class="c-burgundy">Paderanga v. CA • Miranda v. Tuliao</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      An applicant for bail must be in <span class="c-green"><strong><u>actual physical custody of the law</u></strong></span>—via arrest or personal voluntary surrender in court (which also counts as a mitigating circumstance if made before arrest). Counsel cannot post bail while the accused is hiding or abroad.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / DISTINCTION</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Constructive Custody Suffices (<span class="c-burgundy"><em>Paderanga v. CA</em></span>):</strong> A hospitalized accused who submits to the court's authority and signifies intent to post bail is under <strong>constructive custody</strong>; court staff may process the undertaking, fingerprints, and forms at the hospital.</li>
+        <li><strong>Motion to Quash Arrest Warrant (<span class="c-burgundy"><em>Miranda v. Tuliao</em></span>):</strong> Custody of the law is <span class="c-rust"><strong><u>NOT required</u></strong></span> to challenge a warrant's validity; jurisdiction over the person suffices.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-furnish-transfer">
+    <div class="gr-ex-title"><span>Who Furnishes Bail, Duration, Transfers &amp; Multiple Charges</span><span class="c-teal">Rule 114 §§1, 2, 3</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Who Furnishes (§1):</strong> The accused furnishes bail personally or through a bondsman/surety—including <strong>defense counsel</strong> (refund goes strictly to the payor named in the receipt, and the lawyer assumes forfeiture risk as jailer).<br>
+      <strong>2. Duration (§2):</strong> Effective upon approval until <strong>RTC judgment promulgation</strong> (unless cancelled).<br>
+      <strong>3. Detention Lock (§3):</strong> <span class="c-rust"><strong><u>No detained person shall be released or transferred</u></strong></span> (e.g., provincial jail to BJMP) without court authority.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Release/Transfer Allowed (§3):</strong> Only (1) upon <strong>order of the court</strong> (including discretionary escorted leave to attend a parent's wake) or (2) when admitted to bail.</li>
+        <li><strong>Multiple Charges Rule:</strong> Posting bail on a bailable charge <span class="c-rust"><strong><u>will NOT release the accused</u></strong></span> if detained for another non-bailable offense (release orders read: <em>"unless detained for any other legal cause or causes"</em>).</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 2 ==================== -->
+  <h3 id="pillar-2-forms-special">2. Four Forms (Ca-Su-Pro-Re) &amp; Special Forums (M-E-D)</h3>
+
+  <div id="forms-table">
+    <p><strong>Mnemonic for Forms of Bail (Sec. 1):</strong> <strong><code>Ca–Su–Pro–Re</code></strong> &nbsp;|&nbsp; <strong>Practice Checklist (<span class="c-teal">OCA Cir. 48-2026</span>):</strong> 2×2 name-tag photos (front, left, right), barangay certification of residence, residence sketch, signed undertaking, fingerprints, personal info form, and incidental fees (~₱500+).</p>
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">Form</th>
+          <th style="width: 42%;">Mechanics &amp; Financial Rule</th>
+          <th style="width: 40%;">Key Risk / Statutory Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cash Deposit</strong><br><span class="c-teal">Sec. 14</span></td>
+          <td>Most common. Full bail deposited via <strong>JEPS</strong> (<em>JudEx</em>) or manual cash; <span class="c-green"><strong><u>refundable</u></strong></span> to payor on final disposition.</td>
+          <td>Refund goes strictly to the receipt payor; court must accept manual cash if JEPS glitches.</td>
+        </tr>
+        <tr>
+          <td><strong>Corporate Surety</strong><br><span class="c-teal">Sec. 10</span></td>
+          <td>Issued by a surety company <span class="c-green"><strong><u>accredited by the Supreme Court</u></strong></span>. Pay only a percentage <strong>premium</strong>.</td>
+          <td>Premium is <span class="c-rust"><strong><u>non-refundable</u></strong></span> and must be <strong>renewed yearly</strong> until case disposal.</td>
+        </tr>
+        <tr>
+          <td><strong>Property Bond</strong><br><span class="c-teal">Secs. 11–13</span></td>
+          <td>Real property posted as security; requires extensive forms and <span class="c-rust"><strong><u>Register of Deeds annotation</u></strong></span> on title/tax dec.</td>
+          <td>Hard to sell while encumbered; sold at <strong>public auction</strong> if forfeited.</td>
+        </tr>
+        <tr>
+          <td><strong>Recognizance</strong><br><span class="c-teal">Sec. 15</span></td>
+          <td>Release to own custody or a <strong>responsible citizen</strong> (e.g., barangay official, lawyer) without cash/bond to <strong>decongest jails</strong>.</td>
+          <td>Applies under <span class="c-teal">R.A. 6036 / R.A. 10389</span> (indigents; ≤6 mos. / ₱2,000 fine), <span class="c-teal">Sec. 16</span>, <span class="c-teal">Sec. 24</span> (probation), CICL (<span class="c-teal">R.A. 9344</span>), and Summary Procedure non-appearance.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-jeps">
+    <div class="gr-ex-title"><span>Payment of Cash Bail via JEPS (JudEx)</span><span class="c-teal">Sec. 14 • OCA JEPS Circulars</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      Cash bail bonds are paid electronically through the Supreme Court's <strong>Judiciary Electronic Payment Solution (JEPS)</strong> (treated as an optional online transaction under OCA JEPS guidelines).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      If JEPS suffers a glitch or downtime, the court <span class="c-green"><strong><u>must accept direct manual cash payment</u></strong></span> and issue an official receipt—technical failures cannot delay the constitutional right to bail.
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-special">
+    <div class="gr-ex-title"><span>Special Proceedings: Military, Extradition &amp; Deportation (M–E–D)</span><span class="c-teal">A.M. No. 22-03-29-SC • Comendador</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      The constitutional right to bail under <span class="c-teal">Art. III §13</span> does <span class="c-rust"><strong><u>NOT apply as a matter of right</u></strong></span> in:
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Military Court-Martial (<span class="c-burgundy"><em>Comendador v. De Villa</em></span>):</strong> Bail is not allowed due to military discipline/national security; safeguard is <strong>speedy trial</strong>.</li>
+        <li><strong>Extradition (<span class="c-teal">A.M. No. 22-03-29-SC, Rule 3 §1</span>):</strong> <em>Sui generis</em> treaty proceeding; bail is not a right.</li>
+        <li><strong>Deportation:</strong> Aliens in deportation proceedings have no right to bail.</li>
+      </ul>
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Military in Civilian Courts:</strong> When soldiers are prosecuted before <strong>civilian courts</strong> (e.g., RTC for <em>coup d'état</em>), <strong>Rule 114 applies</strong>.</li>
+        <li><strong>Extradition Discretionary Standard:</strong> Extraditee may obtain bail by proving by <span class="c-green"><strong><u>clear and convincing evidence</u></strong></span> they are (1) <strong>not a flight risk</strong> and (2) will <strong>abide by court orders</strong>.</li>
+        <li><strong>Deportation Discretion:</strong> The <strong>Commissioner of Immigration</strong> may grant bail discretionarily.</li>
+      </ul>
+    </div>
+    <div class="xpn-xpn-row">
+      <span class="badge-trap">XPN TO XPN (EXTRADITION)</span>
+      Bail is <span class="c-rust"><strong><u>strictly prohibited</u></strong></span> if the extraditee is sought for <strong>service of a sentence</strong> or has been <strong>convicted awaiting sentence</strong> (<span class="c-teal">A.M. No. 22-03-29-SC</span>). Political crimes and non-treaty states are generally non-extraditable.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 3 ==================== -->
+  <h3 id="pillar-3-exempt-barred">3. Bail Not Required (Fi-Su-De) &amp; Bail Prohibited</h3>
+
+  <div class="gr-ex-box" id="gr-ex-no-bail">
+    <div class="gr-ex-title"><span>When No Warrant Issues &amp; No Bail Is Required (Fi–Su–De)</span><span class="c-teal">Rule 112 §5(c) • A.M. No. 08-8-7-SC • Sec. 16</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>No warrant of arrest issues</strong>—and thus <strong>no bail is required</strong>—when the charge is:
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Fine Only:</strong> Offense penalized by a fine only (<span class="c-teal">Rule 112 §5[c]</span> — court issues summons);</li>
+        <li><strong>Summary Procedure:</strong> Covered by <span class="c-teal">A.M. No. 08-8-7-SC, Rule III</span> (Expedited Procedures in First-Level Courts); or</li>
+        <li><strong><em>Destierro</em>:</strong> Penalty is banishment only (e.g., <strong>concubine only</strong> in concubinage under <span class="c-teal">Art. 334 RPC</span>; the husband faces <em>prision correccional</em>).</li>
+      </ul>
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) (In–Fa)</span>
+      Bail (or <strong>recognizance</strong>) <span class="c-rust"><strong><u>becomes required</u></strong></span> if the accused: (1) is caught <strong><em>in flagrante delicto</em></strong> and held for inquest, OR (2) <strong>fails to appear</strong> despite notice when required by the court.
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-preventive">
+    <div class="gr-ex-title"><span>Mandatory Release After Preventive Imprisonment</span><span class="c-teal">Rule 114 §16</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      An accused unable to post bail remains in preventive custody during trial and appeal.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) (MANDATORY IMMEDIATE RELEASE)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li>Custody has lasted <span class="c-green"><strong><u>equal to or longer than the possible maximum imprisonment</u></strong></span> for the offense charged → <strong>immediate release</strong> (trial/appeal continues).</li>
+        <li>Maximum imposable penalty is <strong><em>destierro</em></strong> → release after <span class="c-green"><strong><u>30 days</u></strong></span> of preventive imprisonment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-finality">
+    <div class="gr-ex-title"><span>Bail After Final Judgment &amp; Service of Sentence</span><span class="c-teal">Rule 114 §24</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <span class="c-rust"><strong><u>No bail shall be allowed</u></strong></span> after a judgment of conviction has become <strong>final</strong>.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      If the accused applies for <strong>probation before finality</strong>, they may be allowed temporary liberty under existing bail (or released on recognizance if none was filed or they are incapable of filing one).
+    </div>
+    <div class="xpn-xpn-row">
+      <span class="badge-trap">XPN TO XPN (ABSOLUTE BAR)</span>
+      <span class="c-rust"><strong><u>In NO case</u></strong></span> shall bail be allowed after the accused has <strong>commenced to serve sentence</strong> (<span class="c-teal">Sec. 24</span>).
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 4 ==================== -->
+  <h3 id="pillar-4-right-discretion">4. Right vs. Discretion, Fixing Bail &amp; Remedies</h3>
+
+  <div id="right-discretion-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Court &amp; Stage</th>
+          <th style="width: 26%;">Nature of Offense</th>
+          <th style="width: 20%;">Bail Status</th>
+          <th style="width: 30%;">Procedure &amp; Rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MeTC / MTCC / MTC / MCTC</strong><br>(Before OR After Conviction)</td>
+          <td>Any offense within first-level court jurisdiction</td>
+          <td><span class="c-green"><strong>MATTER OF RIGHT</strong></span><br><span class="c-teal">Sec. 4(a)</span></td>
+          <td>Direct payment yields same-day release. <em>(Motion to reduce bail is discretionary.)</em></td>
+        </tr>
+        <tr>
+          <td><strong>RTC Before Conviction</strong></td>
+          <td><strong>Not</strong> punishable by death, <em>reclusion perpetua</em>, or life</td>
+          <td><span class="c-green"><strong>MATTER OF RIGHT</strong></span><br><span class="c-teal">Sec. 4(b)</span></td>
+          <td>Court cannot refuse; direct payment without hearing.</td>
+        </tr>
+        <tr>
+          <td><strong>RTC Before Conviction</strong></td>
+          <td>Punishable by death, <em>reclusion perpetua</em>, or life</td>
+          <td><span class="c-rust"><strong>HEARING / PROOF</strong></span><br><span class="c-teal">Secs. 7–8</span></td>
+          <td><strong>Petition for Bail</strong> + summary hearing; <strong>prosecution bears burden</strong>; reasoned evaluation order.</td>
+        </tr>
+        <tr>
+          <td><strong>RTC After Conviction</strong></td>
+          <td><strong>Not</strong> punishable by death, <em>reclusion perpetua</em>, or life</td>
+          <td><span class="c-rust"><strong>DISCRETIONARY</strong></span><br><span class="c-teal">Sec. 5</span></td>
+          <td><span class="c-burgundy"><em>Leviste</em></span> 2-step check; court may increase bail pending appeal.</td>
+        </tr>
+        <tr>
+          <td><strong>RTC After Conviction</strong></td>
+          <td>Punishable by death, <em>reclusion perpetua</em>, or life</td>
+          <td><span class="c-rust"><strong>PROHIBITED</strong></span><br><span class="c-teal">Sec. 7</span></td>
+          <td>Even if bailed pre-trial, warrant issues; committed to national penitentiary (Muntinlupa).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-right-rtc">
+    <div class="gr-ex-title"><span>First-Level &amp; Pre-Conviction RTC Bail vs. Reduction &amp; Capital Petitions</span><span class="c-teal">Secs. 4, 7, 8</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      Bail is a <span class="c-green"><strong><u>matter of right</u></strong></span> (no motion/hearing required) in all <strong>first-level court cases</strong> (before or after conviction) and in <strong>RTC cases before conviction</strong> for offenses not punishable by death, <em>reclusion perpetua</em>, or life imprisonment.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Motion for Reduction of Bail:</strong> Always <span class="c-rust"><strong><u>discretionary</u></strong></span> (even in MTC); copy-furnish the public prosecutor for comment/no objection.</li>
+        <li><strong>Capital / RP / Life Offenses (<span class="c-teal">Secs. 7–8</span>):</strong> Requires a <strong>Petition for Bail</strong> and a mandatory <strong>summary hearing</strong> where the <strong>prosecution bears the burden</strong> to show evidence of guilt is strong; the order must contain a <strong>summary and evaluation of the evidence</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-post-conviction">
+    <div class="gr-ex-title"><span>Post-Conviction Bail Pending Appeal &amp; Where to File</span><span class="c-teal">Sec. 5 • Leviste v. CA</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Discretion (<span class="c-teal">Sec. 5</span>):</strong> Upon RTC conviction of an offense not punishable by death/RP/life, bail pending appeal is <strong>discretionary</strong> (and court may increase the bond).<br>
+      <strong>2. Filing Court (<span class="c-teal">Sec. 5 par. 2</span>):</strong> May be filed with and resolved by the <strong>trial court</strong> despite a notice of appeal, provided records have <strong>not yet been transmitted</strong> to the appellate court.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) &amp; TWO-STAGE TEST (LEVISTE)</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Non-Bailable to Bailable Downgrade (<span class="c-teal">Sec. 5 par. 2</span>):</strong> If conviction changed the offense from non-bailable to bailable (e.g., charged Murder → convicted Homicide), bail can <span class="c-rust"><strong><u>ONLY be filed with and resolved by the appellate court</u></strong></span>, even if records are still in the RTC.</li>
+        <li><strong>Two-Stage Test for Penalty &gt; 6 Years (<span class="c-burgundy"><em>Leviste v. CA</em></span>):</strong><br>
+          <em>Stage 1 (Bail-Negating Check — <code>R–E–P–F–U</code>):</em> If prosecution proves accused is a (<strong>R</strong>)ecidivist/quasi/habitual/<em>reiteracion</em>, (<strong>E</strong>)scaped/violated bail, acted on (<strong>P</strong>)robation/parole/pardon, poses (<strong>F</strong>)light risk, or (<strong>U</strong>)ndue risk of another crime → <span class="c-rust"><strong><u>MUST deny or cancel</u></strong></span>.<br>
+          <em>Stage 2:</em> Even if <strong>NONE</strong> are present, bail is <span class="c-rust"><strong><u>never automatic</u></strong></span>; court exercises discretion with <strong>grave caution</strong> because presumption of innocence is gone.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-amount-remedy">
+    <div class="gr-ex-title"><span>Fixing Bail Amount (Sec. 9) &amp; Remedy Against Denial (Rule 65)</span><span class="c-teal">Sec. 9 • Enrile • DOJ Circulars</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Amount (<span class="c-teal">Sec. 9</span>):</strong> Judges fix reasonable bail using 10 factors—<strong>Offense</strong> (nature, penalty, evidence weight), <strong>Accused</strong> (financial ability, character, <strong>age &amp; health</strong> per <span class="c-burgundy"><em>Enrile v. Sandiganbayan</em></span>), and <strong>Flight</strong> (appearance probability, prior bail forfeitures, fugitive status, other bail cases).<br>
+      <strong>2. Final Rulings:</strong> Final judgments/orders are challenged by ordinary <strong>appeal</strong>.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) / QUALIFICATION</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>DOJ Bail Guides Are Recommendatory:</strong> <span class="c-teal">DOJ DC No. 013-2018</span> (₱6k/yr standard RPC; ₱2k/yr certain theft tiers; ₱10k/yr prioritized special laws like R.A. 9165/7610/10591) and <span class="c-teal">DOJ DC No. 011-2023</span> (indigent 50% reduction / ₱10k cap) do not bind judges.</li>
+        <li><strong>Remedy from Bail Denial = Rule 65, NOT Appeal:</strong> A bail order is <strong>interlocutory</strong>; challenge grave abuse of discretion via <strong>Certiorari under Rule 65</strong> (RTC → <strong>CA</strong>; Sandiganbayan → <strong>SC</strong>).</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 5 ==================== -->
+  <h3 id="pillar-5-venue-forfeiture">5. Where to File (Sec. 17), Forfeiture (Sec. 21) &amp; Pre-Plea (Sec. 26)</h3>
+
+  <div id="venue-table">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 34%;">Scenario (<span class="c-teal">Rule 114 §17</span>)</th>
+          <th style="width: 36%;">Proper Court(s)</th>
+          <th style="width: 30%;">Hierarchy / Limit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Case Pending; Judge Available</strong> (<span class="c-teal">§17[a]</span>)</td>
+          <td>Court where the case is pending</td>
+          <td>Default venue.</td>
+        </tr>
+        <tr>
+          <td><strong>2. Case Pending; Judge Absent</strong> (<span class="c-teal">§17[a]</span>)</td>
+          <td>Any RTC, MeTC, MTCC, MTC, or MCTC judge in the <strong>same province, city, or municipality</strong></td>
+          <td><span class="c-rust"><strong><u>Never cross provincial lines</u></strong></span> (e.g., La Union → Pangasinan = gross ignorance).</td>
+        </tr>
+        <tr>
+          <td><strong>3. Arrested Elsewhere</strong> (<span class="c-teal">§17[a]</span>)</td>
+          <td>Any <strong>RTC</strong> of place of arrest → if unavailable, any MeTC/MTCC/MTC/MCTC therein</td>
+          <td><span class="c-green"><strong><u>Strict hierarchy</u></strong></span> (RTC first, then lower courts).</td>
+        </tr>
+        <tr>
+          <td><strong>4. In Custody, Not Yet Charged</strong> (<span class="c-teal">§17[c]</span>)</td>
+          <td><strong>Any court</strong> in the province, city, or municipality where held</td>
+          <td><strong>No hierarchy required</strong> (e.g., inquest arrests).</td>
+        </tr>
+        <tr>
+          <td><strong>5. Discretionary Bail / Reduction / Recognizance</strong> (<span class="c-teal">§17[b]</span>)</td>
+          <td><span class="c-rust"><strong><u>ONLY the court where the case is pending</u></strong></span></td>
+          <td>Outside courts cannot reduce bail; must collect full fixed amount.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-venue">
+    <div class="gr-ex-title"><span>Where to File Bail &amp; The Reduction Lock</span><span class="c-teal">Rule 114 §17(a)–(c)</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      Bail must be filed in the <strong>court where the case is pending</strong> (<span class="c-teal">§17[a]</span>).
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S)</span>
+      May be filed elsewhere if (1) the judge is absent/unavailable (any judge within the <strong>same province/city/municipality</strong>), (2) the accused is <strong>arrested outside</strong> the court's territory (RTC first, then lower court), or (3) the person is <strong>not yet charged</strong> (any court where held, <span class="c-teal">§17[c]</span>).
+    </div>
+    <div class="xpn-xpn-row">
+      <span class="badge-trap">XPN TO XPN (§17[b] LOCK)</span>
+      When bail is <strong>discretionary</strong> (including <strong>reduction of bail</strong>) or the accused seeks <strong>recognizance</strong>, it may <span class="c-rust"><strong><u>ONLY be filed in the court where the case is pending</u></strong></span>.
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-forfeiture">
+    <div class="gr-ex-title"><span>Trial Presence &amp; Mandatory Two-Step Forfeiture (F–30–J–15–E)</span><span class="c-teal">Sec. 21 • Mendoza v. Alarma</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      <strong>1. Presence:</strong> After arraignment, the accused's trial attendance is a <strong>waivable</strong> personal right.<br>
+      <strong>2. Forfeiture:</strong> Upon unexcused non-appearance when required, the court summarily declares the bail <strong>forfeited</strong> (conditional/interlocutory) and issues an arrest warrant.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) &amp; DUE PROCESS PREREQUISITES</span>
+      <ul style="margin: 0.4rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Mandatory Attendance:</strong> Presence is required at arraignment, pre-trial, promulgation, and when <strong>ordered for eyewitness identification</strong>. <em>(No trial in absentia if not yet arraigned.)</em></li>
+        <li><strong>No Immediate Execution (<span class="c-burgundy"><em>Mendoza v. Alarma</em></span>):</strong> Court <span class="c-rust"><strong><u>cannot execute directly from an Order of Forfeiture</u></strong></span>. It must: (1) give bondsman <strong>30 days</strong> to produce the <strong>living body</strong> + show cause; (2) render a <span class="c-green"><strong><u>separate Judgment on the Bond</u></strong></span>; and (3) wait <strong>15 days</strong> for finality before issuing a <strong>Writ of Execution</strong> (cash to Treasury / property auction).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gr-ex-box" id="gr-ex-preplea">
+    <div class="gr-ex-title"><span>Effect of Bail on Objections to Arrest &amp; Preliminary Investigation</span><span class="c-teal">Sec. 26 • Borlongan v. Peña</span></div>
+    <div class="gr-row">
+      <span class="badge-gr">GENERAL RULE</span>
+      An application for or admission to bail <span class="c-green"><strong><u>shall NOT bar</u></strong></span> the accused from challenging (1) the validity of their arrest or warrant, or (2) the lack or irregularity of a preliminary investigation.
+    </div>
+    <div class="ex-row">
+      <span class="badge-ex">EXCEPTION(S) (WHEN WAIVED)</span>
+      Those objections are <span class="c-rust"><strong><u>waived</u></strong></span> if the accused fails to raise them <span class="c-rust"><strong><u>before entering a plea</u></strong></span> (arraignment) and voluntarily pleads or actively participates in trial (<span class="c-burgundy"><em>Borlongan v. Peña</em></span>). <strong>Practice Rule:</strong> Never allow arraignment before bail or pre-plea motions.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PILLAR 6 ==================== -->
+  <h3 id="pillar-6-cases-drills">6. Landmark Cases, Exam Trap-Busters &amp; Rapid Recall Drills</h3>
+
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Case &amp; Citation</th>
+        <th style="width: 70%;">Controlling Doctrine for Recitation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="c-burgundy"><em>Paderanga v. CA</em></span><br><span class="c-teal">G.R. No. 115407 (1995)</span></td>
+        <td>Hospitalized accused submitting to court authority is in <strong>constructive custody</strong> and may apply for/post bail.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Miranda v. Tuliao</em></span><br><span class="c-teal">G.R. No. 158763 (2006)</span></td>
+        <td>Custody of the law is required for <strong>bail</strong>, <strong>not</strong> to file a <strong>Motion to Quash a Warrant of Arrest</strong>.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Comendador v. De Villa</em></span><br><span class="c-teal">G.R. No. 93177 (1991)</span></td>
+        <td>Right to bail does not apply to military personnel in <strong>court-martial</strong> proceedings; safeguard is <strong>speedy trial</strong>.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Enrile v. Sandiganbayan</em></span><br><span class="c-teal">G.R. No. 213847 (2015)</span></td>
+        <td>Advanced age, fragile health, and voluntary surrender (negating flight risk) weighed in granting bail under humanitarian/Sec. 9 considerations.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Leviste v. CA</em></span><br><span class="c-teal">G.R. No. 189122 (2010)</span></td>
+        <td>Post-conviction bail (&gt; 6 years) is <strong>never automatic</strong> even with zero bail-negating factors; <strong>grave caution</strong> applies.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Mendoza v. Alarma</em></span><br><span class="c-teal">G.R. No. 151970 (2008)</span></td>
+        <td>Writ of execution and auction sale issued without a separate <strong>Judgment on the Bond</strong> after the 30-day forfeiture period are <strong>null and void</strong>.</td>
+      </tr>
+      <tr>
+        <td><span class="c-burgundy"><em>Borlongan v. Peña</em></span><br><span class="c-teal">G.R. No. 143591 (2010)</span></td>
+        <td>Posting bail does <strong>not</strong> waive objections to warrant validity or PI, provided raised <strong>before entering a plea</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 1</span>
+        <div class="ui-title">Fine-Only Rule</div>
+        <div class="ui-sub"><span class="c-teal">Rule 112 §5(c)</span> (not §8!) bars arrest warrants for fine-only offenses.</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 2</span>
+        <div class="ui-title">DOJ Guide Rates</div>
+        <div class="ui-sub"><span class="c-teal">DC 013-2018</span>: ₱6k standard, ₱2k theft tiers, ₱10k special laws (recommendatory).</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 3</span>
+        <div class="ui-title">Reduction Lock</div>
+        <div class="ui-sub">Another court taking bail under <span class="c-teal">§17(a)</span> <strong>cannot reduce bail</strong> (<span class="c-teal">§17[b]</span>).</div>
+      </div>
+      <div class="ui-col">
+        <span class="badge-trap">TRAP 4</span>
+        <div class="ui-title">Forfeiture ≠ Execution</div>
+        <div class="ui-sub">Must render a <strong>Judgment on the Bond</strong> after 30 days (<span class="c-burgundy"><em>Mendoza</em></span>).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout-box" id="rapid-recall-challenge">
+    <p><strong>30-Second Rapid Recall Drills:</strong></p>
+    <ol style="margin-bottom: 0.75rem;">
+      <li>Juan (charged in La Union RTC with ₱120k bail) is arrested in Dagupan City. Dagupan RTC judges are unavailable, so counsel asks the Dagupan MTCC to reduce bail to ₱60k. Proper?</li>
+      <li>Maria is charged with Murder, granted pre-trial bail, then convicted of Homicide (8–14 years) and appeals. Can the same RTC grant her bail pending appeal before records are transmitted?</li>
+      <li>Pedro jumps bail at arraignment; after 45 days without producing him, the court immediately auctions his uncle's land based on the Order of Forfeiture. Valid?</li>
+      <li>After Pedro is arrested, he posts cash bail and immediately moves to quash the Information for lack of preliminary investigation <em>before</em> arraignment. Barred?</li>
+    </ol>
+    <p style="margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px dashed #CBD5E1;">
+      <strong>Answers:</strong><br>
+      <strong>1.</strong> Dagupan MTCC may accept bail only if Dagupan RTC judges are unavailable (<span class="c-teal">§17[a]</span>), <strong>but it CANNOT reduce bail</strong>—only the La Union RTC where the case is pending can reduce it (<span class="c-teal">§17[b]</span>).<br>
+      <strong>2.</strong> <strong>No.</strong> Because conviction changed the offense from non-bailable (Murder) to bailable (Homicide), <strong>only the Court of Appeals</strong> may grant bail (<span class="c-teal">§5 par. 2</span>), applying <span class="c-burgundy"><em>Leviste</em></span> discretion.<br>
+      <strong>3.</strong> <strong>No (Void).</strong> A separate <strong>Judgment on the Bond</strong> + 15-day finality must precede execution (<span class="c-teal">§21</span>; <span class="c-burgundy"><em>Mendoza v. Alarma</em></span>).<br>
+      <strong>4.</strong> <strong>No (Not barred).</strong> Bail does not waive pre-plea objections raised <strong>before entering a plea</strong> (<span class="c-teal">§26</span>; <span class="c-burgundy"><em>Borlongan v. Peña</em></span>).
+    </p>
+  </div>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
