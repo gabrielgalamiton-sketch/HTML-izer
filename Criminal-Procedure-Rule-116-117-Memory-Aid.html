@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criminal Procedure Memory Aid · Rules 116, 117, Double Jeopardy &amp; Pre-Trial (General Rule &amp; Exceptions)</title>
+  <style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  cursor: pointer;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.93rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0.5rem;
+  border-bottom: 1.5px solid #CBD5E1;
+  background-color: #F8FAFC;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0.5rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+.ui-table tr:hover td {
+  background-color: #F8FAFC;
+}
+
+/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
+.diagram-wrapper {
+  margin: 2rem 0;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.diagram-wrapper.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.diagram-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  z-index: 2;
+}
+.diagram-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  letter-spacing: 0.05em;
+}
+.diagram-hint {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+.diagram-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+.zoom-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.zoom-btn:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+.diagram-viewport {
+  overflow: hidden;
+  min-height: 260px;
+  max-height: 75vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+.diagram-viewport.is-dragging {
+  cursor: grabbing;
+}
+.diagram-wrapper.is-fullscreen .diagram-viewport {
+  flex: 1;
+  max-height: none;
+  height: 100%;
+  padding: 2rem;
+}
+.diagram-container {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+.diagram-viewport.is-dragging .diagram-container {
+  transition: none;
+}
+.diagram-wrapper.is-fullscreen .diagram-container svg {
+  max-width: none !important;
+}
+
+/* Additional Typographical Hierarchy & Memory Aid Rule-Exception Cards */
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.subtitle-meta {
+  font-size: 0.92rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  padding: 0.65rem 1rem;
+  background: #F1F5F9;
+  border-left: 4px solid #1E3A8A;
+  border-radius: 0 6px 6px 0;
+}
+h3 {
+  color: #1E3A8A;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.85rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 4.5rem;
+  border-bottom: 1.5px solid #E2E8F0;
+  padding-bottom: 0.35rem;
+}
+h4 {
+  color: #1E3A8A;
+  font-size: 1.03rem;
+  font-weight: 700;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 4.5rem;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #CBD5E1;
+  margin: 2.25rem 0;
+}
+ul, ol {
+  padding-left: 1.4rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+li {
+  margin-bottom: 0.45rem;
+}
+
+.cue-banner {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin: 0.85rem 0 1.25rem 0;
+  font-size: 0.92rem;
+  color: #1E3A8A;
+}
+
+.rule-card {
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.rule-card-title {
+  background: #F8FAFC;
+  padding: 0.6rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1E3A8A;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.rule-provision {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0F766E;
+  background: #CCFBF1;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+.gr-row {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px dashed #E2E8F0;
+  background: #FFFFFF;
+}
+.exc-row {
+  padding: 0.85rem 1.1rem;
+  background: #FFFBF5;
+}
+.tag-gr {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #166534;
+  background: #DCFCE7;
+  border: 1px solid #86EFAC;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.tag-exc {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #C2410C;
+  background: #FFEDD5;
+  border: 1px solid #FDBA74;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+.tag-none {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #475569;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+
+.callout-box {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #1E3A8A;
+  padding: 1.15rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .document-container {
+    padding: 1.5rem 1.25rem;
+    margin: 0.5rem auto;
+  }
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .sticky-nav, .diagram-toolbar { display: none; }
+  .document-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
+  .rule-card { break-inside: avoid; }
+}
+  </style>
+</head>
+<body>
+
+<!-- STICKY TOPIC NAVIGATION BAR -->
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or rule...</option>
+      <option value="#memory-aid-header">TOP: Memory Aid &amp; General Rule–Exception Master Reviewer</option>
+      <option value="#master-decision-flowchart">&nbsp;&nbsp;↳ DIAGRAM: Master Criminal Procedure Decision Map</option>
+      <option value="#sec-1-arraignment">1. Arraignment &amp; Plea Mechanics (Rule 116)</option>
+      <option value="#gr-counsel">&nbsp;&nbsp;↳ Right to Counsel &amp; De Officio Duty</option>
+      <option value="#gr-language">&nbsp;&nbsp;↳ Language, Translation &amp; Direct Vernacular Reading</option>
+      <option value="#gr-refusal-plea">&nbsp;&nbsp;↳ Refusal / Conditional Plea &amp; Plea Bargaining</option>
+      <option value="#gr-postponement">&nbsp;&nbsp;↳ Postponement / Suspension of Arraignment (U-P-P-P-B)</option>
+      <option value="#gr-summary-mtq">&nbsp;&nbsp;↳ Summary Procedure vs. Regular Procedure (Barangay Conciliation)</option>
+      <option value="#sec-2-motion-to-quash">2. Motion to Quash: Timing, Waiver &amp; Comparisons (Rule 117)</option>
+      <option value="#gr-pre-plea-waiver">&nbsp;&nbsp;↳ Pre-Plea Mandate &amp; The 4 Non-Waivable Grounds (F-J-E-D)</option>
+      <option value="#gr-effect-grant-denial">&nbsp;&nbsp;↳ Effect of Grant (Amendment/Refiling) &amp; Denial (Interlocutory)</option>
+      <option value="#gr-excluded-matters">&nbsp;&nbsp;↳ Matters EXCLUDED from Rule 117 (PI, Desistance, Judicial PC)</option>
+      <option value="#table-mtq-demurrer-withdraw">&nbsp;&nbsp;↳ Table: Motion to Quash vs. Demurrer vs. Withdrawal</option>
+      <option value="#sec-3-nine-grounds">3. The 9 Grounds to Quash — Rule &amp; Exception Matrix (Sec. 3)</option>
+      <option value="#table-nine-grounds">&nbsp;&nbsp;↳ Quick-Recall Matrix: Grounds (a) to (i)</option>
+      <option value="#gr-duplicity-excuse-person">&nbsp;&nbsp;↳ Highlighted Traps: Jurisdiction over Person, Duplicity &amp; Excuse</option>
+      <option value="#sec-4-double-jeopardy">4. Double Jeopardy &amp; Special Doctrines (Art. III, Sec. 21)</option>
+      <option value="#dj-cvats-cards">&nbsp;&nbsp;↳ The 5 Cardinal Requisites (C-V-A-T-S)</option>
+      <option value="#gr-acquittal-yasa">&nbsp;&nbsp;↳ Finality of Acquittal &amp; Standing (Yasa v. Chavez)</option>
+      <option value="#gr-without-consent">&nbsp;&nbsp;↳ "Without Express Consent" &amp; Exceptions (Demurrer / Speedy Trial)</option>
+      <option value="#gr-ivler-distinct">&nbsp;&nbsp;↳ Quasi-Offenses (Ivler Doctrine) vs. Distinct Statutes</option>
+      <option value="#gr-sec7-exceptions">&nbsp;&nbsp;↳ Sec. 7 Exceptions (S-F-P) &amp; Non-Judicial Proceedings</option>
+      <option value="#sec-5-provisional-pretrial">5. Provisional Dismissal, Finality &amp; Pre-Trial (Rules 117–120)</option>
+      <option value="#gr-provisional-dismissal">&nbsp;&nbsp;↳ Provisional Dismissal &amp; Time-Bar Clock (1 Yr vs. 2 Yrs)</option>
+      <option value="#gr-pretrial-finality">&nbsp;&nbsp;↳ Mandatory Pre-Trial (Rule 118), Corpus Delicti &amp; Finality</option>
+      <option value="#sec-6-rapid-drill">6. 60-Second Rapid Quiz Drill &amp; Exam Admin Reminders</option>
+    </select>
+  </div>
+</nav>
+
+<div class="document-container">
+
+  <h1 id="memory-aid-header">Criminal Procedure Memory Aid · Rules 116, 117 &amp; Double Jeopardy</h1>
+  <div class="subtitle-meta">
+    <strong>Quick, Brief &amp; Substantial Reviewer</strong> (Based on Lecture Notes: Arraignment, Motion to Quash, Double Jeopardy, Provisional Dismissal &amp; Pre-Trial) &bull; Structured in <strong>General Rule &rarr; Exception/s</strong> Format
+  </div>
+
+  <!-- 5-PILLAR ROADMAP CARD -->
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">1</div>
+        <div class="ui-kicker">RULE 116</div>
+        <div class="ui-title">Arraignment</div>
+        <div class="ui-sub">C-L-R Duties, U-P-P-P-B Delays &amp; Summary Rule</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">2</div>
+        <div class="ui-kicker">RULE 117 (§1-§2, §9)</div>
+        <div class="ui-title">MTQ Timing &amp; Traps</div>
+        <div class="ui-sub">Pre-Plea Window, F-J-E-D &amp; Excluded Matters</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">3</div>
+        <div class="ui-kicker">RULE 117 (§3-§4)</div>
+        <div class="ui-title">9 Grounds Matrix</div>
+        <div class="ui-sub">4 Corners, Jurisdictions, Duplicity &amp; Excuses</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">4</div>
+        <div class="ui-kicker">CONST. &amp; §7</div>
+        <div class="ui-title">Double Jeopardy</div>
+        <div class="ui-sub">C-V-A-T-S, Yasa, Ivler &amp; S-F-P Exceptions</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">5</div>
+        <div class="ui-kicker">§8 &amp; RULE 118</div>
+        <div class="ui-title">Time-Bar &amp; Pre-Trial</div>
+        <div class="ui-sub">1-Yr vs. 2-Yr Bar, Speedy Trial &amp; Signatures</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTER MERMAID DIAGRAM -->
+  <div class="diagram-wrapper" id="master-decision-flowchart">
+    <div class="diagram-toolbar">
+      <span class="diagram-label">DIAGRAM VIEW: MASTER CRIMINAL PROCEDURE DECISION MAP <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
+      <div class="diagram-controls">
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
+        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
+        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
+        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="diagram-viewport">
+      <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TD
+  Start["Information Filed in Court<br/>(Crespo v. Mogul: Court has full control)"] --> PrePlea{"Pre-Arraignment Action?"}
+  PrePlea -- "No PI / No Fiscal Cert." --> Suspend["Motion to Suspend &amp; Remand<br/>(NOT Motion to Quash!)"]
+  PrePlea -- "Rule 116 §11 Grounds (U-P-P-P-B)" --> Postpone["Suspend / Reset Arraignment<br/>(DOJ/OP Review max 60 days)"]
+  PrePlea -- "Rule 117 §3 Defects" --> MTQ["MOTION TO QUASH (Written, Signed, 3-Day Notice)<br/>Must file BEFORE Plea!"]
+
+  MTQ -- "Granted: §3(a)/(e)" --> Amend["Order Amendment First (§4)"]
+  MTQ -- "Granted: §3(g)/(i)" --> PermBar["Permanent Bar (Prescription / Jeopardy)"]
+  MTQ -- "Denied" --> Interloc["Interlocutory: Proceed to Plea<br/>(Rule 65 only for Grave Abuse)"]
+
+  Plea["ARRAIGNMENT &amp; VALID PLEA<br/>(Fulcrum of Double Jeopardy!)"] --> Waiver["Sec. 9 Waiver:<br/>Waivable (c,d,e,f,h) GONE!<br/>Non-Waivable (F-J-E-D: a,b,g,i) SURVIVE"]
+  Plea --> Trial["Mandatory Pre-Trial (Rule 118)<br/>(Signed by BOTH Accused &amp; Counsel) → Trial"]
+
+  Trial --> EndWay{"How Case Ends?"}
+  EndWay -- "Demurrer w/o Leave Denied" --> LoseEvid["Defense Evidence WAIVED!"]
+  EndWay -- "Acquittal / Demurrer Granted / Speedy Trial" --> DJ["DOUBLE JEOPARDY ATTACHES<br/>Final Immediately (Yasa: OSG Rule 65 only)"]
+  EndWay -- "Provisional Dismissal (§8)<br/>Consent + Notice" --> TimeBar["1 Yr (6 yrs or less) / 2 Yrs (over 6 yrs)<br/>Expires w/o Prosecutor Revival → PERMANENT BAR"]
+
+  classDef primary fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
+  classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
+  classDef green fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
+  classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
+
+  class Start,Plea primary;
+  class PrePlea,MTQ,EndWay,Trial teal;
+  class Suspend,Postpone,Amend,DJ green;
+  class PermBar,Interloc,Waiver,LoseEvid,TimeBar rust;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 1: ARRAIGNMENT ==================== -->
+  <h3 id="sec-1-arraignment">1. Arraignment &amp; Plea Mechanics (<span class="c-teal">Rule 116</span>)</h3>
+
+  <div class="cue-banner">
+    <strong>Memory Anchor — Why Arraignment Matters:</strong> Operationalizes <span class="c-teal">Art. III, Sec. 14(2)</span> (right to be informed). <span class="c-green"><strong><u>No valid arraignment &amp; plea = issues not joined</u></strong></span> &rarr; trial is <span class="c-rust"><strong><u>void <em>ab initio</em></u></strong></span> &rarr; <span class="c-rust"><strong><u>no double jeopardy attaches</u></strong></span>. Recall the 3 courtroom duties: <strong>C–L–R</strong> (<strong>C</strong>ounsel, <strong>L</strong>anguage, <strong>R</strong>efusal to plead).
+  </div>
+
+  <div class="rule-card" id="gr-counsel">
+    <div class="rule-card-title">
+      <span>A. Right to Counsel &amp; Counsel <em>de Officio</em></span>
+      <span class="rule-provision">Rule 116, Secs. 6, 7 &amp; 8</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      An accused cannot be forced to plead without counsel. If unrepresented, the judge has a <span class="c-green"><strong><u>mandatory affirmative duty</u></strong></span> to: (1) inform accused of the right to counsel; (2) ask if he desires counsel of choice (granting reasonable time if he can afford one); or (3) appoint a <span class="c-teal"><strong>counsel <em>de officio</em></strong></span> (routinely PAO) and give <span class="c-green"><strong><u>sufficient time to confer, inspect records, and examine the Information</u></strong></span> before pleading (<span class="c-teal">Sec. 8</span>). Instantaneous plea = reversible error.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exception</span>
+      The accused may be allowed to defend himself in person <span class="c-rust"><strong><u>upon a showing of capacity to do so</u></strong></span>.
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-language">
+    <div class="rule-card-title">
+      <span>B. Language, Translation &amp; Qualifying Circumstances</span>
+      <span class="rule-provision">Rule 116, Sec. 1(a)</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      The Information must be read in open court in a <span class="c-green"><strong><u>language or dialect known to and understood by the accused</u></strong></span>. Translation must explain legal terms of art—such as <em>treachery</em> (defenseless attack without risk to offender) and <em>evident premeditation</em> (deliberate, cold-blooded planning) in Murder (<span class="c-teal">Art. 248, RPC</span>), and culpable lack of care in quasi-offenses (<span class="c-teal">Art. 365, RPC</span>). Mere nodding to an English reading = <span class="c-rust"><strong><u>no valid arraignment</u></strong></span>.
+    </div>
+    <div class="exc-row">
+      <span class="tag-none">Efficiency Practice</span>
+      Courts may direct the prosecutor, clerk, or interpreter to read the Information <span class="c-green"><strong><u>directly in the chosen vernacular</u></strong></span> (avoiding double English-then-vernacular reading), followed by an explicit on-record inquiry confirming the accused understood before receiving the plea.
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-refusal-plea">
+    <div class="rule-card-title">
+      <span>C. Refusal to Plead &amp; Plea Bargaining to a Lesser Offense</span>
+      <span class="rule-provision">Rule 116, Sec. 1(c) &amp; Sec. 1(f)</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Refusal)</span>
+      When the accused stands mute, refuses to plead, or makes a conditional plea, a plea of <span class="c-green"><strong><u>"Not Guilty"</u></strong></span> shall automatically be entered for him (<span class="c-teal">Sec. 1[c]</span>). Silence never admits guilt; the State retains the burden of proof beyond reasonable doubt.
+    </div>
+    <div class="gr-row" style="border-top: 1px solid #E2E8F0;">
+      <span class="tag-gr">General Rule (Plea Bargain)</span>
+      Pleading guilty to a lesser included offense requires the <span class="c-green"><strong><u>joint, concurrent consent of BOTH the public prosecutor AND the private offended party</u></strong></span> (<span class="c-teal">Sec. 1[f]</span>). Without both, the plea is irregular and <span class="c-rust"><strong><u>does not bar a second prosecution</u></strong></span> (<span class="c-teal">Rule 117, Sec. 7[c]</span>).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exception (Plea Bargain)</span>
+      The private offended party’s presence or consent may be dispensed with if the offended party <span class="c-green"><strong><u>failed to appear at the arraignment despite due notice</u></strong></span> (court + fiscal may proceed validly, and double jeopardy attaches).
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-postponement">
+    <div class="rule-card-title">
+      <span>D. Grounds to Suspend or Postpone Arraignment (Mnemonic: <strong>U–P–P–P–B</strong>)</span>
+      <span class="rule-provision">Rule 116, Sec. 11 &amp; Sec. 9</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      Arraignment proceeds on schedule; the court is not bound to grant resets for mere counsel convenience. <span class="c-rust"><strong><u>"Failure to furnish an advance physical copy of the Information" is NOT a valid ground</u></strong></span> (records are public and the Information is read in open court).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (5 Exclusive Grounds — U-P-P-P-B)</span>
+      <ol style="margin-bottom:0;">
+        <li><strong>U</strong>nsound mental condition rendering accused unable to understand/plead intelligently (court orders psychiatric exam/confinement);</li>
+        <li><strong>P</strong>rejudicial question in a pending civil action determinative of criminal liability;</li>
+        <li><strong>P</strong>ending Petition for Review at the DOJ or Office of the President (suspension <span class="c-rust"><strong><u>not to exceed 60 days</u></strong></span> from filing);</li>
+        <li><strong>P</strong>ending Motion for Regular Preliminary Investigation in inquest cases (<span class="c-teal">Rule 112, Sec. 6</span>) invoked within the <span class="c-teal"><strong>5-day</strong></span> reglementary period from learning of filing;</li>
+        <li>Motion for <strong>B</strong>ill of Particulars (<span class="c-teal">Rule 116, Sec. 9</span>) to clarify vague/ambiguous averments prior to plea.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-summary-mtq">
+    <div class="rule-card-title">
+      <span>E. Motions to Quash in Summary Procedure vs. Regular Criminal Procedure</span>
+      <span class="rule-provision">Sec. 19, Sum. Proc. vs. Rules of Court</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Summary)</span>
+      Under <span class="c-teal">Section 19 of the Revised Rules on Summary Procedure</span> (penalty &le; 6 months imprisonment or fine), a <span class="c-rust"><strong><u>Motion to Quash is a PROHIBITED pleading</u></strong></span> (unlike regular criminal cases where all 9 grounds under Rule 117, Sec. 3 are allowed).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (Only 2 Allowed in Summary Procedure)</span>
+      <ol style="margin-bottom:0.5rem;">
+        <li><span class="c-green"><strong>Lack of jurisdiction over the subject matter (offense)</strong></span>; or</li>
+        <li><span class="c-green"><strong>Failure to comply with a condition precedent</strong></span> — specifically mandatory prior Barangay Conciliation (<span class="c-teal">R.A. 7160</span>).</li>
+      </ol>
+      <strong>Crucial Procedural Trap (Barangay Conciliation):</strong> In <em>Summary Procedure</em>, the court may dismiss <span class="c-green"><strong><u><em>motu proprio</em> at any stage</u></strong></span> if no Certification to File Action is attached. In <em>Regular Cases</em>, the court <span class="c-rust"><strong><u>cannot dismiss <em>motu proprio</em></u></strong></span>; failure to object before plea constitutes an <span class="c-rust"><strong><u>irrevocable waiver</u></strong></span>.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 2: MOTION TO QUASH ==================== -->
+  <h3 id="sec-2-motion-to-quash">2. Motion to Quash: Timing, Waiver &amp; Comparisons (<span class="c-teal">Rule 117</span>)</h3>
+
+  <div class="cue-banner">
+    <strong>Formal Requisites (<span class="c-teal">Rule 117, Sec. 2</span>):</strong> Must be <strong>(1) In Writing</strong> (no oral MTQ), <strong>(2) Signed</strong> by accused or counsel, <strong>(3) Distinctly Specifying</strong> factual &amp; legal grounds, and <strong>(4) Set for Hearing</strong> with at least <span class="c-teal"><strong>3 days prior notice</strong></span> (<span class="c-teal">Rule 15, Sec. 4</span>).
+  </div>
+
+  <div class="rule-card" id="gr-pre-plea-waiver">
+    <div class="rule-card-title">
+      <span>A. Pre-Plea Mandate &amp; Waiver Rule (Mnemonic for Non-Waivable: <strong>F–J–E–D</strong>)</span>
+      <span class="rule-provision">Rule 117, Secs. 1 &amp; 9</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      A Motion to Quash must be filed <span class="c-green"><strong><u>BEFORE the accused enters his plea</u></strong></span> (<span class="c-teal">Sec. 1</span>). Once a plea is entered, all grounds not invoked are <span class="c-rust"><strong><u>deemed WAIVED</u></strong></span> (<span class="c-teal">Sec. 9</span>)—curing grounds (c), (d), (e), (f), and (h).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (4 Non-Waivable Grounds — F-J-E-D)</span>
+      May be raised at <strong>any stage</strong> (even on appeal) or dismissed <em>motu proprio</em>:
+      <ol style="margin-bottom:0;">
+        <li><strong>F</strong>acts charged do not constitute an offense — <span class="c-teal"><strong>Sec. 3(a)</strong></span></li>
+        <li>Lack of <strong>J</strong>urisdiction over the offense charged — <span class="c-teal"><strong>Sec. 3(b)</strong></span></li>
+        <li><strong>E</strong>xtinction of criminal action or liability (e.g., prescription) — <span class="c-teal"><strong>Sec. 3(g)</strong></span></li>
+        <li><strong>D</strong>ouble Jeopardy (prior conviction, acquittal, or termination without consent) — <span class="c-teal"><strong>Sec. 3(i)</strong></span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-effect-grant-denial">
+    <div class="rule-card-title">
+      <span>B. Legal Effects of Granting or Denying a Motion to Quash</span>
+      <span class="rule-provision">Rule 117, Secs. 4–6</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Grant)</span>
+      Granting a Motion to Quash is <span class="c-rust"><strong><u>NOT an acquittal</u></strong></span>; the State may amend or refile. Specifically under <span class="c-teal">Sec. 3(a)</span> (facts don't constitute offense) and <span class="c-teal">Sec. 3(e)</span> (form), the court <span class="c-rust"><strong><u>shall not immediately dismiss</u></strong></span>—it must first allow the prosecution to <span class="c-green"><strong><u>amend the Information</u></strong></span> (<span class="c-teal">Sec. 4</span>).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (Permanent Bar on Grant)</span>
+      Quashal bars another prosecution permanently ONLY when grounded on <span class="c-green"><strong>Extinction / Prescription (Sec. 3[g])</strong></span> or <span class="c-green"><strong>Double Jeopardy (Sec. 3[i])</strong></span> (or when prosecution fails/cannot cure a Sec. 3[a] defect via amendment).
+    </div>
+    <div class="gr-row" style="border-top: 1px solid #E2E8F0;">
+      <span class="tag-gr">General Rule (Denial)</span>
+      An order denying a Motion to Quash is <span class="c-teal"><strong>interlocutory</strong></span> and <span class="c-rust"><strong><u>cannot be immediately appealed</u></strong></span>; the accused must plead and proceed to trial.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exception (Denial)</span>
+      Extraordinary Petition for <em>Certiorari</em> (<span class="c-teal">Rule 65</span>) lies if the court acted with <span class="c-rust"><strong><u>patent lack of jurisdiction or grave abuse of discretion</u></strong></span>.
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-excluded-matters">
+    <div class="rule-card-title">
+      <span>C. Extrinsic Matters EXCLUDED from a Rule 117 Motion to Quash</span>
+      <span class="rule-provision">Rule 112 vs. Rule 110 vs. Rule 117</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (No PI / No Cert.)</span>
+      <span class="c-rust"><strong><u>Absence of Preliminary Investigation</u></strong></span> or <span class="c-rust"><strong><u>omission of the fiscal’s certification</u></strong></span> (<span class="c-teal">Rule 112, Sec. 4</span>) is <span class="c-rust"><strong><u>NOT a ground to quash</u></strong></span>. Validity of the Information depends on <span class="c-teal">Rule 110, Secs. 6 &amp; 8</span>, and upon filing, the court acquires full control (<span class="c-burgundy"><em>Crespo v. Mogul</em></span>).<br>
+      &rarr; <strong>Proper Remedy:</strong> File a <span class="c-green"><strong><u>Motion to Suspend Proceedings and Remand</u></strong></span> for preliminary investigation prior to plea (or direct fiscal to supply oath certification).
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Desistance)</span>
+      An <span class="c-rust"><strong><u>Affidavit of Desistance</u></strong></span> is <span class="c-rust"><strong><u>NOT a ground to quash</u></strong></span> (crime is against the People; complainant is merely a State witness; private compromise cannot extinguish public criminal liability as a matter of right).<br>
+      &rarr; <strong>Practical Effect:</strong> Operates on prosecutor/court discretion via a <span class="c-green"><strong>prosecutor’s Motion to Dismiss</strong></span> or dismissal for insufficiency of evidence if witness refuses to testify.
+    </div>
+    <div class="exc-row">
+      <span class="tag-none">Distinction (Judicial Probable Cause)</span>
+      Under <span class="c-teal">Rule 112, Sec. 5</span>, the judge independently evaluates supporting evidence within <span class="c-teal"><strong>10 days</strong></span> from filing and may dismiss <span class="c-green"><strong><u><em>motu proprio</em> for lack of judicial probable cause</u></strong></span> (e.g., <em>P.D. 1602</em> gambling complaint lacking operator identity/bet proof). This is a Rule 112 dismissal, <span class="c-rust"><strong>NOT</strong></span> a Rule 117 quashal.
+    </div>
+  </div>
+
+  <h4 id="table-mtq-demurrer-withdraw">D. Quick Comparison: Motion to Quash vs. Demurrer to Evidence vs. Motion to Withdraw</h4>
+  <table class="ui-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Feature</th>
+        <th style="width: 26%;">Motion to Quash<br>(Rule 117)</th>
+        <th style="width: 28%;">Demurrer to Evidence<br>(Rule 119, Sec. 23)</th>
+        <th style="width: 24%;">Motion to Withdraw Info<br>(Crespo v. Mogul)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Timing</strong></td>
+        <td><span class="c-green"><strong>Before plea</strong></span></td>
+        <td><span class="c-teal"><strong>After prosecution rests</strong></span></td>
+        <td><span class="c-green"><strong>Before plea</strong></span></td>
+      </tr>
+      <tr>
+        <td><strong>Ground / Basis</strong></td>
+        <td>9 exclusive statutory defects (Sec. 3)</td>
+        <td>Sole ground: <span class="c-green"><strong>insufficiency of evidence</strong></span></td>
+        <td>Prosecutor/DOJ resolution (court exercises independent discretion)</td>
+      </tr>
+      <tr>
+        <td><strong>Leave of Court</strong></td>
+        <td>Not required (absolute right pre-plea)</td>
+        <td>With leave &rarr; if denied, present defense.<br><span class="c-rust"><strong>Without leave &rarr; waives defense evidence!</strong></span></td>
+        <td>Subject to independent judicial assessment</td>
+      </tr>
+      <tr>
+        <td><strong>Double Jeopardy &amp; Effect</strong></td>
+        <td><span class="c-rust"><strong>No jeopardy</strong></span> (Exc: Prescription / DJ); State may amend or refile</td>
+        <td>Grant = <span class="c-green"><strong>Full Acquittal</strong></span>; <span class="c-green"><strong>Double Jeopardy attaches immediately</strong></span>; State cannot appeal</td>
+        <td><span class="c-rust"><strong>No jeopardy</strong></span>; State may refile upon curing defect / new proof</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- ==================== SECTION 3: 9 GROUNDS MATRIX ==================== -->
+  <h3 id="sec-3-nine-grounds">3. The 9 Grounds to Quash — Rule &amp; Exception Matrix (<span class="c-teal">Rule 117, Sec. 3</span>)</h3>
+
+  <div id="table-nine-grounds">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Ground (Sec. 3)</th>
+          <th style="width: 14%;">Waivable?</th>
+          <th style="width: 62%;">Operative Test, Rule &amp; Exception</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>(a) Facts do not constitute an offense</strong></td>
+          <td><span class="c-green"><strong>NO</strong></span><br>(F-J-E-D)</td>
+          <td><strong>Test:</strong> <span class="c-green"><strong><u>Hypothetical Admission + Four Corners</u></strong></span> (no extraneous proof).<br><strong>GR:</strong> Order <span class="c-green"><strong>amendment</strong></span> first (Sec. 4). <strong>EXC:</strong> Quash if fiscal refuses/fails/cannot cure.</td>
+        </tr>
+        <tr>
+          <td><strong>(b) Lack of jurisdiction over offense</strong></td>
+          <td><span class="c-green"><strong>NO</strong></span><br>(F-J-E-D)</td>
+          <td><strong>Test:</strong> Allegations in Info (territory + statutory penalty: MTC &le; 6 yrs / BP 22 / Summary; RTC &gt; 6 yrs).<br><strong>GR:</strong> Court must dismiss <span class="c-green"><strong><u><em>motu proprio</em></u></strong></span>; cannot be conferred by consent or waiver.</td>
+        </tr>
+        <tr>
+          <td><strong>(c) Lack of jurisdiction over person</strong></td>
+          <td><span class="c-rust"><strong>YES</strong></span></td>
+          <td><strong>Acquired by:</strong> Lawful arrest (warrant / Rule 113, Sec. 5) or voluntary surrender/appearance.<br><strong>GR:</strong> Waived/cured by entering plea. <strong>EXC:</strong> <span class="c-rust"><strong>Exclusionary Rule (Art. III, Sec. 3[2])</strong></span> is NOT waived—seized evidence stays inadmissible ("fruit of poisonous tree").</td>
+        </tr>
+        <tr>
+          <td><strong>(d) Officer had no authority to file</strong></td>
+          <td><span class="c-rust"><strong>YES</strong></span><br><span style="font-size:0.78rem; color:#64748B;">(Sec. 9 matrix)</span></td>
+          <td>Assistant prosecutor needs <span class="c-green"><strong><u>prior written approval</u></strong></span> of Provincial/City Prosecutor (or Ombudsman/Special Prosecutor); bound by territorial office limits. Lack of authority = <span class="c-rust"><strong>absolute nullity</strong></span> (not cured by post-plea approval).</td>
+        </tr>
+        <tr>
+          <td><strong>(e) Non-conformity to prescribed form</strong></td>
+          <td><span class="c-rust"><strong>YES</strong></span></td>
+          <td><strong>Test:</strong> Substantial compliance with <span class="c-teal">Rule 110, Secs. 6–12</span>.<br><strong>GR:</strong> Remedy is <span class="c-green"><strong>amendment</strong></span> (Sec. 4), rarely fatal dismissal.</td>
+        </tr>
+        <tr>
+          <td><strong>(f) Duplicity (More than 1 offense)</strong></td>
+          <td><span class="c-rust"><strong>YES</strong></span></td>
+          <td><strong>GR:</strong> Info must charge only one offense (<span class="c-teal">Rule 110, Sec. 13</span>). If waived by plea, court may <span class="c-rust"><strong><u>convict for ALL proved offenses &amp; impose separate penalties</u></strong></span>.<br><strong>EXC:</strong> (1) Complex crimes (<span class="c-teal">Art. 48, RPC</span>); (2) Quasi-offenses (<span class="c-teal">Art. 365, RPC</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>(g) Extinction / Prescription</strong></td>
+          <td><span class="c-green"><strong>NO</strong></span><br>(F-J-E-D)</td>
+          <td><span class="c-teal">Art. 89/90 RPC</span>; <span class="c-teal">Act 3326</span> (special laws); death, service, amnesty, pardon, prescription. Substantive bar; <span class="c-rust"><strong><u>permanently bars refiling</u></strong></span>.</td>
+        </tr>
+        <tr>
+          <td><strong>(h) Legal excuse or justification</strong></td>
+          <td><span class="c-rust"><strong>YES</strong></span></td>
+          <td><strong>GR:</strong> Affirmative defenses (e.g., self-defense) require trial proof <em>aliunde</em>.<br><strong>EXC:</strong> Quashable ONLY if justifying (Art. 11), exempting (Art. 12[4] accident), or absolutory cause (Art. 247) appears <span class="c-rust"><strong><u>expressly on the face of the Information</u></strong></span>.</td>
+        </tr>
+        <tr>
+          <td><strong>(i) Double Jeopardy</strong></td>
+          <td><span class="c-green"><strong>NO</strong></span><br>(F-J-E-D)</td>
+          <td><span class="c-teal">Art. III, Sec. 21, Const.</span>; prior conviction, acquittal, or dismissal without express consent for same offense; <span class="c-rust"><strong><u>permanently bars refiling</u></strong></span>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rule-card" id="gr-duplicity-excuse-person">
+    <div class="rule-card-title">
+      <span>High-Yield Exam Traps in Grounds (c), (f), and (h)</span>
+      <span class="rule-provision">Rule 117, Sec. 3(c), (f) &amp; (h)</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">Trap 1: Illegal Arrest</span>
+      Entering a plea cures lack of jurisdiction over the person (<span class="c-teal">Sec. 3[c]</span>), <span class="c-rust"><strong><u>BUT DOES NOT validate an unlawful incidental search</u></strong></span>. Under <span class="c-teal">Art. III, Sec. 3(2)</span>, confiscated items remain inadmissible, leading to acquittal for insufficiency of evidence.
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">Trap 2: Duplicity Waiver</span>
+      Silence before plea on an Information charging Theft + Estafa (<span class="c-teal">Sec. 3[f]</span>) authorizes the trial judge to impose <span class="c-rust"><strong><u>two separate convictions and penalties</u></strong></span> if both are proven at trial.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Trap 3: Battered Woman Syndrome (BWS)</span>
+      While recognized under <span class="c-teal">R.A. 9262</span> and <span class="c-burgundy"><em>People v. Genosa</em></span>, BWS normally requires psychiatric expert testimony and proof of a cycle of violence—so it is <span class="c-rust"><strong><u>rarely established on the face of an Information</u></strong></span> under <span class="c-teal">Sec. 3(h)</span> and must be proven at trial.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 4: DOUBLE JEOPARDY ==================== -->
+  <h3 id="sec-4-double-jeopardy">4. Double Jeopardy &amp; Special Doctrines (<span class="c-teal">Art. III, Sec. 21</span>)</h3>
+
+  <!-- 5 CARDINAL REQUISITES C-V-A-T-S -->
+  <div class="ui-box" id="dj-cvats-cards">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">C</div>
+        <div class="ui-kicker">COURT</div>
+        <div class="ui-title">Competent Court</div>
+        <div class="ui-sub">Subject-matter &amp; person jurisdiction</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">V</div>
+        <div class="ui-kicker">PLEADING</div>
+        <div class="ui-title">Valid Info</div>
+        <div class="ui-sub">Sufficient in form &amp; substance</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">A</div>
+        <div class="ui-kicker">FULCRUM</div>
+        <div class="ui-title">Arraignment &amp; Plea</div>
+        <div class="ui-sub">Pre-plea dismissal = NO jeopardy</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">T</div>
+        <div class="ui-kicker">OUTCOME</div>
+        <div class="ui-title">Terminated w/o Consent</div>
+        <div class="ui-sub">Convicted, acquitted, or non-consensual</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">S</div>
+        <div class="ui-kicker">IDENTITY</div>
+        <div class="ui-title">Same Offense</div>
+        <div class="ui-sub">Attempt, frustration, or included</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-acquittal-yasa">
+    <div class="rule-card-title">
+      <span>A. Finality of Acquittal &amp; Appellate Standing (<em>Yasa v. Chavez</em>)</span>
+      <span class="rule-provision">G.R. No. 273948 (June 23, 2021)</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      A judgment of <span class="c-green"><strong><u>acquittal is immediately final, executory, and unappealable</u></strong></span> (no 15-day period; no motion for reconsideration). A <span class="c-rust"><strong><u>private complainant lacks legal standing</u></strong></span> to appeal or file Rule 65 <em>certiorari</em> to reverse a criminal acquittal or a Demurrer dismissal.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions</span>
+      <ol style="margin-bottom:0;">
+        <li><strong>Criminal Aspect (<span class="c-teal">Rule 65 Certiorari</span>):</strong> May be filed <span class="c-green"><strong><u>exclusively by the Office of the Solicitor General (OSG)</u></strong></span> ONLY upon proof of <span class="c-rust"><strong>grave abuse of discretion</strong></span> amounting to lack/excess of jurisdiction or <span class="c-rust"><strong>denial of due process</strong></span> (e.g., sham/mock trial)—never mere errors of law or evidence appreciation.</li>
+        <li><strong>Civil Aspect:</strong> The <span class="c-green"><strong><u>private offended party HAS standing</u></strong></span> to appeal <span class="c-green"><strong>solely the civil liability</strong></span> (restitution/damages); double jeopardy does not apply to civil obligations.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-without-consent">
+    <div class="rule-card-title">
+      <span>B. Termination "Without Express Consent" of the Accused</span>
+      <span class="rule-provision">4th Requisite of Jeopardy</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      If the case is dismissed <span class="c-rust"><strong><u>upon motion or with the express consent</u></strong></span> of the accused, double jeopardy does <span class="c-rust"><strong>NOT</strong></span> attach and the State may refile.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (2 Dismissals on Defense Motion = Acquittal &amp; Jeopardy)</span>
+      <ol style="margin-bottom:0;">
+        <li><span class="c-green"><strong>Grant of Demurrer to Evidence</strong></span> (<span class="c-teal">Rule 119, Sec. 23</span>) — adjudication on merits of insufficiency of proof;</li>
+        <li><span class="c-green"><strong>Dismissal for Violation of Constitutional Right to Speedy Trial</strong></span> — repeated, unjustified prosecution delays across settings.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-ivler-distinct">
+    <div class="rule-card-title">
+      <span>C. Single Act Violating Distinct Statutes vs. Quasi-Offenses (<em>Ivler</em> Doctrine)</span>
+      <span class="rule-provision">Ivler v. Modesto-San Pedro (G.R. No. 172716)</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Distinct Statutes)</span>
+      When a single intentional act violates two distinct penal statutes, double jeopardy does <span class="c-rust"><strong>NOT</strong></span> attach if each statute requires proof of an element the other does not (<span class="c-green"><strong>Same Evidence / Different Elements Test</strong></span>) — e.g., <strong>Estafa (Art. 315) + B.P. 22</strong>; <strong>Estafa + Illegal Recruitment (R.A. 8042)</strong>.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exception / Special Rule (Art. 365 Quasi-Offenses — Ivler)</span>
+      <span class="c-burgundy"><em>Ivler v. Modesto-San Pedro</em></span> (Nov. 17, 2010): Reckless imprudence under <span class="c-teal">Art. 365, RPC</span> is a <span class="c-green"><strong><u>single, indivisible crime</u></strong></span> penalizing negligence itself, NOT the resulting harms. <span class="c-rust"><strong><u>Art. 48 (Complex Crimes) does NOT apply</u></strong></span> to Art. 365. Prior plea/conviction for a lesser result (e.g., slight physical injuries) <span class="c-rust"><strong><u>completely bars</u></strong></span> prosecution for graver consequences (e.g., homicide) from the same mishap.
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-sec7-exceptions">
+    <div class="rule-card-title">
+      <span>D. Statutory Exceptions (<strong>S–F–P</strong>) &amp; Non-Judicial Proceedings</span>
+      <span class="rule-provision">Rule 117, Sec. 7</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Inclusion)</span>
+      Prior conviction bars another prosecution for any offense that necessarily includes the offense charged in the former Information.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Exceptions (3 Cases Under Sec. 7 — S-F-P)</span>
+      <ol style="margin-bottom:0.5rem;">
+        <li><strong>S</strong>upervening Event (<span class="c-teal">Sec. 7[a]</span>): Graver offense developed from supervening facts (e.g., victim dies after assault conviction—State must prove direct medical causation, no intervening cause);</li>
+        <li><strong>F</strong>acts Discovered After Plea (<span class="c-teal">Sec. 7[b]</span>): Facts existed earlier but were unknown and undiscoverable with due diligence until <em>after</em> plea;</li>
+        <li><strong>P</strong>lea to Lesser Offense Without Consent (<span class="c-teal">Sec. 7[c]</span>): Plea entered without joint consent of prosecutor &amp; offended party <em>(Exception to exception: offended party absent despite due notice under Rule 116, Sec. 1[f])</em>.</li>
+      </ol>
+      <strong>Non-Applicable Forums:</strong> Double jeopardy <span class="c-rust"><strong><u>never attaches</u></strong></span> in <span class="c-teal">Preliminary Investigation</span> dismissals (executive probable cause; refilable) or <span class="c-teal">Administrative Proceedings</span> (substantial evidence vs. beyond reasonable doubt).
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 5: PROVISIONAL DISMISSAL & PRE-TRIAL ==================== -->
+  <h3 id="sec-5-provisional-pretrial">5. Provisional Dismissal, Finality &amp; Pre-Trial (<span class="c-teal">Rules 117–120</span>)</h3>
+
+  <div class="rule-card" id="gr-provisional-dismissal">
+    <div class="rule-card-title">
+      <span>A. Provisional Dismissal &amp; The Time-Bar Clock</span>
+      <span class="rule-provision">Rule 117, Sec. 8</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule</span>
+      A valid provisional dismissal requires <span class="c-green"><strong><u>(1) express, affirmative consent of accused</u></strong></span> (silence &ne; consent) AND <span class="c-green"><strong><u>(2) actual notice to the offended party</u></strong></span>. It temporarily clears the docket, allows <span class="c-green"><strong>cancellation of the bail bond</strong></span>, and may be revived within the statutory period <span class="c-green"><strong><u>exclusively by a motion signed by the Public Prosecutor</u></strong></span> (private complainant has NO standing to revive, though approved civil compromises may be enforced by <span class="c-green">Writ of Execution</span>).
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Time-Bar Exception (Automatic Permanent Bar)</span>
+      Once the statutory window lapses without a valid prosecutor's motion to revive, the dismissal becomes <span class="c-rust"><strong><u>PERMANENT</u></strong></span> (analogous to double jeopardy):
+      <ul style="margin-bottom:0;">
+        <li><span class="c-green"><strong>One (1) Year:</strong></span> Offenses punishable by imprisonment <span class="c-teal"><strong>&le; 6 years</strong></span> or fine of any amount (MTC/First-Level Courts);</li>
+        <li><span class="c-green"><strong>Two (2) Years:</strong></span> Offenses punishable by imprisonment <span class="c-teal"><strong>&gt; 6 years</strong></span> (RTC/Second-Level Courts).</li>
+      </ul>
+      <div style="margin-top:0.5rem; color:#991B1B; font-size:0.88rem;"><strong>Defense Alert:</strong> Never consent to provisional dismissal after repeated prosecution witness no-shows—object and demand <span class="c-green"><strong>absolute dismissal for violation of Constitutional Right to Speedy Trial</strong></span> (instant acquittal + double jeopardy)!</div>
+    </div>
+  </div>
+
+  <div class="rule-card" id="gr-pretrial-finality">
+    <div class="rule-card-title">
+      <span>B. Mandatory Pre-Trial, <em>Corpus Delicti</em> &amp; Finality Periods</span>
+      <span class="rule-provision">Rule 118, Secs. 1–2 &amp; Rule 120, Sec. 6</span>
+    </div>
+    <div class="gr-row">
+      <span class="tag-gr">General Rule (Pre-Trial)</span>
+      Pre-trial is <span class="c-green"><strong><u>mandatory</u></strong></span> after a Not Guilty plea (plea bargaining, stipulations, exhibit marking, admissibility waivers, witness limits). In Murder (<span class="c-teal">Art. 248, RPC</span>), <em>corpus delicti</em> is proven by <span class="c-green"><strong>Certificate of Death + Medico-Legal Autopsy Report + medical examiner testimony</strong></span> (not the corpse), SOCO photos, receipts (<span class="c-teal">Arts. 2199 &amp; 2206 CC</span>), and Judicial Affidavits.
+    </div>
+    <div class="exc-row">
+      <span class="tag-exc">Mandatory Safeguard (Rule 118, Sec. 2)</span>
+      Pre-trial agreements or admissions <span class="c-rust"><strong><u>CANNOT be used in evidence against the accused</u></strong></span> UNLESS reduced to writing and <span class="c-green"><strong><u>signed by BOTH the accused AND his counsel</u></strong></span>.
+    </div>
+    <div class="gr-row" style="border-top: 1px solid #E2E8F0;">
+      <span class="tag-gr">Finality Periods</span>
+      <strong>Conviction (<span class="c-teal">Rule 120, Sec. 6</span>):</strong> Final after <span class="c-teal"><strong>15 days from promulgation</strong></span>.<br>
+      <strong>Final Dismissal Order (e.g., Prescription):</strong> Final after <span class="c-teal"><strong>15 days from receipt</strong></span>.<br>
+      <strong>Acquittal:</strong> <span class="c-green"><strong><u>NO waiting period—immediately final, executory &amp; unappealable</u></strong></span>.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== SECTION 6: RAPID QUIZ DRILL ==================== -->
+  <h3 id="sec-6-rapid-drill">6. 60-Second Rapid Quiz Drill &amp; Exam Admin Reminders</h3>
+
+  <div class="callout-box">
+    <p><strong>Test Yourself (High-Yield Bar &amp; Quiz Traps):</strong></p>
+    <ol>
+      <li>Defense moves to reset arraignment because counsel was not furnished a physical copy of the Information. Grant or deny?</li>
+      <li>Information omits the investigating fiscal’s certification and no preliminary investigation was held. Should the court grant a Motion to Quash?</li>
+      <li>Accused was illegally arrested without a warrant, entered a plea of Not Guilty, and now objects to the gun seized during that arrest. Is the gun admissible?</li>
+      <li>Accused pleaded guilty to Reckless Imprudence Resulting in Slight Physical Injuries and received public censure. Can the State prosecute him under a separate Information for Reckless Imprudence Resulting in Homicide from the same crash?</li>
+      <li>Accused files a Demurrer to Evidence <em>without</em> leave of court, and the judge denies it. May accused present his alibi witness?</li>
+      <li>After an acquittal, the private complainant files a Petition for <em>Certiorari</em> (Rule 65) in the Court of Appeals seeking to convict the accused. Will it prosper?</li>
+      <li>Prosecutor fails to present any witness across 5 settings and moves for provisional dismissal. What should defense counsel do?</li>
+    </ol>
+    <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px dashed #CBD5E1;">
+      <strong>Rapid Answers:</strong>
+      <ol style="margin-bottom:0;">
+        <li><span class="c-rust"><strong>Deny.</strong></span> Not a valid ground under <span class="c-teal">Rule 116, Sec. 11</span>; court records are public and Information is read in open court.</li>
+        <li><span class="c-rust"><strong>No.</strong></span> Not a ground under <span class="c-teal">Rule 117, Sec. 3</span> (<span class="c-burgundy"><em>Crespo v. Mogul</em></span>; valid under Rule 110, Secs. 6 &amp; 8). Proper remedy = <strong>Motion to Suspend &amp; Remand for PI</strong> (or direct fiscal to supply certification).</li>
+        <li><span class="c-rust"><strong>Inadmissible.</strong></span> Plea waived jurisdiction over person (<span class="c-teal">Sec. 3[c]</span>), but <span class="c-green"><strong>did NOT waive the Exclusionary Rule</strong></span> (<span class="c-teal">Art. III, Sec. 3[2]</span>; fruit of poisonous tree).</li>
+        <li><span class="c-rust"><strong>No — barred by Double Jeopardy.</strong></span> <span class="c-burgundy"><em>Ivler v. Modesto-San Pedro</em></span>: Art. 365 is a single indivisible quasi-offense; Art. 48 does not apply.</li>
+        <li><span class="c-rust"><strong>No.</strong></span> Filing Demurrer <em>without leave</em> waives the right to present defense evidence; case is submitted for judgment on prosecution evidence alone.</li>
+        <li><span class="c-rust"><strong>No.</strong></span> <span class="c-burgundy"><em>Yasa v. Chavez</em></span>: Only the <strong>OSG</strong> may challenge criminal acquittals via Rule 65 (for grave abuse/sham trial); private complainant may appeal <strong>only the civil aspect</strong>.</li>
+        <li><span class="c-green"><strong>Object vigorously</strong></span> to provisional dismissal and move for <span class="c-green"><strong>absolute dismissal for violation of Constitutional Right to Speedy Trial</strong></span> (operates as acquittal + double jeopardy).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ui-box" style="background:#F8FAFC; padding:1.1rem 1.4rem;">
+    <div style="font-weight:700; color:#1E3A8A; margin-bottom:0.4rem;">Administrative &amp; Schedule Checklist</div>
+    <ul style="margin-bottom:0; font-size:0.9rem;">
+      <li><strong>Quiz (Rule 116, Rule 117, Double Jeopardy):</strong> <span class="c-teal"><strong>November 14, 2026</strong></span> (Proctored by <strong>Ms. Agnes</strong>; Manila Midterm laptop format—bring charged laptop &amp; download within window).</li>
+      <li><strong>Pre-Trial Simulation:</strong> <span class="c-teal"><strong>November 21, 2026</strong></span> (Groups 1 &amp; 2; complete pre-trial folders + 1 primary eyewitness Judicial Affidavit; remaining classes Nov. 21, Nov. 28, Dec. 5).</li>
+      <li><strong>Special Topic &amp; Courtroom Tip:</strong> Prepare <span class="c-teal"><strong>Environmental Cases (A.M. No. 09-6-8-SC / SLAPP)</strong></span>; avoid the <em>"We submit to the sound discretion of the court"</em> reflex—always take a stand anchored on the Rules.</li>
+    </ul>
+  </div>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base', 
+    themeVariables: { 
+      primaryColor: '#F8FAFC', 
+      primaryBorderColor: '#1E3A8A', 
+      primaryTextColor: '#1F2937', 
+      lineColor: '#1E3A8A', 
+      fontFamily: 'sans-serif' 
+    } 
+  });
+</script>
+<script>
+  function updateDiagramTransform(container) {
+    const scale = parseFloat(container.dataset.scale || '1');
+    const x = parseFloat(container.dataset.panX || '0');
+    const y = parseFloat(container.dataset.panY || '0');
+    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function zoomDiagram(btn, delta) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    let scale = parseFloat(container.dataset.scale || '1');
+    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+    container.dataset.scale = scale;
+    updateDiagramTransform(container);
+  }
+
+  function resetDiagramZoom(btn) {
+    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
+    container.dataset.scale = '1';
+    container.dataset.panX = '0';
+    container.dataset.panY = '0';
+    updateDiagramTransform(container);
+  }
+
+  function toggleDiagramFullscreen(btn) {
+    const wrapper = btn.closest('.diagram-wrapper');
+    const container = wrapper.querySelector('.diagram-container');
+    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
+
+    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
+    btn.textContent = enteringFullscreen ? '✕' : '⛶';
+    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
+    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
+
+    if (container) {
+      container.dataset.panX = '0';
+      container.dataset.panY = '0';
+      updateDiagramTransform(container);
+    }
+
+    if (enteringFullscreen && wrapper.requestFullscreen) {
+      wrapper.requestFullscreen().catch(() => {});
+    } else if (!enteringFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  function exitAllDiagramFullscreens() {
+    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
+      wrapper.classList.remove('is-fullscreen');
+      const container = wrapper.querySelector('.diagram-container');
+      if (container) {
+        container.dataset.panX = '0';
+        container.dataset.panY = '0';
+        updateDiagramTransform(container);
+      }
+      const btn = wrapper.querySelector('.fullscreen-btn');
+      if (btn) {
+        btn.textContent = '⛶';
+        btn.title = 'View Fullscreen';
+      }
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      exitAllDiagramFullscreens();
+    }
+  });
+
+  // Grab-to-Pan (Mouse & Touch) + Wheel Zoom Support
+  let activeDiagramDrag = null;
+
+  document.addEventListener('mousedown', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.button !== 0) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    e.preventDefault();
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: e.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('touchstart', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport || e.touches.length !== 1) return;
+    const container = viewport.querySelector('.diagram-container');
+    if (!container) return;
+    const touch = e.touches[0];
+    viewport.classList.add('is-dragging');
+    activeDiagramDrag = {
+      viewport,
+      container,
+      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
+      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
+    };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activeDiagramDrag || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
+    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
+    updateDiagramTransform(activeDiagramDrag.container);
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!activeDiagramDrag) return;
+    activeDiagramDrag.viewport.classList.remove('is-dragging');
+    activeDiagramDrag = null;
+  });
+
+  document.addEventListener('wheel', (e) => {
+    const viewport = e.target.closest('.diagram-viewport');
+    if (!viewport) return;
+    const wrapper = viewport.closest('.diagram-wrapper');
+    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const container = viewport.querySelector('.diagram-container');
+      let scale = parseFloat(container.dataset.scale || '1');
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
+      container.dataset.scale = scale;
+      updateDiagramTransform(container);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
