@@ -319,6 +319,10 @@ def build_full_html():
 
     # Build TOC options grouped hierarchically
     toc_options_html = ['<option value="" disabled selected>Select topic, module, or case...</option>']
+    toc_options_html.append('<option value="#quiz-watchlist">▪ ★ Professor\'s Quiz Watchlist &amp; Expressly Named Cases</option>')
+    toc_options_html.append('<option value="#expressly-named-cases">&nbsp;&nbsp;↳ Expressly Named Cases (9 Cases)</option>')
+    toc_options_html.append('<option value="#administrative-unnamed-cases">&nbsp;&nbsp;↳ Administrative Matters &amp; Unnamed Cases Mentioned</option>')
+    toc_options_html.append('<option value="#real-world-illustrations">&nbsp;&nbsp;↳ Real-World / Public-Figure Cases Used as Illustrations</option>')
     toc_options_html.append('<option value="#executive-overview">▪ I. Executive Overview & Master Procedural Flowchart</option>')
     toc_options_html.append('<option value="#three-doctrinal-pillars">▪ II. Three Procedural Pillars of Criminal Procedure Finals</option>')
     toc_options_html.append('<option value="#statutory-comparison-matrix">▪ III. Master Landmark Jurisprudence Matrix (26 Cases)</option>')
@@ -1021,6 +1025,121 @@ def build_full_html():
       display: inline-block;
     }}
 
+    /* PROFESSOR QUIZ WATCHLIST BANNER & CARDS */
+    .quiz-watchlist-section {{
+      background: #FFFBEB;
+      border: 1.5px solid #FDE68A;
+      border-top: 5px solid #C2410C;
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      margin: 1.5rem 0 2.5rem 0;
+      box-shadow: 0 4px 10px -2px rgba(194, 65, 12, 0.08);
+    }}
+    .watchlist-header-bar {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-bottom: 2px solid #FDE68A;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
+    }}
+    .watchlist-badge {{
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #C2410C;
+      color: #FFFFFF;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }}
+    .watchlist-title {{
+      margin: 0.35rem 0 0 0;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #7C2D12;
+    }}
+    .watchlist-subtitle {{
+      font-size: 0.9rem;
+      color: #9A3412;
+      margin: 0.25rem 0 0 0;
+      font-weight: 500;
+    }}
+    .watchlist-sub-h3 {{
+      color: var(--color-navy);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-top: 1.5rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid #FCD34D;
+    }}
+    .watchlist-list {{
+      margin: 0.5rem 0 1.25rem 1.35rem;
+      padding: 0;
+    }}
+    .watchlist-list > li {{
+      margin-bottom: 0.9rem;
+      padding: 0.75rem 1rem;
+      background: #FFFFFF;
+      border: 1px solid #FDE68A;
+      border-left: 4px solid var(--color-navy);
+      border-radius: 6px;
+    }}
+    .watchlist-list > li.quiz-priority {{
+      border-left: 4px solid #C2410C;
+      background: #FFF7ED;
+    }}
+    .watchlist-list ul {{
+      margin: 0.4rem 0 0.2rem 1.2rem;
+    }}
+    .watchlist-list ul li {{
+      margin-bottom: 0.25rem;
+      font-size: 0.94rem;
+    }}
+    .watchlist-jump {{
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #1E3A8A;
+      background: #E0E7FF;
+      border: 1px solid #C7D2FE;
+      padding: 0.12rem 0.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }}
+    .watchlist-jump:hover {{
+      background: #1E3A8A;
+      color: #FFFFFF;
+    }}
+    .watchlist-grid-cards {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }}
+    .watchlist-mini-card {{
+      background: #FFFFFF;
+      border: 1px solid #FDE68A;
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+    }}
+    .watchlist-mini-card ul {{
+      margin: 0.35rem 0 0 1.15rem;
+    }}
+    .watchlist-hr {{
+      border: 0;
+      height: 1px;
+      background-color: #FCD34D;
+      margin: 1.5rem 0;
+    }}
+
     /* RESPONSIVE LAYOUT */
     @media (max-width: 960px) {{
       .document-container {{ padding: 1.5rem 1.25rem; margin: 1rem auto; }}
@@ -1055,6 +1174,132 @@ def build_full_html():
   <div class="document-container">
     <h1>Criminal Procedure Finals: Master Landmark Jurisprudence</h1>
     <div class="doc-subtitle">Comprehensive Academic Digests, High-Yield Recitation Briefs & Strategic Snapshot Panels • Modules 06 (Rule 114: Bail), 07 (Rule 116: Arraignment & Plea), and 08 (Rule 117: Motion to Quash, Double Jeopardy & Provisional Dismissal) — Complete 26 Cases</div>
+
+    <!-- PROFESSOR QUIZ WATCHLIST & EXPRESSLY NAMED CASES -->
+    <section class="quiz-watchlist-section" id="quiz-watchlist">
+      <div class="watchlist-header-bar">
+        <div>
+          <span class="watchlist-badge">★ UPCOMING QUIZ WATCHLIST</span>
+          <h2 class="watchlist-title" style="border-bottom: none; padding-bottom: 0;">Cases &amp; Authorities Expressly Mentioned by the Judge / Professor</h2>
+          <p class="watchlist-subtitle">High-priority cases, administrative circulars, unnamed recent rulings, and real-world illustrations flagged during lecture discussions.</p>
+        </div>
+      </div>
+
+      <h3 class="watchlist-sub-h3" id="expressly-named-cases">Expressly Named Cases</h3>
+      <ol class="watchlist-list">
+        <li>
+          <span class="c-burgundy"><strong><em>People v. Pimentel</em></strong></span>
+          <ul>
+            <li>Mentioned when discussing the results of the previous quiz (students failed to read the assigned cases).</li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Tolentino v. [unclear]</em></strong></span>
+          <ul>
+            <li>Mentioned alongside <span class="c-burgundy"><em>People v. Pimentel</em></span> regarding the previous quiz (name partially unclear in the recording).</li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Leviste v. Court of Appeals</em></strong></span> <a href="#case-06-5-leviste-v-ca" class="watchlist-jump">Jump to Full Digest (06.5) ↓</a>
+          <ul>
+            <li><strong>Topic:</strong> Discretionary bail pending appeal (<span class="c-teal"><strong>Rule 114, Sec. 5</strong></span>).</li>
+            <li><strong>Doctrine:</strong> The accused was charged with murder and convicted of homicide. <span class="c-green">The Court of Appeals has discretion to deny bail even if none of the enumerated bail-negating circumstances are present, because <em>"any other circumstance"</em> is not exclusive; courts apply a two-stage determination.</span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Mendoza v. Alarma</em></strong></span> <em>(also citing <span class="c-burgundy"><strong>Mendoza v. CA</strong></span>)</em> <a href="#case-06-4-mendoza-v-alarma" class="watchlist-jump">Jump to Full Digest (06.4) ↓</a>
+          <ul>
+            <li><strong>Topic:</strong> Forfeiture of bail / property bond (<span class="c-teal"><strong>Rule 114, Sec. 21</strong></span>).</li>
+            <li><strong>Doctrine:</strong> Emphasizes the <span class="c-green"><strong><u>mandatory two-step procedure</u></strong></span>: (1) an order of forfeiture giving the bondsmen 30 days to produce the accused and show cause, followed by (2) a separate <span class="c-green"><strong>judgment on the bond</strong></span> (which must become final after 15 days) before a writ of execution and public auction can validly issue.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Borlongan v. Peña</em></strong></span> <a href="#case-06-2-borlongan-v-pena" class="watchlist-jump">Jump to Full Digest (06.2) ↓</a>
+          <ul>
+            <li><strong>Topic:</strong> Bail not a bar to objections (<span class="c-teal"><strong>Rule 114, Sec. 26</strong></span>).</li>
+            <li><strong>Doctrine:</strong> <span class="c-green">Applying for or posting bail does not automatically waive objections to an illegal arrest or lack of/irregular preliminary investigation. Waiver applies only upon voluntarily entering a plea and actively participating in trial.</span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Yasa v. Chavez</em></strong></span>
+          <ul>
+            <li><strong>Topic:</strong> Who may appeal criminal vs. civil aspects.</li>
+            <li><strong>Doctrine:</strong> <span class="c-green">Only the Office of the Solicitor General (OSG) can bring an appeal or represent the People on the criminal aspect before the Court of Appeals or Supreme Court. A private complainant lacks legal standing to appeal a criminal acquittal or dismissal via demurrer to evidence (only the civil aspect may be appealed).</span></li>
+          </ul>
+        </li>
+        <li class="quiz-priority">
+          <span class="c-burgundy"><strong><em>Ivler v. Modesto</em> / <em>Ivler v. Modesto-San Pedro</em></strong></span> <a href="#case-08-8-ivler-v-modesto-san-pedro" class="watchlist-jump">Jump to Full Digest (08.8) ↓</a>
+          <ul>
+            <li><strong>Topic:</strong> <span class="c-green"><strong>Double jeopardy</strong></span> and reckless imprudence (<span class="c-teal"><strong>Article 365, RPC</strong></span>).</li>
+            <li><strong>Doctrine:</strong> <span class="c-green">Pleading guilty to the lesser offense bars subsequent prosecution for reckless imprudence resulting in homicide. All resulting effects of a single reckless act must be incorporated into one charge; complex crime rules do not apply.</span></li>
+            <li><span class="c-rust"><strong>Quiz Note:</strong></span> Flagged by the professor as very important for the quiz.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>People v. Galman</em></strong></span>
+          <ul>
+            <li><strong>Topic:</strong> Exception to <span class="c-green"><strong>double jeopardy</strong></span>.</li>
+            <li><strong>Doctrine:</strong> <span class="c-rust"><strong><u>Double jeopardy cannot be invoked when the prosecution was denied due process (not given an opportunity to present evidence).</u></strong></span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="c-burgundy"><strong><em>Crespo v. Mogul</em></strong></span>
+          <ul>
+            <li><strong>Context:</strong> Mentioned when commenting on the midterm exam results (<em>"first year pa lang dapat alam ninyo na 'yon"</em>).</li>
+          </ul>
+        </li>
+      </ol>
+
+      <hr class="watchlist-hr">
+
+      <h3 class="watchlist-sub-h3" id="administrative-unnamed-cases">Administrative Matters &amp; Unnamed Cases Mentioned</h3>
+      <div class="watchlist-grid-cards">
+        <div class="watchlist-mini-card">
+          <strong>Rules on Extradition Proceedings (<span class="c-teal">A.M. No. 22-03-29-SC</span>)</strong>
+          <ul>
+            <li><span class="c-teal"><strong>Rule 3, Sec. 1</strong></span> — Guidelines on bail in extradition proceedings.</li>
+          </ul>
+        </div>
+        <div class="watchlist-mini-card">
+          <strong>Guidelines for Continuous Trial of Criminal Cases (<span class="c-teal">A.M. No. 15-06-10-SC</span>)</strong>
+          <ul>
+            <li>Covers periods for arraignment/trial and allowable grounds for postponement (<em>physical inability</em> of counsel and <em>force majeure</em>).</li>
+          </ul>
+        </div>
+        <div class="watchlist-mini-card">
+          <strong>Unnamed Recent Supreme Court Case on Battered Woman Syndrome</strong>
+          <ul>
+            <li>Wife was acquitted of killing her husband (discussed under <span class="c-teal"><strong>Rule 117, Sec. 3(h)</strong></span> on legal excuse/justification and absolutory causes).</li>
+          </ul>
+        </div>
+        <div class="watchlist-mini-card">
+          <strong>Unnamed Recent Supreme Court Case on <span class="c-teal">P.D. 1602</span> (Illegal Gambling)</strong>
+          <ul>
+            <li>For conviction, police officers must prove both the <strong>operator</strong> and the <strong>amount of the bet</strong>.</li>
+          </ul>
+        </div>
+        <div class="watchlist-mini-card">
+          <strong>Unnamed Court of Appeals Reversal</strong>
+          <ul>
+            <li>A lower court conviction was reversed because the identity of the accused was not established during the proceedings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="watchlist-hr">
+
+      <h3 class="watchlist-sub-h3" id="real-world-illustrations">Real-World / Public-Figure Cases Used as Illustrations</h3>
+      <ul class="watchlist-list" style="list-style-type: disc;">
+        <li><strong>Antonio Trillanes</strong> — Peninsula incident (bail in the military is not allowed).</li>
+        <li><strong>Joma Sison</strong> — Netherlands (political crimes / lack of extradition treaty).</li>
+        <li><strong>Gloria Macapagal Arroyo &amp; Leila de Lima</strong> — DOJ travel restriction, hospital arrest, and detention.</li>
+        <li><strong>Alice Guo</strong> — Property bond example.</li>
+        <li><strong>Juan Ponce Enrile</strong> — Health and age considered in granting bail.</li>
+        <li><strong>Bong Revilla &amp; Jinggoy Estrada</strong> — Sandiganbayan bail grant vs. denial and 90-day suspension; <span class="c-teal"><strong>Rule 65</strong></span> <em>certiorari</em> to the Supreme Court.</li>
+        <li><strong>Sara Duterte</strong> — Voluntary surrender / posting bail; impeachment subpoena and right against self-incrimination hypothetical.</li>
+        <li><strong>Kian delos Santos</strong> — Presumption of innocence / drug war context.</li>
+      </ul>
+    </section>
 
     <!-- SECTION I: EXECUTIVE OVERVIEW & PROCEDURAL FLOWCHART -->
     <h3 id="executive-overview">I. Executive Overview & Master Procedural Flowchart</h3>
@@ -1386,7 +1631,7 @@ flowchart TD
     document.addEventListener('DOMContentLoaded', () => {{
       const select = document.getElementById('toc-select');
       const watchedTargets = document.querySelectorAll(
-        '#executive-overview, #three-doctrinal-pillars, #statutory-comparison-matrix, #module-06-heading, #module-07-heading, #module-08-heading, .case-section'
+        '#quiz-watchlist, #expressly-named-cases, #administrative-unnamed-cases, #real-world-illustrations, #executive-overview, #three-doctrinal-pillars, #statutory-comparison-matrix, #module-06-heading, #module-07-heading, #module-08-heading, .case-section'
       );
 
       const observer = new IntersectionObserver((entries) => {{
