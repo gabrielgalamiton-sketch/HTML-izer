@@ -1,6 +1,6 @@
 # SUCCESSION LAW — CONSOLIDATED MASTER REVIEWER & MEMORY AID
-**Coverage:** Disinheritance (Arts. 915–923) • Intestate Succession, Representation & Art. 992 (Arts. 960–1014) • Accretion & Vacancy Matrix (Arts. 1015–1023) • Capacity, Undue Influence & Unworthiness (Arts. 1024–1040, 40–43) • Acceptance & Repudiation (Arts. 1041–1057, 390–392)
-**Sources Consolidated:** October 12 Lecture • October 19 Class Lecture • Articles 1041–1057 Textbook Consolidation (Paras & Companion Textbook) • 3-Part Lecture Series & Classroom Vacancy Matrix (Master Table)
+**Coverage:** Disinheritance (Arts. 915–923) • Legacies & Devises (Arts. 924–959) • Intestate Succession, Representation & Art. 992 (Arts. 960–1014) • Accretion & Vacancy Matrix (Arts. 1015–1023) • Capacity, Undue Influence & Unworthiness (Arts. 1024–1040, 40–43) • Acceptance & Repudiation (Arts. 1041–1057, 390–392)
+**Sources Consolidated:** October 12 Lecture • October 19 Class Lecture • Articles 924–959 Legacies & Devises Synthesis • Articles 1041–1057 Textbook Consolidation (Paras & Companion Textbook) • 3-Part Lecture Series & Classroom Vacancy Matrix (Master Table)
 **Target:** Upcoming Monday Succession Law Quiz (Mixed Format: Bar-Style ALAC Essays, Estate Distribution Math & Objective/Trap Drills)
 
 > **HOW TO USE THIS REVIEWER FOR MONDAY'S QUIZ:**
@@ -9,13 +9,13 @@
 >    - **`[PROFESSOR'S RULE]` / `[FAVORED VIEW]`**: The primary rule emphasized in class.
 >    - **`[ALTERNATIVE VIEW]`**: Recognized competing civil-law theory (1-line note).
 >    - **`[CURRENT LAW / BAR UPDATE]`**: Supreme Court / statutory modifications (*Aquino v. Aquino*, R.A. 11642) or accuracy corrections vs. older textbook/lecture statements.
-> 3. **Drills:** Test yourself on the **14 Bar-Style ALAC Problems** and **20-Item 60-Second Rapid Trap Drill** before checking the solutions.
+> 3. **Drills:** Test yourself on the **24 Bar-Style ALAC & Recall Drills** and **25-Item 60-Second Rapid Trap Drill** before checking the solutions.
 
 ---
 
 ## BIG-PICTURE MAP OF CIVIL CODE BOOK III (WHERE THIS QUIZ SITS)
 
-`[Stage 1: Opening (Arts. 774–782)] → [Stage 2: Wills, Preterition & Legitimes (Arts. 783–914)] → [QUIZ FOCUS: Parts I–III (Arts. 915–1057)] → [Stage 6: Partition (Arts. 1058–1105)]`
+`[Stage 1: Opening (Arts. 774–782)] → [Stage 2: Wills, Preterition & Legitimes (Arts. 783–914)] → [QUIZ FOCUS: Parts I–IV (Arts. 915–1057)] → [Stage 6: Partition (Arts. 1058–1105)]`
 
 ![Big-Picture Map of Civil Code Book III: Succession Law](images/00b-book-iii-succession-map.jpg)
 
@@ -24,8 +24,9 @@
 | **Ch. 1: General Provisions** | Arts. 774–782 | Background Signpost | Vests successional rights automatically at death (Art. 777). |
 | **Ch. 2 (Secs. 1–5): Wills & Legitimes** | Arts. 783–914 | Pre-Quiz Signpost | Governs will validity, preterition (Art. 854), substitutions (Art. 872), and compulsory *legitimes*. |
 | **Ch. 2 (Sec. 6): Disinheritance (PART I)** | **Arts. 915–923** | **TESTED** | Sole legal mechanism to strip a compulsory heir of the *legitime* for statutory cause. |
-| **Ch. 3: Intestate Succession (PART II)** | **Arts. 960–1014** | **TESTED** | Default statutory distribution when there is no valid will or an undisposed estate balance. |
-| **Ch. 4 (Secs. 1–3): Common Rules (PART III)** | **Arts. 1015–1057** | **TESTED** | Rules shared by both testate & intestate succession: accretion, capacity/unworthiness, and heir's choice. |
+| **Ch. 2 (Sec. 7): Legacies & Devises (PART II)** | **Arts. 924–959** | **TESTED (NEW)** | Particular testamentary gifts: ownership rules, encumbrances, generic vs. specific risk, order of payment (Art. 950 vs. Art. 911), and Art. 957 revocation by law. |
+| **Ch. 3: Intestate Succession (PART III)** | **Arts. 960–1014** | **TESTED** | Default statutory distribution when there is no valid will or an undisposed estate balance. |
+| **Ch. 4 (Secs. 1–3): Common Rules (PART IV)** | **Arts. 1015–1057** | **TESTED** | Rules shared by both testate & intestate succession: accretion, capacity/unworthiness, and heir's choice. |
 | **Ch. 4 (Secs. 4–6): Executors & Partition** | Arts. 1058–1105 | Post-Quiz Signpost | Settlement wind-up, collation, and physical partition after shares are fixed. |
 
 ---
@@ -35,12 +36,13 @@
 | Module | Core Question Answered | Key Provisions | Nano Banana Pro 2 Visual |
 | :--- | :--- | :--- | :--- |
 | **Book III Architecture** | Where do these quiz modules sit inside all of Succession Law? | Arts. 774–1105 | `images/00b-book-iii-succession-map.jpg` |
-| **Part I: Disinheritance** | Can a compulsory heir be stripped of the *legitime*? | Arts. 915–923; FC Arts. 55, 63(4) | `images/01-disinheritance-7-requisites.jpg`, `images/02-art920-parental-reconciliation.jpg` |
-| **Part II-A: Intestacy & Shares** | Who inherits without a will, in what order, and in what fractions? | Arts. 960–1014; FC Art. 176 | `images/03-intestate-orders-5th-degree.jpg`, `images/06-mixed-succession-trap.jpg` |
-| **Part II-B: Representation & Art. 992** | Who steps into another's shoes, and when does the Iron Curtain apply? | Arts. 969–977, 990, 992, 777 | `images/04-art969-per-stirpes-vs-per-capita.jpg`, `images/05-iron-curtain-vs-dela-merced.jpg` |
-| **Part III-A: Accretion & Vacancies** | Where does a failed or rejected share go (testate vs. intestate)? | Arts. 1015–1021, 872, 904 | `images/00-professor-vacancy-matrix.png`, `images/07-120m-master-vacancy-split.jpg` |
-| **Part III-B: Capacity & Unworthiness** | Is the successor alive/conceived, free of undue influence, and worthy? | Arts. 1024–1039, 40–43, 739, 823 | `images/08-capacity-art41-art1027-timelines.jpg`, `images/09-art1032-paramour-paradox-pardon.jpg` |
-| **Part III-C: Acceptance & Repudiation** | How is the choice made, protected against creditors, or deemed accepted? | Arts. 1041–1057, 390–392, 954–955 | `images/10-acceptance-repudiation-creditors.jpg` |
+| **Part I: Disinheritance** | Can a compulsory heir be stripped of the *legitime*? | Arts. 915–923; FC Arts. 55, 63(4) | `images/01-disinheritance-7-requisites.jpg`, `images/02-art920-parental-reconciliation.jpg`, `images/11-part1-disinheritance-outcomes.jpg`, `images/12-art919-vs-art921-grounds-traps.jpg` |
+| **Part II: Legacies & Devises** | Who pays particular bequests, who bears risk/encumbrances, and how are they reduced or revoked? | Arts. 924–959, 911, 1199–1205, 1423–1430 | `images/20-legacies-ownership-scenarios.jpg`, `images/21-specific-vs-generic-realty-risk.jpg`, `images/22-art911-vs-art950-reduction.jpg`, `images/23-art957-revocation-and-936-suit.jpg`, `images/24-encumbrances-credits-relatives-959.jpg` |
+| **Part III-A: Intestacy & Shares** | Who inherits without a will, in what order, and in what fractions? | Arts. 960–1014; FC Art. 176 | `images/03-intestate-orders-5th-degree.jpg`, `images/06-mixed-succession-trap.jpg`, `images/13-intestate-concurrence-double-share.jpg` |
+| **Part III-B: Representation & Art. 992** | Who steps into another's shoes, and when does the Iron Curtain apply? | Arts. 969–977, 990, 992, 777 | `images/04-art969-per-stirpes-vs-per-capita.jpg`, `images/05-iron-curtain-vs-dela-merced.jpg`, `images/14-collateral-siblings-nephews-delossantos.jpg`, `images/15-part3-intestacy-rep-iron-curtain-flow.jpg` |
+| **Part IV-A: Accretion & Vacancies** | Where does a failed or rejected share go (testate vs. intestate)? | Arts. 1015–1021, 872, 904 | `images/00-professor-vacancy-matrix.png`, `images/07-120m-master-vacancy-split.jpg` *(+ HTML UI Flowcharts for quota-blocked slots 16–17)* |
+| **Part IV-B: Capacity & Unworthiness** | Is the successor alive/conceived, free of undue influence, and worthy? | Arts. 1024–1039, 40–43, 739, 823 | `images/08-capacity-art41-art1027-timelines.jpg`, `images/09-art1032-paramour-paradox-pardon.jpg` |
+| **Part IV-C: Acceptance & Repudiation** | How is the choice made, protected against creditors, or deemed accepted? | Arts. 1041–1057, 390–392, 954–955 | `images/10-acceptance-repudiation-creditors.jpg` *(+ HTML UI Flowcharts for quota-blocked slot 18 & Checklist slot 19)* |
 
 ---
 
@@ -116,7 +118,7 @@
 
 ## IV. Spousal Disinheritance (Art. 921), Reconciliation (Art. 922), Representation (Art. 923) & Imperfect Disinheritance (Art. 918)
 
-> **Context & Statutory Compass:** `[Grounds (919–920)] → [YOU ARE HERE: Spouse, Reconciliation, Rep. & Defects (921–923, 918)] → [Part II: Intestacy]`
+> **Context & Statutory Compass:** `[Grounds (919–920)] → [YOU ARE HERE: Spouse, Reconciliation, Rep. & Defects (921–923, 918)] → [Part II: Legacies & Devises]`
 > * **Statutory Address:** Testamentary Succession — Final Disinheritance Rules (Arts. 921–923, 918; FC Arts. 55, 63[4]).
 > * **Chain-of-Logic Bridge:** Covers the surviving spouse and answers the three aftermath questions: *Can reconciliation undo it? Do innocent kids inherit? What if the testator failed `WELSTUT`?*
 > * **Why the Law Cares:** Shields innocent grandchildren from a parent's fault (Art. 923) and enforces the crucial difference between partial annulment (Art. 918) and total collapse under preterition (Art. 854).
@@ -129,6 +131,8 @@
 4. **L**egal separation cause given — **Art. 921(4)** (no final decree needed; if decree already exists, spouse is disqualified by law under FC Art. 63[4]). Incorporates all **10 grounds under Family Code Art. 55**: *(1) repeated physical violence/grossly abusive conduct; (2) pressure to change religion/politics; (3) attempt to corrupt/induce prostitution; (4) final sentence >6 yrs even if pardoned; (5) drug addiction/habitual alcoholism; (6) lesbianism/homosexuality; (7) subsequent bigamous marriage; (8) sexual infidelity/perversion (broader than adultery/concubinage, no conviction needed); (9) attempt against testator's life (bypasses Art. 921[1]'s conviction requirement!); (10) unjustified abandonment >1 year.*
 5. **P**arental authority loss grounds — Art. 921(5).
 6. **R**efusal to support children or spouse without justifiable cause — Art. 921(6).
+
+![Art. 919 Descendant vs Art. 921 Spouse Disinheritance Grounds Matrix](images/12-art919-vs-art921-grounds-traps.jpg)
 
 ### B. Doctrine of Reconciliation (Art. 922)
 * **Before Will:** Deprives testator of the right to disinherit for that offense.
@@ -150,14 +154,188 @@
 | **Scenario 3A: Valid Disinheritance (D Childless)** | D gets ₱0; A, B, C split ₱120M equally. | **A=₱40M, B=₱40M, C=₱40M, D=₱0** |
 | **Scenario 3B: Valid Disinheritance (D has Kids D1, D2)** | Art. 923: D1 & D2 represent D **only in D's ₱15M legitime** (₱7.5M each). A, B, C take own legitimes + ₱60M FP. | **A=₱35M, B=₱35M, C=₱35M, D1=₱7.5M, D2=₱7.5M** |
 
+![Disinheritance Outcomes Matrix on ₱120M Estate](images/11-part1-disinheritance-outcomes.jpg)
+
 ---
 
-# PART II: INTESTATE SUCCESSION, SHARES, REPRESENTATION & ARTICLE 992
-> **Macro Anchor (Title IV, Chapter 3 — Arts. 960–1014):** Stepping outside wills: whenever no valid will exists or an estate slice falls undisposed, the law supplies its default "statutory will."
+# PART II: THE LAW ON LEGACIES AND DEVISES (ARTS. 924–959)
+> **Macro Anchor (Title IV, Chapter 2, Section 7 — Arts. 924–959):** Completing Testamentary Succession right after Disinheritance (Sec. 6): rather than instituting heirs to fractional aliquots of the whole estate, Section 7 governs particular gifts of determinate objects, money, or individualized rights payable strictly out of the **free portion**.
 
-## V. Causes, Lines, Proximity & Orders of Intestacy (Arts. 960–962, 978–1014)
+## V. General Concepts, Burdens, Solidary Liability & Eviction (Arts. 924–928)
 
-> **Context & Statutory Compass:** `[Part I: Disinheritance] → [YOU ARE HERE: Intestate Triggers & Priority Order (960–1014)] → [Exact Shares (983–1009)]`
+> **Context & Statutory Compass:** `[Part I: Disinheritance (915–923)] → [YOU ARE HERE: Particular Gifts, Persons Burdened & Warranties (924–928)] → [Property Ownership Rules (929–933)]`
+> * **Statutory Address:** Testamentary Succession — Legacies & Devises General Framework (Arts. 924–928, 782, 854, 1087; NIRC Sec. 94; Rule 88).
+> * **Chain-of-Logic Bridge:** Once we know which compulsory heirs keep their legitimes, Section 7 governs particular gifts carved out of the free portion: *what things may be given, who must pay them, and what liability attaches upon loss or eviction.*
+> * **Why the Law Cares:** Shields compulsory legitimes from sub-legacy overcharging while holding co-heirs in possession solidarily accountable for negligent destruction (Art. 927).
+
+### A. Core Definitions, Purposes & Heir vs. Legatee/Devisee Distinctions (Arts. 782 & 924)
+* **Legacy vs. Devise:** **Legacy** = gift of *personal* property (corporeal/incorporeal); **Devise** = gift of *real* property (immovable). Both confer an **economic benefit other than a fractional aliquot share** (*Manresa; J.B.L. Reyes*), chargeable exclusively to the **free portion** (never impairing the legitime).
+* **Subject Matter Limit ("Within the Commerce of Man"):** Must exist (present or determinate future thing like expected harvest), be lawful, and be susceptible of private appropriation (void: human organs, public plazas, prohibited narcotics). *Testator may also bequeath a mere right (credit, usufruct, easement, remission of debt).*
+* **Four Statutory Purposes (*Paras citing 6 Manresa 652*):** Rewards for past services (remuneratory), gratitude, charity/piety, and individual personal preferences.
+
+| Parameter | Instituted Heir (Art. 782) | Legatee / Devisee (Art. 924) |
+| :--- | :--- | :--- |
+| **Object Received** | Whole estate or aliquot fractional share (1/2, 1/3). | Specific, determinate object, cash sum, or individualized right. |
+| **Source of Right** | Testate (*by will*) **OR** Intestate (*by law*). | Exists **ONLY in testamentary succession** (never by intestacy). |
+| **Effect of Preterition (Art. 854)** | Institution of heirs annulled ***in toto***. | **Respected & preserved**, insofar as not inofficious. |
+| **Liability for Estate Debts** | Liable up to inheritance value received. | Not personally liable unless sub-charged or estate is insolvent (Art. 925 / Rule 88). |
+
+* **Tax & Distribution Check — *Vera v. Navarro*, 79 SCRA 408, G.R. No. L-27745 (Oct. 18, 1977)** *(Citation Note: cited in Paras as 79 SCRA 608; official report is `79 SCRA 408`)*: Heirs/beneficiaries are **not solidarily liable** for succession taxes; each answers individually up to benefits received. A probate court cannot order premature distribution prior to tax clearance/bond *(modern NIRC TRAIN Law retains a single 6% estate tax + BIR eCAR bar on premature transfer under Sec. 94)*.
+
+### B. Persons Burdened, Ceilings & Proportional Contribution (Arts. 925–926)
+* **Classifications (*Paras*):** **Legacy Proper** (charge on estate; no specific heir named) vs. **Sub-Legacy / Sub-Devise** (burden imposed personally on an heir/legatee, *e.g., "car to X, provided X pays Y ₱500"*) vs. **Pre-Legacy** (testamentary gift granted to a co-heir in addition to his hereditary share).
+* **Jurado's Procedural Nuance:** Because wills under probate are administered by an executor/administrator, **Art. 926(2)** (making heirs personally liable in proportion to shares) operates in practice **only when there is no judicial administration**.
+* **Ceilings (*Art. 925[2]*):** (1) A **compulsory heir** burdened with a sub-legacy pays **ONLY up to his free-portion excess** (legitime is untouchable—*Jurado Example:* ₱10k legitime + ₱5k FP charged w/ ₱10k gift → pays **₱5k max**); (2) a **legatee/devisee** pays **ONLY up to the value of the gift received** (₱100k piano charged w/ ₱150k gift → **₱100k max**).
+* **Proportionate Contribution Ratio (*Paras' Computation*):** Net estate = **₱1,000,000**. Legitimate children **A** & **B** instituted **3/5** (₱600k = ₱250k legitime + **₱350k FP**) and **2/5** (₱400k = ₱250k legitime + **₱150k FP**), charged with a **₱50,000** legacy to **F**. Contribution ratio tracks **free-portion shares (350:150 = 7:3)**, NOT 3:2! → **A pays ₱35,000 (7/10); B pays ₱15,000 (3/10)**.
+
+### C. Solidary Possession (Art. 927) & Eviction / Hidden Defects Warranty (Art. 928)
+* **Art. 927:** Two or more co-heirs who **take possession** of estate property are **solidarily liable** to the legatee/devisee for loss or destruction due to **fault/negligence** of any one of them (external solidary liability; internally under **Art. 1087**, the innocent paying co-heir recovers full reimbursement from the negligent co-heir — ***Debuque v. Climaco*, 99 SCRA 353 [1980]**).
+* **Art. 928 (Eviction & Hidden Defects):**
+  * **Generic / Indeterminate Bequest:** Obligor (estate or burdened heir) IS **liable for eviction** AND impliedly for **hidden defects/encumbrances** (*Paras, Manresa, Valverde*, since Art. 941 mandates medium quality).
+  * **Specific / Determinate Bequest:** **NO warranty** against eviction (testator intended to give only whatever right he possessed).
+  * **Paras' Court-Approval Qualification:** If delivered pursuant to **court order in judicial administration proceedings**, there is **NO warranty against eviction** by the estate/administrator even if generic.
+
+---
+
+## VI. Property Ownership Rules (Arts. 929–933) & Encumbrances, Credits & Creditor-Beneficiaries (Arts. 934–939)
+
+> **Context & Statutory Compass:** `[Burdens & Warranties (924–928)] → [YOU ARE HERE: Ownership Matrix & Credits/Mortgages (929–939)] → [Generic, Special, Vesting & Reduction (940–950)]`
+> * **Statutory Address:** Particular Bequests — Owned Partly/Wholly by Strangers or Beneficiaries (Arts. 929–933), Mortgages/Credits/Mistaken Debts (Arts. 934–939; R.A. 11057; Rule 86 Sec. 7; Arts. 1423–1430, 2154).
+> * **Chain-of-Logic Bridge:** Resolves what happens when the testator tries to give away something *not wholly his* (co-owned, stranger-owned, already beneficiary-owned) or *burdened by a mortgage or debt*.
+> * **Why the Law Cares:** Prevents unintended gifts of strangers' assets through mistaken belief of ownership (Art. 930) while protecting creditor-legatees' bonus presumption (Art. 938).
+
+![Legacies of Property Owned by Others or by the Beneficiary (Arts. 929–933)](images/20-legacies-ownership-scenarios.jpg)
+
+### A. Ownership Scenarios Matrix (Arts. 929–933)
+| Statutory Provision | Ownership Scenario & Sub-Rule | Operative Legal Effect & Author Split |
+| :--- | :--- | :--- |
+| **Art. 929 (Partly Owned by Testator)** | **General Rule:** Testator co-owns asset with stranger/heir.<br/>**Exception:** Express declaration giving the **entirety** *(express order to acquire unnecessary — Paras)*. | Confined strictly to **testator's share/interest**. If entirety expressly declared, estate keeps testator's part + buys co-owner's share (or pays just value under Art. 931). If partitioned to co-owner w/ cash reimbursement before death: **revoked (Art. 957[2])** unless entirety expressly declared (survives as to co-owner's original half; *Jurado & Paras*). |
+| **Art. 930–931 (*Legado de Cosa Ajena*)** | **1. Erroneous Belief of Ownership:** Bequest is **VOID *ab initio*** (*6 Manresa 665*), UNLESS testator **subsequently acquires it** before death.<br/>**2. Known Belonging to Stranger:** Estate must **acquire & deliver**, or if owner refuses/demands excessive price (e.g., ₱100k for ₱20k car — *Jurado*), pay **just value (*justo precio*)**. | **`[CRITICAL AUTHOR SPLIT on Art. 931]`:**<br/>• ***Strict / Express-Order View (J.B.L. Reyes, Puno, Caguioa):*** Mere knowledge insufficient; will **must expressly order acquisition**, else void.<br/>• ***Prevailing / Implied-Order View (Tolentino, Jurado, Paras):*** Mere **knowledge** carries an **implied order to acquire**; requiring express order contradicts Art. 930.<br/>• *Suppression of Old Art. 863 (Heir's Property — Tolentino):* If property belongs to **burdened heir himself**, testator's knowledge is immaterial because heir accepts *cum onere*. |
+| **Art. 932–933 (Already Owned by Beneficiary)** | **At Execution:** Property already owned by legatee/devisee.<br/>**Exception 1:** Thing owned by *another* at execution, later acquired by beneficiary after will.<br/>**Exception 2 (*Jurado*):** Testator later acquires it from beneficiary before death. | **Art. 932(1): Completely INEFFECTIVE** (even if alienated before death). **Art. 933(2) Later Acquisition by Beneficiary:**<br/>• Acquired **Gratuitously** (donation/inheritance) → **₱0 (extinguished)**.<br/>• Acquired **Onerously** (purchase) → **Estate REIMBURSES price paid** (*except if sold first by testator to S, then L buys from S: **L gets ₱0** because Art. 957[2] already revoked legacy! — Paras*). |
+
+* **Paras' 4 Classic Car Variations (*T writes "I give X's car to Y", knowing X owns it*):**
+  1. **X sells to Z, then T dies:** **Y inherits** (estate buys from Z or pays *justo precio*).
+  2. **X sells to T himself:** **Y inherits** (T owns it at death).
+  3. **X sells to Y himself (onerous):** **Y gets reimbursement** from estate (Art. 933[2]).
+  4. **X donates to Y (gratuitous):** **Y gets nothing** (double enrichment barred, Art. 933[2]).
+* **Naked Ownership Bequeathed (*Paras*):** If **T** owns naked ownership and **U** holds usufruct, and **T** leaves naked ownership to **D**, full ownership consolidates in **D** upon **U**'s subsequent death.
+
+![Encumbrances (Art. 934), Credits/Suits (Arts. 935–939) & Relatives (Art. 959)](images/24-encumbrances-credits-relatives-959.jpg)
+
+### B. Pledged/Mortgaged Gifts (Art. 934), Credits (Arts. 935–937) & Creditors (Arts. 938–939)
+* **Art. 934 (Encumbered Gifts):**
+  * **Pledges, Mortgages, Antichresis & R.A. 11057 (Personal Property Security Act) Security Interests** (whether before or after will): **Estate MUST pay the secured debt** so beneficiary receives unencumbered title (*unless contrary intent in will OR security was for a non-recoverable obligation like fidelity bond — 6 Manresa 683*). Under **Rule 86, Sec. 7**, mortgagee has 3 remedies: waive security & file claim; foreclose & claim deficiency; or rely solely on mortgage (10-yr action, waiving deficiency).
+  * **Perpetual/Temporary Charges:** **Easements, usufructs, registered/over-1-yr leases, annuities** **PASS WITH THE PROPERTY**—estate does NOT clear them!
+* **Arts. 935–937 (Legacy of Credit & Remission of Debt):**
+  * **Credit vs. Third Party:** Estate assigns all **rights of action & accessory securities**; **NO warranty** of debtor's solvency or credit's existence.
+  * **Remission of Beneficiary's Debt:** Estate issues an **acquittance/release** (subject to reduction if inofficious). **Generic remission (Art. 937)** covers **ONLY debts existing at will execution**, NOT subsequent loans!
+  * **Revocation Trap (Art. 936):** Both credit and remission are revoked ONLY if testator files a **JUDICIAL SUIT against the debtor** (*Jurado & Paras:* a **lawyer's extrajudicial demand letter does NOT revoke!**). **Par. 2:** Returning/bequeathing a pledged item to the debtor extinguishes **only the pledge/security interest (incl. mortgage/antichresis per Paras)**—the principal debt remains collectible!
+* **Arts. 938–939 (Legacy to Creditor & Mistaken Debts):**
+  * **Art. 938 (Presumption of Liberality):** A legacy to a creditor is a **BONUS (gets BOTH debt and gift)** unless expressly declared in payment (*dacion en pago* if accepted unconditionally).
+  * **Santos v. Manarang, 27 Phil. 209 (1914):** A clause directing payment of listed debts is **NOT a legacy**; creditors must still file claims inside probate's **statute of non-claims (Rule 86)** or be forever barred.
+  * **Art. 939 (Mistaken Debts):** Ordering payment of a **non-existent debt** is void (*considered not written*; recovery under **Art. 2154** *solutio indebiti*); excess sum not due unless intended as liberality. **Exception:** Ordering payment of a **prescribed debt** is **VALID** as compliance with a **natural obligation** (**Arts. 1423–1430**).
+
+---
+
+## VII. Generic vs. Specific Gifts, Vesting, Risk & the Art. 911 vs. Art. 950 Reduction Battle (Arts. 940–950)
+
+> **Context & Statutory Compass:** `[Ownership & Credits (929–939)] → [YOU ARE HERE: Generic vs. Specific Risk, Vesting & Reduction Battle (940–950)] → [Delivery, Election, Merging & Revocation (951–959)]`
+> * **Statutory Address:** Alternative/Generic/Support/Pension/Usufruct Bequests, Vesting/Fruits/Risks, and Payment Order (Arts. 940–950, 911, 1199–1205, 866; Rule 88).
+> * **Chain-of-Logic Bridge:** Once we know a gift is valid, we must determine *when title passes, who collects rent before/after death, who suffers accidental loss, and who gets cut when the estate runs out of cash*.
+> * **Why the Law Cares:** Separates fungible movables from individualized real estate (Art. 941) and enforces the bright-line trigger between compulsory-heir protection (Art. 911 *pro rata*) and legatee priority (Art. 950 `R-P-S-E-S-A`).
+
+![Specific Determinate vs Generic Personal vs Indeterminate Real Property Matrix](images/21-specific-vs-generic-realty-risk.jpg)
+
+### A. Alternative & Generic Bequests, Quality & Right of Choice (Arts. 940–943, 1199–1205)
+* **Alternative Bequests (Art. 940):** Choice belongs to **burdened heir/executor** unless expressly given to legatee/devisee (**Art. 1200**). Once **communicated (Art. 1201)**, choice is **irrevocable** (even if exercised in a will — *Paras*), and converts to a simple obligation; **Arts. 1199–1205** govern impossibility.
+* **Specific vs. Generic Personal vs. Indeterminate Real Property:**
+
+| Feature | Specific Determinate Thing (Arts. 948, 928) | Generic Personal Property (Arts. 941[1], 949) | Indeterminate Real Property (Art. 941[2]) |
+| :--- | :--- | :--- | :--- |
+| **Validity if None in Estate** | Void / Inoperative (unless acquired before death) | **VALID** (Estate must buy **medium quality** w/ estate cash) | **VOID / INOPERATIVE** unless realty of that kind exists in estate! |
+| **Eviction & Hidden Defects (Art. 928)** | **NO warranty** | **LIABLE** *(unless court-ordered delivery — Paras)* | **LIABLE** *(unless court-ordered delivery — Paras)* |
+| **Transfer of Ownership** | **Immediately at Death** (Art. 948; Art. 777) | Upon **selection / choice** | Upon **selection / choice** |
+| **Fruits & Interests** | **From Death** (uncollected pre-death rent → estate!) | From **selection/demand**, unless ordered from death | From **selection**, unless ordered from death |
+| **Risk of Fortuitous Loss** | On **Beneficiary from death** (*res perit domino*) | On **Estate** (*genus nunquam perit*) | On **Estate** until selection |
+
+* **Reason (*Jurado & Paras*):** Movables are fungible in commerce, whereas realty lacks natural uniformity and depends on unique location/boundaries. When choice is given to the beneficiary (Art. 942), he picks **any** item in the estate; by default, the executor delivers **medium quality** (*neither inferior nor superior*).
+
+### B. Specialized Gifts, Vesting, Ownership & Fruits (Arts. 944–949)
+* **Support & Education (Art. 944):** Support lasts **for life** (even beyond majority); Education ends at **age of majority OR completion of profession/trade** (whichever occurs LATER!). Measured by testator's custom/estate means; **intransmissible** (*intuitu personae*) upon legatee's death unless expressly stated.
+* **Periodical Pension (Art. 945):** Enforceable upon **death**; legatee demands installment at the **start of each period** without refund obligation if legatee dies mid-period *(actual cash payout awaits Rule 90 debt settlement/bond, with arrears accruing — Paras)*.
+* **Usufruct (Art. 946) / Vesting Rules (Arts. 947–949):** Pure legacies/devises **vest at death** and transmit to beneficiary's heirs; **suspensive conditions** confer only a non-transmissible expectancy until fulfillment (Art. 866). **Pre-death overdue rents** stay with estate; **growing/post-death natural or industrial fruits** go to specific devisee **without charging production costs** (*6 Manresa 731*). Money legacies bear interest **ONLY from formal judicial/extrajudicial demand** absent express testamentary grant (***Fuentes v. Canon*, 6 Phil. 117 [1906]**; ***Chiong Joc-Soy v. Vaño*, 8 Phil. 119 [1907]**). Good-faith withdrawn probate opposition does not forfeit a devise, and devisee keeps post-death fruits (***Santos v. Buenaventura*, 18 SCRA 47 [1966]**). *(Persuasive citation: **Lake v. Harrington**, 120 Miss. 74 [1953] on ademption).*
+
+![Article 911 vs Article 950 Reduction Order Battle Infographic](images/22-art911-vs-art950-reduction.jpg)
+
+### C. The Reduction Battle: Art. 911 vs. Art. 950 (`R-P-S-E-S-A`)
+| Scenario (When Free Portion Is Insufficient) | Governing Rule | Order & Method of Reduction |
+| :--- | :--- | :--- |
+| **Compulsory legitimes impaired OR *donations inter vivos* exist** | **ARTICLE 911** | All legacies/devises reduced ***PRO RATA*** without class distinction (except **preferential** gifts cut last before reducing donations *inter vivos*). |
+| **Legitimes INTACT (or no compulsory heirs) AND NO donations *inter vivos*** | **ARTICLE 950 (`R-P-S-E-S-A`)** | Paid strictly top-to-bottom until cash runs out:<br/>1. **R**emuneratory → 2. **P**referential → 3. **S**upport → 4. **E**ducation → 5. **S**pecific determinate thing in estate → 6. **A**ll others ***pro rata***. |
+
+* **Statutory Update (Debt Liquidation First — *Paras*):** Before applying Art. 950, estate debts must first reduce legacies proportionately under **Rule 88, Secs. 1–3 & 6, Rules of Court** *(superseding Act No. 190, Sec. 729 cited in old textbooks)*.
+* **All 3 Source Computation Walkthroughs:**
+  1. ***Jurado* #1 (No Compulsory Heirs):** Gross ₱100k − Debts ₱40k = **Net ₱60k**. Bequests: R=₱10k, P=₱10k, S=₱15k, E=₱15k, Ordinary X=₱15k, Y=₱5k (Total ₱70k). **Result (`R-P-S-E-S-A`):** R(10k) + P(10k) + S(15k) + E(15k) paid **in full (₱50k)**; remaining **₱10k** split *pro rata* (3:1) → **X=₱7,500; Y=₱2,500**.
+  2. ***Jurado* #2 (Compulsory Heirs Present, Legitime Intact, No Donations):** Net ₱40k; 2 LCs take ₱20k legitime; **Free Portion = ₱20k**. Bequests: R=₱5k, S=₱10k, E=₱15k, X=₱10k. **Result:** Art. 950 governs (no legitime impairment & no donations) → **R=₱5k; S=₱10k; E=₱5k**; **X=₱0**.
+  3. ***Paras* #3 (Debts First + Art. 950 Combined):** Gross ₱410k − Debts ₱50k = **Net ₱360k** (no compulsory heirs). Bequests: Support=₱200k, Education=₱200k, Specific Piano=₱100k (Total ₱500k; 2:2:1 ratio). **Step 1 (Deduct ₱50k debts *pro rata* per Rule 88):** S=₱180k, E=₱180k, Piano=₱90k. **Step 2 (Apply Art. 950 on ₱360k net):** **Support=₱180k; Education=₱180k; Specific Piano=₱0**.
+
+---
+
+## VIII. Delivery, Election, Merging, Revocation by Law & Relatives (Arts. 951–959) + 5 Inline ALAC Problems
+
+> **Context & Statutory Compass:** `[Generic, Risk & Art. 950 (940–950)] → [YOU ARE HERE: Delivery, Merging, Revocation & Relatives (951–959)] → [Part III: Intestacy (Arts. 960–1014)]`
+> * **Statutory Address:** Final Rules of Legacies & Devises (Arts. 951–959, 830[1], 892, 960[2], 962, 1010, 1015, 1055).
+> * **Chain-of-Logic Bridge:** Bridges directly into Intestacy and Common Rules: failed gifts merge back via **Art. 956 (`ISRAI`)**, dual onerous acceptance mirrors **Art. 1055**, and general *"relatives"* clauses test **Art. 959** vs. intestate rules.
+> * **Why the Law Cares:** Stops heirs from looting probate assets (Art. 953), strips away un-revoked transfers where consent was vitiated (*Dimagiba*), and catches the classic widow/nephew exclusions under Art. 959.
+
+### A. Delivery, Payment, Election & Merging Into Estate Mass (Arts. 951–956)
+* **Delivery Condition & No Self-Help (Arts. 951–953):** Deliver thing **with all accessories/accessions (Art. 1166)** in the **condition at testator's death** (estate need not strip subsequent easements nor add improvements); cash legacies **must be paid in cash** even if estate holds zero cash. **Zero Self-Possession (Art. 953):** Legatee/devisee **cannot forcibly seize the property**; must demand delivery from executor/administrator only after debt/tax liquidation (***Pastor, Jr. v. CA*, 122 SCRA 885 [1983]**; ***Benedicto v. Javellana*, 10 Phil. 197 [1908]**). Assets donated *inter vivos* leave the estate and cannot answer for legacies (***Cembrano v. Pardo de Tavera*, 68 Phil. 175**). Legacies from specified sale proceeds don't fail disproportionately absent contrary intent (***Testate Estate of Isidro Aragon*, L-2920 [1951]**).
+* **Partial/Onerous Election (Arts. 954–955) & Cross-Bridge to Art. 1055:**
+  * **Single Gift Partly Onerous (Art. 954[1]):** **All or nothing** (cannot keep free part and reject burden). **Single Gift Wholly Gratuitous:** May accept/repudiate a portion; **Art. 954(2)** transmits election right to heir's own heirs (each chooses independently).
+  * **Two Separate Gifts (Art. 955[1]):** If **ONE is onerous**, beneficiary **CANNOT accept the gratuitous and reject the onerous**. *(Contrast: if BOTH onerous or BOTH gratuitous, may accept one and reject the other—unless testator expressly tied them together!)*
+  * **Compulsory Heir Who Is Also a Legatee (Art. 955[2] vs. Art. 1055):** A compulsory heir **MAY accept the *legitime* and renounce the free-portion legacy/devise, OR vice versa** (*Art. 955[2]*—contrast **Art. 1055**, where repudiating a *testamentary heirship* forfeits the intestate share too!).
+* **Ineffectiveness & Merging into Estate Mass (Art. 956) + Cross-Bridge to Art. 1015 (`ISRAI`):**
+  * When a beneficiary cannot/will not take (predecease, incapacity, failed condition, repudiation), and there is **NO substitute** and **NO accretion (Art. 1015)**: the gift **merges into the estate mass** (passing to residuary/legal heirs via intestacy **Art. 960[2]**). Follow **Paras' `ISRAI`**: **I**nstitution → **S**ubstitution → **R**epresentation *(zero for voluntary legacies!)* → **A**ccretion → **I**ntestacy!
+  * **Parish Priest of Victoria v. Rigor, 89 SCRA 493 (1979):** Testator conditioned devise of ricelands on a male relative already *studying for the priesthood* at death; none qualified at death (could not wait indefinitely for unborn/future relatives) → devise inoperative, merged into estate mass via **Art. 956** to intestate heirs.
+
+![Art. 957 Implied Revocation by Law & Art. 936 Suit Flowchart](images/23-art957-revocation-and-936-suit.jpg)
+
+### B. Revocation by Law (Art. 957), Mistaken Description (Art. 958) & "Relatives" (Art. 959)
+* **Art. 957 (`T-A-L` Revocation by Operation of Law under Art. 830[1]; *Jurado adds Art. 936 suit as 4th mode*):**
+  1. **Transformation (No. 1):** Testator/agent changes **BOTH form AND denomination** (*cloth → suit; riceland → fishpond; swimming pool → tennis court*). Mere repair, accession, or enlargement does NOT revoke (*Jurado*).
+  2. **Alienation (No. 2):** Voluntary alienation of whole or part permanently revokes (to extent alienated)—**EVEN IF contract is null** (e.g., for lack of consideration/formal defect, since *animus revocandi* still existed!) and testator reacquires it!
+     * **THREE CRITICAL EXCEPTIONS (Revives / Remains Valid):**
+       1. Reacquisition via **Right of Repurchase (*Pacto de Retro*)** (**Art. 957[2]**);
+       2. Alienation annulled due to **Vitiated Consent** (fraud, intimidation, undue influence — ***Fernandez v. Dimagiba*, 21 SCRA 428 [1967]** lacked genuine *animus revocandi*);
+       3. **Involuntary Alienation** (judicial execution sale / expropriation): **`[AUTHOR SPLIT]`** *Paras citing 15 Scaevola 260* holds reacquisition preserves the devise; *Source 3 Commentary* treats permanent involuntary loss under **No. 3 (legal loss)**. *(Conditional alienation: failed suspensive promise does not revoke; resolutory sale revokes immediately — Paras).*
+  3. **Total Loss (No. 3):** Fortuitous destruction before or after death (without heir's fault) extinguishes specific gift; generic gifts survive (*Art. 928* eviction/delivery remains).
+* **Art. 958 (Mistake in Name or Description):** ***Falsa demonstratio non nocet***—wrong street number (*"No. 957"* vs. *"No. 759 Dian St."*) or wrong car model year is harmless if object is clearly identifiable.
+* **Art. 959 (Dispositions Generally to *"My Relatives"*):**
+  * Restricted strictly to **consanguinity (blood kin) up to the 5th degree (Art. 1010)** of the **TESTATOR himself** (*excludes surviving spouse & in-laws*).
+  * **Strict Proximity (Art. 962) Applies WITHOUT Intestate Rules:** **NO right of representation** (siblings exclude nephews/nieces); **NO preference between lines** (2nd-deg grandchild and 2nd-deg sister share equally! — *6 Manresa 36*); **NO 2:1 full/half blood distinction** (*Jurado*).
+  * **Jurisprudence Trap:** ***Belen v. BPI*, 109 Phil. 1008 (1960)** (Art. 959 does NOT govern *"descendants"* of a third-party legatee—children/grandchildren concur *per capita*); ***Vda. de Singson v. De Lim*, 74 Phil. 109 (1943)** *(not 47 Phil.)* (bequest *"to all who are entitled thereto"* triggers full **intestate succession**, allowing representation!).
+  * ***Jurado*'s ₱60,000 Problem:** **A** leaves all *"to all my relatives"*; survivors: Widow **B**, brothers **C & D**, nephews **E & F** (kids of dead sister). **Result:** **B = ₱30k** (pure 1/2 legitime; excluded from *"relatives"*); **C = ₱15k, D = ₱15k** (take FP equally); **E & F = ₱0** (no representation!).
+
+> **Cross-Topic Quiz Bridges (Arts. 924–959 Integration):**
+> 1. **Mixed Succession (`Art. 960[2]`):** When a will gives *only* a ₱10M legacy, NEVER deduct it off the top of the gross estate—compute legitimes vs. intestate shares on the full estate first, then charge the ₱10M solely to the heir whose intestate share exceeds legitime (e.g., Surviving Spouse's 1/4 vs. 1/8).
+> 2. **Vacancies (`Art. 956` → `Art. 1015`):** Inoperative bequests follow `ISRAI` (**I**nstitution → **S**ubstitution → zero Rep → **A**ccretion → **I**ntestacy).
+> 3. **Election (`Art. 955[2]` vs. `Art. 1055`):** Compulsory heir can waive a free-portion legacy yet take legitime (`955[2]`), whereas a dual heir who repudiates *testamentary heirship* forfeits intestacy (`1055`).
+
+### C. Five Worked Bar-Style ALAC Problems (Arts. 924–959 Inline Practice)
+1. **ALAC 1 — Generic Devise vs. Generic Legacy (`Art. 941`):** *Facts:* **T** bequeathed *"five dairy cows"* to **A** and devised *"two hectares of citrus land"* to **B**. At death, estate held only cash & stocks (zero cows, zero land). **Rule:** **A gets five cows; B gets ₱0.** Generic personalty is valid even if none is in the estate (executor purchases medium quality w/ estate cash); indeterminate realty is **VOID** unless immovable property of that kind exists in the estate at death (**Art. 941**).
+2. **ALAC 2 — Involuntary Alienation & Repurchase (`Art. 957[2]`):** *Facts:* **T** devised a building to **B**. Creditor levied & sold it at sheriff's execution sale to **X**. Before death, **T** bought it back from **X**. **Rule:** **B gets the building** (*Paras/Scaevola* prevailing view). Art. 957(2) revokes upon *voluntary* alienation manifesting *animus revocandi*; an involuntary judicial auction does not revoke if **T** reacquires title before death.
+3. **ALAC 3 — Onerous vs. Gratuitous Election (`Art. 955[1]`):** *Facts:* **T** left **B** (1) a beach resort charged w/ paying ₱100k/yr to an orphanage, and (2) an unburdened sports car. **B** accepts the car and renounces the resort. **Rule:** **INVALID.** Under **Art. 955(1)**, when one of two separate gifts is onerous, the beneficiary **cannot** reject the onerous one while accepting the gratuitous one (must accept both or renounce both).
+4. **ALAC 4 — Conditional Devise & Merging (`Art. 956` / *Rigor*):** *Facts:* **T** devised a commercial lot to grandniece **G** *"provided G graduates as a doctor."* **G** died in 2nd-yr college before **T**, leaving son **S**. No substitute/co-devisee named. **Rule:** **T's legal heirs take via intestacy; S gets ₱0.** Conditional suspensive gift lapsed when **G** predeceased before fulfillment (**Art. 866**); voluntary gifts allow zero representation, so the lot merges into the estate mass (**Art. 956**; *Rigor*).
+5. **ALAC 5 — Reduction Priority (`Art. 950` `R-P-S-E-S-A`):** *Facts:* **T** left no compulsory heirs (no donations *inter vivos*), Net Estate = **₱300k**. Gifts: (1) ₱100k to Nurse **N** (unpaid past care — *remuneratory*); (2) ₱100k support for disabled Cousin **C**; (3) ₱100k education for Nephew **E**; (4) ₱100k cash to Friend **F**. **Rule:** **Art. 950** controls: Remuneratory (**N**=₱100k) → Support (**C**=₱100k) → Education (**E**=₱100k) exhausts the ₱300k estate; **F** (6th tier) gets **₱0**.
+
+---
+
+# PART III: INTESTATE SUCCESSION, SHARES, REPRESENTATION & ARTICLE 992
+> **Macro Anchor (Title IV, Chapter 3 — Arts. 960–1014):** Stepping outside wills (and receiving lapsed Part II bequests via Art. 956/`ISRAI`): whenever no valid will disposes of property, the law supplies its default "statutory will."
+
+## IX. Causes, Lines, Proximity & Orders of Intestacy (Arts. 960–962, 978–1014)
+
+> **Context & Statutory Compass:** `[Part II: Legacies & Devises (924–959)] → [YOU ARE HERE: Intestate Triggers & Priority Order (960–1014)] → [Exact Shares (983–1009)]`
 > * **Statutory Address:** Legal/Intestate Succession — Causes (Art. 960), Lines/Proximity (Art. 962), Regular vs. Irregular Orders (Arts. 978–1014).
 > * **Chain-of-Logic Bridge:** Before computing pesos or fractions, you must identify who stands in line first and whether the decedent was legitimate or illegitimate.
 > * **Why the Law Cares:** Prevents property from becoming *bona vacantia* up to the 5th degree and ensures order hierarchy overrides mere degree proximity.
@@ -187,11 +365,11 @@
 
 ---
 
-## VI. Intestate Shares, Double-Share Rule, Concurrence & Mixed Succession
+## X. Intestate Shares, Double-Share Rule, Concurrence & Mixed Succession
 
 > **Context & Statutory Compass:** `[Intestate Orders (960–962)] → [YOU ARE HERE: Shares & Mixed Legacies (983, 895, 1000, 1006)] → [Representation & Art. 992]`
 > * **Statutory Address:** Intestate Sharing Ratios & Mixed Succession (Arts. 983, 895, 996–1009, 960[2], FC Art. 176).
-> * **Chain-of-Logic Bridge:** Once Section V identifies the surviving classes, Section VI computes their exact fractions—and stops the fatal mixed-succession error of deducting legacies off the top of the gross estate.
+> * **Chain-of-Logic Bridge:** Once Section IX identifies the surviving classes, Section X computes their exact fractions—and stops the fatal mixed-succession error of deducting legacies off the top of the gross estate.
 > * **Why the Law Cares:** Protects the Legitimate Direct Line's 1/2 minimum floor and maintains the 2:1 full-vs.-half blood rule for siblings and nephews/nieces.
 
 ### A. The "One-Half Rule" & Legitime vs. Intestate Combinations
@@ -226,11 +404,14 @@
   * ICs: Legitime ₱30M = Intestate ₱30M (0 excess) → **₱30M**
   * Spouse W: Legitime **₱15M (1/8)** vs. Intestate **₱30M (1/4)** → **₱15M excess!** Deduct Sarah's ₱10M here → **W gets ₱20M** (still > ₱15M legitime); **Sarah gets ₱10M**.
 
+![Intestate Concurrence Double Share & Mixed Succession Calculation](images/13-intestate-concurrence-double-share.jpg)
+*(Figure 13 — Intestate Concurrence & Mixed Legacies: Compare Concurrence vs. Exclusion on a ₱120M estate and see how Sarah's ₱10M legacy deducts strictly from Spouse W's ₱15M intestate excess under Art. 1000.)*
+
 ---
 
-## VII. Right of Representation & The Iron Curtain Rule (Arts. 969–977, 990, 992, 777)
+## XI. Right of Representation & The Iron Curtain Rule (Arts. 969–977, 990, 992, 777)
 
-> **Context & Statutory Compass:** `[Intestate Shares (983–1009)] → [YOU ARE HERE: Representation & Art. 992 (969–977, 990, 992, 777)] → [Part III: Common Rules]`
+> **Context & Statutory Compass:** `[Intestate Shares (983–1009)] → [YOU ARE HERE: Representation & Art. 992 (969–977, 990, 992, 777)] → [Part IV: Common Rules]`
 > * **Statutory Address:** Representation, Universal Repudiation & Art. 992 (with R.A. 11642 & *Aquino v. Aquino*).
 > * **Chain-of-Logic Bridge:** Explains when descendants or nephews/nieces climb up a degree to step into a failed relative's shoes—and where repudiation (Art. 977) or Art. 992 blocks that climb.
 > * **Why the Law Cares:** Preserves branch equality (*per stirpes*) across generations while separating true representation from direct transmission (Art. 777, *Dela Merced*).
@@ -241,6 +422,9 @@
 | **Triggers** | Predecease, Incapacity/Unworthiness, Valid Disinheritance | Predecease, Incapacity/Unworthiness *(no disinheritance in intestacy)* |
 | **Scope Taken** | **LEGITIME ONLY** (Never voluntary free portion!) | **ENTIRE INTESTATE SHARE** |
 | **Lines (Art. 972)** | **Descending:** YES (always) \| **Ascending:** NEVER \| **Collateral:** Only in intestacy for **nephews/nieces** surviving with ≥1 uncle/aunt (*per stirpes*; if no uncle/aunt survives, nephews/nieces take *per capita* per Art. 975). Grandnieces excluded (*De Los Santos v. De La Cruz*, G.R. No. L-29192). |
+
+![Collateral Intestacy Double Share & Nephew Representation](images/14-collateral-siblings-nephews-delossantos.jpg)
+*(Figure 14 — Collateral Intestacy & Double-Share Mechanics: Rank 5 nephews/nieces beat Rank 6 uncles/cousins, take per stirpes only when concurring with a sibling [Art. 975], apply 2:1 full-vs.-half blood up to nephews/nieces [Art. 1008], and stop before grandnieces [De Los Santos].)*
 
 ### B. The Two-Way Repudiation Rule & Universal Repudiation
 **[MEM] Anchor:** **"Repudiation Kills Representation (Art. 977), NOT Downward Transmission (Art. 976)."**
@@ -265,14 +449,17 @@
   * *Facts (Accuracy Check vs. Oct. 19 Lecture Slip):* Legitimate sister **Evarista** (not "Evaristo") died intestate first (1987). Her legitimate brother **Francisco** **SURVIVED** her (did not predecease her) and died later (1988), leaving illegitimate son **Joselito**.
   * *Ratio:* Under **Art. 777**, Evarista's 1/3 share vested immediately in living Francisco at Evarista's death, becoming Francisco's own property. When Francisco later died, Joselito inherited directly from **his father Francisco** (Art. 988), **NOT by representation** in Evarista's estate. Therefore, **Art. 992 does not apply!**
 
+![Part III Intestacy, Representation & Art. 992 Decision Flowchart](images/15-part3-intestacy-rep-iron-curtain-flow.jpg)
+*(Figure 15 — Part III Decision Flowchart: Trace Rank 1–7 exclusion, check Representation vs. Universal Repudiation [Art. 969], and test Art. 992 against Aquino [direct line] and Dela Merced [survival/Art. 777].)*
+
 ---
 
-# PART III: ACCRETION, VACANCY MATRIX, CAPACITY, UNWORTHINESS & ACCEPTANCE/REPUDIATION
+# PART IV: ACCRETION, VACANCY MATRIX, CAPACITY, UNWORTHINESS & ACCEPTANCE/REPUDIATION
 > **Macro Anchor (Title IV, Chapter 4 — Arts. 1015–1057):** Universal provisions applying across *both* testate and intestate estates: handling failed shares, screening capacity/unworthiness, and locking in the heir's choice.
 
-## VIII. Right of Accretion (Arts. 1015–1021)
+## XII. Right of Accretion (Arts. 1015–1021)
 
-> **Context & Statutory Compass:** `[Part II: Intestacy] → [YOU ARE HERE: Accretion Mechanics (Arts. 1015–1021)] → [Master Vacancy Matrix]`
+> **Context & Statutory Compass:** `[Part III: Intestacy] → [YOU ARE HERE: Accretion Mechanics (Arts. 1015–1021)] → [Master Vacancy Matrix]`
 > * **Statutory Address:** Common Provisions, Chapter 4, Section 1 — Accretion (Arts. 1015–1021).
 > * **Chain-of-Logic Bridge:** Explains when surviving co-heirs called jointly (*pro indiviso*) absorb a vacated share before it drops into intestacy.
 > * **Why the Law Cares:** Honors collective lump-sum gifts without disturbing physically earmarked shares (Art. 1017) or the compulsory *legitime* (Art. 1021[2]).
@@ -289,9 +476,11 @@
   * **`[ALTERNATIVE VIEW]` Pro-Accretion Analogy View:** Applies Art. 1016 by analogy when predeceased/incapacitated intestate heirs leave no representatives (identical final math).
 * **Compulsory Heirs (Art. 1021):** Accretion applies **ONLY to the free portion** (Art. 1021[1]). If the **legitime** is repudiated, co-heirs succeed **in their own right (*iure proprio*)**, NOT by accretion (Art. 1021[2]).
 
+> **Structured Routing Note (Visual Slot 16 — Pure HTML Architecture in Document):** `Pro indiviso` test (*aliquot fractions* → ACC OK; *physical earmarking* → ACC BARRED) + *Legitime repudiated* → Co-heirs own right (Art. 1021[2]) vs. *Free Portion vacated* → Sub → Accretion (Art. 1021[1]) → Intestacy.
+
 ---
 
-## IX. Master Matrix of Vacancies & The ₱120M Master Problem
+## XIII. Master Matrix of Vacancies & The ₱120M Master Problem
 
 > **Context & Statutory Compass:** `[Substitution] + [Representation] + [Accretion] → [YOU ARE HERE: Unified Vacancy Priority Hierarchy]`
 > * **Statutory Address:** Cross-Title Synthesis (Arts. 857–872, 904, 960, 970–977, 1015–1021).
@@ -303,10 +492,12 @@
 2. **Absolute Immunity of the Legitime (Arts. 872, 904):** No condition, burden, or **substitution** can ever be imposed on the legitime (only valid disinheritance can strip it).
 
 ### B. Master Vacancy Resolution Matrix
-| Cause of Vacancy | TESTATE: Legitime | TESTATE: Free Portion | INTESTATE: Whole Share |
+| **Cause of Vacancy** | **TESTATE: Legitime** | **TESTATE: Free Portion** | **INTESTATE: Whole Share** |
 | :--- | :--- | :--- | :--- |
 | **Predecease / Incapacity** | **NO SUB** → **1. REP** (descending line) → **2. IS** (co-heirs own right / legal heirs) | **NO REP** → **1. SUB** (if named) → **2. ACC** (Art. 1016) → **3. IS** | **NO SUB** → **1. REP** → **2. IS** *(or ACC under minority view)* |
 | **Repudiation** | **NO SUB / NO REP (Art. 977) / NO ACC (Art. 1021[2])** → **IS / Own Right** | **NO REP (Art. 977)** → **1. SUB** (if named) → **2. ACC** (Art. 1016) → **3. IS** | **NO SUB / NO REP (Art. 977)** → **1. ACC (Art. 1018)** → **2. IS** (next degree, Art. 969) |
+
+> **3-Column Vacancy Routing Funnel (Visual Slot 17 — Pure HTML Flowchart):** Always split every vacant estate slice into **(Col. 1) Testate Legitime**, **(Col. 2) Testate Free Portion**, or **(Col. 3) Intestate Share** *before* applying SUB / REP / ACC / IS.
 
 ### C. Master Problem Walkthrough (₱120M Net Estate; 4 LCs: A, B, C [Predeceased w/ Kids E, F], D [Repudiated w/ Kid G]; No Substitutes)
 
@@ -333,7 +524,7 @@
 
 ---
 
-## X. Capacity to Succeed, Undue Influence & Unworthiness (Arts. 1024–1039, 40–43)
+## XIV. Capacity to Succeed, Undue Influence & Unworthiness (Arts. 1024–1039, 40–43)
 
 > **Context & Statutory Compass:** `[Vacancies] → [YOU ARE HERE: Threshold Qualification (Arts. 1024–1039, 40–43)] → [Heir's Choice (Arts. 1041–1057)]`
 > * **Statutory Address:** Common Provisions, Chapter 4, Section 2 — Capacity & Unworthiness (with Arts. 40–43, 739, 823).
@@ -383,9 +574,9 @@
 
 ---
 
-## XI. Acceptance and Repudiation of the Inheritance (Arts. 1041–1057)
+## XV. Acceptance and Repudiation of the Inheritance (Arts. 1041–1057)
 
-> **Context & Statutory Compass:** `[Capacity & Unworthiness] → [YOU ARE HERE: Exercise of Heir's Choice (Arts. 1041–1057)] → [Part IV: Drills]`
+> **Context & Statutory Compass:** `[Capacity & Unworthiness] → [YOU ARE HERE: Exercise of Heir's Choice (Arts. 1041–1057)] → [Part V: Drills]`
 > * **Statutory Address:** Common Provisions, Chapter 4, Section 3 — Acceptance & Repudiation (with Presumptive Death Arts. 390–392).
 > * **Chain-of-Logic Bridge:** Governs how a living, capacitated heir exercises the purely voluntary option to take or reject property—and how Art. 1052 blocks sham waivers that defraud creditors.
 > * **Why the Law Cares:** Prevents ownership uncertainty (*interregnum*) via retroactivity to death (Art. 1042), protects wards (Art. 1044), and prevents opportunistic double-role cherry-picking (Art. 1055).
@@ -436,23 +627,36 @@
   2. **Unknown Will Appears** *(Manresa/Paras commentary: substantial changes needed)*.
 * **30-Day Deemed Acceptance Rule (Art. 1057):** Runs within **30 days from the COURT'S ORDER OF DISTRIBUTION** (NOT from decedent's death!). Silence in extra-judicial/non-court settings does NOT trigger Art. 1057's presumption.
 
+> **Capacity & Choice Dual Gate (Visual Slot 18 — Pure HTML Flow):** Check **Threshold Capacity** (Art. 41 cord-cut/24h → Art. 1027 FP-only `P-R-G-W-M` → Art. 1032 total bar) BEFORE evaluating **Choice Mechanics** (Art. 1042 retroactive choice → Art. 1051 express form vs. Art. 1050 selective waiver trap → Art. 1052 creditor cap w/ ₱0 excess to renouncer).
+
 ---
 
-# PART IV: MEMORY AIDS, SAMPLE BAR PROBLEMS & RAPID QUIZ DRILL
+# PART V: MEMORY AIDS, CHECKLIST, 24 BAR PROBLEMS & 25 RAPID TRAPS
 
-## XII. Quick-Recall Numbers, Mnemonics & Trap-Busters
+## XVI. Quick-Recall Numbers, Mnemonics & 5-Step Quiz Checklist
 
 * **`WELSTUT` (7 Disinheritance Requisites):** Valid **W**ill, **E**xpress/Named, **L**awful Cause, **S**tated, **T**rue/Existing, **U**nconditional, **T**otal.
 * **`AGAFRMDC` (Art. 919 — 8 Child Disinheritance Grounds):** **A**ttempt (final conviction), **G**roundless accusation (≥6 yrs + malice), **A**dultery/concubinage w/ spouse, **F**raud/violence on will, **R**efusal to support, **M**altreatment (no conviction), **D**ishonorable life (habitual), **C**ivil interdiction (even vs. stranger).
+* **`R-P-S-E-S-A` (Art. 950 Legacy/Devise Reduction):** **R**emuneratory → **P**referential → **S**upport → **E**ducation → **S**pecific thing in estate → **A**ll others *pro rata*. (Use ONLY when legitimes are intact & no *inter vivos* donations exist—otherwise Art. 911!).
+* **`ISRAI` (Art. 956 Vacancy Waterfall):** **I**nstitution/Bequest → **S**ubstitution → **R**epresentation (legitime/intestacy only) → **A**ccretion → **I**ntestacy.
+* **`T-A-L` (Art. 957 Implied Revocation):** **T**ransformation (form + denomination), **A**lienation (except *pacto de retro* & *Dimagiba* vitiated consent), **L**oss.
+* **Arts. 925–959 Legacy Traps:** **925–926** (Free-portion ratio / sub-legacy cap) • **927** (Co-heirs solidary negligent loss) • **928 vs. 941** (Generic movables ok + eviction warranty; generic realty void unless kind in estate) • **930–931** (Stranger's thing: mistake = void, knowledge = valid per Paras/Tolentino vs. express-order split) • **936–938** (Suit kills credit, not demand letter; creditor bonus) • **948** (Vesting + fruits + risk at death) • **953** (No self-help: *Pastor*) • **954–955** (Onerous + gratuitous all-or-nothing) • **959** ("Relatives" = proximity, blood kin ≤5th deg, no spouse, no rep).
 * **`UPRA` (Accretion Requisites):** **U**nity of object, **P**lurality *pro indiviso* (no earmarking!), **R**IP vacancy, **A**cceptance & no substitute.
 * **`PRGWM` (Art. 1027 Undue Influence):** **P**riest/Minister, 4th-degree **R**elatives/Church, **G**uardian, **W**itness, **M**edical/Druggist (Pharmacist). Free portion ONLY; healthy prior will SAFE.
 * **`OAIC` (Art. 1039 / 16[2] Nationality Law):** **O**rder, **A**mount, **I**ntrinsic validity, **C**apacity.
 * **`V-R-I` (Arts. 1041–1057):** **V**oluntary/Free, **R**etroactive to death, **I**rrevocable.
-* **Golden Numbers:** **6 yrs+** (false accusation & FC sentence) • **4th deg** (priest relatives barred) • **5th deg** (last collateral intestate heir) • **7 mos / 24 hrs** (intrauterine life) • **10 / 5 (>75) / 4 (danger) yrs** (presumptive death for succession—NOT 7!) • **30 days** (from *order of distribution* only!) • **3 witnesses** (Art. 823 escape) • **50/50** (Art. 1029 general pious works) • **2:1** (LC:IC & full:half siblings/nephews).
+* **Golden Numbers:** **6 yrs+** (false accusation & FC sentence) • **4th deg** (priest relatives barred) • **5th deg** (last collateral intestate heir / Art. 959) • **7 mos / 24 hrs** (intrauterine life) • **10 / 5 (>75) / 4 (danger) yrs** (presumptive death for succession—NOT 7!) • **30 days** (from *order of distribution* only!) • **3 witnesses** (Art. 823 escape) • **50/50** (Art. 1029 general pious works) • **2:1** (LC:IC & full:half siblings/nephews).
+
+### 5-Step Quiz-Day Emergency Checklist *(Visual Slot 19 — Pure HTML Workflow)*
+1. **STEP 1 — ESTATE MODE & BASE:** Testate, Intestate, or Mixed? Identify compulsory heirs and check legitimes FIRST (never deduct legacies off the top in mixed succession!).
+2. **STEP 2 — LEGACIES/DEVISES AUDIT (Arts. 924–959):** Check ownership (930/931), generic immovable existence (941), T-A-L revocation (957), and whether reductions run under **Art. 911** (legitimes/donations) or **Art. 950 `R-P-S-E-S-A`** (free-portion-only shortfall).
+3. **STEP 3 — CAPACITY & DISINHERITANCE GATE:** Screen `WELSTUT` + Art. 918 vs. Art. 854 preterition; screen Art. 41 cord-cut/24h, Art. 1027 `PRGWM` (FP only), and Art. 1032/1033 (written pardon vs. Art. 922 reconciliation).
+4. **STEP 4 — VACANCY ROUTING (`SUB → REP → ACC → IS`):** Split Legitime vs. Free Portion vs. Intestate before routing! Remember: Repudiation kills representation (Art. 977); universal repudiation triggers *per capita* (Art. 969); earmarking kills accretion (Art. 1017).
+5. **STEP 5 — CHECK CHOICE & FORM (Arts. 1041–1057):** Verify express Art. 1051 form + judicial approval for minors (*Guy v. CA*), Art. 1050 selective waivers, Art. 1052 creditor caps (₱0 excess), Art. 1055 dual capacity, and Art. 1057 (30 days from distribution order).
 
 ---
 
-## XIII. 14 Sample Bar-Style ALAC Problems (With Computation Walkthroughs)
+## XVII. 24 Sample Bar-Style ALAC & Recall Drills (With Computation Walkthroughs)
 
 ### Problem 1 — Conditional Disinheritance vs. Conditional Lifting (Arts. 915–917)
 X executes a will stating: *(Clause 1)* "I disinherit my son A if he ever joins a rival political party." *(Clause 2)* "I disinherit my daughter B because she is presently living a scandalously dishonest life as a notorious swindler; however, if she reforms, leaves the syndicate, and reconciles with me, this disinheritance is lifted." **Are Clauses 1 and 2 valid?**
@@ -525,9 +729,49 @@ X institutes friend H to 3/4 of his estate (1/4 undisposed). H survives X, does 
   * **(b) H CANNOT claim the 1/4 intestate share (Art. 1055[1]):** Repudiating as testamentary heir is deemed a repudiation in **both** testamentary and intestate capacities of the same estate.
   * **(c) YES, K can accept H and reject Y (Art. 1053):** Because H survived Y and died undecided, H's unexercised choice transmitted to K as part of H's succession. Accepting H and rejecting Y involve **two distinct estates**, not Art. 1055.
 
+### Problem 15 — Free Portion Ratio Contribution (Art. 926)
+Net estate = ₱1,200,000. Compulsory heirs **A** and **B** (legitimate children) are instituted to 2/3 and 1/3 of the estate respectively, and charged generally with a ₱60,000 legacy to **X**. **How much must A and B each contribute?**
+* **ALAC Answer:** **A pays ₱50,000; B pays ₱10,000.** Total legitime = ₱600,000 (**A** = ₱300k; **B** = ₱300k). Total given to **A** (2/3) = ₱800,000 (₱300k legitime + **₱500k FP**). Total given to **B** (1/3) = ₱400,000 (₱300k legitime + **₱100k FP**). Under **Art. 926** (Paras' rule), they contribute in proportion to their **free-portion shares** (500:100 = **5:1** → 5/6 and 1/6 of ₱60,000).
+
+### Problem 16 — Stranger's Property Without Express Order to Acquire (Art. 931 Doctrinal Split)
+Testator **T** bequeaths *"my neighbor's vintage Mustang"* to **L**, knowing fully that his neighbor owns it, without writing any explicit instruction for the executor to buy it. **Is the legacy valid?**
+* **ALAC Answer:** Under the **prevailing view (Tolentino, Jurado, Paras)**, it is **VALID** because knowledge of third-party ownership implies an order to acquire under Art. 931. Under the **strict view (J.B.L. Reyes, Puno, Caguioa)**, it is **VOID/INEFFECTIVE** because Art. 931 requires an express order to acquire.
+
+### Problem 17 — Legatee's Subsequent Purchase After Testator Alienates (Art. 933 vs. Art. 957[2])
+**T** executes a will giving **L** a specific painting belonging to **T**. Later, **T** sells the painting to **S**, and **L** buys it from **S** for ₱100,000 before **T** dies. **Can L demand ₱100,000 reimbursement from T's estate?**
+* **ALAC Answer:** **NO.** When **T** sold the painting to **S**, the legacy was impliedly revoked under **Art. 957(2)**. **L**'s subsequent purchase from **S** does not trigger reimbursement under Art. 933(2) (*Paras*).
+
+### Problem 18 — Generic Remission of Debts & Demand Letter Trap (Arts. 936–937)
+**T** executes a will stating: *"I forgive all debts owed to me by my nephew N."* At execution, **N** owed ₱200,000. Later, **T** lent **N** another ₱100,000 and sent a formal lawyer's demand letter for the ₱200,000 without filing a case. **At T's death, how much (if any) is remitted?**
+* **ALAC Answer:** **₱200,000 is remitted; the subsequent ₱100,000 debt is NOT remitted.** Under **Art. 937**, a generic remission covers only debts existing at will execution. Under **Art. 936**, only a *judicial action* (not a mere demand letter) revokes the legacy.
+
+### Problem 19 — Generic Movable vs. Generic Immovable & Eviction Warranty (Arts. 941, 942, 928)
+Explain why a generic legacy of *"a 2024 SUV"* is valid even if **T** owned no car at death, whereas a generic devise of *"a 500-sqm commercial lot"* is void if **T** owned no commercial lot—and state the standard of quality and eviction rule if **T** owned multiple cars.
+* **ALAC Answer:** Generic personalty is valid even if none exists in the estate because movables are fungible in commerce, whereas indeterminate realty is valid **only if immovable property of that kind exists in the estate at death (Art. 941)**. The executor delivers **medium quality** (unless choice was expressly given to the heir/legatee under **Art. 942**) and the obligor is liable for **eviction** and hidden defects (**Art. 928**, subject to Paras' court-order qualification).
+
+### Problem 20 — Pre-Death Arrears, Post-Death Rent & Loss Risk (Art. 948)
+**T** devised an apartment building to **D**. **T** died on May 15. April rent (₱40,000) was overdue and unpaid; June rent (₱40,000) was later collected by the administrator. An earthquake destroys the building on May 20. **Who owns each rent, and who bears the loss?**
+* **ALAC Answer:** **April rent** (due/unpaid before death) belongs to the **estate**; **June rent** (accruing after death) belongs to **D**. **D bears the earthquake loss** because ownership and risk (*res perit domino*) passed to **D** upon death (**Art. 948**).
+
+### Problem 21 — Reduction Gatekeeper: Art. 911 vs. Art. 950
+Testator dies leaving two legitimate children (**A** & **B**), a net estate of ₱100,000 (legitime ₱50,000 intact; free portion ₱50,000), **NO donations *inter vivos***, and four legacies: ₱20,000 remuneratory (**R**), ₱20,000 support (**S**), ₱20,000 education (**E**), and ₱20,000 cash (**X**). **Which article applies—Art. 911 or Art. 950—and how much does each legatee receive?**
+* **ALAC Answer:** **Article 950** applies because legitimes are intact and there are no donations *inter vivos*. Out of the ₱50,000 free portion following `R-P-S-E-S-A`: **R = ₱20,000; S = ₱20,000; E = ₱10,000; X = ₱0.** *(Contrast: If a donation inter vivos had existed, Art. 911 would have reduced all four pro rata to ₱12,500 each.)*
+
+### Problem 22 — Three Exceptions to Implied Revocation by Alienation (Art. 957[2])
+Under what **three circumstances** does an alienation (or purported alienation) of bequeathed property *fail* to permanently revoke the legacy or devise?
+* **ALAC Answer:** (1) Reacquisition via exercise of a **right of repurchase (*pacto de retro*)** (**Art. 957[2]**); (2) alienation annulled due to **vitiated consent** like fraud or undue influence (*Fernandez v. Dimagiba*); and (3) **involuntary alienation** (e.g., execution sale) later reacquired by the testator (*Paras/Scaevola* view).
+
+### Problem 23 — Disposition "To My Relatives" (*6 Manresa 36* & *Vda. de Singson*, Art. 959)
+**T** leaves his entire ₱120,000 estate *"to my relatives."* He is survived by his widow **W**, his sister **S**, his legitimate grandson **G** (from a predeceased legitimate daughter), and his nephew **N** (son of a deceased brother). **Distribute the estate.** *(Bonus: How would the result change if T left no spouse or descendants, leaving only S and N, and instead wrote "to all who are entitled thereto"?)*
+* **ALAC Answer:** **G = ₱75,000** (₱60,000 legitime + ₱15,000 FP); **W = ₱30,000**; **S = ₱15,000**; **N = ₱0**. Under **Art. 892**, **G** (1 legitimate descendant) gets 1/2 = ₱60,000 legitime and **W** gets 1/4 = ₱30,000 legitime, leaving **₱30,000** free portion. Under **Art. 959**, **W** is excluded from *"relatives"* (consanguinity only). On the ₱30,000 FP, **G** (2nd degree direct) and **S** (2nd degree collateral) are both in the **2nd degree** (no line preference; *6 Manresa 36*), splitting ₱30,000 equally (₱15,000 each), while **N** (3rd degree) is excluded. *(Bonus: Under **Vda. de Singson v. De Lim**, phrasing "to all who are entitled thereto" triggers intestate representation, giving **S** and **N** ₱60,000 each.)*
+
+### Problem 24 — Mixed Succession Integration With a ₱10M Legacy (Arts. 960[2], 1000, 899)
+Suppose **T** executes a will containing *only* a ₱10M legacy to his friend **F**, leaving a ₱120M estate and survived by his legitimate parents, surviving spouse, and two illegitimate children. **From whose intestate share is F's ₱10M legacy deducted?**
+* **ALAC Answer:** Strictly from the **surviving spouse's intestate share**, because the spouse's intestate share (**1/4 = ₱30M**) exceeds her legitime (**1/8 = ₱15M**) by ₱15M, leaving her **₱20M** after deducting **F**'s ₱10M legacy without impairing her ₱15M legitime (whereas legitimate parents' 1/2 = 1/2 and illegitimate children's 1/4 = 1/4 leave zero excess over their legitimes).
+
 ---
 
-## XIV. 20-Item 60-Second Rapid Trap Drill
+## XVIII. 25-Item 60-Second Rapid Trap Drill
 
 1. **T/F:** A father disinherits his daughter in an acknowledged public instrument (*Affidavit of Disinheritance*). *(False — must be in a valid probated will, Art. 915).*
 2. **T/F:** If the disinherited heir denies the cause, he must prove his innocence. *(False — burden is on the OTHER heirs, Art. 917).*
@@ -549,6 +793,11 @@ X institutes friend H to 3/4 of his estate (1/4 undisposed). H survives X, does 
 18. **Quick Rule:** Disinherited heir reconciles informally with testator (no writing) vs. non-disinherited unworthy heir reconciles informally. Which one is cured? *(Only the disinherited heir — Art. 922 allows informal bilateral reconciliation; pure unworthiness under Art. 1033 requires written or testamentary pardon).*
 19. **T/F:** Presumptive death after **7 years** of ordinary absence opens succession under Art. 1043 / Art. 390. *(False — Art. 390 requires 10 years, or 5 years if >75; 4 years for danger under Art. 391).*
 20. **T/F:** Public official establishment needs government approval to repudiate, but NOT to accept an unconditional legacy. *(False — Art. 1046 requires government approval for BOTH acceptance and repudiation).*
+21. **T/F:** Sending a formal notarized extrajudicial demand letter by registered mail revokes a legacy of credit under Art. 936. *(False — Art. 936 requires bringing a judicial action).*
+22. **Spot the Trap:** Testator leaves `"a 500-sqm commercial lot in Makati"` without owning any commercial realty at death. Valid like `"a 2024 SUV"`? *(False — generic immovables are void under Art. 941 unless immovable property of that kind exists in the estate at death).*
+23. **Trap:** Testator sells the devised house to Buyer *a retro*, then exercises the right to repurchase before dying. Devise revived or revoked? *(Not revoked — Art. 957[2] expressly exempts reacquisition under pacto de retro).*
+24. **Quick Compute:** A childless testator leaves `"all my estate to my relatives"` survived by his wife, a 2nd-degree sister, and a 3rd-degree nephew. Does his wife share, and can the nephew represent? *(No to both — Art. 959 excludes spouses/affines and applies strict proximity [2nd-degree sister takes 100%] without representation).*
+25. **Doctrine Switch:** Only testamentary legacies exist (no compulsory heirs hurt, no donations *inter vivos*), and the estate cannot pay all legacies: apply Art. 911 *pro rata* or Art. 950 `R-P-S-E-S-A`? *(Art. 950 R-P-S-E-S-A — Art. 911 applies only when legitimes are impaired or collated donations inter vivos are involved).*
 
 ---
 

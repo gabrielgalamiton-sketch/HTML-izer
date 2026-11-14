@@ -560,3 +560,78 @@ blockquote {
   }
 }
 ```
+
+---
+
+### OPTIONAL INTERACTIVE FEATURE: VERBATIM STATUTORY ARTICLE HOVER POPOVER
+
+When the user requests hover-over verbatim statutory boxes on cited articles (e.g., Civil Code provisions), implement a self-contained static popover system (zero external CDNs, zero Mermaid):
+
+1. **Inline Trigger Markup (`.art-ref`):**
+   - Wrap only verified target-code citations (e.g., Civil Code `R.A. 386` articles) in `<span class="art-ref" data-art="957" tabindex="0">Art. 957</span>`.
+   - For pinpointed subsections/paragraphs, add comma-separated paragraph/item numbers in `data-para`: e.g., `<span class="art-ref" data-art="957" data-para="2" tabindex="0">Art. 957(2)</span>` or `<span class="art-ref" data-art="919" data-para="1,2,3,4,5" tabindex="0">Art. 919(1–5)</span>`.
+   - For verified contiguous ranges where 100% of integers exist in the embedded dictionary, use a hyphenated range key (`data-art="924-928"`).
+   - **Strict Isolation Rule:** Never wrap unrelated statutes (`FC`, `RPC`, `Rule`, `R.A.`, `Act No.`, `Old Civil Code`), macro ranges whose full article sequence is not embedded, `<option>` dropdown labels, HTML attributes, or `<pre>`/`<code>` blocks.
+
+2. **Popover Card & Behavior (`#artPopover` + `CODAL_PROVISIONS`):**
+   - Embed a compact, verbatim `const CODAL_PROVISIONS = { ... };` map inside an inline `<script>` before `</body>` alongside `<div class="art-popover" id="artPopover" role="tooltip" aria-hidden="true">`.
+   - **Desktop Hover/Focus:** Open on `mouseover` / `focusin` with a short hide debounce (`~150ms`) so users can move the pointer into `.art-popover-body` to scroll multi-article ranges.
+   - **Mobile / Click Pin:** Tap/click on `.art-ref` pins `.art-popover.mobile-pinned` with a visible close button (`×`), calling `e.preventDefault(); e.stopPropagation();` so citations inside `<summary>` or `<figcaption>` never accidentally toggle `<details>` or open image lightboxes; close on close button, outside click, or `Escape`.
+   - **Viewport Flip & Clamp:** Position below the citation by default, automatically flipping above when overflowing the bottom edge and clamping horizontally within `min(450px, calc(100vw - 24px))` inside a scrollable `max-height: 300px` body. Highlight `data-para` hits with `.art-para-hit` (`#FEF9C3` tint) and scroll the first hit into view.
+   - **Print Rule:** Always hide the floating popover in `@media print`:
+     `.art-popover { display: none !important; }` and `.art-ref { border-bottom: none; }`.
+
+```css
+/* Optional Interactive Verbatim Statutory Popover */
+.art-ref {
+  color: #0F766E;
+  font-weight: 600;
+  border-bottom: 1.5px dotted #0F766E;
+  cursor: help;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.art-ref:hover, .art-ref:focus { background-color: #CCFBF1; outline: none; }
+.art-popover {
+  position: fixed;
+  z-index: 2500;
+  display: none;
+  width: min(450px, calc(100vw - 24px));
+  max-height: 300px;
+  background: #FFFFFF;
+  border: 1.5px solid #1E3A8A;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #1F2937;
+}
+.art-popover.open { display: flex; flex-direction: column; }
+.art-popover-hdr {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.5rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.art-popover-close {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  cursor: pointer;
+  display: none;
+}
+.art-popover.mobile-pinned .art-popover-close { display: inline-block; }
+.art-popover-body { padding: 0.75rem 0.9rem; overflow-y: auto; white-space: pre-wrap; }
+.art-popover-entry + .art-popover-entry { margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px dashed #CBD5E1; }
+.art-popover-entry-title { font-weight: 700; color: #0F766E; margin-bottom: 0.2rem; }
+.art-para-hit { background: #FEF9C3; color: #1E3A8A; font-weight: 700; padding: 0.05rem 0.22rem; border-radius: 3px; }
+@media print { .art-popover { display: none !important; } .art-ref { border-bottom: none; } }
+```
