@@ -953,97 +953,63 @@ def build_full_html():
       margin-bottom: 0.3rem;
     }}
 
-    /* INTERACTIVE DIAGRAM WRAPPER, PAN-ZOOM & FULLSCREEN */
-    .diagram-wrapper {{
-      margin: 2rem 0;
+    /* STATIC RESPONSIVE IMAGE & PROCEDURAL ARCHITECTURE CARDS */
+    .img-figure {{
+      margin: 1.85rem 0;
+      padding: 1rem;
+      background: #FFFFFF;
       border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }}
+    .img-figure img {{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }}
+    .img-figure figcaption {{
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid #E2E8F0;
+      font-size: 0.86rem;
+      color: #475569;
+      text-align: left;
+      line-height: 1.45;
+    }}
+    .arch-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }}
+    .arch-card {{
+      border: 1px solid #E2E8F0;
+      border-top: 4px solid #1E3A8A;
       border-radius: 8px;
-      background: #FFFFFF;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }}
-    .diagram-wrapper.is-fullscreen {{
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      margin: 0;
-      border: none;
-      border-radius: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: #FFFFFF;
-    }}
-    .diagram-toolbar {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 1rem;
       background: #F8FAFC;
-      padding: 0.5rem 1rem;
-      border-bottom: 1px solid #E2E8F0;
-      z-index: 2;
     }}
-    .diagram-label {{
-      font-size: 0.75rem;
-      font-weight: 700;
+    .arch-card.teal {{ border-top-color: #0F766E; }}
+    .arch-card.green {{ border-top-color: #166534; }}
+    .arch-card.rust {{ border-top-color: #C2410C; }}
+    .arch-card h5 {{
+      margin: 0 0 0.5rem 0;
+      font-size: 0.92rem;
       color: #1E3A8A;
-      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }}
-    .diagram-hint {{
-      font-weight: 400;
-      color: #64748B;
-      font-size: 0.7rem;
-      margin-left: 0.4rem;
-    }}
-    .diagram-controls {{
-      display: flex;
-      gap: 0.35rem;
-    }}
-    .zoom-btn {{
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 4px;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 700;
+    .arch-card ul {{
+      margin: 0;
+      padding-left: 1.15rem;
+      font-size: 0.85rem;
       color: #334155;
-      cursor: pointer;
-      user-select: none;
-      transition: background 0.15s, border-color 0.15s;
     }}
-    .zoom-btn:hover {{
-      background: #F1F5F9;
-      border-color: #94A3B8;
-      color: #0F172A;
-    }}
-    .diagram-viewport {{
-      position: relative;
-      overflow: hidden;
-      background: #F8FAFC;
-      min-height: 520px;
-      cursor: grab;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }}
-    .diagram-wrapper.is-fullscreen .diagram-viewport {{
-      flex-grow: 1;
-      height: calc(100vh - 45px);
-    }}
-    .diagram-viewport.is-dragging {{
-      cursor: grabbing;
-    }}
-    .diagram-container {{
-      transform-origin: center center;
-      transition: transform 0.05s ease-out;
-      padding: 1.5rem;
-      display: inline-block;
-    }}
+    .arch-card li {{ margin-bottom: 0.35rem; }}
 
     /* PROFESSOR QUIZ WATCHLIST BANNER & CARDS */
     .quiz-watchlist-section {{
@@ -1175,7 +1141,7 @@ def build_full_html():
       .document-container {{ box-shadow: none; padding: 0; max-width: 100%; margin: 0; }}
       .case-grid {{ display: block; }}
       .case-sidebar {{ position: static; margin-top: 1.5rem; page-break-inside: avoid; }}
-      .diagram-wrapper {{ page-break-inside: avoid; }}
+      .img-figure, .arch-card {{ page-break-inside: avoid; }}
     }}
   </style>
 </head>
@@ -1327,75 +1293,40 @@ def build_full_html():
       This master consolidated reviewer packages the twenty-eight (28) landmark Supreme Court decisions governing the Criminal Procedure Finals syllabus: <span class="c-teal"><strong>Rule 114 (Bail)</strong></span>, <span class="c-teal"><strong>Rule 116 (Arraignment and Plea)</strong></span>, and <span class="c-teal"><strong>Rule 117 (Motion to Quash, Double Jeopardy & Provisional Dismissal)</strong></span> of the Revised Rules of Criminal Procedure, together with the expressly named Quiz Watchlist cases (<span class="c-teal"><strong>Rule 119, Sec. 23 Demurrer & R.A. 9262, Sec. 26 BWS Defense</strong></span>).
     </p>
 
-    <!-- INTERACTIVE PAN-AND-ZOOM MERMAID DIAGRAM -->
-    <div class="diagram-wrapper">
-      <div class="diagram-toolbar">
-        <span class="diagram-label">MASTER PROCEDURAL DECISION ARCHITECTURE: RULES 114, 116 & 117 <span class="diagram-hint">(Drag to pan • Scroll to zoom • ⛶ for Fullscreen)</span></span>
-        <div class="diagram-controls">
-          <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-          <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-          <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
-          <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-        </div>
+    <!-- MASTER PROCEDURAL DECISION ARCHITECTURE (HTML WORKFLOW GRID — ZERO MERMAID) -->
+    <div class="ui-box">
+      <div class="ui-step-plain">
+        <div class="ui-kicker c-navy">MASTER PROCEDURAL DECISION ARCHITECTURE</div>
+        <div class="ui-title">Rules 114, 116 &amp; 117 + Quiz Watchlist (28 Landmark Decisions)</div>
       </div>
-      <div class="diagram-viewport">
-        <div class="diagram-container">
-          <pre class="mermaid">
-flowchart TD
-  START(["CRIMINAL ACTION INITIATED"]) --> BAIL_STAGE{{"Bail Determination (Rule 114)"}}
-
-  %% RULE 114 BRANCH
-  BAIL_STAGE -- "Capital Offense / Life Imprisonment" --> SUMMARY_HEARING["People v. Tanes (06.1)<br/>• Burden on Prosecution to prove evidence of guilt is strong<br/>• Unexcused non-compliance with Sec. 21 RA 9165 compromises corpus delicti<br/>• Evidence of guilt not strong -> Accused entitled to bail"]
-  BAIL_STAGE -- "Posting Bail & Challenging Arrest" --> BORLONGAN["Borlongan v. Peña (06.2)<br/>• Sec. 26: Posting bail NOT a waiver of illegal arrest or lack of prelim invest.<br/>• Objection must be raised prior to plea<br/>• Overruled prior automatic waiver doctrine"]
-  BAIL_STAGE -- "Motion to Cancel Recommended Bail" --> SAN_MIGUEL["San Miguel v. Maceda (06.3)<br/>• Procedural Due Process: Notice & hearing strictly mandatory<br/>• Cancelling bail 2 days before hearing without hearing is misconduct"]
-  BAIL_STAGE -- "Bail Bond Confiscation & Execution" --> MENDOZA["Mendoza v. Alarma (06.4)<br/>• Sec. 21: Order of forfeiture is purely INTERLOCUTORY<br/>• Formal judgment on the bond mandatory before execution against property"]
-  BAIL_STAGE -- "Bail Pending Appeal (Post-RTC Conviction)" --> LEVISTE["Leviste v. Court of Appeals (06.5)<br/>• Sec. 5: Presumption of innocence ends upon conviction<br/>• Bail is purely DISCRETIONARY (grave caution & strong reasons)<br/>• Absence of Par. 3 circumstances does NOT make bail automatic"]
-
-  %% RULE 116 ARRAIGNMENT BRANCH
-  BAIL_STAGE --> ARRN["Arraignment & Plea (Rule 116)"]
-
-  ARRN -- "Custody of Law vs. Jurisdiction" --> MIRANDA["Miranda v. Tuliao (07.1)<br/>• Custody of law required ONLY in applications for bail<br/>• Motion to quash arrest warrant is a special appearance<br/>• No custody required to assail jurisdiction over person"]
-  ARRN -- "Unconditional Plea of Not Guilty" --> GANDAROSA["Gandarosa v. Flores (07.2)<br/>• Unconditional plea waives preliminary investigation<br/>• Constitutes abandonment of pending DOJ petition for review<br/>• Court relieved of duty to independently evaluate probable cause"]
-  ARRN -- "Arraignment Before Incompetent Court" --> ZAPATOS["Zapatos v. People (07.3)<br/>• Arraignment before court lacking subject-matter jurisdiction is void<br/>• First jeopardy never attached (RTC vs. Sandiganbayan)<br/>• Physical evidence proves lawful self-defense"]
-  ARRN -- "Arraignment on Superseded Original Information" --> CABACANGAN["Cabacangan v. Concepcion (07.4)<br/>• Amended information completely supersedes original<br/>• Timely objection by counsel negates waiver<br/>• Mandatory arraignment on amended charge"]
-  ARRN -- "Plea of Guilty to Capital Offense" --> CAPITAL_PLEA{{"Capital Plea Doctrines"}}
-  CAPITAL_PLEA -- "Plea for Lesser Penalty" --> COMENDADOR["People v. Comendador (07.5)<br/>• Appeal for lesser penalty is NOT a conditional plea<br/>• Reception of evidence mandatory; disproved aggravating circumstances rejected"]
-  CAPITAL_PLEA -- "Plea Bargaining for Penalty" --> MAGAT_PLEA["People v. Magat (07.6, 07.9, 08.1)<br/>• Bargaining solely for penalty is VOID AB INITIO<br/>• Treated as plea of not guilty; no double jeopardy attaches"]
-  CAPITAL_PLEA -- "Defective Searching Inquiry" --> DOCUMENTO["People v. Documento (07.11)<br/>• Improvident plea does not void conviction when<br/>independent evidence proves guilt beyond reasonable doubt"]
-  ARRN -- "Self-Defense Testimony after Guilty Plea" --> BALISACAN["People v. Balisacan (07.7)<br/>• Exculpatory testimony vacates plea of guilty ipso facto<br/>• Summary acquittal without trial is void; no double jeopardy"]
-  ARRN -- "Pre-Trial Plea Bargaining" --> PLEA_BARGAIN{{"Plea Bargaining Framework (Sec. 2)"}}
-  PLEA_BARGAIN -- "Lesser Included Offense (Consent of Pros & Offended)" --> DAAN["Daan v. Sandiganbayan (07.8)<br/>• Sec. 2: Lesser included offenses (Art. 172 in 171; Art. 218 in 217)<br/>• Arbitrary refusal is grave abuse of discretion"]
-  PLEA_BARGAIN -- "Unaccepted Pre-Trial Offer" --> DAWATON["People v. Dawaton (07.10)<br/>• Unaccepted offer to plead guilty to homicide does NOT mitigate murder<br/>• Treachery on sleeping/drunk victim"]
-  ARRN -- "Affirmative Defense: Battered Woman Syndrome" --> XXX_BWS["People v. XXX271087 (QW.2)<br/>• Sec. 26 RA 9262: Two full cycles of violence + expert psychiatric proof<br/>• Exempt from criminal & civil liability; police reports not mandatory"]
-
-  %% RULE 117 MOTION TO QUASH & DOUBLE JEOPARDY BRANCH
-  ARRN --> MTQ{{"Motion to Quash (Rule 117)"}}
-
-  MTQ -- "Lack of Probable Cause" --> ALBA["People v. Sandiganbayan (Alba) (08.2)<br/>• Absence of PC is NOT an authorized ground to quash under Sec. 3<br/>• Summary pre-trial acquittal violates State due process; void"]
-  MTQ -- "Failure to Charge an Offense (Sec. 3[a])" --> HYPO{{"Hypothetical Admission Test"}}
-  HYPO -- "Conspiracy as Mode of Commission" --> LAZARTE["Lazarte v. Sandiganbayan (08.3)<br/>• Ultimate facts & community of design suffice<br/>• Specific overt acts are evidentiary; GOCC managers under Sandiganbayan"]
-  HYPO -- "Private Co-Conspirator in Graft" --> GO["Go v. Sandiganbayan (08.5)<br/>• Private persons liable under Sec. 3(g) RA 3019 via conspiracy<br/>• Sec. 3(a) defense never waived (Sec. 9)"]
-  MTQ -- "Lack of Jurisdiction (Sec. 3[b])" --> SERANA["Serana v. Sandiganbayan (08.4)<br/>• Estafa in relation to office falls under Sandiganbayan<br/>• UP Student Regent is a public officer under Sec. 4(A)(1)(g)"]
-
-  %% DOUBLE JEOPARDY & PROVISIONAL DISMISSAL
-  MTQ -- "Double Jeopardy (Sec. 3[i] & Sec. 7)" --> DJ_BRANCH{{"Double Jeopardy Invocations"}}
-  DJ_BRANCH -- "Finality-of-Acquittal Rule" --> ACQUITTAL["Castro v. People (08.6) & People v. Asis (08.7)<br/>• Errors of judgment unassailable by certiorari<br/>• Acquittal is immediately final; certiorari lies only for sham trial / ouster"]
-  DJ_BRANCH -- "Demurrer Acquittal & OSG Standing" --> YASA["Yasa v. Chavez (QW.1)<br/>• Private complainant lacks standing on criminal aspect without OSG<br/>• Demurrer acquittal is adjudication on merits -> double jeopardy"]
-  DJ_BRANCH -- "Quasi-Crimes (Art. 365, RPC)" --> IVLER["Ivler v. Modesto-San Pedro (08.8)<br/>• Reckless imprudence is a single indivisible quasi-offense<br/>• Splitting charges prohibited; prior conviction bars second charge"]
-  DJ_BRANCH -- "Same Act vs. Same Offense" --> NIERRAS["Nierras v. Dacuycuy (08.9)<br/>• Double jeopardy bars same OFFENSE, not same ACT<br/>• BP 22 (malum prohibitum) & Estafa (malum in se) distinct"]
-
-  MTQ -- "Provisional Dismissal (Sec. 8)" --> PROV_DISMISS["People v. Lacson (08.10)<br/>• Conditions sine qua non: Express consent of accused + notice to ALL heirs<br/>• 2-year time-bar applies PROSPECTIVELY from Dec. 1, 2000"]
-
-  classDef navyNode fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
-  classDef tealNode fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef greenNode fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rustNode fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-
-  class START,ARRN,BAIL_STAGE,MTQ navyNode;
-  class MAGAT_PLEA,ALBA,ACQUITTAL,YASA,IVLER,BALISACAN,SAN_MIGUEL,MENDOZA rustNode;
-  class LAZARTE,GO,SERANA,NIERRAS,MIRANDA,CABACANGAN,ZAPATOS tealNode;
-  class SUMMARY_HEARING,BORLONGAN,LEVISTE,COMENDADOR,DOCUMENTO,DAAN,DAWATON,PROV_DISMISS,XXX_BWS greenNode;
-          </pre>
+      <div class="arch-grid">
+        <div class="arch-card green">
+          <h5>Module 06 — Rule 114 (Bail)</h5>
+          <ul>
+            <li><strong>Capital / Life Offenses:</strong> Burden on prosecution in summary hearing; unexcused Sec. 21 RA 9165 lapses defeat strong evidence (<em>Tanes</em>).</li>
+            <li><strong>Arrest &amp; Bail Mechanics:</strong> Posting bail does NOT waive illegal arrest/PI objections raised before plea (<em>Borlongan</em>); notice &amp; hearing mandatory before cancellation (<em>San Miguel</em>); bond forfeiture is interlocutory before formal judgment on bond (<em>Mendoza v. Alarma</em>); post-RTC bail purely discretionary (<em>Leviste</em>).</li>
+          </ul>
+        </div>
+        <div class="arch-card teal">
+          <h5>Module 07 — Rule 116 (Arraignment &amp; Plea)</h5>
+          <ul>
+            <li><strong>Jurisdiction &amp; Custody:</strong> Custody required for bail, not motion to quash warrant (<em>Miranda</em>); unconditional plea waives PI (<em>Gandarosa</em>); plea before incompetent court is void (<em>Zapatos</em>); amended Information requires fresh arraignment upon objection (<em>Cabacangan</em>).</li>
+            <li><strong>Capital Pleas &amp; Bargaining:</strong> Asking lesser penalty ≠ conditional plea (<em>Comendador</em>); bargaining solely for penalty void (<em>Magat</em>); exculpatory testimony vacates guilty plea (<em>Balisacan</em>); independent proof saves defective inquiry (<em>Documento</em>); lesser included plea bargaining (<em>Daan</em>); unaccepted plea offer non-mitigating (<em>Dawaton</em>).</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h5>Module 08 — Rule 117 (Quashal &amp; Jeopardy)</h5>
+          <ul>
+            <li><strong>Motion to Quash:</strong> Absence of PC not Sec. 3 ground (<em>Alba</em>); conspiracy ultimate facts pass Hypothetical Admission Test (<em>Lazarte</em>); UP Student Regent &amp; private co-conspirators covered (<em>Serana</em>, <em>Go</em>).</li>
+            <li><strong>Double Jeopardy &amp; Sec. 8:</strong> Finality of acquittal bars certiorari on judgment errors (<em>Castro</em>, <em>Asis</em>); quasi-crimes indivisible (<em>Ivler</em>); BP 22 &amp; Estafa distinct (<em>Nierras</em>); Sec. 8 requires express consent + notice to all heirs (<em>Lacson</em>).</li>
+          </ul>
+        </div>
+        <div class="arch-card rust">
+          <h5>Quiz Watchlist (2026 Rulings)</h5>
+          <ul>
+            <li><strong>Demurrer &amp; OSG Standing (<em>Yasa v. Chavez</em>):</strong> Private complainant lacks criminal-aspect standing without OSG; demurrer acquittal attaches double jeopardy.</li>
+            <li><strong>Battered Woman Syndrome (<em>People v. XXX271087</em>):</strong> Sec. 26 RA 9262 exempts criminal &amp; civil liability upon proof of two cycles + expert testimony; police reports not mandatory.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1488,177 +1419,7 @@ flowchart TD
 
   </div>
 
-  <!-- MERMAID SCRIPT & PAN/ZOOM/FULLSCREEN ENGINE -->
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({{
-      startOnLoad: true,
-      theme: 'base',
-      themeVariables: {{
-        primaryColor: '#F8FAFC',
-        primaryBorderColor: '#1E3A8A',
-        primaryTextColor: '#1F2937',
-        lineColor: '#1E3A8A',
-        fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
-      }}
-    }});
-  </script>
-
   <script>
-    // Grab-to-Pan & Zoom Handlers
-    function updateDiagramTransform(container) {{
-      const scale = parseFloat(container.dataset.scale || '1');
-      const x = parseFloat(container.dataset.panX || '0');
-      const y = parseFloat(container.dataset.panY || '0');
-      container.style.transform = `translate(${{x}}px, ${{y}}px) scale(${{scale}})`;
-    }}
-
-    function zoomDiagram(btn, delta) {{
-      const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-      let scale = parseFloat(container.dataset.scale || '1');
-      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-      container.dataset.scale = scale;
-      updateDiagramTransform(container);
-    }}
-
-    function resetDiagramZoom(btn) {{
-      const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-      container.dataset.scale = '1';
-      container.dataset.panX = '0';
-      container.dataset.panY = '0';
-      updateDiagramTransform(container);
-    }}
-
-    function toggleDiagramFullscreen(btn) {{
-      const wrapper = btn.closest('.diagram-wrapper');
-      const container = wrapper.querySelector('.diagram-container');
-      const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
-
-      wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
-      btn.textContent = enteringFullscreen ? '✕' : '⛶';
-      btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
-      document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
-
-      if (container) {{
-        container.dataset.panX = '0';
-        container.dataset.panY = '0';
-        updateDiagramTransform(container);
-      }}
-
-      if (enteringFullscreen && wrapper.requestFullscreen) {{
-        wrapper.requestFullscreen().catch(() => {{}});
-      }} else if (!enteringFullscreen && document.fullscreenElement) {{
-        document.exitFullscreen().catch(() => {{}});
-      }}
-    }}
-
-    function exitAllDiagramFullscreens() {{
-      document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {{
-        wrapper.classList.remove('is-fullscreen');
-        const container = wrapper.querySelector('.diagram-container');
-        if (container) {{
-          container.dataset.panX = '0';
-          container.dataset.panY = '0';
-          updateDiagramTransform(container);
-        }}
-        const btn = wrapper.querySelector('.fullscreen-btn');
-        if (btn) {{
-          btn.textContent = '⛶';
-          btn.title = 'View Fullscreen';
-        }}
-      }});
-      document.body.style.overflow = '';
-    }}
-
-    document.addEventListener('fullscreenchange', () => {{
-      if (!document.fullscreenElement) {{
-        exitAllDiagramFullscreens();
-      }}
-    }});
-
-    document.addEventListener('keydown', (e) => {{
-      if (e.key === 'Escape') {{
-        exitAllDiagramFullscreens();
-      }}
-    }});
-
-    // Drag to Pan
-    let activeDiagramDrag = null;
-
-    document.addEventListener('mousedown', (e) => {{
-      const viewport = e.target.closest('.diagram-viewport');
-      if (!viewport || e.button !== 0) return;
-      const container = viewport.querySelector('.diagram-container');
-      if (!container) return;
-      e.preventDefault();
-      viewport.classList.add('is-dragging');
-      activeDiagramDrag = {{
-        viewport,
-        container,
-        startX: e.clientX - parseFloat(container.dataset.panX || '0'),
-        startY: e.clientY - parseFloat(container.dataset.panY || '0')
-      }};
-    }});
-
-    document.addEventListener('mousemove', (e) => {{
-      if (!activeDiagramDrag) return;
-      activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
-      activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
-      updateDiagramTransform(activeDiagramDrag.container);
-    }});
-
-    document.addEventListener('mouseup', () => {{
-      if (!activeDiagramDrag) return;
-      activeDiagramDrag.viewport.classList.remove('is-dragging');
-      activeDiagramDrag = null;
-    }});
-
-    // Touch events for tablets / mobile
-    document.addEventListener('touchstart', (e) => {{
-      const viewport = e.target.closest('.diagram-viewport');
-      if (!viewport || e.touches.length !== 1) return;
-      const container = viewport.querySelector('.diagram-container');
-      if (!container) return;
-      const touch = e.touches[0];
-      viewport.classList.add('is-dragging');
-      activeDiagramDrag = {{
-        viewport,
-        container,
-        startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
-        startY: touch.clientY - parseFloat(container.dataset.panY || '0')
-      }};
-    }}, {{ passive: true }});
-
-    document.addEventListener('touchmove', (e) => {{
-      if (!activeDiagramDrag || e.touches.length !== 1) return;
-      const touch = e.touches[0];
-      activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
-      activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
-      updateDiagramTransform(activeDiagramDrag.container);
-    }}, {{ passive: true }});
-
-    document.addEventListener('touchend', () => {{
-      if (!activeDiagramDrag) return;
-      activeDiagramDrag.viewport.classList.remove('is-dragging');
-      activeDiagramDrag = null;
-    }});
-
-    // Wheel Zoom inside Viewport
-    document.addEventListener('wheel', (e) => {{
-      const viewport = e.target.closest('.diagram-viewport');
-      if (!viewport) return;
-      const wrapper = viewport.closest('.diagram-wrapper');
-      if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {{
-        e.preventDefault();
-        const container = viewport.querySelector('.diagram-container');
-        let scale = parseFloat(container.dataset.scale || '1');
-        const delta = e.deltaY < 0 ? 0.15 : -0.15;
-        scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-        container.dataset.scale = scale;
-        updateDiagramTransform(container);
-      }}
-    }}, {{ passive: false }});
-
     // Active Scroll-Spy for Sticky Navigation Dropdown
     document.addEventListener('DOMContentLoaded', () => {{
       const select = document.getElementById('toc-select');

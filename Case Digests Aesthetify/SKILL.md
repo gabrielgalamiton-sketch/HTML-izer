@@ -137,26 +137,22 @@ Apply color classes deliberately to maximize visual scannability:
 
 ---
 
-## 5. Visual Aids: Mermaid.js & Procedural Workflow Cards
+## 5. Visual Aids: Nano Banana Pro 2 Infographics & Procedural Workflow Cards (Zero Mermaid)
 
-Whenever complex procedural workflows, timelines, multi-step tests, or jurisdictional hierarchies appear, enhance the text with clean visual aids.
+Mermaid.js diagrams are **discontinued**. Whenever complex procedural workflows, timelines, multi-step tests, or jurisdictional hierarchies appear, enhance the text with:
 
-### Mermaid.js Diagrams
-Wrap Mermaid syntax inside a standard container:
+### A. Pure HTML Workflow Cards (For Simple ≤ 4-Step Linear Flows)
+Use `.ui-box`, `.ui-grid`, and `.ui-workflow` cards for compact sequential flows and statutory comparisons.
+
+### B. Nano Banana Pro 2 Educational Infographics (For Complex Trees & Multi-Case Architectures)
+1. **Visual Style & Palette:** Invoke `image-generator` on a crisp white (`#FFFFFF`) or light-slate (`#F8FAFC`) canvas matching Deep Navy (`#1E3A8A`), Slate Teal (`#0F766E`), Forest Green (`#166534`), and Burnt Rust (`#C2410C`), in `16:9` widescreen layout. Choose a Clean Executive Vector Infographic or conceptual illustration based on whichever depicts the procedural rule most clearly.
+2. **Mandatory Visual QA Gate:** Always inspect every generated image via `read_file` before embedding. If any legal term, case name, or rule number is misspelled, regenerate/edit (up to 1 retry). If `image-generator` hits quota exhaustion, substitute clean HTML `.ui-box` cards instead of Mermaid.
+3. **Asset Storage & Static Card Markup:** Save verified images into `c:\Users\IP Gaming 3\Desktop\HTML-izer\images\<doc-slug>\01-concept.jpg` and embed via a clean static responsive card (no modal or Mermaid script):
 ```html
-<div class="diagram-container">
-  <pre class="mermaid">
-    flowchart TD
-      A["Preliminary Investigation"] --> B{"Probable Cause Found?"}
-      B -- "YES" --> C["File Information in Court"]
-      B -- "NO" --> D["Dismiss Complaint"]
-      
-      style A fill:#F8FAFC,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A
-      style B fill:#FFFBEB,stroke:#D97706,stroke-width:2px,color:#92400E
-      style C fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534
-      style D fill:#FEF2F2,stroke:#C2410C,stroke-width:2px,color:#C2410C
-  </pre>
-</div>
+<figure class="img-figure">
+  <img src="images/topic-slug/01-concept.jpg" alt="Descriptive alt text of procedural flowchart" />
+  <figcaption><strong>Figure 1 — Procedural Flow:</strong> Core doctrinal takeaway illustrated above.</figcaption>
+</figure>
 ```
 
 ---
@@ -169,13 +165,12 @@ Follow these mandatory rules for file generation:
    - **Never** dump hundreds of lines of raw HTML code or markdown fences into the chat conversation.
    - Always write the complete, standalone HTML document directly to the project directory using file tools (e.g., `c:\Users\IP Gaming 3\Desktop\HTML-izer\<filename>.html`).
 2. **Automatic GitHub Pages Deployment:**
-   - Immediately after writing or updating the `.html` file, run:
+   - Immediately after writing or updating the `.html` file, stage both the `.html` file and any generated `images/<doc-slug>/` folder, commit, and push in `c:\Users\IP Gaming 3\Desktop\HTML-izer`:
      ```powershell
-     git add "<filename>.html"
+     git add "<filename>.html" "images/<doc-slug>"
      git commit -m "Publish <filename>.html"
      git push
      ```
-     in `c:\Users\IP Gaming 3\Desktop\HTML-izer`.
 3. **Concise Chat Confirmation:**
    - In your chat reply, provide only:
      - A clickable local file link (e.g., `[<filename>.html](file:///c:/Users/IP%20Gaming%203/Desktop/HTML-izer/<filename>.html)`)

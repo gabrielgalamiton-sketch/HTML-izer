@@ -13,10 +13,28 @@
 
 ---
 
+## BIG-PICTURE MAP OF CIVIL CODE BOOK III (WHERE THIS QUIZ SITS)
+
+`[Stage 1: Opening (Arts. 774–782)] → [Stage 2: Wills, Preterition & Legitimes (Arts. 783–914)] → [QUIZ FOCUS: Parts I–III (Arts. 915–1057)] → [Stage 6: Partition (Arts. 1058–1105)]`
+
+![Big-Picture Map of Civil Code Book III: Succession Law](images/00b-book-iii-succession-map.jpg)
+
+| Book III Sequence | Civil Code Scope | Status | What Problem Does It Solve? |
+| :--- | :--- | :--- | :--- |
+| **Ch. 1: General Provisions** | Arts. 774–782 | Background Signpost | Vests successional rights automatically at death (Art. 777). |
+| **Ch. 2 (Secs. 1–5): Wills & Legitimes** | Arts. 783–914 | Pre-Quiz Signpost | Governs will validity, preterition (Art. 854), substitutions (Art. 872), and compulsory *legitimes*. |
+| **Ch. 2 (Sec. 6): Disinheritance (PART I)** | **Arts. 915–923** | **TESTED** | Sole legal mechanism to strip a compulsory heir of the *legitime* for statutory cause. |
+| **Ch. 3: Intestate Succession (PART II)** | **Arts. 960–1014** | **TESTED** | Default statutory distribution when there is no valid will or an undisposed estate balance. |
+| **Ch. 4 (Secs. 1–3): Common Rules (PART III)** | **Arts. 1015–1057** | **TESTED** | Rules shared by both testate & intestate succession: accretion, capacity/unworthiness, and heir's choice. |
+| **Ch. 4 (Secs. 4–6): Executors & Partition** | Arts. 1058–1105 | Post-Quiz Signpost | Settlement wind-up, collation, and physical partition after shares are fixed. |
+
+---
+
 ## MASTER ROADMAP & VISUAL INDEX
 
 | Module | Core Question Answered | Key Provisions | Nano Banana Pro 2 Visual |
 | :--- | :--- | :--- | :--- |
+| **Book III Architecture** | Where do these quiz modules sit inside all of Succession Law? | Arts. 774–1105 | `images/00b-book-iii-succession-map.jpg` |
 | **Part I: Disinheritance** | Can a compulsory heir be stripped of the *legitime*? | Arts. 915–923; FC Arts. 55, 63(4) | `images/01-disinheritance-7-requisites.jpg`, `images/02-art920-parental-reconciliation.jpg` |
 | **Part II-A: Intestacy & Shares** | Who inherits without a will, in what order, and in what fractions? | Arts. 960–1014; FC Art. 176 | `images/03-intestate-orders-5th-degree.jpg`, `images/06-mixed-succession-trap.jpg` |
 | **Part II-B: Representation & Art. 992** | Who steps into another's shoes, and when does the Iron Curtain apply? | Arts. 969–977, 990, 992, 777 | `images/04-art969-per-stirpes-vs-per-capita.jpg`, `images/05-iron-curtain-vs-dela-merced.jpg` |
@@ -27,8 +45,14 @@
 ---
 
 # PART I: THE LAW ON DISINHERITANCE (ARTS. 915–923)
+> **Macro Anchor (Title IV, Ch. 2, Sec. 6):** Right after the Code locks in compulsory *legitimes*, Section 6 asks when and how a testator may take that protected share away.
 
 ## I. Concept, Scope & 7 Essential Requisites (Arts. 915–917)
+
+> **Context & Statutory Compass:** `[Legitimes Protected (886–914)] → [YOU ARE HERE: 7 Formal Gatekeepers (915–917)] → [Grounds (919–921)]`
+> * **Statutory Address:** Testamentary Succession — Disinheritance General Rules (Arts. 915–917). Exists only in a valid will against compulsory heirs.
+> * **Chain-of-Logic Bridge:** Before examining *why* an heir may be disinherited (Arts. 919–921), you must satisfy all 7 procedural gatekeepers (`W-E-L-S-T-U-T`) and recognize who bears the burden of proof (Art. 917).
+> * **Why the Law Cares:** Stops testators from casually disowning family members out of fleeting anger or vague boilerplate.
 
 **[MEM] Mnemonic for the 7 Requisites — `W-E-L-S-T-U-T` ("WELSTUT"):**
 1. **W — Valid Will:** Strictly testamentary; valid extrinsically (Arts. 804–814) and duly **probated**. Cannot be done via *inter vivos* instrument, affidavit, or oral declaration.
@@ -52,6 +76,11 @@
 
 ## II. Grounds to Disinherit Children & Descendants (Art. 919 — 8 Exclusive Grounds)
 
+> **Context & Statutory Compass:** `[7 Formal Gatekeepers] → [YOU ARE HERE: Descendant Grounds (Art. 919)] → [Parent Grounds (Art. 920)]`
+> * **Statutory Address:** Testamentary Succession — Exclusive Grounds vs. Children & Descendants (Art. 919[1–8]).
+> * **Chain-of-Logic Bridge:** Supplies the exact 8 offenses satisfying the "Lawful Cause" requisite of `WELSTUT`.
+> * **Why the Law Cares:** Balances family *legitime* security against grave ingratitude while distinguishing conviction-based grounds from non-conviction fallbacks (Art. 919[6]).
+
 **[MEM] Mnemonic — `A-G-A-F-R-M-D-C` ("A Great Act Forbids Respect, Means Disinheritance Coming"):**
 1. **A — Attempt on Life (Art. 919[1]):** Found guilty by **final judgment** of an attempt (attempted, frustrated, or consummated under Art. 6, RPC) against the life of the testator, spouse, descendants, or ascendants.
    * *Executive Pardon:* An absolute presidential pardon **does NOT defeat disinheritance**; it erases penal liability to the State, not personal ingratitude to the testator.
@@ -69,6 +98,11 @@
 
 ## III. Grounds to Disinherit Parents & Ascendants (Art. 920 — 8 Exclusive Grounds)
 
+> **Context & Statutory Compass:** `[Descendant Grounds (919)] → [YOU ARE HERE: Parent/Ascendant Grounds (Art. 920)] → [Spouse Grounds (Art. 921)]`
+> * **Statutory Address:** Testamentary Succession — Exclusive Grounds vs. Parents & Ascendants (Art. 920[1–8]).
+> * **Chain-of-Logic Bridge:** When a testator leaves no descendants, parents step in as compulsory heirs—this section governs when a child may strip those parents.
+> * **Why the Law Cares:** Protects vulnerable children from abandonment or abuse while setting traps on female-specific virtue, omission of maltreatment, and Art. 920(8) vs. 920(2).
+
 1. **Abandonment vs. Virtue/Immorality (Art. 920[1]) — Gender Trap:**
    * **Abandonment of children** (total deprivation of parental care, support, and moral guidance during minority) → **Gender-Neutral** (applies to sons and daughters).
    * **Inducing daughters to live a corrupt/immoral life** (e.g., prostitution) OR **attempting against their virtue** (e.g., attempted rape, acts of lasciviousness, no conviction required) → **Female-Specific** (daughters and granddaughters).
@@ -81,6 +115,11 @@
 ---
 
 ## IV. Spousal Disinheritance (Art. 921), Reconciliation (Art. 922), Representation (Art. 923) & Imperfect Disinheritance (Art. 918)
+
+> **Context & Statutory Compass:** `[Grounds (919–920)] → [YOU ARE HERE: Spouse, Reconciliation, Rep. & Defects (921–923, 918)] → [Part II: Intestacy]`
+> * **Statutory Address:** Testamentary Succession — Final Disinheritance Rules (Arts. 921–923, 918; FC Arts. 55, 63[4]).
+> * **Chain-of-Logic Bridge:** Covers the surviving spouse and answers the three aftermath questions: *Can reconciliation undo it? Do innocent kids inherit? What if the testator failed `WELSTUT`?*
+> * **Why the Law Cares:** Shields innocent grandchildren from a parent's fault (Art. 923) and enforces the crucial difference between partial annulment (Art. 918) and total collapse under preterition (Art. 854).
 
 ### A. Grounds to Disinherit a Spouse (Art. 921 — 6 Grounds)
 **[MEM] Mnemonic — `A-G-F-L-P-R`:**
@@ -114,8 +153,14 @@
 ---
 
 # PART II: INTESTATE SUCCESSION, SHARES, REPRESENTATION & ARTICLE 992
+> **Macro Anchor (Title IV, Chapter 3 — Arts. 960–1014):** Stepping outside wills: whenever no valid will exists or an estate slice falls undisposed, the law supplies its default "statutory will."
 
 ## V. Causes, Lines, Proximity & Orders of Intestacy (Arts. 960–962, 978–1014)
+
+> **Context & Statutory Compass:** `[Part I: Disinheritance] → [YOU ARE HERE: Intestate Triggers & Priority Order (960–1014)] → [Exact Shares (983–1009)]`
+> * **Statutory Address:** Legal/Intestate Succession — Causes (Art. 960), Lines/Proximity (Art. 962), Regular vs. Irregular Orders (Arts. 978–1014).
+> * **Chain-of-Logic Bridge:** Before computing pesos or fractions, you must identify who stands in line first and whether the decedent was legitimate or illegitimate.
+> * **Why the Law Cares:** Prevents property from becoming *bona vacantia* up to the 5th degree and ensures order hierarchy overrides mere degree proximity.
 
 ### A. When Intestacy Happens (Art. 960 + Doctrinal Grounds)
 1. **No will / Void will / Revoked will** (Art. 830);
@@ -143,6 +188,11 @@
 ---
 
 ## VI. Intestate Shares, Double-Share Rule, Concurrence & Mixed Succession
+
+> **Context & Statutory Compass:** `[Intestate Orders (960–962)] → [YOU ARE HERE: Shares & Mixed Legacies (983, 895, 1000, 1006)] → [Representation & Art. 992]`
+> * **Statutory Address:** Intestate Sharing Ratios & Mixed Succession (Arts. 983, 895, 996–1009, 960[2], FC Art. 176).
+> * **Chain-of-Logic Bridge:** Once Section V identifies the surviving classes, Section VI computes their exact fractions—and stops the fatal mixed-succession error of deducting legacies off the top of the gross estate.
+> * **Why the Law Cares:** Protects the Legitimate Direct Line's 1/2 minimum floor and maintains the 2:1 full-vs.-half blood rule for siblings and nephews/nieces.
 
 ### A. The "One-Half Rule" & Legitime vs. Intestate Combinations
 **[MEM] Rule of Thumb:** Whenever the **legitimate direct line** concurs with irregular heirs, the legitimate line gets **at least 1/2** of the estate, and **100% of the estate is exhausted** (no free portion exists in pure intestacy).
@@ -180,6 +230,11 @@
 
 ## VII. Right of Representation & The Iron Curtain Rule (Arts. 969–977, 990, 992, 777)
 
+> **Context & Statutory Compass:** `[Intestate Shares (983–1009)] → [YOU ARE HERE: Representation & Art. 992 (969–977, 990, 992, 777)] → [Part III: Common Rules]`
+> * **Statutory Address:** Representation, Universal Repudiation & Art. 992 (with R.A. 11642 & *Aquino v. Aquino*).
+> * **Chain-of-Logic Bridge:** Explains when descendants or nephews/nieces climb up a degree to step into a failed relative's shoes—and where repudiation (Art. 977) or Art. 992 blocks that climb.
+> * **Why the Law Cares:** Preserves branch equality (*per stirpes*) across generations while separating true representation from direct transmission (Art. 777, *Dela Merced*).
+
 ### A. Core Mechanics & Limits of Representation
 | Parameter | Testate Succession | Intestate Succession |
 | :--- | :--- | :--- |
@@ -213,8 +268,14 @@
 ---
 
 # PART III: ACCRETION, VACANCY MATRIX, CAPACITY, UNWORTHINESS & ACCEPTANCE/REPUDIATION
+> **Macro Anchor (Title IV, Chapter 4 — Arts. 1015–1057):** Universal provisions applying across *both* testate and intestate estates: handling failed shares, screening capacity/unworthiness, and locking in the heir's choice.
 
 ## VIII. Right of Accretion (Arts. 1015–1021)
+
+> **Context & Statutory Compass:** `[Part II: Intestacy] → [YOU ARE HERE: Accretion Mechanics (Arts. 1015–1021)] → [Master Vacancy Matrix]`
+> * **Statutory Address:** Common Provisions, Chapter 4, Section 1 — Accretion (Arts. 1015–1021).
+> * **Chain-of-Logic Bridge:** Explains when surviving co-heirs called jointly (*pro indiviso*) absorb a vacated share before it drops into intestacy.
+> * **Why the Law Cares:** Honors collective lump-sum gifts without disturbing physically earmarked shares (Art. 1017) or the compulsory *legitime* (Art. 1021[2]).
 
 **[MEM] Mnemonic — `U-P-R-A` ("UPRA") + Not Property Alluvion (Art. 457):**
 1. **U — Unity of Object:** Single mass, legacy, or devise.
@@ -231,6 +292,11 @@
 ---
 
 ## IX. Master Matrix of Vacancies & The ₱120M Master Problem
+
+> **Context & Statutory Compass:** `[Substitution] + [Representation] + [Accretion] → [YOU ARE HERE: Unified Vacancy Priority Hierarchy]`
+> * **Statutory Address:** Cross-Title Synthesis (Arts. 857–872, 904, 960, 970–977, 1015–1021).
+> * **Chain-of-Logic Bridge:** Integrates all four vacancy remedies into one authoritative priority grid for testate legitime, testate free portion, and intestate shares.
+> * **Why the Law Cares:** Enforces both immunity of the *legitime* (no substitution) and primacy of the testator's expressed Plan B (substitution beats accretion in the free portion).
 
 ### A. Two Philosophical Pillars
 1. **Primacy of Testator's Will (Extension of Ownership):** Testacy > Intestacy; substitution ("Plan B") always outranks accretion in the free portion.
@@ -268,6 +334,11 @@
 ---
 
 ## X. Capacity to Succeed, Undue Influence & Unworthiness (Arts. 1024–1039, 40–43)
+
+> **Context & Statutory Compass:** `[Vacancies] → [YOU ARE HERE: Threshold Qualification (Arts. 1024–1039, 40–43)] → [Heir's Choice (Arts. 1041–1057)]`
+> * **Statutory Address:** Common Provisions, Chapter 4, Section 2 — Capacity & Unworthiness (with Arts. 40–43, 739, 823).
+> * **Chain-of-Logic Bridge:** Checks who is disqualified up front—whether from failing personhood (24-hr intrauterine rule), sickbed undue influence (Art. 1027 FP-only void), or total unworthiness (Art. 1032).
+> * **Why the Law Cares:** Protects vulnerable dying testators from manipulation and stops wrongdoers/paramours from benefiting from wrongdoing.
 
 ### A. Physical Existence, Conceived Children & Simultaneous Death
 * **Living at Opening of Succession (Art. 1025):** Exception: Representation when proper.
@@ -313,6 +384,11 @@
 ---
 
 ## XI. Acceptance and Repudiation of the Inheritance (Arts. 1041–1057)
+
+> **Context & Statutory Compass:** `[Capacity & Unworthiness] → [YOU ARE HERE: Exercise of Heir's Choice (Arts. 1041–1057)] → [Part IV: Drills]`
+> * **Statutory Address:** Common Provisions, Chapter 4, Section 3 — Acceptance & Repudiation (with Presumptive Death Arts. 390–392).
+> * **Chain-of-Logic Bridge:** Governs how a living, capacitated heir exercises the purely voluntary option to take or reject property—and how Art. 1052 blocks sham waivers that defraud creditors.
+> * **Why the Law Cares:** Prevents ownership uncertainty (*interregnum*) via retroactivity to death (Art. 1042), protects wards (Art. 1044), and prevents opportunistic double-role cherry-picking (Art. 1055).
 
 **[MEM] Master Anchor — `V-R-I`:** **V**oluntary & Free (Art. 1041) • **R**etroactive to Death (Art. 1042) • Generally **I**rrevocable (Art. 1056).
 

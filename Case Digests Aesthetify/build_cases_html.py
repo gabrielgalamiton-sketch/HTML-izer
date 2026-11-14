@@ -800,97 +800,63 @@ def build_full_html():
       margin-bottom: 0.3rem;
     }}
 
-    /* INTERACTIVE DIAGRAM WRAPPER, PAN-ZOOM & FULLSCREEN */
-    .diagram-wrapper {{
-      margin: 2rem 0;
+    /* STATIC RESPONSIVE IMAGE & PROCEDURAL ARCHITECTURE CARDS */
+    .img-figure {{
+      margin: 1.85rem 0;
+      padding: 1rem;
+      background: #FFFFFF;
       border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }}
+    .img-figure img {{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }}
+    .img-figure figcaption {{
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid #E2E8F0;
+      font-size: 0.86rem;
+      color: #475569;
+      text-align: left;
+      line-height: 1.45;
+    }}
+    .arch-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }}
+    .arch-card {{
+      border: 1px solid #E2E8F0;
+      border-top: 4px solid #1E3A8A;
       border-radius: 8px;
-      background: #FFFFFF;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }}
-    .diagram-wrapper.is-fullscreen {{
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      margin: 0;
-      border: none;
-      border-radius: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: #FFFFFF;
-    }}
-    .diagram-toolbar {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 1rem;
       background: #F8FAFC;
-      padding: 0.5rem 1rem;
-      border-bottom: 1px solid #E2E8F0;
-      z-index: 2;
     }}
-    .diagram-label {{
-      font-size: 0.75rem;
-      font-weight: 700;
+    .arch-card.teal {{ border-top-color: #0F766E; }}
+    .arch-card.green {{ border-top-color: #166534; }}
+    .arch-card.rust {{ border-top-color: #C2410C; }}
+    .arch-card h5 {{
+      margin: 0 0 0.5rem 0;
+      font-size: 0.92rem;
       color: #1E3A8A;
-      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }}
-    .diagram-hint {{
-      font-weight: 400;
-      color: #64748B;
-      font-size: 0.7rem;
-      margin-left: 0.4rem;
-    }}
-    .diagram-controls {{
-      display: flex;
-      gap: 0.35rem;
-    }}
-    .zoom-btn {{
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 4px;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 700;
+    .arch-card ul {{
+      margin: 0;
+      padding-left: 1.15rem;
+      font-size: 0.86rem;
       color: #334155;
-      cursor: pointer;
-      user-select: none;
-      transition: background 0.15s, border-color 0.15s;
     }}
-    .zoom-btn:hover {{
-      background: #F1F5F9;
-      border-color: #94A3B8;
-      color: #0F172A;
-    }}
-    .diagram-viewport {{
-      position: relative;
-      overflow: hidden;
-      background: #F8FAFC;
-      min-height: 480px;
-      cursor: grab;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }}
-    .diagram-wrapper.is-fullscreen .diagram-viewport {{
-      flex-grow: 1;
-      height: calc(100vh - 45px);
-    }}
-    .diagram-viewport.is-dragging {{
-      cursor: grabbing;
-    }}
-    .diagram-container {{
-      transform-origin: center center;
-      transition: transform 0.05s ease-out;
-      padding: 1.5rem;
-      display: inline-block;
-    }}
+    .arch-card li {{ margin-bottom: 0.35rem; }}
 
     /* RESPONSIVE LAYOUT */
     @media (max-width: 960px) {{
@@ -907,7 +873,7 @@ def build_full_html():
       .document-container {{ box-shadow: none; padding: 0; max-width: 100%; margin: 0; }}
       .case-grid {{ display: block; }}
       .case-sidebar {{ position: static; margin-top: 1.5rem; page-break-inside: avoid; }}
-      .diagram-wrapper {{ page-break-inside: avoid; }}
+      .img-figure, .arch-card {{ page-break-inside: avoid; }}
     }}
   </style>
 </head>
@@ -933,66 +899,42 @@ def build_full_html():
       This master reviewer packages the ten landmark Supreme Court decisions governing <span class="c-teal"><strong>Rule 116 (Arraignment and Plea)</strong></span> and <span class="c-teal"><strong>Rule 117 (Motion to Quash, Double Jeopardy & Provisional Dismissal)</strong></span> of the Revised Rules of Criminal Procedure. The decisions establish the constitutional boundaries of plea bargaining, trial court jurisdiction, summary pre-trial acquittals, due process rights of the State, and the statutory requirements of double jeopardy and provisional dismissal.
     </p>
 
-    <!-- INTERACTIVE PAN-AND-ZOOM MERMAID DIAGRAM -->
-    <div class="diagram-wrapper">
-      <div class="diagram-toolbar">
-        <span class="diagram-label">PROCEDURAL DECISION ARCHITECTURE: RULES 116 & 117 <span class="diagram-hint">(Drag to pan • Scroll to zoom • ⛶ for Fullscreen)</span></span>
-        <div class="diagram-controls">
-          <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-          <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-          <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset & Center">↺</button>
-          <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-        </div>
+    <!-- PROCEDURAL DECISION ARCHITECTURE (HTML WORKFLOW GRID — ZERO MERMAID) -->
+    <div class="ui-box">
+      <div class="ui-step-plain">
+        <div class="ui-kicker c-navy">PROCEDURAL DECISION ARCHITECTURE</div>
+        <div class="ui-title">Rules 116 &amp; 117 Litigation Pathways (Cases 08.1 – 08.10)</div>
       </div>
-      <div class="diagram-viewport">
-        <div class="diagram-container">
-          <pre class="mermaid">
-flowchart TD
-  START(["CRIMINAL INFORMATION FILED"]) --> ARRN["Arraignment & Plea (Rule 116)"]
-
-  %% Rule 116 branch
-  ARRN --> PLEA{{"Type of Plea Entered?"}}
-  PLEA -- "Conditional Plea for Reduced Penalty" --> MAGAT["People v. Magat<br/>• Unauthorized under Sec. 2, Rule 116<br/>• Treated as Plea of Not Guilty<br/>• Conviction void ab initio; no double jeopardy"]
-  PLEA -- "Plea of Not Guilty" --> MTQ_STAGE{{"Motion to Quash (Rule 117) Filed?"}}
-
-  %% Motion to Quash Branch
-  MTQ_STAGE -- "Grounded on Absence of Probable Cause" --> ALBA["People v. Sandiganbayan (Alba)<br/>• Lack of PC is NOT a ground under Sec. 3<br/>• Summary acquittal denies State due process<br/>• Order is void; jeopardy does not attach"]
-  MTQ_STAGE -- "Failure to Charge an Offense (Sec. 3[a])" --> TEST{{"Hypothetical Admission Test"}}
-
-  TEST -- "Conspiracy as Mode of Commission" --> LAZARTE["Lazarte v. Sandiganbayan<br/>• Ultimate facts & community of design suffice<br/>• Specific overt acts are evidentiary for trial"]
-  TEST -- "Private Co-Conspirator in Sec. 3(g) Graft" --> GO["Go v. Sandiganbayan<br/>• Private persons liable under conspiracy<br/>• Sec. 3(a) defense never waived (Sec. 9)"]
-
-  MTQ_STAGE -- "Lack of Jurisdiction (Sec. 3[b])" --> SERANA["Serana v. Sandiganbayan<br/>• Sandiganbayan covers Estafa in relation to office<br/>• UP Student Regent is a public officer<br/>• Source of funds is an evidentiary defense"]
-
-  %% Trial & Verdict Branch
-  MTQ_STAGE -- "Motion Denied / Proceed to Trial" --> TRIAL["Trial on the Merits"]
-  TRIAL --> VERDICT{{"Trial Court Verdict"}}
-
-  VERDICT -- "Acquittal / Conviction for Lesser Offense" --> FINALITY["Finality-of-Acquittal Rule"]
-  FINALITY -- "Factual Misappreciation / Error of Judgment" --> CASTRO["Castro v. People & People v. Asis<br/>• Certiorari cannot review evidentiary findings<br/>• Double jeopardy strictly protects acquittal"]
-  FINALITY -- "Sham Trial / Deprivation of Due Process" --> GALMAN["Galman Exception<br/>• Ouster of jurisdiction; void decree<br/>• Double jeopardy inapplicable"]
-
-  %% Quasi-Crimes & BP 22 vs Estafa
-  ARRN --> SPLIT{{"Special Double Jeopardy Indictments"}}
-  SPLIT -- "Quasi-Crimes (Art. 365, RPC)" --> IVLER["Ivler v. Modesto-San Pedro<br/>• Reckless imprudence is a single offense<br/>• Splitting charges prohibited<br/>• Prior conviction bars subsequent prosecution"]
-  SPLIT -- "Bouncing Checks (BP 22 vs Estafa)" --> NIERRAS["Nierras v. Dacuycuy<br/>• Same ACT, distinct OFFENSES<br/>• BP 22 (public interest) vs Estafa (property)<br/>• Simultaneous prosecution valid"]
-
-  %% Provisional Dismissal
-  TRIAL --> PROV_DISM{{"Provisional Dismissal (Sec. 8, Rule 117)"}}
-  PROV_DISM --> REQ{{"Conditions Sine Qua Non"}}
-  REQ -- "Express Consent + Notice to Offended Parties" --> TIME_BAR["People v. Lacson<br/>• 2-year time-bar renders dismissal permanent<br/>• Reckoned PROSPECTIVELY from Dec 1, 2000"]
-  REQ -- "Defective (No consent / No notice to all heirs)" --> NO_BAR["Dismissal not under Sec. 8<br/>• Time-bar does not attach<br/>• Refiling of Information valid"]
-
-  classDef navyNode fill:#EFF6FF,stroke:#1E3A8A,stroke-width:2px,color:#1E3A8A;
-  classDef tealNode fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef greenNode fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rustNode fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-
-  class START,ARRN,TRIAL navyNode;
-  class MAGAT,ALBA,CASTRO,GALMAN,IVLER,NO_BAR rustNode;
-  class LAZARTE,GO,SERANA,NIERRAS tealNode;
-  class FINALITY,TIME_BAR greenNode;
-          </pre>
+      <div class="arch-grid">
+        <div class="arch-card rust">
+          <h5>1. Arraignment &amp; Plea (Rule 116)</h5>
+          <ul>
+            <li><strong>Conditional Plea for Reduced Penalty:</strong> Unauthorized under Sec. 2 (<em>People v. Magat</em>) → Treated as plea of not guilty; conviction void ab initio; no double jeopardy.</li>
+            <li><strong>Plea of Not Guilty:</strong> Opens Rule 117 Motion to Quash stage or proceeds to trial on the merits.</li>
+          </ul>
+        </div>
+        <div class="arch-card teal">
+          <h5>2. Motion to Quash (Rule 117, Sec. 3)</h5>
+          <ul>
+            <li><strong>Lack of Probable Cause:</strong> Not an authorized ground (<em>Alba</em>) → Summary acquittal denies State due process; void; no jeopardy.</li>
+            <li><strong>Failure to Charge Offense (Sec. 3[a]):</strong> Hypothetical Admission Test; ultimate conspiracy facts suffice (<em>Lazarte</em>); private graft co-conspirators covered &amp; defense unwaivable (<em>Go</em>).</li>
+            <li><strong>Lack of Jurisdiction (Sec. 3[b]):</strong> Sandiganbayan covers Estafa in relation to office; UP Student Regent is public officer (<em>Serana</em>).</li>
+          </ul>
+        </div>
+        <div class="arch-card green">
+          <h5>3. Trial Verdict &amp; Jeopardy (Sec. 7)</h5>
+          <ul>
+            <li><strong>Finality of Acquittal:</strong> Errors of judgment unreviewable by certiorari (<em>Castro</em>, <em>Asis</em>); except sham trial / ouster of jurisdiction (<em>Galman</em>).</li>
+            <li><strong>Quasi-Crimes (Art. 365):</strong> Single indivisible offense; splitting barred (<em>Ivler</em>).</li>
+            <li><strong>Bouncing Checks:</strong> Same act, distinct offenses; BP 22 &amp; Estafa may proceed together (<em>Nierras</em>).</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h5>4. Provisional Dismissal (Sec. 8)</h5>
+          <ul>
+            <li><strong>Conditions Sine Qua Non:</strong> Express consent of accused + prior notice to offended parties / all heirs (<em>People v. Lacson</em>).</li>
+            <li><strong>Time-Bar:</strong> 2-year bar applies prospectively from Dec. 1, 2000; without valid Sec. 8 compliance, refiling remains valid.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1058,147 +1000,7 @@ flowchart TD
 
   </div>
 
-  <!-- MERMAID SCRIPT & PAN/ZOOM/FULLSCREEN ENGINE -->
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({{
-      startOnLoad: true,
-      theme: 'base',
-      themeVariables: {{
-        primaryColor: '#F8FAFC',
-        primaryBorderColor: '#1E3A8A',
-        primaryTextColor: '#1F2937',
-        lineColor: '#1E3A8A',
-        fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
-      }}
-    }});
-  </script>
-
   <script>
-    // Grab-to-Pan & Zoom Handlers
-    function updateDiagramTransform(container) {{
-      const scale = parseFloat(container.dataset.scale || '1');
-      const x = parseFloat(container.dataset.panX || '0');
-      const y = parseFloat(container.dataset.panY || '0');
-      container.style.transform = `translate(${{x}}px, ${{y}}px) scale(${{scale}})`;
-    }}
-
-    function zoomDiagram(btn, delta) {{
-      const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-      let scale = parseFloat(container.dataset.scale || '1');
-      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-      container.dataset.scale = scale;
-      updateDiagramTransform(container);
-    }}
-
-    function resetDiagramZoom(btn) {{
-      const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-      container.dataset.scale = '1';
-      container.dataset.panX = '0';
-      container.dataset.panY = '0';
-      updateDiagramTransform(container);
-    }}
-
-    function toggleDiagramFullscreen(btn) {{
-      const wrapper = btn.closest('.diagram-wrapper');
-      const container = wrapper.querySelector('.diagram-container');
-      const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
-
-      wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
-      btn.textContent = enteringFullscreen ? '✕' : '⛶';
-      btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
-      document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
-
-      if (container) {{
-        container.dataset.panX = '0';
-        container.dataset.panY = '0';
-        updateDiagramTransform(container);
-      }}
-
-      if (enteringFullscreen && wrapper.requestFullscreen) {{
-        wrapper.requestFullscreen().catch(() => {{}});
-      }} else if (!enteringFullscreen && document.fullscreenElement) {{
-        document.exitFullscreen().catch(() => {{}});
-      }}
-    }}
-
-    function exitAllDiagramFullscreens() {{
-      document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {{
-        wrapper.classList.remove('is-fullscreen');
-        const container = wrapper.querySelector('.diagram-container');
-        if (container) {{
-          container.dataset.panX = '0';
-          container.dataset.panY = '0';
-          updateDiagramTransform(container);
-        }}
-        const btn = wrapper.querySelector('.fullscreen-btn');
-        if (btn) {{
-          btn.textContent = '⛶';
-          btn.title = 'View Fullscreen';
-        }}
-      }});
-      document.body.style.overflow = '';
-    }}
-
-    document.addEventListener('fullscreenchange', () => {{
-      if (!document.fullscreenElement) {{
-        exitAllDiagramFullscreens();
-      }}
-    }});
-
-    document.addEventListener('keydown', (e) => {{
-      if (e.key === 'Escape') {{
-        exitAllDiagramFullscreens();
-      }}
-    }});
-
-    // Drag to Pan
-    let activeDiagramDrag = null;
-
-    document.addEventListener('mousedown', (e) => {{
-      const viewport = e.target.closest('.diagram-viewport');
-      if (!viewport || e.button !== 0) return;
-      const container = viewport.querySelector('.diagram-container');
-      if (!container) return;
-      e.preventDefault();
-      viewport.classList.add('is-dragging');
-      activeDiagramDrag = {{
-        viewport,
-        container,
-        startX: e.clientX - parseFloat(container.dataset.panX || '0'),
-        startY: e.clientY - parseFloat(container.dataset.panY || '0')
-      }};
-    }});
-
-    document.addEventListener('mousemove', (e) => {{
-      if (!activeDiagramDrag) return;
-      activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
-      activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
-      updateDiagramTransform(activeDiagramDrag.container);
-    }});
-
-    document.addEventListener('mouseup', () => {{
-      if (!activeDiagramDrag) return;
-      activeDiagramDrag.viewport.classList.remove('is-dragging');
-      activeDiagramDrag = null;
-    }});
-
-    // Wheel Zoom inside Viewport
-    document.addEventListener('wheel', (e) => {{
-      const viewport = e.target.closest('.diagram-viewport');
-      if (!viewport) return;
-      const wrapper = viewport.closest('.diagram-wrapper');
-      if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {{
-        e.preventDefault();
-        const container = viewport.querySelector('.diagram-container');
-        let scale = parseFloat(container.dataset.scale || '1');
-        const delta = e.deltaY < 0 ? 0.15 : -0.15;
-        scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-        container.dataset.scale = scale;
-        updateDiagramTransform(container);
-      }}
-    }}, {{ passive: false }});
-
     // Active Scroll-Spy for Sticky Navigation Dropdown
     document.addEventListener('DOMContentLoaded', () => {{
       const select = document.getElementById('toc-select');

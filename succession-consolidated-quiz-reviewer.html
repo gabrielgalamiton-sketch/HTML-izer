@@ -205,106 +205,162 @@ blockquote {
   vertical-align: top;
 }
 
-/* Interactive Diagram Wrapper, Grab-to-Pan Canvas & Fullscreen Toolbar */
-.diagram-wrapper {
-  margin: 2rem 0;
+/* Context Breadcrumb & Statutory Compass Box */
+.context-compass {
+  background: #F8FAFC;
   border: 1px solid #CBD5E1;
+  border-left: 4px solid #1E3A8A;
   border-radius: 8px;
-  background: #FFFFFF;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 0.9rem 1.15rem;
+  margin: 0.75rem 0 1.4rem 0;
 }
-.diagram-wrapper.is-fullscreen {
+.macro-part-compass {
+  background: linear-gradient(to right, #EFF6FF, #F8FAFC);
+  border: 1px solid #BFDBFE;
+  border-left: 5px solid #0F766E;
+  border-radius: 8px;
+  padding: 0.95rem 1.2rem;
+  margin: -0.75rem 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: #1E293B;
+}
+.context-breadcrumb {
+  font-size: 0.76rem;
+  color: #475569;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
+  border-bottom: 1px dashed #CBD5E1;
+}
+.context-breadcrumb strong {
+  color: #1E3A8A;
+  background: #DBEAFE;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+}
+.compass-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.34rem;
+  font-size: 0.88rem;
+  color: #334155;
+}
+.compass-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0F766E;
+  background: #CCFBF1;
+  padding: 0.08rem 0.42rem;
+  border-radius: 4px;
+  margin-right: 0.4rem;
+}
+
+/* Executive HTML Decision Architecture Cards (Mermaid-Free) */
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.9rem;
+  text-align: left;
+}
+.arch-card {
+  border: 1px solid #E2E8F0;
+  border-top: 4px solid #1E3A8A;
+  border-radius: 8px;
+  padding: 0.95rem 1rem;
+  background: #F8FAFC;
+}
+.arch-card.teal { border-top-color: #0F766E; }
+.arch-card.green { border-top-color: #166534; }
+.arch-card.rust { border-top-color: #C2410C; }
+.arch-card h5 {
+  margin: 0 0 0.45rem 0;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: #1E3A8A;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.arch-card.teal h5 { color: #0F766E; }
+.arch-card.green h5 { color: #166534; }
+.arch-card.rust h5 { color: #C2410C; }
+.arch-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.84rem;
+  color: #334155;
+}
+.arch-card li { margin-bottom: 0.3rem; }
+
+/* Native Click-to-Zoom Infographic Lightbox Modal */
+.img-lightbox {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 9999;
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(3px);
+  padding: 1.25rem;
   flex-direction: column;
-  background: #FFFFFF;
+  align-items: center;
+  justify-content: center;
 }
-.diagram-toolbar {
+.img-lightbox.open { display: flex; }
+.lightbox-bar {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #F8FAFC;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #E2E8F0;
-  z-index: 2;
+  color: #F8FAFC;
+  margin-bottom: 0.65rem;
+  gap: 1rem;
 }
-.diagram-label {
-  font-size: 0.75rem;
+.lightbox-caption {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.lightbox-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.lightbox-btn {
+  background: #FFFFFF;
+  color: #1E3A8A;
+  border: none;
+  border-radius: 5px;
+  padding: 0.38rem 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #1E3A8A;
-  letter-spacing: 0.05em;
-}
-.diagram-hint {
-  font-weight: 400;
-  color: #64748B;
-  font-size: 0.7rem;
-  margin-left: 0.4rem;
-}
-.diagram-controls {
-  display: flex;
-  gap: 0.35rem;
-}
-.zoom-btn {
-  background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  color: #1E3A8A;
-  font-weight: bold;
-  font-size: 0.85rem;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s ease;
 }
-.zoom-btn:hover {
-  background: #1E3A8A;
-  color: #FFFFFF;
-  border-color: #1E3A8A;
-}
-.diagram-viewport {
-  overflow: hidden;
-  min-height: 260px;
-  max-height: 75vh;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.lightbox-btn:hover { background: #DBEAFE; }
+.lightbox-stage {
+  max-width: 95vw;
+  max-height: 84vh;
+  overflow: auto;
   background: #FFFFFF;
-  cursor: grab;
-  user-select: none;
-  position: relative;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
 }
-.diagram-viewport.is-dragging {
-  cursor: grabbing;
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.18s ease;
+  transform-origin: top center;
 }
-.diagram-wrapper.is-fullscreen .diagram-viewport {
-  flex: 1;
+.lightbox-stage.zoomed img {
+  max-width: none;
   max-height: none;
-  height: 100%;
-  padding: 2rem;
-}
-.diagram-container {
-  display: inline-block;
-  transform-origin: center center;
-  transition: transform 0.12s ease-out;
-  will-change: transform;
-}
-.diagram-viewport.is-dragging .diagram-container {
-  transition: none;
-}
-.diagram-wrapper.is-fullscreen .diagram-container svg {
-  max-width: none !important;
+  width: 1450px;
 }
 
 /* Typographical Hierarchy & Memory-Aid Enhancements */
@@ -488,12 +544,20 @@ li > ul, li > ol {
   border-radius: 6px;
   display: block;
   margin: 0 auto;
+  cursor: zoom-in;
 }
 .img-figure figcaption {
   margin-top: 0.65rem;
   font-size: 0.84rem;
   color: #475569;
   font-weight: 600;
+}
+.zoom-hint {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #64748B;
 }
 
 /* Interactive Collapsible ALAC & Drill Toggles */
@@ -612,9 +676,9 @@ li > ul, li > ol {
 
 @media print {
   body { background: #FFFFFF; }
-  .sticky-nav, .diagram-toolbar, .drill-toolbar { display: none !important; }
+  .sticky-nav, .drill-toolbar, .img-lightbox, .zoom-hint { display: none !important; }
   .document-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
-  .rule-card, .img-figure, .alac-card, .ui-box, .cue-banner, .bar-update-box, .sidebox-note { break-inside: avoid; }
+  .rule-card, .img-figure, .alac-card, .ui-box, .cue-banner, .bar-update-box, .sidebox-note, .context-compass, .macro-part-compass, .arch-card { break-inside: avoid; }
   .alac-details summary, .rapid-item summary { display: none; }
 }
   </style>
@@ -627,6 +691,7 @@ li > ul, li > ol {
     <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
       <option value="" disabled selected>Select topic, visual, or Bar drill...</option>
       <option value="#top-header">TOP: Consolidated Master Reviewer &amp; Memory Aid</option>
+      <option value="#book-iii-map">&nbsp;&nbsp;↳ Big-Picture Map: Where Quiz Topics Sit in Book III</option>
       <option value="#part-i-banner">PART I: THE LAW ON DISINHERITANCE (Arts. 915–923)</option>
       <option value="#sec-i-disinheritance-requisites">&nbsp;&nbsp;↳ I. Concept, 7 Requisites (WELSTUT), Conditionals &amp; Burden of Proof</option>
       <option value="#sec-ii-art919-descendants">&nbsp;&nbsp;↳ II. Grounds for Children &amp; Descendants (Art. 919 — AGAFRMDC)</option>
@@ -695,10 +760,93 @@ li > ul, li > ol {
     <span class="tag-bar">Current Law / Bar Update</span> flags Supreme Court / statutory developments (<span class="c-burgundy"><em>Aquino v. Aquino</em></span>, <span class="c-teal">R.A. 11642</span>) and factual corrections to lecture/textbook slips.
   </div>
 
+  <!-- BIG-PICTURE ARCHITECTURE OF CIVIL CODE BOOK III (SUCCESSION) -->
+  <h3 id="book-iii-map">Big-Picture Map: Where This Quiz Sits in Civil Code Book III (Succession)</h3>
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Stage 1: Opening (<span class="c-teal">Arts. 774–782</span>)] &rarr; [Stage 2: Wills, Preterition &amp; Legitimes (<span class="c-teal">Arts. 783–914</span>)] &rarr; <strong>[QUIZ FOCUS: Disinheritance (915–923) + Intestacy (960–1014) + Common Rules (1015–1057)]</strong> &rarr; [Stage 6: Partition (<span class="c-teal">Arts. 1058–1105</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code of the Philippines, <strong>Book III (Different Modes of Acquiring Ownership), Title IV: Succession</strong> (<span class="c-teal">Arts. 774–1105</span>). Your quiz begins halfway through Testamentary Succession (Section 6) and spans all of Intestate Succession and the core Common Provisions.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> First comes <em>General Provisions</em> (rights transmit at death under <span class="c-teal">Art. 777</span>), followed by <em>Wills, Institution &amp; Compulsory Legitimes</em> (prior baseline rules). <strong>Part I</strong> asks how a testator can legally strip an ungrateful compulsory heir (<span class="c-teal">Arts. 915–923</span>); <strong>Part II</strong> asks who takes if there is no valid will or an undisposed balance (<span class="c-teal">Arts. 960–1014</span>); and <strong>Part III</strong> supplies universal tie-breakers—vacancies, capacity, and the heir's choice to accept or repudiate (<span class="c-teal">Arts. 1015–1057</span>).</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Understanding the sequence stops test-day cross-wiring: testate rules govern first to respect testator autonomy, compulsory legitime rules protect core family ties, intestate rules fill every gap, and common provisions operate uniformly across both modes.</div>
+    </div>
+  </div>
+
+  <figure class="img-figure">
+    <img src="images/00b-book-iii-succession-map.jpg" alt="Big-Picture Map of Civil Code Book III: Succession Law showing where Arts. 915-1057 sit" />
+    <figcaption>Figure 0A: Master Architecture of Civil Code Book III — Exact Statutory Position of Parts I–III Inside Succession Law <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
+  </figure>
+
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Book III Chapter / Sequence</th>
+          <th>Civil Code Scope</th>
+          <th>Quiz Status</th>
+          <th>Structural Signpost (What Problem Does It Solve?)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ch. 1: General Provisions</strong></td>
+          <td><span class="c-teal">Arts. 774–782</span></td>
+          <td>Background Signpost</td>
+          <td>Establishes that succession opens and vests successional rights automatically at the moment of death (<span class="c-teal">Art. 777</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>Ch. 2 (Secs. 1–5): Wills, Institution &amp; Legitimes</strong></td>
+          <td><span class="c-teal">Arts. 783–914</span></td>
+          <td>Pre-Quiz Base Signpost</td>
+          <td>Governs will validity, preterition (<span class="c-teal">Art. 854</span>), substitutions (<span class="c-teal">Art. 872</span>), and how much <em>legitime</em> compulsory heirs must receive before free disposal.</td>
+        </tr>
+        <tr style="background:#EFF6FF;">
+          <td><strong>Ch. 2 (Sec. 6): Disinheritance (PART I)</strong></td>
+          <td><span class="c-teal">Arts. 915–923</span></td>
+          <td><span class="tag-prof">TESTED</span></td>
+          <td>The <strong>sole legal mechanism</strong> empowering a testator to strip a compulsory heir of their <em>legitime</em>—and only upon strict statutory cause and form.</td>
+        </tr>
+        <tr style="background:#F0FDFA;">
+          <td><strong>Ch. 3: Legal / Intestate Succession (PART II)</strong></td>
+          <td><span class="c-teal">Arts. 960–1014</span></td>
+          <td><span class="tag-prof">TESTED</span></td>
+          <td>Default statutory distribution when no will exists, a will is void, or part of an estate goes undisposed (orders, shares, representation, and <span class="c-teal">Art. 992</span>).</td>
+        </tr>
+        <tr style="background:#F0FDF4;">
+          <td><strong>Ch. 4 (Secs. 1–3): Common Provisions (PART III)</strong></td>
+          <td><span class="c-teal">Arts. 1015–1057</span></td>
+          <td><span class="tag-prof">TESTED</span></td>
+          <td>Rules shared by testate and intestate succession: <strong>accretion</strong> for failed shares, <strong>capacity/unworthiness</strong> to inherit, and <strong>acceptance vs. repudiation</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Ch. 4 (Secs. 4–6): Executors, Collation &amp; Partition</strong></td>
+          <td><span class="c-teal">Arts. 1058–1105</span></td>
+          <td>Post-Quiz Signpost</td>
+          <td>Administrative wind-up after shares and heirs are settled: collation, estate administration, and physical partition.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-i-banner">PART I: THE LAW ON DISINHERITANCE (CIVIL CODE, ARTS. 915–923)</div>
+  <div class="macro-part-compass">
+    <strong>Part I Big-Picture Anchor (Title IV, Chapter 2, Section 6):</strong> Right after the Code locks in compulsory heirs' protected <em>legitimes</em> (prior section), Section 6 asks the narrow exception question: <em>When, how, and for what grave misconduct may a testator deliberately take that <em>legitime</em> away?</em>
+  </div>
 
   <h3 id="sec-i-disinheritance-requisites">I. Concept, Scope &amp; 7 Essential Requisites (<span class="c-teal">Arts. 915–917</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Legitimes Protected (<span class="c-teal">Arts. 886–914</span>)] &rarr; <strong>[YOU ARE HERE: Sec. I — 7 Formal Gatekeepers (<span class="c-teal">Arts. 915–917</span>)]</strong> &rarr; [Specific Grounds (<span class="c-teal">Arts. 919–921</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Testamentary Succession — Disinheritance General Rules (<span class="c-teal">Arts. 915–917</span>). Applies only to <strong>compulsory heirs</strong> and exists only when there is a <strong>will</strong>.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Before looking at <em>why</em> a relative deserves exclusion (<span class="c-teal">Arts. 919–921</span>), the law sets 7 strict procedural gatekeepers (<span class="c-teal">W-E-L-S-T-U-T</span>) and places the burden of proving truth on the surviving heirs (<span class="c-teal">Art. 917</span>).</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents testators from casually disowning family members out of momentary anger, secret malice, or vague boilerplate; even one missing gatekeeper triggers <span class="c-teal">Art. 918</span>.</div>
+    </div>
+  </div>
 
   <div class="cue-banner">
     <strong>[MEM] 7 Requisites Mnemonic — <code>W-E-L-S-T-U-T</code>:</strong> Valid <strong>W</strong>ill &bull; <strong>E</strong>xpress &amp; Named &bull; <strong>L</strong>awful Cause &bull; <strong>S</strong>tated in Will &bull; <strong>T</strong>rue &amp; Existing &bull; <strong>U</strong>nconditional &bull; <strong>T</strong>otal (All of the <em>legitime</em> or none!).
@@ -736,7 +884,7 @@ li > ul, li > ol {
 
   <figure class="img-figure">
     <img src="images/01-disinheritance-7-requisites.jpg" alt="7 Requisites of Valid Disinheritance and Conditional Disinheritance vs. Conditional Revocation Infographic" />
-    <figcaption>Figure 1: The 7 Requisites of Valid Disinheritance (WELSTUT) &amp; Conditional Disinheritance vs. Conditional Revocation (Arts. 915–917)</figcaption>
+    <figcaption>Figure 1: The 7 Requisites of Valid Disinheritance (WELSTUT) &amp; Conditional Disinheritance vs. Conditional Revocation (Arts. 915–917) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <div class="table-scroll">
@@ -772,6 +920,17 @@ li > ul, li > ol {
 
   <h3 id="sec-ii-art919-descendants">II. Grounds for Disinheritance of Children &amp; Descendants (<span class="c-teal">Art. 919</span>)</h3>
 
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [7 Formal Requisites] &rarr; <strong>[YOU ARE HERE: Sec. II — Grounds vs. Descendants (<span class="c-teal">Art. 919</span>)]</strong> &rarr; [Grounds vs. Parents (<span class="c-teal">Art. 920</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Testamentary Succession — Exclusive Grounds Against Compulsory Children &amp; Descendants (<span class="c-teal">Art. 919[1–8]</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Now that you know the 7 formal hurdles (<span class="c-teal">WELSTUT</span>), this section gives the <strong>only 8 substantive offenses</strong> by a child or grandchild that satisfy the "Lawful Cause" requisite.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Balances filial protection against grave child ingratitude (attempts on life, abandonment of duty to support, dishonor)—notice which grounds demand criminal conviction versus those requiring only civil proof.</div>
+    </div>
+  </div>
+
   <div class="cue-banner">
     <strong>[MEM] 8 Grounds Mnemonic — <code>A-G-A-F-R-M-D-C</code>:</strong> <strong>A</strong>ttempt on life &bull; <strong>G</strong>roundless accusation (≥6 yrs) &bull; <strong>A</strong>dultery/concubinage w/ spouse &bull; <strong>F</strong>raud/violence on will &bull; <strong>R</strong>efusal to support &bull; <strong>M</strong>altreatment (word/deed) &bull; <strong>D</strong>ishonorable life &bull; <strong>C</strong>ivil interdiction.
   </div>
@@ -796,6 +955,17 @@ li > ul, li > ol {
 
   <h3 id="sec-iii-art920-ascendants">III. Grounds for Disinheritance of Parents &amp; Ascendants (<span class="c-teal">Art. 920</span>)</h3>
 
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Descendant Grounds (<span class="c-teal">Art. 919</span>)] &rarr; <strong>[YOU ARE HERE: Sec. III — Grounds vs. Parents/Ascendants (<span class="c-teal">Art. 920</span>)]</strong> &rarr; [Spouse Grounds (<span class="c-teal">Art. 921</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Testamentary Succession — Exclusive Grounds Against Parents &amp; Ascendants (<span class="c-teal">Art. 920[1–8]</span>; reciprocal to <span class="c-teal">Art. 919</span>, minus maltreatment).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Reverses the mirror: when an adult child dies leaving no descendants, parents become compulsory heirs—this section asks what parental abuse lets the child disinherit them.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects vulnerable children from abusive or negligent parents while guarding against subtle traps (omission of maltreatment, female-specific virtue clause, and <span class="c-teal">Art. 920[8]</span> vs. <span class="c-teal">920[2]</span>).</div>
+    </div>
+  </div>
+
   <div class="rule-card">
     <div class="rule-card-title">
       <span>Art. 920(1) Gender Split &amp; Art. 920(8) vs. Art. 920(2) Parental Reconciliation Trap</span>
@@ -818,12 +988,23 @@ li > ul, li > ol {
 
   <figure class="img-figure">
     <img src="images/02-art920-parental-reconciliation.jpg" alt="Art. 920(8) vs Art. 920(2) Parental Attempt and Reconciliation Trap Infographic" />
-    <figcaption>Figure 2: The Art. 920(8) vs. Art. 920(2) Trap — Effect of Parental Reconciliation With vs. Without Conviction</figcaption>
+    <figcaption>Figure 2: The Art. 920(8) vs. Art. 920(2) Trap — Effect of Parental Reconciliation With vs. Without Conviction <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <hr>
 
   <h3 id="sec-iv-spouse-reconciliation-918">IV. Spousal Disinheritance (<span class="c-teal">Art. 921</span>), Reconciliation (<span class="c-teal">Art. 922</span>), Representation (<span class="c-teal">Art. 923</span>) &amp; Imperfect Disinheritance (<span class="c-teal">Art. 918</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Descendant/Parent Grounds (<span class="c-teal">919–920</span>)] &rarr; <strong>[YOU ARE HERE: Sec. IV — Spouse, Effects, Reconciliation &amp; Defects (<span class="c-teal">921–923, 918</span>)]</strong> &rarr; [Part II: Intestacy (<span class="c-teal">Arts. 960+</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Testamentary Succession — Final Articles of Disinheritance (<span class="c-teal">Arts. 921–923</span> &amp; <span class="c-teal">918</span>; cross-referencing Legal Separation under <span class="c-teal">FC Arts. 55, 63[4]</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Completes the three compulsory classes by addressing the <strong>surviving spouse</strong>, then resolves the aftermath: <em>Can forgiveness undo it? Do the guilty heir's children suffer? What if the testator botched the disinheritance?</em></div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents sins of the parent from punishing innocent grandchildren (<span class="c-teal">Art. 923</span>) and sharply distinguishes bungled disinheritance (partial preservation under <span class="c-teal">Art. 918</span>) from silent omission (total collapse into intestacy under <span class="c-teal">Art. 854</span>).</div>
+    </div>
+  </div>
 
   <h4 id="art-921-spouse">A. Six Grounds to Disinherit a Spouse (<span class="c-teal">Art. 921</span>) &amp; <span class="c-teal">Family Code Art. 55</span></h4>
   <div class="cue-banner">
@@ -847,38 +1028,40 @@ li > ul, li > ol {
     </li>
   </ul>
 
-  <!-- MERMAID 1: Disinheritance & Art. 918 vs 854 Decision Tree -->
-  <div class="diagram-wrapper" id="mermaid-disinheritance">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM 1: DISINHERITANCE VALIDITY, ART. 918 VS. PRETERITION &amp; ART. 920(8)/(2) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- DECISION ARCHITECTURE 1: Disinheritance Validity, Art. 918 vs 854 & Reconciliation (Mermaid-Free) -->
+  <div class="ui-box" id="arch-disinheritance">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">PART I DECISION ARCHITECTURE</div>
+      <div class="ui-title">Exclusion Outcomes: Preterition (<span class="c-teal">Art. 854</span>) vs. Imperfect (<span class="c-teal">Art. 918</span>) vs. Valid Disinheritance (<span class="c-teal">Arts. 922–923</span>)</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  DStart["Testator Excludes Compulsory Heir in Will"] --> CheckNamed{"Is Heir Named &amp; Expressed?<br/>(Not Silently Omitted)"}
-  CheckNamed -- "NO: Total Omission in Direct Line" --> Pret["PRETERITION (Art. 854)<br/>Totally Annuls Institution → Intestacy"]
-  CheckNamed -- "YES: Named Disinheritance" --> Check7{"All 7 Requisites Met? (W-E-L-S-T-U-T)<br/>Valid Will, Named, Statutory, Stated, True, Uncond., Total"}
-  Check7 -- "NO (Or Unproved under Art. 917)" --> Imp["IMPERFECT DISINHERITANCE (Art. 918)<br/>Partial Annulment: Heir Gets Strict Legitime Only;<br/>Free Portion Stays Valid"]
-  Check7 -- "YES" --> CheckRec{"Bilateral Reconciliation<br/>with Testator? (Art. 922)"}
-  CheckRec -- "YES (Restored Relations)" --> VoidDis["Disinheritance Rendered Ineffectual<br/>(Note: Unilateral Deathbed Pardon FAILS)"]
-  CheckRec -- "NO" --> ValidDis["VALID DISINHERITANCE<br/>Heir Stripped; Descendants Take Legitime Only (Art. 923)<br/>Disinherited Parent Barred from Usufruct/Admin"]
-
-  classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
-  classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef green fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-  class DStart navy;
-  class CheckNamed,Check7,CheckRec teal;
-  class ValidDis,VoidDis green;
-  class Pret,Imp rust;
-        </pre>
+    <div class="arch-grid">
+      <div class="arch-card rust">
+        <h5>Path 1: Silent Total Omission (Preterition — Art. 854)</h5>
+        <ul>
+          <li><strong>Trigger:</strong> Direct-line compulsory heir is omitted without being named or given any property.</li>
+          <li><strong>Result:</strong> <span class="c-rust"><strong><u>Totally annuls</u></strong></span> the institution of heirs → Estate passes into <strong>intestacy</strong> (save valid non-inofficious legacies).</li>
+        </ul>
+      </div>
+      <div class="arch-card teal">
+        <h5>Path 2: Named, Fails W-E-L-S-T-U-T or Proof (Art. 918)</h5>
+        <ul>
+          <li><strong>Trigger:</strong> Heir is named, but lacks cause, states non-statutory ground, is conditional/partial, or heirs fail <span class="c-teal">Art. 917</span> proof.</li>
+          <li><strong>Result:</strong> <strong>Partial annulment only</strong> → Disinherited heir recovers <strong>strict legitime</strong>; voluntary free portion stays valid.</li>
+        </ul>
+      </div>
+      <div class="arch-card green">
+        <h5>Path 3A: All 7 Met + No Reconciliation (Arts. 915, 923)</h5>
+        <ul>
+          <li><strong>Result:</strong> Heir stripped of legitime &amp; free portion (₱0). Descendants represent <strong>legitime ONLY</strong> (<span class="c-teal">Art. 923</span>).</li>
+          <li><strong>Parent Bar:</strong> Disinherited parent loses usufruct and administration over represented property.</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <h5>Path 3B: Subsequent Bilateral Reconciliation (Art. 922)</h5>
+        <ul>
+          <li><strong>Result:</strong> <span class="c-green"><strong><u>Ineffectual by law</u></strong></span> once former relations are bilaterally restored (no new will needed).</li>
+          <li><strong>Trap:</strong> Unilateral deathbed pardon without bilateral restoration fails!</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -919,8 +1102,22 @@ flowchart TD
 
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-ii-banner">PART II: INTESTATE SUCCESSION, SHARES, REPRESENTATION &amp; ART. 992</div>
+  <div class="macro-part-compass">
+    <strong>Part II Big-Picture Anchor (Title IV, Chapter 3 — Arts. 960–1014):</strong> We now step <em>outside</em> wills completely. Whenever there is no valid will, an heir fails without a substitute/accretion, or property remains undisposed, the law supplies its own "statutory will" modeled on presumed family affection.
+  </div>
 
   <h3 id="sec-v-intestate-orders">V. Causes, Lines, Proximity &amp; Orders of Intestacy (<span class="c-teal">Arts. 960–962, 978–1014</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Part I: Wills &amp; Disinheritance] &rarr; <strong>[YOU ARE HERE: Sec. V — Intestate Triggers &amp; Priority Hierarchy (<span class="c-teal">Arts. 960–1014</span>)]</strong> &rarr; [Intestate Shares (<span class="c-teal">Arts. 983–1001</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Legal or Intestate Succession — Triggers (<span class="c-teal">Art. 960</span>), Lines/Proximity (<span class="c-teal">Art. 962</span>), and Regular vs. Irregular Orders (<span class="c-teal">Arts. 978–1014</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Before dividing any peso by fractions, you must first determine <strong>WHO stands in line at all</strong>—who excludes whom by line, order, and degree—and whether the decedent himself was legitimate or illegitimate.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Enforces presumed family affection (descending &gt; ascending &gt; collateral up to the 5th degree &gt; State) so property never becomes ownerless (*bona vacantia*) and closer bloodlines aren't hijacked by distant cousins.</div>
+    </div>
+  </div>
 
   <ul>
     <li><strong>Causes of Intestacy (<span class="c-teal">Art. 960</span> + Doctrinal Grounds):</strong> (1) No will, void will, or revoked will (<span class="c-teal">Art. 830</span>); (2) Will omits universal heir / partial disposition → <strong>Mixed Succession</strong> (<span class="c-teal">Art. 960[2]</span>); (3) Suspensive condition fails; (4) Predecease, incapacity, or repudiation without substitute/accretion; (5) Resolutory condition fulfilled (<span class="c-teal">Art. 871</span>) or resolutory term expires (<span class="c-teal">Art. 885</span>).</li>
@@ -934,7 +1131,7 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/03-intestate-orders-5th-degree.jpg" alt="Regular vs Irregular Order of Intestate Succession and the 5th-Degree Collateral Cutoff Ladder" />
-    <figcaption>Figure 3: Regular vs. Irregular Intestate Order &amp; The 5th-Degree Collateral Boundary (Arts. 978–1014)</figcaption>
+    <figcaption>Figure 3: Regular vs. Irregular Intestate Order &amp; The 5th-Degree Collateral Boundary (Arts. 978–1014) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <div class="table-scroll">
@@ -997,6 +1194,17 @@ flowchart TD
   <hr>
 
   <h3 id="sec-vi-intestate-shares-mixed">VI. Intestate Shares, Double-Share Rule, Concurrence &amp; Mixed Succession</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Intestate Orders (<span class="c-teal">960–962</span>)] &rarr; <strong>[YOU ARE HERE: Sec. VI — Exact Shares &amp; Mixed Legacies (<span class="c-teal">983, 895, 1000, 1006</span>)]</strong> &rarr; [Representation &amp; <span class="c-teal">Art. 992</span>]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Legal Succession Division Formulas (<span class="c-teal">Arts. 983, 895, 996–1009, FC Art. 176</span>) &amp; Mixed Succession (<span class="c-teal">Art. 960[2]</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once Section V tells you <em>which classes survive and concur</em>, Section VI computes <strong>how much each winner gets</strong>—and prevents the fatal mixed-succession error of deducting legacies from the gross estate before legitimes.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects the Legitimate Direct Line's ironclad 1/2 floor whenever concurring with illegitimate heirs or a spouse, and respects full-blood ties in collateral succession (2:1 up to siblings/nephews).</div>
+    </div>
+  </div>
 
   <div class="cue-banner">
     <strong>[MEM] The "One-Half Rule" &amp; Exhaustion Rule:</strong> Whenever the legitimate direct line (LCs or LPs) concurs with irregular heirs in intestacy, the legitimate line receives <strong>at least 1/2</strong> of the estate, and 100% of the estate is distributed.
@@ -1081,12 +1289,23 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/06-mixed-succession-trap.jpg" alt="Mixed Succession Trap: Top-Line Deduction vs Excess Intestate Share Deduction Infographic" />
-    <figcaption>Figure 4: Mixed Succession Trap (₱120M Estate) — Never Deduct Legacies Off the Top; Charge Only the Excess Intestate Share</figcaption>
+    <figcaption>Figure 4: Mixed Succession Trap (₱120M Estate) — Never Deduct Legacies Off the Top; Charge Only the Excess Intestate Share <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <hr>
 
   <h3 id="sec-vii-representation-iron-curtain">VII. Right of Representation, Universal Repudiation, Adoption &amp; <span class="c-teal">Art. 992</span></h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Intestate Shares (<span class="c-teal">983–1009</span>)] &rarr; <strong>[YOU ARE HERE: Sec. VII — Stepping Into Shoes &amp; <span class="c-teal">Art. 992</span> (<span class="c-teal">969–977, 990, 992, 777</span>)]</strong> &rarr; [Part III: Common Rules (<span class="c-teal">Arts. 1015+</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Representation, Universal Repudiation &amp; Illegitimate Barrier (<span class="c-teal">Arts. 969–977, 990, 992, 777</span>; Bar Update: <span class="c-teal">R.A. 11642</span> &amp; <span class="c-burgundy"><em>Aquino</em></span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Proximity normally makes children exclude grandchildren. Representation explains <strong>when younger generations jump up a degree</strong> to take a predeceased/incapacitated/disinherited parent's share—and where repudiation (<span class="c-teal">Art. 977</span>) or the Iron Curtain (<span class="c-teal">Art. 992</span>) blocks that jump.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Preserves branch equality (*per stirpes*) across generations while stopping representatives from taking more than their own branch unless <em>all</em> first-degree heirs repudiate (<span class="c-teal">Art. 969</span>), and clarifies when <span class="c-teal">Art. 777</span> (<span class="c-burgundy"><em>Dela Merced</em></span>) bypasses <span class="c-teal">Art. 992</span> entirely.</div>
+    </div>
+  </div>
 
   <div class="table-scroll">
     <table class="ui-table">
@@ -1125,7 +1344,7 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/04-art969-per-stirpes-vs-per-capita.jpg" alt="P300M Estate: Per Stirpes (Art. 982) vs Universal Repudiation Per Capita (Art. 969)" />
-    <figcaption>Figure 5: The ₱300M Estate — Per Stirpes Representation (Art. 982) vs. Universal Repudiation Per Capita (Art. 969)</figcaption>
+    <figcaption>Figure 5: The ₱300M Estate — Per Stirpes Representation (Art. 982) vs. Universal Repudiation Per Capita (Art. 969) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <h4 id="adopted-children-art992">Adoption &amp; Article 992 ("Iron Curtain Rule") vs. <span class="c-burgundy"><em>Dela Merced</em></span> (<span class="c-teal">Art. 777</span>)</h4>
@@ -1171,51 +1390,65 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/05-iron-curtain-vs-dela-merced.jpg" alt="Art. 992 Iron Curtain vs Dela Merced (Art. 777) and Aquino v. Aquino Bar Update" />
-    <figcaption>Figure 6: Art. 992 Iron Curtain &amp; Aquino Update vs. Dela Merced (Art. 777 Two-Step Vesting)</figcaption>
+    <figcaption>Figure 6: Art. 992 Iron Curtain &amp; Aquino Update vs. Dela Merced (Art. 777 Two-Step Vesting) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
-  <!-- MERMAID 2: Intestate & Art 992 Router -->
-  <div class="diagram-wrapper" id="mermaid-intestacy">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM 2: INTESTATE ORDER, REPRESENTATION &amp; ART. 992 / DELA MERCED ROUTER <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- DECISION ARCHITECTURE 2: Intestate Order, Representation & Art. 992 / Dela Merced Router (Mermaid-Free) -->
+  <div class="ui-box" id="arch-intestacy">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">PART II DECISION ARCHITECTURE</div>
+      <div class="ui-title">Intestate Order, Survival Timing (<span class="c-teal">Art. 777</span>) &amp; <span class="c-teal">Art. 992</span> / <span class="c-burgundy"><em>Aquino</em></span> Router</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  IStart["Intestate Estate Opens (Art. 777)<br/>Check Decedent Status"] --> Order{"Legitimate or Illegitimate Decedent?"}
-  Order -- "Legitimate (Regular)" --> Reg["Ranks: 1. LCs → 2. LPs → 3. ICs → 4. SS<br/>5. Sibs/Neph/Niece → 6. Collaterals (Up to 5th Deg.) → 7. State"]
-  Order -- "Illegitimate (Irregular)" --> Irreg["Ranks: 1. LCs → 2. ICs (Excludes Parents!)<br/>3. Illegit Parents ONLY → 4. SS → 5. Illegit Sibs → 6. State"]
-
-  RepCheck["Claimant via Predeceased / Incapacitated Relative"] --> DidParentSurvive{"Did Parent B SURVIVE<br/>Original Decedent A?"}
-  DidParentSurvive -- "YES (Dela Merced, Art. 777)" --> Direct["Share Vested in B at A's Death<br/>Child Inherits Directly from B (Art. 992 N/A!)"]
-  DidParentSurvive -- "NO (B Predeceased A)" --> LineCheck{"Direct Ascendant or Collateral Line?"}
-  LineCheck -- "Collateral Line" --> ColRule["Nephews/Nieces Only w/ Uncle/Aunt (Art. 975)<br/>Grandnieces Barred (De Los Santos)<br/>Art. 992 Bars Illegit Collateral Claims"]
-  LineCheck -- "Direct Line (Grandparent)" --> DirRule["Prof. Rule: Legit Only for Legit Child (Art. 992)<br/>BAR UPDATE (Aquino 2021): Nonmarital Grandchild<br/>May Represent Parent in Direct Line"]
-
-  classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
-  classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef green fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-  class IStart,RepCheck navy;
-  class Order,DidParentSurvive,LineCheck teal;
-  class Direct,Reg,Irreg green;
-  class ColRule,DirRule rust;
-        </pre>
+    <div class="arch-grid">
+      <div class="arch-card green">
+        <h5>Step 1: Decedent Status → Priority Order</h5>
+        <ul>
+          <li><strong>Legitimate Decedent (Regular):</strong> 1. LCs → 2. LPs → 3. ICs → 4. SS → 5. Sibs/Neph/Niece → 6. Collaterals ≤ 5th Deg. → 7. State.</li>
+          <li><strong>Illegitimate Decedent (Irregular):</strong> 1. LCs → 2. ICs (excludes parents!) → 3. Illegit Parents ONLY → 4. SS → 5. Illegit Sibs → 6. State.</li>
+        </ul>
+      </div>
+      <div class="arch-card teal">
+        <h5>Step 2: Did Parent B SURVIVE Decedent A?</h5>
+        <ul>
+          <li><strong>YES (<span class="c-burgundy"><em>Dela Merced</em></span>, <span class="c-teal">Art. 777</span>):</strong> Share vested immediately in living B at A's death.</li>
+          <li><strong>Outcome:</strong> Child inherits <strong>directly from B</strong> (<span class="c-teal">Art. 988</span>) — <span class="c-teal">Art. 992</span> does NOT apply!</li>
+        </ul>
+      </div>
+      <div class="arch-card rust">
+        <h5>Step 3A: Predeceased Parent + Collateral Line</h5>
+        <ul>
+          <li><strong>Nephews/Nieces (<span class="c-teal">Art. 975</span>):</strong> Represent only when surviving with ≥1 uncle/aunt; grandnieces barred (<span class="c-burgundy"><em>De Los Santos</em></span>).</li>
+          <li><strong>Collateral <span class="c-teal">Art. 992</span>:</strong> Nonmarital child STILL barred from legitimate uncles, aunts, and collateral relatives even after <span class="c-burgundy"><em>Aquino</em></span>.</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <h5>Step 3B: Predeceased Parent + Direct Line</h5>
+        <ul>
+          <li><strong>Professor's Classroom Rule:</strong> Legitimate child represented ONLY by legitimate descendants (<span class="c-teal">Art. 992</span>).</li>
+          <li><strong>Bar Update (<span class="c-burgundy"><em>Aquino</em></span> 2021):</strong> En Banc permits nonmarital grandchild to represent parent in the <strong>direct ascending/descending line</strong>.</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-iii-banner">PART III: ACCRETION, VACANCY MATRIX, CAPACITY, UNWORTHINESS &amp; ACCEPTANCE/REPUDIATION</div>
+  <div class="macro-part-compass">
+    <strong>Part III Big-Picture Anchor (Title IV, Chapter 4 — Arts. 1015–1057):</strong> Having learned <em>Testate Disinheritance (Part I)</em> and <em>Intestate Distribution (Part II)</em>, Chapter 4 supplies the <strong>common machinery</strong> operating across BOTH modes: where failed shares go (Accretion &amp; Vacancy Matrix), who is disqualified before taking (Capacity &amp; Unworthiness), and how living heirs bind their decision (Acceptance &amp; Repudiation).
+  </div>
 
   <h3 id="sec-viii-accretion">VIII. Right of Accretion (<span class="c-teal">Arts. 1015–1021</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Part II: Intestacy] &rarr; <strong>[YOU ARE HERE: Sec. VIII — Accretion Mechanics (<span class="c-teal">Arts. 1015–1021</span>)]</strong> &rarr; [Master Vacancy Matrix]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Common Provisions, Chapter 4, Section 1 — Right of Accretion (<span class="c-teal">Arts. 1015–1021</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> When an instituted co-heir or legatee drops out (R-I-P), what happens to their slice before the estate falls back into intestacy? Accretion lets surviving <em>pro indiviso</em> co-heirs absorb that failed share.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Respects a testator's lump-sum collective gift (or an intestate co-heir's joint call when someone repudiates under <span class="c-teal">Art. 1018</span>) while refusing to apply to a <em>legitime</em> (<span class="c-teal">Art. 1021[2]</span>) or earmarked physically segregated assets (<span class="c-teal">Art. 1017</span>).</div>
+    </div>
+  </div>
 
   <div class="cue-banner">
     <strong>[MEM] Mnemonic — <code>U-P-R-A</code> (Succession Accretion, NOT Property Alluvion under <span class="c-teal">Art. 457</span>):</strong>
@@ -1242,6 +1475,17 @@ flowchart TD
 
   <h3 id="sec-ix-vacancy-matrix-120m">IX. Master Vacancy Matrix &amp; The ₱120M Master Problem</h3>
 
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Substitution (Testate)] + [Representation (Part II)] + [Accretion (Sec. VIII)] &rarr; <strong>[YOU ARE HERE: Sec. IX — Unified Vacancy Priority Hierarchy]</strong>
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Cross-Title Synthesis combining Substitution (<span class="c-teal">Arts. 857–872, 904</span>), Representation (<span class="c-teal">Arts. 970–977</span>), Accretion (<span class="c-teal">Arts. 1015–1021</span>), and Intestacy (<span class="c-teal">Art. 960</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Previously you studied Substitution, Representation, Accretion, and Intestacy as separate tools. Whenever someone rejects or drops out of an estate (R-I-P), all four tools compete—this matrix reveals the <strong>exact tie-breaking priority</strong> for every slice of property.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Enforces two bedrock policies simultaneously: absolute immunity of the compulsory <em>legitime</em> (never burdened by substitution) and primacy of the testator's expressed Plan B (substitution beats accretion in the free portion).</div>
+    </div>
+  </div>
+
   <div class="ui-box ui-workflow">
     <div class="ui-step-plain">
       <div class="ui-title">Two Philosophical Pillars (<span class="c-teal">Arts. 872, 904 &amp; Primacy of Will</span>)</div>
@@ -1260,7 +1504,7 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/00-professor-vacancy-matrix.png" alt="Professor's Classroom Master Vacancy Table across Testate Legitime, Testate Free Portion, and Intestate" />
-    <figcaption>Figure 7A: Professor's Classroom Vacancy Matrix — Separate Testate (Legitime vs. Free Portion) and Intestate Columns</figcaption>
+    <figcaption>Figure 7A: Professor's Classroom Vacancy Matrix — Separate Testate (Legitime vs. Free Portion) and Intestate Columns <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <div class="table-scroll">
@@ -1290,41 +1534,33 @@ flowchart TD
     </table>
   </div>
 
-  <!-- MERMAID 3: Master Vacancy Decision Tree -->
-  <div class="diagram-wrapper" id="mermaid-vacancy-tree">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM 3: MASTER VACANCY RESOLUTION FLOWCHART (TESTATE &amp; INTESTATE) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- DECISION ARCHITECTURE 3: Master Vacancy Decision Tree (Mermaid-Free) -->
+  <div class="ui-box" id="arch-vacancy-tree">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">PART III DECISION ARCHITECTURE</div>
+      <div class="ui-title">Master Vacancy Routing Hierarchy (Isolate Each Slice Before Applying R-I-P)</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  VStart["Vacancy Occurs (R-I-P): Isolate Exact Portion"] --> Mode{"Which Column Applies?"}
-  Mode -- "TESTATE: LEGITIME" --> LCause{"Cause?"}
-  LCause -- "Predecease / Incapacity" --> L1["NO SUB → 1. REP (Direct Descending)<br/>2. IS / Own Right if No Qualified Descendant"]
-  LCause -- "Repudiation" --> L2["NO SUB / NO REP (Art. 977) / NO ACC<br/>→ IS / Co-Heirs in Own Right (Art. 1021 par. 2)"]
-
-  Mode -- "TESTATE: FREE PORTION" --> FP1["NO REP Ever on Voluntary FP!<br/>1. SUB (If Named in Will)<br/>2. ACC (If Art. 1016 Pro Indiviso)<br/>3. IS (Art. 960, par. 2)"]
-
-  Mode -- "INTESTATE: WHOLE SHARE" --> ICause{"Cause?"}
-  ICause -- "Predecease / Incapacity" --> I1["1. REP (Descendants or Nephews/Nieces w/ Uncle)<br/>2. IS / Own Right (Jurado View)"]
-  ICause -- "Repudiation" --> I2["NO REP (Art. 977)<br/>1. ACC to Co-Heirs (Art. 1018)<br/>2. Next Degree Per Capita if All Repudiate (Art. 969)"]
-
-  classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
-  classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef green fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-  class VStart navy;
-  class Mode,LCause,ICause teal;
-  class L1,FP1,I1 green;
-  class L2,I2 rust;
-        </pre>
+    <div class="arch-grid">
+      <div class="arch-card green">
+        <h5>Column 1: Testate — Legitime</h5>
+        <ul>
+          <li><strong>If Predecease / Incapacity:</strong> <span class="c-rust">NO SUB</span> → <strong>1. REP</strong> (direct descending line) → <strong>2. IS / Own Right</strong> if no qualified descendant.</li>
+          <li><strong>If Repudiation:</strong> <span class="c-rust">NO SUB / NO REP (Art. 977) / NO ACC</span> → <strong>IS / Co-Heirs in Own Right</strong> (<span class="c-teal">Art. 1021 par. 2</span>).</li>
+        </ul>
+      </div>
+      <div class="arch-card teal">
+        <h5>Column 2: Testate — Voluntary Free Portion</h5>
+        <ul>
+          <li><strong>Regardless of R-I-P Cause:</strong> <span class="c-rust">NO REP EVER on Voluntary Free Portion!</span></li>
+          <li><strong>Priority Order:</strong> <strong>1. SUB</strong> (if named in will) → <strong>2. ACC</strong> (<span class="c-teal">Art. 1016</span> <em>pro indiviso</em>) → <strong>3. IS</strong> (<span class="c-teal">Art. 960, par. 2</span>).</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <h5>Column 3: Intestate — Whole Share</h5>
+        <ul>
+          <li><strong>If Predecease / Incapacity:</strong> <strong>1. REP</strong> (descendants or nephews/nieces with uncle) → <strong>2. IS / Own Right</strong> (Jurado Non-Vacancy View).</li>
+          <li><strong>If Repudiation:</strong> <span class="c-rust">NO REP (Art. 977)</span> → <strong>1. ACC to Co-Heirs</strong> (<span class="c-teal">Art. 1018</span>) → <strong>2. Next Degree Per Capita</strong> if all repudiate (<span class="c-teal">Art. 969</span>).</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1334,7 +1570,7 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/07-120m-master-vacancy-split.jpg" alt="The P120M Master Vacancy Problem Allocation Breakdown" />
-    <figcaption>Figure 7B: Authoritative ₱120M Master Vacancy Solution — Strict Segregation of Legitime vs. Free Portion Rules</figcaption>
+    <figcaption>Figure 7B: Authoritative ₱120M Master Vacancy Solution — Strict Segregation of Legitime vs. Free Portion Rules <em>(Authoritative text labels: "C Predeceased" and "instituted co-heirs" per table below)</em> <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <div class="table-scroll">
@@ -1402,6 +1638,17 @@ flowchart TD
 
   <h3 id="sec-x-capacity-undue-unworthiness">X. Capacity to Succeed, Undue Influence &amp; Unworthiness (<span class="c-teal">Arts. 1024–1039, 40–43</span>)</h3>
 
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Vacancy Mechanics] &rarr; <strong>[YOU ARE HERE: Sec. X — Threshold Qualification (<span class="c-teal">Arts. 1024–1039, 40–43</span>)]</strong> &rarr; [Heir's Final Choice (<span class="c-teal">Arts. 1041–1057</span>)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Common Provisions, Chapter 4, Section 2 — Capacity to Succeed by Will or by Intestacy (<span class="c-teal">Arts. 1024–1039</span>; Personhood <span class="c-teal">Arts. 40–43</span>; <span class="c-teal">Arts. 739, 823</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Before an heir can trigger a vacancy or accept a share, you must pass the threshold gate: <em>Is this beneficiary legally alive/qualified at death? Are they disqualified from the free portion due to sickbed undue influence (<span class="c-teal">Art. 1027</span>), or completely unworthy across testate, intestate, and legitime (<span class="c-teal">Art. 1032</span>)?</em></div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects vulnerable dying testators from spiritual, medical, or legal manipulation during their last illness, prevents unfaithful paramours/attackers from profiting from crimes, and safeguards unborn infants under the 24-hour intrauterine threshold.</div>
+    </div>
+  </div>
+
   <h4 id="physical-existence-41-43">A. Conceived Children (<span class="c-teal">Arts. 40–41, 1025</span>), Simultaneous Death (<span class="c-teal">Art. 43</span>) &amp; Pious Works (<span class="c-teal">Art. 1029</span>)</h4>
   <ul>
     <li><strong>Intrauterine Life Rule (<span class="c-teal">Arts. 40–41, 1025</span>):</strong> Never write <em>"7 months old"</em>—always write <span class="c-green"><strong><u>"intrauterine life"</u></strong></span>!
@@ -1436,7 +1683,7 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/08-capacity-art41-art1027-timelines.jpg" alt="Capacity Timelines: Intrauterine Life (Art. 41) and Sickbed Undue Influence (Art. 1027)" />
-    <figcaption>Figure 8: Dual Capacity Timelines — Intrauterine Life Cord-Cut Rule (Art. 41) &amp; Last-Illness Window (Art. 1027)</figcaption>
+    <figcaption>Figure 8: Dual Capacity Timelines — Intrauterine Life Cord-Cut Rule (Art. 41) &amp; Last-Illness Window (Art. 1027) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <h4 id="art-1028-1039-unworthiness">C. Morality (<span class="c-teal">Art. 1028 / 739</span>) &amp; Unworthiness (<span class="c-teal">Arts. 1032–1039</span>)</h4>
@@ -1456,12 +1703,23 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/09-art1032-paramour-paradox-pardon.jpg" alt="Art. 1032(5) Paramour Paradox and Art. 1033 Pardon vs Art. 922 Reconciliation" />
-    <figcaption>Figure 9: The Art. 1032(5) Paramour Paradox &amp; Erasing Offenses (Art. 922 Reconciliation vs. Art. 1033 Written Pardon)</figcaption>
+    <figcaption>Figure 9: The Art. 1032(5) Paramour Paradox &amp; Erasing Offenses (Art. 922 Reconciliation vs. Art. 1033 Written Pardon) <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
   <hr>
 
   <h3 id="sec-xi-acceptance-repudiation">XI. Acceptance &amp; Repudiation of Inheritance (<span class="c-teal">Arts. 1041–1057, 390–392, 954–955</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Capacity &amp; Unworthiness (<span class="c-teal">1024–1039</span>)] &rarr; <strong>[YOU ARE HERE: Sec. XI — Exercise of the Heir's Choice (<span class="c-teal">Arts. 1041–1057</span>)]</strong> &rarr; [Part IV: Drills]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Common Provisions, Chapter 4, Section 3 — Acceptance and Repudiation (<span class="c-teal">Arts. 1041–1057</span>; Presumptive Death <span class="c-teal">Arts. 390–392</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Even when a heir survives the testator and holds full legal capacity, inheritance is never forced upon an unwilling recipient. Section XI governs <strong>how a living heir locks in or rejects</strong> their inheritance—and what happens when they try to cheat their own creditors (<span class="c-teal">Art. 1052</span>) or play games between testate and intestate shares (<span class="c-teal">Art. 1055</span>).</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents ownership limbo (*interregnum*) via retroactivity to death (<span class="c-teal">Art. 1042</span>), blocks fake "waivers" that secretly act as transfers (<span class="c-teal">Art. 1050</span>), requires judicial protection for minors/wards (<span class="c-teal">Art. 1044</span>), and prevents debtors from renouncing wealth to stiff creditors.</div>
+    </div>
+  </div>
 
   <div class="cue-banner">
     <strong>[MEM] Core Anchor — <code>V-R-I</code> &amp; "Death + Right":</strong>
@@ -1555,50 +1813,47 @@ flowchart TD
 
   <figure class="img-figure">
     <img src="images/10-acceptance-repudiation-creditors.jpg" alt="Acceptance, Repudiation Traps (Art. 1050), Creditor Sweep (Art. 1052) and Transmission (Art. 1053)" />
-    <figcaption>Figure 10: Art. 1050 Selective Waiver Traps, Art. 1052 Creditor Sweep &amp; Art. 1053 Transmission vs. Representation</figcaption>
+    <figcaption>Figure 10: Art. 1050 Selective Waiver Traps, Art. 1052 Creditor Sweep &amp; Art. 1053 Transmission vs. Representation <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
-  <!-- MERMAID 4: Capacity & Acceptance-Repudiation Decision Tree -->
-  <div class="diagram-wrapper" id="mermaid-capacity-choice">
-    <div class="diagram-toolbar">
-      <span class="diagram-label">DIAGRAM 4: CAPACITY (ARTS. 1027 / 1032) &amp; ACCEPTANCE/REPUDIATION FLOW (ARTS. 1041–1057) <span class="diagram-hint">(Drag to pan • Scroll to zoom)</span></span>
-      <div class="diagram-controls">
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, 0.25)" title="Zoom In">+</button>
-        <button type="button" class="zoom-btn" onclick="zoomDiagram(this, -0.25)" title="Zoom Out">−</button>
-        <button type="button" class="zoom-btn" onclick="resetDiagramZoom(this)" title="Reset &amp; Center">↺</button>
-        <button type="button" class="zoom-btn fullscreen-btn" onclick="toggleDiagramFullscreen(this)" title="View Fullscreen">⛶</button>
-      </div>
+  <!-- DECISION ARCHITECTURE 4: Capacity & Acceptance-Repudiation Flow (Mermaid-Free) -->
+  <div class="ui-box" id="arch-capacity-choice">
+    <div class="ui-step-plain">
+      <div class="ui-kicker c-navy">PART III DECISION ARCHITECTURE</div>
+      <div class="ui-title">Capacity Screening (<span class="c-teal">Arts. 41, 1027, 1032</span>) &amp; Heir's Choice Routing (<span class="c-teal">Arts. 1041–1057</span>)</div>
     </div>
-    <div class="diagram-viewport">
-      <div class="diagram-container">
-        <pre class="mermaid">
-flowchart TD
-  CStart["Heir Called to Succession"] --> Cap{"Qualified? (Arts. 41, 1027, 1032)"}
-  Cap -- "Art. 1027 Undue Influence" --> UI["Void on FREE PORTION Only<br/>Legitime &amp; Intestacy Safe!"]
-  Cap -- "Art. 1032 Unworthy" --> Unw["Strips Testate, Intestate &amp; Legitime<br/>Cured by Art. 1033 Written/Will Pardon<br/>(Or Art. 922 Reconciliation if Disinherited)"]
-  Cap -- "Capacitated" --> Choice{"How Did Heir Act?"}
-  Choice -- "Died Undecided After Surviving" --> Trans["Art. 1053 Transmission to Heir's Heirs"]
-  Choice -- "Selective / Priced Waiver" --> Deemed["Art. 1050: DEEMED ACCEPTANCE + Transfer"]
-  Choice -- "30d Silence Post-Distribution Order" --> Deemed57["Art. 1057: DEEMED ACCEPTANCE"]
-  Choice -- "Formal Repudiation (Art. 1051)<br/>+ Minor Court Approval (Art. 1044)" --> Cred{"Prejudices Heir's Creditor?"}
-  Cred -- "YES (Art. 1052)" --> Pay["Creditor Paid via Court Order;<br/>Excess Goes to Co-Heirs (Heir = P0)"]
-  Cred -- "NO" --> RepEff["Effective Back to Death (Art. 1042)<br/>Art. 1055: Will Repudiation Kills Both"]
-
-  classDef navy fill:#1E3A8A,stroke:#1E3A8A,color:#FFFFFF,font-weight:bold;
-  classDef teal fill:#F0FDFA,stroke:#0F766E,stroke-width:2px,color:#0F766E;
-  classDef green fill:#ECFDF5,stroke:#166534,stroke-width:2px,color:#166534;
-  classDef rust fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#C2410C;
-  class CStart navy;
-  class Cap,Choice,Cred teal;
-  class Trans,RepEff green;
-  class UI,Unw,Deemed,Deemed57,Pay rust;
-        </pre>
+    <div class="arch-grid">
+      <div class="arch-card rust">
+        <h5>Gate 1: Undue Influence (<span class="c-teal">Art. 1027</span>) vs. Unworthiness (<span class="c-teal">Art. 1032</span>)</h5>
+        <ul>
+          <li><strong><span class="c-teal">Art. 1027</span> (`P-R-G-W-M`):</strong> Voids <strong>FREE PORTION ONLY</strong>; legitime, intestacy, and healthy prior wills remain SAFE!</li>
+          <li><strong><span class="c-teal">Art. 1032</span> Unworthiness:</strong> Strips <strong>testate, intestate &amp; legitime</strong>; cured only by <span class="c-teal">Art. 1033</span> written/will pardon (or <span class="c-teal">Art. 922</span> if disinherited).</li>
+        </ul>
+      </div>
+      <div class="arch-card teal">
+        <h5>Gate 2: Acceptance Triggers (Even Without Express Signature)</h5>
+        <ul>
+          <li><strong><span class="c-teal">Art. 1053</span> Transmission:</strong> Heir survives decedent and dies undecided → option transmits to heir's own heirs.</li>
+          <li><strong><span class="c-teal">Art. 1050</span> Deemed Acceptance:</strong> Selective waiver, assignment for value, or onerous transfer = acceptance + transfer.</li>
+          <li><strong><span class="c-teal">Art. 1057</span> 30-Day Rule:</strong> 30 days' silence runs strictly from <strong>Court Order of Distribution</strong>, not death.</li>
+        </ul>
+      </div>
+      <div class="arch-card green">
+        <h5>Gate 3: Valid Formal Repudiation &amp; Creditor Protection</h5>
+        <ul>
+          <li><strong>Formalities (<span class="c-teal">Arts. 1044, 1051</span>):</strong> Public/authentic doc or court petition (+ court approval for minors).</li>
+          <li><strong>Prejudices Creditors (<span class="c-teal">Art. 1052</span>):</strong> Creditor collects debt via court order; excess goes to co-heirs (renouncer = ₱0).</li>
+          <li><strong>Dual Roles (<span class="c-teal">Art. 1055</span>):</strong> Repudiating as testamentary heir forfeits intestate right too; retroactive to death (<span class="c-teal">Art. 1042</span>).</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-iv-banner">PART IV: MNEMONIC BANK, 14 BAR-STYLE ALAC PROBLEMS &amp; RAPID QUIZ DRILL</div>
+  <div class="macro-part-compass">
+    <strong>Part IV Big-Picture Anchor (Quiz Mastery &amp; Self-Testing):</strong> Everything from Disinheritance, Intestacy, Accretion, Vacancy, Capacity, and Acceptance/Repudiation now locks into high-speed exam recall—test your mastery against all 14 multi-issue ALAC essays and 20 rapid traps below.
+  </div>
 
   <h3 id="sec-xii-mnemonics-numbers">XII. Master Mnemonic Bank &amp; Golden Numbers</h3>
 
@@ -1762,176 +2017,73 @@ flowchart TD
   </ul>
 </div>
 
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ 
-    startOnLoad: true, 
-    theme: 'base', 
-    themeVariables: { 
-      primaryColor: '#F8FAFC', 
-      primaryBorderColor: '#1E3A8A', 
-      primaryTextColor: '#1F2937', 
-      lineColor: '#1E3A8A', 
-      fontFamily: 'sans-serif' 
-    } 
-  });
-</script>
+<!-- Native Click-to-Zoom Lightbox Modal -->
+<div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Enlarged Infographic Viewer">
+  <div class="lightbox-bar">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-actions">
+      <button type="button" class="lightbox-btn" id="lightboxZoomBtn" onclick="toggleLightboxZoom()">🔍 Zoom In</button>
+      <button type="button" class="lightbox-btn" onclick="closeImgLightbox()">✕ Close (Esc)</button>
+    </div>
+  </div>
+  <div class="lightbox-stage" id="lightboxStage">
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+</div>
+
 <script>
-  function updateDiagramTransform(container) {
-    const scale = parseFloat(container.dataset.scale || '1');
-    const x = parseFloat(container.dataset.panX || '0');
-    const y = parseFloat(container.dataset.panY || '0');
-    container.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  const lightbox = document.getElementById('imgLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxStage = document.getElementById('lightboxStage');
+  const lightboxZoomBtn = document.getElementById('lightboxZoomBtn');
+
+  function openImgLightbox(imgEl) {
+    const figure = imgEl.closest('.img-figure');
+    const capEl = figure ? figure.querySelector('figcaption') : null;
+    lightboxImg.src = imgEl.src;
+    lightboxImg.alt = imgEl.alt || 'Legal Infographic';
+    lightboxCaption.textContent = capEl ? capEl.textContent.replace('(Click image to enlarge)', '').trim() : (imgEl.alt || '');
+    lightboxStage.classList.remove('zoomed');
+    lightboxZoomBtn.textContent = '🔍 Zoom In';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
-  function zoomDiagram(btn, delta) {
-    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-    let scale = parseFloat(container.dataset.scale || '1');
-    scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-    container.dataset.scale = scale;
-    updateDiagramTransform(container);
-  }
-
-  function resetDiagramZoom(btn) {
-    const container = btn.closest('.diagram-wrapper').querySelector('.diagram-container');
-    container.dataset.scale = '1';
-    container.dataset.panX = '0';
-    container.dataset.panY = '0';
-    updateDiagramTransform(container);
-  }
-
-  function toggleDiagramFullscreen(btn) {
-    const wrapper = btn.closest('.diagram-wrapper');
-    const container = wrapper.querySelector('.diagram-container');
-    const enteringFullscreen = !wrapper.classList.contains('is-fullscreen');
-
-    wrapper.classList.toggle('is-fullscreen', enteringFullscreen);
-    btn.textContent = enteringFullscreen ? '✕' : '⛶';
-    btn.title = enteringFullscreen ? 'Exit Fullscreen (Esc)' : 'View Fullscreen';
-    document.body.style.overflow = enteringFullscreen ? 'hidden' : '';
-
-    if (container) {
-      container.dataset.panX = '0';
-      container.dataset.panY = '0';
-      updateDiagramTransform(container);
-    }
-
-    if (enteringFullscreen && wrapper.requestFullscreen) {
-      wrapper.requestFullscreen().catch(() => {});
-    } else if (!enteringFullscreen && document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
-    }
-  }
-
-  function exitAllDiagramFullscreens() {
-    document.querySelectorAll('.diagram-wrapper.is-fullscreen').forEach(wrapper => {
-      wrapper.classList.remove('is-fullscreen');
-      const container = wrapper.querySelector('.diagram-container');
-      if (container) {
-        container.dataset.panX = '0';
-        container.dataset.panY = '0';
-        updateDiagramTransform(container);
-      }
-      const btn = wrapper.querySelector('.fullscreen-btn');
-      if (btn) {
-        btn.textContent = '⛶';
-        btn.title = 'View Fullscreen';
-      }
-    });
+  function closeImgLightbox() {
+    lightbox.classList.remove('open');
+    lightboxStage.classList.remove('zoomed');
     document.body.style.overflow = '';
   }
 
-  document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-      exitAllDiagramFullscreens();
+  function toggleLightboxZoom() {
+    const isZoomed = lightboxStage.classList.toggle('zoomed');
+    lightboxZoomBtn.textContent = isZoomed ? '↩ Fit Screen' : '🔍 Zoom In';
+  }
+
+  document.querySelectorAll('.img-figure img').forEach(img => {
+    img.setAttribute('title', 'Click to enlarge infographic');
+    img.addEventListener('click', () => openImgLightbox(img));
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeImgLightbox();
     }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      exitAllDiagramFullscreens();
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeImgLightbox();
     }
   });
-
-  let activeDiagramDrag = null;
-
-  document.addEventListener('mousedown', (e) => {
-    const viewport = e.target.closest('.diagram-viewport');
-    if (!viewport || e.button !== 0) return;
-    const container = viewport.querySelector('.diagram-container');
-    if (!container) return;
-    e.preventDefault();
-    viewport.classList.add('is-dragging');
-    activeDiagramDrag = {
-      viewport,
-      container,
-      startX: e.clientX - parseFloat(container.dataset.panX || '0'),
-      startY: e.clientY - parseFloat(container.dataset.panY || '0')
-    };
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!activeDiagramDrag) return;
-    activeDiagramDrag.container.dataset.panX = e.clientX - activeDiagramDrag.startX;
-    activeDiagramDrag.container.dataset.panY = e.clientY - activeDiagramDrag.startY;
-    updateDiagramTransform(activeDiagramDrag.container);
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (!activeDiagramDrag) return;
-    activeDiagramDrag.viewport.classList.remove('is-dragging');
-    activeDiagramDrag = null;
-  });
-
-  document.addEventListener('touchstart', (e) => {
-    const viewport = e.target.closest('.diagram-viewport');
-    if (!viewport || e.touches.length !== 1) return;
-    const container = viewport.querySelector('.diagram-container');
-    if (!container) return;
-    const touch = e.touches[0];
-    viewport.classList.add('is-dragging');
-    activeDiagramDrag = {
-      viewport,
-      container,
-      startX: touch.clientX - parseFloat(container.dataset.panX || '0'),
-      startY: touch.clientY - parseFloat(container.dataset.panY || '0')
-    };
-  }, { passive: true });
-
-  document.addEventListener('touchmove', (e) => {
-    if (!activeDiagramDrag || e.touches.length !== 1) return;
-    const touch = e.touches[0];
-    activeDiagramDrag.container.dataset.panX = touch.clientX - activeDiagramDrag.startX;
-    activeDiagramDrag.container.dataset.panY = touch.clientY - activeDiagramDrag.startY;
-    updateDiagramTransform(activeDiagramDrag.container);
-  }, { passive: true });
-
-  document.addEventListener('touchend', () => {
-    if (!activeDiagramDrag) return;
-    activeDiagramDrag.viewport.classList.remove('is-dragging');
-    activeDiagramDrag = null;
-  });
-
-  document.addEventListener('wheel', (e) => {
-    const viewport = e.target.closest('.diagram-viewport');
-    if (!viewport) return;
-    const wrapper = viewport.closest('.diagram-wrapper');
-    if (wrapper.classList.contains('is-fullscreen') || e.ctrlKey || e.metaKey) {
-      e.preventDefault();
-      const container = viewport.querySelector('.diagram-container');
-      let scale = parseFloat(container.dataset.scale || '1');
-      const delta = e.deltaY < 0 ? 0.15 : -0.15;
-      scale = Math.min(Math.max(0.3, +(scale + delta).toFixed(2)), 5.0);
-      container.dataset.scale = scale;
-      updateDiagramTransform(container);
-    }
-  }, { passive: false });
 
   function toggleAllDrills(openState) {
     document.querySelectorAll('details').forEach(d => { d.open = openState; });
   }
 
   window.addEventListener('beforeprint', () => {
+    closeImgLightbox();
     document.querySelectorAll('details').forEach(d => {
       d.dataset.wasOpen = d.open ? '1' : '0';
       d.open = true;
