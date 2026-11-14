@@ -501,20 +501,18 @@
 
 ### C. Master Problem Walkthrough (₱120M Net Estate; 4 LCs: A, B, C [Predeceased w/ Kids E, F], D [Repudiated w/ Kid G]; No Substitutes)
 
-#### 1. Authoritative Testate Solution (Part 2 / Vacancy Matrix Formula)
+#### 1. Settled Testate Solution (Master Vacancy Matrix Formula)
 *(Note: Part 2 uses ₱120,000, scaled here 1000x to ₱120M—proportions identical.)*
 * **Baseline (No-Vacancy):** Each child's ₱30M = **₱15M Legitime + ₱15M Voluntary Free Portion**.
 * **C's ₱15M Legitime (Predecease):** **REP** applies → **E = ₱7.5M, F = ₱7.5M**.
 * **C's ₱15M Free Portion (Predecease):** **NO REP** in voluntary FP! No substitute → **ACC (Art. 1016)** to remaining accepting co-heirs **A & B = ₱7.5M each**.
 * **D's ₱15M Free Portion (Repudiation):** **G = ₱0 (Art. 977)**; no substitute → **ACC (Art. 1016)** to **A & B = ₱7.5M each**.
 * **D's ₱15M Legitime (Repudiation):** **G = ₱0 (Art. 977)**; Art. 1021(2) own right / IS across the **3 surviving legitimate branches** (A, B, and C's branch E&F) → **A = ₱5M, B = ₱5M, E = ₱2.5M, F = ₱2.5M**.
-* **FINAL AUTHORITATIVE TESTATE TOTALS:** **A = ₱50M** | **B = ₱50M** | **E = ₱10M** | **F = ₱10M** | **G = ₱0** (Total = ₱120M).
+* **SETTLED TESTATE TOTALS:** **A = ₱50M** | **B = ₱50M** | **E = ₱10M** | **F = ₱10M** | **G = ₱0** (Total = ₱120M).
 
-> **SIDEBOX — Reconciliation with October 19 Lecture Notes & Classroom Debate:**
-> 1. *Why Oct. 19 differed on C's ₱15M Free Portion:* In Oct. 19's board walkthrough, because X universally instituted all 4 children to the whole estate without a substitute, the professor provisionally routed C's ₱15M FP to E & F by representation (giving E & F ₱15M each). Under the **Master Vacancy Matrix** and Part 2 formula (controlling here), **voluntary free-portion shares can NEVER pass by representation**—they pass via **SUB → ACC → IS**.
-> 2. *Classroom Assignment Debate on D's ₱15M Repudiated Legitime:*
->    - **3-Way Division (Above Formula):** Divides ₱60M collective legitime across the 3 participating lines (**A=₱20M, B=₱20M, E&F=₱20M [₱10M each]**), because E & F step into X's succession in C's shoes directly from X, not from D.
->    - **2-Way Division (Alternative Classroom Hint):** Splits D's ₱15M strictly between surviving first-degree co-heirs **A & B (₱7.5M each)** if E & F are capped at C's pre-repudiation legitime (giving A=₱52.5M, B=₱52.5M, E=₱7.5M, F=₱7.5M under Matrix FP rules).
+> **SETTLED CLASSROOM SOLUTION (`A = ₱50M | B = ₱50M | E = ₱10M | F = ₱10M | G = ₱0`):**
+> 1. *Free Portion Accretion (Art. 1016):* Voluntary free-portion shares (**C's ₱15M FP** and **D's ₱15M FP**) never pass by representation; with no substitute named, both accrue equally to surviving accepting co-heirs **A & B** (`+₱7.5M` + `+₱7.5M` = `+₱15M` each).
+> 2. *3-Way Own-Right Redistribution of D's ₱15M Repudiated Legitime (Art. 1021[2]):* Because repudiation bars representation (**G = ₱0**, Art. 977) and accretion cannot operate on the legitime, the **₱60M collective legitime** divides equally across all **3 surviving lines** (**A = ₱20M**, **B = ₱20M**, **C's branch E&F = ₱20M [₱10M each]**; adding `+₱5M` to A, `+₱5M` to B, and `+₱2.5M` each to E & F), since E & F represent C directly from X.
 
 #### 2. Pure Intestate Version (Remove the Will)
 * Baseline: ₱30M each (no legitime/FP split).
@@ -699,7 +697,7 @@ X's will provides: *"I bequeath the balance of my BPI account to A, the balance 
 ### Problem 10 — The ₱120M Master Vacancy Problem (Testate vs. Intestate)
 X leaves ₱120M by will equally to 4 legitimate children (A, B, C, D) with no substitutes. C predeceased (leaving kids E & F); D repudiated (leaving kid G). **Distribute under (a) the Part 2 Vacancy Matrix Formula and (b) Pure Intestacy.**
 * **ALAC Answer:**
-  * **(a) Testate (Matrix Formula):** Baseline = ₱15M Legitime + ₱15M FP each. **C's ₱15M Legitime** → E & F by REP (₱7.5M each); **C's ₱15M FP** → A & B by ACC (₱7.5M each, since voluntary FP is not represented); **D's ₱15M FP** → A & B by ACC (₱7.5M each; G=₱0 per Art. 977); **D's ₱15M Legitime** → Art. 1021(2) 3-way division across active lines A, B, and C's branch (₱5M to A, ₱5M to B, ₱2.5M each to E & F). **Final: A=₱50M, B=₱50M, E=₱10M, F=₱10M, G=₱0.** *(Note: Mention Oct. 19 board alternative giving C's FP to E & F and 2-way debate on D's legitime if asked).*
+  * **(a) Testate (Settled Matrix Formula):** Baseline = ₱15M Legitime + ₱15M FP each. **C's ₱15M Legitime** → E & F by REP (₱7.5M each); **C's ₱15M FP** → A & B by ACC (₱7.5M each, since voluntary FP is not represented); **D's ₱15M FP** → A & B by ACC (₱7.5M each; G=₱0 per Art. 977); **D's ₱15M Legitime** → Art. 1021(2) 3-way division across active lines A, B, and C's branch (₱5M to A, ₱5M to B, ₱2.5M each to E & F). **Settled Final Answer: A=₱50M, B=₱50M, E=₱10M, F=₱10M, G=₱0.**
   * **(b) Pure Intestacy:** ₱30M baseline each. C's ₱30M → E & F by REP (₱15M each). D's ₱30M → ACC (Art. 1018) to A & B (₱15M each; G=₱0). **Final: A=₱45M, B=₱45M, E=₱15M, F=₱15M, G=₱0.**
 
 ### Problem 11 — Intrauterine Life (Art. 41) & Art. 1027 Undue Influence Timing
