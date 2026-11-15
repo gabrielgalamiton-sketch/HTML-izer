@@ -295,6 +295,105 @@ blockquote {
 }
 .arch-card li { margin-bottom: 0.3rem; }
 
+/* End-of-Part Summary Brief Reviewer Capstones */
+.summary-capstone {
+  margin: 2rem 0 2.5rem 0;
+  border: 1.5px solid #93C5FD;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(30, 58, 138, 0.08);
+  scroll-margin-top: 4.5rem;
+}
+.summary-hdr {
+  background: linear-gradient(90deg, #0F172A 0%, #1E3A8A 65%, #0F766E 100%);
+  color: #FFFFFF;
+  padding: 0.85rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.summary-hdr h4 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 1.03rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.summary-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+}
+.summary-body {
+  padding: 1.15rem 1.3rem;
+}
+.summary-subhdr {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1E3A8A;
+  margin: 1rem 0 0.45rem 0;
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid #DBEAFE;
+}
+.summary-subhdr:first-child {
+  margin-top: 0;
+}
+.summary-capstone .ui-table {
+  margin: 0.55rem 0 0.85rem 0;
+  font-size: 0.9rem;
+}
+.summary-capstone .ui-table th {
+  padding: 0.55rem 0.75rem;
+}
+.summary-capstone .ui-table td {
+  padding: 0.6rem 0.75rem;
+}
+.tag-mem-lec {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1E3A8A;
+  background: #DBEAFE;
+  border: 1px solid #93C5FD;
+  padding: 0.08rem 0.42rem;
+  border-radius: 4px;
+}
+.tag-mem-add {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #0F766E;
+  background: #CCFBF1;
+  border: 1px solid #5EEAD4;
+  padding: 0.08rem 0.42rem;
+  border-radius: 4px;
+}
+.summary-trap-box {
+  background: #FFF7ED;
+  border: 1px solid #FDBA74;
+  border-left: 4px solid #C2410C;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-top: 0.85rem;
+}
+.summary-trap-box ul, .summary-trap-box ol {
+  margin-bottom: 0;
+}
+
 /* Native Click-to-Zoom Infographic Lightbox Modal */
 .img-lightbox {
   display: none;
@@ -762,6 +861,7 @@ li > ul, li > ol {
   .art-ref { border-bottom: none; }
   .document-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
   .rule-card, .img-figure, .alac-card, .ui-box, .cue-banner, .bar-update-box, .sidebox-note, .context-compass, .macro-part-compass, .arch-card { break-inside: avoid; }
+  .summary-capstone, .summary-trap-box { break-inside: avoid; }
   .alac-details summary, .rapid-item summary { display: none; }
 }
   </style>
@@ -780,20 +880,24 @@ li > ul, li > ol {
       <option value="#sec-ii-art919-descendants">&nbsp;&nbsp;↳ II. Grounds for Children &amp; Descendants (Art. 919 — AGAFRMDC)</option>
       <option value="#sec-iii-art920-ascendants">&nbsp;&nbsp;↳ III. Grounds for Parents &amp; Ascendants (Art. 920 — 920[8] vs. 920[2])</option>
       <option value="#sec-iv-spouse-reconciliation-918">&nbsp;&nbsp;↳ IV. Spouse (Art. 921), Reconciliation (922), Representation (923) &amp; Art. 918</option>
+      <option value="#summary-part-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part I Summary Brief Reviewer</option>
       <option value="#part-ii-banner">PART II: LEGACIES AND DEVISES (Arts. 924–959)</option>
       <option value="#sec-v-legacies-concepts">&nbsp;&nbsp;↳ V. Concepts, Burdens (925–926), Solidary Liability (927) &amp; Eviction (928)</option>
       <option value="#sec-vi-ownership-credits">&nbsp;&nbsp;↳ VI. Ownership Matrix (929–933), Mortgages, Credits &amp; Debts (934–939)</option>
       <option value="#sec-vii-generic-reduction">&nbsp;&nbsp;↳ VII. Generic vs. Specific, Vesting (940–949) &amp; Art. 911 vs. Art. 950 Battle</option>
       <option value="#sec-viii-delivery-revocation-959">&nbsp;&nbsp;↳ VIII. Delivery (951–953), Election (954–955), Merging (956), Revocation (957), Relatives (959) &amp; 5 ALAC</option>
+      <option value="#summary-part-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part II Summary Brief Reviewer</option>
       <option value="#part-iii-banner">PART III: INTESTACY, SHARES, REPRESENTATION &amp; ART. 992</option>
       <option value="#sec-ix-intestate-orders">&nbsp;&nbsp;↳ IX. Causes, Preference of Lines, Proximity &amp; Regular/Irregular Orders</option>
       <option value="#sec-x-intestate-shares-mixed">&nbsp;&nbsp;↳ X. Shares, Double-Share Rule, Concurrence &amp; Mixed Succession</option>
       <option value="#sec-xi-representation-iron-curtain">&nbsp;&nbsp;↳ XI. Representation, Art. 969, Adoption &amp; Art. 992 / Dela Merced</option>
+      <option value="#summary-part-iii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part III Summary Brief Reviewer</option>
       <option value="#part-iv-banner">PART IV: ACCRETION, VACANCIES, CAPACITY &amp; ACCEPTANCE</option>
       <option value="#sec-xii-accretion">&nbsp;&nbsp;↳ XII. Right of Accretion (Arts. 1015–1021 — UPRA &amp; Earmarking)</option>
       <option value="#sec-xiii-vacancy-matrix-120m">&nbsp;&nbsp;↳ XIII. Master Vacancy Matrix &amp; The ₱120M Master Problem</option>
       <option value="#sec-xiv-capacity-undue-unworthiness">&nbsp;&nbsp;↳ XIV. Capacity (Art. 41), Undue Influence (1027) &amp; Unworthiness (1032–1039)</option>
       <option value="#sec-xv-acceptance-repudiation">&nbsp;&nbsp;↳ XV. Acceptance &amp; Repudiation of Inheritance (Arts. 1041–1057)</option>
+      <option value="#summary-part-iv">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part IV Summary Brief Reviewer</option>
       <option value="#part-v-banner">PART V: MNEMONICS, CHECKLIST, 24 ALAC DRILLS &amp; 25 TRAPS</option>
       <option value="#sec-xvi-mnemonics-numbers">&nbsp;&nbsp;↳ XVI. Master Mnemonic Bank, Golden Numbers &amp; 5-Step Quiz Checklist</option>
       <option value="#sec-xvii-bar-problems">&nbsp;&nbsp;↳ XVII. 24 Bar-Style ALAC &amp; Recall Drills (Collapsible Answers)</option>
@@ -1210,6 +1314,74 @@ li > ul, li > ol {
     <figcaption>Figure 4: Part I Summary Matrix — How Preterition (<span class="art-ref" data-art="854" tabindex="0">Art. 854</span>), Imperfect Disinheritance (<span class="art-ref" data-art="918" tabindex="0">Art. 918</span>), and Valid Representation (<span class="art-ref" data-art="923" tabindex="0">Art. 923</span>) Alter the ₱120M Estate <span class="zoom-hint">(Click image to enlarge)</span></figcaption>
   </figure>
 
+  <div class="summary-capstone" id="summary-part-i">
+    <div class="summary-hdr">
+      <h4>Part I Summary Brief Reviewer &mdash; The Law on Disinheritance (<span class="art-ref" data-art="915-923" tabindex="0">Arts. 915–923</span>)</h4>
+      <span class="summary-pill">Sections I–IV Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Codal Scope</div>
+      <ul>
+        <li><strong>Sec. I (<span class="c-teal"><span class="art-ref" data-art="915-917" tabindex="0">Arts. 915–917</span></span>):</strong> Compulsory-heir scope only, 7 mandatory gatekeepers (<code>W-E-L-S-T-U-T</code>), conditional disinheritance vs. conditional revocation, and <span class="c-teal"><span class="art-ref" data-art="917" tabindex="0">Art. 917</span></span> burden of proof.</li>
+        <li><strong>Sec. II (<span class="c-teal"><span class="art-ref" data-art="919" tabindex="0">Art. 919</span></span>):</strong> 8 exclusive grounds against children/descendants (<code>A-G-A-F-R-M-D-C</code>) and intersections with <span class="art-ref" data-art="RPC-6" tabindex="0">Art. 6</span>, <span class="art-ref" data-art="RPC-34,RPC-41" tabindex="0">Arts. 34 &amp; 41</span>, and <span class="art-ref" data-art="RPC-333,RPC-334" tabindex="0">Arts. 333–334, RPC</span>.</li>
+        <li><strong>Sec. III (<span class="c-teal"><span class="art-ref" data-art="920" tabindex="0">Art. 920</span></span>):</strong> 8 grounds against parents/ascendants, Par. 1 female-specific virtue vs. neutral abandonment, loss of parental authority (<span class="art-ref" data-art="FC-228,FC-229,FC-230,FC-231,FC-232" tabindex="0">Family Code</span>), and <span class="c-teal"><span class="art-ref" data-art="920" data-para="8" tabindex="0">Art. 920(8)</span></span> vs. <span class="c-teal"><span class="art-ref" data-art="920" data-para="2" tabindex="0">920(2)</span></span>.</li>
+        <li><strong>Sec. IV (<span class="c-teal"><span class="art-ref" data-art="921-923" tabindex="0">Arts. 921–923</span>, <span class="art-ref" data-art="918" tabindex="0">918</span></span>):</strong> 6 spousal grounds + <span class="art-ref" data-art="FC-55" tabindex="0">FC Art. 55</span> / <span class="art-ref" data-art="FC-63" data-para="4" tabindex="0">63[4]</span>, bilateral reconciliation (<span class="c-teal"><span class="art-ref" data-art="922" tabindex="0">Art. 922</span></span>), representation in legitime only (<span class="c-teal"><span class="art-ref" data-art="923" tabindex="0">Art. 923</span></span>), and imperfect disinheritance vs. preterition (<span class="c-teal"><span class="art-ref" data-art="918" tabindex="0">Art. 918</span></span> vs. <span class="c-teal"><span class="art-ref" data-art="854" tabindex="0">854</span></span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Mnemonic</th>
+              <th>Source</th>
+              <th>Decoded Rule &amp; Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>W-E-L-S-T-U-T</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>7 Requisites (<span class="c-teal"><span class="art-ref" data-art="915-917" tabindex="0">Arts. 915–917</span></span>): Valid <strong>W</strong>ill &bull; <strong>E</strong>xpress &amp; named &bull; <strong>L</strong>awful cause &bull; <strong>S</strong>tated in will &bull; <strong>T</strong>rue at execution &bull; <strong>U</strong>nconditional &bull; <strong>T</strong>otal (no partial forfeiture).</td>
+            </tr>
+            <tr>
+              <td><code>A-G-A-F-R-M-D-C</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>8 Child Grounds (<span class="c-teal"><span class="art-ref" data-art="919" data-para="1,2,3,4,5,6,7,8" tabindex="0">Art. 919[1–8]</span></span>): <strong>A</strong>ttempt (conv.) &bull; <strong>G</strong>roundless accusation (&ge;6 yrs) &bull; <strong>A</strong>dultery/concubinage w/ spouse (conv.) &bull; <strong>F</strong>raud/violence on will &bull; <strong>R</strong>efusal to support &bull; <strong>M</strong>altreatment (no conv.) &bull; <strong>D</strong>ishonorable life (habitual) &bull; <strong>C</strong>ivil interdiction (even vs. stranger).</td>
+            </tr>
+            <tr>
+              <td><code>A-G-F-L-P-R</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>6 Spousal Grounds (<span class="c-teal"><span class="art-ref" data-art="921" data-para="1,2,3,4,5,6" tabindex="0">Art. 921[1–6]</span></span>): <strong>A</strong>ttempt (conv.) &bull; <strong>G</strong>roundless accusation (&ge;6 yrs) &bull; <strong>F</strong>raud/violence on will &bull; <strong>L</strong>egal separation cause (<span class="art-ref" data-art="FC-55" tabindex="0">FC Art. 55</span>) &bull; <strong>P</strong>arental authority loss &bull; <strong>R</strong>efusal to support.</td>
+            </tr>
+            <tr>
+              <td><code>920 = NO-MD</code></td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="920" tabindex="0">Art. 920</span></span> (Parents) drops <strong>M</strong>altreatment and <strong>D</strong>ishonorable life from <code>AGAFRMDC</code>, adding Abandonment/Virtue (Par. 1), Culpable Parental Authority Loss (Par. 6), and Parent-vs-Parent Attempt (Par. 8).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Scope &amp; Proof:</strong> Only <strong>compulsory heirs</strong> are disinherited (<span class="c-teal"><span class="art-ref" data-art="915" tabindex="0">Art. 915</span></span>). Once denied, the <strong>other heirs bear the burden of proof</strong> (<span class="c-teal"><span class="art-ref" data-art="917" tabindex="0">Art. 917</span></span>). Conditional disinheritance is <span class="c-rust"><strong><u>VOID</u></strong></span>, while conditional lifting/pardon is <span class="c-green"><strong><u>VALID</u></strong></span>.</li>
+        <li><strong>Imperfect (<span class="c-teal"><span class="art-ref" data-art="918" tabindex="0">Art. 918</span></span>) vs. Preterition (<span class="c-teal"><span class="art-ref" data-art="854" tabindex="0">Art. 854</span></span>):</strong> Imperfect disinheritance restores ONLY the <strong>strict legitime</strong> (preserving voluntary free-portion dispositions: ₱120M 4-LC model gives <code>A=₱35M, B=₱35M, C=₱35M, D=₱15M</code>). Silent direct-line omission triggers preterition, totally annulling the institution into intestacy (<code>₱30M</code> each).</li>
+        <li><strong>Bilateral Reconciliation (<span class="c-teal"><span class="art-ref" data-art="922" tabindex="0">Art. 922</span></span>):</strong> Automatically voids disinheritance without a new will, but demands offer + acceptance + <strong>actual restoration of relations</strong>.</li>
+        <li><strong>Representation (<span class="c-teal"><span class="art-ref" data-art="923" tabindex="0">Art. 923</span></span>):</strong> Disinherited heir's descendants inherit <strong>legitime ONLY</strong> (<code>D1=₱7.5M, D2=₱7.5M</code> in ₱120M model); disinherited parent holds <strong>NO usufruct or administration</strong>.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>No Conviction for Attempt on Life?</strong> Switch to <strong>maltreatment by deed (<span class="c-teal"><span class="art-ref" data-art="919" data-para="6" tabindex="0">Art. 919[6]</span></span>)</strong> for children, or <strong><span class="art-ref" data-art="FC-55" data-para="9" tabindex="0">FC Art. 55(9)</span></strong> via <span class="c-teal"><span class="art-ref" data-art="921" data-para="4" tabindex="0">Art. 921(4)</span></span> for spouses—but <span class="c-teal"><span class="art-ref" data-art="920" tabindex="0">Art. 920</span></span> has <strong>NO maltreatment ground</strong> against parents!</li>
+          <li><strong><span class="c-teal"><span class="art-ref" data-art="920" data-para="8" tabindex="0">Art. 920(8)</span></span> vs. <span class="c-teal"><span class="art-ref" data-art="920" data-para="2" tabindex="0">Art. 920(2)</span></span>:</strong> Without conviction, reconciliation between Mother and Father bars child from disinheriting (<span class="art-ref" data-art="920" data-para="8" tabindex="0">Art. 920[8]</span>). Once <strong>final conviction</strong> enters (<span class="art-ref" data-art="920" data-para="2" tabindex="0">Art. 920[2]</span>), Mother's forgiveness does NOT stop the child!</li>
+          <li><strong>Excuse Fails on Clemmency / Acquittal / Deathbed:</strong> Presidential pardon does NOT erase <span class="c-teal"><span class="art-ref" data-art="919" data-para="1" tabindex="0">Art. 919(1)</span></span>; reasonable-doubt acquittal is NOT a <span class="c-teal"><span class="art-ref" data-art="919" data-para="2" tabindex="0">Art. 919(2)</span></span> groundless accusation; and unilateral deathbed forgiveness fails <span class="c-teal"><span class="art-ref" data-art="922" tabindex="0">Art. 922</span></span>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-ii-banner">PART II: THE LAW ON LEGACIES AND DEVISES (CIVIL CODE, ARTS. 924–959)</div>
   <div class="macro-part-compass">
@@ -1569,6 +1741,84 @@ li > ul, li > ol {
     <li><strong>Reduction Priority (<span class="c-teal"><span class="art-ref" data-art="950" tabindex="0">Art. 950</span></span> <code>R-P-S-E-S-A</code>):</strong> <em>Facts:</em> No compulsory heirs, no donations <em>inter vivos</em>, Net ₱300k; gifts: ₱100k Nurse N (remuneratory), ₱100k Cousin C (support), ₱100k Nephew E (education), ₱100k Friend F. <strong>Answer:</strong> <strong>N=₱100k, C=₱100k, E=₱100k, F=₱0</strong> (<span class="c-teal"><span class="art-ref" data-art="950" tabindex="0">Art. 950</span></span> <code>R-P-S-E-S-A</code> exhausts ₱300k at tier 4).</li>
   </ol>
 
+  <div class="summary-capstone" id="summary-part-ii">
+    <div class="summary-hdr">
+      <h4>Part II Summary Brief Reviewer &mdash; Legacies &amp; Devises (<span class="art-ref" data-art="924-959" tabindex="0">Arts. 924–959</span>)</h4>
+      <span class="summary-pill">Sections V–VIII Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Codal Scope</div>
+      <ul>
+        <li><strong>Sec. V (<span class="c-teal"><span class="art-ref" data-art="924-928" tabindex="0">Arts. 924–928</span></span>):</strong> Legacy vs. devise vs. heirship (<span class="art-ref" data-art="782" tabindex="0">Art. 782</span>), sub-legacy ceilings &amp; FP ratios (<span class="art-ref" data-art="925-926" tabindex="0">Arts. 925–926</span>), co-heirs' solidary liability (<span class="art-ref" data-art="927" tabindex="0">Arts. 927</span>, <span class="art-ref" data-art="1087" tabindex="0">1087</span>), eviction warranties (<span class="art-ref" data-art="928" tabindex="0">Art. 928</span>), and estate-tax clearance (<span class="art-ref" data-art="NIRC-84" tabindex="0">TRAIN Law</span> / <span class="art-ref" data-art="NIRC-94" tabindex="0">Sec. 94</span>).</li>
+        <li><strong>Sec. VI (<span class="c-teal"><span class="art-ref" data-art="929-939" tabindex="0">Arts. 929–939</span></span>):</strong> Co-owned, stranger-owned (<em>legado de cosa ajena</em>), and beneficiary-owned gifts (<span class="art-ref" data-art="929-933" tabindex="0">Arts. 929–933</span>); clearing pledges/mortgages/PPSA (<span class="art-ref" data-art="934" tabindex="0">Art. 934</span>, <span class="art-ref" data-art="RA-11057-3J,RA-11057-4,RA-11057-66" tabindex="0">R.A. 11057</span>, <span class="art-ref" data-art="ROC-86-7" tabindex="0">Rule 86 Sec. 7</span>); credits, remission, creditor bonus &amp; prescribed debts (<span class="art-ref" data-art="935-939" tabindex="0">Arts. 935–939</span>).</li>
+        <li><strong>Sec. VII (<span class="c-teal"><span class="art-ref" data-art="940-950" tabindex="0">Arts. 940–950</span></span>):</strong> Alternative &amp; generic vs. specific gifts (<span class="art-ref" data-art="940-943" tabindex="0">940–943</span>), support/education/pensions/fruits (<span class="art-ref" data-art="944-949" tabindex="0">944–949</span>), and the <span class="art-ref" data-art="911" tabindex="0">Art. 911</span> vs. <span class="art-ref" data-art="950" tabindex="0">Art. 950</span> Reduction Battle (<span class="art-ref" data-art="ROC-88-1,ROC-88-2,ROC-88-3,ROC-88-6" tabindex="0">Rule 88</span>).</li>
+        <li><strong>Sec. VIII (<span class="c-teal"><span class="art-ref" data-art="951-959" tabindex="0">Arts. 951–959</span></span>):</strong> Delivery &amp; zero self-help (<span class="art-ref" data-art="951-953" tabindex="0">951–953</span>), onerous/dual elections (<span class="art-ref" data-art="954-955" tabindex="0">954–955</span>), merging (<span class="art-ref" data-art="956" tabindex="0">956</span>), implied revocation (<span class="art-ref" data-art="957" tabindex="0">957</span>), <em>falsa demonstratio</em> (<span class="art-ref" data-art="958" tabindex="0">958</span>), &amp; <em>"my relatives"</em> (<span class="art-ref" data-art="959" tabindex="0">959</span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Mnemonic</th>
+              <th>Source</th>
+              <th>Decoded Rule &amp; Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>R-P-S-E-S-A</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="950" tabindex="0">Art. 950</span></span> Waterfall (when legitimes are intact &amp; no donations exist): <strong>R</strong>emuneratory &rarr; <strong>P</strong>referential &rarr; <strong>S</strong>upport &rarr; <strong>E</strong>ducation &rarr; <strong>S</strong>pecific determinate thing in estate &rarr; <strong>A</strong>ll others (<em>pro rata</em>).</td>
+            </tr>
+            <tr>
+              <td><code>T-A-L</code> (+ <code>936</code>)</td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="957" tabindex="0">Art. 957</span></span> Implied Revocation: <strong>T</strong>ransformation (form <strong>AND</strong> denomination), <strong>A</strong>lienation (voluntary transfer), <strong>L</strong>oss (fortuitous total loss of specific item) + Judicial Suit (<span class="c-teal"><span class="art-ref" data-art="936" tabindex="0">Art. 936</span></span>).</td>
+            </tr>
+            <tr>
+              <td><code>I-S-R-A-I</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="956" tabindex="0">Art. 956</span></span> Vacancy Funnel: <strong>I</strong>nstitution &rarr; <strong>S</strong>ubstitution &rarr; <strong>R</strong>epresentation (<em>ZERO for voluntary gifts</em>) &rarr; <strong>A</strong>ccretion (<span class="art-ref" data-art="1015" tabindex="0">Art. 1015</span>) &rarr; <strong>I</strong>ntestacy (<span class="art-ref" data-art="960" data-para="2" tabindex="0">Art. 960[2]</span>).</td>
+            </tr>
+            <tr>
+              <td><code>P-D-I</code></td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td>3 Surviving Exceptions to <span class="c-teal"><span class="art-ref" data-art="957" data-para="2" tabindex="0">Art. 957(2)</span></span> Alienation: <strong>P</strong>acto de retro reacquisition &bull; <strong>D</strong>imagiba (vitiated-consent annulment) &bull; <strong>I</strong>nvoluntary execution sale repurchased (<em>Paras/Scaevola</em>).</td>
+            </tr>
+            <tr>
+              <td><code>G-O-S</code></td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td>Stranger-Thing Later Acquisition (<span class="c-teal"><span class="art-ref" data-art="933" data-para="2" tabindex="0">Art. 933[2]</span></span>): Beneficiary acquires <strong>G</strong>ratuitously &rarr; <strong>₱0</strong>; <strong>O</strong>nerously &rarr; <strong>Reimbursed</strong>; unless testator <strong>S</strong>old to stranger first (already revoked via <span class="art-ref" data-art="957" data-para="2" tabindex="0">Art. 957[2]</span>!).</td>
+            </tr>
+            <tr>
+              <td><code>M-P-C</code></td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="941" tabindex="0">Art. 941</span></span> Generic Rules: <strong>M</strong>ovable absent = Valid &bull; <strong>P</strong>rivate indeterminate realty absent = Void &bull; <strong>C</strong>hoice w/ executor = Medium quality (vs. beneficiary choice = any quality, <span class="art-ref" data-art="942" tabindex="0">Art. 942</span>).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Ceilings &amp; Ownership (<span class="c-teal"><span class="art-ref" data-art="925-933" tabindex="0">Arts. 925–933</span></span>):</strong> Compulsory heir burdened with a sub-legacy pays <strong>ONLY up to free-portion excess</strong> (co-heirs prorate by FP shares, e.g., 7:3 in <em>Paras</em>). Co-heirs in possession are <strong>solidarily liable</strong> for negligent loss (<span class="art-ref" data-art="927" tabindex="0">Art. 927</span>). Mistaken stranger-owned gift = <span class="c-rust"><strong><u>VOID</u></strong></span> (<span class="art-ref" data-art="930" tabindex="0">Art. 930</span>); known stranger gift = estate buys or pays <em>justo precio</em> (<span class="art-ref" data-art="931" tabindex="0">Art. 931</span>).</li>
+        <li><strong>Encumbrances &amp; Debts (<span class="c-teal"><span class="art-ref" data-art="934-939" tabindex="0">Arts. 934–939</span></span>):</strong> Estate clears <strong>pledges, mortgages &amp; PPSA interests (<span class="art-ref" data-art="RA-11057-3J,RA-11057-4,RA-11057-66" tabindex="0">R.A. 11057</span>)</strong>, while easements, usufructs &amp; registered leases <strong>pass with the land</strong>. Creditor-legatee keeps <strong>debt + gift bonus (<span class="art-ref" data-art="938" tabindex="0">Art. 938</span>)</strong>; paying a non-existent debt is void, whereas paying a <strong>prescribed debt is VALID</strong> as a natural obligation (<span class="art-ref" data-art="939" tabindex="0">Art. 939</span>).</li>
+        <li><strong><span class="c-teal"><span class="art-ref" data-art="911" tabindex="0">Art. 911</span></span> vs. <span class="c-teal"><span class="art-ref" data-art="950" tabindex="0">Art. 950</span></span> Switch:</strong> Reduce estate debts first under <span class="art-ref" data-art="ROC-88-1,ROC-88-2,ROC-88-3,ROC-88-6" tabindex="0">Rule 88</span>. If <strong>legitime is impaired OR collated <em>donations inter vivos</em> exist</strong> &rarr; <strong><span class="art-ref" data-art="911" tabindex="0">Art. 911</span> (<em>pro rata</em>)</strong> overrides <code>R-P-S-E-S-A</code>. Otherwise, <strong><span class="art-ref" data-art="950" tabindex="0">Art. 950</span></strong> governs top-to-bottom.</li>
+        <li><strong>Elections, Vesting &amp; Preservation (<span class="c-teal"><span class="art-ref" data-art="944-955" tabindex="0">Arts. 944–955</span>, <span class="art-ref" data-art="854" tabindex="0">854</span></span>):</strong> Education ends at <strong>majority OR completion of trade/profession, whichever occurs LATER</strong>; money legacies earn interest only from <strong>demand</strong> (<span class="c-burgundy"><em>Fuentes</em></span>). Onerous gift rule (<span class="art-ref" data-art="954-955" tabindex="0">954–955</span>) bars cherry-picking free over burdened gifts, EXCEPT a compulsory heir <strong>may keep legitime &amp; waive a legacy</strong> (<span class="art-ref" data-art="955" data-para="2" tabindex="0">Art. 955[2]</span>). Preterition preserves non-inofficious legacies (<span class="art-ref" data-art="854" tabindex="0">Art. 854</span>).</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Extrajudicial Demand Letter Does NOT Revoke Credits (<span class="c-teal"><span class="art-ref" data-art="936" tabindex="0">Art. 936</span></span>):</strong> Only a <strong>judicial suit</strong> revokes credit/remission legacies; returning a pledged ring extinguishes ONLY the security, leaving the debt collectible; generic remission (<span class="art-ref" data-art="937" tabindex="0">Art. 937</span>) covers pre-will loans only!</li>
+          <li><strong>Generic Land Void (<span class="art-ref" data-art="941" data-para="2" tabindex="0">Art. 941[2]</span>) &amp; Zero Eviction Warranty (<span class="c-teal"><span class="art-ref" data-art="928" tabindex="0">Art. 928</span></span>):</strong> Bequeathing <em>"2 hectares of land"</em> fails if no such land is in the estate (unlike generic cows); specific things and probate-court-ordered deliveries carry <strong>NO warranty against eviction</strong>.</li>
+          <li><strong>No Self-Help (<span class="art-ref" data-art="953" tabindex="0">Art. 953</span>) &amp; <em>"To My Relatives"</em> (<span class="c-teal"><span class="art-ref" data-art="959" tabindex="0">Art. 959</span></span>):</strong> Beneficiaries must await executor delivery and <span class="art-ref" data-art="NIRC-94" tabindex="0">NIRC Sec. 94</span> eCAR clearance. Bequests to <em>"my relatives"</em> stop strictly at the 5th consanguineous degree under <strong>pure proximity (NO representation, NO spouse/affines, NO line preference, NO 2:1 full/half blood)</strong>!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-iii-banner">PART III: INTESTATE SUCCESSION, SHARES, REPRESENTATION &amp; ART. 992</div>
   <div class="macro-part-compass">
@@ -1910,6 +2160,79 @@ li > ul, li > ol {
         <ul>
           <li><strong>Professor's Classroom Rule:</strong> Legitimate child represented ONLY by legitimate descendants (<span class="c-teal"><span class="art-ref" data-art="992" tabindex="0">Art. 992</span></span>).</li>
           <li><strong>Bar Update (<span class="c-burgundy"><em>Aquino</em></span> 2021):</strong> En Banc permits nonmarital grandchild to represent parent in the <strong>direct ascending/descending line</strong>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-capstone" id="summary-part-iii">
+    <div class="summary-hdr">
+      <h4>Part III Summary Brief Reviewer &mdash; Intestacy, Representation &amp; <span class="art-ref" data-art="992" tabindex="0">Art. 992</span> (<span class="art-ref" data-art="960-1014" tabindex="0">Arts. 960–1014</span>)</h4>
+      <span class="summary-pill">Sections IX–XI Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Codal Scope</div>
+      <ul>
+        <li><strong>Sec. IX (<span class="c-teal"><span class="art-ref" data-art="960-962" tabindex="0">Arts. 960–962</span>, <span class="art-ref" data-art="978-1014" tabindex="0">978–1014</span></span>):</strong> Intestate triggers (<span class="art-ref" data-art="960" tabindex="0">Art. 960</span>), preference of lines &amp; order beating degree proximity (<span class="art-ref" data-art="962" tabindex="0">Art. 962</span>), Regular vs. Irregular priority orders, and 5th-degree cutoff (<span class="art-ref" data-art="1009-1010" tabindex="0">Arts. 1009–1010</span>) to State (<span class="art-ref" data-art="1011-1014" tabindex="0">Arts. 1011–1014</span>).</li>
+        <li><strong>Sec. X (<span class="c-teal"><span class="art-ref" data-art="983" tabindex="0">983</span>, <span class="art-ref" data-art="996-1009" tabindex="0">996–1009</span></span>; <span class="art-ref" data-art="FC-176" tabindex="0">FC Art. 176</span>):</strong> Exact intestate concurrence table (esp. <span class="c-burgundy"><em>Santillon</em></span>), 2:1 double-share rule &amp; outer limit (<span class="art-ref" data-art="1006" tabindex="0">1006</span>, <span class="art-ref" data-art="1008-1009" tabindex="0">1008–1009</span>), LC+IC surplus theories, and mixed-succession deduction (<span class="art-ref" data-art="960" data-para="2" tabindex="0">Art. 960[2]</span>).</li>
+        <li><strong>Sec. XI (<span class="c-teal"><span class="art-ref" data-art="969-977" tabindex="0">969–977</span>, <span class="art-ref" data-art="990" tabindex="0">990</span>, <span class="art-ref" data-art="992" tabindex="0">992</span>, <span class="art-ref" data-art="777" tabindex="0">777</span></span>):</strong> Lineal limits of representation (<span class="art-ref" data-art="972" tabindex="0">972</span>, <span class="art-ref" data-art="975" tabindex="0">975</span>, <span class="c-burgundy"><em>De Los Santos</em></span>), universal repudiation <em>per capita</em> (<span class="art-ref" data-art="969" tabindex="0">Art. 969</span>), adoption (<span class="art-ref" data-art="RA-11642-41,RA-11642-43" tabindex="0">R.A. 11642</span>), and <span class="art-ref" data-art="992" tabindex="0">Art. 992</span> Iron Curtain vs. <span class="c-burgundy"><em>Aquino</em></span> (2021) &amp; <span class="c-burgundy"><em>Dela Merced</em></span>.</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Mnemonic</th>
+              <th>Source</th>
+              <th>Decoded Rule &amp; Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Order &gt; Proximity</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="962" tabindex="0">Art. 962</span></span> Priority Rule: Intestate rank overrides equal blood degree&mdash;Rank 5 <strong>Nephews</strong> (3rd deg.) exclude Rank 6 <strong>Uncles</strong> (3rd deg.).</td>
+            </tr>
+            <tr>
+              <td><code>1/2 &amp; Exhaustion Rule</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>Whenever LCs or LPs concur with irregular heirs in intestacy, the legitimate direct line keeps <strong>at least 1/2</strong> and 100% of the net estate is exhausted.</td>
+            </tr>
+            <tr>
+              <td><code>2-Way Repudiation</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><strong>Repudiation kills Representation (<span class="art-ref" data-art="977" tabindex="0">Art. 977</span>), NOT Downward Transmission (<span class="art-ref" data-art="976" tabindex="0">Art. 976</span>)</strong>; if ALL 1st-degree children repudiate, grandchildren take <strong><em>per capita</em> (<span class="art-ref" data-art="969" tabindex="0">Art. 969</span>)</strong>.</td>
+            </tr>
+            <tr>
+              <td><code>Ranks 2 &amp; 3 SWAP</code><br/>(<code>L-P-I-S-B-C-S</code>)</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td>Regular Order: <strong>L</strong>Cs &rarr; <strong>L</strong>Ps &rarr; <strong>I</strong>Cs &rarr; <strong>S</strong>pouse &rarr; <strong>B</strong>rothers/Nephews &rarr; <strong>C</strong>ollaterals (&le;5th deg.) &rarr; <strong>S</strong>tate. Irregular (Illegitimate Decedent) <strong>swaps Ranks 2 &amp; 3</strong> (ICs exclude Illegit Parents; stops at parents, then ends at Rank 6 State!).</td>
+            </tr>
+            <tr>
+              <td><code>D-A-C</code> Iron Curtain</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td>Post-<span class="c-burgundy"><em>Aquino</em></span> <span class="art-ref" data-art="992" tabindex="0">Art. 992</span> Split: <strong>D</strong>irect line (<span class="c-burgundy"><em>Aquino</em></span> 2021) opens representation from legitimate grandparent &bull; <strong>A</strong>rt. <span class="art-ref" data-art="777" tabindex="0">777</span> (<span class="c-burgundy"><em>Dela Merced</em></span>) bypasses <span class="art-ref" data-art="992" tabindex="0">992</span> if parent survived &bull; <strong>C</strong>ollateral line stays barred.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Cutoff Boundaries:</strong> Collateral succession ends at the <strong>5th degree</strong> (<em>anak ng pinsang buo</em>, <span class="art-ref" data-art="1010" tabindex="0">Art. 1010</span>); illegitimate decedent's ascending line stops strictly at <strong>illegitimate parents</strong> (<span class="art-ref" data-art="993" tabindex="0">Art. 993</span>).</li>
+        <li><strong>Double-Share 2:1 Ratio (<span class="c-teal"><span class="art-ref" data-art="1006" tabindex="0">Arts. 1006</span>, <span class="art-ref" data-art="1008-1009" tabindex="0">1008–1009</span></span>):</strong> Full-blood takes double half-blood ONLY for <strong>brothers, sisters, nephews &amp; nieces</strong> (and 3rd-deg <em>reservatarios</em> in <span class="c-burgundy"><em>Padura</em></span>); <strong>all other collaterals &le;5th deg. share equally (<em>per capita</em>)</strong>.</li>
+        <li><strong>Concurrence &amp; Mixed Succession (<span class="c-teal"><span class="art-ref" data-art="983" tabindex="0">983</span>, <span class="art-ref" data-art="960" data-para="2" tabindex="0">960[2]</span></span>):</strong> Professor's favored Concurrence Theory applies 2:1 across the entire net estate (<code>2 LCs + 2 ICs on ₱120M = ₱40M, ₱40M, ₱20M, ₱20M</code>). In mixed succession, compute on the <strong>FULL estate</strong> and charge legacies ONLY against heirs whose intestate share exceeds legitime.</li>
+        <li><strong>Representation Scope (<span class="c-teal"><span class="art-ref" data-art="972" tabindex="0">972</span>, <span class="art-ref" data-art="975" tabindex="0">975</span>, <span class="art-ref" data-art="923" tabindex="0">923</span></span>):</strong> Descending = always (testate = <strong>legitime ONLY</strong>); Ascending = NEVER; Collateral = nephews/nieces ONLY when concurring with &ge;1 surviving uncle/aunt (<em>per stirpes</em>; alone = <em>per capita</em>; grandnieces = ₱0 per <span class="c-burgundy"><em>De Los Santos</em></span>).</li>
+        <li><strong>Modern Updates:</strong> <span class="c-teal"><span class="art-ref" data-art="RA-11642-41,RA-11642-43" tabindex="0">R.A. 11642 (Secs. 41 &amp; 43)</span></span> extends legitimate filiation to adopter's parents, siblings &amp; descendants; <span class="c-burgundy"><em>Aquino v. Aquino</em></span> (2021) permits nonmarital grandchild representation in the direct line.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong><em>Santillon</em> 1-Child Intestacy &amp; Top-Line Legacy Traps:</strong> 1 LC + Spouse split <strong>1/2 &ndash; 1/2</strong> in intestacy (<span class="art-ref" data-art="996" tabindex="0">Art. 996</span>, not 1/2 &ndash; 1/4!). And never deduct mixed-will legacies before computing compulsory legitimes!</li>
+          <li><strong>Check Death Sequence First (<em>Dela Merced</em> <span class="c-teal"><span class="art-ref" data-art="777" tabindex="0">Art. 777</span></span> Escape):</strong> If Parent Francisco outlived Aunt Evarista before dying, <span class="art-ref" data-art="992" tabindex="0">Art. 992</span> never triggers&mdash;Francisco acquired his share at Evarista's death and his illegitimate child inherits directly from him (<span class="art-ref" data-art="988" tabindex="0">Art. 988</span>).</li>
+          <li><strong>All Children Repudiate = <em>Per Capita</em> (<span class="art-ref" data-art="969" tabindex="0">Art. 969</span>) &amp; Bar Term Alert:</strong> If ALL first-degree children repudiate, grandchildren take equally <strong>per capita</strong> (₱300M / 5 = ₱60M each), NOT <em>per stirpes</em>! Always write <strong>"illegitimate children"</strong> on Philippine Bar answers.</li>
         </ul>
       </div>
     </div>
@@ -2379,6 +2702,79 @@ li > ul, li > ol {
     </div>
   </div>
 
+  <div class="summary-capstone" id="summary-part-iv">
+    <div class="summary-hdr">
+      <h4>Part IV Summary Brief Reviewer &mdash; Accretion, Vacancies, Capacity &amp; Choice (<span class="art-ref" data-art="1015-1057" tabindex="0">Arts. 1015–1057</span>)</h4>
+      <span class="summary-pill">Sections XII–XV Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Codal Scope</div>
+      <ul>
+        <li><strong>Sec. XII (<span class="c-teal"><span class="art-ref" data-art="1015-1021" tabindex="0">Arts. 1015–1021</span></span>):</strong> Right of accretion (<code>U-P-R-A</code>), <em>pro indiviso</em> shares vs. earmarking (<span class="art-ref" data-art="1017" tabindex="0">Art. 1017</span>), intestate repudiation accretion (<span class="art-ref" data-art="1018" tabindex="0">Art. 1018</span>), and legitime immunity (<span class="art-ref" data-art="1021" tabindex="0">Art. 1021</span>).</li>
+        <li><strong>Sec. XIII (<span class="c-teal"><span class="art-ref" data-art="872" tabindex="0">872</span>, <span class="art-ref" data-art="904" tabindex="0">904</span>, <span class="art-ref" data-art="977" tabindex="0">977</span>, <span class="art-ref" data-art="1016-1021" tabindex="0">1016–1021</span></span>):</strong> Master 3-Column Vacancy Matrix (Legitime vs. Free Portion vs. Intestate) &amp; the Settled <strong>₱120M Master Problem (<code>50M / 50M / 10M / 10M / 0</code>)</strong>.</li>
+        <li><strong>Sec. XIV (<span class="c-teal"><span class="art-ref" data-art="1024-1039" tabindex="0">Arts. 1024–1039</span>, <span class="art-ref" data-art="40-43" tabindex="0">40–43</span></span>):</strong> Intrauterine life thresholds (<span class="art-ref" data-art="41" tabindex="0">Art. 41</span>), simultaneous death (<span class="art-ref" data-art="43" tabindex="0">Art. 43</span>), <code>P-R-G-W-M</code> undue influence (<span class="art-ref" data-art="1027" tabindex="0">Art. 1027</span>), paramour bar &amp; paradox (<span class="art-ref" data-art="1028" tabindex="0">1028</span>, <span class="art-ref" data-art="1032" data-para="5" tabindex="0">1032[5]</span>), <span class="art-ref" data-art="1033" tabindex="0">Art. 1033</span> pardon vs. <span class="art-ref" data-art="922" tabindex="0">922</span> reconciliation, and <span class="art-ref" data-art="1039" tabindex="0">Art. 1039</span> <code>O-A-I-C</code>.</li>
+        <li><strong>Sec. XV (<span class="c-teal"><span class="art-ref" data-art="1041-1057" tabindex="0">Arts. 1041–1057</span>, <span class="art-ref" data-art="390-392" tabindex="0">390–392</span></span>):</strong> <code>V-R-I</code> choice rules, presumptive death (<span class="art-ref" data-art="390-392" tabindex="0">390–392</span>), minors/juridicals/public establishments (<span class="art-ref" data-art="1044-1048" tabindex="0">1044–1048</span>, <span class="c-burgundy"><em>Guy</em></span>), <span class="art-ref" data-art="1050" tabindex="0">1050</span> selective waivers, <span class="art-ref" data-art="1051" tabindex="0">1051</span> form, <span class="art-ref" data-art="1052" tabindex="0">1052</span> creditors, <span class="art-ref" data-art="1053" tabindex="0">1053</span> transmission, <span class="art-ref" data-art="1055" tabindex="0">1055</span> dual roles, &amp; <span class="art-ref" data-art="1057" tabindex="0">1057</span> 30-day rule.</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Mnemonic</th>
+              <th>Source</th>
+              <th>Decoded Rule &amp; Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>U-P-R-A</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>Succession Accretion (<span class="art-ref" data-art="1015-1021" tabindex="0">Arts. 1015–1021</span>): <strong>U</strong>nity of object &bull; <strong>P</strong>lurality <em>pro indiviso</em> (NO earmarking) &bull; <strong>R</strong>IP vacancy (+ failed condition / <span class="art-ref" data-art="845" tabindex="0">Art. 845</span>) &bull; <strong>A</strong>cceptance &amp; no substitute.</td>
+            </tr>
+            <tr>
+              <td><code>P-R-G-W-M</code> (+ 3 Shields)</td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td><span class="c-teal"><span class="art-ref" data-art="1027" tabindex="0">Art. 1027</span></span> Sickbed Bar: <strong>P</strong>riest/Minister &bull; 4th-deg <strong>R</strong>elatives/Church &bull; <strong>G</strong>uardian &bull; <strong>W</strong>itness + kin (exc. 3 others, <span class="art-ref" data-art="823" tabindex="0">Art. 823</span>) &bull; <strong>M</strong>edical/Druggist. Shields: <strong>FP ONLY</strong>, never Intestacy/Legitime, healthy prior will VALID.</td>
+            </tr>
+            <tr>
+              <td><code>O-A-I-C</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>Nationality Principle (<span class="art-ref" data-art="1039" tabindex="0">Art. 1039</span> &amp; <span class="art-ref" data-art="16" data-para="2" tabindex="0">Art. 16[2]</span>): <strong>O</strong>rder, <strong>A</strong>mount, <strong>I</strong>ntrinsic validity, and <strong>C</strong>apacity obey decedent's national law.</td>
+            </tr>
+            <tr>
+              <td><code>V-R-I</code> &amp; <code>Death+Right</code></td>
+              <td><span class="tag-mem-lec">Lecture</span></td>
+              <td>Acceptance/Repudiation (<span class="art-ref" data-art="1041-1043" tabindex="0">1041–1043</span>, <span class="art-ref" data-art="1056" tabindex="0">1056</span>): <strong>V</strong>oluntary, <strong>R</strong>etroactive to death, <strong>I</strong>rrevocable (exc. vitiated consent/unknown will); needs certainty of death AND right.</td>
+            </tr>
+            <tr>
+              <td><code>SUB &rarr; REP &rarr; ACC &rarr; IS</code> (3 Buckets)</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+              <td>Never merge columns! Legitime (NO SUB: REP &rarr; Own Right/IS); Free Portion (NO REP: SUB &rarr; ACC &rarr; IS); Intestate (Predecease = REP &rarr; IS; Repudiation = ACC &rarr; <span class="art-ref" data-art="969" tabindex="0">969</span> <em>per capita</em>).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Settled ₱120M Master Answer (<code>A=₱50M, B=₱50M, E=₱10M, F=₱10M, G=₱0</code>):</strong> C's &amp; D's ₱15M FPs accrue equally to A &amp; B (<code>+₱15M</code> each, <span class="art-ref" data-art="1016" tabindex="0">Art. 1016</span>). G gets ₱0 (<span class="art-ref" data-art="977" tabindex="0">Art. 977</span>). Because repudiated legitime never accrues (<span class="art-ref" data-art="1021" data-para="2" tabindex="0">Art. 1021[2]</span>), the ₱60M legitime redistributes <strong>3 ways <em>iure proprio</em></strong> to <strong>A (<code>₱20M</code>), B (<code>₱20M</code>), and C's branch E+F (<code>₱20M &rarr; ₱10M</code> each)</strong>. Pure Intestate = <code>45M / 45M / 15M / 15M / 0</code>.</li>
+        <li><strong>Birth &amp; Presumptive Death Thresholds (<span class="c-teal"><span class="art-ref" data-art="41" tabindex="0">Arts. 41</span>, <span class="art-ref" data-art="43" tabindex="0">43</span>, <span class="art-ref" data-art="390-391" tabindex="0">390–391</span></span>):</strong> &ge;7 mos <em>intrauterine life</em> = alive at cord cut (even 5 mins); &lt;7 mos = survive <strong>24 full hours</strong>. Presumptive death: <strong>10 yrs / 5 yrs (&gt;75) / 4 yrs (danger)</strong>&mdash;NEVER 7 years! <span class="art-ref" data-art="43" tabindex="0">Art. 43</span> simultaneous death still permits representation.</li>
+        <li><strong>Capacity vs. Unworthiness (<span class="c-teal"><span class="art-ref" data-art="1027" tabindex="0">1027</span> vs. <span class="art-ref" data-art="1032-1035" tabindex="0">1032–1035</span></span>):</strong> <span class="art-ref" data-art="1027" tabindex="0">Art. 1027</span> strikes ONLY testate free portion; <span class="art-ref" data-art="1032" tabindex="0">Art. 1032</span> strips <strong>testate, intestate AND legitime</strong> (subject to <span class="art-ref" data-art="1035" tabindex="0">Art. 1035</span> representation). General prayers (<span class="art-ref" data-art="1029" tabindex="0">Art. 1029</span>) split <strong>50% Church / 50% State</strong>.</li>
+        <li><strong>Formalities, Waivers &amp; Creditors (<span class="c-teal"><span class="art-ref" data-art="1044-1057" tabindex="0">Arts. 1044–1057</span></span>):</strong> Repudiation requires <span class="art-ref" data-art="1051" tabindex="0">Art. 1051</span> public/authentic instrument or court petition (+ judicial approval for minors per <span class="c-burgundy"><em>Guy</em></span>). Public establishments need <strong>government approval</strong> even to accept (<span class="art-ref" data-art="1046" tabindex="0">Art. 1046</span>). Creditors under <span class="art-ref" data-art="1052" tabindex="0">Art. 1052</span> collect only up to the debt (<strong>renouncer = ₱0 excess</strong>).</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Earmarking Kills Accretion (<span class="c-teal"><span class="art-ref" data-art="1017" tabindex="0">Art. 1017</span></span>) &amp; <span class="c-teal"><span class="art-ref" data-art="1032" data-para="5" tabindex="0">Art. 1032(5)</span></span> Paramour Paradox:</strong> Giving distinct bank accounts or parcels destroys unity &rarr; intestacy (<span class="art-ref" data-art="960" data-para="2" tabindex="0">Art. 960[2]</span>). Meanwhile, <span class="art-ref" data-art="1032" data-para="5" tabindex="0">Art. 1032(5)</span> disqualifies ONLY the convicted <strong>paramour</strong>, letting the unfaithful spouse inherit in intestacy unless disinherited by will!</li>
+          <li><strong>Pardon (<span class="c-teal"><span class="art-ref" data-art="1033" tabindex="0">Art. 1033</span></span>) vs. Reconciliation (<span class="c-teal"><span class="art-ref" data-art="922" tabindex="0">Art. 922</span></span>) &amp; Conditional Capacity (<span class="c-teal"><span class="art-ref" data-art="1034" tabindex="0">Art. 1034</span></span>):</strong> Informal hugs fail to cure <span class="art-ref" data-art="1032" tabindex="0">Art. 1032</span> unworthiness (needs written condonation or testamentary pardon!). Conditional heirs need capacity BOTH at death AND at fulfillment of condition!</li>
+          <li><strong>Selective Waiver (<span class="art-ref" data-art="1050" tabindex="0">Art. 1050</span>), 30-Day Clock (<span class="art-ref" data-art="1057" tabindex="0">Art. 1057</span>) &amp; Dual Role (<span class="art-ref" data-art="1055" tabindex="0">Art. 1055</span>):</strong> Selective waivers trigger deemed acceptance; the 30-day rule starts at the <strong>Court Order of Distribution</strong> (never from death); and waiving a testamentary heirship forfeits intestate heirship too (<span class="art-ref" data-art="1055" tabindex="0">Art. 1055</span>, unlike legacy vs. legitime under <span class="art-ref" data-art="955" data-para="2" tabindex="0">Art. 955[2]</span>)!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ======================================================================= -->
   <div class="part-banner" id="part-v-banner">PART V: MNEMONIC BANK, CHECKLIST, 24 BAR DRILLS &amp; 25 RAPID TRAPS</div>
   <div class="macro-part-compass">
@@ -2415,6 +2811,16 @@ li > ul, li > ol {
         <div class="ui-sub">Voluntary, Retroactive, Irrevocable &bull; Order, Amount, Intrinsic validity, Capacity</div>
       </div>
     </div>
+  </div>
+
+  <div class="cue-banner" id="added-study-aids-bank" style="background:#F0FDFA; border-color:#5EEAD4; border-left-color:#0F766E; color:#134E4A;">
+    <strong><span class="tag-mem-add">Added Study Aids</span> Quick-Recall Triggers Synced From Parts I–IV Summary Capstones:</strong>
+    <code>920 = NO-MD</code> (Parents omit Maltreatment &amp; Dishonorable life) &bull;
+    <code>P-D-I</code> (<span class="c-teal"><span class="art-ref" data-art="957" data-para="2" tabindex="0">Art. 957[2]</span></span> exceptions: Pacto de retro, <em>Dimagiba</em> vitiated consent, Involuntary sale reacquired) &bull;
+    <code>G-O-S</code> (<span class="c-teal"><span class="art-ref" data-art="933" data-para="2" tabindex="0">Art. 933[2]</span></span> stranger acquisition: Gratuitous=₱0, Onerous=Reimburse, Sold first=Revoked) &bull;
+    <code>M-P-C</code> (<span class="c-teal"><span class="art-ref" data-art="941" tabindex="0">Art. 941</span></span>: Movable valid, Private realty void if absent, Choice=Medium) &bull;
+    <code>Ranks 2&amp;3 SWAP</code> (Irregular order) &bull;
+    <code>D-A-C</code> (Post-<em>Aquino</em> <span class="c-teal"><span class="art-ref" data-art="992" tabindex="0">Art. 992</span></span>: Direct open, <span class="c-teal"><span class="art-ref" data-art="777" tabindex="0">Art. 777</span></span> escape, Collateral barred).
   </div>
 
   <div class="cue-banner">
