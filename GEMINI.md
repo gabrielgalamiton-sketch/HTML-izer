@@ -26,7 +26,7 @@ Transform legal texts, bar review topics, statutory provisions, and raw study no
      - If the source notes contain raw ASCII art, bracketed text diagrams (e.g., `[A] ---> [B]`), keyboard flowcharts, or text wireframes, **DO NOT reproduce raw ASCII/text boxes**.
      - **Linear ASCII boxes (≤ 4 steps)** → Convert into a pure HTML `.ui-workflow` card.
      - **Complex branching decision trees, spatial relationships, or timelines** → Illustrate with a custom **Nano Banana Pro 2** image via `image-generator`.
-   - **Permitted Visual & Structural Additions:** Heading anchor `id`s, Sticky Navigation Bar, Macro Roadmap & Context Compass cards, End-of-Part Summary Brief Reviewer capstones (`.summary-capstone`), pure HTML UI Summary Cards / Stacked Workflow Boxes / Statutory Tables, and embedded Nano Banana Pro 2 `.img-figure` visual cards.
+   - **Permitted Visual & Structural Additions:** Heading anchor `id`s, Sticky Navigation Bar (with `Highlights: ON/OFF` toggle), selective high-yield soft-yellow `<mark class="hl">` highlights, Macro Roadmap & Context Compass cards, End-of-Part Summary Brief Reviewer capstones (`.summary-capstone`), pure HTML UI Summary Cards / Stacked Workflow Boxes / Statutory Tables, and embedded Nano Banana Pro 2 `.img-figure` visual cards.
 
 2. **MODE B: SYNTHESIS & NOTE CREATION (When the user asks you to "create notes," "summarize," or "synthesize a topic")**
    - Generate comprehensive, bar-exam caliber legal notes based on Philippine law and jurisprudence across any requested law subject (e.g., Remedial Law / Criminal Procedure, Political Law / Local Government, Commercial Law, Civil Law, Criminal Law, Labor Law, Taxation, Ethics).
@@ -44,7 +44,7 @@ Every document must begin with a sleek, sticky navigation bar pinned to the top 
    - Assign a clean, unique kebab-case `id` attribute to every `<h3>` major topic (e.g., `<h3 id="elements-of-the-offense">`), key `<h4>` subsections, and each End-of-Part Summary Brief Reviewer (`<div class="summary-capstone" id="summary-part-i">`).
    - Mirror each heading into an `<option>` element within the navigation `<select>` dropdown.
    - Maintain hierarchy in the dropdown (indent subsections with `&nbsp;&nbsp;↳ ` and End-of-Part summaries with `&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part I Summary Brief Reviewer`).
-3. **Markup Pattern:**
+3. **Markup Pattern (with Highlights Toggle):**
 ```html
 <nav class="sticky-nav">
   <div class="nav-content">
@@ -54,6 +54,7 @@ Every document must begin with a sleek, sticky navigation bar pinned to the top 
       <option value="#topic-slug-1">I. Major Topic Title</option>
       <option value="#subtopic-slug-1">&nbsp;&nbsp;↳ Subsection / Element</option>
     </select>
+    <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
   </div>
 </nav>
 ```
@@ -271,6 +272,7 @@ Apply color systematically using this legal theme:
 - Case Law, Jurisprudence, Scholars & Citations: Crimson / Burgundy (`#991B1B`) -> class `c-burgundy`
 - Prohibitions, Fatal Omissions, Voids & Strict Exceptions: Burnt Amber / Rust (`#C2410C`) -> class `c-rust`
 - Narrative Body Text: Neutral Charcoal (`#1F2937`)
+- **Selective High-Yield Highlights (`<mark class="hl">`):** Soft Warm Yellow (`#FEF9C3` background with subtle `#FDE047` bottom accent) applied selectively (~15–25% of narrative prose) to core definitions, operative legal tests, numeric thresholds/deadlines, decisive case holdings, and crucial exceptions so readers can scan answers quickly without losing text-color contrast. Pair with the `.nav-hl-toggle` button (`body.hl-off`) for self-testing and `print-color-adjust: exact` for PDF export.
 
 ---
 
@@ -344,6 +346,39 @@ body {
   border: 1px solid #CBD5E1;
   background-color: #FFFFFF;
   color: #1F2937;
+}
+.nav-hl-toggle {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 4px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-hl-toggle:hover { background: rgba(255, 255, 255, 0.28); }
+.nav-hl-toggle[aria-pressed="false"] {
+  background: transparent;
+  color: #CBD5E1;
+}
+
+/* Selective High-Yield Soft-Yellow Highlighter */
+mark.hl {
+  background-color: #FEF9C3;
+  color: inherit;
+  padding: 0.04rem 0.22rem;
+  border-radius: 3px;
+  border-bottom: 1.5px solid #FDE047;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+body.hl-off mark.hl {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
 }
 
 /* Color Classes */
@@ -654,6 +689,10 @@ blockquote {
 @media print {
   .sticky-nav { display: none !important; }
   body { background: #FFFFFF; }
+  mark.hl {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
   .document-container {
     box-shadow: none;
     margin: 0;
