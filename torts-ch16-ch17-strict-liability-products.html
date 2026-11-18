@@ -56,6 +56,39 @@ body {
   background-color: #FFFFFF;
   color: #1F2937;
 }
+.nav-hl-toggle {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 4px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-hl-toggle:hover { background: rgba(255, 255, 255, 0.28); }
+.nav-hl-toggle[aria-pressed="false"] {
+  background: transparent;
+  color: #CBD5E1;
+}
+
+/* Selective High-Yield Soft-Yellow Highlighter */
+mark.hl {
+  background-color: #FEF9C3;
+  color: inherit;
+  padding: 0.04rem 0.22rem;
+  border-radius: 3px;
+  border-bottom: 1.5px solid #FDE047;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+body.hl-off mark.hl {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
 
 /* Typographical Hierarchy */
 h1 {
@@ -618,6 +651,10 @@ blockquote {
   .art-ref { border-bottom: none; }
   .quiz-actions { display: none !important; }
   body { background: #FFFFFF; }
+  mark.hl {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
   .document-container {
     box-shadow: none;
     margin: 0;
@@ -679,6 +716,7 @@ blockquote {
       <option value="#ch17-part-15">&nbsp;&nbsp;Part 15 &mdash; Memory Aids and Bar Examination Review</option>
       <option value="#ch17-part-16">&nbsp;&nbsp;Part 16 &mdash; Knowledge Confirmation (Interactive Quiz)</option>
     </select>
+    <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
   </div>
 </nav>
 
@@ -722,11 +760,11 @@ blockquote {
     <li>A factory creates excessive noise and smoke that substantially interfere with neighboring households, even though the factory operates with reasonable care.</li>
   </ol>
   <p>In ordinary quasi-delicts, we usually ask: <strong>Was the defendant negligent?</strong></p>
-  <p>In strict liability, the question changes: <strong>Did the event occur under circumstances in which the law imposes liability even without proof of negligence?</strong></p>
+  <p>In strict liability, the question changes: <mark class="hl"><strong>Did the event occur under circumstances in which the law imposes liability even without proof of negligence?</strong></mark></p>
   <p>That distinction is the foundation of this chapter.</p>
 
   <h4 id="ch16-i-a" class="c-navy">A. Definition</h4>
-  <p><span class="c-green"><strong><u>Strict liability</u></strong></span> is liability imposed by law independently of fault, negligence, or intent, once the legally required circumstances are established.</p>
+  <p><span class="c-green"><strong><u><mark class="hl">Strict liability</mark></u></strong></span> is <mark class="hl">liability imposed by law independently of fault, negligence, or intent, once the legally required circumstances are established</mark>.</p>
   <p>The chapter adopts the definition from <em>Black&rsquo;s Law Dictionary</em>, emphasizing that liability may arise irrespective of the care exercised or the actor&rsquo;s state of mind.</p>
   <p><strong>The fundamental distinction:</strong></p>
   <div class="table-scroll">
@@ -745,7 +783,7 @@ blockquote {
       </tbody>
     </table>
   </div>
-  <blockquote><strong>Remember:</strong> Strict liability does not mean automatic liability in every situation. The applicable law still determines causation, coverage, and possible defenses.</blockquote>
+  <blockquote><strong>Remember:</strong> <mark class="hl">Strict liability does not mean automatic liability in every situation.</mark> The applicable law still determines causation, coverage, and possible defenses.</blockquote>
 
   <h4 id="ch16-i-b" class="c-navy">B. Strict liability versus absolute liability</h4>
   <p>Our textbook identifies two possible formulations:</p>
@@ -826,18 +864,18 @@ blockquote {
   <p><strong>Does this automatically free Pedro from liability?</strong></p>
   <p>No.</p>
   <p>Under <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>, the obligation does not depend on whether Pedro was negligent in caring for the animal.</p>
-  <p>The provision expressly imposes liability <span class="c-green"><strong><u>although the animal may escape or be lost</u></strong></span>.</p>
+  <p>The provision expressly imposes liability <span class="c-green"><strong><u><mark class="hl">although the animal may escape or be lost</mark></u></strong></span>.</p>
   <p>The law places responsibility on the person possessing or making use of the animal because that person exercises control over it and ordinarily benefits from its possession or use.</p>
 
   <h4 id="ch16-iii-c" class="c-navy">C. Requisites of liability</h4>
   <p>To invoke <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>, the following must generally be established:</p>
   <ol>
     <li>There is an animal that causes damage.</li>
-    <li>The defendant is the <strong>possessor of the animal or whoever makes use of it</strong>.</li>
+    <li>The defendant is the <mark class="hl"><strong>possessor of the animal or whoever makes use of it</strong></mark>.</li>
     <li>The animal&rsquo;s act caused the damage suffered by the claimant.</li>
     <li>Neither of the statutory grounds for cessation of responsibility applies.</li>
   </ol>
-  <p>Notice that <span class="c-green"><strong><u>negligence is not included as an indispensable element</u></strong></span>.</p>
+  <p>Notice that <span class="c-green"><strong><u><mark class="hl">negligence is not included as an indispensable element</mark></u></strong></span>.</p>
 
   <h4 id="ch16-iii-d" class="c-navy">D. Who is liable: Owner or possessor?</h4>
   <p>This distinction is especially important for recitations.</p>
@@ -870,21 +908,21 @@ blockquote {
     </table>
   </div>
   <p><strong>Example:</strong> Maria owns a dog but temporarily entrusts it to Juan, who keeps and uses the animal on his farm. If it injures someone while under Juan&rsquo;s control, <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span> may apply to Juan despite his not being the owner.</p>
-  <p>The decisive consideration is the legally relevant <strong>possession or use</strong>, not simply whose name appears on an ownership record.</p>
+  <p>The decisive consideration is the legally relevant <mark class="hl"><strong>possession or use</strong>, not simply whose name appears on an ownership record</mark>.</p>
 
   <h4 id="ch16-iii-e" class="c-navy">E. The only two statutory grounds for cessation of liability</h4>
-  <p><strong>1. Force majeure</strong></p>
+  <p><strong>1. <mark class="hl">Force majeure</mark></strong></p>
   <p>Damage caused by an extraordinary event meeting the legal requirements of force majeure, rather than merely the animal escaping despite precautions.</p>
-  <p><strong>2. Fault of the injured person</strong></p>
+  <p><strong>2. <mark class="hl">Fault of the injured person</mark></strong></p>
   <p>For example, a person deliberately provokes a properly confined animal, and that person&rsquo;s conduct causes the injury.</p>
   <p>The textbook discusses Manresa&rsquo;s explanation that <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span> imposes liability even where another person&rsquo;s fault contributes to the occurrence, unless the applicable statutory exception is established.</p>
-  <p>Thus, <span class="c-rust"><strong><u>the intervention of a third person does not necessarily exonerate the possessor</u></strong></span>. The defendant cannot merely point to another person&rsquo;s negligence and assume Article 2183 no longer applies.</p>
+  <p>Thus, <span class="c-rust"><strong><u><mark class="hl">the intervention of a third person does not necessarily exonerate the possessor</mark></u></strong></span>. The defendant cannot merely point to another person&rsquo;s negligence and assume Article 2183 no longer applies.</p>
 
   <h4 id="ch16-iii-f" class="c-navy">F. Cases discussed in the textbook</h4>
   <p><strong>1. <span class="c-burgundy"><em>Vestil v. Intermediate Appellate Court</em></span></strong><br>
   <span class="c-teal">G.R. No. 74431</span>, November 6, 1989</p>
   <p>The textbook discusses a child who died following a dog-bite incident while playing at a residence in Cebu.</p>
-  <p>The important doctrine is that liability can attach to a <strong>possessor</strong> of an animal even if that person is not its owner.</p>
+  <p>The important doctrine is that <mark class="hl">liability can attach to a <strong>possessor</strong> of an animal even if that person is not its owner</mark>.</p>
   <p><strong>2. <span class="c-burgundy"><em>Milagros Ibarado v. Pelagia Nava</em></span></strong><br>
   <span class="c-teal">CA-G.R. No. 22887-R</span>, January 8, 1963</p>
   <p>The textbook discusses responsibility arising from a dog kept at the premises with the knowledge and consent of a person exercising control over the property.</p>
@@ -893,7 +931,7 @@ blockquote {
   <h4 id="ch16-iii-g" class="c-navy">G. Quick application</h4>
   <p><strong>Hypothetical:</strong> A dog escapes from a properly fenced compound after an ordinary gust of wind opens a gate. It bites a passerby. The possessor proves that he had regularly inspected the enclosure.</p>
   <p>Would the mere proof of reasonable care absolve the possessor?</p>
-  <p><span class="c-rust"><strong><u>No.</u></strong></span> Due diligence by itself is not one of the statutory grounds for cessation of liability under <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>. Whether the wind amounted to legally sufficient force majeure requires a separate inquiry.</p>
+  <p><span class="c-rust"><strong><u>No.</u></strong></span> <mark class="hl">Due diligence by itself is not one of the statutory grounds for cessation of liability under <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>.</mark> Whether the wind amounted to legally sufficient force majeure requires a separate inquiry.</p>
 
   <hr>
 
@@ -935,15 +973,15 @@ blockquote {
   <h4 id="ch16-iv-d" class="c-navy">D. Does the building owner have to be liable?</h4>
   <p>Not necessarily.</p>
   <p>Suppose a family rents an apartment owned by a landlord who lives elsewhere.</p>
-  <p>The landlord is not automatically the person liable under <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> merely because the landlord owns the building.</p>
-  <p>The law specifically identifies the <strong>head of the family living in the building or part thereof</strong>.</p>
+  <p><mark class="hl">The landlord is not automatically the person liable under <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> merely because the landlord owns the building.</mark></p>
+  <p>The law specifically identifies the <mark class="hl"><strong>head of the family living in the building or part thereof</strong></mark>.</p>
   <p>This is different from <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>, which concerns the possessor or user of an animal.</p>
 
   <h4 id="ch16-iv-e" class="c-navy">E. Case: <span class="c-burgundy"><em>Dingcong v. Kanaan</em></span></h4>
   <p><span class="c-teal">72 Phil. 14</span></p>
   <p>The textbook discusses a co-lessee who was held responsible after an object fell from an upper floor and caused damage.</p>
-  <p>The important lesson is that liability is not necessarily defeated by showing that somebody else actually caused the object to fall.</p>
-  <p>The textbook also contrasts <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> with <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>: Article 2193 contains <span class="c-rust"><strong><u>no express force majeure exemption</u></strong></span>. The author nevertheless acknowledges an opinion that force majeure may excuse liability in truly extraordinary circumstances.</p>
+  <p>The important lesson is that <mark class="hl">liability is not necessarily defeated by showing that somebody else actually caused the object to fall</mark>.</p>
+  <p>The textbook also contrasts <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> with <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>: Article 2193 contains <span class="c-rust"><strong><u><mark class="hl">no express force majeure exemption</mark></u></strong></span>. The author nevertheless acknowledges an opinion that force majeure may excuse liability in truly extraordinary circumstances.</p>
   <p>For recitation, distinguish what the provision expressly says from the author&rsquo;s discussion of possible exceptional defenses.</p>
 
   <h4 id="ch16-iv-f" class="c-navy">F. Comparison: Animals versus Falling Objects</h4>
@@ -1011,8 +1049,8 @@ blockquote {
   <p>The textbook discusses differing judicial approaches to whether Article 1711 survived the later enactment of the Labor Code.</p>
 
   <h4 id="ch16-v-b" class="c-navy">B. Important current-law clarification</h4>
-  <blockquote><strong>Controlling Supreme Court doctrine:</strong> In <span class="c-burgundy"><strong><em>Oceanmarine Resources Corporation v. Nedic</em></strong></span> (<span class="c-teal">G.R. No. 236263</span>, July 19, 2022), the Supreme Court, sitting En Banc, declared <span class="c-rust"><strong><u>Article 1711 impliedly repealed by Title II, Book IV of the Labor Code</u></strong></span>, subject to the decision&rsquo;s prospective-application guidelines.</blockquote>
-  <p>This means that we must not treat Article 1711 as an independently operative basis for new work-injury compensation claims today.</p>
+  <blockquote><strong>Controlling Supreme Court doctrine:</strong> In <span class="c-burgundy"><strong><em>Oceanmarine Resources Corporation v. Nedic</em></strong></span> (<span class="c-teal">G.R. No. 236263</span>, July 19, 2022), the Supreme Court, sitting En Banc, declared <span class="c-rust"><strong><u><mark class="hl">Article 1711 impliedly repealed by Title II, Book IV of the Labor Code</mark></u></strong></span>, subject to the decision&rsquo;s prospective-application guidelines.</blockquote>
+  <p>This means that <mark class="hl">we must not treat Article 1711 as an independently operative basis for new work-injury compensation claims today</mark>.</p>
 
   <h4 id="ch16-v-c" class="c-navy">C. What remedies remain available?</h4>
   <div class="table-scroll">
@@ -1197,13 +1235,13 @@ blockquote {
   </div>
   <p><strong>Important:</strong> A public nuisance can also cause particularized harm to one person.</p>
   <p>For example, a blocked public drainage canal may affect an entire barangay but cause especially serious flooding in the house nearest the obstruction.</p>
-  <p>In that situation, the nuisance remains public, but the homeowner may have a special basis for seeking relief under <span class="art-ref" data-art="703" tabindex="0">Article 703</span>.</p>
+  <p>In that situation, the nuisance remains public, <mark class="hl">but the homeowner may have a special basis for seeking relief under <span class="art-ref" data-art="703" tabindex="0">Article 703</span></mark>.</p>
 
   <h5>B. Nuisance per se versus nuisance per accidens</h5>
   <p>This is another extremely important distinction.</p>
-  <p><strong>Nuisance per se:</strong> A nuisance <strong>at all times and under all circumstances</strong>, because of its inherent nature.</p>
+  <p><strong>Nuisance per se:</strong> A nuisance <mark class="hl"><strong>at all times and under all circumstances</strong>, because of its inherent nature</mark>.</p>
   <p><em>Example:</em> An open, dangerous obstruction intrinsically interfering with a public roadway.</p>
-  <p><strong>Nuisance per accidens:</strong> Something that is not inherently a nuisance but <strong>becomes one because of its location, manner of operation, circumstances, or surrounding conditions</strong>.</p>
+  <p><strong>Nuisance per accidens:</strong> Something that is not inherently a nuisance but <mark class="hl"><strong>becomes one because of its location, manner of operation, circumstances, or surrounding conditions</strong></mark>.</p>
   <p><em>Example:</em> An otherwise lawful industrial activity that produces intolerable noise beside a residential neighborhood.</p>
 
   <h5>Why does this distinction matter?</h5>
@@ -1222,17 +1260,17 @@ blockquote {
   <p>The case illustrates the evaluation of a particular activity in light of its actual effects on adjoining occupants.</p>
   <p><strong><span class="c-burgundy"><em>De Ayala v. Barretto</em></span></strong></p>
   <p>The textbook contrasts this with a brewery&rsquo;s operation, where the Court did not treat the activity as a nuisance merely because of the asserted noise or smell. The actual conditions and their effect on the neighborhood mattered.</p>
-  <p><strong>Key doctrine:</strong> Nuisance is often a question of degree, context, and reasonable enjoyment.</p>
+  <p><strong>Key doctrine:</strong> <mark class="hl">Nuisance is often a question of degree, context, and reasonable enjoyment.</mark></p>
   <p>An activity that may be tolerable in an industrial district may be unreasonable in a quiet residential subdivision.</p>
   <p>Relevant considerations include the nature of the locality, the character and magnitude of the interference, its duration, and surrounding circumstances.</p>
 
   <h4 id="ch16-vi-503" class="c-navy">5.03. Strict Liability and Persons Liable</h4>
   <p><em>Textbook pp. 883&ndash;884</em></p>
-  <p>The chapter emphasizes that strict liability may attach to the <strong>owner or possessor of property where a nuisance is found</strong>, even without establishing that person&rsquo;s negligence.</p>
+  <p>The chapter emphasizes that <mark class="hl">strict liability may attach to the <strong>owner or possessor of property where a nuisance is found</strong>, even without establishing that person&rsquo;s negligence</mark>.</p>
   <p>But there is an additional question: What if the present owner did not create the nuisance?</p>
 
   <h5><span class="art-ref" data-art="696" tabindex="0">Article 696</span> &mdash; Liability of successive owners or possessors</h5>
-  <p>Under Article 696, every successive owner or possessor who fails or refuses to abate a nuisance started by a former owner or possessor is liable in the same manner as the one who created it.</p>
+  <p>Under Article 696, <mark class="hl">every successive owner or possessor who fails or refuses to abate a nuisance started by a former owner or possessor is liable in the same manner as the one who created it</mark>.</p>
   <p><strong>Example:</strong> Pedro owns a parcel of land containing an open pit that constitutes a nuisance.</p>
   <p>Pedro sells the land to Juan. Juan did not excavate the pit.</p>
   <p>However, after acquiring the property, Juan fails or refuses to abate the existing nuisance.</p>
@@ -1244,7 +1282,7 @@ blockquote {
   <p>Suppose Juan finally removes the nuisance after neighbors have already suffered damage.</p>
   <p>Does its removal extinguish their claim for the earlier injury?</p>
   <p>No.</p>
-  <p>Under Article 697, <span class="c-green"><strong><u>abatement does not preclude recovery of damages for the nuisance&rsquo;s past existence</u></strong></span>.</p>
+  <p>Under Article 697, <span class="c-green"><strong><u><mark class="hl">abatement does not preclude recovery of damages for the nuisance&rsquo;s past existence</mark></u></strong></span>.</p>
   <p>Remember the difference:</p>
   <ul>
     <li><strong>Abatement</strong> addresses the continuing harmful condition.</li>
@@ -1306,13 +1344,13 @@ blockquote {
   <p><span class="art-ref" data-art="704" tabindex="0">Article 704</span> permits extrajudicial abatement of such a nuisance, but imposes safeguards.</p>
   <p><strong>Requisites for extrajudicial abatement &mdash; Article 704 checklist:</strong></p>
   <ol>
-    <li><strong>Demand was first made</strong> upon the owner or possessor to abate the nuisance.</li>
-    <li><strong>The demand was rejected.</strong></li>
-    <li><strong>The district health officer approved the abatement</strong>, and it is executed with assistance of the local police.</li>
-    <li><strong>The value of the destruction does not exceed &#8369;3,000.</strong></li>
+    <li><mark class="hl"><strong>Demand was first made</strong> upon the owner or possessor to abate the nuisance.</mark></li>
+    <li><mark class="hl"><strong>The demand was rejected.</strong></mark></li>
+    <li><mark class="hl"><strong>The district health officer approved the abatement</strong>, and it is executed with assistance of the local police.</mark></li>
+    <li><mark class="hl"><strong>The value of the destruction does not exceed &#8369;3,000.</strong></mark></li>
   </ol>
-  <p>All four conditions must be satisfied, in addition to the requirements that the nuisance be specially injurious, and that abatement cause no breach of the peace or unnecessary injury.</p>
-  <p><strong>The &#8369;3,000 figure is the amount stated in <span class="art-ref" data-art="704" tabindex="0">Article 704(4)</span></strong> and in your textbook. It remains the amount shown in the published Civil Code provision; do not substitute a different figure without an applicable amending law.</p>
+  <p>All four conditions must be satisfied, in addition to the requirements that the nuisance be specially injurious, and that abatement cause <mark class="hl">no breach of the peace or unnecessary injury</mark>.</p>
+  <p><strong>The <mark class="hl">&#8369;3,000 figure</mark> is the amount stated in <span class="art-ref" data-art="704" tabindex="0">Article 704(4)</span></strong> and in your textbook. It remains the amount shown in the published Civil Code provision; do not substitute a different figure without an applicable amending law.</p>
 
   <h5>Application</h5>
   <p>A roadside structure obstructs a public passage and causes particular harm to a nearby resident.</p>
@@ -1329,7 +1367,7 @@ blockquote {
     <li>Abatement without judicial proceedings.</li>
   </ol>
   <p><span class="art-ref" data-art="706" tabindex="0">Article 706</span> allows an injured person to remove or, if necessary, destroy the thing constituting the nuisance, provided the person does not breach the peace or cause unnecessary injury.</p>
-  <p>Crucially, <span class="c-green"><strong><u>Article 706 requires observance of the procedure for extrajudicial abatement of a public nuisance by a private person</u></strong></span>.</p>
+  <p>Crucially, <span class="c-green"><strong><u><mark class="hl">Article 706 requires observance of the procedure for extrajudicial abatement of a public nuisance by a private person</mark></u></strong></span>.</p>
   <p>Thus, the safeguards under <span class="art-ref" data-art="704" tabindex="0">Article 704</span> also matter in extrajudicial abatement of private nuisances.</p>
 
   <h5>D. Public versus private nuisance: Remedies</h5>
@@ -1365,28 +1403,28 @@ blockquote {
   </ul>
   <p><span class="art-ref" data-art="RA9514-9" tabindex="0">Section 9</span> provides for enforcement, abatement, and the declaration of qualifying dangerous buildings or structures as <strong>public nuisances</strong>.</p>
   <p>The connection to nuisance law is straightforward: a dangerous fire hazard may endanger not only the property occupant but also the surrounding community.</p>
-  <p>The Fire Code has its <strong>own statutory enforcement procedures</strong>. These must not be confused with the separate private-person abatement procedure under <span class="art-ref" data-art="704" tabindex="0">Article 704</span>.</p>
+  <p>The Fire Code has its <mark class="hl"><strong>own statutory enforcement procedures</strong>. These must not be confused with the separate private-person abatement procedure under <span class="art-ref" data-art="704" tabindex="0">Article 704</span></mark>.</p>
 
   <h5>F. Liability for damages &mdash; <span class="art-ref" data-art="707" tabindex="0">Article 707</span></h5>
   <p>An important principle: The law permits extrajudicial abatement in certain situations, but protects against misuse of that authority.</p>
   <p><span class="art-ref" data-art="707" tabindex="0">Article 707</span> provides that a private person or public official who extrajudicially abates a nuisance shall be liable for damages:</p>
   <ol>
-    <li><strong>If unnecessary injury is caused</strong>; or</li>
-    <li><strong>If the alleged nuisance is subsequently declared by the courts not to be a real nuisance.</strong></li>
+    <li><mark class="hl"><strong>If unnecessary injury is caused</strong></mark>; or</li>
+    <li><mark class="hl"><strong>If the alleged nuisance is subsequently declared by the courts not to be a real nuisance.</strong></mark></li>
   </ol>
   <p><strong>Example:</strong> Juan believes his neighbor&rsquo;s structure constitutes a nuisance. He destroys the structure without a sufficient legal basis.</p>
   <p>A court later determines that the structure was not a nuisance.</p>
   <p>Juan may be liable for the damage caused by his extrajudicial action.</p>
-  <p>The underlying lesson: <span class="c-rust"><strong><u>A sincere belief that something is a nuisance is not enough.</u></strong></span></p>
+  <p>The underlying lesson: <span class="c-rust"><strong><u><mark class="hl">A sincere belief that something is a nuisance is not enough.</mark></u></strong></span></p>
 
   <h5>G. Prescription and estoppel</h5>
   <p><em>Textbook &sect;5.04(e), pp. 886&ndash;887</em></p>
   <p><strong><span class="art-ref" data-art="698" tabindex="0">Article 698</span> provides:</strong></p>
-  <blockquote>Lapse of time cannot legalize any nuisance, whether public or private.</blockquote>
+  <blockquote><mark class="hl">Lapse of time cannot legalize any nuisance, whether public or private.</mark></blockquote>
   <p>Suppose an establishment has maintained an actionable nuisance for 15 years.</p>
   <p>Can the operator argue that the nuisance is lawful merely because nobody acted sooner?</p>
   <p><span class="c-rust"><strong><u>No.</u></strong></span> Passage of time does not legalize the nuisance.</p>
-  <p>However, distinguish the continuing existence of a nuisance from an action to recover damages for injuries that occurred in the past. Article 698 does not mean every historical damages claim is necessarily imprescriptible.</p>
+  <p>However, <mark class="hl">distinguish the continuing existence of a nuisance from an action to recover damages for injuries that occurred in the past. Article 698 does not mean every historical damages claim is necessarily imprescriptible.</mark></p>
   <p><strong>What about estoppel?</strong> Estoppel generally prevents a person from asserting a position inconsistent with certain prior acts or representations when another has relied on them. The textbook explains that estoppel should not allow a danger to public health or safety to continue. However, it acknowledges a more nuanced view: a private person&rsquo;s prior conduct may affect that person&rsquo;s own right to damages, even when it cannot make the nuisance itself lawful.</p>
 
   <h4 id="ch16-vi-505" class="c-navy">5.05. Environmental Protection</h4>
@@ -1404,8 +1442,8 @@ blockquote {
   </ul>
   <h5>B. Case: <span class="c-burgundy"><em>Velasco v. Manila Electric Company</em></span></h5>
   <p><span class="c-teal">40 SCRA 342</span> (1971)</p>
-  <p>The textbook cites this case as part of its treatment of noise and nuisance. The discussion draws upon the principle that noise may constitute nuisance when its effects unreasonably interfere with the health or comfort of persons in the vicinity.</p>
-  <p>The chapter also explains that <strong>a certain degree of noise is an unavoidable consequence of ordinary community life</strong>. Hence, the applicable standard is not total silence.</p>
+  <p>The textbook cites this case as part of its treatment of noise and nuisance. The discussion draws upon the principle that <mark class="hl">noise may constitute nuisance when its effects unreasonably interfere with the health or comfort of persons in the vicinity</mark>.</p>
+  <p>The chapter also explains that <mark class="hl"><strong>a certain degree of noise is an unavoidable consequence of ordinary community life</strong>. Hence, the applicable standard is not total silence.</mark></p>
   <h5>Practical application</h5>
   <p>A machine shop operates beside a residential house. The machines produce loud vibrations every evening, interrupting sleep and causing recurring discomfort.</p>
   <p>Under the textbook&rsquo;s framework, we would determine:</p>
@@ -1473,39 +1511,39 @@ blockquote {
 
   <p>We are now entering the final topic of the chapter.</p>
   <p>Although the book discusses unjust enrichment under strict liability, its conceptual foundation is different from the liability arising from animals, falling objects, and nuisance.</p>
-  <p>The central concern is not necessarily whether somebody caused an injury. Rather, it is <strong>whether someone has obtained or retained a benefit at another person&rsquo;s expense without a legitimate legal basis</strong>.</p>
+  <p>The central concern is not necessarily whether somebody caused an injury. Rather, it is <mark class="hl"><strong>whether someone has obtained or retained a benefit at another person&rsquo;s expense without a legitimate legal basis</strong></mark>.</p>
 
   <h4 id="ch16-vii-a" class="c-navy">A. The fundamental principle</h4>
   <p>Imagine this: You accidentally transfer &#8369;50,000 to another person&rsquo;s bank account. The recipient does not have any legal right to receive or retain your money. Would it be fair for the recipient to keep it simply because you made the mistake? Of course not. This illustrates the fundamental principle against <strong>unjust enrichment</strong>.</p>
   <p><strong><span class="art-ref" data-art="22" tabindex="0">Article 22 &mdash; New Civil Code</span>:</strong></p>
-  <blockquote>Every person who, through an act of performance by another, or any other means, acquires or comes into possession of something at the expense of the latter without just or legal ground, shall return the same to him.</blockquote>
+  <blockquote>Every person who, through an act of performance by another, or any other means, acquires or comes into possession of something at the expense of the latter <mark class="hl">without just or legal ground</mark>, shall return the same to him.</blockquote>
   <p>Notice two essential ideas: <strong>First:</strong> One person has received a benefit at the expense of another. <strong>Second:</strong> There is no just or legal ground for retaining that benefit.</p>
-  <p>Not every enrichment is unjust. For instance, if Maria receives &#8369;50,000 because Juan validly paid an existing debt, Maria has obtained a benefit. However, she is legally entitled to receive the payment. There is no unjust enrichment because there is a <strong>just or legal ground</strong> for the benefit.</p>
+  <p>Not every enrichment is unjust. For instance, if Maria receives &#8369;50,000 because Juan validly paid an existing debt, Maria has obtained a benefit. However, she is legally entitled to receive the payment. There is no unjust enrichment because there is a <mark class="hl"><strong>just or legal ground</strong> for the benefit</mark>.</p>
 
   <h4 id="ch16-vii-601" class="c-navy">6.01. Unjust Enrichment Is Not a Quasi-Contract</h4>
   <p>This distinction is expressly discussed in the textbook. Although the principle is found in <span class="art-ref" data-art="22" tabindex="0">Article 22</span>, it should not automatically be treated as identical to quasi-contract.</p>
   <h5>A. What is a quasi-contract?</h5>
-  <p>A quasi-contract is a juridical relation arising from certain <strong>lawful, voluntary, and unilateral acts</strong>, under which the law creates obligations to prevent unjust enrichment. Examples previously encountered in Obligations and Contracts include:</p>
+  <p>A quasi-contract is a juridical relation arising from certain <mark class="hl"><strong>lawful, voluntary, and unilateral acts</strong></mark>, under which the law creates obligations to prevent unjust enrichment. Examples previously encountered in Obligations and Contracts include:</p>
   <ul>
     <li><strong>Solutio indebiti</strong> &mdash; payment or delivery made by mistake when there is no right to demand it.</li>
     <li><strong>Negotiorum gestio</strong> &mdash; voluntary management of another person&rsquo;s business or property without authority.</li>
   </ul>
   <h5>B. How is Article 22 different?</h5>
-  <p>The textbook explains that <span class="art-ref" data-art="22" tabindex="0">Article 22</span> establishes an independent general principle against unjust enrichment. It also explains that Article 22 can apply even where the circumstances do not amount to a quasi-contract. A major point is that <span class="c-green"><strong><u>Article 22 may operate as a subsidiary basis for restitution</u></strong></span>. This leads us to its most important application: <em>accion in rem verso</em>.</p>
+  <p>The textbook explains that <span class="art-ref" data-art="22" tabindex="0">Article 22</span> establishes an independent general principle against unjust enrichment. It also explains that Article 22 can apply even where the circumstances do not amount to a quasi-contract. A major point is that <span class="c-green"><strong><u><mark class="hl">Article 22 may operate as a subsidiary basis for restitution</mark></u></strong></span>. This leads us to its most important application: <em>accion in rem verso</em>.</p>
 
   <h4 id="ch16-vii-602" class="c-navy">6.02. Requisites of Accion In Rem Verso</h4>
   <p><em>Accion in rem verso</em> is a personal action based on unjust enrichment, used to recover a benefit obtained at another&rsquo;s expense when no other adequate cause of action under the specified legal categories is available.</p>
   <p>The textbook identifies <span class="c-green"><strong><u>four essential requisites</u></strong></span>:</p>
   <ol>
-    <li><strong>The defendant has been enriched.</strong> The defendant received or retained a benefit, including a financial advantage or release from an obligation.</li>
-    <li><strong>The plaintiff suffered a loss.</strong> The benefit came at the plaintiff&rsquo;s expense.</li>
-    <li><strong>The enrichment is without just or legal ground.</strong> There is no legitimate basis for the defendant to retain the benefit.</li>
-    <li><strong>The plaintiff has no other action based on contract, quasi-contract, crime, or quasi-delict.</strong> This is what makes the action <strong>subsidiary or auxiliary</strong>.</li>
+    <li><mark class="hl"><strong>The defendant has been enriched.</strong></mark> The defendant received or retained a benefit, including a financial advantage or release from an obligation.</li>
+    <li><mark class="hl"><strong>The plaintiff suffered a loss.</strong></mark> The benefit came at the plaintiff&rsquo;s expense.</li>
+    <li><mark class="hl"><strong>The enrichment is without just or legal ground.</strong></mark> There is no legitimate basis for the defendant to retain the benefit.</li>
+    <li><mark class="hl"><strong>The plaintiff has no other action based on contract, quasi-contract, crime, or quasi-delict.</strong></mark> This is what makes the action <strong>subsidiary or auxiliary</strong>.</li>
   </ol>
   <p>These requisites are likewise stated in <span class="c-burgundy"><strong><em>University of the Philippines v. Philab Industries, Inc.</em></strong></span> (<span class="c-teal">G.R. No. 152411</span>, September 29, 2004).</p>
 
   <h5>A. Nature of Accion In Rem Verso</h5>
-  <p>The most important characteristic is its <strong>subsidiary nature</strong>. This means the action does not replace an available cause of action founded upon another legal institution.</p>
+  <p>The most important characteristic is its <mark class="hl"><strong>subsidiary nature</strong></mark>. This means the action does not replace an available cause of action founded upon another legal institution.</p>
   <div class="table-scroll">
     <table class="ui-table">
       <thead>
@@ -1526,9 +1564,9 @@ blockquote {
 
   <h5>B. Not applicable if based on contract</h5>
   <p><em>Textbook &sect;6.02(b), p. 891</em></p>
-  <p>The textbook cites <span class="c-burgundy"><strong><em>Shinryo (Philippines) Company, Inc. v. RRN Incorporated</em></strong></span> (<span class="c-teal">G.R. No. 172525</span>) for the proposition that unjust enrichment cannot be used to circumvent a contractual basis for a claim.</p>
+  <p>The textbook cites <span class="c-burgundy"><strong><em>Shinryo (Philippines) Company, Inc. v. RRN Incorporated</em></strong></span> (<span class="c-teal">G.R. No. 172525</span>) for the proposition that <mark class="hl">unjust enrichment cannot be used to circumvent a contractual basis for a claim</mark>.</p>
   <p><strong>Example:</strong> Juan contracts with Pedro to construct a house for &#8369;2 million. Pedro completes the work, but Juan refuses to pay the outstanding amount. Pedro cannot simply disregard the available contractual remedy and insist upon <em>accion in rem verso</em> as if there were no contract. The obligation to pay is governed by their contractual relationship.</p>
-  <blockquote><strong>Recitation principle:</strong> If another applicable cause of action exists under contract, quasi-contract, crime, or quasi-delict, pursue that action rather than automatically invoking <em>accion in rem verso</em>.</blockquote>
+  <blockquote><strong>Recitation principle:</strong> <mark class="hl">If another applicable cause of action exists under contract, quasi-contract, crime, or quasi-delict, pursue that action rather than automatically invoking <em>accion in rem verso</em>.</mark></blockquote>
 
   <hr>
 
@@ -1574,13 +1612,13 @@ blockquote {
   </div>
 
   <h4 id="ch16-viii-b" class="c-navy">B. How did Producers Bank become enriched?</h4>
-  <p>This is the most important question for our study. Suppose you owe Maria &#8369;100,000. Instead of using your own money to pay her, somebody else&rsquo;s money is improperly transferred and applied toward settling your debt. The payment causes your obligation to Maria to be extinguished. Even if you did not physically receive the money into your own hands, <strong>you benefited because your debt was discharged</strong>. That was the essential enrichment issue involving Producers Bank.</p>
+  <p>This is the most important question for our study. Suppose you owe Maria &#8369;100,000. Instead of using your own money to pay her, somebody else&rsquo;s money is improperly transferred and applied toward settling your debt. The payment causes your obligation to Maria to be extinguished. Even if you did not physically receive the money into your own hands, <mark class="hl"><strong>you benefited because your debt was discharged</strong></mark>. That was the essential enrichment issue involving Producers Bank.</p>
 
   <h4 id="ch16-viii-c" class="c-navy">C. The Supreme Court&rsquo;s ruling</h4>
-  <p>The Supreme Court held that Allied Bank and Metrobank were responsible to Lim Sio Wan in a <strong>60:40 proportion</strong>, respectively. However, Producers Bank had benefited from the misapplied payment because its debt to FCC was extinguished. Consequently, Producers Bank was held liable to reimburse Allied Bank and Metrobank for the amounts they were ordered to pay Lim Sio Wan. FCC, on the other hand, was not considered unjustly enriched because it had a legitimate right to receive payment of its matured placement. The distinction is critical: <strong>FCC was entitled to payment. Producers Bank was not entitled to have its debt discharged at Lim Sio Wan&rsquo;s expense.</strong></p>
+  <p>The Supreme Court held that Allied Bank and Metrobank were responsible to Lim Sio Wan in a <mark class="hl"><strong>60:40 proportion</strong></mark>, respectively. However, Producers Bank had benefited from the misapplied payment because its debt to FCC was extinguished. Consequently, <mark class="hl">Producers Bank was held liable to reimburse Allied Bank and Metrobank</mark> for the amounts they were ordered to pay Lim Sio Wan. FCC, on the other hand, was not considered unjustly enriched because it had a legitimate right to receive payment of its matured placement. The distinction is critical: <mark class="hl"><strong>FCC was entitled to payment. Producers Bank was not entitled to have its debt discharged at Lim Sio Wan&rsquo;s expense.</strong></mark></p>
 
   <h4 id="ch16-viii-d" class="c-navy">D. Legal doctrine</h4>
-  <p>The case demonstrates that unjust enrichment is not limited to situations in which a defendant physically receives another person&rsquo;s money. <span class="c-green"><strong><u>A benefit may take the form of the extinguishment of an obligation</u></strong></span>, and retaining that advantage without a just or legal ground may give rise to restitution under <span class="art-ref" data-art="22" tabindex="0">Article 22</span>.</p>
+  <p>The case demonstrates that unjust enrichment is not limited to situations in which a defendant physically receives another person&rsquo;s money. <span class="c-green"><strong><u><mark class="hl">A benefit may take the form of the extinguishment of an obligation</mark></u></strong></span>, and retaining that advantage without a just or legal ground may give rise to restitution under <span class="art-ref" data-art="22" tabindex="0">Article 22</span>.</p>
 
   <!-- CH16 MODULE C SUMMARY CAPSTONE -->
   <div class="summary-capstone" id="summary-ch16-mod-c">
@@ -1752,13 +1790,13 @@ blockquote {
       </div>
     </div>
   </div>
-  <p>The fundamental distinction is: <span class="c-green"><strong><u>Negligence focuses on the defendant&rsquo;s conduct. Strict product liability focuses on the defective product and the injury attributable to it.</u></strong></span> However, strict liability is not absolute liability. The plaintiff must still establish the facts required by the applicable law, and the defendant may invoke statutory defenses.</p>
+  <p>The fundamental distinction is: <span class="c-green"><strong><u><mark class="hl">Negligence focuses on the defendant&rsquo;s conduct. Strict product liability focuses on the defective product and the injury attributable to it.</mark></u></strong></span> However, strict liability is not absolute liability. The plaintiff must still establish the facts required by the applicable law, and the defendant may invoke statutory defenses.</p>
 
   <h3 id="ch17-part-2" class="c-navy">Part 2 &mdash; Product Liability Law</h3>
   <p><em>Textbook: Section 1, pp. 893&ndash;895</em></p>
   <h4 id="ch17-p2-a" class="c-navy">A. Legal and constitutional foundation</h4>
   <p>The Philippine legal system recognizes consumer protection as a matter of public policy. <strong><span class="art-ref" data-art="CONST-XVI-9" tabindex="0">Article XVI, Section 9 of the 1987 Constitution</span></strong> provides:</p>
-  <blockquote>The State shall protect consumers from trade malpractices and from substandard or hazardous products.</blockquote>
+  <blockquote><mark class="hl">The State shall protect consumers from trade malpractices and from substandard or hazardous products.</mark></blockquote>
   <p>This is the constitutional foundation of product safety regulation. Why does the Constitution recognize this protection? Because there is an inherent imbalance between manufacturers and ordinary consumers. A manufacturer generally possesses technical information concerning the product&rsquo;s materials, design, production process, testing, and potential hazards. An ordinary consumer cannot reasonably be expected to investigate all these matters before purchasing. For example, when you purchase bottled water, you should not have to conduct a laboratory examination to determine whether it is safe to drink. The law therefore places appropriate responsibilities on manufacturers, sellers, and suppliers.</p>
 
   <h4 id="ch17-p2-b" class="c-navy">B. What laws govern product liability?</h4>
@@ -1771,7 +1809,7 @@ blockquote {
     <li><strong><span class="art-ref" data-art="2187" tabindex="0">Article 2187</span></strong> &mdash; Liability of manufacturers and processors of certain goods.</li>
     <li><strong><span class="art-ref" data-art="1547" tabindex="0">Articles 1547</span> and <span class="art-ref" data-art="1561-1571" tabindex="0">1561&ndash;1571</span></strong> &mdash; Warranties in sales.</li>
   </ul>
-  <p><strong>2. Republic Act No. 7394 &mdash; Consumer Act of the Philippines</strong> &mdash; This is the principal statute discussed in the chapter. It addresses, among others, deceptive sales practices, warranties, defective products, defective services, labeling, and consumer remedies. In particular, <strong><span class="art-ref" data-art="RA7394-97,RA7394-99" tabindex="0">Articles 97 and 99</span> expressly impose liability independently of fault</strong> for defective products and defective services, respectively.</p>
+  <p><strong>2. Republic Act No. 7394 &mdash; Consumer Act of the Philippines</strong> &mdash; This is the principal statute discussed in the chapter. It addresses, among others, deceptive sales practices, warranties, defective products, defective services, labeling, and consumer remedies. In particular, <mark class="hl"><strong><span class="art-ref" data-art="RA7394-97,RA7394-99" tabindex="0">Articles 97 and 99</span> expressly impose liability independently of fault</strong></mark> for defective products and defective services, respectively.</p>
 
   <h4 id="ch17-p2-c" class="c-navy">C. Other special laws</h4>
   <p>The textbook identifies several laws protecting consumers even before the enactment of the Consumer Act, as well as later legislation. Among the important statutes are:</p>
@@ -1832,7 +1870,7 @@ blockquote {
   <h4 id="ch17-p4-1" class="c-navy">1. Fraud under the New Civil Code</h4>
   <p><strong>Simple explanation:</strong> A seller or manufacturer induces a consumer to purchase a product by making a false representation about it. Suppose a dealership advertises a secondhand vehicle as having never been flooded. The seller knows it suffered severe flood damage but deliberately conceals that fact. The buyer purchases the vehicle in reliance on the representation and later incurs substantial repair costs. The legal problem is not merely that the vehicle is defective. It is also that <strong>the buyer was deceived into purchasing it</strong>.</p>
   <h5><span class="art-ref" data-art="33" tabindex="0">Article 33</span> &mdash; Independent civil action for fraud</h5>
-  <p>Article 33 allows a civil action for damages, separate and distinct from the criminal action, in cases of fraud, defamation, and physical injuries. The plaintiff need only establish liability by <strong>preponderance of evidence</strong>, not proof beyond reasonable doubt. For purposes of Article 33, fraud is understood broadly and includes calculated deception, concealment, or other dishonest conduct resulting in damage.</p>
+  <p>Article 33 allows a civil action for damages, separate and distinct from the criminal action, in cases of fraud, defamation, and physical injuries. The plaintiff need only establish liability by <mark class="hl"><strong>preponderance of evidence</strong>, not proof beyond reasonable doubt</mark>. For purposes of Article 33, fraud is understood broadly and includes calculated deception, concealment, or other dishonest conduct resulting in damage.</p>
   <h5>Not every inaccurate statement constitutes actionable misrepresentation</h5>
   <div class="table-scroll">
     <table class="ui-table">
@@ -1848,7 +1886,7 @@ blockquote {
   <p>An opinion may still be actionable where the circumstances establish legally significant deception. The substance and surrounding circumstances matter more than the seller&rsquo;s choice of words.</p>
 
   <h4 id="ch17-p4-2" class="c-navy">2. Fraud under the Consumer Act</h4>
-  <p><strong><span class="art-ref" data-art="RA7394-50" tabindex="0">Article 50 of R.A. No. 7394</span></strong> prohibits deceptive sales acts or practices. It covers deception occurring <strong>before, during, or after</strong> a consumer transaction. Examples include falsely representing that a product is new, that it possesses certain benefits, that repairs are necessary, or that a particular warranty exists.</p>
+  <p><strong><span class="art-ref" data-art="RA7394-50" tabindex="0">Article 50 of R.A. No. 7394</span></strong> prohibits deceptive sales acts or practices. It covers deception occurring <mark class="hl"><strong>before, during, or after</strong> a consumer transaction</mark>. Examples include falsely representing that a product is new, that it possesses certain benefits, that repairs are necessary, or that a particular warranty exists.</p>
   <p><strong><span class="art-ref" data-art="RA7394-52" tabindex="0">Article 52</span></strong> separately prohibits unfair or unconscionable sales acts or practices, including transactions induced by taking advantage of a consumer&rsquo;s ignorance, infirmity, or inability to protect their interests.</p>
   <h5>Remedy under the Consumer Act &mdash; <span class="art-ref" data-art="RA7394-60" tabindex="0">Article 60</span></h5>
   <p>Under Article 60, violations may result in statutory penalties. In addition, the court may grant an injunction and actual damages, or other appropriate relief, to redress injury resulting from conduct violating <span class="art-ref" data-art="RA7394-50,RA7394-51" tabindex="0">Articles 50 and 51</span>. This is distinct from the remedies for an ordinary breach of warranty.</p>
@@ -1858,7 +1896,7 @@ blockquote {
   <p><em>Textbook: pp. 897&ndash;902</em></p>
   <p>This is one of the most practical sections of the chapter.</p>
   <h4 id="ch17-p5-1" class="c-navy">1. What is a warranty?</h4>
-  <p>A <strong>warranty</strong> is an affirmation, promise, or assurance concerning a product that may form part of the seller&rsquo;s legal obligations. For example, you purchase a refrigerator advertised as capable of maintaining a specified temperature. If it cannot perform as warranted, there may be a breach of warranty even if no one has suffered physical injuries. That is the essential difference between warranty liability and strict liability for personal injury: <strong>A warranty problem may concern the quality, condition, or performance of the product. A strict product liability problem concerns harm caused by a legally defective product.</strong></p>
+  <p>A <strong>warranty</strong> is an affirmation, promise, or assurance concerning a product that may form part of the seller&rsquo;s legal obligations. For example, you purchase a refrigerator advertised as capable of maintaining a specified temperature. If it cannot perform as warranted, there may be a breach of warranty even if no one has suffered physical injuries. That is the essential difference between warranty liability and strict liability for personal injury: <mark class="hl"><strong>A warranty problem may concern the quality, condition, or performance of the product. A strict product liability problem concerns harm caused by a legally defective product.</strong></mark></p>
 
   <h5>A. Express warranty versus implied warranty</h5>
   <div class="table-scroll">
@@ -1899,22 +1937,22 @@ blockquote {
       </div>
     </div>
   </div>
-  <p>The remedies are <strong>alternative</strong>, not cumulative. <span class="art-ref" data-art="1571" tabindex="0">Article 1571</span> generally requires actions arising from the preceding provisions on warranties against hidden defects to be brought within <span class="c-rust"><strong><u>six months from delivery</u></strong></span>. Do not confuse this with the periods applicable to quasi-delict or special Consumer Act warranty rights.</p>
+  <p>The remedies are <mark class="hl"><strong>alternative</strong>, not cumulative</mark>. <span class="art-ref" data-art="1571" tabindex="0">Article 1571</span> generally requires actions arising from the preceding provisions on warranties against hidden defects to be brought within <span class="c-rust"><strong><u><mark class="hl">six months from delivery</mark></u></strong></span>. Do not confuse this with the periods applicable to quasi-delict or special Consumer Act warranty rights.</p>
 
   <h5>D. Important case: <span class="c-burgundy"><em>Nutrimix Feeds Corporation v. Court of Appeals</em></span></h5>
   <p><span class="c-teal">G.R. No. 152219</span> | October 25, 2004</p>
   <p><strong>Facts:</strong> The spouses Evangelista purchased animal feeds from Nutrimix Feeds Corporation. They alleged that the feeds were defective and caused their chickens and hogs to become sick, stunted, and die.<br>
   <strong>Issue:</strong> Was Nutrimix liable for breach of implied warranty?<br>
   <strong>Ruling:</strong> The Supreme Court ruled against the buyers&rsquo; warranty claim. They failed to establish sufficiently that the feeds were defective when they left the manufacturer&rsquo;s control and that the alleged defect caused the animals&rsquo; illness and death.<br>
-  <strong>Doctrine:</strong> <span class="c-green"><strong><u>The mere fact that damage followed the use of a product does not automatically prove that the product was defective or that the defect caused the damage.</u></strong></span></p>
+  <strong>Doctrine:</strong> <span class="c-green"><strong><u><mark class="hl">The mere fact that damage followed the use of a product does not automatically prove that the product was defective or that the defect caused the damage.</mark></u></strong></span></p>
   <p>Consider the distinction: The animals became sick after eating the feeds. But the illness could have arisen from another cause, such as disease, contamination after delivery, or improper storage. Without sufficient evidence linking the harm to a legally relevant defect, the court cannot simply assume manufacturer liability.<br>
-  <strong>Bar examination takeaway:</strong> Temporal sequence is not the same as legal causation.</p>
+  <strong>Bar examination takeaway:</strong> <mark class="hl">Temporal sequence is not the same as legal causation.</mark></p>
 
   <h4 id="ch17-p5-2" class="c-navy">2. Privity of contract</h4>
   <p>Privity means a direct contractual relationship between parties. Ordinarily, contractual obligations are enforceable by and against the parties to the contract, subject to exceptions. Imagine: <strong>Manufacturer &rarr; Retailer &rarr; Buyer</strong>. The buyer directly purchases from the retailer, not from the manufacturer. Does the absence of a direct contract prevent the buyer from holding the manufacturer liable? <strong>Not necessarily.</strong> The Consumer Act imposes statutory obligations, and the Civil Code recognizes certain causes of action that do not depend upon a contractual relationship.</p>
   <h5>Important case: <span class="c-burgundy"><em>Del Rosario v. Court of Appeals</em></span></h5>
   <p><span class="c-teal">G.R. No. 118325</span> | January 29, 1997</p>
-  <p>The Del Rosario spouses selected roofing materials after relying on public advertisements describing their durability and strength. Their contractor handled the purchase arrangements. Subsequently, portions of the roof were blown off during a typhoon, and evidence established defective installation and noncompliance with the manufacturer&rsquo;s representations. The manufacturer argued that there was no privity of contract with the spouses. <strong>The Supreme Court rejected that defense under the established circumstances.</strong> What mattered was that the manufacturer made express representations to the public, the spouses relied upon them, and the manufacturer delivered and installed the materials improperly. The lesson is not that privity is irrelevant in every warranty dispute. Rather, <strong>lack of direct contractual dealings does not automatically defeat liability</strong>, particularly where representations, reliance, the manufacturer&rsquo;s own conduct, and applicable law support the claim.</p>
+  <p>The Del Rosario spouses selected roofing materials after relying on public advertisements describing their durability and strength. Their contractor handled the purchase arrangements. Subsequently, portions of the roof were blown off during a typhoon, and evidence established defective installation and noncompliance with the manufacturer&rsquo;s representations. The manufacturer argued that there was no privity of contract with the spouses. <strong>The Supreme Court rejected that defense under the established circumstances.</strong> What mattered was that the manufacturer made express representations to the public, the spouses relied upon them, and the manufacturer delivered and installed the materials improperly. The lesson is not that privity is irrelevant in every warranty dispute. Rather, <mark class="hl"><strong>lack of direct contractual dealings does not automatically defeat liability</strong>, particularly where representations, reliance, the manufacturer&rsquo;s own conduct, and applicable law support the claim</mark>.</p>
 
   <h4 id="ch17-p5-3" class="c-navy">3. Warranties under the Consumer Act</h4>
   <p><strong><span class="art-ref" data-art="RA7394-67" tabindex="0">Article 67</span></strong> states that Civil Code provisions on conditions and warranties govern contracts of sale with conditions and warranties. <strong><span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span></strong> then supplies additional rules applicable to the sale of consumer products with warranties.</p>
@@ -1932,9 +1970,9 @@ blockquote {
         </table>
       </div>
       All written warranties or guarantees issued by a manufacturer, producer, or importer operate from the moment of sale. <strong>Distinction:</strong> The duration of warranty coverage is not necessarily the same as the prescriptive period of a particular judicial cause of action.</li>
-    <li><strong>3.03. Records and reports:</strong> Under <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, distributors must generally report covered sales to the manufacturer, producer, or importer within <strong>30 days from purchase</strong>, unless otherwise agreed (date, model, serial number, buyer particulars), and distributors and retailers must maintain covered purchase records for the corresponding warranty periods.</li>
-    <li><strong>3.04. Liability of retailers:</strong> Under the warranty provisions of <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, the retailer has <strong>subsidiary liability</strong> where both the manufacturer and distributor fail to honor the warranty. Do not confuse this with <span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>, which concerns liability of sellers for defective products causing damage.</li>
-    <li><strong>3.05. Enforcement of warranties:</strong> The purchaser presents to the immediate seller either the <strong>warranty card or official receipt</strong> and the product to be serviced or returned. The statute prohibits demanding additional documentary requirements. A retailer (rather than distributor) must present the claim to the distributor on the buyer&rsquo;s behalf without cost to the buyer.</li>
+    <li><strong>3.03. Records and reports:</strong> Under <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, distributors must generally report covered sales to the manufacturer, producer, or importer within <mark class="hl"><strong>30 days from purchase</strong></mark>, unless otherwise agreed (date, model, serial number, buyer particulars), and distributors and retailers must maintain covered purchase records for the corresponding warranty periods.</li>
+    <li><strong>3.04. Liability of retailers:</strong> Under the warranty provisions of <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, <mark class="hl">the retailer has <strong>subsidiary liability</strong> where both the manufacturer and distributor fail to honor the warranty</mark>. Do not confuse this with <span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>, which concerns liability of sellers for defective products causing damage.</li>
+    <li><strong>3.05. Enforcement of warranties:</strong> The purchaser presents to the immediate seller either the <mark class="hl"><strong>warranty card or official receipt</strong> and the product</mark> to be serviced or returned. The statute prohibits demanding additional documentary requirements. A retailer (rather than distributor) must present the claim to the distributor on the buyer&rsquo;s behalf without cost to the buyer.</li>
     <li><strong>3.06. Privity not required:</strong> Statutory warranty obligations may reach beyond narrow Civil Code contractual relationships, though one must distinguish the specific statutory warranty obligation and responsible party.</li>
   </ul>
 
@@ -1948,7 +1986,7 @@ blockquote {
       </tbody>
     </table>
   </div>
-  <p>For repair under an express warranty, <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span> provides a <strong>30-day period</strong> for conformity, subject to extension for circumstances beyond the warrantor&rsquo;s control. Refunds may be adjusted for the value attributable to use before discovery of the nonconformity. <strong>Additional statutory context:</strong> <span class="art-ref" data-art="RA7394-69,RA7394-70,RA7394-71" tabindex="0">Articles 69&ndash;71</span> also recognize warranties concerning consumer services, subject to Article 70&rsquo;s professional-services exception, and require service firms to guarantee workmanship and spare-part replacement for at least 90 days.</p>
+  <p>For repair under an express warranty, <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span> provides a <mark class="hl"><strong>30-day period</strong> for conformity</mark>, subject to extension for circumstances beyond the warrantor&rsquo;s control. Refunds may be adjusted for the value attributable to use before discovery of the nonconformity. <strong>Additional statutory context:</strong> <span class="art-ref" data-art="RA7394-69,RA7394-70,RA7394-71" tabindex="0">Articles 69&ndash;71</span> also recognize warranties concerning consumer services, subject to Article 70&rsquo;s professional-services exception, and require service firms to guarantee workmanship and spare-part replacement for <mark class="hl">at least 90 days</mark>.</p>
 
   <h3 id="ch17-part-6" class="c-navy">Part 6 &mdash; III. Negligence</h3>
   <p><em>Textbook: pp. 902&ndash;903</em></p>
@@ -1956,17 +1994,17 @@ blockquote {
   <p>Under <span class="art-ref" data-art="2176" tabindex="0">Article 2176</span>, a person who, through an act or omission causing damage to another, is guilty of fault or negligence, with no pre-existing contractual relation between them in relation to that obligation, may be liable for quasi-delict. In product liability, negligence may occur at design, manufacture, inspection, packaging, storage, distribution, or failure to provide appropriate safety information. Example: A food company negligently allows its bottling machinery to become contaminated; contaminated beverages reach consumers and cause illness. The plaintiff must establish negligence and proximate causation.</p>
   <h5>Important case: <span class="c-burgundy"><em>Coca-Cola Bottlers Philippines, Inc. v. Court of Appeals</em></span></h5>
   <p><span class="c-teal">G.R. No. 110295</span> | October 18, 1993</p>
-  <p>A school canteen operator discovered foreign substances in unopened bottles of soft drinks. The incident caused customers to lose confidence in the beverages, resulting in losses to her business. The manufacturer argued that the action should be governed by the rules on breach of implied warranty, including the six-month period. The Supreme Court treated the allegations as sufficient to sustain a cause of action for <strong>quasi-delict</strong>, rather than confining the complainant to a warranty action. An injured party is not necessarily restricted to contractual warranty remedies merely because defective goods are involved.</p>
+  <p>A school canteen operator discovered foreign substances in unopened bottles of soft drinks. The incident caused customers to lose confidence in the beverages, resulting in losses to her business. The manufacturer argued that the action should be governed by the rules on breach of implied warranty, including the six-month period. The Supreme Court treated the allegations as sufficient to sustain a cause of action for <mark class="hl"><strong>quasi-delict</strong>, rather than confining the complainant to a warranty action</mark>. An injured party is not necessarily restricted to contractual warranty remedies merely because defective goods are involved.</p>
 
   <h4 id="ch17-p6-2" class="c-navy">2. Violation of statute as proof of negligence</h4>
-  <p>Statutory safety requirements regarding labeling, composition, packaging, ingredients, manufacturing, and safety help establish the standard of conduct expected from manufacturers and suppliers. If a manufacturer violates a safety requirement intended to prevent the kind of harm that occurred, the violation may support a finding of negligence. <strong>Important distinction:</strong> Always ask whether the applicable statute establishes a <strong>standard of care</strong> (evidence of negligence) or creates an <strong>independent statutory basis of liability</strong> (such as <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>).</p>
+  <p>Statutory safety requirements regarding labeling, composition, packaging, ingredients, manufacturing, and safety help establish the standard of conduct expected from manufacturers and suppliers. If a manufacturer violates a safety requirement intended to prevent the kind of harm that occurred, the violation may support a finding of negligence. <strong>Important distinction:</strong> Always ask whether the applicable statute establishes a <mark class="hl"><strong>standard of care</strong> (evidence of negligence) or creates an <strong>independent statutory basis of liability</strong></mark> (such as <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>).</p>
 
   <h3 id="ch17-part-7" class="c-navy">Part 7 &mdash; IV. Intentional Act: Physical Damage or Injury</h3>
   <p><em>Textbook: pp. 903&ndash;904</em></p>
   <h4 id="ch17-p7-1" class="c-navy">1. Independent civil action &mdash; <span class="art-ref" data-art="33" tabindex="0">Article 33</span></h4>
-  <p>Suppose a restaurant owner intentionally contaminates a meal served to a customer, causing physical injuries. The facts may support a criminal prosecution, but the victim may also have an independent civil action for damages under Article 33. Under <strong><span class="art-ref" data-art="ROC-111-3" tabindex="0">Rule 111, Section 3</span></strong>, independent civil actions recognized by <span class="art-ref" data-art="32,33,34,2176" tabindex="0">Articles 32, 33, 34, and 2176 of the Civil Code</span> proceed independently of the criminal action, require preponderance of evidence, and cannot result in double recovery for the same act or omission.</p>
+  <p>Suppose a restaurant owner intentionally contaminates a meal served to a customer, causing physical injuries. The facts may support a criminal prosecution, but the victim may also have an independent civil action for damages under Article 33. Under <strong><span class="art-ref" data-art="ROC-111-3" tabindex="0">Rule 111, Section 3</span></strong>, independent civil actions recognized by <span class="art-ref" data-art="32,33,34,2176" tabindex="0">Articles 32, 33, 34, and 2176 of the Civil Code</span> proceed independently of the criminal action, <mark class="hl">require preponderance of evidence, and cannot result in double recovery</mark> for the same act or omission.</p>
   <h4 id="ch17-p7-2" class="c-navy">2. Acts contrary to law &mdash; <span class="art-ref" data-art="20" tabindex="0">Article 20</span></h4>
-  <p><span class="art-ref" data-art="20" tabindex="0">Article 20</span> provides that a person who causes damage to another through an act contrary to law, whether willfully or negligently, shall indemnify the latter for the damage. If a manufacturer violates an applicable statutory safety prohibition and that unlawful act causes compensable injury, Article 20 may provide a basis for damages. Article 20 is broader than intentional wrongdoing because it also encompasses <strong>negligent violations of law</strong>.</p>
+  <p><span class="art-ref" data-art="20" tabindex="0">Article 20</span> provides that a person who causes damage to another through an act contrary to law, whether willfully or negligently, shall indemnify the latter for the damage. If a manufacturer violates an applicable statutory safety prohibition and that unlawful act causes compensable injury, Article 20 may provide a basis for damages. Article 20 is broader than intentional wrongdoing because it also encompasses <mark class="hl"><strong>negligent violations of law</strong></mark>.</p>
 
   <h3 id="ch17-part-8" class="c-navy">Part 8 &mdash; V. Delict</h3>
   <p><em>Textbook: pp. 904&ndash;905</em></p>
@@ -2033,7 +2071,7 @@ blockquote {
   <p>Let us begin with a hypothetical. A manufacturing company produces 100,000 rice cookers. It maintains sophisticated quality-control systems, employs highly trained engineers, and regularly inspects its equipment. Nevertheless, one rice cooker leaves the factory with a defective electrical component. During ordinary use, it catches fire and injures its owner. The manufacturer argues: <em>&ldquo;We exercised all reasonable care. We were not negligent. The defective unit escaped detection despite our safety procedures.&rdquo;</em> Can the manufacturer escape liability merely by proving that it was careful? <strong>Under an applicable strict product liability provision, no.</strong> That is the fundamental character of strict liability. But do not misunderstand this principle: <strong>Strict liability does not mean that every unfortunate accident involving a product automatically makes the manufacturer liable.</strong> The defect, damage, causal connection, and applicable statutory requirements remain important.</p>
 
   <h4 id="ch17-p9-2" class="c-navy">2. Strict liability under the New Civil Code &mdash; <span class="art-ref" data-art="2187" tabindex="0">Article 2187</span></h4>
-  <blockquote>Manufacturers and processors of foodstuffs, drinks, toilet articles and similar goods shall be liable for death or injuries caused by any noxious or harmful substances used, although no contractual relation exists between them and the consumers.</blockquote>
+  <blockquote>Manufacturers and processors of <mark class="hl">foodstuffs, drinks, toilet articles and similar goods</mark> shall be liable for <mark class="hl">death or injuries caused by any noxious or harmful substances used, although no contractual relation exists</mark> between them and the consumers.</blockquote>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Phrase</th><th>Meaning</th></tr></thead>
@@ -2050,7 +2088,7 @@ blockquote {
 
   <h5>The relationship between Article 2187 and Article 2176</h5>
   <p><span class="art-ref" data-art="2187" tabindex="0">Article 2187</span> appears in the Civil Code&rsquo;s provisions dealing with quasi-delicts, but it contains no express requirement that the claimant prove the manufacturer&rsquo;s negligence. Your textbook treats Article 2187 as a strict liability provision and criticizes reasoning that would make proof of negligence necessary in every such case.</p>
-  <p><strong>Case: <span class="c-burgundy"><em>Coca-Cola Bottlers Philippines, Inc. v. Me&ntilde;ez</em></span></strong> (<span class="c-teal">G.R. No. 209906</span> | November 22, 2017): Me&ntilde;ez alleged that he consumed a beverage containing kerosene and sought damages from the bottling company. The Supreme Court recognized that a person suing under Article 2187 need not first exhaust administrative remedies before bringing the civil action. However, the Court denied the claimed moral and exemplary damages and attorney&rsquo;s fees because the necessary factual and legal bases for those awards were not adequately established, particularly the proof of physical injury for the claimed moral damages. <strong>Important doctrinal distinction:</strong> Article 2187&rsquo;s treatment of liability must not be confused with the requirements for awarding particular kinds of damages.</p>
+  <p><strong>Case: <span class="c-burgundy"><em>Coca-Cola Bottlers Philippines, Inc. v. Me&ntilde;ez</em></span></strong> (<span class="c-teal">G.R. No. 209906</span> | November 22, 2017): Me&ntilde;ez alleged that he consumed a beverage containing kerosene and sought damages from the bottling company. The Supreme Court recognized that <mark class="hl">a person suing under Article 2187 need not first exhaust administrative remedies</mark> before bringing the civil action. However, the Court <mark class="hl">denied the claimed moral and exemplary damages and attorney&rsquo;s fees because the necessary factual and legal bases for those awards were not adequately established, particularly the proof of physical injury for the claimed moral damages</mark>. <strong>Important doctrinal distinction:</strong> Article 2187&rsquo;s treatment of liability must not be confused with the requirements for awarding particular kinds of damages.</p>
 
   <h4 id="ch17-p9-3" class="c-navy">3. The American cases: <span class="c-burgundy"><em>Escola</em></span> and <span class="c-burgundy"><em>Greenman</em></span></h4>
   <ul>
@@ -2086,7 +2124,7 @@ blockquote {
   <h3 id="ch17-part-10" class="c-navy">Part 10 &mdash; Strict Liability under the Consumer Act</h3>
   <p><em>Textbook: pp. 911&ndash;916</em></p>
   <h4 id="ch17-p10-1" class="c-navy">1. <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span> &mdash; Liability for defective products</h4>
-  <p>Article 97 expressly imposes liability <strong>independently of fault</strong>. It covers Filipino and foreign manufacturers, producers, and importers, and addresses damage caused by defects involving product design, manufacturing, construction, assembly, presentation, packaging, and inadequate safety information. It is broader in product coverage than <span class="art-ref" data-art="2187" tabindex="0">Article 2187</span>.</p>
+  <p>Article 97 expressly imposes liability <mark class="hl"><strong>independently of fault</strong></mark>. It covers Filipino and foreign manufacturers, producers, and importers, and addresses damage caused by defects involving product design, manufacturing, construction, assembly, presentation, packaging, and inadequate safety information. It is <mark class="hl">broader in product coverage than <span class="art-ref" data-art="2187" tabindex="0">Article 2187</span></mark>.</p>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Article 2187, Civil Code</th><th>Article 97, Consumer Act</th></tr></thead>
@@ -2100,13 +2138,13 @@ blockquote {
   </div>
 
   <h4 id="ch17-p10-2" class="c-navy">2. <span class="art-ref" data-art="RA7394-99" tabindex="0">Article 99</span> &mdash; Liability for defective services</h4>
-  <p>Strict liability under the Consumer Act also applies to <strong>defective services</strong>. A service is defective when it fails to provide the safety the consumer may rightfully expect, considering the manner of its performance, hazards reasonably expected, and the time it was provided. <strong>Example:</strong> A repair shop improperly secures an essential component on a customer&rsquo;s motorcycle, causing an accident. The inquiry focuses on rightfully expected safety rather than admitted negligence, subject to defenses where the service was not defective or the consumer or a third party was solely at fault.</p>
+  <p>Strict liability under the Consumer Act also applies to <mark class="hl"><strong>defective services</strong></mark>. A service is defective when <mark class="hl">it fails to provide the safety the consumer may rightfully expect</mark>, considering the manner of its performance, hazards reasonably expected, and the time it was provided. <strong>Example:</strong> A repair shop improperly secures an essential component on a customer&rsquo;s motorcycle, causing an accident. The inquiry focuses on rightfully expected safety rather than admitted negligence, subject to defenses where the service was not defective or the consumer or a third party was solely at fault.</p>
 
   <h4 id="ch17-p10-3" class="c-navy">3. Persons liable under the Consumer Act</h4>
   <ul>
-    <li><strong>A. Manufacturers, producers, and importers (<span class="art-ref" data-art="RA7394-97" tabindex="0">Art. 97</span>):</strong> Broader than factory owners; a person who places products into commerce under their own brand/trademark may qualify as a manufacturer even when another entity physically produces the goods.</li>
-    <li><strong>B. Sellers or tradesmen (<span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>):</strong> Sellers are <strong>not automatically liable in the same manner as manufacturers under Art. 97</strong>. Article 98 imposes liability where: (1) manufacturer, builder, producer, or importer cannot be identified; (2) product is supplied without clear identification of the responsible entity; or (3) seller fails to preserve perishable goods adequately (e.g., grocery store negligently failing to refrigerate meat).</li>
-    <li><strong>C. Components manufacturer (<span class="art-ref" data-art="RA7394-106" tabindex="0">Article 106</span>):</strong> Provides for <strong>joint liability</strong> involving the responsible component manufacturer, builder, or importer and the party that incorporated the component into the product or service (e.g., defective brake component inside an assembled car).</li>
+    <li><strong>A. Manufacturers, producers, and importers (<span class="art-ref" data-art="RA7394-97" tabindex="0">Art. 97</span>):</strong> Broader than factory owners; <mark class="hl">a person who places products into commerce under their own brand/trademark may qualify as a manufacturer</mark> even when another entity physically produces the goods.</li>
+    <li><strong>B. Sellers or tradesmen (<span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>):</strong> Sellers are <mark class="hl"><strong>not automatically liable in the same manner as manufacturers under Art. 97</strong></mark>. Article 98 imposes liability where: (1) <mark class="hl">manufacturer, builder, producer, or importer cannot be identified</mark>; (2) <mark class="hl">product is supplied without clear identification of the responsible entity</mark>; or (3) <mark class="hl">seller fails to preserve perishable goods adequately</mark> (e.g., grocery store negligently failing to refrigerate meat).</li>
+    <li><strong>C. Components manufacturer (<span class="art-ref" data-art="RA7394-106" tabindex="0">Article 106</span>):</strong> Provides for <mark class="hl"><strong>joint liability</strong> involving the responsible component manufacturer, builder, or importer and the party that incorporated the component</mark> into the product or service (e.g., defective brake component inside an assembled car).</li>
   </ul>
 
   <!-- Pure HTML Visual Summary Card (Fallback for Image Slot 5) -->
@@ -2182,7 +2220,7 @@ blockquote {
     </div>
   </div>
 
-  <p>A product is not necessarily defective merely because it malfunctions, is of lower quality, or fails to meet a consumer&rsquo;s personal preference. <strong><span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span> uses a safety-based standard:</strong> whether the product offers the safety rightfully expected of it, considering the relevant circumstances.</p>
+  <p>A product is not necessarily defective merely because it malfunctions, is of lower quality, or fails to meet a consumer&rsquo;s personal preference. <mark class="hl"><strong><span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span> uses a safety-based standard:</strong> whether the product offers the safety rightfully expected of it</mark>, considering the relevant circumstances.</p>
 
   <div class="ui-box">
     <div class="ui-grid">
@@ -2195,8 +2233,8 @@ blockquote {
 
   <h4 id="ch17-p11-1" class="c-navy">1. Manufacturing defect &amp; 2. Design defect</h4>
   <ul>
-    <li><strong>Manufacturing defect:</strong> Occurs when a particular product departs from its intended design or manufacturing specifications (e.g., 1 out of 10,000 electric fans has an improperly installed wire). <em>The design itself may be safe, but the particular unit was improperly manufactured.</em></li>
-    <li><strong>Design defect:</strong> Exists when the product&rsquo;s intended design itself gives rise to a legally relevant safety defect (e.g., every kettle&rsquo;s handle is placed too close to the heating element). <strong>Manufacturing defect = deviation from the design. Design defect = problem with the design itself.</strong></li>
+    <li><strong>Manufacturing defect:</strong> Occurs when <mark class="hl">a particular product departs from its intended design or manufacturing specifications</mark> (e.g., 1 out of 10,000 electric fans has an improperly installed wire). <em>The design itself may be safe, but the particular unit was improperly manufactured.</em></li>
+    <li><strong>Design defect:</strong> Exists when <mark class="hl">the product&rsquo;s intended design itself gives rise to a legally relevant safety defect</mark> (e.g., every kettle&rsquo;s handle is placed too close to the heating element). <strong>Manufacturing defect = deviation from the design. Design defect = problem with the design itself.</strong></li>
   </ul>
 
   <h4 id="ch17-p11-3" class="c-navy">3. How do courts evaluate design defects? (Comparative tests)</h4>
@@ -2207,17 +2245,17 @@ blockquote {
   </ol>
 
   <h4 id="ch17-p11-4" class="c-navy">4. Test under the Consumer Act (<span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>)</h4>
-  <p>A product is defective when it fails to offer the safety rightfully expected of it, considering: (a) its presentation; (b) its reasonably expected use and hazards; and (c) the time it was placed into circulation. A product is <strong>not defective merely because a better-quality product later enters the market</strong> (e.g., a 2020 car is not defective just because a 2026 model has newer safety tech).</p>
+  <p>A product is defective when it fails to offer the safety rightfully expected of it, considering: (a) its presentation; (b) its reasonably expected use and hazards; and (c) the time it was placed into circulation. A product is <mark class="hl"><strong>not defective merely because a better-quality product later enters the market</strong></mark> (e.g., a 2020 car is not defective just because a 2026 model has newer safety tech).</p>
 
   <h4 id="ch17-p11-5" class="c-navy">5. Packaging and presentation defect &amp; 6. Lack of warning</h4>
   <ul>
     <li><strong>Packaging/presentation:</strong> Selling a concentrated chemical in a beverage-like bottle or leaky packaging creates unreasonable danger.</li>
-    <li><strong>Lack of warning (<span class="art-ref" data-art="RA7394-74,RA7394-76,RA7394-77" tabindex="0">Arts. 74, 76, 77</span>):</strong> Failing to warn of foreseeable hazards (e.g., dangerous fumes when two cleaners are mixed). Compulsory labeling/fair packaging rules require minimum hazard information. Regarding the American <em>Woodill</em> debate over whether manufacturer knowledge is required: for Philippine purposes, <strong>Article 97 expressly covers insufficient or inadequate information on product use and hazards and imposes liability independently of fault</strong>&mdash;so do not automatically import foreign negligence requirements into Art. 97.</li>
+    <li><strong>Lack of warning (<span class="art-ref" data-art="RA7394-74,RA7394-76,RA7394-77" tabindex="0">Arts. 74, 76, 77</span>):</strong> Failing to warn of foreseeable hazards (e.g., dangerous fumes when two cleaners are mixed). Compulsory labeling/fair packaging rules require minimum hazard information. Regarding the American <em>Woodill</em> debate over whether manufacturer knowledge is required: for Philippine purposes, <mark class="hl"><strong>Article 97 expressly covers insufficient or inadequate information on product use and hazards and imposes liability independently of fault</strong></mark>&mdash;so do not automatically import foreign negligence requirements into Art. 97.</li>
   </ul>
 
   <h3 id="ch17-part-12" class="c-navy">Part 12 &mdash; Proving a Product Defect</h3>
   <p><em>Textbook: pp. 926&ndash;927</em></p>
-  <p>When a defective product is destroyed in the accident (e.g., an exploded pressure cooker), courts may consider circumstantial evidence supporting the conclusion that a defect existed and caused the injury. Under the American <strong>malfunction doctrine</strong>, an abnormal malfunction during proper use, together with evidence excluding other reasonable explanations, may support an inference of defect.</p>
+  <p>When a defective product is destroyed in the accident (e.g., an exploded pressure cooker), courts may consider circumstantial evidence supporting the conclusion that a defect existed and caused the injury. Under the American <strong>malfunction doctrine</strong>, <mark class="hl">an abnormal malfunction during proper use, together with evidence excluding other reasonable explanations, may support an inference of defect</mark>.</p>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Malfunction doctrine</th><th><em>Res ipsa loquitur</em></th></tr></thead>
@@ -2228,20 +2266,20 @@ blockquote {
       </tbody>
     </table>
   </div>
-  <p><strong>Important:</strong> The textbook presents the malfunction doctrine primarily through foreign jurisprudence. Do not treat it as an independently codified Philippine rule under R.A. No. 7394.</p>
+  <p><strong>Important:</strong> The textbook presents the malfunction doctrine primarily through foreign jurisprudence. <mark class="hl">Do not treat it as an independently codified Philippine rule under R.A. No. 7394.</mark></p>
 
   <h3 id="ch17-part-13" class="c-navy">Part 13 &mdash; Defenses to Strict Product Liability</h3>
   <p><em>Textbook: pp. 928&ndash;929</em></p>
   <h4 id="ch17-p13-1" class="c-navy">1. Defenses under <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span></h4>
   <p>The manufacturer, builder, producer, or importer is not liable when it establishes:</p>
   <ol>
-    <li><strong>It did not place the product on the market</strong> (e.g., counterfeit device).</li>
-    <li><strong>The product had no defect</strong>, even though it was placed on the market.</li>
-    <li><strong>The consumer or a third party was solely at fault</strong> (e.g., consumer completely dismantles essential safety components).</li>
+    <li><mark class="hl"><strong>It did not place the product on the market</strong></mark> (e.g., counterfeit device).</li>
+    <li><mark class="hl"><strong>The product had no defect</strong></mark>, even though it was placed on the market.</li>
+    <li><mark class="hl"><strong>The consumer or a third party was solely at fault</strong></mark> (e.g., consumer completely dismantles essential safety components).</li>
   </ol>
 
   <h4 id="ch17-p13-2" class="c-navy">2. Comparative negligence</h4>
-  <p>The key statutory wording is <strong>solely at fault</strong>. The textbook emphasizes that the statutory defense requires sole fault and questions applying comparative-negligence rules that might undermine strict liability under Art. 97.</p>
+  <p>The key statutory wording is <mark class="hl"><strong>solely at fault</strong></mark>. The textbook emphasizes that the statutory defense requires sole fault and <mark class="hl">questions applying comparative-negligence rules that might undermine strict liability under Art. 97</mark>.</p>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Sole fault</th><th>Contributory or comparative fault</th></tr></thead>
