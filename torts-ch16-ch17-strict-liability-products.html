@@ -164,6 +164,27 @@ blockquote {
   font-style: italic;
 }
 
+/* Professor Commentary & Class Discussion Callouts */
+.lecture-box {
+  background: #F0FDFA;
+  border: 1px solid #99F6E4;
+  border-left: 4px solid #0F766E;
+  border-radius: 6px;
+  padding: 0.9rem 1.15rem;
+  margin: 1.15rem 0;
+}
+.lecture-box-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0F766E;
+  margin-bottom: 0.4rem;
+}
+.lecture-box p:last-child, .lecture-box ul:last-child, .lecture-box ol:last-child {
+  margin-bottom: 0;
+}
+
 /* Context Breadcrumb & Statutory Compass Box */
 .context-compass {
   background: #F8FAFC;
@@ -715,6 +736,7 @@ blockquote {
       <option value="#ch17-part-14">&nbsp;&nbsp;Part 14 &mdash; High-Yield Distinctions</option>
       <option value="#ch17-part-15">&nbsp;&nbsp;Part 15 &mdash; Memory Aids and Bar Examination Review</option>
       <option value="#ch17-part-16">&nbsp;&nbsp;Part 16 &mdash; Knowledge Confirmation (Interactive Quiz)</option>
+      <option value="#lecture-appendix">LECTURE APPENDIX &mdash; Assignments, Reporting Groups &amp; Next Meeting</option>
     </select>
     <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
   </div>
@@ -808,6 +830,36 @@ blockquote {
     </table>
   </div>
   <p><strong>Remember:</strong> The phrase <em>strict liability</em> does not automatically eliminate all defenses. We must read the specific statutory provision.</p>
+
+  <h4 id="ch16-i-c" class="c-navy">C. Placement Among the Three Types of Torts, Rationale &amp; Traditional Categories <span class="summary-pill" style="background:#CCFBF1; color:#0F766E; vertical-align:middle;">Lecture Supplement</span></h4>
+  <p>As emphasized in the professor&rsquo;s lecture, Philippine tort law is organized into three primary categories:</p>
+  <ol>
+    <li><strong>Negligent Torts (<em>Quasi-Delict</em>):</strong> Liability founded upon fault or negligence causing damage to another.</li>
+    <li><strong>Human Relations or Intentional Torts:</strong> Liability arising from willful or bad-faith acts violating standards of justice, honesty, and good morals, governed principally by <span class="art-ref" data-art="19,20,21" tabindex="0">Articles 19, 20, and 21 of the Civil Code</span> (introduced earlier in Persons and Family Relations and covered later in the course).</li>
+    <li><strong>Strict Liability Torts:</strong> Liability imposed irrespective of the tortfeasor&rsquo;s fault or negligence&mdash;because of the inherent nature of the activity, transaction, or legal relationship, the law imposes a heightened duty of caution where liability attaches once injury results.</li>
+  </ol>
+  <p><strong>Policy Foundations and Rationale (Lecture):</strong></p>
+  <ol>
+    <li><mark class="hl"><strong>Risk Allocation:</strong></mark> Rooted in economics and public policy, strict liability shifts the burden of loss onto the party best positioned to manage, insure against, or absorb the risk (typically corporations, manufacturers, or actors engaging in inherently hazardous enterprises).</li>
+    <li><mark class="hl"><strong>Injury Prevention:</strong></mark> It incentivizes actors to adopt maximum safety precautions or reconsider conducting abnormally dangerous activities altogether.</li>
+    <li><mark class="hl"><strong>Simplification of Proof:</strong></mark> Unlike <em>quasi-delict</em>, strict liability relieves injured plaintiffs of the often insurmountable evidentiary burden of proving exactly how a defendant or manufacturer acted negligently behind closed doors.</li>
+  </ol>
+  <p><strong>Three Traditional Categories of Strict Liability:</strong></p>
+  <ol>
+    <li><strong>Ultrahazardous or Abnormally Dangerous Activities:</strong> Activities creating a foreseeable and highly significant risk of physical harm even when reasonable care is exercised (e.g., building demolition, storage of radioactive materials, keeping large quantities of explosives or toxic chemicals).</li>
+    <li><strong>Keeping Wild or Dangerous Animals:</strong> Owners or keepers of wild or dangerous animals (e.g., lions, bears, venomous snakes) are strictly liable for harm caused, as these animals possess natural inclinations to be dangerous.</li>
+    <li><strong>Products Liability:</strong> Manufacturers, distributors, and retailers may be held strictly liable when a defective product placed into the stream of commerce causes injury&mdash;traditionally grouped into:
+      <ul>
+        <li><strong>Manufacturing Defects:</strong> Flaws occurring during production (even with high-caliber machinery) that cause an item to depart from its intended design.</li>
+        <li><strong>Design Defects:</strong> Inherent flaws in the product&rsquo;s design rendering it unreasonably dangerous even when manufactured perfectly according to specifications.</li>
+        <li><strong>Marketing Defects (Failure to Warn):</strong> Inadequate instructions or failure to warn consumers of non-obvious, hidden dangers.</li>
+      </ul>
+    </li>
+  </ol>
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Commentary &amp; Bar Insights &mdash; Pet Snakes</div>
+    <p>With respect to keeping wild or dangerous animals, even though many people today keep <mark class="hl">non-venomous snakes as pets (and non-venomous species outnumber venomous ones), such animals still retain a natural inclination to be dangerous</mark> and therefore carry the inherent capacity to inflict injury for which strict liability may attach.</p>
+  </div>
 
   <hr>
 
@@ -911,18 +963,24 @@ blockquote {
   <p>The decisive consideration is the legally relevant <mark class="hl"><strong>possession or use</strong>, not simply whose name appears on an ownership record</mark>.</p>
 
   <h4 id="ch16-iii-e" class="c-navy">E. The only two statutory grounds for cessation of liability</h4>
-  <p><strong>1. <mark class="hl">Force majeure</mark></strong></p>
-  <p>Damage caused by an extraordinary event meeting the legal requirements of force majeure, rather than merely the animal escaping despite precautions.</p>
-  <p><strong>2. <mark class="hl">Fault of the injured person</mark></strong></p>
-  <p>For example, a person deliberately provokes a properly confined animal, and that person&rsquo;s conduct causes the injury.</p>
+  <p>Responsibility ceases <strong>only</strong> if the defendant proves that the damage was caused by:</p>
+  <ol>
+    <li><mark class="hl"><strong>Force majeure:</strong></mark> Damage caused by an extraordinary event meeting the legal requirements of force majeure, rather than merely the animal escaping despite precautions.</li>
+    <li><mark class="hl"><strong>Fault of the injured person:</strong></mark> For example, a person deliberately provokes a properly confined animal, and that person&rsquo;s conduct causes the injury.</li>
+  </ol>
   <p>The textbook discusses Manresa&rsquo;s explanation that <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span> imposes liability even where another person&rsquo;s fault contributes to the occurrence, unless the applicable statutory exception is established.</p>
   <p>Thus, <span class="c-rust"><strong><u><mark class="hl">the intervention of a third person does not necessarily exonerate the possessor</mark></u></strong></span>. The defendant cannot merely point to another person&rsquo;s negligence and assume Article 2183 no longer applies.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Commentary &amp; Bar Insights &mdash; &ldquo;Aso Mo, Tali Mo&rdquo; Ordinances</div>
+    <p>Local ordinances such as <mark class="hl"><em>&ldquo;Aso Mo, Tali Mo&rdquo;</em></mark> reinforce this statutory responsibility because animal bites (particularly dog bites) carry the risk of <mark class="hl">rabies, which can be fatal if not treated immediately</mark>. Pet owners&mdash;and anyone merely possessing or using an animal&mdash;must be mindful of this strict accountability.</p>
+  </div>
 
   <h4 id="ch16-iii-f" class="c-navy">F. Cases discussed in the textbook</h4>
   <p><strong>1. <span class="c-burgundy"><em>Vestil v. Intermediate Appellate Court</em></span></strong><br>
   <span class="c-teal">G.R. No. 74431</span>, November 6, 1989</p>
-  <p>The textbook discusses a child who died following a dog-bite incident while playing at a residence in Cebu.</p>
-  <p>The important doctrine is that <mark class="hl">liability can attach to a <strong>possessor</strong> of an animal even if that person is not its owner</mark>.</p>
+  <p><strong>Material Facts (Lecture):</strong> A young child died after being bitten by a dog while playing with the petitioners&rsquo; child at the house of Purita Vestil&rsquo;s late father, Vicente Miranda, on F. Ramos Street in Cebu City.</p>
+  <p><strong>Issue &amp; Ruling:</strong> Whether Purita Vestil could be held liable under <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span> despite not being the dog&rsquo;s legal owner. <strong>Yes.</strong> The Supreme Court held Vestil liable: <mark class="hl">liability under Article 2183 does not require ownership; being a <strong>mere possessor</strong> of the animal at the time the injury occurred suffices for strict liability to attach</mark>.</p>
   <p><strong>2. <span class="c-burgundy"><em>Milagros Ibarado v. Pelagia Nava</em></span></strong><br>
   <span class="c-teal">CA-G.R. No. 22887-R</span>, January 8, 1963</p>
   <p>The textbook discusses responsibility arising from a dog kept at the premises with the knowledge and consent of a person exercising control over the property.</p>
@@ -984,6 +1042,11 @@ blockquote {
   <p>The textbook also contrasts <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> with <span class="art-ref" data-art="2183" tabindex="0">Article 2183</span>: Article 2193 contains <span class="c-rust"><strong><u><mark class="hl">no express force majeure exemption</mark></u></strong></span>. The author nevertheless acknowledges an opinion that force majeure may excuse liability in truly extraordinary circumstances.</p>
   <p>For recitation, distinguish what the provision expressly says from the author&rsquo;s discussion of possible exceptional defenses.</p>
 
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Commentary &amp; Bar Insights &mdash; Absolute Nature &amp; 2026 Bar Exam</div>
+    <p>Liability under <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> is <mark class="hl"><strong>absolute</strong>&mdash;it does not merely establish a disputable presumption of negligence, nor does it admit proof of due care or diligence as a defense</mark>. <span class="art-ref" data-art="2193" tabindex="0">Article 2193</span> was tested in a <mark class="hl"><strong>2026 Civil Law Bar Examination</strong></mark> problem! Note that the 2026 Bar Exam returned to <strong>layering of issues</strong>, where Article 2193 appeared as one core issue inside a multi-issue problem.</p>
+  </div>
+
   <h4 id="ch16-iv-f" class="c-navy">F. Comparison: Animals versus Falling Objects</h4>
   <div class="table-scroll">
     <table class="ui-table">
@@ -1043,13 +1106,18 @@ blockquote {
   <p>This section requires special attention because the Supreme Court subsequently clarified the law.</p>
 
   <h4 id="ch16-v-a" class="c-navy">A. How the textbook explains Article 1711</h4>
-  <p><span class="art-ref" data-art="1711" tabindex="0">Article 1711</span> originally imposed an obligation on owners of enterprises and other employers to pay compensation for work-related death, injury, or disease, even where the harmful event was purely accidental or due to a fortuitous cause.</p>
-  <p>The provision also identified circumstances affecting liability, including the employee&rsquo;s own notorious negligence, voluntary act, drunkenness, or contributory lack of due care.</p>
+  <p><span class="art-ref" data-art="1711" tabindex="0">Article 1711</span> originally imposed an obligation on owners of enterprises and other employers to pay compensation for work-related death, injury, or disease, even where the harmful event was purely accidental or due to a fortuitous cause (provided it arose out of and in the course of employment).</p>
+  <p>Under the original text, liability ceased only when caused by any of the following employee acts (while contributory lack of due care equitably reduced compensation):</p>
+  <ol>
+    <li>Notorious negligence;</li>
+    <li>Voluntary act; or</li>
+    <li>Drunkenness.</li>
+  </ol>
   <p><strong>Example:</strong> An employee suffers an accidental injury while performing assigned duties. Under the original Article 1711 framework, compensation could arise even without proof of negligence by the employer.</p>
   <p>The textbook discusses differing judicial approaches to whether Article 1711 survived the later enactment of the Labor Code.</p>
 
   <h4 id="ch16-v-b" class="c-navy">B. Important current-law clarification</h4>
-  <blockquote><strong>Controlling Supreme Court doctrine:</strong> In <span class="c-burgundy"><strong><em>Oceanmarine Resources Corporation v. Nedic</em></strong></span> (<span class="c-teal">G.R. No. 236263</span>, July 19, 2022), the Supreme Court, sitting En Banc, declared <span class="c-rust"><strong><u><mark class="hl">Article 1711 impliedly repealed by Title II, Book IV of the Labor Code</mark></u></strong></span>, subject to the decision&rsquo;s prospective-application guidelines.</blockquote>
+  <blockquote><strong>Controlling Supreme Court doctrine:</strong> In <span class="c-burgundy"><strong><em>Oceanmarine Resources Corporation v. Nedic</em></strong></span> (<span class="c-teal">G.R. No. 236263</span>, July 19, 2022), the Supreme Court, sitting En Banc, declared <span class="c-rust"><strong><u><mark class="hl">Article 1711 impliedly repealed by Title II, Book IV of the Labor Code</mark></u></strong></span> (specifically its Employees&rsquo; Compensation provisions), <mark class="hl">as a special law prevails over and repeals a general law on the same subject matter</mark>, subject to the decision&rsquo;s prospective-application guidelines.</blockquote>
   <p>This means that <mark class="hl">we must not treat Article 1711 as an independently operative basis for new work-injury compensation claims today</mark>.</p>
 
   <h4 id="ch16-v-c" class="c-navy">C. What remedies remain available?</h4>
@@ -1174,7 +1242,12 @@ blockquote {
   <p>Suppose you own a house beside a poultry farm. The farm releases foul odors that regularly enter your home and substantially interfere with your family&rsquo;s ordinary use of the property.</p>
   <p>Even if the operator is not shown to have been negligent, the activity may constitute a nuisance if the statutory conditions are satisfied.</p>
   <p>The governing principle is that <strong>the exercise of one&rsquo;s property rights must respect the rights of others</strong>.</p>
-  <p>The textbook relates this principle to <span class="art-ref" data-art="702" tabindex="0">Article 702</span> on the reasonable limitations inherent in ownership, including restrictions imposed to prevent injury to others.</p>
+  <p>The textbook relates this principle to <span class="art-ref" data-art="682" tabindex="0">Article 682</span> (cited as <span class="art-ref" data-art="702" tabindex="0">Article 702</span> during the lecture; <span class="art-ref" data-art="682" tabindex="0">Art. 682</span> governs the legal easement against nuisance) on the reasonable limitations inherent in ownership. Specifically, <mark class="hl">every building or piece of land is subject to the legal easement prohibiting the proprietor or possessor from committing nuisance through <strong>noise, jarring, offensive odor, smoke, heat, dust, water, glare, and other causes</strong></mark>.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Commentary &amp; Hypothetical &mdash; Videoke &amp; Five Grounds</div>
+    <p>Memorize the exact five-ground definition of nuisance under <span class="art-ref" data-art="694" tabindex="0">Article 694</span>. Notice how broad its scope is&mdash;covering anything that merely <em>&ldquo;annoys or offends the senses.&rdquo;</em> For example, while a homeowner has the right to own and use a <mark class="hl">videoke machine</mark> on his own property, <mark class="hl">operating it loudly all night until morning annoys and offends the senses of neighbors and constitutes a nuisance through noise</mark>. The affected neighbors may seek abatement and recover damages.</p>
+  </div>
 
   <h5>B. Under the Code on Sanitation</h5>
   <p><strong><span class="art-ref" data-art="PD856-84" tabindex="0">Presidential Decree No. 856, Section 84</span></strong> defines nuisance in terms of injury to health, danger to life, offense to the senses, or discomfort to the community.</p>
@@ -1239,10 +1312,10 @@ blockquote {
 
   <h5>B. Nuisance per se versus nuisance per accidens</h5>
   <p>This is another extremely important distinction.</p>
-  <p><strong>Nuisance per se:</strong> A nuisance <mark class="hl"><strong>at all times and under all circumstances</strong>, because of its inherent nature</mark>.</p>
-  <p><em>Example:</em> An open, dangerous obstruction intrinsically interfering with a public roadway.</p>
+  <p><strong>Nuisance per se:</strong> A nuisance <mark class="hl"><strong>at all times and under all circumstances</strong>, because of its inherent nature</mark> (regardless of location or surroundings).</p>
+  <p><em>Examples:</em> An open, dangerous obstruction intrinsically interfering with a public roadway; or, as noted in class, a <strong>gambling den</strong> or a <strong>house of prostitution</strong>.</p>
   <p><strong>Nuisance per accidens:</strong> Something that is not inherently a nuisance but <mark class="hl"><strong>becomes one because of its location, manner of operation, circumstances, or surrounding conditions</strong></mark>.</p>
-  <p><em>Example:</em> An otherwise lawful industrial activity that produces intolerable noise beside a residential neighborhood.</p>
+  <p><em>Examples:</em> An otherwise lawful industrial activity&mdash;such as a <strong>lawful car manufacturing facility or commercial plant</strong>&mdash;that produces intolerable noise or interference inside a quiet residential neighborhood.</p>
 
   <h5>Why does this distinction matter?</h5>
   <p>Because a lawful business is not automatically a nuisance merely because someone dislikes it.</p>
@@ -1256,12 +1329,24 @@ blockquote {
   <h5>C. Cases discussed in the textbook</h5>
   <p><strong><span class="c-burgundy"><em>Bengzon v. Province of Pangasinan</em></span></strong><br>
   <span class="c-teal">62 Phil. 816</span></p>
-  <p>The textbook discusses a water-pumping installation whose operation allegedly caused vibration, noise, and discomfort.</p>
+  <p>The respondent Province constructed and operated a water-pumping plant in close proximity to the plaintiff&rsquo;s residence. While constructing a water-pumping plant is not a nuisance <em>per se</em>, operating it right next to a residential area rendered the plaintiff&rsquo;s property uninhabitable due to the <mark class="hl"><strong>noise, smoke, vibrations, odors, and sparks</strong></mark> emitted by the plant, thereby making it a <strong>nuisance <em>per accidens</em></strong>.</p>
   <p>The case illustrates the evaluation of a particular activity in light of its actual effects on adjoining occupants.</p>
-  <p><strong><span class="c-burgundy"><em>De Ayala v. Barretto</em></span></strong></p>
-  <p>The textbook contrasts this with a brewery&rsquo;s operation, where the Court did not treat the activity as a nuisance merely because of the asserted noise or smell. The actual conditions and their effect on the neighborhood mattered.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Class Discussion &amp; Socratic Takeaways &mdash; &ldquo;Pax Silica&rdquo; AI Hub Hypothetical</div>
+    <ul>
+      <li><strong>Question / Issue Posed:</strong> Would the proposed construction and operation of <strong>&ldquo;Pax Silica&rdquo;</strong>&mdash;a massive, US-led AI processing hub reportedly occupying ~1,600 hectares in New Clark City, Tarlac (Capas), requiring massive electricity and water supplies, clearing forest areas, and allegedly risking displacement of indigenous peoples from ancestral lands&mdash;constitute a nuisance <em>per se</em> or a nuisance <em>per accidens</em>?</li>
+      <li><strong>Arguments for Nuisance <em>Per Accidens</em> (Ventura, Galvez, Nuesca, Juan):</strong> The construction or existence of an AI hub is not inherently unlawful or harmful at all times. It becomes a nuisance only depending on the <strong>manner and circumstances of its operation</strong> (e.g., if noise, water depletion, or air quality deterioration actually interferes with nearby residents&rsquo; enjoyment of life and property) and whether permits/environmental regulations are violated.</li>
+      <li><strong>Arguments for Nuisance <em>Per Se</em> (Macalino, Galamiton, Armas):</strong> Because an AI hub by its very nature operates continuously (24/7) and inherently demands massive water and power grid consumption, generates chemical waste (e.g., nickel/copper runoff) and noise, and&mdash;per Armas&mdash;conflicts with constitutional and IPRA protections over ancestral lands, it is inherently harmful under any and all circumstances once erected.</li>
+      <li><strong>Status &mdash; <code>[Open / Unresolved Discussion]</code>:</strong> No definitive doctrinal conclusion was reached, as Pax Silica is a new project with no Supreme Court jurisprudence yet. The professor noted that the class generally recognized the potential nuisance impacts (noise, water, air quality), while leaving the classification as <em>per se</em> versus <em>per accidens</em> open to either well-defended position.</li>
+    </ul>
+  </div>
+
+  <p><strong><span class="c-burgundy"><em>De Ayala et al. v. Barretto et al.</em></span></strong></p>
+  <p>The textbook contrasts this with petitioners seeking to restrain the construction and operation of a brewery in a <mark class="hl"><strong>semi-industrial locality</strong></mark>, where the Supreme Court held that the brewery was <strong>not a nuisance</strong> based on actual conditions and its effect on the neighborhood:</p>
+  <blockquote><mark class="hl">&ldquo;No one is entitled to absolute quiet in the enjoyment of his property. He may only insist upon a degree of quietness consistent with the standard of comfort prevailing in the locality in which he dwells.&rdquo;</mark></blockquote>
   <p><strong>Key doctrine:</strong> <mark class="hl">Nuisance is often a question of degree, context, and reasonable enjoyment.</mark></p>
-  <p>An activity that may be tolerable in an industrial district may be unreasonable in a quiet residential subdivision.</p>
+  <p>An activity that may be tolerable in an industrial or semi-industrial district may be unreasonable in a quiet residential subdivision.</p>
   <p>Relevant considerations include the nature of the locality, the character and magnitude of the interference, its duration, and surrounding circumstances.</p>
 
   <h4 id="ch16-vi-503" class="c-navy">5.03. Strict Liability and Persons Liable</h4>
@@ -1312,6 +1397,11 @@ blockquote {
     </div>
   </div>
 
+  <figure class="img-figure">
+    <img src="images/torts-ch16-ch17-strict-liability-products/02-nuisance-classification-and-abatement.jpg" alt="Classification of nuisance under Civil Code Arts. 694-695 (per se vs per accidens, public vs private) and judicial vs extrajudicial abatement safeguards under Arts. 699-707" />
+    <figcaption><strong>Figure 1 &mdash; Nuisance Classification &amp; Extrajudicial Abatement Flowchart (<span class="art-ref" data-art="694-707" tabindex="0">Arts. 694&ndash;707</span>):</strong> Whether a nuisance is public (specially injurious, <span class="art-ref" data-art="703" tabindex="0">Art. 703</span>) or private (<span class="art-ref" data-art="706" tabindex="0">Art. 706</span>), a private person&rsquo;s extrajudicial abatement must satisfy all four <span class="art-ref" data-art="704" tabindex="0">Article 704</span> safeguards&mdash;demand, rejection, DHO approval with local police assistance, and the &#8369;3,000 destruction cap.</figcaption>
+  </figure>
+
   <h5>A. Public nuisance &mdash; <span class="art-ref" data-art="699" tabindex="0">Article 699</span></h5>
   <p>The remedies are:</p>
   <ol>
@@ -1331,7 +1421,7 @@ blockquote {
       <tbody>
         <tr><td><span class="art-ref" data-art="700" tabindex="0">700</span></td><td>The district health officer shall see that one or more remedies are availed of.</td></tr>
         <tr><td><span class="art-ref" data-art="701" tabindex="0">701</span></td><td>A civil action arising from the maintenance of a public nuisance shall be commenced by the city or municipal mayor.</td></tr>
-        <tr><td><span class="art-ref" data-art="702" tabindex="0">702</span></td><td>The district health officer determines whether abatement without judicial proceedings is the best remedy.</td></tr>
+        <tr><td><span class="art-ref" data-art="702" tabindex="0">702</span></td><td>The district health officer determines whether abatement without judicial proceedings is the best remedy, and is liable for damages if he fails to perform his duty or is guilty of gross negligence.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1359,6 +1449,11 @@ blockquote {
   <p>The existence of a nuisance does not give someone unlimited authority to destroy another person&rsquo;s property.</p>
   <p>The affected person must establish the applicable right to relief and comply with <span class="art-ref" data-art="704" tabindex="0">Article 704</span>&rsquo;s requirements before resorting to the statutory extrajudicial procedure.</p>
   <p>The overarching rule is that <strong>abatement must be lawful, necessary, and conducted without unnecessary injury or breach of the peace</strong>.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Illustration &mdash; Backyard Piggery in a Residential Area</div>
+    <p>If a neighbor operates a <strong>backyard piggery</strong> inside a residential area, it causes foul odors and health hazards even if kept clean. Upon complaint by neighbors, local health officers may inspect and order its closure as a public nuisance. If a private neighbor instead wishes to abate the nuisance personally without going to court, he must strictly follow all four requisites under <span class="art-ref" data-art="704" tabindex="0">Article 704</span> (including the &#8369;3,000 destruction cap); otherwise, he should ask the proper public officials to act.</p>
+  </div>
 
   <h5>C. Private nuisance &mdash; <span class="art-ref" data-art="705" tabindex="0">Articles 705</span> and <span class="art-ref" data-art="706" tabindex="0">706</span></h5>
   <p><span class="art-ref" data-art="705" tabindex="0">Article 705</span> provides two remedies:</p>
@@ -1395,11 +1490,11 @@ blockquote {
   <p>Republic Act No. 9514, the <strong>Revised Fire Code of the Philippines of 2008</strong>, contains provisions addressing fire hazards and their abatement.</p>
   <p><span class="art-ref" data-art="RA9514-8" tabindex="0">Section 8</span> prohibits acts including:</p>
   <ul>
-    <li>Blocking or obstructing fire exits and escape routes.</li>
-    <li>Obstructing access for firefighting vehicles.</li>
-    <li>Interfering with firefighting operations.</li>
-    <li>Obstructing fire lanes and access to hydrants.</li>
-    <li>Other acts compromising legally required fire safety measures.</li>
+    <li>Obstructing or blocking exit ways or access to buildings clearly marked for fire safety purposes (e.g., <strong>improper parking</strong>).</li>
+    <li><strong>Locking fire exits when people are inside the building.</strong></li>
+    <li>Constructing gates, entrances, or walkways to buildings, components, and yards that obstruct orderly and easy passage of fire lanes or access to fire hydrants.</li>
+    <li>Obstructing access for firefighting vehicles and interfering with firefighting operations.</li>
+    <li>Obstructing designated fire lanes and access to hydrants, and other acts compromising legally required fire safety measures.</li>
   </ul>
   <p><span class="art-ref" data-art="RA9514-9" tabindex="0">Section 9</span> provides for enforcement, abatement, and the declaration of qualifying dangerous buildings or structures as <strong>public nuisances</strong>.</p>
   <p>The connection to nuisance law is straightforward: a dangerous fire hazard may endanger not only the property occupant but also the surrounding community.</p>
@@ -1412,6 +1507,7 @@ blockquote {
     <li><mark class="hl"><strong>If unnecessary injury is caused</strong></mark>; or</li>
     <li><mark class="hl"><strong>If the alleged nuisance is subsequently declared by the courts not to be a real nuisance.</strong></mark></li>
   </ol>
+  <p><strong>Public officer standard:</strong> Failure to observe the procedure in <span class="art-ref" data-art="702" tabindex="0">Article 702</span> by a public officer is not itself a ground for the award of damages unless the officer <mark class="hl">fails to perform his duty or acts with gross negligence</mark>.</p>
   <p><strong>Example:</strong> Juan believes his neighbor&rsquo;s structure constitutes a nuisance. He destroys the structure without a sufficient legal basis.</p>
   <p>A court later determines that the structure was not a nuisance.</p>
   <p>Juan may be liable for the damage caused by his extrajudicial action.</p>
@@ -1430,6 +1526,7 @@ blockquote {
   <h4 id="ch16-vi-505" class="c-navy">5.05. Environmental Protection</h4>
   <p><em>Textbook pp. 887&ndash;888</em></p>
   <p>The chapter presents nuisance law as an additional means of environmental protection.</p>
+  <p>As highlighted in lecture, environmental nuisances encompass <mark class="hl"><strong>noise pollution</strong> (a common form), <strong>smoke, dust, odors, airborne pollutants, water pollutants, and hazardous substances</strong></mark>.</p>
   <h5>A. Noise pollution as nuisance</h5>
   <p>Noise is not automatically actionable merely because it can be heard. The legal inquiry involves whether the noise is injurious or unreasonable in its particular context.</p>
   <p>Relevant considerations discussed by the textbook include:</p>
@@ -1458,14 +1555,14 @@ blockquote {
   <!-- CH16 MODULE B SUMMARY CAPSTONE -->
   <div class="summary-capstone" id="summary-ch16-mod-b">
     <div class="summary-hdr">
-      <h4>Chapter 16, Module B Summary Brief Reviewer &mdash; Nuisance (<span class="art-ref" data-art="694-707" tabindex="0">Arts. 694&ndash;707</span>, <span class="art-ref" data-art="PD856-84,PD856-85" tabindex="0">P.D. 856</span>, <span class="art-ref" data-art="RA9514-8,RA9514-9" tabindex="0">R.A. 9514</span>)</h4>
+      <h4>Chapter 16, Module B Summary Brief Reviewer &mdash; Nuisance (<span class="art-ref" data-art="682" tabindex="0">Art. 682</span>, <span class="art-ref" data-art="694-707" tabindex="0">Arts. 694&ndash;707</span>, <span class="art-ref" data-art="PD856-84,PD856-85" tabindex="0">P.D. 856</span>, <span class="art-ref" data-art="RA9514-8,RA9514-9" tabindex="0">R.A. 9514</span>)</h4>
       <span class="summary-pill">Module Recap (Part VI)</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
       <ul>
-        <li><strong>Definitions &amp; Classifications:</strong> <span class="art-ref" data-art="694" tabindex="0">Art. 694</span>; <span class="art-ref" data-art="PD856-84,PD856-85" tabindex="0">P.D. 856 Secs. 84&ndash;85</span>; Public vs. Private (<span class="art-ref" data-art="695" tabindex="0">Art. 695</span>); <em>Per Se</em> vs. <em>Per Accidens</em> (<span class="c-burgundy"><em>Bengzon</em></span>; <span class="c-burgundy"><em>De Ayala</em></span>).</li>
-        <li><strong>Liability, Abatement &amp; Environment:</strong> Successive owners (<span class="art-ref" data-art="696" tabindex="0">Art. 696</span>), past damages (<span class="art-ref" data-art="697" tabindex="0">Art. 697</span>), imprescriptibility (<span class="art-ref" data-art="698" tabindex="0">Art. 698</span>), public/private remedies (<span class="art-ref" data-art="699-706" tabindex="0">Arts. 699&ndash;706</span>), <span class="art-ref" data-art="RA9514-8,RA9514-9" tabindex="0">Fire Code Secs. 8&ndash;9</span>, wrongful abatement (<span class="art-ref" data-art="707" tabindex="0">Art. 707</span>), and noise (<span class="c-burgundy"><em>Velasco v. Meralco</em></span>).</li>
+        <li><strong>Definitions, Easement &amp; Classifications:</strong> <span class="art-ref" data-art="682" tabindex="0">Art. 682</span> (legal easement against nuisance); <span class="art-ref" data-art="694" tabindex="0">Art. 694</span>; <span class="art-ref" data-art="PD856-84,PD856-85" tabindex="0">P.D. 856 Secs. 84&ndash;85</span>; Public vs. Private (<span class="art-ref" data-art="695" tabindex="0">Art. 695</span>); <em>Per Se</em> vs. <em>Per Accidens</em> (<span class="c-burgundy"><em>Bengzon</em></span>; <span class="c-burgundy"><em>De Ayala</em></span>; &ldquo;Pax Silica&rdquo; open class debate).</li>
+        <li><strong>Liability, Abatement &amp; Environment:</strong> Successive owners (<span class="art-ref" data-art="696" tabindex="0">Art. 696</span>), past damages (<span class="art-ref" data-art="697" tabindex="0">Art. 697</span>), imprescriptibility (<span class="art-ref" data-art="698" tabindex="0">Art. 698</span>), public/private remedies (<span class="art-ref" data-art="699-706" tabindex="0">Arts. 699&ndash;706</span>), <span class="art-ref" data-art="RA9514-8,RA9514-9" tabindex="0">Fire Code Secs. 8&ndash;9</span> (including locking fire exits while occupants are inside), wrongful abatement (<span class="art-ref" data-art="707" tabindex="0">Art. 707</span>), and environmental noise/pollutants (<span class="c-burgundy"><em>Velasco v. Meralco</em></span>).</li>
       </ul>
       <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
       <div class="table-scroll">
@@ -1479,9 +1576,9 @@ blockquote {
       </div>
       <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
       <ul>
-        <li><strong><em>Per Se</em> vs. <em>Per Accidens</em>:</strong> Inherent nuisances vs. lawful activities that become nuisances due to locality, duration, or degree.</li>
+        <li><strong><em>Per Se</em> vs. <em>Per Accidens</em>:</strong> Inherent nuisances vs. lawful activities that become nuisances due to locality, duration, or degree (&ldquo;no one is entitled to absolute quiet,&rdquo; <span class="c-burgundy"><em>De Ayala</em></span>).</li>
         <li><strong>Private Extrajudicial Abatement:</strong> Whether public (specially injurious, <span class="art-ref" data-art="703" tabindex="0">Art. 703</span>) or private (<span class="art-ref" data-art="706" tabindex="0">Art. 706</span>), a private person must follow <span class="art-ref" data-art="704" tabindex="0">Article 704</span>&rsquo;s 4 safeguards.</li>
-        <li><strong>Strict Risk of Wrongful Abatement (<span class="art-ref" data-art="707" tabindex="0">Art. 707</span>):</strong> Sincere belief does not protect an abater if unnecessary injury is inflicted or courts find no real nuisance.</li>
+        <li><strong>Wrongful Abatement &amp; Public Officer Standard (<span class="art-ref" data-art="702" tabindex="0">Art. 702</span> &amp; <span class="art-ref" data-art="707" tabindex="0">Art. 707</span>):</strong> Sincere belief does not protect an abater if unnecessary injury is inflicted or courts find no real nuisance; DHO procedure non-observance triggers damages only for failure to perform duty or gross negligence.</li>
       </ul>
       <div class="summary-trap-box">
         <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
@@ -1585,7 +1682,7 @@ blockquote {
     <li><strong>Litigation followed.</strong> The courts examined the responsibility of Allied Bank, Metrobank, and Producers Bank.</li>
   </ol>
 
-  <!-- Pure HTML Flow Diagram (Fallback for Image Slot 3) -->
+  <!-- Pure HTML Summary Flow Card -->
   <div class="ui-box ui-workflow">
     <div class="ui-step-card">
       <div class="ui-title">1. Unauthorized Check &amp; Forged Indorsement</div>
@@ -1610,6 +1707,11 @@ blockquote {
       </div>
     </div>
   </div>
+
+  <figure class="img-figure">
+    <img src="images/torts-ch16-ch17-strict-liability-products/03-unjust-enrichment-allied-banking.jpg" alt="Allied Banking v. Lim Sio Wan unjust enrichment money trail and liability diagram under Article 22" />
+    <figcaption><strong>Figure 2 &mdash; Unjust Enrichment via Debt Extinguishment (<span class="c-burgundy"><em>Allied Banking Corp. v. Lim Sio Wan</em></span>):</strong> Even without cash entering its vault directly, Producers Bank was unjustly enriched when unauthorized check proceeds discharged its matured obligation to FCC&mdash;requiring restitution under <span class="art-ref" data-art="22" tabindex="0">Article 22</span>.</figcaption>
+  </figure>
 
   <h4 id="ch16-viii-b" class="c-navy">B. How did Producers Bank become enriched?</h4>
   <p>This is the most important question for our study. Suppose you owe Maria &#8369;100,000. Instead of using your own money to pay her, somebody else&rsquo;s money is improperly transferred and applied toward settling your debt. The payment causes your obligation to Maria to be extinguished. Even if you did not physically receive the money into your own hands, <mark class="hl"><strong>you benefited because your debt was discharged</strong></mark>. That was the essential enrichment issue involving Producers Bank.</p>
@@ -1870,7 +1972,7 @@ blockquote {
   <h4 id="ch17-p4-1" class="c-navy">1. Fraud under the New Civil Code</h4>
   <p><strong>Simple explanation:</strong> A seller or manufacturer induces a consumer to purchase a product by making a false representation about it. Suppose a dealership advertises a secondhand vehicle as having never been flooded. The seller knows it suffered severe flood damage but deliberately conceals that fact. The buyer purchases the vehicle in reliance on the representation and later incurs substantial repair costs. The legal problem is not merely that the vehicle is defective. It is also that <strong>the buyer was deceived into purchasing it</strong>.</p>
   <h5><span class="art-ref" data-art="33" tabindex="0">Article 33</span> &mdash; Independent civil action for fraud</h5>
-  <p>Article 33 allows a civil action for damages, separate and distinct from the criminal action, in cases of fraud, defamation, and physical injuries. The plaintiff need only establish liability by <mark class="hl"><strong>preponderance of evidence</strong>, not proof beyond reasonable doubt</mark>. For purposes of Article 33, fraud is understood broadly and includes calculated deception, concealment, or other dishonest conduct resulting in damage.</p>
+  <p>Article 33 allows a civil action for damages, separate and distinct from the criminal action, in cases of fraud, defamation, and physical injuries. The plaintiff need only establish liability by <mark class="hl"><strong>preponderance of evidence</strong>, not proof beyond reasonable doubt</mark>. For purposes of Article 33, fraud is understood broadly and includes calculated deception, concealment, or other dishonest conduct resulting in damage. For instance, as noted in class, a seller or manufacturer who falsely represents that a <strong>cosmetic product has no side effects</strong> is liable to a buyer injured by those side effects.</p>
   <h5>Not every inaccurate statement constitutes actionable misrepresentation</h5>
   <div class="table-scroll">
     <table class="ui-table">
@@ -1884,6 +1986,7 @@ blockquote {
     </table>
   </div>
   <p>An opinion may still be actionable where the circumstances establish legally significant deception. The substance and surrounding circumstances matter more than the seller&rsquo;s choice of words.</p>
+  <p><strong>Puffery / <em>dealer&rsquo;s talk</em>:</strong> The law does not exact strict good faith from a seller in <mark class="hl"><strong>vague commendations</strong> of wares (<em>dealer&rsquo;s talk</em> or <em>puffery</em>)</mark>, which are manifestly open to difference of opinion, do not imply untrue assertions of direct observation, and are universally understood to be distrusted. Where a seller makes a <strong>deliberate false assertion of fact</strong> (such as falsely claiming personal use to induce buyers), actionable fraud arises.</p>
 
   <h4 id="ch17-p4-2" class="c-navy">2. Fraud under the Consumer Act</h4>
   <p><strong><span class="art-ref" data-art="RA7394-50" tabindex="0">Article 50 of R.A. No. 7394</span></strong> prohibits deceptive sales acts or practices. It covers deception occurring <mark class="hl"><strong>before, during, or after</strong> a consumer transaction</mark>. Examples include falsely representing that a product is new, that it possesses certain benefits, that repairs are necessary, or that a particular warranty exists.</p>
@@ -1891,6 +1994,25 @@ blockquote {
   <h5>Remedy under the Consumer Act &mdash; <span class="art-ref" data-art="RA7394-60" tabindex="0">Article 60</span></h5>
   <p>Under Article 60, violations may result in statutory penalties. In addition, the court may grant an injunction and actual damages, or other appropriate relief, to redress injury resulting from conduct violating <span class="art-ref" data-art="RA7394-50,RA7394-51" tabindex="0">Articles 50 and 51</span>. This is distinct from the remedies for an ordinary breach of warranty.</p>
   <p><strong>Remember:</strong> Fraud focuses on deception. A product may be defective without fraud, and a fraudulent representation may exist even if the product has not physically injured anyone.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Class Discussion &amp; Socratic Takeaways &mdash; Online Celebrity Live Seller Hypothetical</div>
+    <ul>
+      <li><strong>Questions / Issues Posed:</strong>
+        <ol>
+          <li>If an online live seller (e.g., a celebrity) says, <em>&ldquo;Buy this product because I am using it and it works for me,&rdquo;</em> when in truth she has never used it, is she liable?</li>
+          <li>What if the seller genuinely uses it and says, <em>&ldquo;I am using this and it has no side effects,&rdquo;</em> yet Buyer A suffers side effects?</li>
+        </ol>
+      </li>
+      <li><strong>Common Pitfall / Student Error:</strong> One student (Orofino) initially answered that even if the seller falsely claimed to use the product, there would be no fraud/misrepresentation.</li>
+      <li><strong>Status &mdash; <code>[Settled Rule]</code>:</strong>
+        <ol>
+          <li><mark class="hl"><strong>False statement of personal use:</strong></mark> As confirmed by students Casaclang, Ventura, and Armas, deliberately lying about personally using a product to induce a sale constitutes <strong>actionable fraud/misrepresentation</strong> (an untrue assertion of direct observation/fact).</li>
+          <li><mark class="hl"><strong>Honest statement of personal experience / opinion:</strong></mark> Where the seller genuinely uses the product and merely expresses an opinion or personal experience (e.g., <em>&ldquo;hiyang sa akin&rdquo;</em>), the seller is <strong>not liable</strong> merely because another buyer reacted differently, as mere expressions of opinion or vague commendations are not actionable misrepresentation.</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
 
   <h3 id="ch17-part-5" class="c-navy">Part 5 &mdash; II. Warranties</h3>
   <p><em>Textbook: pp. 897&ndash;902</em></p>
@@ -1909,7 +2031,7 @@ blockquote {
       </tbody>
     </table>
   </div>
-  <p>Under <strong><span class="art-ref" data-art="1546" tabindex="0">Article 1546 of the Civil Code</span></strong>, an affirmation of fact or promise relating to a thing sold can constitute an express warranty where it naturally tends to induce the purchase and the buyer purchases in reliance upon it. A mere statement of opinion does not ordinarily create an express warranty, subject to the qualification concerning expert affirmations in Article 1546.</p>
+  <p>Under <strong><span class="art-ref" data-art="1546" tabindex="0">Article 1546 of the Civil Code</span></strong>, an affirmation of fact or promise relating to a thing sold can constitute an express warranty where it naturally tends to induce the purchase and the buyer purchases in reliance upon it. A mere statement of opinion does not ordinarily create an express warranty, subject to the qualification concerning <mark class="hl">expert affirmations</mark> in Article 1546 (for example, as noted in class, <strong>doctors or pharmacists advertising medications on social media such as TikTok</strong>).</p>
 
   <h5>B. Warranties against hidden defects</h5>
   <p>Under <strong><span class="art-ref" data-art="1561" tabindex="0">Article 1561</span></strong>, the seller is responsible for certain hidden defects that render the thing sold unfit for its intended use or substantially diminish its fitness for that use. The important point is that a product need not be completely useless. Example: You buy a secondhand generator. It runs, but a concealed internal defect causes it to overheat so severely that it cannot operate reliably. Its functionality is substantially impaired despite its ability to start.</p>
@@ -1921,7 +2043,13 @@ blockquote {
     <li>It must be sufficiently serious to render the product unfit or substantially reduce its fitness.</li>
     <li>The action must be brought within the applicable period.</li>
   </ol>
-  <p>For injury allegedly resulting from a defective product, the chapter also emphasizes three evidentiary requirements: proof of injury, proof that the product was defective or unreasonably unsafe and caused that injury, and proof that the defect existed when the product left the seller&rsquo;s or manufacturer&rsquo;s control. These are related but distinct inquiries: the first concerns the Civil Code warranty; the second concerns proof of defect-related injury.</p>
+  <p>For injury allegedly resulting from a defective product under implied warranty, the plaintiff must establish three evidentiary requirements:</p>
+  <ol>
+    <li><strong>Proof of injury</strong> sustained because of the product;</li>
+    <li>Proof that the product was <strong>defective or unreasonably unsafe</strong> and caused that injury; and</li>
+    <li>Proof that the defect <mark class="hl"><strong>existed when the product left the seller&rsquo;s or manufacturer&rsquo;s control</strong></mark> (i.e., tracing the defect back to the manufacturer and showing there was <strong>no tampering</strong> after it exited the manufacturing facility).</li>
+  </ol>
+  <p>These are related but distinct inquiries: the five-point list concerns the Civil Code warranty; these three evidentiary requirements concern proof of defect-related injury.</p>
 
   <h5>C. Remedies &mdash; <span class="art-ref" data-art="1567" tabindex="0">Article 1567</span></h5>
   <p>The Civil Code provides two principal remedies for breach of warranty against hidden defects.</p>
@@ -1954,10 +2082,28 @@ blockquote {
   <p><span class="c-teal">G.R. No. 118325</span> | January 29, 1997</p>
   <p>The Del Rosario spouses selected roofing materials after relying on public advertisements describing their durability and strength. Their contractor handled the purchase arrangements. Subsequently, portions of the roof were blown off during a typhoon, and evidence established defective installation and noncompliance with the manufacturer&rsquo;s representations. The manufacturer argued that there was no privity of contract with the spouses. <strong>The Supreme Court rejected that defense under the established circumstances.</strong> What mattered was that the manufacturer made express representations to the public, the spouses relied upon them, and the manufacturer delivered and installed the materials improperly. The lesson is not that privity is irrelevant in every warranty dispute. Rather, <mark class="hl"><strong>lack of direct contractual dealings does not automatically defeat liability</strong>, particularly where representations, reliance, the manufacturer&rsquo;s own conduct, and applicable law support the claim</mark>.</p>
 
+  <div class="lecture-box">
+    <div class="lecture-box-title">Class Discussion &amp; Socratic Takeaways &mdash; Defective Imported Product &amp; Retailer Subsidiary Liability</div>
+    <ul>
+      <li><strong>Question / Issue Posed:</strong> If a consumer buys a defective <strong>imported product</strong> from a local retailer, whom may the consumer sue for breach of warranty?</li>
+      <li><strong>Common Pitfall / Student Error:</strong> Students initially split between suing only the foreign manufacturer based on lack of privity arguments (Atos) or suing the retailer solely based on direct contractual privity (Galera).</li>
+      <li><strong>Status &mdash; <code>[Settled Rule]</code>:</strong> Under the <strong>Consumer Act (R.A. No. 7394)</strong>, <mark class="hl"><strong>privity of contract is not required</strong></mark>&mdash;a manufacturer&rsquo;s warranty extends to the wholesaler, retailer, and end-buyer. Crucially, the <mark class="hl"><strong>retailer is subsidiarily liable</strong></mark> under the warranty in case the manufacturer or distributor fails to honor the warranty (with the retailer having a <strong>right of recourse</strong> against the manufacturer/distributor, as noted by Casaclang).</li>
+    </ul>
+  </div>
+
   <h4 id="ch17-p5-3" class="c-navy">3. Warranties under the Consumer Act</h4>
   <p><strong><span class="art-ref" data-art="RA7394-67" tabindex="0">Article 67</span></strong> states that Civil Code provisions on conditions and warranties govern contracts of sale with conditions and warranties. <strong><span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span></strong> then supplies additional rules applicable to the sale of consumer products with warranties.</p>
   <ul>
-    <li><strong>3.01. Formalities of an express warranty:</strong> A seller or manufacturer who gives an express warranty must clearly identify: (1) warrantor and terms; (2) person to whom warranty extends; (3) products or parts covered; (4) what warrantor will do in case of defect/malfunction, including who bears expense; (5) what consumer must do to exercise warranty; and (6) period within which warrantor will perform after notice. The Consumer Act distinguishes between a <strong>full warranty</strong> (satisfies statutory minimum standards including free remedy within reasonable time and replacement/refund under Art. 68) and a <strong>limited warranty</strong> (must be so designated if it does not meet minimum standards). Statutory minimum duties do not apply in the same manner where the warrantor establishes that malfunction resulted from unreasonable use.</li>
+    <li><strong>3.01. Formalities of an express warranty:</strong> A seller or manufacturer who gives an express warranty must clearly identify:
+      <ol>
+        <li>The warrantor and the terms of the warranty;</li>
+        <li>The person to whom the warranty extends;</li>
+        <li>The products or parts covered;</li>
+        <li>What the warrantor will do in case of defect or malfunction, including who bears the expense;</li>
+        <li>What the consumer must do to exercise the warranty; and</li>
+        <li>The period within which the warrantor will perform after notice.</li>
+      </ol>
+      The Consumer Act distinguishes between a <strong>full warranty</strong> (satisfies statutory minimum standards including free remedy within reasonable time and replacement/refund under Art. 68) and a <strong>limited warranty</strong> (must be so designated if it does not meet minimum standards). Statutory minimum duties do not apply in the same manner where the warrantor establishes that malfunction resulted from unreasonable use.</li>
     <li><strong>3.02. Duration of warranty (<span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>):</strong>
       <div class="table-scroll">
         <table class="ui-table">
@@ -1969,8 +2115,8 @@ blockquote {
           </tbody>
         </table>
       </div>
-      All written warranties or guarantees issued by a manufacturer, producer, or importer operate from the moment of sale. <strong>Distinction:</strong> The duration of warranty coverage is not necessarily the same as the prescriptive period of a particular judicial cause of action.</li>
-    <li><strong>3.03. Records and reports:</strong> Under <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, distributors must generally report covered sales to the manufacturer, producer, or importer within <mark class="hl"><strong>30 days from purchase</strong></mark>, unless otherwise agreed (date, model, serial number, buyer particulars), and distributors and retailers must maintain covered purchase records for the corresponding warranty periods.</li>
+      All written warranties or guarantees issued by a manufacturer, producer, or importer operate <mark class="hl"><strong>from the moment of sale</strong></mark>. <strong>Distinction:</strong> The duration of warranty coverage is not necessarily the same as the prescriptive period of a particular judicial cause of action.</li>
+    <li><strong>3.03. Records and reports:</strong> Under <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, distributors must generally report covered sales to the manufacturer, producer, or importer within <mark class="hl"><strong>30 days from purchase</strong></mark>, unless otherwise agreed (date, model, serial number, buyer particulars), and distributors and retailers must maintain covered purchase records for the corresponding warranty periods (and, as noted in lecture, <mark class="hl">for a period corresponding to the <strong>lifetime of the products</strong></mark>).</li>
     <li><strong>3.04. Liability of retailers:</strong> Under the warranty provisions of <span class="art-ref" data-art="RA7394-68" tabindex="0">Article 68</span>, <mark class="hl">the retailer has <strong>subsidiary liability</strong> where both the manufacturer and distributor fail to honor the warranty</mark>. Do not confuse this with <span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>, which concerns liability of sellers for defective products causing damage.</li>
     <li><strong>3.05. Enforcement of warranties:</strong> The purchaser presents to the immediate seller either the <mark class="hl"><strong>warranty card or official receipt</strong> and the product</mark> to be serviced or returned. The statute prohibits demanding additional documentary requirements. A retailer (rather than distributor) must present the claim to the distributor on the buyer&rsquo;s behalf without cost to the buyer.</li>
     <li><strong>3.06. Privity not required:</strong> Statutory warranty obligations may reach beyond narrow Civil Code contractual relationships, though one must distinguish the specific statutory warranty obligation and responsible party.</li>
@@ -1994,10 +2140,10 @@ blockquote {
   <p>Under <span class="art-ref" data-art="2176" tabindex="0">Article 2176</span>, a person who, through an act or omission causing damage to another, is guilty of fault or negligence, with no pre-existing contractual relation between them in relation to that obligation, may be liable for quasi-delict. In product liability, negligence may occur at design, manufacture, inspection, packaging, storage, distribution, or failure to provide appropriate safety information. Example: A food company negligently allows its bottling machinery to become contaminated; contaminated beverages reach consumers and cause illness. The plaintiff must establish negligence and proximate causation.</p>
   <h5>Important case: <span class="c-burgundy"><em>Coca-Cola Bottlers Philippines, Inc. v. Court of Appeals</em></span></h5>
   <p><span class="c-teal">G.R. No. 110295</span> | October 18, 1993</p>
-  <p>A school canteen operator discovered foreign substances in unopened bottles of soft drinks. The incident caused customers to lose confidence in the beverages, resulting in losses to her business. The manufacturer argued that the action should be governed by the rules on breach of implied warranty, including the six-month period. The Supreme Court treated the allegations as sufficient to sustain a cause of action for <mark class="hl"><strong>quasi-delict</strong>, rather than confining the complainant to a warranty action</mark>. An injured party is not necessarily restricted to contractual warranty remedies merely because defective goods are involved.</p>
+  <p>A school canteen operator discovered <mark class="hl"><strong>fiber-like foreign matter inside unopened bottles of Coca-Cola in her refrigerator</strong></mark>. News of the adulterated soft drinks created fear among student customers that all bottles were unsafe, causing her canteen sales to drop drastically. The manufacturer argued that the action should be governed by the rules on breach of implied warranty, including the six-month period. The Supreme Court treated the allegations as sufficient to sustain a cause of action for <mark class="hl"><strong>quasi-delict</strong>, rather than confining the complainant to a warranty action</mark>, making the manufacturer liable for her resulting business losses. An injured party is not necessarily restricted to contractual warranty remedies merely because defective goods are involved.</p>
 
   <h4 id="ch17-p6-2" class="c-navy">2. Violation of statute as proof of negligence</h4>
-  <p>Statutory safety requirements regarding labeling, composition, packaging, ingredients, manufacturing, and safety help establish the standard of conduct expected from manufacturers and suppliers. If a manufacturer violates a safety requirement intended to prevent the kind of harm that occurred, the violation may support a finding of negligence. <strong>Important distinction:</strong> Always ask whether the applicable statute establishes a <mark class="hl"><strong>standard of care</strong> (evidence of negligence) or creates an <strong>independent statutory basis of liability</strong></mark> (such as <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>).</p>
+  <p>Statutory safety requirements regarding labeling, composition, packaging, ingredients, manufacturing, and safety help establish the standard of conduct expected from manufacturers and suppliers. As emphasized in lecture, under the Consumer Act, violating a statutory or regulatory safety requirement&mdash;such as <mark class="hl"><strong>sanitation rules or updated worker health certificates</strong> on a food or beverage manufacturing floor</mark>&mdash;is construed as <mark class="hl"><strong><em>negligence per se</em></strong></mark>, raising a presumption of negligence even before widespread damage occurs. <strong>Important distinction:</strong> Always ask whether the applicable statute establishes a <mark class="hl"><strong>standard of care</strong> (evidence of negligence / <em>negligence per se</em>) or creates an <strong>independent statutory basis of liability</strong></mark> (such as <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>).</p>
 
   <h3 id="ch17-part-7" class="c-navy">Part 7 &mdash; IV. Intentional Act: Physical Damage or Injury</h3>
   <p><em>Textbook: pp. 903&ndash;904</em></p>
@@ -2005,11 +2151,12 @@ blockquote {
   <p>Suppose a restaurant owner intentionally contaminates a meal served to a customer, causing physical injuries. The facts may support a criminal prosecution, but the victim may also have an independent civil action for damages under Article 33. Under <strong><span class="art-ref" data-art="ROC-111-3" tabindex="0">Rule 111, Section 3</span></strong>, independent civil actions recognized by <span class="art-ref" data-art="32,33,34,2176" tabindex="0">Articles 32, 33, 34, and 2176 of the Civil Code</span> proceed independently of the criminal action, <mark class="hl">require preponderance of evidence, and cannot result in double recovery</mark> for the same act or omission.</p>
   <h4 id="ch17-p7-2" class="c-navy">2. Acts contrary to law &mdash; <span class="art-ref" data-art="20" tabindex="0">Article 20</span></h4>
   <p><span class="art-ref" data-art="20" tabindex="0">Article 20</span> provides that a person who causes damage to another through an act contrary to law, whether willfully or negligently, shall indemnify the latter for the damage. If a manufacturer violates an applicable statutory safety prohibition and that unlawful act causes compensable injury, Article 20 may provide a basis for damages. Article 20 is broader than intentional wrongdoing because it also encompasses <mark class="hl"><strong>negligent violations of law</strong></mark>.</p>
+  <p><strong>Non-intended use rule (Lecture Note):</strong> Liability attaches where a defective or hazardous product causes <mark class="hl"><strong>physical injury</strong></mark>, regardless of whether the product was consumed in the manner intended. For example, if a carbonated beverage or beer bottle explodes in a consumer&rsquo;s face upon opening due to internal pressure and temperature changes, the manufacturer cannot evade liability by arguing that the product was intended for drinking rather than causing external physical injury.</p>
 
   <h3 id="ch17-part-8" class="c-navy">Part 8 &mdash; V. Delict</h3>
   <p><em>Textbook: pp. 904&ndash;905</em></p>
   <h4 id="ch17-p8-1" class="c-navy">1. Under the Revised Penal Code</h4>
-  <p>An act involving a defective product might also constitute a criminal offense (e.g., intentionally causing bodily injury, or criminally negligent conduct implicating <span class="art-ref" data-art="RPC-365" tabindex="0">Article 365</span>, or deceit). When the facts establish the applicable offense, <strong><span class="art-ref" data-art="RPC-100" tabindex="0">Article 100 of the Revised Penal Code</span></strong> recognizes that a person criminally liable for a felony is also civilly liable.</p>
+  <p>An act involving a defective product might also constitute a criminal offense (e.g., intentionally causing bodily injury, or criminally negligent conduct&mdash;reckless imprudence resulting in physical injuries or damage to property&mdash;implicating <span class="art-ref" data-art="RPC-365,RPC-366" tabindex="0">Articles 365 and 366 of the Revised Penal Code</span>, or deceit). When the facts establish the applicable offense, <strong><span class="art-ref" data-art="RPC-100" tabindex="0">Article 100 of the Revised Penal Code</span></strong> recognizes that a person criminally liable for a felony is also civilly liable.</p>
   <h4 id="ch17-p8-2" class="c-navy">2. Under special laws</h4>
   <p>The chapter also discusses special consumer-protection laws containing penal provisions, citing <span class="c-burgundy"><em>People v. Chung</em></span> (sale of adulterated coffee under the Pure Food and Drugs Act). A penal statute may impose responsibility for prohibited conduct even if the offender lacked actual knowledge of the adulteration, depending on the statutory offense. <strong>Remember:</strong> A violation of a criminal or regulatory statute does not automatically prove every element of a separate civil claim; the applicable law, injury, causal relationship, and recoverable damages must still be analyzed.</p>
 
@@ -2023,7 +2170,7 @@ blockquote {
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
       <ul>
         <li><strong>Constitutional &amp; Statutory Foundation:</strong> <span class="art-ref" data-art="CONST-XVI-9" tabindex="0">1987 Const. Art. XVI, Sec. 9</span>; Civil Code &amp; <span class="art-ref" data-art="RA7394-50" tabindex="0">R.A. 7394</span>; special acts (R.A. 3720, 8203, 9711, 10611, 1517).</li>
-        <li><strong>Theories I&ndash;V:</strong> Fraud (<span class="art-ref" data-art="33" tabindex="0">Art. 33</span>; <span class="art-ref" data-art="RA7394-50,RA7394-52,RA7394-60" tabindex="0">R.A. 7394 Arts. 50, 52, 60</span>), Warranties (<span class="art-ref" data-art="1546,1561,1567,1571" tabindex="0">Arts. 1546&ndash;1571</span>; <span class="art-ref" data-art="RA7394-67,RA7394-68" tabindex="0">Arts. 67&ndash;68</span>; <span class="c-burgundy"><em>Nutrimix</em></span>; <span class="c-burgundy"><em>Del Rosario</em></span>), Negligence (<span class="art-ref" data-art="2176" tabindex="0">Art. 2176</span>; <span class="c-burgundy"><em>Coca-Cola v. CA</em></span>), Intentional Act (<span class="art-ref" data-art="33" tabindex="0">Art. 33</span>/<span class="art-ref" data-art="20" tabindex="0">Art. 20</span>/<span class="art-ref" data-art="ROC-111-3" tabindex="0">Rule 111 Sec. 3</span>), Delict (<span class="art-ref" data-art="RPC-100,RPC-365" tabindex="0">RPC 100, 365</span>; <span class="c-burgundy"><em>People v. Chung</em></span>).</li>
+        <li><strong>Theories I&ndash;V:</strong> Fraud (<span class="art-ref" data-art="33" tabindex="0">Art. 33</span>; <span class="art-ref" data-art="RA7394-50,RA7394-52,RA7394-60" tabindex="0">R.A. 7394 Arts. 50, 52, 60</span>), Warranties (<span class="art-ref" data-art="1546,1561,1567,1571" tabindex="0">Arts. 1546&ndash;1571</span>; <span class="art-ref" data-art="RA7394-67,RA7394-68" tabindex="0">Arts. 67&ndash;68</span>; <span class="c-burgundy"><em>Nutrimix</em></span>; <span class="c-burgundy"><em>Del Rosario</em></span>), Negligence (<span class="art-ref" data-art="2176" tabindex="0">Art. 2176</span>; <span class="c-burgundy"><em>Coca-Cola v. CA</em></span>; <em>negligence per se</em>), Intentional Act (<span class="art-ref" data-art="33" tabindex="0">Art. 33</span>/<span class="art-ref" data-art="20" tabindex="0">Art. 20</span>/<span class="art-ref" data-art="ROC-111-3" tabindex="0">Rule 111 Sec. 3</span>), Delict (<span class="art-ref" data-art="RPC-100,RPC-365,RPC-366" tabindex="0">RPC 100, 365&ndash;366</span>; <span class="c-burgundy"><em>People v. Chung</em></span>).</li>
       </ul>
       <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
       <div class="table-scroll">
@@ -2106,7 +2253,11 @@ blockquote {
   </ol>
 
   <h4 id="ch17-p9-5" class="c-navy">5. The exploding bottle case</h4>
-  <p>The textbook discusses <span class="c-burgundy"><em>Loreto Luciano De Salas v. San Miguel Brewery</em></span>, involving a soft-drink bottle that exploded and injured a person. The Court of Appeals analyzed the incident through negligence principles because of the applicable law and circumstances at the time. The textbook uses the case to show why modern strict liability provides a more direct theory where an appropriate statute imposes liability independently of fault.</p>
+  <p>The textbook discusses <span class="c-burgundy"><em>Loreto Luciano De Salas v. San Miguel Brewery</em></span> <em>(referenced in passing during lecture as Escola v. Coca-Cola Bottling Co. before clarifying the Philippine case of De Salas)</em>:</p>
+  <ul>
+    <li><strong>Material Facts:</strong> A <strong>Pale Pilsen beer bottle</strong> exploded in the plaintiff&rsquo;s face, sending glass splinters into her <strong>right eye</strong>. Instead of going to a hospital, the plaintiff went to a <strong>watchmaker</strong> who used <strong>tweezers</strong> to extract the splinters; due to remaining fragments or infection, she <mark class="hl"><strong>permanently lost sight in her right eye</strong></mark>. The trial court dismissed the complaint.</li>
+    <li><strong>Ruling &amp; Rationale:</strong> The <strong>Court of Appeals</strong> reversed the dismissal, holding San Miguel Brewery liable under <mark class="hl"><strong>Article 2187</strong> (strict liability), <em>quasi-delict</em> and <em>res ipsa loquitur</em>, and <strong>Article 1566</strong></mark> (contract/warranty). The CA <mark class="hl"><strong>rejected the fortuitous event defense</strong> (sudden temperature change)</mark>, reasoning that had temperature change alone been the cause, <strong>all bottles</strong> would have exploded rather than a single defective bottle.</li>
+  </ul>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Negligence approach</th><th>Strict liability approach</th></tr></thead>
@@ -2119,7 +2270,19 @@ blockquote {
   </div>
 
   <h4 id="ch17-p9-6" class="c-navy">6. Requisites of product liability &amp; Application</h4>
-  <p>For a defective-product claim, the analysis generally involves establishing: (1) <strong>a legally relevant defect</strong> in the product; (2) <strong>compensable injury or damage</strong> suffered by the claimant; (3) <strong>causation</strong>&mdash;that the defect caused the injury or damage; and (4) <strong>appropriate connection to the defendant and the product&rsquo;s circulation</strong> (defect existed at the legally relevant time and product was not materially altered). Notice <span class="art-ref" data-art="2187" tabindex="0">Article 2187</span> and <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span> do not have identical textual requirements. In an unopened bottle containing a harmful chemical, relevant evidence includes the bottle&rsquo;s identity/source, lab analysis, seal integrity, storage/handling, causal link to injury, and whether post-control contamination occurred.</p>
+  <p>For a defective-product claim, the analysis generally involves establishing:</p>
+  <ol>
+    <li><strong>A legally relevant defect</strong> in the product;</li>
+    <li><strong>Compensable injury or damage</strong> suffered by the claimant;</li>
+    <li><strong>Causation</strong>&mdash;that the defect caused the injury or damage; and</li>
+    <li><strong>Appropriate connection to the defendant and the product&rsquo;s circulation</strong> (the defect was <mark class="hl">present upon delivery or manufacture</mark>&mdash;when it left the seller&rsquo;s or manufacturer&rsquo;s control&mdash;and the product reached the consumer <mark class="hl">without substantial change</mark> or intervening tampering).</li>
+  </ol>
+  <p>Notice <span class="art-ref" data-art="2187" tabindex="0">Article 2187</span> and <span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span> do not have identical textual requirements. In an unopened bottle containing a harmful chemical, relevant evidence includes the bottle&rsquo;s identity/source, lab analysis, seal integrity, storage/handling, causal link to injury, and whether post-control contamination occurred.</p>
+
+  <div class="lecture-box">
+    <div class="lecture-box-title">Professor&rsquo;s Illustration &mdash; The Continuous Unboxing Video Analogy</div>
+    <p>Proving that a defect existed before delivery and without tampering is analogous to modern e-commerce return policies requiring buyers to record a <mark class="hl"><strong>continuous unboxing video</strong></mark> before opening a sealed parcel. An unsealed package without video proof makes it difficult to prove the defect did not arise after receipt.</p>
+  </div>
 
   <h3 id="ch17-part-10" class="c-navy">Part 10 &mdash; Strict Liability under the Consumer Act</h3>
   <p><em>Textbook: pp. 911&ndash;916</em></p>
@@ -2142,12 +2305,23 @@ blockquote {
 
   <h4 id="ch17-p10-3" class="c-navy">3. Persons liable under the Consumer Act</h4>
   <ul>
-    <li><strong>A. Manufacturers, producers, and importers (<span class="art-ref" data-art="RA7394-97" tabindex="0">Art. 97</span>):</strong> Broader than factory owners; <mark class="hl">a person who places products into commerce under their own brand/trademark may qualify as a manufacturer</mark> even when another entity physically produces the goods.</li>
-    <li><strong>B. Sellers or tradesmen (<span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>):</strong> Sellers are <mark class="hl"><strong>not automatically liable in the same manner as manufacturers under Art. 97</strong></mark>. Article 98 imposes liability where: (1) <mark class="hl">manufacturer, builder, producer, or importer cannot be identified</mark>; (2) <mark class="hl">product is supplied without clear identification of the responsible entity</mark>; or (3) <mark class="hl">seller fails to preserve perishable goods adequately</mark> (e.g., grocery store negligently failing to refrigerate meat).</li>
+    <li><strong>A. Manufacturers, producers, and importers (<span class="art-ref" data-art="RA7394-97" tabindex="0">Art. 97</span>) &mdash; Constructive Manufacturers:</strong> Even entities that did not physically produce the goods are legally deemed manufacturers:
+      <ol>
+        <li><strong>Importers / Manufacturer&rsquo;s Representatives:</strong> For imported products, the manufacturer&rsquo;s representative or, in his absence, the <strong>importer</strong> is deemed the manufacturer.</li>
+        <li><strong>Private-Label Subcontractors (e.g., Supermarkets):</strong> A person, supermarket, or retailer that subcontracts manufacture and sells under its <mark class="hl"><strong>own brand or trademark</strong></mark> (such as <strong>&ldquo;SM Bonus&rdquo;</strong> sugar) qualifies as the manufacturer even when another entity physically produces the goods.</li>
+      </ol>
+    </li>
+    <li><strong>B. Sellers or tradesmen (<span class="art-ref" data-art="RA7394-98" tabindex="0">Article 98</span>):</strong> Sellers are <mark class="hl"><strong>not automatically liable in the same manner as manufacturers under Art. 97</strong></mark>. Article 98 imposes liability only in three situations:
+      <ol>
+        <li>The <mark class="hl">manufacturer, builder, producer, or importer cannot be identified</mark>;</li>
+        <li>The <mark class="hl">product is supplied without clear identification</mark> of the responsible entity; or</li>
+        <li>The <mark class="hl">seller fails to preserve perishable goods adequately</mark> (e.g., grocery store negligently failing to refrigerate meat).</li>
+      </ol>
+    </li>
     <li><strong>C. Components manufacturer (<span class="art-ref" data-art="RA7394-106" tabindex="0">Article 106</span>):</strong> Provides for <mark class="hl"><strong>joint liability</strong> involving the responsible component manufacturer, builder, or importer and the party that incorporated the component</mark> into the product or service (e.g., defective brake component inside an assembled car).</li>
   </ul>
 
-  <!-- Pure HTML Visual Summary Card (Fallback for Image Slot 5) -->
+  <!-- Supply Chain HTML Summary Card -->
   <div class="ui-box">
     <div class="ui-grid">
       <div class="ui-col">
@@ -2231,6 +2405,11 @@ blockquote {
     </div>
   </div>
 
+  <figure class="img-figure">
+    <img src="images/torts-ch16-ch17-strict-liability-products/04-six-theories-defects-and-defenses.jpg" alt="Product liability matrix summarizing the six causes of action, four Consumer Act product defect categories (M-D-P-W), and three Article 97 statutory defenses (N-D-S)" />
+    <figcaption><strong>Figure 3 &mdash; Product &amp; Service Liability Framework (<span class="art-ref" data-art="2187" tabindex="0">Art. 2187</span> &amp; <span class="art-ref" data-art="RA7394-97,RA7394-99" tabindex="0">R.A. 7394 Arts. 97&ndash;100</span>):</strong> Six alternative theories converge on strict liability&rsquo;s four statutory defects (<strong>M&ndash;D&ndash;P&ndash;W</strong>) and narrow statutory defenses (<strong>N&ndash;D&ndash;S</strong>: Not placed on market, No defect, or Sole fault of consumer/third party).</figcaption>
+  </figure>
+
   <h4 id="ch17-p11-1" class="c-navy">1. Manufacturing defect &amp; 2. Design defect</h4>
   <ul>
     <li><strong>Manufacturing defect:</strong> Occurs when <mark class="hl">a particular product departs from its intended design or manufacturing specifications</mark> (e.g., 1 out of 10,000 electric fans has an improperly installed wire). <em>The design itself may be safe, but the particular unit was improperly manufactured.</em></li>
@@ -2245,7 +2424,13 @@ blockquote {
   </ol>
 
   <h4 id="ch17-p11-4" class="c-navy">4. Test under the Consumer Act (<span class="art-ref" data-art="RA7394-97" tabindex="0">Article 97</span>)</h4>
-  <p>A product is defective when it fails to offer the safety rightfully expected of it, considering: (a) its presentation; (b) its reasonably expected use and hazards; and (c) the time it was placed into circulation. A product is <mark class="hl"><strong>not defective merely because a better-quality product later enters the market</strong></mark> (e.g., a 2020 car is not defective just because a 2026 model has newer safety tech).</p>
+  <p>A product is defective when it fails to offer the safety rightfully expected of it, considering:</p>
+  <ol type="a">
+    <li>Its presentation;</li>
+    <li>Its reasonably expected use and hazards; and</li>
+    <li>The time it was placed into circulation.</li>
+  </ol>
+  <p>A product is <mark class="hl"><strong>not defective merely because a better-quality product later enters the market</strong></mark> (e.g., a 2020 car is not defective just because a 2026 model has newer safety tech).</p>
 
   <h4 id="ch17-p11-5" class="c-navy">5. Packaging and presentation defect &amp; 6. Lack of warning</h4>
   <ul>
@@ -2432,6 +2617,67 @@ blockquote {
   <p>A consumer injured by a defective product is not restricted to a single legal theory. The same incident may implicate fraud, warranty, negligence, intentional wrongdoing, criminal liability, or strict liability. What changes is the <strong>legal basis of the action, the facts that must be proved, the parties who can be held responsible, and the available remedies and defenses</strong>. For your Torts and Damages examination, the most important distinction to master is the relationship between <strong>negligence under Article 2176</strong> and <strong>strict liability under Articles 2187 and 97</strong>, followed by the four recognized categories of product defects and the statutory defenses.</p>
   <p><em>Source note: The explanations follow the scope and sequence of the attached textbook. Philippine statutory provisions and selected Supreme Court decisions were cross-checked against the Supreme Court E-Library and published decisions. The foreign design-defect tests and malfunction doctrine are presented as the textbook&rsquo;s comparative discussion, not as independently codified Philippine rules.</em></p>
 
+  <hr>
+
+  <h3 id="lecture-appendix" class="c-navy">Lecture Appendix &mdash; Assignments, Reporting Groups &amp; Class Logistics (11-18-2026)</h3>
+  <div class="lecture-box">
+    <div class="lecture-box-title">VI. Administrative Matters, Graded Group Assignments &amp; Next Meeting</div>
+    <ul>
+      <li><strong>Remaining Course Materials &amp; Coverage:</strong>
+        <ul>
+          <li>The professor will distribute written notes covering the remaining short Consumer Act topics not finished in class.</li>
+          <li><strong>Next Meeting Topics:</strong> <strong>Human Relations Torts / Intentional Torts</strong> (brief discussion, building on Persons and Family Relations), followed by <strong>Damages</strong> (the final topic of the course).</li>
+        </ul>
+      </li>
+      <li><strong>Graded Group Reporting Assignments on Damages:</strong> There will be <mark class="hl"><strong>no separate case recitations</strong></mark>; the group presentation serves as part of the <strong>graded recitation</strong>, and groups may include relevant cases in their reports.
+        <div class="table-scroll" style="margin-top:0.75rem;">
+          <table class="ui-table">
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Assigned Damages Topic</th>
+                <th>Members &amp; Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Group 1</strong></td>
+                <td>Actual Damages</td>
+                <td>Evangelista, Juan, and Galamiton <em>(30-minute presentation starting next meeting)</em></td>
+              </tr>
+              <tr>
+                <td><strong>Group 2</strong></td>
+                <td>Nominal Damages</td>
+                <td>Nuesca, Galvez, and Ventura</td>
+              </tr>
+              <tr>
+                <td><strong>Group 3</strong></td>
+                <td>Temperate or Moderate Damages</td>
+                <td>Armas, Casaclang, and Atos</td>
+              </tr>
+              <tr>
+                <td><strong>Group 4</strong></td>
+                <td>Liquidated Damages</td>
+                <td>Macalino, Orofino, and Quilates</td>
+              </tr>
+              <tr>
+                <td><strong>Group 5</strong></td>
+                <td>Exemplary Damages</td>
+                <td>Paragas and Galera <em>(Note: Ms. Paragas was reported to be in the emergency room during this session.)</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li><strong>Class Logistics &amp; Attendance:</strong>
+        <ul>
+          <li>Attendance screenshots (requiring <strong>cameras on in frontal view</strong> throughout the 5:30 PM&ndash;7:30 PM session) were taken at the start and at 7:30 PM for submission to Ma&rsquo;am Agnes as proof of the online class.</li>
+          <li>This session was held online upon Atty. Anna&rsquo;s request so students would not need to travel to campus between a 5:30 PM face-to-face class and a 7:30 PM online class. Students should inform the professor ahead of time if future 5:30 PM sessions need to be conducted online (especially to accommodate working students leaving offices at 6:00 PM due to heavy traffic).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- Interactive Multi-Statute Verbatim Hover Popover -->
@@ -2446,11 +2692,14 @@ blockquote {
 <script>
 const PRIMARY_SOURCE_LABEL = "New Civil Code (R.A. 386)";
 const CODAL_PROVISIONS = {
+  "19": "Article 19. Every person must, in the exercise of his rights and in the performance of his duties, act with justice, give everyone his due, and observe honesty and good faith.",
   "20": "Article 20. Every person who, contrary to law, wilfully or negligently causes damage to another, shall indemnify the latter for the same.",
+  "21": "Article 21. Any person who wilfully causes loss or injury to another in a manner that is contrary to morals, good customs or public policy shall compensate the latter for the damage.",
   "22": "Article 22. Every person who through an act of performance by another, or any other means, acquires or comes into possession of something at the expense of the latter without just or legal ground, shall return the same to him.",
   "32": "Article 32. Any public officer or employee, or any private individual, who directly or indirectly obstructs, defeats, violates or in any manner impedes or impairs any of the enumerated constitutional rights and liberties of another person shall be liable to the latter for damages.",
   "33": "Article 33. In cases of defamation, fraud, and physical injuries, a civil action for damages, entirely separate and distinct from the criminal action, may be brought by the injured party. Such civil action shall proceed independently of the criminal prosecution, and shall require only a preponderance of evidence.",
   "34": "Article 34. When a member of a city or municipal police force refuses or fails to render aid or protection to any person in case of danger to life or property, such peace officer shall be primarily liable for damages, and the city or municipality shall be subsidiarily responsible therefor.",
+  "682": "Article 682. Every building or piece of land is subject to the easement which prohibits the proprietor or possessor from committing nuisance through noise, jarring, offensive odor, smoke, heat, dust, water, glare and other causes.",
   "694": "Article 694. A nuisance is any act, omission, establishment, business, condition of property, or anything else which:\n(1) Injures or endangers the health or safety of others; or\n(2) Annoys or offends the senses; or\n(3) Shocks, defies or disregards decency or morality; or\n(4) Obstructs or interferes with the free passage of any public highway or street, or any body of water; or\n(5) Hinders or impairs the use of property.",
   "695": "Article 695. Nuisance is either public or private. A public nuisance affects a community or neighborhood or any considerable number of persons, although the extent of the annoyance, danger or damage upon individuals may be unequal. A private nuisance is one that is not included in the foregoing definition.",
   "696": "Article 696. Every successive owner or possessor of property who fails or refuses to abate a nuisance in that property started by a former owner or possessor is liable therefor in the same manner as the one who created it.",
@@ -2491,6 +2740,7 @@ const EXTERNAL_PROVISIONS = {
   "ROC-111-3": { s: "Rules of Court", t: "Rule 111, Section 3", b: "In the cases provided in Articles 32, 33, 34 and 2176 of the Civil Code of the Philippines, the independent civil action may be brought by the offended party. It shall proceed independently of the criminal action and shall require only a preponderance of evidence. In no case, however, may the offended party recover damages twice for the same act or omission charged in the criminal action." },
   "RPC-100": { s: "Revised Penal Code", t: "Article 100", b: "Every person criminally liable for a felony is also civilly liable." },
   "RPC-365": { s: "Revised Penal Code", t: "Article 365", b: "Imprudence and negligence (reckless imprudence and simple imprudence or negligence resulting in felony injuries/damage)." },
+  "RPC-366": { s: "Revised Penal Code", t: "Article 366 (Application of Laws Enacted Prior to This Code)", b: "Without prejudice to the provisions contained in Article 22 of this Code, felonies and misdemeanors, committed prior to the date of effectiveness of this Code shall be punished in accordance with the Code or Acts in force at the time of their commission.\n[Lecture Note: Criminal negligence resulting in physical injuries or damage is governed principally by Art. 365 RPC; Art. 366 was cited alongside Art. 365 during class.]" },
   "LC-T2B4": { s: "Labor Code of the Philippines", t: "Title II, Book IV (Employees' Compensation)", b: "Establishes the State Insurance Fund and Employees' Compensation Commission system providing work-related disability/death benefits without requiring proof of employer fault." },
   "PD856-84": { s: "P.D. No. 856 (Code on Sanitation)", t: "Section 84 (Definition of Nuisance)", b: "Defines nuisance as anything that injures health, endangers life, offends the senses, or produces discomfort to the community." },
   "PD856-85": { s: "P.D. No. 856 (Code on Sanitation)", t: "Section 85 (Types of Nuisances)", b: "Enumerates specific nuisances: injurious premises, vermin breeding places, dead animals/carcasses, refuse accumulation, noxious wastewater discharge, injurious animal stocks, excessive noise, and illegal shanties." },

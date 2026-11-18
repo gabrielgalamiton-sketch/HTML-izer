@@ -287,7 +287,7 @@ Apply color systematically using this legal theme:
 3. **Case Citations:** Italicize with Burgundy styling: `<span class="c-burgundy"><em>Case Name v. Case Name</em></span>`.
 4. **Fatal Rules & Voids:** Highlight with Rust styling: `<span class="c-rust"><strong><u>fatal defect</u></strong></span>`.
 5. **Case Illustrations & Strict Exceptions:** Wrap inside `<blockquote>` tags (featuring a rust-colored left border).
-6. **Lists & Scaffolding:** Replace dense walls of text with layered, indented `<ul>` and `<ol>` lists. Nest sub-points and applications 1.5rem beneath parent points.
+6. **Lists & Scaffolding (Mandatory Enumeration New-Line SOP):** Replace dense walls of text with layered, indented `<ul>` and `<ol>` lists. Nest sub-points and applications 1.5rem beneath parent points. **Whenever there is any numbered or lettered enumeration** (requisites, elements, remedies, factors, tests, or steps such as `(1) ...; (2) ...; (3) ...` or `(a) ...; (b) ...`), **ALWAYS put each enumerated item on its own line** inside an `<ol>` / `<ol type="a">` / `<ul>` list—never compress multiple numbered or lettered items into a single inline paragraph.
 
 ---
 
