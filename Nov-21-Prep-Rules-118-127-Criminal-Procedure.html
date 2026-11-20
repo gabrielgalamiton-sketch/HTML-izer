@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nov 21 Prep — Criminal Procedure (Rules 118–127)</title>
+<style>
+/* Document container and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Topic Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  flex-grow: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1F2937;
+}
+.nav-hl-toggle {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 4px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-hl-toggle:hover { background: rgba(255, 255, 255, 0.28); }
+.nav-hl-toggle[aria-pressed="false"] {
+  background: transparent;
+  color: #CBD5E1;
+}
+
+/* Selective High-Yield Soft-Yellow Highlighter */
+mark.hl {
+  background-color: #FEF9C3;
+  color: inherit;
+  padding: 0.04rem 0.22rem;
+  border-radius: 3px;
+  border-bottom: 1.5px solid #FDE047;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+body.hl-off mark.hl {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+
+/* Color Classes */
+.c-navy { color: #1E3A8A; }
+.c-teal { color: #0F766E; }
+.c-green { color: #166534; }
+.c-burgundy { color: #991B1B; }
+.c-rust { color: #C2410C; }
+
+h1 {
+  color: #1E3A8A;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.7rem;
+  border-bottom: 3px solid #1E3A8A;
+  padding-bottom: 0.6rem;
+  margin-top: 0;
+}
+h2 {
+  color: #1E3A8A;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid #DBEAFE;
+  padding-bottom: 0.35rem;
+}
+h3 {
+  color: #1E3A8A;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  scroll-margin-top: 4.5rem;
+}
+h4 {
+  color: #1E3A8A;
+  font-weight: 700;
+  font-size: 1.03rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  scroll-margin-top: 4.5rem;
+}
+hr {
+  border: none;
+  border-top: 1.5px solid #E2E8F0;
+  margin: 2rem 0;
+}
+ul, ol {
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+li {
+  margin-bottom: 0.35rem;
+}
+
+blockquote {
+  border-left: 4px solid #C2410C;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #FFF7ED;
+  font-style: italic;
+}
+
+/* Context Breadcrumb & Statutory Compass Box */
+.context-compass {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-left: 4px solid #1E3A8A;
+  border-radius: 8px;
+  padding: 0.9rem 1.15rem;
+  margin: 0.75rem 0 1.4rem 0;
+}
+.context-breadcrumb {
+  font-size: 0.76rem;
+  color: #475569;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
+  border-bottom: 1px dashed #CBD5E1;
+}
+.context-breadcrumb strong {
+  color: #1E3A8A;
+  background: #DBEAFE;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+}
+.compass-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.32rem;
+  font-size: 0.88rem;
+  color: #334155;
+}
+.compass-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0F766E;
+  background: #CCFBF1;
+  padding: 0.08rem 0.42rem;
+  border-radius: 4px;
+  margin-right: 0.4rem;
+}
+
+/* Executive UI Summary Cards & Stacked Workflow Boxes */
+.ui-box {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: start;
+}
+.ui-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.ui-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+.ui-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+.ui-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2937;
+}
+.ui-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #111827;
+}
+.ui-sub {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+.ui-workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ui-step-plain {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+.ui-step-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+.ui-step-outcome {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+}
+.ui-connector {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+.ui-split-outcome {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.ui-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.ui-badge-yes {
+  color: #16A34A;
+  border: 1.5px solid #16A34A;
+  background: #F0FDF4;
+}
+.ui-badge-no {
+  color: #DC2626;
+  border: 1.5px solid #DC2626;
+  background: #FEF2F2;
+}
+
+/* Clean Minimalist Statutory Comparison Tables */
+.table-scroll {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.ui-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid #CBD5E1;
+}
+.ui-table td {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Static Responsive Nano Banana Pro 2 Infographic Figure Card */
+.img-figure {
+  margin: 1.85rem 0;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  text-align: center;
+}
+.img-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.img-figure figcaption {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid #E2E8F0;
+  font-size: 0.86rem;
+  color: #475569;
+  text-align: left;
+  line-height: 1.45;
+}
+.img-figure figcaption strong {
+  color: #1E3A8A;
+}
+
+/* End-of-Part Summary Brief Reviewer Capstones */
+.summary-capstone {
+  margin: 2rem 0 2.5rem 0;
+  border: 1.5px solid #93C5FD;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(30, 58, 138, 0.08);
+  scroll-margin-top: 4.5rem;
+}
+.summary-hdr {
+  background: linear-gradient(90deg, #0F172A 0%, #1E3A8A 65%, #0F766E 100%);
+  color: #FFFFFF;
+  padding: 0.85rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.summary-hdr h4 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 1.03rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.summary-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+}
+.summary-body { padding: 1.15rem 1.3rem; }
+.summary-subhdr {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1E3A8A;
+  margin: 1rem 0 0.45rem 0;
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid #DBEAFE;
+}
+.summary-subhdr:first-child { margin-top: 0; }
+.summary-capstone .ui-table { margin: 0.55rem 0 0.85rem 0; font-size: 0.9rem; }
+.summary-capstone .ui-table th { padding: 0.55rem 0.75rem; }
+.summary-capstone .ui-table td { padding: 0.6rem 0.75rem; }
+.tag-mem-lec, .tag-mem-add {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.08rem 0.42rem;
+  border-radius: 4px;
+}
+.tag-mem-lec { color: #1E3A8A; background: #DBEAFE; border: 1px solid #93C5FD; }
+.tag-mem-add { color: #0F766E; background: #CCFBF1; border: 1px solid #5EEAD4; }
+.summary-trap-box {
+  background: #FFF7ED;
+  border: 1px solid #FDBA74;
+  border-left: 4px solid #C2410C;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-top: 0.85rem;
+}
+.summary-trap-box ul, .summary-trap-box ol { margin-bottom: 0; }
+
+@media (max-width: 720px) {
+  .document-container {
+    margin: 0.75rem;
+    padding: 1.25rem;
+  }
+  .nav-label { display: none; }
+}
+
+@media print {
+  .sticky-nav { display: none !important; }
+  body { background: #FFFFFF; }
+  mark.hl {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .document-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  .img-figure, .context-compass, .ui-box, .summary-capstone, .summary-trap-box {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <div class="nav-content">
+    <span class="nav-label">TOPIC NAVIGATION:</span>
+    <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+      <option value="" disabled selected>Select topic or provision...</option>
+      <option value="#part-a-pretrial">A. Pre-Trial (Rule 118)</option>
+      <option value="#a-1-purposes">&nbsp;&nbsp;↳ 1–5. Purposes, Mandatory Courts, Timing &amp; Non-Appearance</option>
+      <option value="#a-6-clerk">&nbsp;&nbsp;↳ 6–11. Branch Clerk, Minutes &amp; Judge's Duties</option>
+      <option value="#a-12-stipulations">&nbsp;&nbsp;↳ 12–16. Stipulations, Written/Signed Rule &amp; Pre-Trial Order</option>
+      <option value="#a-17-civil-vs-crim">&nbsp;&nbsp;↳ 17. Civil vs. Criminal Pre-Trial</option>
+      <option value="#a-18-mediation">&nbsp;&nbsp;↳ 18–19. PMC Mediation &amp; Criminal Discovery</option>
+      <option value="#summary-part-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part I Summary Brief Reviewer (Rule 118)</option>
+      <option value="#part-b-trial">B. Trial (Rule 119)</option>
+      <option value="#b-1-commencement">&nbsp;&nbsp;↳ 1–13. Trial Clock, Excluded Delays, Postponements &amp; Material Witness</option>
+      <option value="#b-14-state-witness">&nbsp;&nbsp;↳ 14–17. State Witness Discharge &amp; Mistake in Charging</option>
+      <option value="#b-18-order-of-trial">&nbsp;&nbsp;↳ 18–26. Order of Trial, Conditional Exam, Reopening &amp; Trial in Absentia</option>
+      <option value="#b-27-offer-of-evidence">&nbsp;&nbsp;↳ 27–31. Oral Offer of Evidence, Exceptions &amp; Memoranda</option>
+      <option value="#summary-part-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part II Summary Brief Reviewer (Rule 119)</option>
+      <option value="#part-c-demurrer">C. Demurrer to Evidence (Rule 119, Sec. 23)</option>
+      <option value="#c-1-nature">&nbsp;&nbsp;↳ 1. Nature, Ground &amp; Standard of Proof</option>
+      <option value="#c-i-roc">&nbsp;&nbsp;↳ I. Demurrer in the Rules of Court (With vs. Without Leave)</option>
+      <option value="#c-ii-continuous">&nbsp;&nbsp;↳ II. Continuous Trial Modifications, Cabador &amp; Review</option>
+      <option value="#c-8-civil-vs-crim">&nbsp;&nbsp;↳ 8. Demurrer: Civil vs. Criminal Cases</option>
+      <option value="#summary-part-iii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part III Summary Brief Reviewer (Demurrer)</option>
+      <option value="#ch-xi-a-judgment">Ch. XI — A. Judgment (Rule 120)</option>
+      <option value="#xi-a-1-meaning">&nbsp;&nbsp;↳ 1–7. Requisites, TSNs, Contents &amp; Duplicitous Information</option>
+      <option value="#xi-a-8-variance">&nbsp;&nbsp;↳ 8–10. Variance Doctrine &amp; Mode of Commission</option>
+      <option value="#xi-a-11-promulgation">&nbsp;&nbsp;↳ 11–18. Promulgation, 15-Day Surrender, Finality &amp; Probation</option>
+      <option value="#summary-part-iv">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part IV Summary Brief Reviewer (Rule 120)</option>
+      <option value="#ch-xi-b-remedies">Ch. XI — B. Remedies Against Judgment of Conviction (Rule 121)</option>
+      <option value="#xi-b-1-remedies">&nbsp;&nbsp;↳ 1–11. Modification, Reopening, MNT &amp; MR</option>
+      <option value="#xi-b-12-neypes">&nbsp;&nbsp;↳ 12. The Neypes Rule ("Fresh Period Rule")</option>
+      <option value="#summary-part-v">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part V Summary Brief Reviewer (Rule 121 &amp; Neypes)</option>
+      <option value="#ch-xi-c-appeals">Ch. XI — C. Appeals (Rules 122, 124, 125)</option>
+      <option value="#xi-c-1-nature">&nbsp;&nbsp;↳ 1–6. Right to Appeal, Open-for-Review &amp; Credibility</option>
+      <option value="#xi-c-7-where-how">&nbsp;&nbsp;↳ 7–14. Where &amp; How to Appeal, 15-Day Period &amp; Withdrawal</option>
+      <option value="#xi-c-15-coaccused">&nbsp;&nbsp;↳ 15–20. Co-Accused Benefit, Harmless Error &amp; SC En Banc Tie</option>
+      <option value="#summary-part-vi">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part VI Summary Brief Reviewer (Appeals)</option>
+      <option value="#ch-xi-d-provisional">Ch. XI — D. Provisional Remedies in Criminal Cases (Rule 127)</option>
+      <option value="#xi-d-case-index">&nbsp;&nbsp;↳ Case Index for Appeals &amp; Provisional Remedies</option>
+      <option value="#summary-part-vii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part VII Summary Brief Reviewer (Rule 127)</option>
+    </select>
+    <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
+  </div>
+</nav>
+
+<div class="document-container">
+  <h1>Nov 21 Prep &mdash; Criminal Procedure (Rules 118&ndash;127)</h1>
+
+  <!-- ========================================================= -->
+  <!-- PART I: PRE-TRIAL (RULE 118)                              -->
+  <!-- ========================================================= -->
+  <h3 id="part-a-pretrial">A. PRE-TRIAL (<span class="c-teal">RULE 118</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Arraignment &amp; Plea (Rule 116) / Motion to Quash (Rule 117)] &rarr; <strong>YOU ARE HERE: Pre-Trial (Rule 118)</strong> &rarr; [Trial (Rule 119)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 118 (Secs. 1&ndash;4)</span>; <span class="c-teal">A.M. No. 12-11-2-SC</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span> (Revised Guidelines for Continuous Trial); <span class="c-teal">Rules 116 &amp; 119</span> (Discovery).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once the accused enters a valid plea of not guilty at arraignment, the court must immediately narrow factual issues, lock in exhibits, and test plea-bargaining or civil mediation before full-blown trial begins.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents trial by ambush, decongests dockets through stipulations and civil mediation, and protects the accused's constitutional privilege against self-incrimination by requiring written, counsel-countersigned admissions.</div>
+    </div>
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">1. Arraignment &amp; Pre-Trial Set on the Same Date (<span class="c-teal">A.M. No. 15-06-10-SC</span>)</div>
+      <div class="ui-sub">Detained: within 10 calendar days from court's receipt of case &bull; Non-Detained: within 30 calendar days from acquiring jurisdiction</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Preliminary Conference (Branch Clerk of Court)</div>
+      <div class="ui-sub">Civil settlement, mark exhibits, ascertain undisputed facts, sign Minutes of Preliminary Conference</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Pre-Trial Conference (Judge) &mdash; Active Judicial Stipulations</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">&#10003;</div>
+        <div class="ui-title">Plea Bargain Agreed</div>
+        <div class="ui-sub">Approve plea &rarr; receive civil evidence &rarr; judgment of conviction</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">&#10005;</div>
+        <div class="ui-title">Plea Bargain Fails</div>
+        <div class="ui-sub">Pre-Trial Order (same day) &rarr; PMC Mediation (30 calendar days non-extendible, civil aspect only)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="a-1-purposes">1. Purposes of a Pre-Trial</h4>
+  <p>Under <span class="c-teal">Section 1, Rule 118</span> of the Rules of Court, <mark class="hl">pre-trial is a mandatory proceeding conducted before the trial of the case</mark> to consider the following matters:</p>
+  <ol>
+    <li>Plea bargaining;</li>
+    <li>Stipulation of facts;</li>
+    <li>Marking for identification of evidence of the parties;</li>
+    <li>Waiver of objections to the admissibility of evidence;</li>
+    <li>Modification of the order of trial if the accused admits the charge but interposes a lawful defense; and</li>
+    <li>Such other matters as will promote a fair and expeditious trial of the criminal and civil aspects of the case.</li>
+  </ol>
+  <p>Under existing rules, <span class="c-rust"><strong><u>no evidence shall be allowed to be presented and offered during trial other than those identified and marked during the pre-trial</u></strong></span>, <mark class="hl">except when allowed by the court for good cause shown</mark>.</p>
+
+  <h4>2. Courts Where Pre-Trial Is Mandatory (Bar 1986, 1989, 2004, 2008)</h4>
+  <p>Like in civil cases, <mark class="hl">pre-trial in criminal cases is mandatory</mark>. Pre-trial is mandatory in all criminal cases cognizable by the following trial courts:</p>
+  <ul>
+    <li>Sandiganbayan;</li>
+    <li>Regional Trial Court (RTC); and</li>
+    <li>First-Level Courts, namely:
+      <ul>
+        <li>Metropolitan Trial Court (MeTC);</li>
+        <li>Municipal Trial Court in Cities (MTCC);</li>
+        <li>Municipal Trial Court (MTC); and</li>
+        <li>Municipal Circuit Trial Court (MCTC).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>3. When Pre-Trial Shall Be Held</h4>
+  <ul>
+    <li><strong>Under the Guidelines for Decongesting Holding Jails (<span class="c-teal">A.M. No. 12-11-2-SC</span>):</strong> The court shall hold the pre-trial conference <mark class="hl">within thirty (30) days after arraignment, or within ten (10) days if the accused is under preventive detention</mark>. Where the direct testimonies of witnesses are presented through judicial affidavits, the prosecution is given <mark class="hl">not more than twenty (20) days from arraignment</mark> to submit them in time for pre-trial.</li>
+    <li><strong>Modification Under the Revised Guidelines for Continuous Trial in Criminal Cases (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</strong> <span class="c-green"><strong><u>The date of arraignment and pre-trial are set on the same date</u></strong></span>:
+      <ul>
+        <li><strong>Detained Accused:</strong> Arraignment and pre-trial must be set <mark class="hl">within ten (10) calendar days from the date of the court's receipt of the case</mark>.</li>
+        <li><strong>Non-Detained Accused:</strong> Arraignment and pre-trial must be set <mark class="hl">within thirty (30) calendar days from the date the court acquires jurisdiction over the person of the accused (via arrest or voluntary surrender)</mark>, unless a shorter period is provided by special law or circular.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>4. Absence of Parties in the Pre-Trial</h4>
+  <p>Under the Revised Guidelines for Continuous Trial in Criminal Cases, <span class="c-green"><strong><u>the court shall proceed with the pre-trial despite the absence of the accused and/or the private complainant</u></strong></span>, provided:</p>
+  <ol>
+    <li>They were duly notified of the schedule; and</li>
+    <li>The counsel for the accused and the public prosecutor are present.</li>
+  </ol>
+
+  <h4>5. Consequences for Non-Appearance at Pre-Trial</h4>
+  <p>Under <span class="c-teal">Section 3, Rule 118</span>, if the counsel for the accused or the prosecutor fails to appear at the pre-trial conference and offers no acceptable excuse for their lack of cooperation, <mark class="hl">the court may impose proper sanctions or penalties (such as fines or disciplinary citations)</mark>.</p>
+
+  <h4 id="a-6-clerk">6. Duty of the Branch Clerk of Court</h4>
+  <p>During the preliminary conference, the Branch Clerk of Court is tasked to:</p>
+  <ol>
+    <li>Assist the parties in reaching a settlement on the civil aspect of the case;</li>
+    <li>Mark the documents to be presented as exhibits and attach copies to the records after comparison;</li>
+    <li>Ascertain undisputed facts and admissions regarding the genuineness and due execution of marked documents; and</li>
+    <li>Consider such other matters that may aid in the prompt disposition of the case.</li>
+  </ol>
+
+  <h4>7. Recording of the Minutes</h4>
+  <p>The proceedings during the preliminary conference must be recorded in the Minutes of Preliminary Conference, which <span class="c-green"><strong><u>must be signed by both parties and their counsel</u></strong></span>. These minutes and the marked exhibits shall be attached by the Branch Clerk of Court to the case record before the pre-trial conference with the judge.</p>
+
+  <h4>8. Duty of the Judge Before the Pre-Trial Conference</h4>
+  <p>Before starting the pre-trial conference, the judge is required to <mark class="hl">study the allegations in the information, the statements in the affidavits of witnesses, and other supporting documents forming part of the record of the preliminary investigation</mark>.</p>
+
+  <h4>9. Duty of the Judge When Plea Bargaining Is Agreed Upon</h4>
+  <p>During pre-trial, the trial judge shall consider plea-bargaining arrangements. If plea bargaining is agreed upon, the court shall:</p>
+  <ol>
+    <li>Issue an order approving the plea bargain;</li>
+    <li>Proceed to receive evidence on the civil aspect of the case; and</li>
+    <li>Render and promulgate a judgment of conviction, including civil liability or damages duly established by the evidence.</li>
+  </ol>
+
+  <h4>10. Duty of the Judge When Plea Bargaining Fails</h4>
+  <p>If plea bargaining fails, the judge shall:</p>
+  <ol>
+    <li>Adopt the minutes of the preliminary conference as part of the pre-trial proceedings;</li>
+    <li>Confirm the markings of exhibits and admissions of genuineness and due execution of documents;</li>
+    <li>List the object and testimonial evidence;</li>
+    <li>Scrutinize every allegation in the information and affidavits forming part of the preliminary investigation records;</li>
+    <li>Define factual issues;</li>
+    <li>Ask the parties to agree on specific trial dates;</li>
+    <li>Require parties to submit the names, addresses, and contact numbers of witnesses to be summoned; and</li>
+    <li>Consider the modification of the order of trial if the accused admits the charge but interposes a lawful defense.</li>
+  </ol>
+
+  <h4>11. Asking Questions During the Pre-Trial</h4>
+  <p>During the pre-trial, <mark class="hl">the judge shall be the one to ask the questions on issues raised, and all questions must be directed to the judge to avoid hostilities between the parties</mark>.</p>
+
+  <h4 id="a-12-stipulations">12. Stipulations in the Pre-Trial Under the Revised Guidelines for Continuous Trial</h4>
+  <ul>
+    <li><strong>Active Judicial Role:</strong> Proposals for stipulations shall be made with the <span class="c-green"><strong><u>active participation of the court itself</u></strong></span> and shall not be left solely to the counsels.</li>
+    <li><strong>Witnesses Without Personal Knowledge:</strong> The court shall require the parties to enter into stipulations regarding the direct and cross-examinations of witnesses who have no personal knowledge of the material facts constituting the crime. These include:
+      <ul>
+        <li>Forensic chemists;</li>
+        <li>Medico-legal officers;</li>
+        <li>Investigators, auditors, accountants, engineers, custodians, and expert witnesses testifying on the authenticity, due execution, and contents of public documents and reports;</li>
+        <li>Corroborative witnesses; and</li>
+        <li>Witnesses testifying solely on civil liability.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>13. Additional Direct and Cross-Examination Questions</h4>
+  <p>If stipulations cannot be fully reached and the adverse party refuses to waive the right to cross-examination, the subject of the direct testimony of these witnesses shall be stipulated upon, without prejudice to allowing additional direct and cross-examination questions.</p>
+
+  <h4>14. Pre-Trial Agreements and Signing of Admissions (Bar 2004)</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 118</span>, all agreements and admissions made or entered into during the pre-trial conference must strictly comply with <span class="c-green"><strong><u>two requisites</u></strong></span>:</p>
+  <ol>
+    <li><mark class="hl">Reduced in writing</mark>; and</li>
+    <li><mark class="hl">Signed by both the accused AND his counsel</mark>.</li>
+  </ol>
+  <blockquote>
+    <strong>Strict Consequence of Non-Compliance:</strong> If this requirement is not followed, the admissions and agreements <span class="c-rust"><strong><u>CANNOT be used as evidence against the accused</u></strong></span>. Furthermore, all proceedings must be recorded, transcripts prepared, and minutes signed by the parties and their counsels.
+  </blockquote>
+
+  <h4>15. Marking of Evidence</h4>
+  <p>Under the Revised Guidelines for Continuous Trial, the documentary evidence of both the prosecution and the accused shall be marked during the pre-trial. <span class="c-rust"><strong><u>Unmarked evidence cannot be offered at trial without prior leave of court for good cause</u></strong></span>.</p>
+
+  <h4>16. Pre-Trial Order and Its Effect</h4>
+  <ul>
+    <li><strong>Issuance and Service:</strong> Within ten (10) days after the termination of the pre-trial, the trial judge shall issue a Pre-Trial Order reciting the actions taken, facts stipulated, admissions made, evidence marked, number of witnesses, and the schedule of trial. Under the Revised Guidelines for Continuous Trial, <mark class="hl">this Pre-Trial Order must be immediately served upon the parties and counsel on the same day the pre-trial terminates</mark>.</li>
+    <li><strong>Binding Effect:</strong> The Pre-Trial Order <span class="c-green"><strong><u>binds the parties, limits the trial to matters not disposed of, and controls the course of the action during trial</u></strong></span>, unless modified by the court to prevent manifest injustice.</li>
+  </ul>
+
+  <h4 id="a-17-civil-vs-crim">17. Pre-Trial in a Civil Case vs. Pre-Trial in a Criminal Case (Bar 1997)</h4>
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Pre-Trial in Civil Cases (<span class="c-teal">Rule 18</span>)</th>
+          <th>Pre-Trial in Criminal Cases (<span class="c-teal">Rule 118</span>)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Initiation</strong></td>
+          <td>Set upon an ex parte motion filed by the plaintiff after all pleadings are served and filed.</td>
+          <td><mark class="hl">Ordered by the court motu proprio without need of motion.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Timing</strong></td>
+          <td>Scheduled after the last pleading is served and filed.</td>
+          <td><mark class="hl">Set on the same day as arraignment (or within 30 days after jurisdiction is acquired).</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Amicable Settlement &amp; Compromise</strong></td>
+          <td>Considers amicable settlement or ADR as a primary purpose.</td>
+          <td>Not an enumerated purpose for the criminal aspect, because criminal liability cannot be compromised. An offer of compromise in criminal cases is generally treated as an implied admission of guilt (except in quasi-offenses or offenses allowed by law to be compromised). <mark class="hl">Compromise is permitted only on civil liability.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Pre-Trial Brief</strong></td>
+          <td>Filing and serving a pre-trial brief is mandatory (<span class="c-teal">Rule 18, Sec. 6</span>).</td>
+          <td><mark class="hl">Rule 118 does not require the submission of pre-trial briefs.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Sanctions for Non-Appearance</strong></td>
+          <td>Sanctions fall on the non-appearing party (e.g., plaintiff may be non-suited, or defendant's evidence reception deemed waived).</td>
+          <td><mark class="hl">Sanctions are imposed on the counsel for the accused or the prosecutor (e.g., fines/contempt), not dismissal or default against the accused.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Admissions / Agreements</strong></td>
+          <td>Admissions in pre-trial bind the party upon signing of the minutes/order.</td>
+          <td><span class="c-rust"><strong><u>Admissions cannot be used against the accused unless reduced to writing and signed by BOTH the accused and counsel.</u></strong></span></td>
+        </tr>
+        <tr>
+          <td><strong>Judgment on Pleadings / Summary Judgment</strong></td>
+          <td>May be considered and rendered if appropriate.</td>
+          <td>Never considered or rendered in criminal pre-trial.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 id="a-18-mediation">18. Cases Subject to Mediation on Civil Liability (<span class="c-teal">A.M. No. 15-06-10-SC</span>)</h4>
+  <p>If no settlement is reached during the preliminary conference, the following criminal cases shall be referred to the Philippine Mediation Center (PMC) Unit <mark class="hl">solely for mediation on their civil liability</mark>:</p>
+  <ol>
+    <li><strong>Crimes where payment may extinguish liability or prevent prosecution:</strong>
+      <ul>
+        <li><span class="c-teal">B.P. Blg. 22</span>;</li>
+        <li>SSS Law (<span class="c-teal">R.A. No. 1161</span>, as amended by <span class="c-teal">R.A. No. 8282</span>); and</li>
+        <li>Pag-IBIG Law (<span class="c-teal">R.A. No. 9679</span>).</li>
+      </ul>
+    </li>
+    <li><strong>Crimes against property under Title 10 of the RPC where the obligation is civil in nature:</strong>
+      <ul>
+        <li>Theft under <span class="c-teal">Art. 308, RPC</span> cognizable by first-level courts;</li>
+        <li>Estafa under <span class="c-teal">Art. 315(1), RPC</span> (except paragraphs 2 and 3);</li>
+        <li>Other forms of swindling under <span class="c-teal">Art. 316, RPC</span>;</li>
+        <li>Swindling of a minor under <span class="c-teal">Art. 317, RPC</span>;</li>
+        <li>Other deceits under <span class="c-teal">Art. 318, RPC</span>; and</li>
+        <li>Malicious mischief under <span class="c-teal">Art. 327, RPC</span>.</li>
+      </ul>
+    </li>
+    <li><strong>Crimes against honor under Title 13 of the RPC where liability is civil in nature:</strong>
+      <ul>
+        <li>Libel (<span class="c-teal">Art. 355, RPC</span>);</li>
+        <li>Threatening to publish libel (<span class="c-teal">Art. 356, RPC</span>);</li>
+        <li>Prohibited publication of official proceedings (<span class="c-teal">Art. 357, RPC</span>);</li>
+        <li>Grave and Simple Slander (Oral Defamation) under <span class="c-teal">Art. 358, RPC</span>;</li>
+        <li>Grave and Simple Slander by Deed under <span class="c-teal">Art. 359, RPC</span>;</li>
+        <li>Incriminating innocent person (<span class="c-teal">Art. 363, RPC</span>); and</li>
+        <li>Intriguing against honor (<span class="c-teal">Art. 364, RPC</span>).</li>
+      </ul>
+    </li>
+    <li>Cybercrime Libel under <span class="c-teal">R.A. No. 10175</span> where liability is civil in nature.</li>
+    <li>Criminal negligence under Title 14 of the RPC where liability is civil in nature.</li>
+    <li>Intellectual property rights cases where liability is civil in nature.</li>
+  </ol>
+  <p><strong>Mediation Timeline:</strong> The referral to the PMC is made immediately after the arraignment and pre-trial conference. Mediation must be completed within a <mark class="hl">non-extendible period of thirty (30) calendar days</mark>; if mediation fails or expires, trial proceeds. Except for these specified cases, cases covered by the Rule on Summary Procedure are not referred to mediation.</p>
+
+  <h4>19. Discovery Procedures in Criminal Cases</h4>
+  <p>Modes of discovery are not exclusively confined to civil actions, as an accused is civilly liable under <span class="c-teal">Article 100 of the Revised Penal Code</span>, and provisional remedies are available under <span class="c-teal">Rule 127</span>. The recognized discovery mechanisms in criminal practice include:</p>
+  <ol>
+    <li><strong>Production and Inspection of Material Evidence (<span class="c-teal">Sec. 10, Rule 116</span>):</strong> The accused may move for the production, inspection, and copying of documents, papers, books, accounts, or tangible objects in the possession or control of the prosecution or law enforcement agencies to prevent surprise, suppression, or alteration.</li>
+    <li><strong>Mental Examination of the Accused (<span class="c-teal">Sec. 11, Rule 116</span>):</strong> If the accused appears to suffer from an unsound mental condition, the court may order a mental examination and hospital confinement, operating under the principle of <span class="c-teal">Rule 28</span> (physical and mental examination).</li>
+    <li><strong>Depositions (<span class="c-burgundy"><em>People v. Hubert Webb</em></span>, 312 SCRA 573):</strong> Taking depositions under <span class="c-teal">Rule 24/23</span> to perpetuate testimony regarding any matter cognizable by Philippine courts may be granted within the sound discretion of the trial court.</li>
+    <li><strong>Conditional Examination of Witnesses Before Trial (<span class="c-teal">Secs. 12, 13, and 15, Rule 119</span>):</strong>
+      <ul>
+        <li><strong>For the Defense (<span class="c-teal">Secs. 12 &amp; 13, Rule 119</span>):</strong> When the witness is so sick or infirm as to afford reasonable ground to believe he cannot attend trial; resides more than 100 kilometers from the place of trial and has no means to attend; or similar circumstances exist.</li>
+        <li><strong>For the Prosecution (<span class="c-teal">Sec. 15, Rule 119</span>):</strong> When a prosecution witness is too sick or infirm to appear at trial, or has to leave the Philippines with no definite date of returning. Under <span class="c-burgundy"><em>Go v. People</em></span>, this examination <span class="c-rust"><strong><u>must take place before the court where the case is pending (and never abroad)</u></strong></span> to protect the accused's constitutional right to confront witnesses face-to-face.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <!-- PART I SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-i">
+    <div class="summary-hdr">
+      <h4>Part I Summary Brief Reviewer &mdash; Pre-Trial (<span class="c-teal" style="color:#CCFBF1;">Rule 118 &amp; A.M. No. 15-06-10-SC</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Pre-Trial Purposes, Mandatory Courts &amp; Schedules:</strong> <span class="c-teal">Rule 118, Secs. 1&ndash;3</span>; <span class="c-teal">A.M. No. 12-11-2-SC</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span> (same-day arraignment &amp; pre-trial: 10 days detained / 30 days non-detained).</li>
+        <li><strong>Preliminary Conference &amp; Judicial Duties:</strong> Branch Clerk's duties, signed Minutes, Judge's study of PI records, Plea Bargain vs. Failed Plea Bargain, active judicial stipulations, Pre-Trial Order (served same day).</li>
+        <li><strong>Civil vs. Criminal Pre-Trial, PMC Mediation &amp; Criminal Discovery:</strong> <span class="c-teal">Rule 18 vs. Rule 118</span>; 30-day non-extendible PMC mediation on civil liability; <span class="c-teal">Rule 116 Secs. 10&ndash;11</span>, <span class="c-burgundy"><em>People v. Webb</em></span>, <span class="c-teal">Rule 119 Secs. 12&ndash;15</span> (<span class="c-burgundy"><em>Go v. People</em></span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6 Purposes of Criminal Pre-Trial (<span class="c-teal">Sec. 1, Rule 118</span>)</td>
+              <td><strong>P-S-M-W-M-O:</strong> <strong>P</strong>lea bargaining; <strong>S</strong>tipulation of facts; <strong>M</strong>arking of evidence; <strong>W</strong>aiver of objections; <strong>M</strong>odification of order of trial; <strong>O</strong>ther matters.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Binding Pre-Trial Admissions (<span class="c-teal">Sec. 2, Rule 118</span>)</td>
+              <td><strong>"W + A + C":</strong> Must be in <strong>W</strong>riting AND signed by BOTH <strong>A</strong>ccused and <strong>C</strong>ounsel.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Mediation-Eligible Crimes (<span class="c-teal">A.M. 15-06-10-SC</span>)</td>
+              <td><strong>"B-P-H-C-N-I":</strong> <strong>B</strong>.P. 22/SSS/Pag-IBIG; <strong>P</strong>roperty (Title 10, Estafa 315(1) only); <strong>H</strong>onor (Title 13); <strong>C</strong>yberlibel; <strong>N</strong>egligence (Title 14); <strong>I</strong>P rights &mdash; 30 days civil aspect only.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Same-Day Arraignment &amp; Pre-Trial:</strong> 10 calendar days from receipt of case (detained) or 30 calendar days from acquiring jurisdiction over accused (non-detained).</li>
+        <li><strong>Pre-Trial Order Service:</strong> Served immediately on the same day pre-trial terminates under Continuous Trial Guidelines; controls the course of trial unless modified to prevent manifest injustice.</li>
+        <li><strong>Unmarked Evidence Rule:</strong> Evidence not identified and marked during pre-trial cannot be offered at trial without prior leave of court for good cause.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>No Pre-Trial Brief / No Default in Criminal Pre-Trial:</strong> Unlike civil cases (<span class="c-teal">Rule 18</span>), <span class="c-teal">Rule 118</span> does NOT require a pre-trial brief, and non-appearance sanctions fall on counsel/prosecutor (fines/citations), never dismissal or default against the accused.</li>
+          <li><strong>Counsel Signature Alone Is Void:</strong> Even if defense counsel signs a pre-trial stipulation, it is <em>inadmissible</em> against the accused unless the <strong>accused himself also signs</strong> (<span class="c-teal">Sec. 2, Rule 118</span>).</li>
+          <li><strong>Estafa &amp; Summary Procedure Mediation Trap:</strong> Only <span class="c-teal">Art. 315(1)</span> Estafa (not pars. 2 &amp; 3) goes to PMC mediation; general Summary Procedure cases are NOT referred unless listed.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- PART II: TRIAL (RULE 119)                                 -->
+  <!-- ========================================================= -->
+  <h3 id="part-b-trial">B. TRIAL (<span class="c-teal">RULE 119</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Pre-Trial (Rule 118)] &rarr; <strong>YOU ARE HERE: Trial (Rule 119)</strong> &rarr; [Demurrer to Evidence (Rule 119, Sec. 23)] &rarr; [Judgment (Rule 120)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 119 (Secs. 1&ndash;24)</span>; <span class="c-teal">1987 Constitution, Art. III, Sec. 14(2)</span>; <span class="c-teal">A.M. No. 12-11-2-SC</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span>.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> After the Pre-Trial Order locks in the issues, witnesses, and marked exhibits, the case moves to continuous trial where both sides present evidence under strict speedy-trial clocks.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Balances the accused's constitutional right to a speedy, public, and confrontational trial with the State's duty to prosecute crime efficiently without indefinite postponements.</div>
+    </div>
+  </div>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">15 Days</div>
+        <div class="ui-kicker">PREPARE</div>
+        <div class="ui-sub">Minimum time for accused to prepare after Not Guilty plea (<span class="c-teal">Sec. 1</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">30 Days</div>
+        <div class="ui-kicker">COMMENCE</div>
+        <div class="ui-sub">Trial set within 30 days from end of Pre-Trial (<span class="c-teal">A.M. 12-11-2-SC</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">1 Day</div>
+        <div class="ui-kicker">EXAMINE</div>
+        <div class="ui-sub">One-Day Examination of Witness Rule (<span class="c-teal">A.M. 15-06-10-SC</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">180 Days</div>
+        <div class="ui-kicker">MAX CAP</div>
+        <div class="ui-sub">Entire trial period limit from first day of trial (<span class="c-teal">Sec. 2</span>)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="b-1-commencement">1. When Trial Shall Commence</h4>
+  <p>Pursuant to the Guidelines for Decongesting Holding Jails by Enforcing the Rights of Accused Persons to Bail and to Speedy Trial (<span class="c-teal">A.M. No. 12-11-2-SC</span>), <mark class="hl">trial shall be set not later than thirty (30) days from the termination of the pre-trial conference</mark>.</p>
+
+  <h4>2. Hearing Days and Calendar Call</h4>
+  <p>Under the Revised Guidelines for Continuous Trial of Criminal Cases (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</p>
+  <ul>
+    <li><strong>Trial Days:</strong> <mark class="hl">Trial shall be held from Monday to Thursday</mark>.</li>
+    <li><strong>Call Times:</strong> Courts shall call cases at <mark class="hl">exactly 8:30 A.M. and 2:00 P.M.</mark></li>
+    <li><strong>Friday Settings:</strong> <mark class="hl">Hearings on motions, arraignment and pre-trial, and promulgation of decisions shall be held strictly in the morning of Fridays.</mark></li>
+  </ul>
+
+  <h4>3. Schedule of Trial Dates</h4>
+  <ul>
+    <li>Under the Revised Guidelines for Continuous Trial, the schedule of trial dates for both the prosecution and the defense must be continuous and within the periods prescribed in the Regular/Special Rules.</li>
+    <li>This schedule is formulated during the arraignment and pre-trial conference proper where no plea of guilty or plea bargaining occurs.</li>
+    <li>As a general rule, <span class="c-green"><strong><u>trial dates are final and intransferrable</u></strong></span>, except in strictly exceptional cases.</li>
+  </ul>
+
+  <h4>4. Time to Prepare for Trial</h4>
+  <p>Under <span class="c-teal">Section 1, Rule 119</span>, after a plea of not guilty is entered, <mark class="hl">the accused shall have at least fifteen (15) days to prepare for trial</mark>.</p>
+
+  <h4>5. Effect of Not Bringing the Accused to Trial Within the Prescribed Period</h4>
+  <ul>
+    <li><strong>Dismissal on Motion of Accused:</strong> If the accused is not brought to trial within the statutory time limits set by <span class="c-teal">Section 6 of Rule 119</span>, the information may be dismissed upon motion of the accused on the ground of denial of his right to speedy trial.</li>
+    <li><strong>Burden of Proof:</strong>
+      <ul>
+        <li>The accused carries the initial burden of proving the factual ground for his motion to dismiss.</li>
+        <li>The prosecution carries the burden of going forward with evidence to prove that the delay falls under the excluded periods recognized by law.</li>
+      </ul>
+    </li>
+    <li><strong>Double Jeopardy Attachment:</strong> <mark class="hl">A dismissal on the ground of denial of the right to speedy trial is subject to the rules on double jeopardy (it operates as an adjudication on the merits equivalent to an acquittal).</mark></li>
+    <li><strong>Waiver:</strong> The motion for dismissal <span class="c-rust"><strong><u>must be filed prior to trial; failure to do so before trial constitutes a waiver</u></strong></span> of the right to have the charge dismissed under <span class="c-teal">Section 9 of Rule 119</span>.</li>
+  </ul>
+
+  <h4>6. Delays Excluded in Computing the Period for Commencement of Trial</h4>
+  <p>Under <span class="c-teal">Section 3, Rule 119</span>, certain periods of delay are excluded in calculating the time within which trial must commence:</p>
+  <ol>
+    <li>Delay resulting from an examination of the physical and mental condition of the accused.</li>
+    <li>Delay resulting from proceedings with respect to other criminal charges against the accused.</li>
+    <li>Delay resulting from extraordinary remedies against interlocutory orders.</li>
+    <li>Delay resulting from pre-trial proceedings, provided such delay does not exceed thirty (30) days.</li>
+    <li>Delay resulting from orders of inhibition, or proceedings relating to change of venue or transfer of cases from other courts.</li>
+    <li>Delay resulting from a finding of the existence of a prejudicial question.</li>
+    <li>Delay reasonably attributable to any period, not exceeding thirty (30) days, during which any proceeding concerning the accused is actually under advisement.</li>
+    <li>Delay resulting from the absence or unavailability of an essential witness.</li>
+    <li>Delay resulting from the mental incompetence or physical inability of the accused to stand trial.</li>
+    <li>Delay from the date the charge was dismissed to the date the time limitation would commence to run on a subsequent charge, when the initial information was dismissed upon motion of the prosecution and thereafter refiled for the same offense.</li>
+    <li>Reasonable delay when the accused is joined for trial with a co-accused over whom the court has not acquired jurisdiction, or as to whom the time for trial has not run and no motion for separate trial has been granted.</li>
+    <li>Delay resulting from a continuance granted by the court (motu proprio or on motion of either party) based on findings that the ends of justice served by granting the continuance outweigh the best interest of the public and the accused in a speedy trial.</li>
+  </ol>
+
+  <h4>7. Delay or Suspension of Trial Justified by Absence of a Witness</h4>
+  <ul>
+    <li><strong>"Essential Witness" Requirement:</strong> To justify delay or suspension of the trial under <span class="c-teal">Section 3(b) of Rule 119</span>, the witness cannot be just any witness; he must be an <span class="c-green"><strong><u>essential witness</u></strong></span>&mdash;one who is indispensable, necessary, or important in the highest degree.</li>
+    <li><strong>Absence vs. Unavailability:</strong>
+      <ul>
+        <li><strong>Absent:</strong> An essential witness is absent when his whereabouts are unknown or cannot be determined by due diligence.</li>
+        <li><strong>Unavailable:</strong> An essential witness is unavailable when his whereabouts are known, but his presence for trial cannot be obtained by due diligence.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>8. Continuous Trial</h4>
+  <ul>
+    <li>Under <span class="c-teal">Section 2, Rule 119</span>, once commenced, trial shall continue from day to day as far as practicable until terminated.</li>
+    <li>It may be postponed for a reasonable period of time for good cause.</li>
+    <li>To ensure a speedy trial, the court shall set the case for continuous trial on a weekly or other short-term trial calendar at the earliest possible time, after consultation with the prosecutor and defense counsel.</li>
+  </ul>
+
+  <h4>9. Trial Period</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 119</span>, <mark class="hl">in no case shall the entire trial period exceed one hundred eighty (180) days from the first day of trial</mark>, except as otherwise authorized by the Supreme Court.</p>
+
+  <h4>10. Postponement or Continuance; Motion for Postponement Prohibited</h4>
+  <ul>
+    <li><strong>General Statutory Rule:</strong> Under <span class="c-teal">Section 4(a) of Rule 119</span>, a continuance may be granted if continuing the proceeding is impossible or would result in a miscarriage of justice.</li>
+    <li><strong>Strict Rule Under Continuous Trial Guidelines (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</strong> <span class="c-rust"><strong><u>A motion for postponement is prohibited, EXCEPT if based on</u></strong></span>:
+      <ol>
+        <li>Acts of God;</li>
+        <li>Force majeure; or</li>
+        <li>Physical inability of the witness to appear and testify.</li>
+      </ol>
+    </li>
+    <li><strong>Conditions When Allowed:</strong>
+      <ul>
+        <li>The moving party is warned that presentation of evidence must still finish within the previously agreed dates.</li>
+        <li>The motion must be accompanied by the original official receipt evidencing payment of the postponement fee under <span class="c-teal">Section 21(b), Rule 141</span>; otherwise, the clerk of court shall not accept the motion.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>11. Prohibited Grounds for a Continuance Under the Rules</h4>
+  <p>Under <span class="c-teal">Section 4 of Rule 119</span> and <span class="c-teal">A.M. No. 15-06-10-SC</span>, the court is <span class="c-rust"><strong><u>prohibited from granting a continuance</u></strong></span> on any of the following grounds:</p>
+  <ol>
+    <li>Congestion of the court's calendar;</li>
+    <li>Lack of diligent preparation; or</li>
+    <li>Failure to obtain available witnesses on the part of the prosecutor.</li>
+  </ol>
+
+  <h4>12. One-Day Examination of Witness Rule</h4>
+  <p>Pursuant to the Revised Guidelines for Continuous Trial, every court is required to strictly adhere to the rule that <mark class="hl">a witness has to be fully examined in one (1) day</mark>.</p>
+
+  <h4>13. How to Secure the Appearance of a Material Witness (Bar 1994, 1999)</h4>
+  <p>Under <span class="c-teal">Section 14, Rule 119</span>:</p>
+  <ul>
+    <li>Either party may, upon motion, secure an order from the court requiring a material witness to <mark class="hl">post bail in such sum as may be deemed proper</mark>, if the court is satisfied upon proof or oath that the material witness will not testify when required.</li>
+    <li>If the witness refuses to post bail, <mark class="hl">the court shall commit him to prison until he complies or is legally discharged after his testimony has been taken</mark>.</li>
+  </ul>
+
+  <h4 id="b-14-state-witness">14. Discharge of Accused to Be a State Witness; Requisites (Bar 1988, 1990, 1994, 2006, 2013)</h4>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">State Witness Discharge Gate (<span class="c-teal">Sec. 17, Rule 119</span>)</div>
+      <div class="ui-sub">Motion filed by Prosecution BEFORE resting its case &bull; Resolved within 10 calendar days (non-extendible)</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">5 Mandatory Conditions</div>
+      <div class="ui-sub">Absolute necessity &bull; No other direct evidence &bull; Substantially corroborated &bull; Not most guilty &bull; No moral turpitude conviction</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">&#10003;</div>
+        <div class="ui-title">Discharge Granted</div>
+        <div class="ui-sub">Operates as ACQUITTAL (bar to re-prosecution, unless he refuses to testify)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">&#10005;</div>
+        <div class="ui-title">Discharge Denied</div>
+        <div class="ui-sub">Sworn statement INADMISSIBLE; prosecuted like his co-accused</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Joint Trial:</strong> When two or more persons are jointly charged, they shall be tried jointly unless the court orders separate trials (<span class="c-teal">Sec. 16, Rule 119</span>).</li>
+    <li><strong>Timing:</strong> The motion for discharge must be filed by the prosecution <mark class="hl">before resting its case</mark>.</li>
+    <li><strong>Requisites Under <span class="c-teal">Section 17, Rule 119</span>:</strong>
+      <ol>
+        <li>Two or more accused are jointly charged with the commission of an offense;</li>
+        <li>The motion for discharge is filed by the prosecution before it rests its case;</li>
+        <li>The prosecution presents evidence and the sworn statement of each proposed state witness at a hearing in support of the discharge;</li>
+        <li>The accused gives his consent to be a state witness; and</li>
+        <li>The trial court is satisfied that:
+          <ol type="a">
+            <li>There is <span class="c-green"><strong><u>absolute necessity</u></strong></span> for the testimony of the accused whose discharge is requested;</li>
+            <li>There is <span class="c-green"><strong><u>no other direct evidence available</u></strong></span> for the proper prosecution of the offense, except the testimony of said accused;</li>
+            <li>The testimony can be <span class="c-green"><strong><u>substantially corroborated in its material points</u></strong></span>;</li>
+            <li>Said accused <span class="c-green"><strong><u>does not appear to be the most guilty</u></strong></span>; and</li>
+            <li>Said accused <span class="c-green"><strong><u>has not at any time been convicted of any offense involving moral turpitude</u></strong></span>.</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><strong>Crucial Rule on Corroborative Witness (Bar 2015):</strong> <span class="c-rust"><strong><u>Discharge is improper if the proposed witness's testimony is merely corroborative</u></strong></span>, because requisites (a) and (b) require absolute necessity and the absence of other direct evidence.</li>
+    <li><strong>Not the "Least Guilty":</strong> The law does not require the accused to be the least guilty; <mark class="hl">it is sufficient that he does not appear to be the most guilty</mark> (<span class="c-burgundy"><em>Jimenez, Jr. v. People</em></span>).</li>
+    <li><strong>Judicial Deference to Prosecution:</strong> The decision to use an accused as a state witness originates from the prosecutor; courts generally defer to the prosecutor's judgment and deny discharge only in clear cases of failure to meet statutory requisites (<span class="c-burgundy"><em>People v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>Ampatuan, Jr. v. De Lima</em></span>).</li>
+    <li><strong>Resolution Period:</strong> Under the Continuous Trial Guidelines, the motion shall be resolved within a <mark class="hl">non-extendible period of ten (10) calendar days</mark> from the termination of the hearing.</li>
+  </ul>
+
+  <h4>15. Evidence Adduced During the Discharge Hearing</h4>
+  <ul>
+    <li>Evidence adduced in support of the discharge automatically forms part of the trial (<span class="c-teal">Sec. 17, Rule 119</span>).</li>
+    <li>If the court denies the motion for discharge, <span class="c-rust"><strong><u>the sworn statement of the proposed state witness shall be inadmissible in evidence</u></strong></span> (<span class="c-teal">Sec. 17, Rule 119</span>).</li>
+  </ul>
+
+  <h4>16. Effect of Discharge of an Accused as State Witness; Acquittal</h4>
+  <ul>
+    <li><strong>Operates as Acquittal:</strong> Under <span class="c-teal">Section 18, Rule 119</span>, <mark class="hl">the discharge of an accused shall amount to an acquittal and shall be a bar to another prosecution for the same offense</mark>.</li>
+    <li><strong>Exception:</strong> It will not bar prosecution if the accused <span class="c-rust"><strong><u>fails or refuses to testify against his co-accused in accordance with the sworn statement</u></strong></span> constituting the basis for his discharge.</li>
+    <li><strong>Effect of Denial (Bar 2011):</strong> If the motion for discharge is denied, the proposed state witness shall be prosecuted like his co-accused.</li>
+  </ul>
+
+  <h4>17. Mistake in Charging the Proper Offense</h4>
+  <p>Under <span class="c-teal">Section 19, Rule 119</span>:</p>
+  <ul>
+    <li>Occurs when it becomes manifest at any time before judgment that a mistake was made in charging the proper offense, and the accused cannot be convicted of the offense charged or any other offense necessarily included therein.</li>
+    <li>The court shall order the filing of a new information.</li>
+    <li>Upon the filing of the new information, the court shall dismiss the original case and commit the accused to answer for the proper offense.</li>
+    <li>The accused shall not be discharged if there appears good cause to detain him.</li>
+  </ul>
+
+  <h4 id="b-18-order-of-trial">18. Order of Trial</h4>
+  <p>Under <span class="c-teal">Section 11, Rule 119</span>, trial proceeds in the following sequential order:</p>
+  <ol>
+    <li><strong>Prosecution evidence-in-chief:</strong> To prove the charge and civil liability.</li>
+    <li><strong>Defense evidence-in-chief:</strong> To prove the defense and damages sustained from any provisional remedy.</li>
+    <li><strong>Prosecution rebuttal evidence:</strong> Unless the court allows additional evidence bearing on the main issue.</li>
+    <li><strong>Defense sur-rebuttal evidence:</strong> Unless the court allows additional evidence bearing on the main issue.</li>
+    <li><strong>Submission for decision:</strong> The case is deemed submitted for decision, unless the court directs oral argument or written memoranda.</li>
+  </ol>
+
+  <h4>19. Conditional Examination of Witnesses for the Accused Before Trial</h4>
+  <ul>
+    <li><strong>Grounds (<span class="c-teal">Sec. 12, Rule 119</span>):</strong>
+      <ol>
+        <li>Witness is sick or infirm affording reasonable ground to believe he cannot attend trial;</li>
+        <li>Witness resides more than 100 kilometers from the place of trial and has no means to attend; or</li>
+        <li>Similar circumstances exist making him unavailable.</li>
+      </ol>
+    </li>
+    <li><strong>Procedure (<span class="c-teal">Sec. 12 &amp; 13, Rule 119</span>):</strong>
+      <ol>
+        <li>Motion supported by affidavit stating name, residence, and substance of testimony.</li>
+        <li>Order served at least three (3) days before examination.</li>
+        <li>Taken before a judge, or a member of the bar in good standing if examination before a judge is impracticable; or designated inferior court if ordered by a superior court.</li>
+        <li>Written record of testimony is taken.</li>
+        <li>The absence of the prosecutor shall not cause postponement if he was duly notified.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4>20. Conditional Examination of Witness for the Prosecution</h4>
+  <p>Under <span class="c-teal">Section 15, Rule 119</span>:</p>
+  <ul>
+    <li><strong>Grounds:</strong> When it satisfactorily appears that a witness for the prosecution is too sick or infirm to appear, or has to leave the Philippines with no definite date of returning.</li>
+    <li><strong>Strict Forum (<span class="c-burgundy"><em>Go v. People</em></span>):</strong> <span class="c-rust"><strong><u>Must be taken strictly before the court where the case is pending&mdash;it cannot be taken outside the Philippines (even via foreign depositions)</u></strong></span> because it protects the accused's constitutional right to a public trial and face-to-face confrontation.</li>
+    <li><strong>Presence of Accused:</strong> Conducted in the presence of the accused upon notice; failure/refusal to attend despite notice operates as a waiver, and statements taken may be admitted in evidence.</li>
+  </ul>
+
+  <h4>21. Form of Testimony During the Trial</h4>
+  <p>Under the Revised Guidelines for Continuous Trial (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</p>
+  <ul>
+    <li><strong>First-Level Courts (MTC/MeTC):</strong> Testimonies of witnesses in all criminal cases shall consist of:
+      <ol type="a">
+        <li>Duly subscribed written statements given to law enforcement officers; or</li>
+        <li>Affidavits or counter-affidavits submitted during preliminary investigation; or</li>
+        <li>Judicial affidavits, if the former are unavailable. (Trial prosecutors may dispense with police statements and instead prepare/revise judicial affidavits).</li>
+      </ol>
+    </li>
+    <li><strong>Second-Level Courts (RTC), Sandiganbayan, and CTA:</strong>
+      <ul>
+        <li><strong>Transactional/Documentary Crimes:</strong> Sworn statements or affidavits apply where witness demeanor is not essential to credibility (e.g., forensic chemists, medico-legal officers, investigators, auditors, accountants, custodians, or in estafa, falsification, malversation).</li>
+        <li><strong>Eyewitness Cases:</strong> <mark class="hl">Where culpability is based on alleged eyewitnesses, testimonies shall be in oral form.</mark></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>22. Modification of the Order of Trial; Reverse Trial (Bar 2007)</h4>
+  <ul>
+    <li>Under <span class="c-teal">Section 11(e) of Rule 119</span> and <span class="c-teal">Section 1(e) of Rule 118</span>, the order of trial may be modified when <mark class="hl">the accused admits the act or omission charged in the complaint or information but interposes a lawful defense (e.g., self-defense)</mark>.</li>
+    <li>In this "reverse trial," <span class="c-green"><strong><u>the defense presents evidence first</u></strong></span> to establish the justifying/exempting circumstance, and the prosecution presents evidence thereafter.</li>
+  </ul>
+
+  <h4>23. Reopening of the Proceedings</h4>
+  <p>Under <span class="c-teal">Section 24, Rule 119</span> and <span class="c-burgundy"><em>Cabarles v. Maceda</em></span>:</p>
+  <ul>
+    <li><strong>Timing:</strong> <mark class="hl">At any time before the finality of the judgment of conviction.</mark></li>
+    <li><strong>Initiative:</strong> The judge may reopen <span class="c-green"><strong><u>motu proprio or upon motion</u></strong></span>.</li>
+    <li><strong>Hearing:</strong> The order is issued only after a hearing is conducted.</li>
+    <li><strong>Purpose:</strong> To prevent a miscarriage of justice.</li>
+    <li><strong>Termination Period:</strong> Presentation of additional evidence must be terminated within <mark class="hl">thirty (30) days</mark> from the order granting it.</li>
+  </ul>
+
+  <h4>24. Trial in Absentia (Bar 1998)</h4>
+  <p>Under <span class="c-teal">Article III, Section 14(2) of the 1987 Constitution</span> and <span class="c-burgundy"><em>Bernardo v. People</em></span>, trial in absentia may proceed only when the following <span class="c-green"><strong><u>three requisites concur</u></strong></span>:</p>
+  <ol>
+    <li><mark class="hl">The accused has already been arraigned</mark>;</li>
+    <li><mark class="hl">The accused has been duly notified of the trial or hearings</mark>; and</li>
+    <li><mark class="hl">The absence or failure of the accused to appear is unjustified</mark>.</li>
+  </ol>
+
+  <h4>25. Instances When the Presence of the Accused Is Mandatory</h4>
+  <p>The presence of the accused is indispensable and cannot be waived in the following instances (<span class="c-burgundy"><em>People v. De Grano</em></span>):</p>
+  <ol>
+    <li>At arraignment and plea (<span class="c-teal">Sec. 1[b], Rule 116</span>);</li>
+    <li>During trial, whenever necessary for identification purposes (to establish identity as the perpetrator); and</li>
+    <li>At the promulgation of sentence, unless it is for a light offense, in which case the accused may appear by counsel or representative (<span class="c-teal">Sec. 6, Rule 120</span>).</li>
+  </ol>
+
+  <h4>26. Comments and Questions of the Judge During the Trial</h4>
+  <ul>
+    <li><strong><span class="c-burgundy"><em>Tabuena v. Sandiganbayan</em></span> Rule:</strong> Judges have the right to question witnesses to clarify material points, but this right must be sparingly and judiciously used. The court must maintain the <mark class="hl">"cold neutrality of an impartial judge"</mark> and avoid assuming the dual role of magistrate and advocate.</li>
+    <li><strong><span class="c-burgundy"><em>People v. Mortera</em></span>:</strong> Sarcastic or improper remarks made by a judge, while not commended, do not automatically amount to denial of an impartial trial if the record shows no actual partiality or bias.</li>
+  </ul>
+
+  <h4 id="b-27-offer-of-evidence">27. Offer of Evidence</h4>
+  <p>Under the Revised Guidelines for Continuous Trial:</p>
+  <ul>
+    <li><mark class="hl">The offer of evidence, comments/objections, and court rulings shall all be made ORALLY.</mark></li>
+    <li>The offer must be made on the same day after the presentation of the last witness.</li>
+    <li>The opposing party must immediately interpose oral objections, after which the court rules in open court.</li>
+    <li>Counsel must cite specific record page numbers of exhibits.</li>
+  </ul>
+
+  <h4>28. Lack of Formal Offer of Evidence During Trial</h4>
+  <ul>
+    <li>Under <span class="c-teal">Section 34, Rule 132</span>, <span class="c-rust"><strong><u>the court shall consider no evidence which has not been formally offered</u></strong></span>.</li>
+    <li>Documents marked during pre-trial or trial but not formally offered remain mere scraps of paper without evidentiary weight (<span class="c-burgundy"><em>Laborte v. Pagsanjan Tourism Consumer's Cooperative</em></span>).</li>
+    <li>In <span class="c-burgundy"><em>People v. Villanueva</em></span>, a conviction was downgraded from qualified rape to simple rape because the victim's birth certificate and medical certificate were not formally offered.</li>
+  </ul>
+
+  <h4>29. When Formal Offer of Evidence Is Not Necessary (Bar 2018)</h4>
+  <p>The strict rule requiring formal offer is relaxed when <span class="c-green"><strong><u>two requisites concur</u></strong></span> (<span class="c-burgundy"><em>Barut v. People</em></span>; <span class="c-burgundy"><em>Laborte</em></span>):</p>
+  <ol>
+    <li>The evidence was duly identified by testimony duly recorded; and</li>
+    <li>The evidence was incorporated into the records of the case.</li>
+  </ol>
+  <p>Additionally, formal offer is not necessary for:</p>
+  <ul>
+    <li>Facts subject to mandatory or discretionary judicial notice (<span class="c-teal">Sec. 2, Rule 129</span>);</li>
+    <li>Judicial admissions (<span class="c-teal">Sec. 4, Rule 129</span>); and</li>
+    <li>Evaluating the demeanor of witnesses.</li>
+  </ul>
+
+  <h4>30. Additional Rules Under Continuous Trial (<span class="c-teal">A.M. No. 15-06-10-SC</span>)</h4>
+  <ul>
+    <li><strong>Encouragement of Conditional Examination:</strong> Courts shall actively encourage the parties to avail themselves of conditional examinations under <span class="c-teal">Sections 12, 13, and 15 of Rule 119</span>.</li>
+    <li><strong>Absence of Counsel de Parte:</strong> The hearing shall proceed upon the immediate appointment of a counsel de oficio by the court to prevent delay.</li>
+  </ul>
+
+  <h4>31. Memoranda</h4>
+  <p>Under the Continuous Trial Guidelines:</p>
+  <ul>
+    <li>Submission of memoranda is discretionary on the part of the court.</li>
+    <li>Length is strictly limited: <mark class="hl">maximum of twenty-five (25) pages, single-spaced, legal-size paper, font size 14</mark>.</li>
+    <li>Period to file is non-extendible and does NOT suspend the period for promulgation of the decision; with or without memoranda, promulgation proceeds as scheduled.</li>
+  </ul>
+
+  <!-- PART II SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-ii">
+    <div class="summary-hdr">
+      <h4>Part II Summary Brief Reviewer &mdash; Trial (<span class="c-teal" style="color:#CCFBF1;">Rule 119 &amp; A.M. No. 15-06-10-SC</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Trial Clocks, Schedules &amp; Postponements:</strong> <span class="c-teal">Rule 119, Secs. 1&ndash;9</span>; <span class="c-teal">A.M. No. 12-11-2-SC</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span> (Mon&ndash;Thu trials; Fri AM motions/arraignment/promulgation; 180-day limit; prohibited postponements).</li>
+        <li><strong>State Witness Discharge &amp; Mistake in Charging:</strong> <span class="c-teal">Rule 119, Secs. 16&ndash;19</span> (<span class="c-burgundy"><em>Jimenez, Jr. v. People</em></span>, <span class="c-burgundy"><em>Ampatuan, Jr. v. De Lima</em></span>).</li>
+        <li><strong>Order of Trial, Conditional Exam, Trial in Absentia &amp; Evidence Offer:</strong> <span class="c-teal">Rule 119, Secs. 11&ndash;15, 24</span>; <span class="c-teal">Const. Art. III, Sec. 14(2)</span>; <span class="c-teal">Rule 132, Sec. 34</span> (<span class="c-burgundy"><em>Go v. People</em></span>, <span class="c-burgundy"><em>Barut v. People</em></span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 Requisites of State Witness Discharge (<span class="c-teal">Sec. 17</span>)</td>
+              <td><strong>"A-N-S-N-M":</strong> <strong>A</strong>bsolute necessity; <strong>N</strong>o other direct evidence; <strong>S</strong>ubstantially corroborated; <strong>N</strong>ot most guilty; no <strong>M</strong>oral turpitude conviction.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Trial in Absentia (<span class="c-teal">Art. III, Sec. 14[2]</span>)</td>
+              <td><strong>"A-N-U":</strong> <strong>A</strong>rraigned already; duly <strong>N</strong>otified; absence is <strong>U</strong>njustified.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Allowed Postponements (<span class="c-teal">A.M. 15-06-10-SC</span>)</td>
+              <td><strong>"A-F-P + OR":</strong> <strong>A</strong>cts of God; <strong>F</strong>orce majeure; <strong>P</strong>hysical inability of witness + original <strong>OR</strong> of postponement fee (<span class="c-teal">Rule 141, Sec. 21[b]</span>).</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Speedy Trial Dismissal:</strong> Motion must be filed <em>prior to trial</em> (otherwise waived); dismissal operates as an acquittal attaching double jeopardy.</li>
+        <li><strong>Prosecution Conditional Exam (<span class="c-teal">Sec. 15</span>):</strong> Must be held strictly before the court where the case is pending (<span class="c-burgundy"><em>Go v. People</em></span>), never abroad.</li>
+        <li><strong>Oral Offer of Evidence:</strong> Offer, objections, and rulings are made orally on the same day after the last witness.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>"Not Most Guilty" vs. "Least Guilty":</strong> The accused need NOT be the least guilty&mdash;only that he does not appear to be the <em>most</em> guilty (<span class="c-burgundy"><em>Jimenez, Jr. v. People</em></span>).</li>
+          <li><strong>Corroborative Witness Trap:</strong> A purely corroborative witness CANNOT be discharged as a state witness because <span class="c-teal">Sec. 17(a)-(b)</span> requires absolute necessity and absence of other direct evidence.</li>
+          <li><strong>Denied State Witness Statement:</strong> If discharge is denied, the accused's sworn statement is <strong>inadmissible</strong> in evidence.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- PART III: DEMURRER TO EVIDENCE (RULE 119, SEC. 23)        -->
+  <!-- ========================================================= -->
+  <h3 id="part-c-demurrer">C. DEMURRER TO EVIDENCE (<span class="c-teal">Rule 119</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Prosecution Evidence-in-Chief (Rule 119)] &rarr; <strong>YOU ARE HERE: Demurrer to Evidence (Rule 119, Sec. 23)</strong> &rarr; [Defense Evidence / Judgment (Rule 120)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 119, Sec. 23</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span>; compared with <span class="c-teal">Rule 33</span> (Civil Demurrer) and <span class="c-teal">Rule 65</span> (Certiorari).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once the prosecution rests its case, the accused may immediately test whether the prosecution's evidence alone proves guilt beyond reasonable doubt before presenting defense evidence.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects an accused from the burden of proving innocence when the State failed to discharge its burden, while penalizing dilatory demurrers filed without leave via strict waiver of defense evidence.</div>
+    </div>
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Prosecution Rests Its Case (<span class="c-teal">Rule 119, Sec. 23</span> &amp; <span class="c-teal">A.M. 15-06-10-SC</span>)</div>
+      <div class="ui-sub">Mandatory Judicial Inquiry: Accused chooses With Leave or Without Leave</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">&#10003;</div>
+        <div class="ui-title">With Leave of Court</div>
+        <div class="ui-sub"><strong>Granted:</strong> Acquittal (Double Jeopardy)<br/><strong>Denied:</strong> Accused RETAINS right to present defense evidence</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">&#10005;</div>
+        <div class="ui-title">Without Leave of Court</div>
+        <div class="ui-sub"><strong>Granted:</strong> Acquittal (Double Jeopardy)<br/><strong>Denied:</strong> STRICT WAIVER of right to present defense evidence!</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="c-1-nature">1. Nature of a Demurrer to Evidence (Bar 1991, 1994, 1996, 1998, 2001, 2003, 2004, 2007, 2009)</h4>
+  <ul>
+    <li><strong>Definition and Character:</strong> A demurrer to evidence is actually a motion to dismiss filed by the accused <mark class="hl">after the prosecution has rested its case</mark>. It may be availed of in criminal cases (<span class="c-teal">Sec. 23, Rule 119</span>), in civil cases (<span class="c-teal">Rule 33</span>), and in special proceedings where ordinary rules apply suppletorily (<span class="c-teal">Sec. 2, Rule 72</span>).</li>
+    <li><strong>Prematurity:</strong> A demurrer to evidence filed before the prosecution rests its case is premature (<span class="c-burgundy"><em>Magleo v. De Juan-Quinagoran</em></span>).</li>
+    <li><strong>Sole Ground:</strong> The sole ground for a demurrer to evidence is the <span class="c-green"><strong><u>insufficiency of the evidence of the prosecution</u></strong></span> (<span class="c-teal">Sec. 23, Rule 119</span>).
+      <ul>
+        <li><em>Example:</em> In a prosecution for rape, a demurrer anchored merely on the failure of the prosecution to prove the minority of the victim is improper, because minority is not an essential element of rape.</li>
+      </ul>
+    </li>
+    <li><strong>Standard of Proof Challenged:</strong> In a demurrer, the accused challenges the insufficiency of the entire evidence of the prosecution and asserts that the prosecution failed to prove his <mark class="hl">guilt beyond reasonable doubt</mark> (<span class="c-burgundy"><em>Napoles v. Sandiganbayan</em></span>).</li>
+    <li><strong>Distinguished from Bail:</strong> In a petition for bail, the court's inquiry is confined strictly to whether there is evident proof of guilt, whereas a demurrer evaluates proof beyond reasonable doubt on the merits.</li>
+    <li><strong>Test of "Sufficient Evidence" to Defeat a Demurrer:</strong> To defeat a demurrer, the prosecution must show evidence of such character, weight, or amount as will legally justify the judicial action demanded (<span class="c-burgundy"><em>Singian v. Sandiganbayan</em></span>). It must establish:
+      <ol>
+        <li>The commission of the crime; and</li>
+        <li>The precise degree of participation therein by the accused.</li>
+      </ol>
+    </li>
+    <li><strong>Discretion of the Court:</strong> The grant or denial of a demurrer to evidence is left to the sound discretion of the trial court, which will not be disturbed absent grave abuse of discretion (<span class="c-burgundy"><em>People v. Go</em></span>).</li>
+  </ul>
+
+  <h4 id="c-i-roc">I. Demurrer to Evidence in the Rules of Court</h4>
+  <ol>
+    <li><strong>Demurrer to Evidence by the Court (Motu Proprio):</strong>
+      <p>Under <span class="c-teal">Section 23, Rule 119</span> of the Rules of Court, it is not only the accused who may initiate a demurrer:</p>
+      <ul>
+        <li>The court may, on its own initiative, dismiss the action on the ground of insufficiency of evidence without waiting for a demurrer from the accused.</li>
+        <li><strong>Mandatory Requirement:</strong> The court may do so <mark class="hl">only after giving the prosecution the opportunity to be heard</mark>.</li>
+      </ul>
+    </li>
+    <li><strong>Demurrer to Evidence by the Accused With Leave of Court (Bar 1991, 1994, 1998, 2000, 2003, 2004):</strong>
+      <p>Under <span class="c-teal">Section 23, Rule 119</span>, an accused may file a demurrer to evidence either with or without leave of court:</p>
+      <ul>
+        <li><strong>Procedure and Timelines Under <span class="c-teal">Rule 119</span>:</strong>
+          <ul>
+            <li><strong>Filing Motion for Leave:</strong> The motion for leave of court to file a demurrer to evidence must specifically state its grounds and must be filed within a <mark class="hl">non-extendible period of five (5) days after the prosecution rests its case</mark>.</li>
+            <li><strong>Opposition to Motion for Leave:</strong> The prosecution may oppose the motion within a <mark class="hl">non-extendible period of five (5) days from receipt</mark>.</li>
+            <li><strong>Filing the Demurrer:</strong> If leave is granted, the accused shall file the demurrer to evidence within a <mark class="hl">non-extendible period of ten (10) days from notice</mark>.</li>
+            <li><strong>Opposition to Demurrer:</strong> The prosecution may oppose the demurrer within a similar period of <mark class="hl">ten (10) days from receipt</mark>.</li>
+          </ul>
+        </li>
+        <li><strong>Effect If Granted:</strong> If the court grants the demurrer, the case is dismissed; as a rule, <span class="c-green"><strong><u>this dismissal amounts to an acquittal</u></strong></span> (<span class="c-burgundy"><em>Mupas v. People</em></span>).</li>
+        <li><strong>Effect If Denied:</strong> If the court denies the demurrer to evidence filed with leave of court, <mark class="hl">the accused may adduce evidence in his defense</mark>.</li>
+        <li><strong>Proper Remedy Upon Denial:</strong> The order denying the motion for leave or the demurrer itself is <span class="c-rust"><strong><u>not reviewable by appeal or by certiorari before judgment</u></strong></span> (<span class="c-teal">Sec. 23, Rule 119</span>). The accused must proceed to present his evidence, and if subsequently convicted, assign the denial as an error on ordinary appeal.</li>
+      </ul>
+    </li>
+    <li><strong>Demurrer to Evidence by the Accused Without Leave of Court (Bar 1991, 1994, 1998, 2000, 2003):</strong>
+      <ul>
+        <li><strong>Effect If Granted:</strong> The case is dismissed, and the dismissal operates as an acquittal.</li>
+        <li><strong>Effect If Denied (The Strict Waiver Rule):</strong>
+          <blockquote>
+            "If the demurrer is denied, the accused waives the right to present evidence and submits the case for judgment on the basis of the evidence for the prosecution." (<span class="c-teal">Sec. 23, Rule 119</span>).
+          </blockquote>
+        </li>
+        <li><strong>Unqualified Nature of Waiver:</strong> The waiver of the right to present defense evidence is <span class="c-rust"><strong><u>complete and unqualified</u></strong></span> (<span class="c-burgundy"><em>People v. Cristobal</em></span>). The case&mdash;including its civil aspect&mdash;is immediately submitted for final judgment on the prosecution's evidence alone, unless civil liability was previously waived or reserved (<span class="c-burgundy"><em>Hun Hyung Park v. Eung Won Choi</em></span>).</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h4 id="c-ii-continuous">II. Demurrer to Evidence Under the Revised Guidelines for Continuous Trial (<span class="c-teal">A.M. No. 15-06-10-SC</span>)</h4>
+  <p>The Revised Guidelines for Continuous Trial in Criminal Cases modified the procedural steps under <span class="c-teal">Rule 119</span> to eliminate delays:</p>
+  <ul>
+    <li><strong>Mandatory Judicial Inquiry:</strong> After the prosecution rests its case, the court is mandated to inquire from the accused whether he/she desires to move for leave of court to file a demurrer to evidence, or to proceed with presenting defense evidence. (Instead of dismissing motu proprio, the court leaves the choice to the discretion of the accused).</li>
+    <li><strong>Oral Motion for Leave:</strong> The accused may <mark class="hl">orally move for leave of court, and the court shall orally resolve the motion immediately in open court</mark> to avoid time wasted in filing written motions.</li>
+    <li><strong>If Oral Motion for Leave is Denied:</strong>
+      <ul>
+        <li>The court orders the accused to present and terminate his evidence on the dates previously agreed upon, and to orally offer and rest his case on the day his last witness is presented.</li>
+        <li>The accused still retains the right to present defense evidence.</li>
+      </ul>
+    </li>
+    <li><strong>If Accused Insists Despite Denial of Leave:</strong>
+      <ul>
+        <li>If the accused insists on filing a demurrer despite the denial of leave, the scheduled defense trial dates are canceled.</li>
+        <li>The demurrer shall be deemed one filed without leave of court, <span class="c-rust"><strong><u>subjecting the accused to the waiver of his right to present evidence</u></strong></span>.</li>
+      </ul>
+    </li>
+    <li><strong>If Leave Is Granted (Timelines):</strong>
+      <ul>
+        <li><strong>Filing Demurrer:</strong> Non-extendible period of <mark class="hl">ten (10) calendar days</mark> from the date leave is granted.</li>
+        <li><strong>Comment/Opposition:</strong> Non-extendible period of <mark class="hl">ten (10) calendar days</mark> from receipt of the demurrer.</li>
+        <li><strong>Resolution Period:</strong> The court shall resolve the demurrer within a non-extendible period of <mark class="hl">thirty (30) calendar days</mark> from filing of the comment or lapse of the period to file it.</li>
+      </ul>
+    </li>
+    <li><strong>If Demurrer Filed With Leave Is Denied:</strong>
+      <ul>
+        <li>The accused presents and terminates his evidence on scheduled dates (one day apart, morning and afternoon) and orally offers and rests his case.</li>
+        <li>The remedy is to present evidence, because a petition for certiorari to review an order denying a demurrer is strictly prohibited under <span class="c-teal">Section 23 of Rule 119</span>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>4. Not Every Motion to Dismiss Is a Demurrer to Evidence</h4>
+  <ul>
+    <li><strong>Substantive Difference:</strong> A demurrer to evidence must contain what is fundamental to every demurrer: it must make reference to the insufficiency of the prosecution's evidence on record. A motion to dismiss that is not anchored on evidentiary insufficiency is not a demurrer under <span class="c-teal">Section 23, Rule 119</span>.</li>
+    <li><strong>The Determining Criteria (<span class="c-burgundy"><em>Cabador v. People</em></span>, 602 SCRA 760):</strong> To distinguish a demurrer from an ordinary motion to dismiss, the court considers:
+      <ol>
+        <li>The allegations in the motion must be made in good faith;</li>
+        <li>The stage of the proceeding at which it is filed; and</li>
+        <li>The primary objective of the party filing it.</li>
+      </ol>
+    </li>
+    <li><strong>Application in <span class="c-burgundy"><em>Cabador v. People</em></span>:</strong>
+      <ul>
+        <li>An accused detained since 2001 filed a motion to dismiss invoking his constitutional right to speedy trial due to systemic delays by the prosecution.</li>
+        <li>Unknown to him, the prosecution had been granted an extension to make its formal offer four days prior; thus, the prosecution had not yet rested.</li>
+        <li>The trial court and CA mischaracterized his pleading as a demurrer to evidence filed without leave of court and declared that he had waived his right to present evidence.</li>
+        <li>The Supreme Court reversed, holding that Cabador&rsquo;s motion was an assertion of his right to a speedy trial, not a demurrer. It made no reference to trial exhibits or witness credibility and did not challenge the sufficiency of the evidence. Therefore, he did not waive his right to present evidence in his defense.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>5. Granting of Demurrer Is an Acquittal (Bar 2009)</h4>
+  <ul>
+    <li><strong>Dismissal on the Merits:</strong> A demurrer to evidence is filed after the prosecution rests, and when granted, it represents an appreciation of the evidence adduced and a finding that it fails to warrant a conviction beyond reasonable doubt. This resulting dismissal is an adjudication on the merits and amounts to an acquittal of the accused (<span class="c-burgundy"><em>People v. Tan</em></span>; <span class="c-burgundy"><em>Magleo v. De Juan-Quinagoran</em></span>).</li>
+    <li><strong>Double Jeopardy Bar:</strong> Because granting a demurrer is an acquittal, <span class="c-rust"><strong><u>the dismissal cannot be appealed by the prosecution, as an appeal would place the accused in double jeopardy</u></strong></span> (<span class="c-burgundy"><em>People v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>People v. Ting</em></span>).</li>
+    <li><strong>Right of Repose:</strong> An acquitted defendant is entitled to the right of repose as a direct consequence of the finality-of-acquittal doctrine (<span class="c-burgundy"><em>People v. Lagos</em></span>).</li>
+  </ul>
+
+  <h4>6. Review of an Order Granting a Demurrer</h4>
+  <ul>
+    <li><strong>No Ordinary Appeal:</strong> The order of dismissal cannot be the subject of an ordinary appeal or petition for review under <span class="c-teal">Rule 45</span> by the State.</li>
+    <li><strong>Certiorari Under <span class="c-teal">Rule 65</span> (The Sole Exception):</strong> The grant of a demurrer may be reviewed strictly through a petition for certiorari under <span class="c-teal">Rule 65</span> filed with the Court of Appeals or Supreme Court (<span class="c-burgundy"><em>People v. Sandiganbayan</em></span>).</li>
+    <li><strong>Requisite Grounds for Certiorari:</strong>
+      <ol>
+        <li>The trial court acted with grave abuse of discretion amounting to lack or excess of jurisdiction;</li>
+        <li>The prosecution was denied due process (e.g., denied the opportunity to present its case); or</li>
+        <li>The trial was a sham or mock trial, rendering the judgment void ab initio (<span class="c-burgundy"><em>People v. Laguio, Jr.</em></span>; <span class="c-burgundy"><em>Mupas v. People</em></span>).</li>
+      </ol>
+    </li>
+    <li><strong>Errors of Judgment Excluded:</strong> Certiorari does not lie to correct mere errors of judgment or alleged mistakes in weighing the sufficiency of the evidence; such errors do not vitiate double jeopardy (<span class="c-burgundy"><em>People v. Sandiganbayan</em></span>).</li>
+  </ul>
+
+  <h4>7. Review of an Order Denying the Demurrer</h4>
+  <ul>
+    <li><strong>General Rule:</strong> An order denying a demurrer to evidence (whether filed with or without leave) is interlocutory and <span class="c-rust"><strong><u>not reviewable by appeal or certiorari before judgment</u></strong></span> (<span class="c-teal">Sec. 23, Rule 119</span>).</li>
+    <li><strong>Constitutional Exception (<span class="c-burgundy"><em>Macapagal-Arroyo v. People</em></span>, July 19, 2016 &amp; April 18, 2017):</strong>
+      <ul>
+        <li>In the plunder case of former President Gloria Macapagal-Arroyo, the Sandiganbayan denied her demurrer to evidence.</li>
+        <li>The Supreme Court held that the procedural bar in <span class="c-teal">Section 23 of Rule 119</span> cannot thwart the higher constitutional power of the Supreme Court to strike down grave abuse of discretion under its expanded judicial power.</li>
+        <li>Where the denial is tainted with <mark class="hl">grave abuse of discretion, excess of jurisdiction, or oppressive exercise of judicial authority, certiorari under Rule 65 is an available remedy</mark> (<span class="c-burgundy"><em>Nicolas v. Sandiganbayan</em></span>; <span class="c-burgundy"><em>Macapagal-Arroyo v. People</em></span>).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="c-8-civil-vs-crim">8. Demurrer to Evidence: Civil vs. Criminal Cases (Bar 1991, 2007)</h4>
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Demurrer in a Civil Case (<span class="c-teal">Rule 33</span>)</th>
+          <th>Demurrer in a Criminal Case (<span class="c-teal">Rule 119, Sec. 23</span>)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ground</strong></td>
+          <td>Anchored on the ground that upon the facts and the law, the plaintiff has shown no right to relief (<span class="c-teal">Sec. 1, Rule 33</span>).</td>
+          <td><mark class="hl">Predicated exclusively upon insufficiency of evidence to prove guilt beyond reasonable doubt</mark> (<span class="c-teal">Sec. 23, Rule 119</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>Leave of Court</strong></td>
+          <td>Does not require prior leave of court.</td>
+          <td><mark class="hl">May be filed either with or without leave of court.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Effect of Denial</strong></td>
+          <td>The defendant does not lose the right to present evidence; trial proceeds and defendant adduces evidence (<span class="c-teal">Rule 33</span>).</td>
+          <td>If filed with leave, the accused retains the right to present evidence. <span class="c-rust"><strong><u>If filed without leave, the accused waives the right to present evidence</u></strong></span> and submits the case for judgment.</td>
+        </tr>
+        <tr>
+          <td><strong>Effect of Grant on Appeal</strong></td>
+          <td>If granted, the plaintiff may appeal. If the appellate court reverses the dismissal, the defendant is deemed to have waived his right to present evidence, and judgment is rendered for plaintiff.</td>
+          <td>If granted, <mark class="hl">the order operates as an acquittal and the prosecution cannot appeal because of double jeopardy.</mark></td>
+        </tr>
+        <tr>
+          <td><strong>Court's Own Initiative</strong></td>
+          <td>The court cannot dismiss motu proprio; it must be invoked by motion of the defendant (<span class="c-teal">Sec. 1, Rule 33</span>).</td>
+          <td>The court may dismiss on its own initiative, provided the prosecution is given an opportunity to be heard (<span class="c-teal">Sec. 23, Rule 119</span>).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PART III SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-iii">
+    <div class="summary-hdr">
+      <h4>Part III Summary Brief Reviewer &mdash; Demurrer to Evidence (<span class="c-teal" style="color:#CCFBF1;">Rule 119, Sec. 23</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Nature, Ground &amp; Standard:</strong> <span class="c-teal">Rule 119, Sec. 23</span>; insufficiency of prosecution evidence to prove guilt beyond reasonable doubt (<span class="c-burgundy"><em>Singian</em></span>, <span class="c-burgundy"><em>Napoles</em></span>).</li>
+        <li><strong>With Leave vs. Without Leave &amp; Continuous Trial:</strong> 5d/10d timelines under <span class="c-teal">Rule 119</span> vs. oral motion for leave + 10d/10d/30d under <span class="c-teal">A.M. No. 15-06-10-SC</span>; <span class="c-burgundy"><em>Cabador v. People</em></span>.</li>
+        <li><strong>Acquittal, Double Jeopardy &amp; Review:</strong> <span class="c-teal">Rule 65</span> only for grave abuse/denial of due process/sham trial; <span class="c-burgundy"><em>Macapagal-Arroyo v. People</em></span> exception; <span class="c-teal">Rule 33 vs. Rule 119</span>.</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Continuous Trial Demurrer Clocks</td>
+              <td><strong>"Oral &rarr; 10 &rarr; 10 &rarr; 30":</strong> <strong>Oral</strong> motion for leave (resolved immediately); <strong>10d</strong> file demurrer; <strong>10d</strong> comment; <strong>30d</strong> resolve.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>When Prosecution Can Attack Granted Demurrer (<span class="c-teal">Rule 65</span>)</td>
+              <td><strong>"G-D-S":</strong> <strong>G</strong>rave abuse of discretion; <strong>D</strong>enial of due process; <strong>S</strong>ham/mock trial (never mere error of judgment).</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Strict Waiver Without Leave:</strong> Denial of a demurrer filed without leave (or after leave is denied) completely waives the right to present defense evidence, including on the civil aspect (unless reserved/waived).</li>
+        <li><strong>Grant = Acquittal:</strong> Dismissal upon demurrer is on the merits; double jeopardy bars appeal.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Civil vs. Criminal Reversal Trap:</strong> In <em>civil</em> cases (<span class="c-teal">Rule 33</span>), a defendant whose granted demurrer is reversed on appeal <em>loses</em> the right to present evidence. In <em>criminal</em> cases (<span class="c-teal">Rule 119</span>), a granted demurrer cannot even be appealed (double jeopardy).</li>
+          <li><strong>Speedy Trial Motion &ne; Demurrer:</strong> A motion to dismiss for violation of speedy trial filed before prosecution rests is NOT a demurrer without leave (<span class="c-burgundy"><em>Cabador v. People</em></span>).</li>
+          <li><strong>Denial Review Trap:</strong> Generally unreviewable before judgment, EXCEPT via <span class="c-teal">Rule 65</span> if tainted with grave abuse of discretion (<span class="c-burgundy"><em>Macapagal-Arroyo v. People</em></span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- CHAPTER XI — PART IV: JUDGMENT (RULE 120)                 -->
+  <!-- ========================================================= -->
+  <h2>CHAPTER XI: JUDGMENT, REMEDIES AFTER JUDGMENT OF CONVICTION AND PROVISIONAL REMEDIES</h2>
+
+  <h3 id="ch-xi-a-judgment">A. JUDGMENT (<span class="c-teal">RULE 120</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Trial / Demurrer (Rule 119)] &rarr; <strong>YOU ARE HERE: Judgment (Rule 120)</strong> &rarr; [Post-Judgment Remedies (Rule 121) &amp; Appeals (Rule 122)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 120 (Secs. 1&ndash;8)</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span> (90-day promulgation); <span class="c-teal">Probation Law</span>.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> After both sides rest and submit the case, the court adjudicates guilt or innocence, applies the Variance Doctrine where proof differs from the Information, and promulgates sentence.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects due process by requiring a written statement of facts and law, bars conviction for uncharged offenses, and penalizes bail-jumping at promulgation while preserving a 15-day surrender safety valve.</div>
+    </div>
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Variance Doctrine (<span class="c-teal">Secs. 4 &amp; 5, Rule 120</span>)</div>
+      <div class="ui-sub">Convict ONLY of an offense BOTH CHARGED and PROVED</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Promulgation of Judgment (<span class="c-teal">Sec. 6</span> &amp; <span class="c-teal">A.M. 15-06-10-SC</span>)</div>
+      <div class="ui-sub">Within 90 calendar days from submission for decision</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">&#10005;</div>
+        <div class="ui-title">Accused Absent Without Justifiable Cause</div>
+        <div class="ui-sub">Recorded in docket + Arrest ordered + LOSES all remedies (MNT, MR, Appeal)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">&#10003;</div>
+        <div class="ui-title">15-Day Surrender Recovery Gate</div>
+        <div class="ui-sub">Surrender + Motion for Leave within 15 days + Justified Absence = Regain 15 days for remedies</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="xi-a-1-meaning">1. Meaning of Judgment</h4>
+  <p>A judgment is the <mark class="hl">adjudication by the court that the accused is guilty or not guilty of the offense charged and the imposition on him of the proper penalty and civil liability, if any</mark>.</p>
+
+  <h4>2. Requisites of a Judgment</h4>
+  <p>Under the Rules of Court and settled jurisprudence, a valid judgment must satisfy both formal and jurisdictional requirements:</p>
+  <ul>
+    <li><strong>Formal Requisites (<span class="c-teal">Sec. 1, Rule 120</span>):</strong>
+      <ol>
+        <li>It must be written in the official language;</li>
+        <li>It must be personally and directly prepared and signed by the judge; and</li>
+        <li>It must contain clearly and distinctly a statement of (i) the facts, and (ii) the law upon which it is based.</li>
+      </ol>
+    </li>
+    <li><strong>Jurisdictional Requisites:</strong>
+      <ol>
+        <li>Jurisdiction over the subject matter;</li>
+        <li>Jurisdiction over the territory (venue); and</li>
+        <li>Jurisdiction over the person of the accused (<span class="c-burgundy"><em>Cruz v. Court of Appeals</em></span>; <span class="c-burgundy"><em>Antiporda, Jr. v. Garchitorena</em></span>).</li>
+      </ol>
+    </li>
+    <li><strong>Constitutional Mandate on Statements of Fact and Law:</strong> While laconic or terse decisions have been sustained where they set out the facts and legal qualifications, modifying circumstances, participation, and penalty, a decision that leaves the losing party in the dark violates due process because it prevents the party from pinpointing errors for appellate review (<span class="c-burgundy"><em>Lumanog v. People</em></span>). Completely adopting or copying a memorandum submitted by a party is discouraged, though not illegal per se provided the decision contains sufficient independent findings of fact and law (<span class="c-burgundy"><em>BPI v. Leobrera</em></span>).</li>
+  </ul>
+
+  <h4>3. Effect of Lack of Stenographic Notes</h4>
+  <p>Under the Revised Guidelines for Continuous Trial in Criminal Cases (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</p>
+  <ul>
+    <li>Judges who conducted the trial and heard the testimonies of some or all of the witnesses shall not defer the submission of the case for decision on the ground of incomplete or missing transcripts of stenographic notes (TSNs).</li>
+    <li>If the case was heard completely by another judge (not the judge tasked to write the decision), the latter shall direct the stenographers concerned to submit the complete transcripts within a period of <mark class="hl">thirty (30) calendar days</mark> from the date of assumption to office.</li>
+  </ul>
+
+  <h4>4. Contents of a Judgment of Conviction; Contents of Judgment of Acquittal</h4>
+  <ul>
+    <li><strong>Contents of a Judgment of Conviction (<span class="c-teal">Sec. 2, Rule 120</span>):</strong>
+      <ol>
+        <li>The legal qualification of the offense constituted by the acts committed by the accused;</li>
+        <li>The aggravating and mitigating circumstances that attended the commission of the offense;</li>
+        <li>The participation of the accused in the offense (whether as principal, accomplice, or accessory);</li>
+        <li>The penalty imposed upon the accused; and</li>
+        <li>The civil liability or damages caused by his wrongful act or omission to be recovered by the offended party, if any, unless civil liability has been reserved or waived (<span class="c-burgundy"><em>Bacolod v. People</em></span>).</li>
+      </ol>
+      <p><strong>Burden of Proof:</strong> Conviction must rest on the strength of the prosecution's evidence, not on the weakness of the defense (<span class="c-burgundy"><em>Boac v. People</em></span>).</p>
+    </li>
+    <li><strong>Contents of a Judgment of Acquittal (<span class="c-teal">Sec. 2, Rule 120</span>):</strong>
+      <ol>
+        <li>State whether the evidence of the prosecution (i) absolutely failed to prove the guilt of the accused, or (ii) merely failed to prove his guilt beyond reasonable doubt; and</li>
+        <li>Determine if the act or omission from which the civil liability might arise did not exist.</li>
+      </ol>
+      <p><strong>Immediate Finality:</strong> <mark class="hl">A verdict of acquittal is immediately final and executory</mark> (<span class="c-burgundy"><em>People v. Serrano</em></span>).</p>
+    </li>
+  </ul>
+
+  <h4>5. Rule When There Are Two or More Offenses in a Single Information or Complaint (Duplicitous Information)</h4>
+  <ul>
+    <li>Under <span class="c-teal">Section 13, Rule 110</span>, a complaint or information must charge only one offense, except when the law prescribes a single punishment for various offenses (compound/complex crimes or special complex crimes).</li>
+    <li>When two or more offenses are charged in a single information, the accused may file a motion to quash before entering a plea on the ground of duplicity of offenses under <span class="c-teal">Section 3(f), Rule 117</span>.</li>
+  </ul>
+
+  <h4>6. Effect of Failure to Object to a Duplicitous Complaint or Information</h4>
+  <ul>
+    <li><strong>Waiver of Defect:</strong> If the accused fails to object to the duplicitous information before trial (by not filing a motion to quash prior to arraignment), <span class="c-rust"><strong><u>he is deemed to have waived the defect</u></strong></span> (<span class="c-burgundy"><em>Abalos v. People</em></span>).</li>
+    <li><strong>Multiple Convictions Permitted (<span class="c-teal">Sec. 3, Rule 120</span>):</strong> <mark class="hl">The court may convict the accused of as many offenses as are charged and proved, and impose on him the corresponding penalty for each offense</mark>, setting out separately the findings of fact and law for each offense. The objection cannot be raised for the first time on appeal.</li>
+  </ul>
+
+  <h4>7. Judgment Rendered by Judge Who Did Not Hear the Case</h4>
+  <ul>
+    <li>The fact that the trial judge who penned the decision was not the judge who heard the testimonies of the witnesses and observed their demeanor <span class="c-green"><strong><u>does not render the judgment invalid or erroneous</u></strong></span>.</li>
+    <li>It is sufficient that the deciding judge relied on the records of the case, provided the evidence on record is sufficient to support the conclusions reached (<span class="c-burgundy"><em>People v. Alfredo</em></span>; <span class="c-burgundy"><em>People v. Lagman</em></span>).</li>
+  </ul>
+
+  <h4 id="xi-a-8-variance">8. Variance Doctrine; Variance Between Allegation and Proof (Bar 1993, 2004)</h4>
+  <ul>
+    <li><strong>Constitutional Basis:</strong> The doctrine implements the right of the accused to be informed of the nature and cause of the accusation (<span class="c-burgundy"><em>Malabanan v. Sandiganbayan</em></span>). An accused cannot be convicted of an offense unless it is clearly charged in the complaint or information.</li>
+    <li><strong>The Variance Rule (<span class="c-teal">Sec. 4, Rule 120</span>):</strong> When there is a variance between the offense charged and that proved:
+      <ol>
+        <li>The accused shall be convicted of the offense proved which is included in the offense charged; or</li>
+        <li>The accused shall be convicted of the offense charged which is included in the offense proved.</li>
+      </ol>
+    </li>
+    <li><strong>Cardinal Principle:</strong> <span class="c-green"><strong><u>The accused can only be convicted of an offense that is both charged and proved.</u></strong></span> If an offense is proved but not charged, he cannot be convicted thereof unless it is included in the offense charged.</li>
+    <li><strong>Examples:</strong>
+      <ul>
+        <li><strong>Example 1:</strong> If charged with Murder but only Homicide was proven, he may be convicted of Homicide because Homicide is included in Murder.</li>
+        <li><strong>Example 2:</strong> If charged with Homicide but Murder was proven, he can only be convicted of Homicide (the offense charged), because Murder was not charged.</li>
+        <li><strong>Example 3:</strong> If charged with Qualified Rape, he can be convicted of Acts of Lasciviousness if the latter is what was proved (<span class="c-burgundy"><em>People v. Sumingwa</em></span>). But if charged only with Acts of Lasciviousness, he can never be convicted of Rape even if rape was proved.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>9. When an Offense Includes or Is Included in Another</h4>
+  <p>Under <span class="c-teal">Section 5, Rule 120</span>:</p>
+  <ul>
+    <li><strong>When an Offense Includes Another:</strong> An offense charged necessarily includes the offense proved when some of the essential elements or ingredients of the former, as alleged in the complaint or information, constitute the latter. (e.g., Murder includes Homicide; Serious Physical Injuries includes Less Serious or Slight Physical Injuries; Robbery includes Theft).</li>
+    <li><strong>When an Offense Is Included in Another:</strong> An offense charged is necessarily included in the offense proved when the essential ingredients of the former constitute or form part of those constituting the latter. (e.g., Less serious physical injuries are included in serious physical injuries; acts of lasciviousness are included in rape; theft is included in robbery).</li>
+  </ul>
+
+  <h4>10. Variance in the Mode of the Commission of the Offense</h4>
+  <ul>
+    <li><strong>Different Modes of Rape (<span class="c-burgundy"><em>People v. Caoili</em></span>):</strong> An accused charged with rape by sexual intercourse <span class="c-rust"><strong><u>cannot be convicted of rape by sexual assault</u></strong></span>, as these are two substantially distinct modes. However, the accused may be convicted of the lesser included offense of acts of lasciviousness.</li>
+    <li><strong>Failure to Object to Variance in Mode (<span class="c-burgundy"><em>People v. Abello</em></span>):</strong> Where the information alleged rape by "force and intimidation," but the victim testified that she was asleep and roused by the act, this variance in the mode of commission was held not fatal. A variance in the mode of commission is binding on the accused if he fails to object to the presentation of evidence showing that the crime was committed in a different manner than alleged.</li>
+  </ul>
+
+  <h4 id="xi-a-11-promulgation">11. Promulgation of Judgment (Bar 1997, 2011, 2012)</h4>
+  <p>Under <span class="c-teal">Section 6, Rule 120</span>:</p>
+  <ul>
+    <li><strong>General Rule:</strong> Judgment is promulgated by reading it in the presence of the accused and any judge of the court in which it was rendered.</li>
+    <li><strong>Exceptions:</strong>
+      <ol>
+        <li><strong>Light Offenses:</strong> The judgment may be pronounced in the presence of the counsel for the accused or a representative.</li>
+        <li><strong>Judge Absent or Outside Province/City:</strong> The judgment may be promulgated by the clerk of court.</li>
+        <li><strong>Accused Confined/Detained in Another Province/City:</strong> Promulgated by the Executive Judge of the RTC having jurisdiction over the place of confinement upon request of the trial court.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4>12. Schedule of Promulgation</h4>
+  <p>Under the Revised Guidelines for Continuous Trial (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</p>
+  <ul>
+    <li>The court shall announce in open court and include in the order submitting the case for decision the date of promulgation, which shall be <mark class="hl">not more than ninety (90) calendar days from the date the case is submitted for decision</mark> (unless covered by special rules providing a shorter period).</li>
+  </ul>
+
+  <h4>13. How Accused Is to Be Notified of the Promulgation</h4>
+  <ul>
+    <li>Notice of the schedule of promulgation shall be given by the clerk of court to the accused personally or through his bondsman or warden and counsel.</li>
+    <li>If the accused was tried in absentia (because he jumped bail or escaped), notice shall be served at his last known address.</li>
+  </ul>
+
+  <h4>14. Rule If the Accused Fails to Appear in Promulgation of Judgment (Bar 1997, 2011, 2012)</h4>
+  <p>Under <span class="c-teal">Section 6, Rule 120</span>, if the accused fails to appear despite notice:</p>
+  <ul>
+    <li><strong>Promulgation in Absentia:</strong> Promulgation proceeds by:
+      <ol type="a">
+        <li>Recording the judgment in the criminal docket; and</li>
+        <li>Serving a copy thereof at his last known address or through his counsel.</li>
+      </ol>
+    </li>
+    <li><strong>Severe Sanctions for Judgment of Conviction:</strong>
+      <ol>
+        <li>The court shall order his arrest; and</li>
+        <li><span class="c-rust"><strong><u>The accused shall lose the remedies available in the Rules of Court against the judgment</u></strong></span> (motion for new trial, motion for reconsideration, and appeal) (<span class="c-burgundy"><em>Jaylo v. Sandiganbayan</em></span>).</li>
+      </ol>
+    </li>
+    <li><strong>Remedy to Regain Standing (15-Day Surrender Rule):</strong>
+      <ul>
+        <li>Within <mark class="hl">fifteen (15) days from promulgation</mark>, the accused must surrender and file a motion for leave of court to avail of the remedies, stating the reasons for his absence.</li>
+        <li>If he proves that his absence was justified, the court shall allow him to avail of the remedies within <mark class="hl">fifteen (15) days from notice of the order granting leave</mark> (<span class="c-burgundy"><em>People v. De Grano</em></span>).</li>
+      </ul>
+    </li>
+    <li><strong>Void Reversals for Absent Accused (<span class="c-burgundy"><em>Javier v. Gonzales</em></span>):</strong> A court commits blatant abuse of authority if it entertains an MR and acquits a convicted accused who failed to appear without justifiable cause and failed to surrender. <span class="c-rust"><strong><u>Such an acquittal is void, and double jeopardy does not attach.</u></strong></span></li>
+  </ul>
+
+  <h4>15. Modification of Judgment (Bar 1989)</h4>
+  <p>Under <span class="c-teal">Section 7, Rule 120</span>:</p>
+  <ul>
+    <li>A judgment of conviction may be modified or set aside <mark class="hl">upon motion of the accused before the judgment becomes final or before an appeal is perfected</mark>.</li>
+    <li><strong>Strict Rule:</strong> <span class="c-rust"><strong><u>Modification cannot be made on the court's own motion; it must be upon motion of the accused.</u></strong></span></li>
+  </ul>
+
+  <h4>16. When Judgment Becomes Final (Bar 2012)</h4>
+  <p>Under <span class="c-teal">Section 7, Rule 120</span>, a judgment of conviction becomes final upon the occurrence of any of the following <span class="c-green"><strong><u>four instances</u></strong></span>:</p>
+  <ol>
+    <li>After the lapse of the period for perfecting an appeal (15 days);</li>
+    <li>When the sentence has been partially or totally satisfied or served;</li>
+    <li>When the accused has waived in writing his right to appeal; or</li>
+    <li>When the accused has applied for probation.</li>
+  </ol>
+
+  <h4>17. Probation; Appeal and Probation Are Mutually Exclusive Remedies</h4>
+  <ul>
+    <li><strong>Waiver of Appeal:</strong> <mark class="hl">Applying for probation is deemed a waiver of the right to appeal.</mark></li>
+    <li><strong>Mutually Exclusive:</strong> An accused cannot appeal and apply for probation at the same time.</li>
+    <li><strong>Implicit Admission:</strong> An application for probation carries an implicit admission of guilt (<span class="c-burgundy"><em>Almero v. People</em></span>).</li>
+  </ul>
+
+  <h4>18. Entry of Judgment</h4>
+  <p>Under <span class="c-teal">Section 8, Rule 120</span>, after a judgment has become final, it shall be entered in the book of entries of judgments in accordance with <span class="c-teal">Rule 36</span>.</p>
+
+  <!-- PART IV SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-iv">
+    <div class="summary-hdr">
+      <h4>Part IV Summary Brief Reviewer &mdash; Judgment (<span class="c-teal" style="color:#CCFBF1;">Rule 120</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Requisites, TSNs &amp; Contents:</strong> <span class="c-teal">Rule 120, Secs. 1&ndash;2</span>; <span class="c-teal">A.M. No. 15-06-10-SC</span>; judge who did not hear case may decide on records (<span class="c-burgundy"><em>People v. Alfredo</em></span>).</li>
+        <li><strong>Duplicity &amp; Variance Doctrine:</strong> <span class="c-teal">Rule 120, Secs. 3&ndash;5</span> (<span class="c-burgundy"><em>Abalos</em></span>, <span class="c-burgundy"><em>Caoili</em></span>, <span class="c-burgundy"><em>Abello</em></span>).</li>
+        <li><strong>Promulgation, Modification, Finality &amp; Probation:</strong> <span class="c-teal">Rule 120, Secs. 6&ndash;8</span> (<span class="c-burgundy"><em>Jaylo</em></span>, <span class="c-burgundy"><em>De Grano</em></span>, <span class="c-burgundy"><em>Javier v. Gonzales</em></span>, <span class="c-burgundy"><em>Almero</em></span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4 Ways Judgment Becomes Final (<span class="c-teal">Sec. 7</span>)</td>
+              <td><strong>"L-S-W-P":</strong> <strong>L</strong>apse of 15-day appeal period; <strong>S</strong>atisfaction/service of sentence; <strong>W</strong>ritten waiver of appeal; <strong>P</strong>robation application.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>15-Day Promulgation-in-Absentia Recovery</td>
+              <td><strong>"S + L + J = 15":</strong> <strong>S</strong>urrender + Motion for <strong>L</strong>eave within 15 days + prove <strong>J</strong>ustified absence = regain <strong>15</strong> days for remedies.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Variance Rule:</strong> Convict ONLY of an offense that is <em>both charged and proved</em> (or necessarily included).</li>
+        <li><strong>90-Day Promulgation Rule:</strong> Promulgation shall be not more than 90 calendar days from submission for decision.</li>
+        <li><strong>Modification (<span class="c-teal">Sec. 7</span>):</strong> Only upon motion of the accused (never motu proprio) before finality or perfection of appeal.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Acquittal Is Immediately Final:</strong> Unlike conviction, a judgment of acquittal is immediately final and executory (<span class="c-burgundy"><em>People v. Serrano</em></span>).</li>
+          <li><strong>Rape by Intercourse vs. Sexual Assault:</strong> Charged with rape by sexual intercourse, the accused CANNOT be convicted of rape by sexual assault (<span class="c-burgundy"><em>People v. Caoili</em></span>)&mdash;only Acts of Lasciviousness.</li>
+          <li><strong>Duplicity Waiver Trap:</strong> Failure to move to quash a duplicitous information before plea waives the defect; the court can convict of <em>all</em> offenses charged and proved (<span class="c-teal">Sec. 3</span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- CHAPTER XI — PART V: REMEDIES AFTER JUDGMENT (RULE 121)   -->
+  <!-- ========================================================= -->
+  <h3 id="ch-xi-b-remedies">B. REMEDIES AGAINST A JUDGMENT OF CONVICTION (<span class="c-teal">RULE 121</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Judgment (Rule 120)] &rarr; <strong>YOU ARE HERE: Remedies Against Judgment of Conviction (Rule 121 &amp; Neypes)</strong> &rarr; [Appeals (Rules 122, 124, 125)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 121 (Secs. 1&ndash;6)</span>; <span class="c-teal">Rule 120, Sec. 7</span>; <span class="c-teal">Rule 119, Sec. 24</span>; <span class="c-teal">B.P. Blg. 129, Sec. 39</span> (<span class="c-burgundy"><em>Neypes</em></span> / <span class="c-burgundy"><em>Judith Yu</em></span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Within the 15-day window before a conviction becomes final, the accused may ask the trial court itself to correct errors, reopen evidence, or grant a new trial before elevating the case on appeal.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Allows trial courts to self-correct miscarriages of justice or newly discovered exculpatory evidence, while ensuring through the Neypes rule that seeking trial-level reconsideration never shrinks the accused's 15-day appeal window.</div>
+    </div>
+  </div>
+
+  <div class="ui-box">
+    <div class="ui-grid">
+      <div class="ui-col">
+        <div class="ui-num">15 Days</div>
+        <div class="ui-kicker">INITIAL WINDOW</div>
+        <div class="ui-sub">File MNT / MR before judgment becomes final (<span class="c-teal">Rule 121, Sec. 1</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">10 Days</div>
+        <div class="ui-kicker">RESOLVE</div>
+        <div class="ui-sub">Non-extendible period to resolve MNT / MR (<span class="c-teal">A.M. 15-06-10-SC</span>)</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-num">Fresh 15</div>
+        <div class="ui-kicker">NEYPES RULE</div>
+        <div class="ui-sub">Fresh 15-day appeal period from denial of MNT / MR (<span class="c-burgundy"><em>Judith Yu</em></span>)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="xi-b-1-remedies">1. Remedies Before the Judgment of Conviction Becomes Final</h4>
+  <p>Before a judgment of conviction becomes final, the accused may avail himself of the following remedies:</p>
+  <ol>
+    <li>Modification of the judgment (<span class="c-teal">Sec. 7, Rule 120</span>);</li>
+    <li>Reopening of the proceedings (<span class="c-teal">Sec. 24, Rule 119</span>);</li>
+    <li>Motion for new trial (<span class="c-teal">Sec. 1, Rule 121</span>);</li>
+    <li>Motion for reconsideration (<span class="c-teal">Sec. 1, Rule 121</span>); and</li>
+    <li>Appeal from the judgment (<span class="c-teal">Rule 122</span>).</li>
+  </ol>
+
+  <h4>2. Modification of Judgment (<span class="c-teal">Rule 120</span>)</h4>
+  <ul>
+    <li>Governed by <span class="c-teal">Section 7, Rule 120</span>.</li>
+    <li>May be done <mark class="hl">only upon motion of the accused before the judgment becomes final or before appeal is perfected</mark>. The court cannot modify the judgment motu proprio.</li>
+  </ul>
+
+  <h4>3. Reopening of the Proceedings (<span class="c-teal">Rule 119</span>)</h4>
+  <ul>
+    <li>Governed by <span class="c-teal">Section 24, Rule 119</span>.</li>
+    <li><strong>Timing:</strong> At any time before the finality of the judgment of conviction.</li>
+    <li><strong>Initiative:</strong> May be made by the judge <span class="c-green"><strong><u>motu proprio OR upon motion of the accused</u></strong></span>.</li>
+    <li><strong>Mandatory Hearing:</strong> Requires a hearing to avoid a miscarriage of justice.</li>
+    <li><strong>Time Limitation:</strong> The reopened proceedings shall be terminated within <mark class="hl">thirty (30) days</mark> from the order granting it.</li>
+  </ul>
+
+  <h4>4. Motion for New Trial or Motion for Reconsideration (<span class="c-teal">Rule 121</span>)</h4>
+  <ul>
+    <li>Governed by <span class="c-teal">Section 1, Rule 121</span>.</li>
+    <li><strong>Initiative:</strong> May be filed by the accused, or granted by the court at its own instance <mark class="hl">with the consent of the accused</mark>.</li>
+    <li><strong>Timing:</strong> Must be filed before the judgment of conviction becomes final (within 15 days from promulgation).</li>
+    <li><strong>Jurisprudential Rule:</strong> Once the judgment becomes final, pleas for a new trial, reconsideration, or remand can no longer be entertained (<span class="c-burgundy"><em>Tadeja v. People</em></span>).</li>
+  </ul>
+
+  <h4>5. Resolution of Motion for Reconsideration or New Trial</h4>
+  <p>Under the Revised Guidelines for Continuous Trial (<span class="c-teal">A.M. No. 15-06-10-SC</span>):</p>
+  <ul>
+    <li>A motion for reconsideration or motion for new trial under <span class="c-teal">Rule 121</span> shall be resolved within a <mark class="hl">non-extendible period of ten (10) calendar days</mark> from submission of the comment of the prosecution (or within 10 days from lapse of the period to comment, with or without comment).</li>
+  </ul>
+
+  <h4>6. Grounds for a New Trial</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 121</span>, the court shall grant a new trial on any of the following grounds:</p>
+  <ol>
+    <li>That errors of law have been committed during the trial;</li>
+    <li>That irregularities prejudicial to the substantial rights of the accused have been committed during the trial; or</li>
+    <li>That new and material evidence has been discovered (<span class="c-burgundy"><em>Guelos v. People</em></span>).</li>
+  </ol>
+
+  <h4>7. Requisites for Newly-Discovered Evidence</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 121</span> and <span class="c-burgundy"><em>Tadeja v. People</em></span>, for newly discovered evidence to justify a new trial, <span class="c-green"><strong><u>four (4) requisites must concur</u></strong></span>:</p>
+  <ol>
+    <li>The evidence must have been discovered after the trial;</li>
+    <li><mark class="hl">It could not have been discovered and produced at the trial even with the exercise of reasonable diligence</mark>;</li>
+    <li>It is material, not merely cumulative, corroborative, or impeaching; and</li>
+    <li>It is of such weight that, if introduced and admitted, it would probably change the judgment.</li>
+  </ol>
+  <p><strong>Most Critical Element:</strong> That the evidence could not have been discovered and produced with reasonable diligence; hence, the term "newly discovered" (<span class="c-burgundy"><em>Tadeja v. People</em></span>).</p>
+
+  <h4>8. Grounds for Reconsideration of the Judgment</h4>
+  <p>Under <span class="c-teal">Section 3, Rule 121</span>, a motion for reconsideration shall be granted on any of the following grounds:</p>
+  <ol>
+    <li>Errors of law in the judgment which require no further proceedings; and</li>
+    <li>Errors of fact in the judgment which require no further proceedings.</li>
+  </ol>
+
+  <h4>9. Form of the Motions; Notice</h4>
+  <p>Under <span class="c-teal">Section 4, Rule 121</span>:</p>
+  <ul>
+    <li>The motion must be in writing and state the grounds on which it is based.</li>
+    <li>If based on newly discovered evidence, it must be supported by affidavits of witnesses or authenticated copies of documents proposed to be introduced.</li>
+    <li>Notice of the motion shall be given to the prosecutor.</li>
+  </ul>
+
+  <h4>10. When Hearing of the Motion Is Required</h4>
+  <p>Under <span class="c-teal">Section 5, Rule 121</span>:</p>
+  <ul>
+    <li>A hearing shall be conducted when the motion calls for the resolution of a question of fact.</li>
+    <li>The court may hear evidence on the motion by affidavits or otherwise.</li>
+  </ul>
+
+  <h4>11. Effects of Granting a New Trial or Reconsideration</h4>
+  <p>Under <span class="c-teal">Section 6, Rule 121</span>:</p>
+  <ul>
+    <li><strong>General Effect:</strong> In all cases, <mark class="hl">the original judgment shall be set aside or vacated and a new judgment rendered accordingly</mark>.</li>
+    <li><strong>Specific Effects Based on Ground:</strong>
+      <ul>
+        <li><strong>If granted based on errors of law or irregularities during trial:</strong> All proceedings and evidence affected thereby shall be set aside and taken anew, and the court may allow the introduction of additional evidence in the interest of justice.</li>
+        <li><strong>If granted based on newly discovered evidence:</strong> <mark class="hl">The evidence already adduced shall stand, and the newly discovered evidence (and any additional evidence allowed) shall be taken and considered together with the evidence already on record.</mark></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="xi-b-12-neypes">12. The Neypes Rule ("Fresh Period Rule")</h4>
+  <ul>
+    <li><strong>Origin (<span class="c-burgundy"><em>Neypes v. Court of Appeals</em></span>, 469 SCRA 633):</strong> In civil cases, the Supreme Court ruled that if a motion for new trial or reconsideration is denied, the movant has a <mark class="hl">fresh period of fifteen (15) days from receipt of notice of the order denying the motion</mark> within which to file a notice of appeal.</li>
+    <li><strong>Application to Criminal Cases (<span class="c-burgundy"><em>Judith Yu v. Samson-Tatad</em></span>, 642 SCRA 421; <span class="c-burgundy"><em>Rodriguez v. People</em></span>):</strong>
+      <ul>
+        <li>The Supreme Court explicitly held that the Neypes "fresh period rule" applies to appeals in criminal cases.</li>
+        <li><strong>Substantive Legal Basis:</strong> <span class="c-teal">Section 39 of B.P. Blg. 129</span> provides a uniform 15-day appeal period for all cases from notice of the final order or judgment, drawing no distinction between civil and criminal cases.</li>
+        <li><strong>Rationale:</strong> Restricting the fresh period rule to civil cases would lead to the absurd result that a litigant in a civil case would enjoy greater procedural protection than an accused facing loss of liberty in a criminal prosecution.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- PART V SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-v">
+    <div class="summary-hdr">
+      <h4>Part V Summary Brief Reviewer &mdash; Remedies Against Conviction (<span class="c-teal" style="color:#CCFBF1;">Rule 121 &amp; Neypes</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Pre-Finality Remedies:</strong> Modification (<span class="c-teal">Rule 120, Sec. 7</span>), Reopening (<span class="c-teal">Rule 119, Sec. 24</span>), MNT &amp; MR (<span class="c-teal">Rule 121, Secs. 1&ndash;6</span>), Appeal (<span class="c-teal">Rule 122</span>).</li>
+        <li><strong>Newly Discovered Evidence &amp; Neypes Rule:</strong> 4 requisites (<span class="c-burgundy"><em>Tadeja v. People</em></span>); Fresh 15-day period (<span class="c-burgundy"><em>Judith Yu v. Samson-Tatad</em></span>, <span class="c-burgundy"><em>Rodriguez v. People</em></span>).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Newly Discovered Evidence (<span class="c-teal">Sec. 2, Rule 121</span>)</td>
+              <td><strong>"A-R-M-C":</strong> Discovered <strong>A</strong>fter trial; not discoverable with <strong>R</strong>easonable diligence; <strong>M</strong>aterial (not cumulative/impeaching); would probably <strong>C</strong>hange judgment.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Initiative Comparison</td>
+              <td><strong>Reopening</strong> = Motu proprio OR motion (hearing required); <strong>MNT/MR</strong> = Accused OR court <em>with accused's consent</em>; <strong>Modification</strong> = Accused's motion ONLY.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Effect of Granting MNT:</strong> Vacates original judgment. For errors/irregularities, affected evidence is taken anew; for newly discovered evidence, old evidence stands and is considered together with new evidence.</li>
+        <li><strong>Neypes Fresh Period:</strong> Denial of MNT/MR gives a fresh 15-day period from receipt of denial order to file Notice of Appeal.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Forgotten Evidence &ne; Newly Discovered:</strong> Evidence that existed and could have been produced with reasonable diligence is "forgotten evidence," NOT newly discovered (<span class="c-burgundy"><em>Tadeja v. People</em></span>).</li>
+          <li><strong>MR vs. MNT Grounds:</strong> MR covers errors of law or fact requiring <em>no further proceedings</em>; MNT covers trial errors/irregularities or newly discovered evidence.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- CHAPTER XI — PART VI: APPEALS (RULES 122, 124, 125)       -->
+  <!-- ========================================================= -->
+  <h3 id="ch-xi-c-appeals">C. APPEALS (<span class="c-teal">RULES 122, 124, 125</span>) (Bar 1991, 1992, 1993, 1998)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Post-Judgment Remedies (Rule 121)] &rarr; <strong>YOU ARE HERE: Appeals (Rules 122, 124, 125)</strong> &rarr; [Provisional Remedies (Rule 127)]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 122 (Secs. 1&ndash;13)</span>; <span class="c-teal">Rule 124 (Secs. 8, 10, 12, 13)</span>; <span class="c-teal">Rule 125 (Secs. 1&ndash;3)</span>; <span class="c-teal">Rule 42 &amp; Rule 45</span>; <span class="c-teal">R.A. 9346</span>.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> When trial-level remedies fail or the accused elects direct elevation, the case climbs the appellate ladder within the 15-day period, throwing the entire criminal record open for review.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Provides statutory error-correction while respecting double jeopardy (barring prosecution appeals of acquittals) and protecting liberty through the in dubio pro reo tie-breaker in Supreme Court en banc deliberations.</div>
+    </div>
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-outcome">
+      <div class="ui-title">Supreme Court (<span class="c-teal">Rule 125</span>)</div>
+      <div class="ui-sub">From CA: <strong>Rule 45</strong> (pure questions of law) &bull; If CA imposes <em>Reclusion Perpetua</em> / Life: <strong>Notice of Appeal as of right</strong> (Fact &amp; Law) OR Rule 45<br/>En Banc Tie after re-deliberation &rarr; Judgment Reversed &amp; Accused ACQUITTED (<span class="c-teal">Sec. 3, Rule 125</span>)</div>
+    </div>
+    <div class="ui-connector">&uarr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Court of Appeals (<span class="c-teal">Rule 124</span>)</div>
+      <div class="ui-sub">From RTC Original (incl. <em>Reclusion Perpetua</em> / Life): <strong>Notice of Appeal</strong> &bull; From RTC Appellate: <strong>Rule 42 Petition for Review</strong> &bull; Death: Automatic Review (<span class="c-burgundy"><em>Mateo</em></span>; <span class="c-teal">R.A. 9346</span>)</div>
+    </div>
+    <div class="ui-connector">&uarr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">Regional Trial Court (RTC)</div>
+      <div class="ui-sub">From MeTC/MTCC/MTC/MCTC: <strong>Notice of Appeal</strong> (15 days) &bull; 5-day record transmittal &bull; Decides on records/memoranda only (no new evidence)</div>
+    </div>
+  </div>
+
+  <h4 id="xi-c-1-nature">1. Appeal Not a Natural Right</h4>
+  <p>An appeal is a proceeding undertaken to have a decision reconsidered by bringing it to a higher judicial authority. <mark class="hl">The right to appeal is neither a natural right nor is it a component of due process; it is a mere statutory privilege</mark> that may be exercised strictly in the manner and in accordance with the provisions of law (<span class="c-burgundy"><em>Dungo v. People</em></span>). However, once the right to appeal is granted by law, its arbitrary suppression constitutes a violation of due process (<span class="c-burgundy"><em>Hilario v. People</em></span>).</p>
+
+  <h4>2. Who May Appeal</h4>
+  <p>Under <span class="c-teal">Section 1, Rule 122</span> of the Rules of Court:</p>
+  <blockquote>
+    "Any party may appeal from a judgment or final order, unless the accused will be placed in double jeopardy."
+  </blockquote>
+  <ul>
+    <li>The subject of an appeal must be a judgment or a final order.</li>
+    <li>Because the rule explicitly uses the term "any party," the prosecution may also appeal, provided the accused is not placed in double jeopardy.</li>
+  </ul>
+
+  <h4>3. Waiver of Constitutional Safeguard Against Double Jeopardy</h4>
+  <p>When an accused appeals from a judgment of conviction of the trial court, <span class="c-green"><strong><u>he waives the constitutional protection against double jeopardy and throws the entire case open to the review of the appellate court</u></strong></span> (<span class="c-burgundy"><em>People v. Torres</em></span>; <span class="c-burgundy"><em>Geroche v. People</em></span>; <span class="c-burgundy"><em>People v. Macapundag</em></span>).</p>
+
+  <h4>4. Subject Matter for Review on Appeal; Factual Findings of Trial Court</h4>
+  <ul>
+    <li><strong>The "Open for Review" Doctrine:</strong> In criminal cases, an appeal opens the entire case for review. <mark class="hl">The appellate court has the duty to correct, cite, and appreciate errors in the appealed judgment, whether assigned or unassigned.</mark> The appeal confers upon the appellate tribunal full jurisdiction to examine records, revise the judgment, increase the penalty, and cite the proper provision of the penal law (<span class="c-burgundy"><em>People v. Arguta</em></span>; <span class="c-burgundy"><em>People v. Geronimo</em></span>; <span class="c-burgundy"><em>Miguel v. People</em></span>).</li>
+    <li><strong>Distinction with Civil Appeals:</strong> In civil cases, as a general rule, the appellate court will not consider an error unless stated in the assignment of errors, except for jurisdictional errors, errors affecting the validity of judgment, plain clerical errors, or errors necessary to arrive at a just resolution (<span class="c-teal">Sec. 8, Rule 51</span>).</li>
+    <li><strong>Weight of Factual Findings:</strong> Factual findings of the trial court&mdash;especially when affirmed by the Court of Appeals&mdash;deserve great weight and respect and should not be disturbed on appeal, unless facts of weight and substance were overlooked or misinterpreted that would materially affect the disposition of the case (<span class="c-burgundy"><em>People v. Racal</em></span>; <span class="c-burgundy"><em>People v. Carillo</em></span>; <span class="c-burgundy"><em>Coson v. People</em></span>).</li>
+  </ul>
+
+  <h4>5. Change of Theory on Appeal</h4>
+  <ul>
+    <li><strong>General Rule:</strong> A party <span class="c-rust"><strong><u>cannot change his theory on appeal</u></strong></span>, nor can he raise any question of law or fact that was not raised in the court below or was not within the issue raised by the pleadings.</li>
+    <li><strong>Due Process Rationale:</strong> Points of law, theories, and arguments not brought to the attention of the trial court cannot be raised for the first time on appeal because doing so offends the basic principles of fair play, justice, and due process (<span class="c-burgundy"><em>People v. Mamaril</em></span>).</li>
+  </ul>
+
+  <h4>6. Factual Findings; Credibility of Witnesses</h4>
+  <ul>
+    <li><strong>Trial Courts as Supreme Court's Eyes:</strong> Trial courts have the distinct advantage of observing firsthand the deportment, demeanor, and conduct of witnesses while testifying. Absent any showing that facts of relevance and substance have been overlooked, misapprehended, or misapplied, findings on credibility are accorded the highest respect by appellate tribunals (<span class="c-burgundy"><em>People v. Rusiana</em></span>; <span class="c-burgundy"><em>People v. Nachor</em></span>; <span class="c-burgundy"><em>People v. Claro</em></span>).</li>
+    <li><strong>Apparent Discrepancies Exception (<span class="c-burgundy"><em>Lejano v. Court of Appeals</em></span> / Hubert Webb Case):</strong> Factual findings on witness demeanor will not be sustained when glaring discrepancies in the testimony of the witness are apparent on the record. Where the main prosecution witness exhibited substantial contradictions between two sworn affidavits and the physical evidence, the Supreme Court overturned the trial court's credibility assessment, holding that an observant demeanor in court cannot overcome fatal contradictions and physical improbabilities.</li>
+  </ul>
+
+  <h4 id="xi-c-7-where-how">7. Where to Appeal</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 122</span>, appeals are taken to the following courts:</p>
+  <ul>
+    <li><strong>To the Regional Trial Court (RTC):</strong> In cases decided by the Metropolitan Trial Court (MeTC), Municipal Trial Court in Cities (MTCC), Municipal Trial Court (MTC), or Municipal Circuit Trial Court (MCTC).</li>
+    <li><strong>To the Court of Appeals or Supreme Court:</strong> In proper cases provided for by law, in cases decided by the Regional Trial Court.</li>
+    <li><strong>To the Supreme Court:</strong> In cases decided by the Court of Appeals.</li>
+  </ul>
+
+  <h4>8. How to Appeal</h4>
+  <p>Under <span class="c-teal">Section 3, Rule 122</span>:</p>
+  <ul>
+    <li><strong>From MTC/MeTC to RTC:</strong> By filing a Notice of Appeal with the court that rendered the judgment or final order, and serving a copy upon the adverse party (<span class="c-teal">Sec. 3[a]</span>).</li>
+    <li><strong>From RTC (Original Jurisdiction) to Court of Appeals:</strong> By filing a Notice of Appeal with the RTC, and serving a copy on the adverse party (<span class="c-teal">Sec. 3[a]</span>).</li>
+    <li><strong>From RTC (Appellate Jurisdiction) to Court of Appeals:</strong> By filing a Petition for Review under <span class="c-teal">Rule 42</span> with the Court of Appeals (<span class="c-teal">Sec. 3[b]</span>).</li>
+    <li><strong>Where Penalty Is Reclusion Perpetua or Life Imprisonment:</strong> The appeal is taken to the Court of Appeals by Notice of Appeal filed with the RTC (<span class="c-teal">Sec. 3[c]</span>).</li>
+    <li><strong>Where Penalty Is Death:</strong> No notice of appeal is necessary; the case is elevated to the Court of Appeals for automatic review pursuant to <span class="c-burgundy"><em>People v. Mateo</em></span> (<span class="c-teal">Sec. 3[d]</span>). (Note: Under <span class="c-teal">R.A. 9346</span>, the death penalty is prohibited and replaced by reclusion perpetua without eligibility for parole).</li>
+    <li><strong>From Court of Appeals to the Supreme Court:</strong>
+      <ul>
+        <li><strong>General Rule:</strong> By filing a Petition for Review on Certiorari under <span class="c-teal">Rule 45</span>, raising only pure questions of law (<span class="c-teal">Sec. 3[e], Rule 122</span>; <span class="c-teal">Sec. 2, Rule 125</span>).</li>
+        <li><strong>When CA Imposes Reclusion Perpetua or Life Imprisonment (<span class="c-teal">Sec. 13[c], Rule 124</span>):</strong> The accused may appeal to the Supreme Court by <mark class="hl">Notice of Appeal filed with the CA as a matter of right</mark> (which opens the entire case for review on questions of fact and law), OR file a Petition for Review on Certiorari under <span class="c-teal">Rule 45</span> raising pure questions of law.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>9. When Appeal Is to Be Taken</h4>
+  <ul>
+    <li><strong>The 15-Day Period:</strong> Under <span class="c-teal">Section 6, Rule 122</span>, an appeal must be taken <mark class="hl">within fifteen (15) days from promulgation of the judgment or from notice of the final order appealed from</mark>.</li>
+    <li><strong>The Neypes Fresh Period Rule in Criminal Cases:</strong> While <span class="c-teal">Section 6 of Rule 122</span> originally provided that the balance of the period begins to run upon notice of denial of a motion for new trial or reconsideration, this was modified by <span class="c-burgundy"><em>Judith Yu v. Samson-Tatad</em></span> (642 SCRA 421) and <span class="c-burgundy"><em>Rodriguez v. People</em></span> (684 SCRA 580). The Neypes "fresh period rule" applies to criminal cases&mdash;giving the accused a fresh period of fifteen (15) days from receipt of the order denying the motion for new trial or reconsideration within which to file the appeal.</li>
+    <li><strong>Lapse of Period:</strong> If the 15-day period lapses without an appeal being perfected, the judgment attains finality, depriving the appellate court of jurisdiction to modify or set it aside (<span class="c-burgundy"><em>Ramirez v. People</em></span>).</li>
+  </ul>
+
+  <h4>10. Service of Notice of Appeal; Waiver of Notice</h4>
+  <ul>
+    <li><strong>Manner of Service:</strong> Notice of appeal must be served upon the adverse party or his counsel by personal service, or if not feasible, by registered mail or substituted service (<span class="c-teal">Sec. 4, Rule 122</span>).</li>
+    <li><strong>Waiver:</strong> The appellee may waive his right to notice that an appeal has been taken. The appellate court, in its discretion, may entertain an appeal notwithstanding the failure to give notice if the interests of justice so require (<span class="c-teal">Sec. 5, Rule 122</span>).</li>
+  </ul>
+
+  <h4>11. Stay of Execution</h4>
+  <p>Under <span class="c-teal">Section 11(c), Rule 122</span>:</p>
+  <ul>
+    <li>Upon the perfection of an appeal, the execution of the judgment or final order appealed from shall be stayed as to the appealing party.</li>
+    <li><strong>No Extension to Non-Appealing Co-Accused:</strong> The stay of execution is personal to the appellant; it does not extend to a co-accused who failed to appeal, and the period to appeal continues to run against the non-appealing co-accused (<span class="c-burgundy"><em>Lubrica v. People</em></span>).</li>
+  </ul>
+
+  <h4>12. Transmission of the Papers to Appellate Court (RTC)</h4>
+  <ul>
+    <li><strong>5-Day Duty:</strong> Within <mark class="hl">five (5) days from the filing of the notice of appeal</mark>, the clerk of court of the lower court must transmit the complete record of the case, together with the notice of appeal and original/three copies of the transcript of stenographic notes (TSNs), to the clerk of court of the RTC (<span class="c-teal">Sec. 8, Rule 122</span>).</li>
+    <li><strong>Procedure in the RTC (<span class="c-teal">Sec. 9, Rule 122</span>):</strong>
+      <ol>
+        <li>The RTC clerk notifies the parties of receipt of the records.</li>
+        <li>Parties may submit memoranda or briefs within fifteen (15) days from receipt of notice.</li>
+        <li>The RTC decides the case solely on the basis of the entire records and memoranda filed; it cannot receive new evidence or conduct a trial.</li>
+      </ol>
+    </li>
+    <li><strong>Compare with Court of Appeals:</strong> Under <span class="c-teal">Section 12, Rule 124</span>, the CA has the power to try cases, conduct hearings, receive evidence, and resolve factual issues within its jurisdiction.</li>
+  </ul>
+
+  <h4>13. Failure to File a Memorandum on Appeal</h4>
+  <ul>
+    <li><strong>Appeals to RTC in Criminal Cases vs. Civil Cases:</strong> In civil appeals to the RTC, failure to file a memorandum is an explicit ground for dismissal (<span class="c-teal">Sec. 7, Rule 40</span>). In criminal cases, the filing of a memorandum is directory ("may or may not be required"); hence, <mark class="hl">the dismissal of a criminal appeal cannot be premised on the failure to file a memorandum on appeal</mark> (<span class="c-burgundy"><em>Sanico v. People</em></span>).</li>
+    <li><strong>Appeals to the Court of Appeals (<span class="c-teal">Sec. 8, Rule 124</span>):</strong> The CA may dismiss the appeal if the appellant fails to file his brief within the prescribed time, <mark class="hl">except where the appellant is represented by a counsel de oficio</mark>. The CA may also dismiss the appeal motu proprio or on motion if the appellant escapes from prison, jumps bail, or flees the country during the pendency of the appeal.</li>
+  </ul>
+
+  <h4>14. Withdrawal of Appeal</h4>
+  <p>Under <span class="c-teal">Section 12, Rule 122</span>:</p>
+  <ul>
+    <li><strong>Before Transmission of Records:</strong> Despite perfection of an appeal, the trial court (MTC or RTC) may allow the appellant to withdraw his appeal before the record is forwarded to the appellate court. Upon withdrawal, the judgment becomes final.</li>
+    <li><strong>After Transmission of Records:</strong> If the records are already with the appellate court (e.g., RTC), the appellate court may allow withdrawal of the appeal upon motion filed before decision is rendered. The withdrawal is addressed to the sound discretion of the court; when granted, the judgment of origin becomes final and the case is remanded for execution.</li>
+  </ul>
+
+  <h4 id="xi-c-15-coaccused">15. Effect of Appeal by Any of Several Accused (Bar 1998)</h4>
+  <p>Under <span class="c-teal">Section 11(a), Rule 122</span>:</p>
+  <blockquote>
+    "An appeal taken by one or more of several accused shall not affect those who did not appeal, except insofar as the judgment of the appellate court is favorable and applicable to the latter."
+  </blockquote>
+  <ul>
+    <li><strong>Scope of Benefit (<span class="c-burgundy"><em>People v. Valdez</em></span>):</strong> The rule applies to any co-accused who acted in conspiracy or whose criminal liability is inextricably linked.</li>
+    <li><strong>Application to Withdrawn Appeals:</strong> In <span class="c-burgundy"><em>People v. Valdez</em></span>, two accused were convicted of three counts of murder. One appellant withdrew his appeal, causing his conviction to become final; the remaining appellant pursued his appeal, and the Supreme Court downgraded the crime to homicide. The Supreme Court held that <mark class="hl">the phrase "did not appeal" must not be interpreted literally to exclude an accused who withdrew an appeal; the favorable judgment applies equally to the co-accused who withdrew his appeal.</mark></li>
+  </ul>
+
+  <h4>16. Appeal From the Civil Aspect</h4>
+  <p>Under <span class="c-teal">Section 11(b), Rule 122</span>:</p>
+  <ul>
+    <li>The appeal of the offended party from the civil aspect of the case shall not affect the criminal aspect of the judgment or order appealed from.</li>
+    <li>The appeal period available to the accused (15 days / Neypes rule) is equally available to the offended party seeking redress on the civil aspect (<span class="c-burgundy"><em>Ching v. Nicdao</em></span>).</li>
+  </ul>
+
+  <h4>17. "Harmless Error" Rule</h4>
+  <p>Under <span class="c-teal">Section 10, Rule 124</span>:</p>
+  <ul>
+    <li>Not every error committed by the trial court justifies reversal or modification of a judgment.</li>
+    <li>If an error is slight, technical, or insignificant, it will be disregarded if it has not caused prejudice to a party. The appellate court will not reverse or modify a judgment unless an error has been committed that injuriously affects the substantial rights of the appellant (<span class="c-burgundy"><em>People v. Teehankee</em></span>).</li>
+  </ul>
+
+  <h4>18. Review of Decisions of the Court of Appeals</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 125</span>, the procedure for review by the Supreme Court of decisions in criminal cases rendered by the Court of Appeals shall be the same as in civil cases (via Petition for Review on Certiorari under <span class="c-teal">Rule 45</span>, confined to questions of law).</p>
+
+  <h4>19. Applicability of CA Appeal Rules to the Supreme Court</h4>
+  <p>Under <span class="c-teal">Section 1, Rule 125</span>:</p>
+  <blockquote>
+    "Unless otherwise provided by the Constitution or by law, the procedure in the Supreme Court in original and in appealed cases shall be the same as in the Court of Appeals." (<span class="c-burgundy"><em>People v. Taruc</em></span>)
+  </blockquote>
+
+  <h4>20. Rule If Opinion of Supreme Court En Banc Is Equally Divided</h4>
+  <p>Under <span class="c-teal">Section 3, Rule 125</span>:</p>
+  <blockquote>
+    "When the Supreme Court en banc is equally divided in opinion or the necessary majority cannot be had on whether to acquit the appellant, the case shall again be deliberated upon and if no decision is reached after re-deliberation, <mark class="hl">the judgment of conviction of the lower court shall be reversed and the accused acquitted</mark>."
+  </blockquote>
+
+  <!-- PART VI SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-vi">
+    <div class="summary-hdr">
+      <h4>Part VI Summary Brief Reviewer &mdash; Appeals (<span class="c-teal" style="color:#CCFBF1;">Rules 122, 124, 125</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Appellate Principles &amp; Review Scope:</strong> <span class="c-teal">Rule 122, Sec. 1</span>; statutory privilege (<span class="c-burgundy"><em>Dungo</em></span>), Open-for-Review Doctrine, no change of theory (<span class="c-burgundy"><em>Mamaril</em></span>), credibility (<span class="c-burgundy"><em>Lejano</em></span>).</li>
+        <li><strong>Modes, Deadlines &amp; Procedures:</strong> <span class="c-teal">Rule 122, Secs. 2&ndash;12</span> (<span class="c-teal">Notice of Appeal vs. Rule 42 vs. Rule 45</span>), 15-day / Neypes period, 5-day transmittal, RTC records-only review (<span class="c-burgundy"><em>Sanico</em></span>).</li>
+        <li><strong>Co-Accused, Harmless Error &amp; Supreme Court:</strong> <span class="c-teal">Rule 122, Sec. 11</span> (<span class="c-burgundy"><em>Valdez</em></span>, <span class="c-burgundy"><em>Lubrica</em></span>, <span class="c-burgundy"><em>Ching</em></span>); <span class="c-teal">Rule 124, Secs. 8, 10, 12, 13</span>; <span class="c-teal">Rule 125, Secs. 1&ndash;3</span>.</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How to Appeal Ladder (<span class="c-teal">Sec. 3, Rule 122</span>)</td>
+              <td><strong>"N-N-42-45":</strong> MTC&rarr;RTC (<strong>N</strong>otice); RTC Orig&rarr;CA (<strong>N</strong>otice); RTC App&rarr;CA (Rule <strong>42</strong>); CA&rarr;SC (Rule <strong>45</strong>, or Notice if CA imposed <em>Reclusion Perpetua</em>/Life).</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+            <tr>
+              <td>Co-Accused Appeal Benefit (<span class="c-teal">Sec. 11[a]</span>)</td>
+              <td><strong>"Personal Stay, Shared Favor":</strong> Stay of execution is <em>personal</em> (<span class="c-burgundy"><em>Lubrica</em></span>), but a <em>favorable</em> appellate judgment benefits non-appealing/withdrawn co-accused (<span class="c-burgundy"><em>Valdez</em></span>).</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Open for Review:</strong> Accused's appeal waives double jeopardy and opens the entire case (assigned and unassigned errors; penalty may even be increased).</li>
+        <li><strong>SC En Banc Tie (<span class="c-teal">Sec. 3, Rule 125</span>):</strong> Re-deliberate &rarr; if still tied, judgment of conviction is reversed and accused is <strong>acquitted</strong>.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>RTC Criminal Memorandum Trap:</strong> Unlike civil appeals (<span class="c-teal">Rule 40</span>), failure to file a memorandum in a criminal appeal to the RTC is NOT a ground for dismissal (<span class="c-burgundy"><em>Sanico v. People</em></span>).</li>
+          <li><strong>Counsel de Oficio Brief Trap:</strong> The CA cannot dismiss an appeal for failure to file appellant's brief if the appellant is represented by a <em>counsel de oficio</em> (<span class="c-teal">Sec. 8, Rule 124</span>).</li>
+          <li><strong>RTC Appellate Jurisdiction Trap:</strong> When RTC decides a case on appeal from MTC, elevation to CA is via <strong>Rule 42 Petition for Review</strong>, NOT Notice of Appeal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ========================================================= -->
+  <!-- CHAPTER XI — PART VII: PROVISIONAL REMEDIES (RULE 127)    -->
+  <!-- ========================================================= -->
+  <h3 id="ch-xi-d-provisional">D. PROVISIONAL REMEDIES IN CRIMINAL CASES (<span class="c-teal">RULE 127</span>)</h3>
+
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      [Appeals (Rules 122&ndash;125)] &rarr; <strong>YOU ARE HERE: Provisional Remedies (Rule 127)</strong> &rarr; [Case Index]
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">Rules of Criminal Procedure, Rule 127 (Secs. 1&ndash;2)</span>; <span class="c-teal">Rule 111, Sec. 1</span>; <span class="c-teal">Art. 100, RPC</span>; <span class="c-teal">Rule 57</span> (Civil Attachment contrast).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Because civil liability ex delicto is deemed instituted with the criminal action, the offended party needs interim security (especially attachment) so the accused cannot dissipate assets before judgment.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents a Pyrrhic victory on civil indemnity while limiting criminal preliminary attachment to four exclusive, high-risk grounds.</div>
+    </div>
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-title">Availability Gate (<span class="c-teal">Sec. 1, Rule 127</span> &amp; <span class="c-teal">Sec. 1, Rule 111</span>)</div>
+      <div class="ui-sub">Provisional remedies attach strictly to the civil action deemed instituted with the criminal action</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-grid ui-split-outcome">
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-yes">&#10003;</div>
+        <div class="ui-title">Civil Action Deemed Instituted</div>
+        <div class="ui-sub">Attachment, Injunction, Receivership, Replevin, Support Pendente Lite AVAILABLE</div>
+      </div>
+      <div class="ui-col">
+        <div class="ui-badge ui-badge-no">&#10005;</div>
+        <div class="ui-title">Waived / Reserved / Separate</div>
+        <div class="ui-sub">Provisional remedies UNAVAILABLE in criminal case (apply in separate civil action)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4>1. Availability of Provisional Remedies</h4>
+  <p>Under <span class="c-teal">Section 1, Rule 127</span> of the Rules of Court:</p>
+  <ul>
+    <li>The provisional remedies in civil actions, insofar as they are applicable, may be availed of in connection with the civil action deemed instituted with the criminal action.</li>
+    <li><strong>Deemed Instituted Requirement:</strong> Because provisional remedies attach strictly to the civil action, they are available in a criminal action <mark class="hl">only when there is a corresponding civil liability arising from the offense charged that is instituted in the criminal case</mark> (<span class="c-teal">Sec. 1, Rule 111</span>).</li>
+    <li><strong>When Unavailable in Criminal Case:</strong> If the civil action has been <span class="c-rust"><strong><u>waived, reserved, or instituted separately</u></strong></span>, provisional remedies cannot be availed of in the criminal action; the remedy must instead be applied for in the separate civil action.</li>
+    <li><strong>Scope of Remedies Available:</strong>
+      <ol>
+        <li>Preliminary Attachment (<span class="c-teal">Sec. 2, Rule 127</span>);</li>
+        <li>Preliminary Injunction;</li>
+        <li>Receivership;</li>
+        <li>Replevin (Delivery of Personal Property); and</li>
+        <li>Support Pendente Lite (e.g., support for an offspring born as a consequence of rape or seduction under <span class="c-teal">Sec. 6, Rule 61</span>).</li>
+      </ol>
+    </li>
+    <li><strong>Accused's Right to Prove Damages:</strong> The accused may prove during trial not only his defense to the criminal charge, but also any damages sustained arising from the wrongful issuance of a provisional remedy (<span class="c-teal">Sec. 11[b], Rule 119</span>).</li>
+  </ul>
+
+  <h4>2. When Preliminary Attachment Is Available (Bar 2013)</h4>
+  <p>Under <span class="c-teal">Section 2, Rule 127</span>, the offended party may have the property of the accused attached as security for the satisfaction of any judgment in the following <span class="c-green"><strong><u>four (4) exclusive cases</u></strong></span>:</p>
+  <ol>
+    <li><strong>Absconding Accused:</strong> When the accused is about to abscond from the Philippines;</li>
+    <li><strong>Embezzlement or Fiduciary Breach:</strong> When the criminal action is based on a claim for money or property embezzled or fraudulently misapplied or converted to the use of the accused, who is:
+      <ul>
+        <li>A public officer;</li>
+        <li>An officer of a corporation;</li>
+        <li>An attorney, factor, broker, agent, or clerk;</li>
+        <li>In the course of employment as such, or by any other person in a fiduciary capacity, or for a willful violation of duty;</li>
+      </ul>
+    </li>
+    <li><strong>Fraudulent Concealment or Disposal of Property:</strong> When the accused has concealed, removed, or disposed of his property, or is about to do so; or</li>
+    <li><strong>Non-Resident Accused:</strong> When the accused resides outside the Philippines.</li>
+  </ol>
+  <blockquote>
+    <strong>Crucial Rule on Embezzlement (<span class="c-teal">Sec. 2[b]</span>):</strong> In cases of embezzlement or fiduciary breach under letter "b," <mark class="hl">preliminary attachment may be granted without the need for showing that the accused has concealed, removed, or disposed of his property</mark>. It is sufficient to prove that the criminal claim is founded upon embezzled/misapplied funds and that the accused occupies one of the enumerated fiduciary or public positions.
+  </blockquote>
+  <p><strong>Distinction with Civil Attachment:</strong> The grounds in criminal cases under <span class="c-teal">Section 2, Rule 127</span> are not as varied as those under <span class="c-teal">Section 1, Rule 57</span> for ordinary civil actions.</p>
+
+  <h4 id="xi-d-case-index">CASE INDEX FOR APPEALS &amp; PROVISIONAL REMEDIES</h4>
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Doctrinal Holding</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="c-burgundy"><em>Dungo v. People</em></span></td>
+          <td>Right to appeal is a mere statutory privilege, not a natural right or essential component of due process.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Hilario v. People</em></span></td>
+          <td>While statutory in origin, arbitrary suppression of an appeal once granted constitutes a violation of due process.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Torres</em></span> / <span class="c-burgundy"><em>Geroche v. People</em></span> / <span class="c-burgundy"><em>People v. Macapundag</em></span></td>
+          <td>An appeal by the accused waives double jeopardy and throws the entire criminal case open for review of assigned and unassigned errors.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Arguta</em></span> / <span class="c-burgundy"><em>People v. Geronimo</em></span> / <span class="c-burgundy"><em>Miguel v. People</em></span></td>
+          <td>The appellate court in criminal cases has full jurisdiction to re-evaluate evidence, modify findings, and increase the penalty.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Mamaril</em></span></td>
+          <td>A party cannot change his theory on appeal; points of law not raised in the trial court violate due process if entertained on appeal.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Rusiana</em></span> / <span class="c-burgundy"><em>People v. Nachor</em></span> / <span class="c-burgundy"><em>People v. Claro</em></span></td>
+          <td>Factual findings of trial courts on witness credibility are given great weight due to the opportunity to observe witness demeanor.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Lejano v. Court of Appeals</em></span> (Hubert Webb Case)</td>
+          <td>Factual assessments on witness demeanor will not be sustained when apparent, irreconcilable discrepancies in sworn testimonies and physical evidence exist on the record.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Mateo</em></span></td>
+          <td>Mandated intermediate review by the Court of Appeals in capital-grade offenses before elevation to the Supreme Court.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Judith Yu v. Samson-Tatad</em></span> / <span class="c-burgundy"><em>Rodriguez v. People</em></span></td>
+          <td>The Neypes 15-day "fresh period rule" applies to appeals in criminal cases.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Ramirez v. People</em></span></td>
+          <td>Filing an appeal after the expiration of the 15-day period deprives the appellate court of jurisdiction to entertain it.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Lubrica v. People</em></span></td>
+          <td>The stay of execution of an appealed judgment benefits only the appealing accused; it does not stop the appeal period from running against a non-appealing co-accused.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Sanico v. People</em></span></td>
+          <td>In criminal appeals to the RTC, failure to file a memorandum is not a ground for dismissing the appeal.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Valdez</em></span></td>
+          <td>The benefit of a favorable judgment rendered on appeal applies to a co-accused even if he initially withdrew his appeal.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>Ching v. Nicdao</em></span></td>
+          <td>The period to appeal available to the accused is equally available to the private offended party appealing the civil aspect.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Teehankee</em></span></td>
+          <td>The "harmless error rule"; slight or technical errors not injuriously affecting substantial rights are disregarded.</td>
+        </tr>
+        <tr>
+          <td><span class="c-burgundy"><em>People v. Taruc</em></span></td>
+          <td>Procedure in the Supreme Court in original and appealed cases mirrors the Court of Appeals unless otherwise provided by law.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PART VII SUMMARY CAPSTONE -->
+  <div class="summary-capstone" id="summary-part-vii">
+    <div class="summary-hdr">
+      <h4>Part VII Summary Brief Reviewer &mdash; Provisional Remedies (<span class="c-teal" style="color:#CCFBF1;">Rule 127</span>)</h4>
+      <span class="summary-pill">Module Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li><strong>Availability of Provisional Remedies:</strong> <span class="c-teal">Rule 127, Sec. 1</span>; <span class="c-teal">Rule 111, Sec. 1</span>; Attachment, Injunction, Receivership, Replevin, Support Pendente Lite (<span class="c-teal">Rule 61, Sec. 6</span>).</li>
+        <li><strong>Preliminary Attachment Grounds:</strong> <span class="c-teal">Rule 127, Sec. 2</span> (4 exclusive grounds vs. <span class="c-teal">Rule 57</span> civil attachment).</li>
+      </ul>
+
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Trigger / Concept</th>
+              <th>Mnemonic / Memory Anchor</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4 Exclusive Attachment Grounds (<span class="c-teal">Sec. 2, Rule 127</span>)</td>
+              <td><strong>"A-E-C-N":</strong> <strong>A</strong>bsconding; <strong>E</strong>mbezzlement/fiduciary breach; <strong>C</strong>oncealment/disposal of property; <strong>N</strong>on-resident accused.</td>
+              <td><span class="tag-mem-add">Study Aid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li><strong>Deemed Instituted Gate:</strong> Provisional remedies can be availed of in a criminal case ONLY if the civil action is deemed instituted with it.</li>
+        <li><strong>Embezzlement Shortcut (<span class="c-teal">Sec. 2[b]</span>):</strong> No need to prove concealment, removal, or disposal of property when the accused is an enumerated fiduciary/public/corporate officer charged with embezzlement or misapplication.</li>
+      </ul>
+
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Reserved/Waived Civil Action Trap:</strong> If the offended party reserved or waived the civil action (or filed it separately), provisional remedies CANNOT be issued in the criminal case.</li>
+          <li><strong>Sec. 2(b) Concealment Proof Trap:</strong> Do NOT require proof of fraudulent concealment/disposal for preliminary attachment in embezzlement cases under <span class="c-teal">Sec. 2(b)</span>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
