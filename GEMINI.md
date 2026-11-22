@@ -26,7 +26,7 @@ Transform legal texts, bar review topics, statutory provisions, and raw study no
      - If the source notes contain raw ASCII art, bracketed text diagrams (e.g., `[A] ---> [B]`), keyboard flowcharts, or text wireframes, **DO NOT reproduce raw ASCII/text boxes**.
      - **Linear ASCII boxes (≤ 4 steps)** → Convert into a pure HTML `.ui-workflow` card.
      - **Complex branching decision trees, spatial relationships, or timelines** → Illustrate with a custom **Nano Banana Pro 2** image via `image-generator`.
-   - **Permitted Visual & Structural Additions:** Heading anchor `id`s, Sticky Navigation Bar (with `Highlights: ON/OFF` toggle), selective high-yield soft-yellow `<mark class="hl">` highlights, Macro Roadmap & Context Compass cards, End-of-Part Summary Brief Reviewer capstones (`.summary-capstone`), pure HTML UI Summary Cards / Stacked Workflow Boxes / Statutory Tables, and embedded Nano Banana Pro 2 `.img-figure` visual cards.
+   - **Permitted Visual & Structural Additions:** Heading anchor `id`s, Sticky Navigation Bar (with `Highlights: ON/OFF` toggle), selective high-yield soft-yellow `<mark class="hl">` highlights, Macro Roadmap & Context Compass cards, End-of-Part Summary Brief Reviewer capstones (`.summary-capstone`), pure HTML UI Summary Cards / Stacked Workflow Boxes / Statutory Tables, embedded Nano Banana Pro 2 `.img-figure` visual cards, and default Multi-Statute Verbatim (`.art-ref`) & Supreme Court Case Digest (`.case-ref`) hover popovers.
 
 2. **MODE B: SYNTHESIS & NOTE CREATION (When the user asks you to "create notes," "summarize," or "synthesize a topic")**
    - Generate comprehensive, bar-exam caliber legal notes based on Philippine law and jurisprudence across any requested law subject (e.g., Remedial Law / Criminal Procedure, Political Law / Local Government, Commercial Law, Civil Law, Criminal Law, Labor Law, Taxation, Ethics).
@@ -708,26 +708,30 @@ blockquote {
 
 ---
 
-### OPTIONAL INTERACTIVE FEATURE: MULTI-STATUTE VERBATIM HOVER POPOVER
+### MANDATORY BY DEFAULT: MULTI-STATUTE VERBATIM & CASE DIGEST HOVER POPOVERS
 
-When the user requests hover-over verbatim statutory boxes on cited provisions (or in comprehensive bar reviewers across **any** subject), implement a self-contained static popover system (zero external CDNs, zero Mermaid) supporting the primary subject statute **plus** every cross-referenced Code, Rule, Constitution provision, Special Law, or Circular:
+By default on all HTML-izer documents (unless the user explicitly opts out), implement a self-contained static popover system (zero external CDNs, zero Mermaid) providing:
+- **Verbatim Statutory Popovers (`.art-ref`, Deep Navy `#1E3A8A` header):** Exact verbatim official statutory text for the primary subject statute **plus** every cross-referenced Code, Rule, Constitution provision, IRR, Special Law, or Circular.
+- **Supreme Court Case Digest Popovers (`.case-ref`, Burgundy `#991B1B` header):** Concise structured **Facts / Issue / Ruling** mini-digests (with G.R. number and promulgation date) on inline case citations via `CASE_DIGESTS`.
+- **External Reference Links Preserved:** Keep dedicated bottom/footnote `"Sources:"` `<a href="...">` hyperlinks clickable to open official sources in a new tab (`target="_blank"`), never wrapping `<a>`, `<option>`, `<h1>`, or `.source-links` inside `.art-ref`/`.case-ref`.
 
-1. **Inline Trigger Markup (`.art-ref`) — Subject-Agnostic Keying:**
+1. **Inline Trigger Markup (`.art-ref` & `.case-ref`) — Subject-Agnostic Keying:**
    - **Primary Code Dictionary (`CODAL_PROVISIONS` + configurable `PRIMARY_SOURCE_LABEL`):** When a document centers on one consecutively numbered statute (e.g., Civil Code `R.A. 386`, Revised Penal Code, Local Government Code `R.A. 7160`, Revised Corporation Code `R.A. 11232`, Labor Code, or 1987 Constitution section map), set `PRIMARY_SOURCE_LABEL` accordingly (not hardcoded to Civil Code) and use clean keys (`data-art="16"`, `data-art="924-928"`, optional `data-para="2"` or `data-para="1,2,3"`).
-   - **Structured Multi-Statute Dictionary (`EXTERNAL_PROVISIONS`):** For cross-referenced laws, rule-section rulesets, and special laws—such as Rules of Court (`ROC-113-5`, `ROC-86-7`, `ROC-88-1`), Constitution (`CONST-III-2`, `CONST-X-5`), LGC (`LGC-444`), Commercial Laws (`RCC-22`, `NIL-52`, `RA11232-23`, `IC-77`, `FRIA-10`), Family Code (`FC-55`, `FC-63`), RPC (`RPC-6`), NIRC (`NIRC-94`), SC Circulars (`OCA-...` / `AM-...`), or historical statutes (`ACT190-729`)—store `{ s: "Source Statute", t: "Provision Heading", b: "Verbatim text" }` entries and support comma-separated multi-keys (`data-art="RPC-34,RPC-41"`, `data-art="ROC-113-5,CONST-III-2"`), adding `data-para="..."` whenever pinpointing a paragraph/subsection.
-   - **Strict Integrity Safeguard:** Wrap ONLY citations whose exact keys exist in `CODAL_PROVISIONS` or `EXTERNAL_PROVISIONS`. Never wrap partial macro ranges missing intermediate integers, `<option>` dropdown labels, HTML attributes, or `<pre>`/`<code>` blocks.
+   - **Structured Multi-Statute Dictionary (`EXTERNAL_PROVISIONS`):** For cross-referenced laws, rule-section rulesets, and special laws—such as Rules of Court (`ROC-113-5`, `ROC-86-7`, `ROC-88-1`), Constitution (`CONST-III-2`, `CONST-XII-11`), Public Service Act (`CA146-13D`, `RA11659-23`, `IRR-44`), LGC (`LGC-444`), Commercial Laws (`RCC-22`, `NIL-52`, `RA11232-23`, `IC-77`, `FRIA-10`), Family Code (`FC-55`, `FC-63`), RPC (`RPC-6`), NIRC (`NIRC-94`), SC Circulars (`OCA-...` / `AM-...`), or historical statutes (`ACT190-729`)—store `{ s: "Source Statute", t: "Provision Heading", b: "Verbatim text" }` entries and support comma-separated multi-keys (`data-art="RPC-34,RPC-41"`, `data-art="ROC-113-5,CONST-III-2"`), adding `data-para="..."` whenever pinpointing a paragraph/subsection. Always verify verbatim text from official sources (E-Library, LawPhil, Official Gazette) rather than writing from memory.
+   - **Case Digest Dictionary (`CASE_DIGESTS`):** Wrap inline jurisprudence citations in `<span class="case-ref" data-case="CASE-KEY" tabindex="0"><em>Case Name</em></span>` mapped to `{ title, citation, facts, issue, ruling }` entries verified against official decisions.
+   - **Strict Integrity Safeguard:** Wrap ONLY citations whose exact keys exist in `CODAL_PROVISIONS`, `EXTERNAL_PROVISIONS`, or `CASE_DIGESTS`. Never wrap partial macro ranges missing intermediate integers, `<option>` dropdown labels, `<a>` hyperlinks, HTML attributes, or `<pre>`/`<code>` blocks.
 
-2. **Dual Dictionary & Dynamic Popover Controller (`#artPopover`):**
-   - Embed `const PRIMARY_SOURCE_LABEL = "...";`, `const CODAL_PROVISIONS = { ... };`, and `const EXTERNAL_PROVISIONS = { ... };` inside an inline `<script>` before `</body>` alongside `<div class="art-popover" id="artPopover" role="tooltip" aria-hidden="true">`.
-   - `resolveKeys(artAttr)` splits comma-separated lists and expands numeric `a-b` ranges; `lookupEntry(key)` checks `EXTERNAL_PROVISIONS` first (`{ key, src: e.s, title: e.t, text: e.b, isExt: true }`) and falls back to `CODAL_PROVISIONS` (`PRIMARY_SOURCE_LABEL`), displaying dynamic source headers (`Rules of Court · Rule 113, Sec. 5`, `Local Government Code (R.A. 7160) · Sec. 16`, etc.) inside `#artPopoverHdr`.
+2. **Multi-Dictionary & Dynamic Popover Controller (`#artPopover`):**
+   - Embed `const PRIMARY_SOURCE_LABEL = "...";`, `const CODAL_PROVISIONS = { ... };`, `const EXTERNAL_PROVISIONS = { ... };`, and `const CASE_DIGESTS = { ... };` inside an inline `<script>` before `</body>` alongside `<div class="art-popover" id="artPopover" role="tooltip" aria-hidden="true">`.
+   - `resolveKeys(artAttr)` splits comma-separated lists and expands numeric `a-b` ranges; `lookupEntry(key)` checks `EXTERNAL_PROVISIONS` first (`{ key, src: e.s, title: e.t, text: e.b, isExt: true }`) and falls back to `CODAL_PROVISIONS` (`PRIMARY_SOURCE_LABEL`), displaying dynamic source headers (`Rules of Court · Rule 113, Sec. 5`, `C.A. No. 146 · Sec. 13(d)`, etc.) inside `#artPopoverHdr`. When triggering `.case-ref[data-case]`, toggle `.art-popover.is-case` (Burgundy `#991B1B` header) and render `citation` + `FACTS`, `ISSUE`, and `RULING` rows.
    - **Desktop Hover/Focus:** Open on `mouseover` / `focusin` with a short hide debounce (`~150ms`) so users can move the pointer into `.art-popover-body` to scroll multi-provision popovers.
-   - **Mobile / Click Pin:** Tap/click on `.art-ref` pins `.art-popover.mobile-pinned` with a visible close button (`×`), calling `e.preventDefault(); e.stopPropagation();` so citations inside `<summary>` or `<figcaption>` never accidentally toggle `<details>` or open image lightboxes; close on close button, outside click, or `Escape`.
-   - **Viewport Flip & Clamp:** Position below the citation by default, automatically flipping above when overflowing the bottom edge and clamping horizontally within `min(450px, calc(100vw - 24px))` inside a scrollable `max-height: 300px` body. Highlight `data-para` hits with `.art-para-hit` (`#FEF9C3` tint) and scroll the first hit into view.
+   - **Mobile / Click Pin:** Tap/click on `.art-ref` or `.case-ref` pins `.art-popover.mobile-pinned` with a visible close button (`×`), calling `e.preventDefault(); e.stopPropagation();` so citations inside `<summary>` or `<figcaption>` never accidentally toggle `<details>` or open image lightboxes; close on close button, outside click, or `Escape`.
+   - **Viewport Flip & Clamp:** Position below the citation by default, automatically flipping above when overflowing the bottom edge and clamping horizontally within `min(460px, calc(100vw - 24px))` inside a scrollable `max-height: 340px` body. Highlight `data-para` hits with `.art-para-hit` (`#FEF9C3` tint) and scroll the first hit into view.
    - **Print Rule:** Always hide the floating popover in `@media print`:
-     `.art-popover { display: none !important; }` and `.art-ref { border-bottom: none; }`.
+     `.art-popover { display: none !important; }` and `.art-ref, .case-ref { border-bottom: none; }`.
 
 ```css
-/* Optional Interactive Verbatim Statutory Popover */
+/* Default Interactive Verbatim Statutory & Case Digest Popover */
 .art-ref {
   color: #0F766E;
   font-weight: 600;
@@ -737,12 +741,21 @@ When the user requests hover-over verbatim statutory boxes on cited provisions (
   padding: 0 1px;
 }
 .art-ref:hover, .art-ref:focus { background-color: #CCFBF1; outline: none; }
+.case-ref {
+  color: #991B1B;
+  font-weight: 600;
+  border-bottom: 1.5px dotted #991B1B;
+  cursor: help;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.case-ref:hover, .case-ref:focus { background-color: #FEE2E2; outline: none; }
 .art-popover {
   position: fixed;
   z-index: 2500;
   display: none;
-  width: min(450px, calc(100vw - 24px));
-  max-height: 300px;
+  width: min(460px, calc(100vw - 24px));
+  max-height: 340px;
   background: #FFFFFF;
   border: 1.5px solid #1E3A8A;
   border-radius: 10px;
@@ -752,6 +765,7 @@ When the user requests hover-over verbatim statutory boxes on cited provisions (
   line-height: 1.5;
   color: #1F2937;
 }
+.art-popover.is-case { border-color: #991B1B; }
 .art-popover.open { display: flex; flex-direction: column; }
 .art-popover-hdr {
   background: #1E3A8A;
@@ -762,8 +776,10 @@ When the user requests hover-over verbatim statutory boxes on cited provisions (
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
+.art-popover.is-case .art-popover-hdr { background: #991B1B; }
 .art-popover-close {
   background: rgba(255, 255, 255, 0.18);
   color: #FFFFFF;
@@ -772,11 +788,29 @@ When the user requests hover-over verbatim statutory boxes on cited provisions (
   padding: 0.1rem 0.45rem;
   cursor: pointer;
   display: none;
+  flex-shrink: 0;
 }
 .art-popover.mobile-pinned .art-popover-close { display: inline-block; }
 .art-popover-body { padding: 0.75rem 0.9rem; overflow-y: auto; white-space: pre-wrap; }
+.art-popover.is-case .art-popover-body { white-space: normal; }
 .art-popover-entry + .art-popover-entry { margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px dashed #CBD5E1; }
 .art-popover-entry-title { font-weight: 700; color: #0F766E; margin-bottom: 0.2rem; }
 .art-para-hit { background: #FEF9C3; color: #1E3A8A; font-weight: 700; padding: 0.05rem 0.22rem; border-radius: 3px; }
-@media print { .art-popover { display: none !important; } .art-ref { border-bottom: none; } }
+.case-digest-meta { font-size: 0.77rem; font-weight: 600; color: #64748B; margin-bottom: 0.55rem; padding-bottom: 0.4rem; border-bottom: 1px dashed #CBD5E1; }
+.case-digest-row { margin-bottom: 0.48rem; font-size: 0.85rem; line-height: 1.48; }
+.case-digest-row:last-child { margin-bottom: 0; }
+.case-digest-label {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.06rem 0.38rem;
+  border-radius: 4px;
+  margin-right: 0.35rem;
+  color: #991B1B;
+  background: #FEE2E2;
+}
+.case-digest-label.is-ruling { color: #166534; background: #DCFCE7; }
+@media print { .art-popover { display: none !important; } .art-ref, .case-ref { border-bottom: none; } }
 ```
