@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philippine Public Service Act — 2027 Bar Reviewer &amp; Class-Report Guide</title>
+  <style>
+    /* Document container and typography */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1F2937;
+      background-color: #F8FAFC;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .document-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #FFFFFF;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Typography Hierarchy */
+    h1 {
+      color: #1E3A8A;
+      font-size: 1.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.35rem 0;
+      padding-bottom: 0.65rem;
+      border-bottom: 3px solid #1E3A8A;
+    }
+
+    .doc-subtitle {
+      color: #0F766E;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.25rem 0;
+    }
+
+    .doc-meta {
+      font-size: 0.92rem;
+      color: #475569;
+      margin: 0 0 1.5rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .part-banner {
+      margin: 2.25rem 0 1.25rem 0;
+      padding: 0.65rem 1rem;
+      background: linear-gradient(90deg, #1E3A8A 0%, #0F766E 100%);
+      color: #FFFFFF;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #1E3A8A;
+      font-size: 1.38rem;
+      font-weight: 800;
+      margin: 2rem 0 0.65rem 0;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid #DBEAFE;
+      scroll-margin-top: 4.5rem;
+    }
+
+    h4 {
+      color: #1E3A8A;
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.5rem 0;
+      scroll-margin-top: 4.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1.15rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+    }
+
+    li > ul, li > ol {
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 2.25rem 0;
+    }
+
+    a {
+      color: #0F766E;
+      text-decoration: underline;
+      text-decoration-color: rgba(15, 118, 110, 0.4);
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #1E3A8A;
+      text-decoration-color: #1E3A8A;
+    }
+
+    .source-links {
+      font-size: 0.84rem;
+      color: #475569;
+      margin: -0.35rem 0 1.15rem 0;
+    }
+
+    .source-links a {
+      color: #0F766E;
+      font-weight: 500;
+    }
+
+    /* Sticky Topic Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1E3A8A;
+      color: #FFFFFF;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nav-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .nav-dropdown {
+      flex-grow: 1;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      border: 1px solid #CBD5E1;
+      background-color: #FFFFFF;
+      color: #1F2937;
+    }
+    .nav-hl-toggle {
+      background: rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 4px;
+      padding: 0.38rem 0.7rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .nav-hl-toggle:hover { background: rgba(255, 255, 255, 0.28); }
+    .nav-hl-toggle[aria-pressed="false"] {
+      background: transparent;
+      color: #CBD5E1;
+    }
+
+    /* Selective High-Yield Soft-Yellow Highlighter */
+    mark.hl {
+      background-color: #FEF9C3;
+      color: inherit;
+      padding: 0.04rem 0.22rem;
+      border-radius: 3px;
+      border-bottom: 1.5px solid #FDE047;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    body.hl-off mark.hl {
+      background-color: transparent;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    /* Color Classes */
+    .c-navy { color: #1E3A8A; }
+    .c-teal { color: #0F766E; }
+    .c-green { color: #166534; }
+    .c-burgundy { color: #991B1B; }
+    .c-rust { color: #C2410C; }
+
+    blockquote {
+      border-left: 4px solid #C2410C;
+      margin: 1.5rem 0;
+      padding: 0.8rem 1.2rem;
+      background: #FFF7ED;
+      font-style: italic;
+      border-radius: 0 6px 6px 0;
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Context Breadcrumb & Statutory Compass Box */
+    .context-compass {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-left: 4px solid #1E3A8A;
+      border-radius: 8px;
+      padding: 0.9rem 1.15rem;
+      margin: 0.75rem 0 1.4rem 0;
+    }
+    .context-breadcrumb {
+      font-size: 0.76rem;
+      color: #475569;
+      letter-spacing: 0.02em;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.55rem;
+      border-bottom: 1px dashed #CBD5E1;
+    }
+    .context-breadcrumb strong {
+      color: #1E3A8A;
+      background: #DBEAFE;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+    }
+    .compass-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.32rem;
+      font-size: 0.88rem;
+      color: #334155;
+    }
+    .compass-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #0F766E;
+      background: #CCFBF1;
+      padding: 0.08rem 0.42rem;
+      border-radius: 4px;
+      margin-right: 0.4rem;
+    }
+
+    /* Executive UI Summary Cards & Stacked Workflow Boxes */
+    .ui-box {
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      background: #FFFFFF;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+    .ui-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      align-items: start;
+    }
+    .ui-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .ui-icon {
+      font-size: 1.35rem;
+      color: #475569;
+      margin-bottom: 0.25rem;
+    }
+    .ui-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.2;
+    }
+    .ui-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1F2937;
+    }
+    .ui-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #111827;
+    }
+    .ui-sub {
+      font-size: 0.88rem;
+      color: #64748B;
+    }
+    .ui-workflow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .ui-step-plain {
+      text-align: center;
+      padding: 0.25rem 1rem;
+    }
+    .ui-step-card {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 0.9rem 1.25rem;
+      text-align: center;
+      background: #FFFFFF;
+    }
+    .ui-step-outcome {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      text-align: center;
+      background: #ECFDF5;
+      border: 1px solid #D1FAE5;
+    }
+    .ui-connector {
+      font-size: 1rem;
+      color: #64748B;
+      font-weight: 600;
+      line-height: 1;
+      padding: 0.15rem 0;
+    }
+    .ui-split-outcome {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    .ui-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .ui-badge-yes {
+      color: #16A34A;
+      border: 1.5px solid #16A34A;
+      background: #F0FDF4;
+    }
+    .ui-badge-no {
+      color: #DC2626;
+      border: 1.5px solid #DC2626;
+      background: #FEF2F2;
+    }
+
+    /* Clean Minimalist Statutory Comparison Tables */
+    .table-scroll {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .ui-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    .ui-table th {
+      text-align: left;
+      font-weight: 700;
+      color: #111827;
+      padding: 0.75rem 1rem 0.75rem 0;
+      border-bottom: 1px solid #CBD5E1;
+    }
+    .ui-table td {
+      padding: 0.85rem 1rem 0.85rem 0;
+      border-bottom: 1px solid #F1F5F9;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    /* Static Responsive Nano Banana Pro 2 Infographic Figure Card */
+    .img-figure {
+      margin: 1.85rem 0;
+      padding: 1rem;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+    .img-figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .img-figure figcaption {
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid #E2E8F0;
+      font-size: 0.86rem;
+      color: #475569;
+      text-align: left;
+      line-height: 1.45;
+    }
+    .img-figure figcaption strong {
+      color: #1E3A8A;
+    }
+
+    /* End-of-Part Summary Brief Reviewer Capstones */
+    .summary-capstone {
+      margin: 2rem 0 2.5rem 0;
+      border: 1.5px solid #93C5FD;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #FFFFFF;
+      box-shadow: 0 3px 10px rgba(30, 58, 138, 0.08);
+      scroll-margin-top: 4.5rem;
+    }
+    .summary-hdr {
+      background: linear-gradient(90deg, #0F172A 0%, #1E3A8A 65%, #0F766E 100%);
+      color: #FFFFFF;
+      padding: 0.85rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .summary-hdr h4 {
+      margin: 0;
+      color: #FFFFFF;
+      font-size: 1.03rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .summary-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+    }
+    .summary-body { padding: 1.15rem 1.3rem; }
+    .summary-subhdr {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #1E3A8A;
+      margin: 1rem 0 0.45rem 0;
+      padding-bottom: 0.2rem;
+      border-bottom: 1.5px solid #DBEAFE;
+    }
+    .summary-subhdr:first-child { margin-top: 0; }
+    .summary-capstone .ui-table { margin: 0.55rem 0 0.85rem 0; font-size: 0.9rem; }
+    .summary-capstone .ui-table th { padding: 0.55rem 0.75rem; }
+    .summary-capstone .ui-table td { padding: 0.6rem 0.75rem; }
+    .tag-mem-lec, .tag-mem-add {
+      display: inline-block;
+      font-size: 0.67rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.08rem 0.42rem;
+      border-radius: 4px;
+    }
+    .tag-mem-lec { color: #1E3A8A; background: #DBEAFE; border: 1px solid #93C5FD; }
+    .tag-mem-add { color: #0F766E; background: #CCFBF1; border: 1px solid #5EEAD4; }
+    .summary-trap-box {
+      background: #FFF7ED;
+      border: 1px solid #FDBA74;
+      border-left: 4px solid #C2410C;
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      margin-top: 0.85rem;
+    }
+    .summary-trap-box ul, .summary-trap-box ol { margin-bottom: 0; }
+
+    @media (max-width: 720px) {
+      .document-container {
+        margin: 0.75rem;
+        padding: 1.25rem;
+      }
+      .nav-label { display: none; }
+    }
+
+    @media print {
+      .sticky-nav { display: none !important; }
+      body { background: #FFFFFF; }
+      mark.hl {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .document-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      .img-figure, .context-compass, .ui-box, .summary-capstone, .summary-trap-box {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sticky-nav">
+    <div class="nav-content">
+      <span class="nav-label">TOPIC NAVIGATION:</span>
+      <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
+        <option value="" disabled selected>Select topic or provision...</option>
+        <option value="#start-here">Start Here · Three Services in San Fernando City</option>
+        <option value="#bar-topics-glance">&nbsp;&nbsp;↳ The 2027 Bar Topics at a Glance</option>
+        <option value="#sec-1-public-utility">1. Public Service as Public Utility</option>
+        <option value="#sec-1-public-service">&nbsp;&nbsp;↳ What Makes an Activity a Public Service?</option>
+        <option value="#sec-1-six-utilities">&nbsp;&nbsp;↳ Which Public Services Are Public Utilities?</option>
+        <option value="#sec-1-add-utility">&nbsp;&nbsp;↳ Who Can Add a Public Utility?</option>
+        <option value="#sec-1-constitutional-effects">&nbsp;&nbsp;↳ What Changes Once Classified as a Public Utility?</option>
+        <option value="#sec-2-critical-infrastructure">2. Critical Infrastructure</option>
+        <option value="#sec-3-presidential-powers">3. Suspensive and Prohibitory Powers of the President</option>
+        <option value="#sec-3-three-powers">&nbsp;&nbsp;↳ Three Public Powers Worth Distinguishing</option>
+        <option value="#sec-4-fsoe-investments">4. Foreign Government or State-Owned Enterprise Investments</option>
+        <option value="#sec-5-reciprocity">5. Reciprocity</option>
+        <option value="#sec-5-four-numbers">&nbsp;&nbsp;↳ Four Numbers to Keep Straight</option>
+        <option value="#summary-part-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part I Summary Brief Reviewer (Sections 1–5)</option>
+        <option value="#sec-6-regulators-authorizations">6. Who Regulates the Service and Who Authorizes It?</option>
+        <option value="#sec-6-regulator-activity">&nbsp;&nbsp;↳ The Regulator Follows the Activity</option>
+        <option value="#sec-6-instruments">&nbsp;&nbsp;↳ Legislative Franchise, CPC, CPCN, and Provisional Authority</option>
+        <option value="#sec-7-prior-approvals">7. Which Actions Need Approval? (§ 20)</option>
+        <option value="#sec-8-rates-standards">8. How Are Rates Set and Service Standards Enforced?</option>
+        <option value="#sec-9-due-process-sanctions">9. Due Process, Suspension, Revocation, and Sanctions</option>
+        <option value="#summary-part-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part II Summary Brief Reviewer (Sections 6–9)</option>
+        <option value="#class-report-opening">Class Report · A Short Opening You Can Use</option>
+        <option value="#bar-practice">Bar Practice · Answer Before Checking the Key</option>
+        <option value="#bar-answer-key">&nbsp;&nbsp;↳ Answer Key</option>
+        <option value="#outline-coverage">&nbsp;&nbsp;↳ Where the Original Outline Is Covered</option>
+      </select>
+      <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
+    </div>
+  </nav>
+
+  <main class="document-container">
+    <h1>Philippine Public Service Act</h1>
+    <div class="doc-subtitle">2027 Bar Reviewer and Class-Report Guide</div>
+    <p class="doc-meta"><strong><span class="c-teal">Commonwealth Act No. 146</span>, as amended by <span class="c-teal">Republic Act No. 11659</span>, and its <span class="c-teal">2023 Implementing Rules and Regulations</span></strong></p>
+
+    <!-- START HERE -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        Commercial Law / Public Utilities &rarr; <strong>YOU ARE HERE: Statutory Architecture &amp; 2027 Bar Roadmap</strong> &rarr; Classification, Foreign Investment &amp; Regulation
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">C.A. No. 146</span> (Public Service Act), as amended by <span class="c-teal">R.A. No. 11659</span> (2022), its <span class="c-teal">2023 IRR</span>, and <span class="c-teal">1987 Constitution, Art. XII, §§ 6, 11, 17–19</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Before applying equity limits or regulatory remedies, you must separate the statutory labels (public service, public utility, and critical infrastructure) and keep the section numbering of <span class="c-teal">C.A. No. 146</span> distinct from <span class="c-teal">R.A. No. 11659</span>.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Balances liberalization of foreign investment in non-utility sectors with constitutional economic nationalism for core utilities and national-security safeguards for vital infrastructure.</div>
+      </div>
+    </div>
+
+    <h3 id="start-here">Start here &middot; Three services in San Fernando City</h3>
+
+    <div class="ui-box">
+      <div class="ui-grid">
+        <div class="ui-col">
+          <div class="ui-icon">&#9889;</div>
+          <div class="ui-kicker">PUBLIC UTILITY</div>
+          <div class="ui-title">Electricity Distribution</div>
+          <div class="ui-sub">60% Filipino capital floor (Art. XII, &sect; 11)</div>
+        </div>
+        <div class="ui-col">
+          <div class="ui-icon">&#128167;</div>
+          <div class="ui-kicker">PUBLIC UTILITY</div>
+          <div class="ui-title">Public Water Pipelines</div>
+          <div class="ui-sub">60% Filipino capital floor (Art. XII, &sect; 11)</div>
+        </div>
+        <div class="ui-col">
+          <div class="ui-icon">&#128225;</div>
+          <div class="ui-kicker">CRITICAL INFRASTRUCTURE</div>
+          <div class="ui-title">Telecommunications</div>
+          <div class="ui-sub">Reciprocity (&gt;50%), FSOE ban &amp; &sect; 23 review</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Imagine a brownout, a water interruption, and a loss of mobile signal on the same afternoon. The people affected depend on all three services. Yet the company that operates the local electricity distribution network, the operator of the public water pipes, and the company that runs the mobile network can face different rules under the Public Service Act.</p>
+
+    <p>Electricity distribution and public water pipeline distribution are <mark class="hl"><span class="c-green"><strong><u>public utilities</u></strong></span></mark>. Telecommunications is a <mark class="hl"><span class="c-green"><strong><u>public service expressly classified as critical infrastructure</u></strong></span></mark>. The labels matter because they answer different questions. A public utility must satisfy the <mark class="hl">Constitution&rsquo;s Filipino-ownership requirement</mark>. A telecommunications operator faces separate rules on <mark class="hl">reciprocity, foreign state investment, and national-security review</mark>. All three remain subject to their applicable operating and service rules.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 2, 4, 23&ndash;26</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 4&ndash;11, 32&ndash;48</a></p>
+
+    <p><strong>What does the law do?</strong> It governs who may operate certain services, under what authority, and what duties they owe the public. It also tells regulators when they may review fares, rates, routes, transfers, and service failures. <span class="c-teal">C.A. No. 146</span> originally worked through the Public Service Commission. Sector agencies now exercise its transferred powers. In 2022, <span class="c-teal">R.A. No. 11659</span> specified which public services count as public utilities and set safeguards for investment. That allowed greater foreign participation in some sectors while preserving oversight and addressing national-security risks.</p>
+    <p class="source-links">Sources: <a href="https://region4b.ntc.gov.ph/wp-content/uploads/LawsAndRegulations/RA/CA_146_As_amended_Public_Service_Act.pdf" target="_blank" rel="noopener noreferrer">C.A. No. 146 as amended before R.A. No. 11659</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 1, 3&ndash;4</a></p>
+
+    <blockquote>
+      <p><strong>Start an exam answer with the activity.</strong> What does the entity actually operate, manage, or control? Then identify the investor, the proposed ownership or control, and the authorization or approval that applies.</p>
+    </blockquote>
+
+    <div class="ui-box ui-workflow">
+      <div class="ui-step-card">
+        <div class="ui-kicker">STEP 1 &middot; CLASSIFY THE ACTIVITY</div>
+        <div class="ui-title">What does the entity actually operate, manage, or control?</div>
+        <div class="ui-sub">Public Utility (6 activities) vs. Critical Infrastructure (Telecom / EO) vs. General Public Service</div>
+      </div>
+      <div class="ui-connector">&darr;</div>
+      <div class="ui-step-card">
+        <div class="ui-kicker">STEP 2 &middot; IDENTIFY THE INVESTOR &amp; STAKE / CONTROL</div>
+        <div class="ui-title">Filipino, Private Foreign Investor, or Foreign Gov&rsquo;t / FSOE?</div>
+        <div class="ui-sub">Check 60/40 floor, &sect; 24 FSOE bar (30% SWF cap), &sect; 25 reciprocity (&gt;50%), &amp; &sect; 23 foreign control</div>
+      </div>
+      <div class="ui-connector">&darr;</div>
+      <div class="ui-step-outcome">
+        <div class="ui-kicker">STEP 3 &middot; VERIFY AUTHORIZATION &amp; APPROVALS</div>
+        <div class="ui-title">Check Sector Franchise, CPC/CPCN, &sect; 20 Prior Approvals &amp; Due Process</div>
+        <div class="ui-sub">Match the exact sector agency and statutory procedure</div>
+      </div>
+    </div>
+
+    <h4 id="bar-topics-glance">The 2027 Bar topics at a glance</h4>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Topic in the supplied syllabus</th>
+            <th>Question it answers</th>
+            <th>Where to read</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Public Service as Public Utility</strong></td>
+            <td>Does the service fall within one of the six statutory activities?</td>
+            <td><span class="c-teal">C.A. No. 146, &sect; 13(b), (d)&ndash;(e)</span>. <span class="c-teal">Constitution, Art. XII, &sect; 11</span></td>
+          </tr>
+          <tr>
+            <td><strong>Critical Infrastructure</strong></td>
+            <td>Is the public service vital to national security under the Act or a presidential designation?</td>
+            <td><span class="c-teal">R.A. No. 11659, &sect; 2(e), (m)</span>. <span class="c-teal">IRR, &sect;&sect; 32&ndash;34</span></td>
+          </tr>
+          <tr>
+            <td><strong>Suspensive and Prohibitory Powers of the President</strong></td>
+            <td>Can the President stop a proposed deal that would give a foreign party control?</td>
+            <td><span class="c-teal">R.A. No. 11659, &sect; 23</span>. <span class="c-teal">IRR, &sect;&sect; 35&ndash;43</span></td>
+          </tr>
+          <tr>
+            <td><strong>Foreign Government or State-Owned Enterprise Investments</strong></td>
+            <td>Is this investor barred from acquiring even a minority stake?</td>
+            <td><span class="c-teal">R.A. No. 11659, &sect;&sect; 2(g), 24</span>. <span class="c-teal">IRR, &sect; 44</span></td>
+          </tr>
+          <tr>
+            <td><strong>Reciprocity</strong></td>
+            <td>What must a foreign investor establish to own more than 50% of a critical infrastructure operator?</td>
+            <td><span class="c-teal">R.A. No. 11659, &sect; 25</span>. <span class="c-teal">IRR, &sect; 45</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The topics above follow the syllabus excerpt supplied with the notes.</p>
+    <p class="source-links">Sources: <a href="https://sc.judiciary.gov.ph/bar-2027/" target="_blank" rel="noopener noreferrer">Supreme Court 2027 Bar page</a> &middot; <a href="https://sc.judiciary.gov.ph/wp-content/uploads/2026/09/2027PBE_BB1.pdf" target="_blank" rel="noopener noreferrer">Bar Bulletin No. 1-2027</a></p>
+
+    <p><strong>How the citations work.</strong> The amendment and the underlying Act each have their own section numbers. <mark class="hl"><span class="c-teal"><strong>Section 23 of R.A. No. 11659</strong></span> concerns presidential investment review</mark>. <mark class="hl"><span class="c-teal"><strong>Section 23 of C.A. No. 146</strong></span>, as amended by <span class="c-teal">&sect; 12 of R.A. No. 11659</span>, concerns offenses and contains the service-interruption provision</mark>. Likewise, <span class="c-teal"><strong>&sect; 24 of R.A. No. 11659</strong></span> concerns foreign state investment, while <span class="c-teal"><strong>&sect; 24 of C.A. No. 146</strong></span> concerns the knowing and willful commission of prohibited acts. The 2022 Act and 2023 IRR use <strong>NEDA</strong>. <span class="c-teal">R.A. No. 12145</span> later reorganized NEDA into the <mark class="hl"><strong>Department of Economy, Planning, and Development (DEPDev)</strong></mark>.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659</a> &middot; <a href="https://neda.rdc2.gov.ph/?page_id=153" target="_blank" rel="noopener noreferrer">DEPDev legal mandates</a></p>
+
+    <hr />
+
+    <div class="part-banner">Part I &mdash; 2027 Bar Syllabus Core: Classification, Critical Infrastructure &amp; Foreign Investment Rules (Sections 1&ndash;5)</div>
+
+    <!-- SECTION 1 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        Start Here &rarr; <strong>YOU ARE HERE: 1. Public Service as Public Utility</strong> &rarr; 2. Critical Infrastructure &rarr; 3&ndash;5. Foreign Investment Safeguards
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">C.A. No. 146, &sect; 13(a), (b), (d), (e)</span>, as amended by <span class="c-teal">R.A. No. 11659, &sect;&sect; 2, 4, 31</span>; <span class="c-teal">1987 Constitution, Art. XII, &sect;&sect; 11 &amp; 19</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Resolves the threshold question of every Public Service Act exam problem: whether the activity is a regulated public service and whether it belongs to the closed list of six constitutional public utilities.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Reserves natural-monopoly core utilities to Filipino ownership and management while opening non-utility public services to foreign capital and competition.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-1-public-utility">1. Public Service as Public Utility</h3>
+
+    <h4 id="sec-1-public-service">What makes an activity a public service?</h4>
+
+    <p>Under <span class="c-teal"><strong>&sect; 13(b) of C.A. No. 146</strong></span>, ask whether a person <mark class="hl"><span class="c-green"><strong><u>owns, operates, manages, or controls</u></strong></span> a covered activity in the Philippines <span class="c-green"><strong><u>for hire or compensation</u></strong></span> and <span class="c-green"><strong><u>for general business purposes</u></strong></span></mark>. The list includes carriers, railways, motor vehicles, shipping and ferries, certain port and refrigeration facilities, water and electricity, communications, broadcasting, and similar services. The statute permits both <mark class="hl">general and limited clientele</mark> and covers <mark class="hl">permanent, occasional, or accidental service</mark>. A limited list of customers or an occasional trip can therefore satisfy the definition if the facts establish a covered activity for a general business purpose.</p>
+    <p class="source-links">Source: <a href="https://lawphil.net/statutes/repacts/ra1960/ra_2677_1960.html" target="_blank" rel="noopener noreferrer">R.A. No. 2677, &sect; 4</a></p>
+
+    <blockquote>
+      <p><strong>La Union application.</strong> Suppose a company based near Poro Point uses a tug to move cargo for three regular commercial clients for a fee. Its limited clientele alone does not remove the activity from <span class="c-teal">&sect; 13(b)</span>. Compare a Bacnotan farmer who owns a truck and, under a special arrangement for a limited time, lets another farmer operate it to haul the latter&rsquo;s harvest. The agricultural proviso can apply if the parties fall within its terms and the use is directly tied to the specified farming purpose. A separate trucking business offered for hire calls for a different analysis.</p>
+    </blockquote>
+    <p class="source-links">Source: <a href="https://lawphil.net/statutes/repacts/ra1960/ra_2677_1960.html" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 13(b), as amended by R.A. No. 2677</a></p>
+
+    <p>Two older cases show why the underlying activity matters. In <span class="c-burgundy"><em>Bureau of Telecommunications v. PSC</em></span>, the Bureau&rsquo;s then-existing paid service to private subscribers was <mark class="hl">incidental to its governmental work on the facts, so the Court found no general business purpose</mark>. In <span class="c-burgundy"><em>Cruz de Syquia v. Board of Power and Waterworks</em></span>, a landlord&rsquo;s billing dispute over electricity supplied by Meralco was a <mark class="hl">lease matter on the facts</mark>. Allocating costs did not make the administrator an independent distributor. A government-owned entity that <strong>does</strong> operate a public service is subject to regulation under amended <span class="c-teal">&sect; 13(a)</span>.</p>
+    <p class="source-links">Sources: <a href="https://lawphil.net/judjuris/juri1969/oct1969/gr_l-27412_1969.html" target="_blank" rel="noopener noreferrer"><em>Bureau of Telecommunications</em>, G.R. No. L-27412</a> &middot; <a href="https://lawphil.net/judjuris/juri1976/nov1976/gr_l-42783-85_1976.html" target="_blank" rel="noopener noreferrer"><em>Cruz de Syquia</em>, G.R. Nos. L-42783&ndash;85</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 4</a></p>
+
+    <h4 id="sec-1-six-utilities">Which public services are public utilities?</h4>
+
+    <p>A <span class="c-green"><strong><u>public utility</u></strong></span> is a public service that <mark class="hl">operates, manages, or controls one of these six activities <strong>for public use</strong></mark>. The law expressly includes <mark class="hl">concessionaires, joint ventures, and similar entities that wholly operate, manage, or control such an activity for public use</mark>.</p>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Statutory activity</th>
+            <th>What to look for</th>
+            <th>La Union illustration or exam example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Electricity distribution</strong></td>
+            <td>The local network that conveys power to end-users</td>
+            <td><strong>La Union Electric Company, Inc. (LUECO)</strong> has a legislative franchise covering San Fernando City, Bauang, and San Juan. <strong>La Union Electric Cooperative, Inc. (LUELCO)</strong> is a separate entity and also serves parts of the area.</td>
+          </tr>
+          <tr>
+            <td><strong>Electricity transmission</strong></td>
+            <td>The high-voltage backbone that moves bulk power</td>
+            <td>In a hypothetical service interruption, distinguish the high-voltage line feeding the distribution system from the local lines serving homes and shops along the city&rsquo;s streets.</td>
+          </tr>
+          <tr>
+            <td><strong>Petroleum and petroleum products pipeline transmission</strong></td>
+            <td>Pipeline transmission supplying the public. The definition <span class="c-rust"><strong><u>excludes lines exclusively for private or own use, or incidental to a separate business</u></strong></span>.</td>
+            <td>Suppose a Poro Point industrial facility has a pipe solely to move fuel between its own tanks. Compare that with an operator that supplies the public through a petroleum pipeline system. Both are hypothetical.</td>
+          </tr>
+          <tr>
+            <td><strong>Water pipeline distribution and wastewater pipelines</strong></td>
+            <td>Public potable-water distribution and wastewater or sewerage pipelines. The statutory definition <span class="c-rust"><strong><u>excludes desludging companies and septic tanks</u></strong></span>.</td>
+            <td>The provincial government identifies <strong>Lon-oy, San Gabriel</strong>, and <strong>Cadaclan, San Fernando City</strong>, as sources for the <strong>Metro San Fernando Water District</strong>. The legal category concerns the piped distribution service.</td>
+          </tr>
+          <tr>
+            <td><strong>Seaports</strong></td>
+            <td>The place and related facilities where ships berth or anchor for activities such as loading and unloading</td>
+            <td><strong>San Fernando International Seaport</strong> in the Poro Point Freeport Zone. Managing the seaport is a different activity from operating a domestic shipping line that calls there.</td>
+          </tr>
+          <tr>
+            <td><strong>Public Utility Vehicles (PUVs)</strong></td>
+            <td>Under this Act, covered internal-combustion vehicles carrying passengers or domestic cargo for a fee and serving the public. The list includes trucks-for-hire, UV Express, public utility buses and jeepneys, tricycles, filcabs, and taxis.</td>
+            <td>A conventional <strong>tricycle for hire in San Fernando City</strong> illustrates the category. The Act <mark class="hl"><span class="c-rust"><strong><u>expressly excludes vehicles accredited with and operating through a transport network corporation</u></strong></span></mark> from its PUV definition. Apply other transport laws and rules separately.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 2, 4</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/6220" target="_blank" rel="noopener noreferrer">LUECO franchise, R.A. No. 9385</a> &middot; <a href="https://www.luecoinc.com/wp-content/uploads/2025/12/La-Union-Electric-Company-Inc.-Prospectus-updated.pdf" target="_blank" rel="noopener noreferrer">LUECO service coverage</a> &middot; <a href="https://launion.gov.ph/la-union-circuits/central-circuit/" target="_blank" rel="noopener noreferrer">Province of La Union, Central Circuit</a> &middot; <a href="https://poropointfreeport.gov.ph/new/turnover-of-the-operation-management-and-development-of-the-san-fernando-international-seaport/" target="_blank" rel="noopener noreferrer">PPMC seaport notice</a> &middot; <a href="https://cc.sanfernandocity.gov.ph/2024/05/24/issuance-of-tricycle-franchise/" target="_blank" rel="noopener noreferrer">San Fernando City tricycle franchise</a></p>
+
+    <p><strong>Memory aid.</strong> Group the six into <mark class="hl"><strong>two electricity activities</strong> (distribution and transmission), <strong>two pipeline activities</strong> (petroleum and water/wastewater), and <strong>two transport activities</strong> (seaports and PUVs)</mark>. For a separate example, compare an electric generator with a distributor. Generation produces the electricity. Distribution conveys it to end-users. <span class="c-teal">EPIRA</span> expressly treats <mark class="hl">generation as outside the public utility operation category</mark>.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 4</a> &middot; <a href="https://lawphil.net/statutes/repacts/ra2001/ra_9136_2001.html" target="_blank" rel="noopener noreferrer">EPIRA, R.A. No. 9136, &sect; 6</a></p>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/01-public-service-classification.jpg" alt="Philippine Public Service Act classification branching All Public Services into The 6 Public Utilities and Critical Infrastructure" />
+      <figcaption><strong>Figure 1 &mdash; Public Service Act Classification Taxonomy (<span class="c-teal">R.A. No. 11659</span>):</strong> All covered activities under <span class="c-teal">C.A. No. 146, &sect; 13(b)</span> branch into two distinct special categories&mdash;the six exclusive Public Utilities (&sect; 13(d)) and Critical Infrastructure (&sect; 2(e))&mdash;both subject to the &sect; 24 FSOE new-investment bar.</figcaption>
+    </figure>
+
+    <h4 id="sec-1-add-utility">Who can add a public utility?</h4>
+
+    <p><mark class="hl"><span class="c-green"><strong><u>Congress must act by law.</u></strong></span></mark> Under <span class="c-teal">&sect; 13(e)</span>, the President may recommend classification to Congress upon the recommendation of NEDA, now DEPDev. The four criteria are:</p>
+    <ol>
+      <li>regular supply, transmission, and distribution to the public through a network of a commodity or service of public consequence,</li>
+      <li>a natural monopoly that needs regulation in the common good,</li>
+      <li>necessity for the maintenance of life and occupation of the public, and</li>
+      <li>an obligation to provide adequate service on public demand.</li>
+    </ol>
+    <p>A <span class="c-green"><strong><u>natural monopoly</u></strong></span> can meet market demand at a lower cost with one provider than with two or more. The President&rsquo;s power to designate <strong>critical infrastructure</strong> follows a different procedure.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 13(d)&ndash;(e), as amended</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 10&ndash;11, 32&ndash;34</a></p>
+
+    <h4 id="sec-1-constitutional-effects">What changes once an activity is classified as a public utility?</h4>
+
+    <p>Under <span class="c-teal"><strong>Art. XII, &sect; 11 of the 1987 Constitution</strong></span>, authority to operate may be granted to Filipino citizens or to corporations or associations organized under Philippine law with <mark class="hl"><span class="c-green"><strong><u>at least 60% Filipino-owned capital</u></strong></span></mark>. Foreign investors&rsquo; representation on the governing body is limited to their proportionate capital share. <mark class="hl"><span class="c-rust"><strong><u>All executive and managing officers</u></strong></span> must be Filipino citizens</mark>. The authorization is <mark class="hl">nonexclusive, lasts no longer than 50 years</mark>, and remains subject to congressional amendment, alteration, or repeal when the common good requires. The State must encourage public equity participation.</p>
+    <p class="source-links">Source: <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution, Art. XII, &sect; 11</a></p>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/02-constitutional-gatekeepers-dual-60.jpg" alt="Constitutional Gatekeepers for Public Utilities under Art. XII, Section 11 and the Gamboa-Roy Dual 60% Test" />
+      <figcaption><strong>Figure 2 &mdash; Constitutional Gatekeepers &amp; Dual 60% Test (<span class="c-teal">Art. XII, &sect; 11</span>):</strong> A corporate public utility must satisfy 60% Filipino ownership in <em>both</em> director-voting shares and total outstanding shares (<span class="c-burgundy"><em>Gamboa</em></span> / <span class="c-burgundy"><em>Roy</em></span>), keep foreign board seats proportionate, and maintain 100% Filipino executive and managing officers.</figcaption>
+    </figure>
+
+    <ul>
+      <li><strong>Voting and beneficial ownership.</strong> Under <span class="c-burgundy"><em>Gamboa</em></span> and <span class="c-burgundy"><em>Roy</em></span>, read with <span class="c-teal">SEC Memorandum Circular No. 8, s. 2013</span>, apply the required Filipino ownership percentage to <mark class="hl"><span class="c-green"><strong><u>both</u></strong></span> total outstanding shares entitled to vote for directors and total outstanding shares, voting or otherwise</mark>. The Filipino ownership must be genuine. Example: If Filipinos hold 70% of the aggregate outstanding shares but only 45% of the director-voting shares, the corporation fails.
+        <div class="source-links" style="margin-top:0.25rem; margin-bottom:0.25rem;">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/55280" target="_blank" rel="noopener noreferrer"><em>Heirs of Gamboa v. Teves</em>, G.R. No. 176579</a> &middot; <a href="https://lawphil.net/judjuris/juri2016/nov2016/gr_207246_2016.html" target="_blank" rel="noopener noreferrer"><em>Roy v. Herbosa</em>, G.R. No. 207246</a></div>
+      </li>
+      <li><strong>Operating a service and owning equipment.</strong> In <span class="c-burgundy"><em>Tatad v. Garcia</em></span>, the government ran the rail service and collected fares, while the private entity owned the facilities and equipment used by the government. <mark class="hl">Focus on who actually runs the service and controls its delivery.</mark> For a Poro Point hypothetical, a company that merely leases cranes poses a different question from a concessionaire managing and controlling the public seaport. Check the contract and the actual functions. <span class="c-burgundy"><em>Tatad</em></span> predates the 2022 classification of railways.
+        <div class="source-links" style="margin-top:0.25rem; margin-bottom:0.25rem;">Source: <a href="https://lawphil.net/judjuris/juri1995/apr1995/gr_114222_1995.html" target="_blank" rel="noopener noreferrer"><em>Tatad v. Garcia</em>, G.R. No. 114222</a></div>
+      </li>
+      <li><strong>Nonexclusivity and competition.</strong> <span class="c-burgundy"><em>Tawang Multi-Purpose Cooperative v. La Trinidad Water District</em></span> struck down the statutory requirement that effectively gave an incumbent district a <mark class="hl"><span class="c-rust"><strong><u>veto over new water franchises</u></strong></span> in its service area</mark>. Nonexclusivity still allows screening for public convenience and capacity. Under <span class="c-teal">Art. XII, &sect; 19</span>, the State may regulate or prohibit monopolies when the public interest requires, and combinations in restraint of trade and unfair competition are barred.
+        <div class="source-links" style="margin-top:0.25rem; margin-bottom:0.25rem;">Sources: <a href="https://lawphil.net/judjuris/juri2011/mar2011/gr_166471_2011.html" target="_blank" rel="noopener noreferrer"><em>Tawang</em>, G.R. No. 166471</a> &middot; <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution, Art. XII, &sect;&sect; 11 and 19</a></div>
+      </li>
+      <li><strong>Term and renewal.</strong> For authorizations granted by agencies under the Act, <span class="c-teal">&sect; 31 of R.A. No. 11659</span> also sets a <mark class="hl">50-year ceiling</mark> and provides priority in renewal for exemplary service and substantial investment in infrastructure, technology, or equipment. The agency still evaluates the application.
+        <div class="source-links" style="margin-top:0.25rem; margin-bottom:0.25rem;">Source: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 31</a></div>
+      </li>
+    </ul>
+
+    <blockquote>
+      <p><strong>Two cases for the class report.</strong> In <span class="c-burgundy"><em>Telecommunications and Broadcast Attorneys of the Philippines v. COMELEC</em></span>, the Court upheld the requirement for broadcasters to provide free airtime for elections under the law then before it. The case illustrates franchise obligations in the public interest. In <span class="c-burgundy"><em>Oroport Cargohandling Services v. PHIVIDEC</em></span>, the Court examined a single cargo-handling operator in a government-run port and distinguished the arrangement from prohibited monopoly or unfair competition. Apply the port&rsquo;s governing law and the particular activity, since providing one service inside a port and operating the public seaport are different inquiries.</p>
+    </blockquote>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/35780" target="_blank" rel="noopener noreferrer"><em>Telecommunications and Broadcast Attorneys</em>, G.R. No. 132922</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/46061" target="_blank" rel="noopener noreferrer"><em>Oroport</em>, G.R. No. 166785</a></p>
+
+    <hr />
+
+    <!-- SECTION 2 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        1. Public Utility &rarr; <strong>YOU ARE HERE: 2. Critical Infrastructure</strong> &rarr; 3. Presidential Review &rarr; 4&ndash;5. FSOE &amp; Reciprocity
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(e), (h), (m), 26, 29</span>; <span class="c-teal">C.A. No. 146, &sect;&sect; 16(p), 23</span> (as amended); <span class="c-teal">2023 IRR, &sect;&sect; 19, 32&ndash;34, 47&ndash;48</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Even when a public service falls outside the six constitutional public utilities (such as telecommunications), its national-security footprint can trigger the separate &ldquo;critical infrastructure&rdquo; regime.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Protects national security, continuity of emergency communications, and cybersecurity without imposing the rigid 60/40 constitutional public-utility cap.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-2-critical-infrastructure">2. Critical Infrastructure</h3>
+
+    <p><strong>Why have another category?</strong> A mobile or backbone network can support emergency communications, hospital referrals, transactions, and government services. If such a network were disabled, the consequences could extend beyond its subscribers. That potential impact explains the security rules.</p>
+
+    <p><strong>Legal test.</strong> Under <span class="c-teal"><strong>&sect; 2(e) of R.A. No. 11659</strong></span>, a critical infrastructure public service owns, uses, or operates <mark class="hl"><span class="c-green"><strong><u>physical or virtual systems or assets</u></strong></span> whose incapacity or destruction would harm <span class="c-green"><strong><u>national security</u></strong></span></mark>. <mark class="hl"><strong>Telecommunications</strong> is expressly included.</mark> The President can designate other vital public services by <mark class="hl">executive order</mark> under the IRR. The critical infrastructure rules apply <mark class="hl">prospectively</mark> to a newly designated service. The Act&rsquo;s telecommunications definition <span class="c-rust"><strong><u>excludes specified passive infrastructure</u></strong></span> such as poles, fiber ducts, and dark fiber cables, and <span class="c-rust"><strong><u>value-added services</u></strong></span> as defined in <span class="c-teal">R.A. No. 7925</span>. Identify the activity before treating a tower owner, passive infrastructure provider, or value-added service as the operator of a telecommunications service.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 2(e), (h), (m)</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 32&ndash;34</a></p>
+
+    <blockquote>
+      <p><strong>Poro Point example.</strong> BCDA identifies an international cable landing station in <strong>Poro Point, San Fernando City</strong>, as part of the Luzon Bypass Infrastructure. The physical station helps explain how a telecommunications network connects to infrastructure beyond La Union. Use the location as context. In a hypothetical acquisition, specify that the target <strong>operates the telecommunications network</strong> if you want the statutory critical-infrastructure rule to apply on those facts.</p>
+    </blockquote>
+    <p class="source-links">Source: <a href="https://bcda.gov.ph/sites/default/files/2021-02/TOR-Lot%20B_Procurment%20of%20Preventive%20Maintenanace%20System%20for%20the%20ICLS%20and%20RSF.pdf" target="_blank" rel="noopener noreferrer">BCDA, Luzon Bypass Infrastructure terms of reference</a></p>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Duty</th>
+            <th>How it works</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Service interruption</strong></td>
+            <td>For a complaint about an interruption, the operator must act within <mark class="hl"><strong>10 calendar days</strong> from receipt</mark> or provide a plan to be completed within a reasonable time. It reports interruptions, complaints, and actions to its regulator monthly.</td>
+          </tr>
+          <tr>
+            <td><strong>Information security</strong></td>
+            <td>Telecommunications businesses must obtain and maintain the applicable <mark class="hl">DICT-prescribed ISO information-security certifications</mark> from an accredited body. The statute exempts covered micro, small, and medium enterprises from this specific requirement.</td>
+          </tr>
+          <tr>
+            <td><strong>Independent audit</strong></td>
+            <td>Regulators ensure annual performance audits. Audits of critical infrastructure and public utilities also cover matters such as risk assessment, emergency response, and cybersecurity. <mark class="hl"><span class="c-rust"><strong><u>Three consecutive annual audit failures</u></strong></span> may justify a certificate&rsquo;s suspension or revocation.</mark></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect;&sect; 16(p), 23, as amended</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 26 and 29</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 19, 47&ndash;48</a></p>
+
+    <hr />
+
+    <!-- SECTION 3 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        2. Critical Infrastructure &rarr; <strong>YOU ARE HERE: 3. Suspensive &amp; Prohibitory Powers of the President</strong> &rarr; 4. FSOE Bar &rarr; 5. Reciprocity
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">R.A. No. 11659, &sect; 23</span>; <span class="c-teal">2023 IRR, &sect;&sect; 2(f), 35&ndash;43</span>; contrasted with <span class="c-teal">1987 Constitution, Art. XII, &sect;&sect; 17 &amp; 18</span> and <span class="c-teal">Art. VI, &sect; 23(2)</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Even when a foreign equity transaction does not violate a fixed numerical cap, granting direct or indirect foreign control over a public service triggers executive national-security screening.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Gives the State a targeted, agency-vetted national-security brake over foreign acquisitions of control, distinct from wartime/emergency takeovers or expropriation.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-3-presidential-powers">3. Suspensive and Prohibitory Powers of the President</h3>
+
+    <p>Under <span class="c-teal"><strong>&sect; 23 of R.A. No. 11659</strong></span>, the President may <mark class="hl"><span class="c-green"><strong><u>suspend or prohibit</u></strong></span> a proposed merger, acquisition, or investment in a <strong>public service</strong></mark> when it effectively grants <mark class="hl"><span class="c-green"><strong><u>direct or indirect control</u></strong></span> to a foreigner or foreign corporation</mark> and intervention is warranted in the <mark class="hl">interest of national security</mark>. The relevant department or agency first reviews and evaluates the transaction and submits a recommendation. The President has <mark class="hl"><strong>60 calendar days from receipt of that recommendation</strong></mark>. Under <span class="c-teal">IRR &sect;&sect; 35&ndash;38</span>, the review examines both the transfer of foreign control and national-security implications. The parties may voluntarily declare a covered transaction, or the agency may initiate review on its own. The Philippine Competition Commission&rsquo;s merger-review authority also remains applicable when triggered.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 23</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 2(f), 35&ndash;43</a></p>
+
+    <blockquote>
+      <p><strong>Control can exist below 50%.</strong> Suppose a private foreign investor seeks 45% of a domestic telecommunications operator serving La Union and receives contractual power to appoint most directors. The stake falls below the <span class="c-teal">&sect; 25</span> reciprocity trigger. <mark class="hl">The board rights can still confer control.</mark> If the transaction has national-security implications, <span class="c-teal">&sect; 23</span> review can apply. Equity percentage, board rights, and management agreements can produce different answers.</p>
+    </blockquote>
+    <p class="source-links">Source: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, definition of control and &sect;&sect; 35&ndash;39</a></p>
+
+    <h4 id="sec-3-three-powers">Three public powers worth distinguishing</h4>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Power</th>
+            <th>Trigger and legal effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Investment suspension or prohibition</strong> &middot; <span class="c-teal">R.A. No. 11659, &sect; 23</span></td>
+            <td>The President may stop a qualifying proposed transaction following agency review and recommendation in the interest of national security.</td>
+          </tr>
+          <tr>
+            <td><strong>Temporary emergency takeover</strong> &middot; <span class="c-teal">Constitution, Art. XII, &sect; 17</span>, read with <span class="c-teal">Art. VI, &sect; 23(2)</span></td>
+            <td>During a national emergency and under the requisite legislative authority, the State can temporarily take over or direct the operation of a privately owned public utility or other business affected with public interest, on reasonable terms. <span class="c-burgundy"><em>David v. Macapagal-Arroyo</em></span> explains that <mark class="hl"><span class="c-rust"><strong><u>declaring an emergency alone supplies no takeover authority</u></strong></span> to the President</mark>.</td>
+          </tr>
+          <tr>
+            <td><strong>Transfer to public ownership</strong> &middot; <span class="c-teal">Constitution, Art. XII, &sect; 18</span></td>
+            <td>The State may transfer utilities and other private enterprises to public ownership in the interest of national welfare or defense, subject to <mark class="hl"><strong>just compensation</strong></mark>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-links">Sources: <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution</a> &middot; <a href="https://lawphil.net/judjuris/juri2006/may2006/gr_171396_2006.html" target="_blank" rel="noopener noreferrer"><em>David v. Macapagal-Arroyo</em>, G.R. No. 171396 et al.</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 23</a></p>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/03-three-state-powers-compared.jpg" alt="Comparison of Three State Powers over Public Services: Investment Suspension/Prohibition, Temporary Emergency Takeover, and Transfer to Public Ownership" />
+      <figcaption><strong>Figure 3 &mdash; Three State Powers Compared:</strong> Distinguish statutory pre-control screening (<span class="c-teal">R.A. 11659, &sect; 23</span>) from temporary emergency takeover requiring Congressional authority (<span class="c-teal">Art. XII, &sect; 17</span>; <span class="c-burgundy"><em>David v. Arroyo</em></span>) and permanent transfer to public ownership with just compensation (<span class="c-teal">Art. XII, &sect; 18</span>).</figcaption>
+    </figure>
+
+    <hr />
+
+    <!-- SECTION 4 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        3. Presidential Review &rarr; <strong>YOU ARE HERE: 4. Foreign Government &amp; FSOE Investments</strong> &rarr; 5. Reciprocity
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(g), 24</span>; <span class="c-teal">2023 IRR, &sect;&sect; 2, 44</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Shifts focus from the percentage of control to the <em>sovereign identity</em> of the investor: an entity controlled by a foreign state faces a bright-line prohibition even at a small minority stake.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents foreign sovereigns from gaining strategic leverage, data access, or operational footholds inside Philippine public utilities and critical infrastructure.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-4-fsoe-investments">4. Foreign Government or State-Owned Enterprise Investments</h3>
+
+    <p><strong>Identify who is behind the investor.</strong> Under <span class="c-teal"><strong>&sect; 2(g) of R.A. No. 11659</strong></span>, a foreign <span class="c-green"><strong><u>state-owned enterprise (FSOE)</u></strong></span> is an entity in which a foreign state meets any of these tests:</p>
+
+    <ol>
+      <li>Directly or indirectly owns <mark class="hl"><strong>more than 50% of capital</strong></mark>, taking voting rights and beneficial ownership into account.</li>
+      <li>Through ownership interests, controls the exercise of <mark class="hl"><strong>more than 50% of voting rights</strong></mark>.</li>
+      <li>Can appoint <mark class="hl"><strong>a majority</strong> of directors</mark> or members of an equivalent management body.</li>
+    </ol>
+
+    <p><strong>Apply <span class="c-teal">&sect; 24</span> to new investments.</strong> A covered foreign government, FSOE, or entity controlled by or acting on behalf of one <mark class="hl"><span class="c-rust"><strong><u>generally cannot own capital in a public utility or critical infrastructure through a new investment</u></strong></span></mark>. Existing covered holdings may be retained subject to the statutory and IRR rules, while additional capital investment is barred. A <mark class="hl">qualifying sovereign wealth fund and an independent pension fund of a foreign state may collectively hold up to <strong>30%</strong></mark> under the statutory exception. <span class="c-teal">IRR &sect; 44</span> also caps the <mark class="hl">cumulative investment of such funds across sources at <strong>30%</strong></mark> in the covered service and requires proof of standards compliance from sovereign wealth funds. Any applicable public-utility nationality limit still operates. <span class="c-teal">Section 24</span> and its IRR also restrict covered entities&rsquo; information disclosure and assistance, support, or cooperation with foreign governments and their instrumentalities or agents.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 2(g), 24</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 2, 44</a></p>
+
+    <blockquote>
+      <p><strong>La Union application.</strong> An ordinary operating company wholly owned by a foreign government proposes to buy <strong>10%</strong> of a domestic telecommunications operator serving San Fernando City. It is a new investment and the investor is an FSOE. <mark class="hl"><span class="c-rust"><strong><u>It is barred under &sect; 24.</u></strong></span></mark> The same provision bars a new stake by that FSOE in a public seaport operator. In both examples, the prohibition follows from the <strong>identity of the investor and the sector</strong>, even at a small percentage.</p>
+    </blockquote>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/04-foreign-investment-decision-tree.jpg" alt="Foreign Investment Screening Decision Tree under R.A. No. 11659 covering Public Utilities, FSOE Bar, Reciprocity, and Section 23 Presidential Review" />
+      <figcaption><strong>Figure 4 &mdash; Foreign Investment Screening Decision Tree (<span class="c-teal">R.A. No. 11659</span>):</strong> Run every Bar problem sequentially through (1) the 6 Public Utilities floor, (2) the &sect; 24 FSOE bar, (3) the &sect; 25 &gt;50% Critical Infrastructure reciprocity rule, and (4) the overarching &sect; 23 foreign-control national-security screen.</figcaption>
+    </figure>
+
+    <hr />
+
+    <!-- SECTION 5 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        4. FSOE Investments &rarr; <strong>YOU ARE HERE: 5. Reciprocity &amp; Equity Thresholds</strong> &rarr; Part I Summary Capstone
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">R.A. No. 11659, &sect; 25</span>; <span class="c-teal">2023 IRR, &sect;&sect; 45&ndash;46</span>; <span class="c-teal">C.A. No. 146, &sect; 20(h)</span>; <span class="c-teal">E.O. No. 113, s. 2026</span> (13th FINL).</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once a private foreign investor clears the Public Utility and FSOE barriers, taking majority ownership (&gt;50%) in critical infrastructure hinges on reciprocal treatment for Filipinos abroad.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Ensures mutual market access for Philippine nationals and protects domestic labor through foreign-employment permit and skills-transfer safeguards.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-5-reciprocity">5. Reciprocity</h3>
+
+    <p><strong>Plain English.</strong> If a foreign investor wants to own more than half of a Philippine critical infrastructure operator, the law asks what comparable investment rights Filipinos have in the investor&rsquo;s home country.</p>
+
+    <p>Under <span class="c-teal"><strong>&sect; 25 of R.A. No. 11659</strong></span>, foreign nationals cannot own <mark class="hl"><span class="c-green"><strong><u>more than 50%</u></strong></span> of the capital of an entity operating and managing critical infrastructure unless their country accords <strong>reciprocity</strong> to Philippine nationals</mark> under foreign law, treaty, or international agreement. <mark class="hl">Rights of similar value in other economic sectors can qualify.</mark> <span class="c-teal">IRR &sect; 45</span> describes ways to establish similar rights and requires documentary proof. The <mark class="hl">relevant administrative agency checks proof for an existing entity, and the SEC checks it for an entity still being registered</mark>. <mark class="hl"><span class="c-green"><strong><u>Exactly 50% does not cross the &sect; 25 threshold.</u></strong></span></mark> A qualifying deal that grants foreign control may still trigger <span class="c-teal">&sect; 23</span> review, and the <span class="c-teal">&sect; 24</span> prohibition still applies to covered state-linked investors.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 23&ndash;25</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 35&ndash;45</a></p>
+
+    <blockquote>
+      <p><strong>La Union application.</strong> A private foreign company wants <strong>65%</strong> of a domestic telecommunications operator serving San Fernando City. If reciprocity is unproved, <span class="c-teal">&sect; 25</span> bars the proposed percentage. If reciprocity is proved, the transaction clears that requirement. Check separately for national-security review, applicable transaction approvals, and the operator&rsquo;s sector-specific authority. If the target is a public electricity distributor, the constitutional 60% Filipino ownership floor independently rules out the proposed stake.</p>
+    </blockquote>
+
+    <p><strong>Foreign employment is a separate part of <span class="c-teal">&sect; 25</span>.</strong> Subject to exceptions provided by law or an international agreement, a public service may employ a foreign national <mark class="hl">only after determining that a competent, able, and willing Philippine national is unavailable</mark>. The employment permit rules apply. For industries determined by DOLE, public services employing permit holders must also implement an <mark class="hl">understudy or skills development program</mark>. A public utility remains subject to the Constitution&rsquo;s Filipino-citizenship requirement for executive and managing officers.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 25</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect; 46</a></p>
+
+    <h4 id="sec-5-four-numbers">Four numbers to keep straight</h4>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Legal question</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>60% Filipino / 40% foreign</strong></td>
+            <td>Does the corporate public utility satisfy the constitutional nationality rule?</td>
+          </tr>
+          <tr>
+            <td><strong>More than 50% foreign</strong></td>
+            <td>Does a foreign investor in a critical infrastructure operator need to prove reciprocity?</td>
+          </tr>
+          <tr>
+            <td><strong>Up to 30%</strong></td>
+            <td>Is an investment by qualifying sovereign wealth and independent pension funds within the special exception and IRR limits?</td>
+          </tr>
+          <tr>
+            <td><strong>More than 40% to one transferee</strong></td>
+            <td>Does a transfer or registration of shares trigger agency approval under <span class="c-teal">C.A. No. 146, &sect; 20(h)</span>? This threshold measures the resulting holding of the transferee and <mark class="hl">can apply to a Filipino transferee</mark>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A public service outside the six public utility activities may be open to <mark class="hl"><strong>up to 100% foreign equity</strong> where the governing law permits</mark>. Check critical-infrastructure rules, national-security review, the sector and franchise, and any other applicable restriction. The 100% figure describes a possibility after those checks.</p>
+    <p class="source-links">Sources: <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution, Art. XII, &sect; 11</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 4, 23&ndash;25</a> &middot; <a href="https://region4b.ntc.gov.ph/wp-content/uploads/LawsAndRegulations/RA/CA_146_As_amended_Public_Service_Act.pdf" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 20(h), as amended</a> &middot; <a href="https://lawphil.net/executive/execord/eo2026/eo_113_2026.html" target="_blank" rel="noopener noreferrer">E.O. No. 113, s. 2026, 13th Regular Foreign Investment Negative List</a></p>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/05-four-critical-equity-thresholds.jpg" alt="Four Critical Equity Thresholds under the Public Service Act: 30% SWF Cap, Over 40% Share Transfer, Over 50% Reciprocity, and 60/40 Public Utility Floor" />
+      <figcaption><strong>Figure 5 &mdash; Four Critical Equity Thresholds:</strong> Keep the four numbers cleanly separated&mdash;30% cumulative SWF/pension cap (&sect; 24), &gt;40% single-transferee approval (&sect; 20(h), even for Filipinos), &gt;50% critical infrastructure reciprocity (&sect; 25), and 60%/40% public utility nationality floor (Art. XII, &sect; 11).</figcaption>
+    </figure>
+
+    <!-- PART I SUMMARY BRIEF REVIEWER CAPSTONE -->
+    <div class="summary-capstone" id="summary-part-i">
+      <div class="summary-hdr">
+        <h4>Part I Summary Brief Reviewer &mdash; 2027 Bar Core: Classification &amp; Foreign Investment Rules (Sections 1&ndash;5)</h4>
+        <span class="summary-pill">Module Recap</span>
+      </div>
+      <div class="summary-body">
+        <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+        <ul>
+          <li><strong>Public Service vs. Public Utility:</strong> <span class="c-teal">C.A. No. 146, &sect; 13(a), (b), (d), (e)</span>; <span class="c-teal">R.A. No. 11659, &sect;&sect; 2, 4, 31</span>; <span class="c-teal">1987 Constitution, Art. XII, &sect;&sect; 11 &amp; 19</span> (including <span class="c-burgundy"><em>Gamboa</em></span>, <span class="c-burgundy"><em>Roy</em></span>, <span class="c-burgundy"><em>Tatad</em></span>, <span class="c-burgundy"><em>Tawang</em></span>).</li>
+          <li><strong>Critical Infrastructure &amp; Security Duties:</strong> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(e), (h), (m), 26, 29</span>; <span class="c-teal">C.A. No. 146, &sect;&sect; 16(p), 23</span>; <span class="c-teal">2023 IRR, &sect;&sect; 19, 32&ndash;34, 47&ndash;48</span>.</li>
+          <li><strong>Presidential Suspensive/Prohibitory Power vs. Constitutional Powers:</strong> <span class="c-teal">R.A. No. 11659, &sect; 23</span>; <span class="c-teal">2023 IRR, &sect;&sect; 35&ndash;43</span>; <span class="c-teal">Constitution, Art. XII, &sect;&sect; 17&ndash;18</span> &amp; <span class="c-teal">Art. VI, &sect; 23(2)</span> (<span class="c-burgundy"><em>David v. Arroyo</em></span>).</li>
+          <li><strong>Foreign Government / FSOE Ban &amp; Sovereign Wealth Exception:</strong> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(g), 24</span>; <span class="c-teal">2023 IRR, &sect;&sect; 2, 44</span>.</li>
+          <li><strong>Reciprocity, Foreign Employment &amp; Equity Thresholds:</strong> <span class="c-teal">R.A. No. 11659, &sect; 25</span>; <span class="c-teal">2023 IRR, &sect;&sect; 45&ndash;46</span>; <span class="c-teal">C.A. No. 146, &sect; 20(h)&ndash;(i)</span>.</li>
+        </ul>
+
+        <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+        <div class="table-scroll">
+          <table class="ui-table">
+            <thead>
+              <tr>
+                <th>Mnemonic</th>
+                <th>Tag</th>
+                <th>Stands For / Legal Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>2-2-2 Rule</strong> (Two Electricity, Two Pipelines, Two Transport)</td>
+                <td><span class="tag-mem-lec">Lecture</span></td>
+                <td>The <strong>6 Exclusive Public Utilities</strong> (<span class="c-teal">&sect; 13(d)</span>): Electricity Distribution &amp; Transmission; Petroleum &amp; Water/Wastewater Pipelines; Seaports &amp; PUVs (excluding TNCs).</td>
+              </tr>
+              <tr>
+                <td><strong>C-V-B</strong> (&gt;50% Capital, &gt;50% Voting, Board Majority)</td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td>The 3 alternative tests making an entity a <strong>Foreign State-Owned Enterprise (FSOE)</strong> under <span class="c-teal">R.A. No. 11659, &sect; 2(g)</span>.</td>
+              </tr>
+              <tr>
+                <td><strong>30 &ndash; 40 &ndash; 50 &ndash; 60 Ladder</strong></td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td><strong>30%</strong> SWF/Pension cumulative cap (&sect; 24) &rarr; <strong>&gt;40%</strong> single-transferee approval (&sect; 20(h)) &rarr; <strong>&gt;50%</strong> critical infrastructure reciprocity (&sect; 25) &rarr; <strong>60%</strong> Filipino floor for Public Utilities (Art. XII, &sect; 11).</td>
+              </tr>
+              <tr>
+                <td><strong>10 &ndash; 3 &ndash; 60 Deadlines</strong></td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td><strong>10 calendar days</strong> to act on service interruption complaint (&sect; 23 C.A. 146); <strong>3 consecutive</strong> annual audit failures for revocation (&sect; 16(p)); <strong>60 calendar days</strong> for President to suspend/prohibit after agency recommendation (&sect; 23 R.A. 11659).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="summary-subhdr">3. Important Concepts, Elements &amp; Operative Rules</div>
+        <ul>
+          <li><strong>Public Service Test (&sect; 13(b)):</strong> Owns, operates, manages, or controls a covered activity in the Philippines <em>for hire or compensation</em> and <em>for general business purposes</em> (even with limited clientele or occasional service).</li>
+          <li><strong>Dual 60% Public Utility Rule (<span class="c-burgundy"><em>Gamboa</em></span> / <span class="c-burgundy"><em>Roy</em></span>):</strong> At least 60% Filipino ownership must apply to <strong>both</strong> total director-voting shares AND total outstanding shares; ALL executive and managing officers must be Filipino; max 50-year nonexclusive term; only <strong>Congress by law</strong> can add a new public utility (upon Presidential/DEPDev recommendation).</li>
+          <li><strong>Critical Infrastructure (&sect; 2(e)):</strong> Expressly includes <strong>telecommunications</strong> (excluding passive infrastructure &amp; VAS); other vital services require Presidential EO (prospective effect).</li>
+          <li><strong>Control Below 50% (&sect; 23):</strong> Board appointment rights or management contracts can trigger Presidential national-security suspension/prohibition even when foreign equity is &le; 50%.</li>
+        </ul>
+
+        <div class="summary-trap-box">
+          <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz / Bar Traps to Avoid</div>
+          <ul>
+            <li><strong>Confusing Section 23/24 Numbers:</strong> <span class="c-teal">R.A. 11659 &sect;&sect; 23&ndash;24</span> = Presidential review &amp; FSOE bar; <span class="c-teal">C.A. 146 &sect;&sect; 23&ndash;24</span> = offenses, service-interruption duty &amp; knowing/willful prohibited acts.</li>
+            <li><strong>Treating Reciprocity as a Cure for Public Utilities or FSOEs:</strong> Reciprocity (&sect; 25) <em>never</em> overrides the constitutional 60% Filipino floor for the 6 Public Utilities and <em>never</em> cures the &sect; 24 FSOE prohibition (even for a 5%&ndash;10% stake).</li>
+            <li><strong>Misapplying the &gt;50% Trigger to Exactly 50%:</strong> Exactly 50% foreign equity in critical infrastructure does <em>not</em> trigger &sect; 25 reciprocity, but still check &sect; 23 control review if board/management rights confer control.</li>
+            <li><strong>Confusing Exclusions:</strong> Power <em>generation</em> (EPIRA), <em>desludging/septic tanks</em>, <em>private-use petroleum pipes</em>, <em>TNC-accredited vehicles</em>, and <em>passive telecom infrastructure / VAS</em> fall outside their respective Public Utility or Telecommunications definitions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="part-banner">Part II &mdash; Regulatory Architecture, Prior Approvals, Rate-Setting &amp; Enforcement Remedies (Sections 6&ndash;9)</div>
+
+    <!-- SECTION 6 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        Part I (Ownership &amp; Classification) &rarr; <strong>YOU ARE HERE: 6. Regulators &amp; Authorizations</strong> &rarr; 7. Prior Approvals &rarr; 8. Rates &rarr; 9. Due Process
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(b), 3&ndash;8</span>; <span class="c-teal">C.A. No. 146, &sect;&sect; 13(a), 14&ndash;18</span>; <span class="c-teal">2023 IRR, &sect;&sect; 7&ndash;9, 15</span>; <span class="c-teal">1987 Constitution, Art. XII, &sect; 6</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> After verifying that an investor is legally eligible to own equity, the next exam inquiry is <em>which regulator has jurisdiction</em> and <em>what authority</em> (franchise, CPC, CPCN, concession, or provisional authority) is needed to operate.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Implements the State&rsquo;s police power over property impressed with public interest by routing specialized sectors to expert agencies and screening operators for public convenience.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-6-regulators-authorizations">6. Who regulates the service and who authorizes it?</h3>
+
+    <h4 id="sec-6-regulator-activity">The regulator follows the activity</h4>
+
+    <p>The State uses its <mark class="hl"><span class="c-green"><strong><u>police power</u></strong></span></mark> to protect the people who depend on these services. Property used to provide services to the public can be subject to oversight of matters such as safety, continuity, and reasonable rates. <span class="c-teal">Article XII, &sect; 6</span> recognizes the social function of property. Under <span class="c-teal">&sect; 3 of R.A. No. 11659</span>, the agencies that inherited Public Service Commission functions exercise them under their own mandates. The same general regulatory standard applies to covered services operated by Philippine government entities and private operators.</p>
+    <p class="source-links">Sources: <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution, Art. XII, &sect; 6</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 3&ndash;4</a></p>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Where to start</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Electricity distribution or transmission</strong></td>
+            <td><strong>Energy Regulatory Commission (ERC)</strong> for sector regulation such as regulated electricity rates. <strong>Department of Energy (DOE)</strong> for energy policy.</td>
+          </tr>
+          <tr>
+            <td><strong>Public piped water or sewerage</strong></td>
+            <td>Check the operator, charter, and issue. <strong>Local Water Utilities Administration (LWUA)</strong> has functions involving local water districts. <strong>National Water Resources Board (NWRB)</strong> has water-resource and other assigned regulatory functions. <strong>MWSS</strong> has a separate charter for its service area.</td>
+          </tr>
+          <tr>
+            <td><strong>Bus, jeepney, or taxi operations</strong></td>
+            <td><strong>Land Transportation Franchising and Regulatory Board (LTFRB)</strong> for franchises, routes, or fares. <strong>Land Transportation Office (LTO)</strong> for vehicle registration and driver licensing.</td>
+          </tr>
+          <tr>
+            <td><strong>Tricycle for hire within San Fernando City</strong></td>
+            <td>The <strong>city government</strong> administers the local franchise. In the Local Government Code this authority is exercised through the sangguniang panlungsod, subject to national transport guidelines.</td>
+          </tr>
+          <tr>
+            <td><strong>Domestic shipping or seaport</strong></td>
+            <td><strong>Maritime Industry Authority (MARINA)</strong> for domestic shipping. For a seaport, check the relevant port authority and its charter. At <strong>Poro Point</strong>, the published turnover notice identifies <strong>BCDA and PPMC</strong> for operation, management, and development of the San Fernando International Seaport.</td>
+          </tr>
+          <tr>
+            <td><strong>Air services</strong></td>
+            <td><strong>Civil Aeronautics Board (CAB)</strong> for economic regulation. <strong>Civil Aviation Authority of the Philippines (CAAP)</strong> for aviation safety and its other functions.</td>
+          </tr>
+          <tr>
+            <td><strong>Telecommunications, broadcasting, or tollways</strong></td>
+            <td><strong>National Telecommunications Commission (NTC)</strong> for the assigned communications and broadcasting matters. <strong>Department of Information and Communications Technology (DICT)</strong> for its policy and other statutory functions. <strong>Toll Regulatory Board (TRB)</strong> for its statutory tollway functions.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><span class="c-teal">Section 3</span> also lists DENR, DOTr, and PNR among the agencies to which powers or duties have been transferred by law. The exact power in a given case still comes from the relevant statute.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 3</a> &middot; <a href="https://lawphil.net/statutes/repacts/ra1991/ra_7160_1991.html" target="_blank" rel="noopener noreferrer">Local Government Code, &sect;&sect; 447 and 458</a> &middot; <a href="https://cc.sanfernandocity.gov.ph/2024/05/24/issuance-of-tricycle-franchise/" target="_blank" rel="noopener noreferrer">City tricycle franchise procedure</a> &middot; <a href="https://poropointfreeport.gov.ph/new/turnover-of-the-operation-management-and-development-of-the-san-fernando-international-seaport/" target="_blank" rel="noopener noreferrer">PPMC seaport notice</a></p>
+
+    <h4 id="sec-6-instruments">Legislative franchise, CPC, CPCN, and provisional authority</h4>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Instrument</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Legislative franchise</strong></td>
+            <td>A law passed by Congress authorizing the grantee to undertake the stated activity, subject to conditions. LUECO&rsquo;s distribution franchise is a local example.</td>
+          </tr>
+          <tr>
+            <td><strong>Certificate of Public Convenience (CPC)</strong></td>
+            <td>Agency authorization to provide a public service under stated terms. A bus operating authority for a defined route illustrates its function.</td>
+          </tr>
+          <tr>
+            <td><strong>Certificate of Public Convenience and Necessity (CPCN)</strong></td>
+            <td>An authorization used where the governing scheme provides for it. The 2022 Act still includes CPCNs in its definition of certificates. The distinction between a CPC and a CPCN depends on the applicable statute and sector.</td>
+          </tr>
+          <tr>
+            <td><strong>Concession</strong></td>
+            <td>A contract granting operating, development, financing, or related rights over concession assets under its terms and the governing law.</td>
+          </tr>
+          <tr>
+            <td><strong>Provisional authority</strong></td>
+            <td>Interim permission to operate while the agency resolves the main application, subject to the sector&rsquo;s criteria, conditions, and expiration date. A technical permit for equipment or a frequency serves its own function.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>When is a congressional franchise required?</strong> Read the <mark class="hl"><strong>enabling law</strong></mark>. <span class="c-teal">C.A. No. 146, &sect; 13(a)</span>, recognizes congressional authority and existing delegations to agencies. <span class="c-teal">EPIRA &sect; 27</span> generally places transmission and distribution franchises with Congress, subject to its terms. In <span class="c-burgundy"><em>Philippine Airlines v. CAB</em></span>, the Court recognized CAB&rsquo;s statutory authority to issue the relevant authorization for domestic air transport. <span class="c-burgundy"><em>Albano v. Reyes</em></span> illustrates statutory delegation in port operations. For data transmission, the later <strong>Konektadong Pinoy Act</strong> provides an NTC authorization framework for covered participants. Check the operator&rsquo;s specific activity and statute before assuming the same franchise rule applies to broadcasting, voice telephony, and data transmission.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 2(b), 4&ndash;6</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/6220" target="_blank" rel="noopener noreferrer">R.A. No. 9385</a> &middot; <a href="https://lawphil.net/judjuris/juri1997/mar1997/gr_119528_1997.html" target="_blank" rel="noopener noreferrer"><em>Philippine Airlines v. CAB</em>, G.R. No. 119528</a> &middot; <a href="https://lawphil.net/judjuris/juri1989/jul1989/gr_83551_1989.html" target="_blank" rel="noopener noreferrer"><em>Albano v. Reyes</em>, G.R. No. 83551</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/99600" target="_blank" rel="noopener noreferrer">R.A. No. 12234</a></p>
+
+    <p><strong>A typical CPC application asks three questions.</strong></p>
+
+    <ol>
+      <li><strong>Is the applicant legally eligible?</strong> For corporate and similar applicants, <span class="c-teal">&sect; 16(a)</span> requires <mark class="hl">organization under Philippine law</mark>. The IRR also recognizes persons allowed under the Act and applicable laws. Apply any nationality rule separately, including the 60% Filipino ownership rule for corporate public utility operators.</li>
+      <li><strong>Can the applicant deliver the service?</strong> Check the applicable financial, technical, safety, and operating requirements.</li>
+      <li><strong>Will the service promote public convenience?</strong> For a proposed bus route from San Fernando City to Bacnotan, useful evidence might show overcrowding, underserved hours, or inadequate capacity, alongside a credible plan to meet the demand. The applicant must establish <mark class="hl">public need</mark> under the governing standard.</li>
+    </ol>
+
+    <p>The <mark class="hl"><span class="c-green"><strong><u>prior operator rule</u></strong></span></mark> can give a qualified, adequately performing incumbent a preference to meet increased demand. <mark class="hl">Inadequate service, material violations, or failure to respond to demand can defeat that preference.</mark> Earlier filing and the presence of multiple operators are factors under applicable allocation rules. Public convenience and the relevant sector rules govern the result. A CPC can have commercial value and be the subject of a transaction, but its exercise and transfer remain conditional. Approval may come with requirements on service, routes, equipment, or schedules. Certificate exemptions are <strong>sector-specific</strong>. Read <span class="c-teal">&sect;&sect; 14&ndash;18</span> with later statutes, exemptions expressly stated in a franchise, and the rules of the relevant agency. Older provisions on warehouses, certain small conveyances, radio, air services, and government operators do not settle current licensing questions by themselves.</p>
+    <p class="source-links">Sources: <a href="https://region4b.ntc.gov.ph/wp-content/uploads/LawsAndRegulations/RA/CA_146_As_amended_Public_Service_Act.pdf" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect;&sect; 14&ndash;18</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 4&ndash;8</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 7&ndash;9 and 15</a> &middot; <a href="https://lawphil.net/judjuris/juri1994/dec1994/gr_115381_1994.html" target="_blank" rel="noopener noreferrer"><em>Kilusang Mayo Uno Labor Center v. Garcia</em>, G.R. No. 115381</a></p>
+
+    <blockquote>
+      <p><strong>A useful distinction from older cases.</strong> <span class="c-burgundy"><em>People v. Quasha</em></span> addressed incorporation before the application for authority to operate. For an exam, <mark class="hl">separate organizing a corporation from qualifying to operate a particular service</mark>. At the authorization stage and throughout operation, apply the governing eligibility and ownership rules.</p>
+    </blockquote>
+    <p class="source-links">Sources: <a href="https://lawphil.net/judjuris/juri1953/jun1953/gr_l-6055_1953.html" target="_blank" rel="noopener noreferrer"><em>People v. Quasha</em>, G.R. No. L-6055</a> &middot; <a href="https://lawphil.net/consti/cons1987/cons1987.html" target="_blank" rel="noopener noreferrer">1987 Constitution, Art. XII, &sect; 11</a></p>
+
+    <hr />
+
+    <!-- SECTION 7 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        6. Regulators &amp; Authorizations &rarr; <strong>YOU ARE HERE: 7. Prior Regulatory Approvals (&sect; 20)</strong> &rarr; 8. Rates &amp; Service Standards
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">C.A. No. 146, &sect; 20(a), (b), (c), (e), (g), (h), (i)</span>; <span class="c-teal">R.A. No. 11659, &sect; 10</span>; <span class="c-teal">2023 IRR, &sect; 17</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once an operator holds authority to serve the public, <span class="c-teal">&sect; 20</span> governs which major operational, property, financing, and equity-transfer actions require prior regulatory approval.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents unauthorized asset stripping, rate-base padding, CPC trafficking, and stealth transfers of controlling shares that could impair public service continuity or violate nationality rules.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-7-prior-approvals">7. Which actions need approval?</h3>
+
+    <p>Under <span class="c-teal"><strong>&sect; 20 of C.A. No. 146</strong></span>, start with the kind of transaction and check any sector-specific law. The following distinctions matter:</p>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Rule to apply</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Set or change regulated rates, fares, or covered itineraries</strong></td>
+            <td><span class="c-teal">&sect; 20(a)</span> requires agency approval. The proposer bears the burden of showing the proposal is prudent and efficient. Notice and an opportunity to be heard generally apply.</td>
+          </tr>
+          <tr>
+            <td><strong>Build or extend facilities</strong></td>
+            <td><span class="c-teal">&sect; 20(b)</span> generally requires approval. Emergency or extraordinary projects may proceed under the statutory exception, with an <mark class="hl">application filed within <strong>60 days from implementation</strong></mark>. A regulator may prescribe a shorter period for a certified emergency under the provision. Inclusion in the rate base separately depends on the asset being useful and necessary and on agency approval.</td>
+          </tr>
+          <tr>
+            <td><strong>Abandon or change certain railroad operations</strong></td>
+            <td><span class="c-teal">&sect; 20(c)</span> specifically addresses matters such as abandoning a railroad station, discontinuing specified ticket or freight services, or making permanent railroad timetable or itinerary changes. A bus route or another sector&rsquo;s service must be checked under its own authorization and rules.</td>
+          </tr>
+          <tr>
+            <td><strong>Issue shares without par value</strong></td>
+            <td><span class="c-teal">&sect; 20(e)</span>, as amended, requires approval and a hearing.</td>
+          </tr>
+          <tr>
+            <td><strong>Transfer or mortgage operating property, transfer an authority, or merge</strong></td>
+            <td><span class="c-teal">&sect; 20(g)</span> covers the listed transactions involving operating property, franchises, certificates, privileges, and rights. For property sales, alienations, mortgages, encumbrances, and leases, the property must be <mark class="hl"><span class="c-green"><strong><u>used and useful</u></strong></span></mark> in delivering the required public service. Read the public notice and hearing rules, the one-year maturity language for mortgages or encumbrances, and the provisos on negotiation or completion before approval and ordinary-course property transactions.</td>
+          </tr>
+          <tr>
+            <td><strong>Transfer or register shares resulting in more than 40% to a transferee</strong></td>
+            <td><span class="c-teal">&sect; 20(h)</span> counts the sale by itself or together with earlier sales and measures the transferee&rsquo;s holding against subscribed capital. Approval to transfer shares and consent required by a specific legislative franchise are separate questions.</td>
+          </tr>
+          <tr>
+            <td><strong>Transfer shares to an alien so that Filipino ownership in a public utility falls below 60%</strong></td>
+            <td><span class="c-teal">&sect; 20(i)</span> makes the transfer <mark class="hl"><span class="c-rust"><strong><u>void and a sufficient ground to order cancellation of the certificate</u></strong></span></mark>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-links">Sources: <a href="https://region4b.ntc.gov.ph/wp-content/uploads/LawsAndRegulations/RA/CA_146_As_amended_Public_Service_Act.pdf" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 20 and unchanged subsections</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 10</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect; 17</a></p>
+
+    <blockquote>
+      <p><strong>La Union application.</strong> A San Fernando&ndash;Bauang bus operator agrees to sell a bus and assign its operating authority. The agreement may create rights and obligations between the parties. The buyer still needs the required approval to operate under the transferred authority. Under the <mark class="hl"><span class="c-green"><strong><u>registered-owner rule</u></strong></span></mark>, a private sale by itself generally does not relieve the registered vehicle owner of liability to third persons following an accident. Any claim for reimbursement between seller and buyer is a separate matter. Speculation in certificates for resale, sometimes called <mark class="hl"><span class="c-rust"><strong><u>trafficking in CPCs</u></strong></span></mark>, also defeats the public-service purpose of a grant and can support denial or cancellation under the applicable rules.</p>
+    </blockquote>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 20(g)</a> &middot; <a href="https://lawphil.net/judjuris/juri2012/jun2012/gr_174156_2012.html" target="_blank" rel="noopener noreferrer">Registered-owner rule in <em>Filcar Transport Services v. Espinas</em>, G.R. No. 174156</a></p>
+
+    <hr />
+
+    <!-- SECTION 8 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        7. Prior Approvals &rarr; <strong>YOU ARE HERE: 8. Rate-Setting &amp; Service Standards</strong> &rarr; 9. Due Process &amp; Sanctions
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">C.A. No. 146, &sect;&sect; 16(c), 16(l), 19, 20</span>; <span class="c-teal">R.A. No. 11659, &sect; 6</span>; <span class="c-teal">R.A. No. 11966, &sect;&sect; 35, 37</span> (PPP Code); <span class="c-teal">2023 IRR, &sect; 16</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Connects prior rate-change approvals (&sect; 20(a)) to the substantive standard for fair and reasonable rates, provisional rate procedures, deregulation carve-outs, and statutory duties under &sect; 19.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Protects consumers against monopolistic pricing, unfair discrimination, and calamity abandonment while allowing prudent operators a reasonable return on investment.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-8-rates-standards">8. How are rates set and service standards enforced?</h3>
+
+    <p><strong>Fair and reasonable rates.</strong> Under <span class="c-teal">&sect; 16(c)</span>, regulated rates should let the provider recover <mark class="hl"><span class="c-green"><strong><u>prudent and efficient costs</u></strong></span></mark> and earn a <mark class="hl"><span class="c-green"><strong><u>reasonable return</u></strong></span></mark>, while protecting consumers against unreasonable price or unjust discrimination. The regulator must retain its rate-setting power. In <span class="c-burgundy"><em>Kilusang Mayo Uno v. Garcia</em></span>, the Court <mark class="hl"><span class="c-rust"><strong><u>invalidated a scheme allowing bus operators to adjust their fares themselves within an authorized band</u></strong></span></mark>. In <span class="c-burgundy"><em>Republic v. Meralco</em></span>, the Court <mark class="hl">excluded corporate income tax from the operating expenses</mark> used to compute the rates in that case. <span class="c-teal">Section 16(l)</span> also governs any required depreciation account and restricts the uses of a depreciation fund. Billing and metering disputes may turn on the authorized tariff, equipment tests, and sector-specific rules.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect;&sect; 16(c), 16(l), 19&ndash;20</a> &middot; <a href="https://lawphil.net/judjuris/juri1994/dec1994/gr_115381_1994.html" target="_blank" rel="noopener noreferrer"><em>Kilusang Mayo Uno v. Garcia</em></a> &middot; <a href="https://lawphil.net/judjuris/juri2002/nov2002/gr_141314_2002.html" target="_blank" rel="noopener noreferrer"><em>Republic v. Meralco</em>, G.R. No. 141314</a></p>
+
+    <p><strong>Provisional rates and deregulation.</strong> The agency may provisionally approve a proposed rate without a prior hearing under <span class="c-teal">&sect; 16(c)</span>. It must <mark class="hl"><span class="c-green"><strong><u>call a hearing within 15 days thereafter</u></strong></span></mark>, upon publication and notice to affected parties. <span class="c-teal">Section 16(c)</span> preserves deregulation under applicable statutes and rules, including regimes for certain activities in telecommunications, downstream oil, electricity generation and supply, and domestic shipping. The provision also refers to the former BOT Law. <span class="c-teal">R.A. No. 11966</span> repealed that law and directs that statutory references to it be read as references to the <mark class="hl">PPP Code</mark>, subject to applicable transition rules.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 6</a> &middot; <a href="https://lawphil.net/statutes/repacts/ra2023/ra_11966_2023.html" target="_blank" rel="noopener noreferrer">R.A. No. 11966, &sect;&sect; 35 and 37</a></p>
+
+    <p><strong>Unlawful acts under <span class="c-teal">&sect; 19</span>.</strong> These include providing unsafe, improper, or inadequate service or withholding service reasonably demanded, granting undue preferences or discriminatory rebates, refusing a proper request to carry public mail on regular trips for compensation, and <mark class="hl">refusing or neglecting an agency request for urgent service during a state of calamity to avert further harm</mark>. A class example could use a lawfully authorized request for buses to serve evacuation needs during a declared calamity in La Union. Apply the actual request and statutory conditions.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect; 19, as amended</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect; 16</a></p>
+
+    <hr />
+
+    <!-- SECTION 9 -->
+    <div class="context-compass">
+      <div class="context-breadcrumb">
+        8. Rates &amp; Unlawful Acts &rarr; <strong>YOU ARE HERE: 9. Due Process, Sanctions &amp; Judicial Review</strong> &rarr; Part II Summary Capstone
+      </div>
+      <div class="compass-grid">
+        <div><span class="compass-tag">STATUTORY ADDRESS</span> <span class="c-teal">C.A. No. 146, &sect;&sect; 16(n), 16(p), 17, 21, 23&ndash;26, 28, 35</span>; <span class="c-teal">R.A. No. 11659, &sect;&sect; 6&ndash;7, 11&ndash;16, 20</span>; <span class="c-teal">2023 IRR, &sect;&sect; 8&ndash;9, 18&ndash;25, 28&ndash;30</span>.</div>
+        <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> When a public service breaches &sect; 19 standards, fails audits, or violates regulatory orders, this section maps what an agency can do immediately versus what requires due notice, hearing, or court action.</div>
+        <div><span class="compass-tag">WHY THE LAW CARES</span> Balances urgent public protection (immediate investigation and 30-day preventive suspension) against procedural due process and separation of powers over legislative franchises and criminal penalties.</div>
+      </div>
+    </div>
+
+    <h3 id="sec-9-due-process-sanctions">9. Due process, suspension, revocation, and sanctions</h3>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Regulatory action</th>
+            <th>Procedure or consequence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Investigate or take specified supervisory steps</strong> &middot; <span class="c-teal">C.A. No. 146, &sect; 17</span></td>
+            <td>The agency can <mark class="hl">start an investigation without a previous hearing</mark>, on its own or on a written complaint. The statute also provides supervisory powers concerning adequate service, compliance, unauthorized operation, records and accounting, inspection or testing, and other listed matters, subject to the governing law.</td>
+          </tr>
+          <tr>
+            <td><strong>Final suspension or revocation of a certificate</strong> &middot; <span class="c-teal">&sect; 16(n), (p)</span></td>
+            <td><mark class="hl">Give notice and an opportunity to be heard.</mark> Grounds include a violation or willful and contumacious refusal to comply with the governing law or regulator&rsquo;s rules or orders, and <mark class="hl"><strong>three consecutive annual performance audit failures</strong></mark>. Consider the proven ground and circumstances.</td>
+          </tr>
+          <tr>
+            <td><strong>Short preventive suspension</strong> &middot; <span class="c-teal">&sect; 16(n)</span></td>
+            <td>For good cause, the agency may suspend before the hearing for <mark class="hl"><strong>at most 30 days</strong></mark> where needed to avoid serious and irreparable damage or inconvenience to the public or private interests under the statute.</td>
+          </tr>
+          <tr>
+            <td><strong>Administrative fine and refund</strong> &middot; <span class="c-teal">&sect; 21</span></td>
+            <td><mark class="hl">Give due notice and hearing.</mark> The amended Act sets <mark class="hl"><strong>&#8369;5,000 to &#8369;2,000,000 per day</strong></mark> when no specific penalty applies or the sectoral charter or special law provides a lower penalty. An excess-rate refund may be ordered instead of or in addition to a fine. Unpaid fines or unfulfilled refund orders can support suspension under the provision.</td>
+          </tr>
+          <tr>
+            <td><strong>Criminal liability</strong> &middot; <span class="c-teal">C.A. No. 146, &sect;&sect; 23&ndash;26 and 28</span></td>
+            <td>The criminal court imposes the applicable penalty. Covered offenses can carry a <mark class="hl">fine up to <strong>&#8369;2,000,000</strong>, imprisonment of <strong>six years and one day to twelve years</strong>, or both</mark>, subject to the exact offense and penalty clause. <span class="c-teal">Section 26</span> separately addresses damage or interference with agency apparatus and the value component of the fine. Where the statute requires it, the prosecution must establish knowing and willful responsibility of the relevant officers, directors, or managerial employees. <span class="c-teal">Section 28</span> refers to <mark class="hl"><strong>Act No. 3326</strong> for prescription of violations</mark>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-links">Sources: <a href="https://region4b.ntc.gov.ph/wp-content/uploads/LawsAndRegulations/RA/CA_146_As_amended_Public_Service_Act.pdf" target="_blank" rel="noopener noreferrer">C.A. No. 146, &sect;&sect; 16(n), 17</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect;&sect; 6&ndash;7 and 11&ndash;16</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 8&ndash;9 and 18&ndash;25</a></p>
+
+    <figure class="img-figure">
+      <img src="images/public-service-act-2027/06-regulatory-due-process-sanctions.jpg" alt="Regulatory Due Process, Administrative Sanctions, and Criminal/Franchise Court Boundaries under C.A. 146" />
+      <figcaption><strong>Figure 6 &mdash; Due Process, Sanctions &amp; Jurisdiction Matrix (<span class="c-teal">C.A. No. 146</span>):</strong> Separate interim actions allowed without prior hearing (&sect; 17 investigation, 15-day provisional rate, 30-day preventive suspension) from sanctions requiring notice and hearing (&sect; 16(n)/(p), &sect; 21 fines; <span class="c-burgundy"><em>Globe Telecom</em></span>) and powers reserved to courts or Congress (&sect;&sect; 23&ndash;26 criminal penalties; <span class="c-burgundy"><em>Divinagracia</em></span>).</figcaption>
+    </figure>
+
+    <p><strong>Hearing and legislative franchise.</strong> <span class="c-burgundy"><em>Globe Telecom v. NTC</em></span> illustrates why <mark class="hl"><span class="c-rust"><strong><u>a power to investigate without a prior hearing cannot supply the power to impose a fine without notice and hearing</u></strong></span></mark>. A genuine opportunity to respond on reconsideration can cure some due process defects, depending on the law and facts. <span class="c-burgundy"><em>Divinagracia v. Consolidated Broadcasting System</em></span> distinguishes the NTC&rsquo;s technical licensing functions from the <mark class="hl"><span class="c-rust"><strong><u>power to revoke a legislative broadcast franchise, which the NTC does not possess</u></strong></span></mark>. A direct action such as <strong>quo warranto</strong>, where applicable, differs from a collateral attack. <span class="c-burgundy"><em>GMA Network v. NTC</em></span> distinguished administrative sanctions from criminal prescription under the old version of <span class="c-teal">&sect; 28</span>. For a current problem use amended <span class="c-teal">&sect; 28</span> and the applicable procedural rules.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/45430" target="_blank" rel="noopener noreferrer"><em>Globe Telecom</em>, G.R. No. 143964</a> &middot; <a href="https://lawphil.net/judjuris/juri2009/apr2009/gr_162272_2009.html" target="_blank" rel="noopener noreferrer"><em>Divinagracia</em>, G.R. No. 162272</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/56644" target="_blank" rel="noopener noreferrer"><em>GMA Network</em>, G.R. No. 196112</a></p>
+
+    <p><strong>Rulemaking and adjudication.</strong> A regulator acts <strong>quasi-legislatively</strong> when it issues generally applicable rules and <strong>quasi-judicially</strong> when it holds proceedings and decides specific disputes under its mandate. <span class="c-burgundy"><em>Francisco v. Toll Regulatory Board</em></span> illustrates that a statute may assign several types of functions to one agency. Under <mark class="hl"><span class="c-green"><strong><u>primary jurisdiction</u></strong></span></mark>, a court can leave an issue requiring specialized administrative expertise to the agency in the first instance. Under <mark class="hl"><span class="c-green"><strong><u>exhaustion</u></strong></span></mark>, a party generally pursues available administrative remedies before seeking judicial review, subject to recognized exceptions. A purely legal or judicial issue and an engineering or rate dispute can require different forums. Check the charter and applicable appeal rules. Agency factual findings supported by substantial evidence generally receive judicial deference.</p>
+    <p class="source-links">Sources: <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/94539" target="_blank" rel="noopener noreferrer">R.A. No. 11659, &sect; 20, amending C.A. No. 146, &sect; 35</a> &middot; <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97017" target="_blank" rel="noopener noreferrer">2023 IRR, &sect;&sect; 28&ndash;30</a> &middot; <a href="https://lawphil.net/judjuris/juri2010/oct2010/gr_166910_2010.html" target="_blank" rel="noopener noreferrer"><em>Francisco</em>, G.R. Nos. 166910 et al.</a></p>
+
+    <!-- PART II SUMMARY BRIEF REVIEWER CAPSTONE -->
+    <div class="summary-capstone" id="summary-part-ii">
+      <div class="summary-hdr">
+        <h4>Part II Summary Brief Reviewer &mdash; Regulators, Prior Approvals, Rates &amp; Remedies (Sections 6&ndash;9)</h4>
+        <span class="summary-pill">Module Recap</span>
+      </div>
+      <div class="summary-body">
+        <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+        <ul>
+          <li><strong>Sector Regulators &amp; Operating Authorities:</strong> <span class="c-teal">R.A. No. 11659, &sect;&sect; 2(b), 3&ndash;8</span>; <span class="c-teal">C.A. No. 146, &sect;&sect; 13(a), 14&ndash;18</span>; <span class="c-teal">LGC, &sect;&sect; 447, 458</span>; <span class="c-teal">R.A. No. 12234</span> (Konektadong Pinoy Act); <span class="c-burgundy"><em>PAL v. CAB</em></span>, <span class="c-burgundy"><em>Albano</em></span>, <span class="c-burgundy"><em>Quasha</em></span>.</li>
+          <li><strong>Prior Regulatory Approvals:</strong> <span class="c-teal">C.A. No. 146, &sect; 20(a), (b), (c), (e), (g), (h), (i)</span>; <span class="c-teal">R.A. No. 11659, &sect; 10</span>; <span class="c-burgundy"><em>Filcar Transport</em></span> (registered-owner rule).</li>
+          <li><strong>Rate-Setting, Provisional Rates &amp; Unlawful Acts:</strong> <span class="c-teal">C.A. No. 146, &sect;&sect; 16(c), 16(l), 19</span>; <span class="c-teal">R.A. No. 11966</span> (PPP Code); <span class="c-burgundy"><em>KMU v. Garcia</em></span>, <span class="c-burgundy"><em>Republic v. Meralco</em></span>.</li>
+          <li><strong>Due Process, Sanctions, Franchise Revocation &amp; Judicial Review:</strong> <span class="c-teal">C.A. No. 146, &sect;&sect; 16(n), 16(p), 17, 21, 23&ndash;26, 28, 35</span>; <span class="c-teal">Act No. 3326</span>; <span class="c-burgundy"><em>Globe Telecom</em></span>, <span class="c-burgundy"><em>Divinagracia</em></span>, <span class="c-burgundy"><em>GMA Network</em></span>, <span class="c-burgundy"><em>Francisco v. TRB</em></span>.</li>
+        </ul>
+
+        <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+        <div class="table-scroll">
+          <table class="ui-table">
+            <thead>
+              <tr>
+                <th>Mnemonic</th>
+                <th>Tag</th>
+                <th>Stands For / Legal Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>E-C-N</strong> (Eligible, Capable, Needed)</td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td>The 3 core CPC application questions: (1) <strong>E</strong>ligible under Philippine law &amp; nationality rules, (2) <strong>C</strong>apable financially/technically/safely, (3) Public <strong>N</strong>eed / convenience.</td>
+              </tr>
+              <tr>
+                <td><strong>15 &ndash; 30 &ndash; 60 Operational Clocks</strong></td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td><strong>15 days</strong> to call hearing after provisional rate (&sect; 16(c)); <strong>30 days</strong> max pre-hearing preventive suspension (&sect; 16(n)); <strong>60 days</strong> from implementation to apply for emergency facility extensions (&sect; 20(b)).</td>
+              </tr>
+              <tr>
+                <td><strong>5K&ndash;2M / 6-to-12</strong></td>
+                <td><span class="tag-mem-add">Study Aid</span></td>
+                <td><strong>&#8369;5,000&ndash;&#8369;2,000,000/day</strong> administrative fine (&sect; 21, with notice &amp; hearing); up to <strong>&#8369;2,000,000</strong> fine and/or <strong>6 yrs 1 day to 12 yrs</strong> criminal penalty by courts (&sect;&sect; 23&ndash;26; prescription via <span class="c-teal">Act No. 3326</span>).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="summary-subhdr">3. Important Concepts, Elements &amp; Operative Rules</div>
+        <ul>
+          <li><strong>Sector-Agency Rule:</strong> Match the agency to the activity&mdash;ERC/DOE (electricity), LWUA/NWRB/MWSS (water), LTFRB/LTO (land transport), City/Sangguniang Panlungsod (tricycles), MARINA/Port Authorities (maritime/seaports), CAB/CAAP (air), NTC/DICT/TRB (telecom/broadcast/tollways).</li>
+          <li><strong>Key &sect; 20 Approvals:</strong> Rates (&sect; 20(a)); facilities (&sect; 20(b), 60-day emergency filing); no-par shares (&sect; 20(e)); operating property &ldquo;used and useful&rdquo; / CPC transfer / merger (&sect; 20(g)); share transfer giving <em>one</em> transferee &gt;40% subscribed capital (&sect; 20(h)); alien transfer dropping public utility below 60% Filipino = <strong>void + ground to cancel certificate</strong> (&sect; 20(i)).</li>
+          <li><strong>Rate-Setting Limits:</strong> Rates recover prudent/efficient costs + reasonable return; operators cannot self-adjust within a band (<span class="c-burgundy"><em>KMU v. Garcia</em></span>); corporate income tax excluded from operating expenses (<span class="c-burgundy"><em>Republic v. Meralco</em></span>).</li>
+          <li><strong>Procedural Safeguards:</strong> Investigations (&sect; 17), provisional rates (&sect; 16(c)), and &le;30-day preventive suspensions (&sect; 16(n)) may occur without prior hearing; final suspension/revocation (&sect; 16(n),(p)) and &sect; 21 fines <strong>require due notice and hearing</strong> (<span class="c-burgundy"><em>Globe Telecom</em></span>).</li>
+        </ul>
+
+        <div class="summary-trap-box">
+          <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz / Bar Traps to Avoid</div>
+          <ul>
+            <li><strong>Assuming &sect; 20(h) Applies Only to Foreign Buyers:</strong> Crossing &gt;40% of subscribed capital in favor of a single transferee triggers agency approval <em>even if the buyer is a Filipino citizen or corporation</em>.</li>
+            <li><strong>Confusing Private Sale Validity with Public Liability:</strong> Unapproved bus/CPC sales may bind seller and buyer inter partes, but the <strong>registered-owner rule</strong> keeps the registered owner liable to injured third parties (<span class="c-burgundy"><em>Filcar</em></span>).</li>
+            <li><strong>Equating Investigative Power with Fining Power:</strong> Under <span class="c-burgundy"><em>Globe Telecom v. NTC</em></span>, starting an investigation without a prior hearing (&sect; 17) never authorizes imposing a &sect; 21 fine without notice and hearing.</li>
+            <li><strong>Having an Agency Revoke a Legislative Franchise:</strong> Under <span class="c-burgundy"><em>Divinagracia</em></span>, the NTC may address technical permits/licenses but <em>cannot</em> revoke a Congressional legislative franchise (proper remedy is a direct action like <em>quo warranto</em>).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- CLASS REPORT SECTION -->
+    <h3 id="class-report-opening">Class report &middot; A short opening you can use</h3>
+
+    <blockquote>
+      <p>Picture a household in San Fernando during a brownout. It may rely on LUECO or LUELCO for power, a local water network for its tap, and a mobile operator to check advisories. All three deliver essential services. Philippine law classifies electricity distribution and public water pipelines as public utilities, while it expressly classifies telecommunications as critical infrastructure. That matters the moment someone wants to operate the service, raise a regulated rate, or buy control of the company. The first question is always the same. What activity does the company actually carry out?</p>
+    </blockquote>
+
+    <p>You can carry one example through the report. Start with the <strong>San Fernando International Seaport and the Poro Point cable landing station</strong>. Then change the proposed buyer from a Filipino corporation to a private foreign corporation and finally to a foreign state-owned enterprise. Ask the audience which legal rule changes each time. The locations and identified services are real. The buyers and proposed transactions in these examples are hypothetical.</p>
+
+    <hr />
+
+    <!-- BAR PRACTICE SECTION -->
+    <h3 id="bar-practice">Bar practice &middot; Answer before checking the key</h3>
+
+    <ol>
+      <li>A private foreign investor offers to buy <strong>60%</strong> of a domestic company operating a public seaport at Poro Point. Can reciprocity make the acquisition permissible?</li>
+      <li>A private foreign investor wants exactly <strong>50%</strong> of a domestic telecommunications operator serving La Union. It receives the right to appoint a majority of the board. Must it prove reciprocity? Can the President&rsquo;s investment-review power still apply?</li>
+      <li>An ordinary foreign state-owned company with no preexisting interest offers to buy <strong>5%</strong> of the same operator. The investor&rsquo;s country grants reciprocal investment rights. Is the investment allowed?</li>
+      <li>A Filipino transferee&rsquo;s holding in a covered bus company will increase from <strong>25% to 45% of subscribed capital</strong> after the purchase. Which rule should you raise?</li>
+      <li>After complaints about an abrupt end to bus operations, a regulator begins investigating without an initial hearing and immediately imposes a <span class="c-teal">&sect; 21</span> fine without notice. Which step is authorized and which is defective?</li>
+    </ol>
+
+    <h4 id="bar-answer-key">Answer key</h4>
+
+    <ol>
+      <li><strong>The 60% foreign stake is barred.</strong> A public seaport operator is a public utility under <span class="c-teal">&sect; 13(d)</span>, so <span class="c-teal">Art. XII, &sect; 11</span> requires at least 60% Filipino-owned capital. <mark class="hl">Reciprocity cannot remove that constitutional requirement.</mark></li>
+      <li><strong>Reciprocity is unnecessary on those facts because the holding is exactly 50%.</strong> <mark class="hl">The board appointment right can confer control, so <span class="c-teal">&sect; 23</span> can still apply</mark> if the transaction presents national-security implications and the agency-review requirements are met.</li>
+      <li><strong>No.</strong> The investment is new, the investor is an FSOE, and telecommunications is critical infrastructure. <span class="c-teal">Section 24</span> applies even to a minority stake. <mark class="hl">Reciprocity under <span class="c-teal">&sect; 25</span> does not cure the <span class="c-teal">&sect; 24</span> bar.</mark></li>
+      <li><strong><span class="c-teal">Section 20(h)</span>.</strong> The purchase takes the transferee above 40% of subscribed capital, so check the required regulatory approval. <mark class="hl">The transferee&rsquo;s Filipino citizenship does not remove the transaction from that provision.</mark></li>
+      <li><strong>The investigation can begin under <span class="c-teal">&sect; 17</span>.</strong> <mark class="hl">The fine under <span class="c-teal">&sect; 21</span> requires due notice and hearing.</mark> Apply the process required for each action.</li>
+    </ol>
+
+    <h4 id="outline-coverage">Where the original outline is covered</h4>
+
+    <div class="table-scroll">
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Topics in the supplied notes</th>
+            <th>Where they appear here</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1&ndash;1.01 &middot; Public utility and public service</td>
+            <td>&sect;&sect; 1&ndash;2</td>
+          </tr>
+          <tr>
+            <td>2&ndash;4 &middot; Regulators, police power, and constitutional limits</td>
+            <td>&sect;&sect; 1, 3, and 6</td>
+          </tr>
+          <tr>
+            <td>5&ndash;6 &middot; Foreign state investment, critical infrastructure, and reciprocity</td>
+            <td>&sect;&sect; 2&ndash;5</td>
+          </tr>
+          <tr>
+            <td>7, 9, and 13 &middot; Prior approvals, CPC transfers, and transfers of shares</td>
+            <td>&sect; 7</td>
+          </tr>
+          <tr>
+            <td>8 &middot; Franchises, certificates, applicant qualifications, competition, and exemptions</td>
+            <td>&sect; 6</td>
+          </tr>
+          <tr>
+            <td>10&ndash;11 and 14&ndash;17 &middot; Revocation, hearings, unlawful acts, sanctions, and agency functions</td>
+            <td>&sect;&sect; 8&ndash;9</td>
+          </tr>
+          <tr>
+            <td>12 &middot; Rate regulation</td>
+            <td>&sect; 8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><em>Sources are linked with the discussion they support. For older cases, use the principle that survives and check any section number, ownership limit, penalty, and sector-specific rule against the 2022 amendments and later applicable law.</em></p>
+  </main>
+
+</body>
+</html>
