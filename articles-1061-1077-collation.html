@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philippine Succession Law: Collation (Articles 1061 to 1077) — Consolidated Master Reviewer</title>
+<title>Philippine Succession Law: Collation &amp; Partition (Articles 1061 to 1105) — Consolidated Master Reviewer</title>
 <style>
 /* Document container and typography */
 body {
@@ -32,6 +32,19 @@ h1 {
   padding-bottom: 0.6rem;
   margin-top: 0;
   letter-spacing: 0.02em;
+}
+
+h2.module-banner {
+  background: linear-gradient(90deg, #0F172A 0%, #1E3A8A 70%, #0F766E 100%);
+  color: #FFFFFF;
+  padding: 0.9rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 2.4rem 0 1.4rem 0;
+  scroll-margin-top: 4.5rem;
 }
 
 h3 {
@@ -322,36 +335,6 @@ blockquote {
   vertical-align: top;
 }
 
-/* Static Responsive Infographic Figure Card */
-.img-figure {
-  margin: 1.85rem 0;
-  padding: 1rem;
-  background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
-  text-align: center;
-}
-.img-figure img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-.img-figure figcaption {
-  margin-top: 0.75rem;
-  padding-top: 0.65rem;
-  border-top: 1px solid #E2E8F0;
-  font-size: 0.86rem;
-  color: #475569;
-  text-align: left;
-  line-height: 1.45;
-}
-.img-figure figcaption strong {
-  color: #1E3A8A;
-}
-
 /* End-of-Part Summary Brief Reviewer Capstones */
 .summary-capstone {
   margin: 2rem 0 2.5rem 0;
@@ -446,6 +429,7 @@ blockquote {
 .src-paras { background: #DBEAFE; color: #1E3A8A; }
 .src-jurado { background: #DCFCE7; color: #166534; }
 .src-rabuya { background: #FEE2E2; color: #991B1B; }
+.src-selected { background: #FEF3C7; color: #92400E; }
 .codal-box {
   background: #F8FAFC;
   border: 1px solid #CBD5E1;
@@ -511,8 +495,8 @@ details.recall-item .recall-ans {
   position: fixed;
   z-index: 2500;
   display: none;
-  width: min(450px, calc(100vw - 24px));
-  max-height: 300px;
+  width: min(460px, calc(100vw - 24px));
+  max-height: 340px;
   background: #FFFFFF;
   border: 1.5px solid #1E3A8A;
   border-radius: 10px;
@@ -532,6 +516,7 @@ details.recall-item .recall-ans {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 .art-popover-close {
@@ -542,6 +527,7 @@ details.recall-item .recall-ans {
   padding: 0.1rem 0.45rem;
   cursor: pointer;
   display: none;
+  flex-shrink: 0;
 }
 .art-popover.mobile-pinned .art-popover-close { display: inline-block; }
 .art-popover-body { padding: 0.75rem 0.9rem; overflow-y: auto; white-space: pre-wrap; }
@@ -572,7 +558,7 @@ details.recall-item .recall-ans {
     padding: 0;
     max-width: 100%;
   }
-  .img-figure, .context-compass, .ui-box, .summary-capstone, .summary-trap-box, .problem-card, .alac-card {
+  .context-compass, .ui-box, .summary-capstone, .summary-trap-box, .problem-card, .alac-card {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -586,41 +572,69 @@ details.recall-item .recall-ans {
     <span class="nav-label">TOPIC NAVIGATION:</span>
     <select class="nav-dropdown" onchange="if(this.value) { document.querySelector(this.value).scrollIntoView({behavior: 'smooth'}); }">
       <option value="" disabled selected>Select topic or provision...</option>
-      <option value="#big-picture-map">Big-Picture Subject Map (Book III, Title IV, Ch. 4, Sec. 5)</option>
-      <option value="#preliminary-executors">Preliminary Note: Executors &amp; Administrators (Arts. 1058–1060 &amp; 1491[3])</option>
+      <option value="#big-picture-map">Big-Picture Subject Map (Book III, Title IV, Ch. 4, Secs. 5 &amp; 6)</option>
+      <option value="#section-collation">SECTION 5: COLLATION (ARTS. 1061–1077)</option>
+      <option value="#preliminary-executors">&nbsp;&nbsp;↳ Preliminary Note: Executors &amp; Administrators (Arts. 1058–1060 &amp; 1491[3])</option>
       <option value="#part-i">I. General Concepts, Meanings, Purposes &amp; Requisites (Art. 1061)</option>
       <option value="#art-1061">&nbsp;&nbsp;↳ Art. 1061: Duty of Compulsory Heirs to Collate</option>
-      <option value="#summary-part-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part I Summary Brief Reviewer</option>
+      <option value="#summary-part-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part I Summary Brief Reviewer</option>
       <option value="#part-ii">II. Dispensation, Repudiation &amp; Property Left by Will (Arts. 1062–1063)</option>
       <option value="#art-1062">&nbsp;&nbsp;↳ Art. 1062: Dispensation with Collation &amp; Repudiation</option>
       <option value="#art-1063">&nbsp;&nbsp;↳ Art. 1063: Property Left by Will (Legacies &amp; Devises)</option>
-      <option value="#summary-part-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part II Summary Brief Reviewer</option>
+      <option value="#summary-part-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part II Summary Brief Reviewer</option>
       <option value="#part-iii">III. Representation, Ascendants &amp; Spouses (Arts. 1064–1066)</option>
       <option value="#art-1064">&nbsp;&nbsp;↳ Art. 1064: Two-Fold Collation of Grandchildren</option>
       <option value="#art-1065">&nbsp;&nbsp;↳ Art. 1065: Donations to Grandchildren</option>
       <option value="#art-1066">&nbsp;&nbsp;↳ Art. 1066: Donations to the Spouse of a Child</option>
-      <option value="#summary-part-iii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part III Summary Brief Reviewer</option>
+      <option value="#summary-part-iii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part III Summary Brief Reviewer</option>
       <option value="#part-iv">IV. Expenses: Exempt, Career, Debts/Fines &amp; Wedding Gifts (Arts. 1067–1070)</option>
       <option value="#art-1067">&nbsp;&nbsp;↳ Art. 1067: Mandatorily Exempt Expenses</option>
       <option value="#art-1068">&nbsp;&nbsp;↳ Art. 1068: Professional &amp; Vocational Career Expenses</option>
       <option value="#art-1069">&nbsp;&nbsp;↳ Art. 1069: Debts, Election Expenses &amp; Fines</option>
       <option value="#art-1070">&nbsp;&nbsp;↳ Art. 1070: Wedding Gifts (1/10 Free Portion Ceiling)</option>
-      <option value="#summary-part-iv">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part IV Summary Brief Reviewer</option>
+      <option value="#summary-part-iv">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part IV Summary Brief Reviewer</option>
       <option value="#part-v">V. Valuation, Risk of Loss, Joint Donations &amp; Equalization (Arts. 1071–1074)</option>
       <option value="#art-1071">&nbsp;&nbsp;↳ Art. 1071: Valuation at Donation &amp; Risk of Loss</option>
       <option value="#art-1072">&nbsp;&nbsp;↳ Art. 1072: Donations Made by Both Parents</option>
       <option value="#art-1073-1074">&nbsp;&nbsp;↳ Arts. 1073 &amp; 1074: Equalization in Kind &amp; Impracticability Rules</option>
-      <option value="#summary-part-v">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part V Summary Brief Reviewer</option>
+      <option value="#summary-part-v">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part V Summary Brief Reviewer</option>
       <option value="#part-vi">VI. Fruits, Improvements &amp; Settlement of Disputes (Arts. 1075–1077)</option>
       <option value="#art-1075">&nbsp;&nbsp;↳ Art. 1075: Accrual of Fruits and Interests</option>
       <option value="#art-1076">&nbsp;&nbsp;↳ Art. 1076: Reimbursement for Expenses &amp; Improvements</option>
       <option value="#art-1077">&nbsp;&nbsp;↳ Art. 1077: Disputes Do Not Suspend Distribution</option>
-      <option value="#summary-part-vi">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Part VI Summary Brief Reviewer</option>
-      <option value="#part-vii">VII. Master Consolidation: Jurisprudence, ALAC Drills, Mnemonics &amp; Active Recall</option>
-      <option value="#case-index">&nbsp;&nbsp;↳ Master Jurisprudence Index (14 Controlling Cases)</option>
-      <option value="#alac-drills">&nbsp;&nbsp;↳ Practical Problem-Solving Exercises (ALAC Method)</option>
-      <option value="#mnemonic-bank">&nbsp;&nbsp;↳ Master Memory Anchors &amp; Trigger Words Bank</option>
-      <option value="#active-recall">&nbsp;&nbsp;↳ Consolidated Active Recall &amp; Recitation Questions</option>
+      <option value="#summary-part-vi">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Collation Part VI Summary Brief Reviewer</option>
+      <option value="#part-vii">VII. Collation Master Consolidation (Cases, ALAC Drills, Mnemonics &amp; Recall)</option>
+      <option value="#case-index">&nbsp;&nbsp;↳ Collation Jurisprudence Index (14 Controlling Cases)</option>
+      <option value="#alac-drills">&nbsp;&nbsp;↳ Collation ALAC Exercises</option>
+      <option value="#mnemonic-bank">&nbsp;&nbsp;↳ Collation Memory Anchors Bank</option>
+      <option value="#active-recall">&nbsp;&nbsp;↳ Collation Active Recall Questions</option>
+      <option value="#section-partition">SECTION 6: PARTITION AND DISTRIBUTION (ARTS. 1078–1105)</option>
+      <option value="#part-p-i">I. General Concepts, Classifications &amp; Mechanics (Arts. 1078–1082)</option>
+      <option value="#art-1078">&nbsp;&nbsp;↳ Art. 1078: Community Property Prior to Partition</option>
+      <option value="#art-1079">&nbsp;&nbsp;↳ Art. 1079: Definition, Classifications &amp; Judicial vs. Extrajudicial Modes</option>
+      <option value="#art-1080">&nbsp;&nbsp;↳ Art. 1080: Partition Inter Vivos / By Will &amp; Family Enterprises</option>
+      <option value="#art-1081-1082">&nbsp;&nbsp;↳ Arts. 1081 &amp; 1082: Third-Person Mandatary &amp; Constructive Partitions</option>
+      <option value="#summary-part-p-i">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Partition Part I Summary Brief Reviewer</option>
+      <option value="#part-p-ii">II. Right to Demand Partition, Prohibitions &amp; Special Property (Arts. 1083–1087)</option>
+      <option value="#art-1083">&nbsp;&nbsp;↳ Art. 1083: Right to Demand Partition &amp; 20-Year / 10-Yr / Family Home Limits</option>
+      <option value="#art-1084-1087">&nbsp;&nbsp;↳ Arts. 1084–1087: Conditional Heirs, Equality, Public Auction &amp; Accounting</option>
+      <option value="#summary-part-p-ii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Partition Part II Summary Brief Reviewer</option>
+      <option value="#part-p-iii">III. Right of Legal Redemption Among Co-Heirs (Art. 1088)</option>
+      <option value="#art-1088">&nbsp;&nbsp;↳ Art. 1088: Redemption of Hereditary Rights &amp; Written Notice Rule</option>
+      <option value="#summary-part-p-iii">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Partition Part III Summary Brief Reviewer</option>
+      <option value="#part-p-iv">IV. Delivery of Title Deeds (Arts. 1089–1090)</option>
+      <option value="#part-p-v">V. Effects of Partition &amp; Reciprocal Warranties (Arts. 1091–1096)</option>
+      <option value="#summary-part-p-v">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Partition Parts IV–V Summary Brief Reviewer</option>
+      <option value="#part-p-vi">VI. Rescission and Nullity of Partition (Arts. 1097–1105)</option>
+      <option value="#art-1097">&nbsp;&nbsp;↳ Art. 1097: Contract Grounds, Nullity vs. Rescission</option>
+      <option value="#art-1098-1102">&nbsp;&nbsp;↳ Arts. 1098–1102: One-Fourth (1/4) Lesion, Prescription &amp; Alienation Bar</option>
+      <option value="#art-1103-1105">&nbsp;&nbsp;↳ Arts. 1103–1105: Omission, Preterition &amp; Inclusion of Non-Heir Triad</option>
+      <option value="#summary-part-p-vi">&nbsp;&nbsp;&nbsp;&nbsp;&#9733; Partition Part VI Summary Brief Reviewer</option>
+      <option value="#part-p-vii">VII. Partition Master Consolidation (Cases, ALAC Drills, Mnemonics &amp; Recall)</option>
+      <option value="#p-case-index">&nbsp;&nbsp;↳ Partition Jurisprudence Index</option>
+      <option value="#p-alac-drills">&nbsp;&nbsp;↳ Partition ALAC Exercises</option>
+      <option value="#p-mnemonic-bank">&nbsp;&nbsp;↳ Partition Memory Anchors Bank</option>
+      <option value="#p-active-recall">&nbsp;&nbsp;↳ Partition Active Recall Questions</option>
     </select>
     <button type="button" class="nav-hl-toggle" id="hlToggleBtn" aria-pressed="true" onclick="document.body.classList.toggle('hl-off'); const off = document.body.classList.contains('hl-off'); this.textContent = off ? 'Highlights: OFF' : 'Highlights: ON'; this.setAttribute('aria-pressed', String(!off));">Highlights: ON</button>
   </div>
@@ -628,60 +642,69 @@ details.recall-item .recall-ans {
 
 <div class="document-container">
 
-  <h1>Philippine Succession Law: Collation (Articles 1061 to 1077)</h1>
+  <h1>Philippine Succession Law: Collation &amp; Partition (Articles 1061 to 1105)</h1>
   <p class="doc-subtitle">
-    <strong>Consolidated Intensive Master Reviewer</strong> &mdash; Book III, Title IV, Chapter 4, Section 5 of the Civil Code of the Philippines<br>
-    Synthesizing <span class="src-badge src-paras">Paras</span> Justice Edgardo L. Paras, <span class="src-badge src-jurado">Jurado</span> Desiderio P. Jurado, and <span class="src-badge src-rabuya">Rabuya</span> Elmer T. Rabuya. <em>Hover or tap any dotted <span class="c-teal"><strong>Article</strong></span> citation for verbatim statutory text.</em>
+    <strong>Consolidated Intensive Master Reviewer</strong> &mdash; Book III, Title IV, Chapter 4, Sections 5 &amp; 6 of the Civil Code of the Philippines<br>
+    Synthesizing <span class="src-badge src-paras">Paras</span> Justice Edgardo L. Paras, <span class="src-badge src-jurado">Jurado</span> Desiderio P. Jurado, <span class="src-badge src-rabuya">Rabuya</span> Elmer T. Rabuya, and <span class="src-badge src-selected">Selected</span> Selected Succession Materials.<br>
+    <em>Hover or tap any dotted <span class="c-teal"><strong>Article / Rule</strong></span> citation anywhere in the document for verbatim statutory text.</em>
   </p>
 
   <!-- BIG PICTURE SUBJECT MAP -->
-  <h3 id="big-picture-map">Big-Picture Subject Map: Where Collation Sits in Succession</h3>
+  <h3 id="big-picture-map">Big-Picture Subject Map: From Death to Final Distribution</h3>
   <div class="ui-box">
     <div class="ui-grid">
       <div class="ui-col">
         <div class="ui-num">Ch. 4, Sec. 1–4</div>
         <div class="ui-kicker">PREREQUISITES</div>
-        <div class="ui-title">Right of Accretion, Capacity, Acceptance &amp; Executors</div>
-        <div class="ui-sub">Establishes who inherits, who administers (<span class="art-ref" data-art="1058">Arts. 1058–1060</span>), and who accepts or repudiates.</div>
+        <div class="ui-title">Accretion, Capacity, Acceptance &amp; Executors</div>
+        <div class="ui-sub">Establishes who inherits, who administers (<span class="art-ref" data-art="1058-1060">Arts. 1058–1060</span>), and who accepts or repudiates.</div>
       </div>
       <div class="ui-col">
         <div class="ui-num">Sec. 5</div>
-        <div class="ui-kicker">YOU ARE HERE</div>
-        <div class="ui-title">Collation (<span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1077">1077</span>)</div>
+        <div class="ui-kicker">MODULE A: COLLATION</div>
+        <div class="ui-title">Collation (<span class="art-ref" data-art="1061-1077">Arts. 1061–1077</span>)</div>
         <div class="ui-sub">Brings lifetime gratuitous advances back into accounting to compute legitimes and equalize co-heirs.</div>
       </div>
       <div class="ui-col">
         <div class="ui-num">Sec. 6</div>
-        <div class="ui-kicker">NEXT STAGE</div>
-        <div class="ui-title">Partition &amp; Distribution (Arts. 1078–1105)</div>
-        <div class="ui-sub">Terminates co-ownership and physically delivers net shares after collation and equalization.</div>
+        <div class="ui-kicker">MODULE B: PARTITION</div>
+        <div class="ui-title">Partition &amp; Distribution (<span class="art-ref" data-art="1078-1105">Arts. 1078–1105</span>)</div>
+        <div class="ui-sub">Terminates co-ownership, governs legal redemption &amp; warranties, and remedies lesion or preterition.</div>
       </div>
     </div>
   </div>
 
   <div class="ui-box ui-workflow">
     <div class="ui-step-plain">
-      <div class="ui-kicker">MANRESA'S THREE LINKS IN A SINGLE CHAIN (7 MANRESA 541, 582–583)</div>
-      <div class="ui-title">How the Estate Moves from Death to Final Partition</div>
+      <div class="ui-kicker">MANRESA'S THREE LINKS IN A SINGLE CHAIN (7 MANRESA 541, 582–583) &rarr; PARTITION</div>
+      <div class="ui-title">How the Estate Moves from Death to Exclusive Ownership</div>
     </div>
     <div class="ui-connector">&darr;</div>
     <div class="ui-step-card">
-      <div class="ui-title">1. Collation (Computation &mdash; <span class="c-teal"><strong>Arts. 908–909</strong></span>)</div>
+      <div class="ui-title">1. Collation / Computation (<span class="art-ref" data-art="908,909">Arts. 908–909</span>)</div>
       <div class="ui-sub">Fictitiously add the value of all lifetime donations (to compulsory heirs and strangers) to the net hereditary estate.</div>
     </div>
     <div class="ui-connector">&darr;</div>
     <div class="ui-step-card">
-      <div class="ui-title">2. Imputation (Charging &mdash; <span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1077">1077</span>)</div>
+      <div class="ui-title">2. Imputation / Charging (<span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1077">1077</span>)</div>
       <div class="ui-sub">Charge gifts to compulsory heirs against their <strong>legitime</strong> (equality) and gifts to strangers or dispensed gifts against the <strong>free portion</strong> (preference).</div>
     </div>
     <div class="ui-connector">&darr;</div>
-    <div class="ui-step-outcome">
-      <div class="ui-title">3. Reduction / Restitution (<span class="c-teal"><strong>Arts. 911–912</strong></span> in rel. to <span class="art-ref" data-art="1076">Art. 1076</span>)</div>
+    <div class="ui-step-card">
+      <div class="ui-title">3. Reduction / Restitution (<span class="art-ref" data-art="911,912">Arts. 911–912</span> in rel. to <span class="art-ref" data-art="1076">Art. 1076</span>)</div>
       <div class="ui-sub">Annul or physically return the excess of any gratuitous disposition that exceeds the free portion and impairs compulsory legitimes.</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">4. Partition &amp; Exclusive Ownership (<span class="art-ref" data-art="1078-1105">Arts. 1078–1105</span>)</div>
+      <div class="ui-sub">Terminate the interim co-ownership (<span class="art-ref" data-art="1078">Art. 1078</span>) and adjudicate specific assets with reciprocal warranties (<span class="art-ref" data-art="1091,1092">Arts. 1091–1092</span>).</div>
     </div>
   </div>
 
-  <hr>
+  <!-- ===================================================================== -->
+  <!--                     SECTION 5: COLLATION (1061-1077)                  -->
+  <!-- ===================================================================== -->
+  <h2 class="module-banner" id="section-collation">Section 5: Collation (Articles 1061 to 1077)</h2>
 
   <!-- PRELIMINARY NOTE -->
   <div class="context-compass">
@@ -689,7 +712,7 @@ details.recall-item .recall-ans {
       Chapter 4 (Common Provisions) &rarr; Section 4 (Executors and Administrators) &rarr; <strong>[YOU ARE HERE: Preliminary Note]</strong> &rarr; Section 5 (Collation)
     </div>
     <div class="compass-grid">
-      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1058">Arts. 1058</span>–1060 &amp; <span class="art-ref" data-art="CC-1491-3">Art. 1491(3)</span>; Rules of Court (Rules 78–90).</div>
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1058-1060">Arts. 1058–1060</span> &amp; <span class="art-ref" data-art="CC-1491-3">Art. 1491(3)</span>; Rules of Court (<span class="art-ref" data-art="ROC-90-1,ROC-90-2">Rule 90</span>).</div>
       <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Before collation and partition occur, an executor or administrator manages and liquidates the estate under judicial supervision.</div>
       <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents fiduciary self-dealing by strictly barring estate representatives from acquiring properties under their administration.</div>
     </div>
@@ -697,7 +720,7 @@ details.recall-item .recall-ans {
 
   <h3 id="preliminary-executors">Preliminary Note: Executors and Administrators (Articles 1058 to 1060) <span class="src-badge src-rabuya">Rabuya</span></h3>
   <ul>
-    <li><strong>Governing Law (<span class="art-ref" data-art="1058">Art. 1058</span>):</strong> The appointment, status, rights, and duties of executors and administrators of estates of deceased persons are governed by the <span class="c-green"><strong><u>Rules of Court</u></strong></span>.</li>
+    <li><strong>Governing Law (<span class="art-ref" data-art="1058">Art. 1058</span>):</strong> The appointment, status, rights, and duties of executors and administrators of estates of deceased persons are governed by the <span class="c-green"><strong><u>Rules of Court</u></strong></span> (while <span class="art-ref" data-art="1059">Art. 1059</span> applies preference of credits for insufficient estate assets and <span class="art-ref" data-art="1060">Art. 1060</span> allows trust corporations to serve as estate representatives).</li>
     <li><strong>Will Merely Appointing an Executor (<span class="c-burgundy"><em>Gardner on Wills</em></span>):</strong> An instrument duly executed that merely appoints an executor, <mark class="hl">without any directions as to what he shall do, is nonetheless a valid will</mark>.</li>
     <li><strong>Prohibition Against Purchase by Executor or Administrator (<span class="art-ref" data-art="CC-1491-3">Art. 1491, No. 3</span>):</strong>
       <ol>
@@ -710,13 +733,13 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART I ==================== -->
+  <!-- ==================== COLLATION PART I ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
       Chapter 4 (Common Provisions) &rarr; Section 5 (Collation) &rarr; <strong>[YOU ARE HERE: Part I — Art. 1061]</strong> &rarr; Part II (Dispensation &amp; Wills)
     </div>
     <div class="compass-grid">
-      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, Book III, Title IV, Chapter 4, Section 5, <span class="art-ref" data-art="1061">Article 1061</span> (formerly Art. 1035a); in relation to Arts. 908–909 &amp; Art. 87, Family Code.</div>
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, Book III, Title IV, Chapter 4, Section 5, <span class="art-ref" data-art="1061">Article 1061</span> (formerly Art. 1035a); in relation to <span class="art-ref" data-art="908,909">Arts. 908–909</span> &amp; <span class="art-ref" data-art="FC-87">Art. 87, Family Code</span>.</div>
       <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Establishes the foundational duty of compulsory heirs to bring lifetime gratuitous transfers into the accounting of the estate.</div>
       <div><span class="compass-tag">WHY THE LAW CARES</span> Enforces the natural presumption that lifetime gifts to children are advances on inheritance, preserving equality among compulsory heirs of the same class.</div>
     </div>
@@ -748,7 +771,7 @@ details.recall-item .recall-ans {
       <tbody>
         <tr>
           <td><strong>1. Mathematical Computation</strong> <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span></td>
-          <td><span class="c-teal"><strong>Arts. 908 &amp; 909</strong></span></td>
+          <td><span class="art-ref" data-art="908,909">Arts. 908 &amp; 909</span></td>
           <td>Purely fictitious arithmetic addition of all donations <em>inter vivos</em> (whether to compulsory heirs or to strangers) to the net value of the hereditary estate to determine total legitimes and the disposable free portion.</td>
         </tr>
         <tr>
@@ -758,7 +781,7 @@ details.recall-item .recall-ans {
         </tr>
         <tr>
           <td><strong>3. Actual Restitution / Reduction</strong> <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span></td>
-          <td><span class="c-teal"><strong>Arts. 911–912</strong></span> in rel. to <span class="art-ref" data-art="1076">Art. 1076</span></td>
+          <td><span class="art-ref" data-art="911,912">Arts. 911–912</span> in rel. to <span class="art-ref" data-art="1076">Art. 1076</span></td>
           <td>Actual physical return to the estate of that part of a lifetime donation found to be inofficious because it exceeds the disposable free portion and impairs legitimes.</td>
         </tr>
       </tbody>
@@ -768,8 +791,8 @@ details.recall-item .recall-ans {
   <ul>
     <li><strong>Paras's Operational Formulation of "Collation" &amp; "Not Collationable" <span class="src-badge src-paras">Paras</span>:</strong>
       <ol>
-        <li><strong>First Meaning of Collation:</strong> Computing/adding values to the estate and <span class="c-green"><strong><u>charging them to the LEGITIME</u></strong></span> (<span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1064">1064</span>) — applies to ordinary donations <em>inter vivos</em> to compulsory heirs.</li>
-        <li><strong>Second Meaning of Collation:</strong> Computing/adding values to the estate and <span class="c-green"><strong><u>charging them to the FREE PORTION</u></strong></span> (<span class="art-ref" data-art="1062">Arts. 1062</span>–<span class="art-ref" data-art="1063">1063</span>) — applies when collation is dispensed with, when the donee repudiates, or when donated to strangers.</li>
+        <li><strong>First Meaning of Collation:</strong> Computing/adding values to the estate and <span class="c-green"><strong><u>charging them to the LEGITIME</u></strong></span> (<span class="art-ref" data-art="1061-1064">Arts. 1061–1064</span>) — applies to ordinary donations <em>inter vivos</em> to compulsory heirs.</li>
+        <li><strong>Second Meaning of Collation:</strong> Computing/adding values to the estate and <span class="c-green"><strong><u>charging them to the FREE PORTION</u></strong></span> (<span class="art-ref" data-art="1062,1063">Arts. 1062–1063</span>) — applies when collation is dispensed with, when the donee repudiates, or when donated to strangers.</li>
         <li><strong>First Nuance of "Not Collationable":</strong> Computed and added to the estate, but <strong>charged to the free portion</strong> rather than the legitime.</li>
         <li><strong>Second Nuance of "Not Collationable":</strong> <mark class="hl">NOT even computed or added to the estate at all</mark>, because it forms no part of the hereditary estate (e.g., <span class="art-ref" data-art="1067">Art. 1067</span> support and medical expenses).</li>
       </ol>
@@ -815,7 +838,7 @@ details.recall-item .recall-ans {
 
   <h4>D. Covered Parties, Exclusions, and Collatable Transfers</h4>
   <ul>
-    <li><strong>Strangers vs. Compulsory Heirs:</strong> Donations to strangers are <mark class="hl">still collated in the first sense (computation under Arts. 908–909)</mark> to determine if legitimes are impaired, but are <strong>imputed against the disposable free portion</strong> rather than a legitime (<span class="c-burgundy"><em>Lucerna Vda. de Tupas v. RTC</em></span>, <span class="c-teal">G.R. No. 65800</span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span>.</li>
+    <li><strong>Strangers vs. Compulsory Heirs:</strong> Donations to strangers are <mark class="hl">still collated in the first sense (computation under <span class="art-ref" data-art="908,909">Arts. 908–909</span>)</mark> to determine if legitimes are impaired, but are <strong>imputed against the disposable free portion</strong> rather than a legitime (<span class="c-burgundy"><em>Lucerna Vda. de Tupas v. RTC</em></span>, <span class="c-teal">G.R. No. 65800</span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span>.</li>
     <li><strong>Why the Surviving Spouse is Excluded from <span class="art-ref" data-art="1061">Art. 1061</span> <span class="src-badge src-paras">Paras</span> <span class="src-badge src-rabuya">Rabuya</span>:</strong>
       <ol>
         <li>Although a compulsory heir, donations or grants of gratuitous advantage between spouses during the marriage are <span class="c-rust"><strong><u>expressly null and void</u></strong></span> under former Art. 133 of the Civil Code (now <span class="art-ref" data-art="FC-87">Art. 87 of the Family Code</span>); ownership never left the donor's estate.</li>
@@ -859,13 +882,13 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-i">
     <div class="summary-hdr">
-      <h4>Part I Summary Brief Reviewer &mdash; General Concepts &amp; Duty to Collate (Art. 1061)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part I Summary Brief Reviewer &mdash; General Concepts &amp; Duty to Collate (<span class="art-ref" data-art="1061">Art. 1061</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
       <ul>
-        <li>Preliminary rules on Executors &amp; Administrators (<span class="art-ref" data-art="1058">Arts. 1058</span>–1060; <span class="art-ref" data-art="CC-1491-3">Art. 1491[3]</span>; <span class="c-burgundy"><em>Rubias v. Batiller</em></span>).</li>
+        <li>Preliminary rules on Executors &amp; Administrators (<span class="art-ref" data-art="1058-1060">Arts. 1058–1060</span>; <span class="art-ref" data-art="CC-1491-3">Art. 1491[3]</span>; <span class="c-burgundy"><em>Rubias v. Batiller</em></span>).</li>
         <li>Three senses of collation (Computation, Imputation, Restitution), requisites, direct/indirect transfers, exclusions (surviving spouse under <span class="art-ref" data-art="FC-87">Art. 87 FC</span>; life insurance), and key case law (<span class="art-ref" data-art="1061">Art. 1061</span>).</li>
       </ul>
       <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
@@ -874,22 +897,22 @@ details.recall-item .recall-ans {
           <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
           <tbody>
             <tr><td><strong>"Advances on Legitime"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td>Core presumption of <span class="art-ref" data-art="1061">Art. 1061</span>: lifetime gifts to compulsory heirs are advances on inheritance, not favoritism.</td></tr>
-            <tr><td><strong>C-I-R Chain</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Manresa's 3-step sequence: <strong>C</strong>omputation (Art. 908) &rarr; <strong>I</strong>mputation (Arts. 1061–1077) &rarr; <strong>R</strong>eduction/Restitution (Arts. 911–912).</td></tr>
-            <tr><td><strong>P-L-I-N</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>4 Requisites of Art. 1061: <strong>P</strong>lurality of compulsory heirs, <strong>L</strong>ifetime liberality, <strong>I</strong>dentity of heir/donee, <strong>N</strong>o dispensation/inofficiousness.</td></tr>
+            <tr><td><strong>C-I-R Chain</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Manresa's 3-step sequence: <strong>C</strong>omputation (<span class="art-ref" data-art="908">Art. 908</span>) &rarr; <strong>I</strong>mputation (<span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1077">1077</span>) &rarr; <strong>R</strong>eduction/Restitution (<span class="art-ref" data-art="911,912">Arts. 911–912</span>).</td></tr>
+            <tr><td><strong>P-L-I-N</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>4 Requisites of <span class="art-ref" data-art="1061">Art. 1061</span>: <strong>P</strong>lurality of compulsory heirs, <strong>L</strong>ifetime liberality, <strong>I</strong>dentity of heir/donee, <strong>N</strong>o dispensation/inofficiousness.</td></tr>
           </tbody>
         </table>
       </div>
       <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
       <ul>
         <li>Collation in Section 5 means <strong>imputation</strong>; value at donation (not physical return) is collated unless totally inofficious.</li>
-        <li>Donations to strangers are still computed under Art. 908, but imputed to the free portion.</li>
+        <li>Donations to strangers are still computed under <span class="art-ref" data-art="908">Art. 908</span>, but imputed to the free portion.</li>
         <li>Bona fide onerous sales and life insurance proceeds are excluded from collation.</li>
       </ul>
       <div class="summary-trap-box">
         <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
         <ul>
           <li><strong>"Irrevocable" Trap:</strong> A deed saying the donation is "irrevocable" does NOT dispense with collation (<span class="c-burgundy"><em>Buhay De Roma v. CA</em></span>).</li>
-          <li><strong>Surviving Spouse Trap:</strong> The surviving spouse is a compulsory heir, yet excluded from Art. 1061 because inter-spousal donations during marriage are void (<span class="art-ref" data-art="FC-87">Art. 87 FC</span>).</li>
+          <li><strong>Surviving Spouse Trap:</strong> The surviving spouse is a compulsory heir, yet excluded from <span class="art-ref" data-art="1061">Art. 1061</span> because inter-spousal donations during marriage are void (<span class="art-ref" data-art="FC-87">Art. 87 FC</span>).</li>
           <li><strong>Executor Purchase Trap:</strong> Purchase of estate property by an executor/administrator is <strong>void</strong>, not merely voidable (<span class="c-burgundy"><em>Rubias v. Batiller</em></span>).</li>
         </ul>
       </div>
@@ -898,13 +921,13 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART II ==================== -->
+  <!-- ==================== COLLATION PART II ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
       Part I (General Duty) &rarr; <strong>[YOU ARE HERE: Part II — Arts. 1062 &amp; 1063]</strong> &rarr; Part III (Representation, Ascendants &amp; Spouses)
     </div>
     <div class="compass-grid">
-      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1062">Article 1062</span> (1036) and <span class="art-ref" data-art="1063">Article 1063</span> (1037); in relation to Arts. 908 &amp; 911.</div>
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1062">Article 1062</span> (1036) and <span class="art-ref" data-art="1063">Article 1063</span> (1037); in relation to <span class="art-ref" data-art="908">Arts. 908</span> &amp; <span class="art-ref" data-art="911">911</span>.</div>
       <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Defines the exact exceptions where gratuitous transfers shift from being imputed to the legitime (equality) to the free portion (preference).</div>
       <div><span class="compass-tag">WHY THE LAW CARES</span> Respects the decedent's freedom to favor an heir out of the disposable free portion while enforcing an absolute firewall around co-heirs' legitimes.</div>
     </div>
@@ -918,7 +941,7 @@ details.recall-item .recall-ans {
   </div>
 
   <ul>
-    <li><strong>Technical Inaccuracy of "Collation Shall Not Take Place" <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span>:</strong> This phrase does <strong>NOT</strong> mean the gift escapes the mathematical computation of Art. 908. Its value <mark class="hl">must still be added to the net estate</mark> to compute legitimes and test for inofficiousness. It strictly means the gift is <span class="c-green"><strong><u>NOT imputed to the donee's legitime, but is charged against the disposable free portion</u></strong></span>.</li>
+    <li><strong>Technical Inaccuracy of "Collation Shall Not Take Place" <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-rabuya">Rabuya</span>:</strong> This phrase does <strong>NOT</strong> mean the gift escapes the mathematical computation of <span class="art-ref" data-art="908">Art. 908</span>. Its value <mark class="hl">must still be added to the net estate</mark> to compute legitimes and test for inofficiousness. It strictly means the gift is <span class="c-green"><strong><u>NOT imputed to the donee's legitime, but is charged against the disposable free portion</u></strong></span>.</li>
     <li><strong>Two Grounds Shifting Imputation to the Free Portion:</strong>
       <ol>
         <li><strong>Express Dispensation by the Donor ("No Collation" Clause):</strong> Explicitly stated in the deed of donation or in a will. Purpose: to confer a <strong>preference (favoritism)</strong> over and above the heir's legitime.</li>
@@ -976,8 +999,8 @@ details.recall-item .recall-ans {
         </table>
       </div>
     </li>
-    <li><strong>Inviolability of Legitimes:</strong> Whether charged to the free portion or legitime, a legacy/devise can never impair co-heirs' legitimes; otherwise it is reduced under <span class="c-teal"><strong>Art. 911</strong></span>.</li>
-    <li><strong>Inapplicability:</strong> Under <span class="c-burgundy"><em>Marina Dizon-Rivera v. Estela Dizon</em></span> (<span class="c-teal">L-24561, June 30, 1970</span>) <span class="src-badge src-paras">Paras</span>, where a testatrix partitions her entire estate by will without prior lifetime donations, <span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1063">1063</span> do not apply.</li>
+    <li><strong>Inviolability of Legitimes:</strong> Whether charged to the free portion or legitime, a legacy/devise can never impair co-heirs' legitimes; otherwise it is reduced under <span class="art-ref" data-art="911">Art. 911</span>.</li>
+    <li><strong>Inapplicability:</strong> Under <span class="c-burgundy"><em>Marina Dizon-Rivera v. Estela Dizon</em></span> (<span class="c-teal">L-24561, June 30, 1970</span>) <span class="src-badge src-paras">Paras</span>, where a testatrix partitions her entire estate by will without prior lifetime donations, <span class="art-ref" data-art="1061-1063">Arts. 1061–1063</span> do not apply.</li>
   </ul>
 
   <div class="problem-card">
@@ -996,8 +1019,8 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-ii">
     <div class="summary-hdr">
-      <h4>Part II Summary Brief Reviewer &mdash; Dispensation, Repudiation &amp; Wills (Arts. 1062–1063)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part II Summary Brief Reviewer &mdash; Dispensation, Repudiation &amp; Wills (<span class="art-ref" data-art="1062,1063">Arts. 1062–1063</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
@@ -1016,13 +1039,13 @@ details.recall-item .recall-ans {
       </div>
       <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
       <ul>
-        <li>Dispensation and repudiation never eliminate Art. 908 mathematical computation; they only shift imputation to the free portion.</li>
+        <li>Dispensation and repudiation never eliminate <span class="art-ref" data-art="908">Art. 908</span> mathematical computation; they only shift imputation to the free portion.</li>
         <li>Repudiation reduces the number of compulsory heirs sharing the legitime, which can increase each remaining heir's legitime and trigger inofficiousness.</li>
       </ul>
       <div class="summary-trap-box">
         <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
         <ul>
-          <li><strong>Omission Trap:</strong> Never omit a "not collationable" donation from the Art. 908 estate base—always add it first to check if legitimes are impaired.</li>
+          <li><strong>Omission Trap:</strong> Never omit a "not collationable" donation from the <span class="art-ref" data-art="908">Art. 908</span> estate base—always add it first to check if legitimes are impaired.</li>
           <li><strong>Donation vs. Legacy Trap:</strong> A ₱100k lifetime gift to Child A and a ₱100k legacy to Child B do NOT yield equal totals; B ends up ₱100k ahead.</li>
         </ul>
       </div>
@@ -1031,7 +1054,7 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART III ==================== -->
+  <!-- ==================== COLLATION PART III ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
       Part II (Dispensation &amp; Wills) &rarr; <strong>[YOU ARE HERE: Part III — Arts. 1064 to 1066]</strong> &rarr; Part IV (Expenses Matrix)
@@ -1081,8 +1104,8 @@ details.recall-item .recall-ans {
     <li><strong>The Rule:</strong> If a grandparent donates ₱100,000 to grandchild C, and upon the grandparent's death the child A (C's father) is alive and inherits in his own right, <span class="c-green"><strong><u>A is NOT obliged to collate what C received</u></strong></span> (no identity of heir and beneficiary).</li>
     <li><strong>Does Grandchild C Collate? <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong>
       <ol>
-        <li>In the <strong>first sense (Art. 908 computation)</strong>: <strong>YES</strong> — donations to strangers are added to check if legitimes are impaired.</li>
-        <li>In the <strong>second sense (imputation to legitime)</strong>: <strong>NO</strong> — C is excluded by his living father A and is a stranger to the succession; the gift is charged against the <strong>disposable free portion</strong> (Art. 909).</li>
+        <li>In the <strong>first sense (<span class="art-ref" data-art="908">Art. 908</span> computation)</strong>: <strong>YES</strong> — donations to strangers are added to check if legitimes are impaired.</li>
+        <li>In the <strong>second sense (imputation to legitime)</strong>: <strong>NO</strong> — C is excluded by his living father A and is a stranger to the succession; the gift is charged against the <strong>disposable free portion</strong> (<span class="art-ref" data-art="909">Art. 909</span>).</li>
       </ol>
     </li>
   </ul>
@@ -1098,8 +1121,8 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-iii">
     <div class="summary-hdr">
-      <h4>Part III Summary Brief Reviewer &mdash; Representation, Ascendants &amp; Spouses (Arts. 1064–1066)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part III Summary Brief Reviewer &mdash; Representation, Ascendants &amp; Spouses (<span class="art-ref" data-art="1064-1066">Arts. 1064–1066</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
@@ -1124,8 +1147,8 @@ details.recall-item .recall-ans {
       <div class="summary-trap-box">
         <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
         <ul>
-          <li><strong>Own Right vs. Representation Trap:</strong> If ALL children repudiate so grandchildren inherit in their <em>own right</em>, Art. 1064 Par. 1 does NOT apply—they collate only what they personally received.</li>
-          <li><strong>Art. 1066 vs. Art. 1072 Trap:</strong> Art. 1066 covers gifts given <em>TO</em> spouses (child + in-law); Art. 1072 covers gifts given <em>BY</em> spouses (father + mother).</li>
+          <li><strong>Own Right vs. Representation Trap:</strong> If ALL children repudiate so grandchildren inherit in their <em>own right</em>, <span class="art-ref" data-art="1064" data-para="1">Art. 1064 Par. 1</span> does NOT apply—they collate only what they personally received.</li>
+          <li><strong><span class="art-ref" data-art="1066">Art. 1066</span> vs. <span class="art-ref" data-art="1072">Art. 1072</span> Trap:</strong> <span class="art-ref" data-art="1066">Art. 1066</span> covers gifts given <em>TO</em> spouses (child + in-law); <span class="art-ref" data-art="1072">Art. 1072</span> covers gifts given <em>BY</em> spouses (father + mother).</li>
         </ul>
       </div>
     </div>
@@ -1133,7 +1156,7 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART IV ==================== -->
+  <!-- ==================== COLLATION PART IV ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
       Part III (Representation &amp; Third Parties) &rarr; <strong>[YOU ARE HERE: Part IV — Arts. 1067 to 1070]</strong> &rarr; Part V (Valuation &amp; Equalization)
@@ -1205,7 +1228,7 @@ details.recall-item .recall-ans {
   <ul>
     <li><strong>Scope &amp; Default Rule:</strong> Covers college, vocational, graduate, and artistic training (tuition, books, matriculation, examination fees, locally or abroad). Presumed <strong>NOT an advance on the legitime</strong> (charged to the free portion), unless (1) parents so provide, or (2) they impair the legitime.</li>
     <li><strong>Mandatory "Living-at-Home" Deduction:</strong> Whenever collation is required, the estate must deduct what the child would have spent living at home (<span class="c-burgundy">7 Manresa 630</span>). Under <span class="c-burgundy"><em>Adan v. Casili and Adan</em></span> (<span class="c-teal">76 Phil. 279</span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-rabuya">Rabuya</span>, absent contrary proof, <mark class="hl">one-half (50%) of the educational expenses must be deducted</mark> as ordinary home support.</li>
-    <li><strong>Expenses Incurred AFTER Completion of Career (<span class="c-burgundy">7 Manresa 621 / 578–579</span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong> <span class="art-ref" data-art="1068">Art. 1068</span> applies strictly to expenses in <em>acquiring</em> the career. Outlays made <strong>after graduation</strong> to establish a practice or business—buying an <em>hacienda</em>, law library, office furniture, medical instruments, pharmacy stock, or maritime vessel—are <span class="c-green"><strong><u>ordinary donations <em>inter vivos</em> collatable under Art. 1061</u></strong></span>.</li>
+    <li><strong>Expenses Incurred AFTER Completion of Career (<span class="c-burgundy">7 Manresa 621 / 578–579</span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong> <span class="art-ref" data-art="1068">Art. 1068</span> applies strictly to expenses in <em>acquiring</em> the career. Outlays made <strong>after graduation</strong> to establish a practice or business—buying an <em>hacienda</em>, law library, office furniture, medical instruments, pharmacy stock, or maritime vessel—are <span class="c-green"><strong><u>ordinary donations <em>inter vivos</em> collatable under <span class="art-ref" data-art="1061">Art. 1061</span></u></strong></span>.</li>
   </ul>
 
   <h4 id="art-1069">Article 1069: Payment of Debts, Election Expenses, and Fines</h4>
@@ -1259,8 +1282,8 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-iv">
     <div class="summary-hdr">
-      <h4>Part IV Summary Brief Reviewer &mdash; Expenses &amp; Wedding Gifts (Arts. 1067–1070)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part IV Summary Brief Reviewer &mdash; Expenses &amp; Wedding Gifts (<span class="art-ref" data-art="1067-1070">Arts. 1067–1070</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
@@ -1280,14 +1303,14 @@ details.recall-item .recall-ans {
       </div>
       <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
       <ul>
-        <li>Post-graduation setup costs (law library, business, clinic) fall under Art. 1061, NOT Art. 1068.</li>
-        <li>Parent paying a child's debt as guarantor creates an ordinary debt (survives repudiation); paying out of pity creates collation (Art. 1069).</li>
+        <li>Post-graduation setup costs (law library, business, clinic) fall under <span class="art-ref" data-art="1061">Art. 1061</span>, NOT <span class="art-ref" data-art="1068">Art. 1068</span>.</li>
+        <li>Parent paying a child's debt as guarantor creates an ordinary debt (survives repudiation); paying out of pity creates collation (<span class="art-ref" data-art="1069">Art. 1069</span>).</li>
       </ul>
       <div class="summary-trap-box">
         <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
         <ul>
-          <li><strong>Post-Mortem Support Trap:</strong> Support allowances paid <em>after</em> death during estate settlement are advances on inheritance (<span class="c-burgundy"><em>Lesaca v. Lesaca</em></span>), NOT exempt under Art. 1067.</li>
-          <li><strong>1/10 Base Trap:</strong> Art. 1070's 1/10 ceiling is computed on the <strong>disposable free portion</strong>, NOT on the gross hereditary estate!</li>
+          <li><strong>Post-Mortem Support Trap:</strong> Support allowances paid <em>after</em> death during estate settlement are advances on inheritance (<span class="c-burgundy"><em>Lesaca v. Lesaca</em></span>), NOT exempt under <span class="art-ref" data-art="1067">Art. 1067</span>.</li>
+          <li><strong>1/10 Base Trap:</strong> <span class="art-ref" data-art="1070">Art. 1070</span>'s 1/10 ceiling is computed on the <strong>disposable free portion</strong>, NOT on the gross hereditary estate!</li>
         </ul>
       </div>
     </div>
@@ -1295,7 +1318,7 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART V ==================== -->
+  <!-- ==================== COLLATION PART V ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
       Part IV (Expenses Matrix) &rarr; <strong>[YOU ARE HERE: Part V — Arts. 1071 to 1074]</strong> &rarr; Part VI (Fruits, Improvements &amp; Disputes)
@@ -1303,7 +1326,7 @@ details.recall-item .recall-ans {
     <div class="compass-grid">
       <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1071">Articles 1071</span> (1045a), <span class="art-ref" data-art="1072">1072</span> (1046a), <span class="art-ref" data-art="1073">1073</span> (1047), and <span class="art-ref" data-art="1074">1074</span> (1048).</div>
       <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Translates the obligation to collate into exact peso figures and provides the mechanics for equalizing co-heirs during partition.</div>
-      <div><span class="compass-tag">WHY THE LAW CARES</span> Fixes valuation at perfection so title stability is preserved (*res perit domino*), while guaranteeing co-heirs qualitative and quantitative parity.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Fixes valuation at perfection so title stability is preserved (<em>res perit domino</em>), while guaranteeing co-heirs qualitative and quantitative parity.</div>
     </div>
   </div>
 
@@ -1342,9 +1365,9 @@ details.recall-item .recall-ans {
       <thead>
         <tr>
           <th>Property Donated</th>
-          <th>1st Priority (Art. 1073)</th>
-          <th>2nd Priority (Art. 1074)</th>
-          <th>3rd Priority / Limit (Art. 1074)</th>
+          <th>1st Priority (<span class="art-ref" data-art="1073">Art. 1073</span>)</th>
+          <th>2nd Priority (<span class="art-ref" data-art="1074">Art. 1074</span>)</th>
+          <th>3rd Priority / Limit (<span class="art-ref" data-art="1074">Art. 1074</span>)</th>
         </tr>
       </thead>
       <tbody>
@@ -1366,13 +1389,13 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-v">
     <div class="summary-hdr">
-      <h4>Part V Summary Brief Reviewer &mdash; Valuation, Risk &amp; Equalization (Arts. 1071–1074)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part V Summary Brief Reviewer &mdash; Valuation, Risk &amp; Equalization (<span class="art-ref" data-art="1071-1074">Arts. 1071–1074</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
       <ul>
-        <li>Valuation at perfection and risk of loss (<span class="art-ref" data-art="1071">Art. 1071</span>; <span class="c-burgundy"><em>Guerrero</em></span>; <span class="c-burgundy"><em>Tordilla</em></span>), joint parental donations (<span class="art-ref" data-art="1072">Art. 1072</span>), and immovable vs. movable equalization hierarchies (<span class="art-ref" data-art="1073">Arts. 1073</span>–<span class="art-ref" data-art="1074">1074</span>).</li>
+        <li>Valuation at perfection and risk of loss (<span class="art-ref" data-art="1071">Art. 1071</span>; <span class="c-burgundy"><em>Guerrero</em></span>; <span class="c-burgundy"><em>Tordilla</em></span>), joint parental donations (<span class="art-ref" data-art="1072">Art. 1072</span>), and immovable vs. movable equalization hierarchies (<span class="art-ref" data-art="1073,1074">Arts. 1073–1074</span>).</li>
       </ul>
       <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
       <div class="table-scroll">
@@ -1401,13 +1424,13 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART VI ==================== -->
+  <!-- ==================== COLLATION PART VI ==================== -->
   <div class="context-compass">
     <div class="context-breadcrumb">
-      Part V (Valuation &amp; Equalization) &rarr; <strong>[YOU ARE HERE: Part VI — Arts. 1075 to 1077]</strong> &rarr; Part VII (Master Consolidation &amp; Drills)
+      Part V (Valuation &amp; Equalization) &rarr; <strong>[YOU ARE HERE: Part VI — Arts. 1075 to 1077]</strong> &rarr; Part VII (Collation Consolidation) &rarr; Section 6 (Partition)
     </div>
     <div class="compass-grid">
-      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1075">Articles 1075</span> (1049), <span class="art-ref" data-art="1076">1076</span> (n), and <span class="art-ref" data-art="1077">1077</span> (1050); Rule 90, Sec. 2, Rules of Court.</div>
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1075">Articles 1075</span> (1049), <span class="art-ref" data-art="1076">1076</span> (n), and <span class="art-ref" data-art="1077">1077</span> (1050); <span class="art-ref" data-art="ROC-90-2">Rule 90, Sec. 2, Rules of Court</span>.</div>
       <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Resolves post-death income, reimbursement on physical return, and procedural continuity when heirs contest collation.</div>
       <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents unjust enrichment over post-death fruits and stops tactical collation disputes from paralyzing estate distribution.</div>
     </div>
@@ -1421,7 +1444,7 @@ details.recall-item .recall-ans {
     For the purpose of ascertaining their amount, the fruits and interest of the property of the estate of the same kind and quality as that subject to collation shall be made the standard of assessment. (1049)
   </div>
   <ul>
-    <li><strong>Accrual Strictly from Death:</strong> Prior to death, fruits belong exclusively to the donee as owner. <mark class="hl">From the day succession opens (moment of death, Arts. 777 &amp; 781), all fruits and interests accrue to the common hereditary estate</mark>.</li>
+    <li><strong>Accrual Strictly from Death:</strong> Prior to death, fruits belong exclusively to the donee as owner. <mark class="hl">From the day succession opens (moment of death, <span class="art-ref" data-art="777">Art. 777</span> &amp; <span class="art-ref" data-art="781">Art. 781</span>), all fruits and interests accrue to the common hereditary estate</mark>.</li>
     <li><strong>Standard of Assessment:</strong> Yield of estate property of the same kind and quality.</li>
     <li><strong>Retention of Possession:</strong> The donee is <strong>not</strong> deprived of physical possession of the property pending partition (<span class="c-burgundy"><em>Guinguing v. Abuton</em></span>, <span class="c-teal">48 Phil. 144</span>) <span class="src-badge src-paras">Paras</span>.</li>
   </ul>
@@ -1440,7 +1463,7 @@ details.recall-item .recall-ans {
         <li><strong>Ornamental / Mere Pleasure:</strong> <strong>No reimbursement</strong>; donee has the right to remove them if no injury is caused to the estate.</li>
       </ol>
     </li>
-    <li><strong>Justice J.B.L. Reyes's Doctrinal Critique <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong> Because <span class="art-ref" data-art="1071">Art. 1071</span> abolishes collation in kind (only value is collated), physical return of an immovable occurs <strong>strictly as a "returning in kind" when a donation is revoked in its entirety as inofficious under Art. 912</strong> and the donee lacks cash. Hence, <mark class="hl">Art. 1076 properly belongs in the chapter on legitimes (reduction of inofficious donations)</mark>, not collation.</li>
+    <li><strong>Justice J.B.L. Reyes's Doctrinal Critique <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong> Because <span class="art-ref" data-art="1071">Art. 1071</span> abolishes collation in kind (only value is collated), physical return of an immovable occurs <strong>strictly as a "returning in kind" when a donation is revoked in its entirety as inofficious under <span class="art-ref" data-art="912">Art. 912</span></strong> and the donee lacks cash. Hence, <mark class="hl"><span class="art-ref" data-art="1076">Art. 1076</span> properly belongs in the chapter on legitimes (reduction of inofficious donations)</mark>, not collation.</li>
   </ul>
 
   <div class="problem-card">
@@ -1468,8 +1491,8 @@ details.recall-item .recall-ans {
 
   <div class="summary-capstone" id="summary-part-vi">
     <div class="summary-hdr">
-      <h4>Part VI Summary Brief Reviewer &mdash; Fruits, Improvements &amp; Disputes (Arts. 1075–1077)</h4>
-      <span class="summary-pill">Module Recap</span>
+      <h4>Part VI Summary Brief Reviewer &mdash; Fruits, Improvements &amp; Disputes (<span class="art-ref" data-art="1075-1077">Arts. 1075–1077</span>)</h4>
+      <span class="summary-pill">Collation Recap</span>
     </div>
     <div class="summary-body">
       <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
@@ -1503,10 +1526,10 @@ details.recall-item .recall-ans {
 
   <hr>
 
-  <!-- ==================== PART VII ==================== -->
-  <h3 id="part-vii">VII. Master Consolidation: Jurisprudence, ALAC Drills, Mnemonics &amp; Active Recall</h3>
+  <!-- ==================== COLLATION PART VII ==================== -->
+  <h3 id="part-vii">VII. Collation Master Consolidation: Jurisprudence, ALAC Drills, Mnemonics &amp; Active Recall</h3>
 
-  <h4 id="case-index">A. Master Jurisprudence Index (14 Controlling Cases Across Paras, Jurado &amp; Rabuya)</h4>
+  <h4 id="case-index">A. Master Collation Jurisprudence Index (14 Controlling Cases Across Paras, Jurado &amp; Rabuya)</h4>
   <div class="table-scroll">
     <table class="ui-table">
       <thead>
@@ -1522,8 +1545,8 @@ details.recall-item .recall-ans {
         <tr><td><span class="c-burgundy"><em>Sanchez v. CA</em></span>, <span class="c-teal">87 SCAD 463 (1997)</span></td><td><span class="art-ref" data-art="1061">Art. 1061</span></td><td>Bona fide notarized deeds of absolute sale are onerous and outside the scope of collation.</td></tr>
         <tr><td><span class="c-burgundy"><em>Zaragoza v. CA</em></span>, <span class="c-teal">G.R. No. 106401 (2000)</span></td><td><span class="art-ref" data-art="1061">Art. 1061</span></td><td>Partition <em>inter vivos</em> is valid unless legitimes are impaired; all compulsory co-heirs are indispensable parties in collation disputes.</td></tr>
         <tr><td><span class="c-burgundy"><em>Natividad P. Nazareno v. CA</em></span>, <span class="c-teal">G.R. No. 138842 (2000)</span></td><td><span class="art-ref" data-art="1061">Art. 1061</span></td><td>Collation is proper over implied-trust properties, but innocent purchasers for value relying on Torrens titles are protected.</td></tr>
-        <tr><td><span class="c-burgundy"><em>Marina Dizon-Rivera v. Estela Dizon</em></span>, <span class="c-teal">L-24561 (1970)</span></td><td><span class="art-ref" data-art="1063">Art. 1063</span></td><td>Arts. 1061–1063 do not apply where a testatrix partitions her entire estate by will with no prior lifetime donations.</td></tr>
-        <tr><td><span class="c-burgundy"><em>Lesaca v. Lesaca</em></span>, <span class="c-teal">L-3605</span></td><td><span class="art-ref" data-art="1067">Art. 1067</span></td><td>Post-mortem support allowances during estate settlement are advances on inheritance, not exempt under Art. 1067.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Marina Dizon-Rivera v. Estela Dizon</em></span>, <span class="c-teal">L-24561 (1970)</span></td><td><span class="art-ref" data-art="1063">Art. 1063</span></td><td><span class="art-ref" data-art="1061-1063">Arts. 1061–1063</span> do not apply where a testatrix partitions her entire estate by will with no prior lifetime donations.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Lesaca v. Lesaca</em></span>, <span class="c-teal">L-3605</span></td><td><span class="art-ref" data-art="1067">Art. 1067</span></td><td>Post-mortem support allowances during estate settlement are advances on inheritance, not exempt under <span class="art-ref" data-art="1067">Art. 1067</span>.</td></tr>
         <tr><td><span class="c-burgundy"><em>Adan v. Casili and Adan</em></span>, <span class="c-teal">76 Phil. 279</span></td><td><span class="art-ref" data-art="1068">Art. 1068</span></td><td>When career expenses are collated, <strong>50%</strong> is deducted as deemed living-at-home support.</td></tr>
         <tr><td><span class="c-burgundy"><em>Guerrero v. De la Cuesta</em></span>, <span class="c-teal">59 Phil. 464</span>; <span class="c-burgundy"><em>Tordilla v. Tordilla</em></span>, <span class="c-teal">60 Phil. 162</span></td><td><span class="art-ref" data-art="1071">Art. 1071</span></td><td>Value at the time of donation controls; deed recitals are not conclusive and true value is proved by evidence.</td></tr>
         <tr><td><span class="c-burgundy"><em>Guinguing v. Abuton</em></span>, <span class="c-teal">48 Phil. 144</span>; <span class="c-burgundy"><em>Ignacio v. Ignacio</em></span>, <span class="c-teal">5465-R</span>; <span class="c-burgundy"><em>Hernaez v. Hernaez</em></span>, <span class="c-teal">1 Phil. 718</span>; <span class="c-burgundy"><em>Vda. de Rodriguez v. CA</em></span>, <span class="c-teal">L-39532</span></td><td><span class="art-ref" data-art="1075">Arts. 1075</span>, <span class="art-ref" data-art="1077">1077</span></td><td>Donee retains possession pending partition; settled in administration; no prescription while donor lives; onerous donations collated only as to excess; premature before liquidation/partition.</td></tr>
@@ -1531,10 +1554,10 @@ details.recall-item .recall-ans {
     </table>
   </div>
 
-  <h4 id="alac-drills">B. Practical Problem-Solving Exercises (ALAC Method — Preserved in Full)</h4>
+  <h4 id="alac-drills">B. Collation Practical Problem-Solving Exercises (ALAC Method)</h4>
 
   <div class="alac-card">
-    <div class="problem-title">ALAC Exercise 1: Collation with Fortuitous Loss (Art. 1071) <span class="src-badge src-paras">Paras</span></div>
+    <div class="problem-title">ALAC Exercise 1: Collation with Fortuitous Loss (<span class="art-ref" data-art="1071">Art. 1071</span>) <span class="src-badge src-paras">Paras</span></div>
     <p><strong>Facts:</strong> Father F donated a vintage sports car worth ₱200,000 to son S in 2020. In 2022, an accidental fire totally destroyed the car without fault or insurance. F died intestate in 2024 leaving ₱800,000 cash, survived by sons S and D. S argues he has nothing to collate. Decide.</p>
     <ul>
       <li><strong>Answer:</strong> S's argument is untenable. S must collate ₱200,000; S receives <strong>₱300,000</strong> and D receives <strong>₱500,000</strong> from the remaining cash.</li>
@@ -1545,7 +1568,7 @@ details.recall-item .recall-ans {
   </div>
 
   <div class="alac-card">
-    <div class="problem-title">ALAC Exercise 2: Career Expenses &amp; Adan v. Casili Deduction (Art. 1068) <span class="src-badge src-paras">Paras</span></div>
+    <div class="problem-title">ALAC Exercise 2: Career Expenses &amp; <em>Adan v. Casili</em> Deduction (<span class="art-ref" data-art="1068">Art. 1068</span>) <span class="src-badge src-paras">Paras</span></div>
     <p><strong>Facts:</strong> P spent ₱100,000 for daughter D's pilot training and directed in his will that it be collated. The executor seeks to charge the entire ₱100,000 against D's legitime. Rule.</p>
     <ul>
       <li><strong>Answer:</strong> The executor cannot charge the full ₱100,000; 50% must be deducted under <span class="c-burgundy"><em>Adan v. Casili</em></span>, charging only the net balance of <strong>₱50,000</strong>.</li>
@@ -1556,7 +1579,7 @@ details.recall-item .recall-ans {
   </div>
 
   <div class="alac-card">
-    <div class="problem-title">ALAC Exercise 3: Collation by Representation (Art. 1064) <span class="src-badge src-jurado">Jurado</span></div>
+    <div class="problem-title">ALAC Exercise 3: Collation by Representation (<span class="art-ref" data-art="1064">Art. 1064</span>) <span class="src-badge src-jurado">Jurado</span></div>
     <p><strong>Facts:</strong> T died intestate leaving ₱60,000 cash, survived by son S and grandson G (child of predeceased son P). During life, T donated ₱20,000 to P and ₱10,000 to G. How is the estate distributed?</p>
     <ul>
       <li><strong>Answer:</strong> Son S receives <strong>₱45,000</strong> and grandson G receives <strong>₱15,000</strong>.</li>
@@ -1567,7 +1590,7 @@ details.recall-item .recall-ans {
   </div>
 
   <div class="alac-card">
-    <div class="problem-title">ALAC Exercise 4: Career Tuition vs. Post-Graduation Law Library (Art. 1068 vs. Art. 1061) <span class="src-badge src-jurado">Jurado</span></div>
+    <div class="problem-title">ALAC Exercise 4: Career Tuition vs. Post-Graduation Law Library (<span class="art-ref" data-art="1068">Art. 1068</span> vs. <span class="art-ref" data-art="1061">Art. 1061</span>) <span class="src-badge src-jurado">Jurado</span></div>
     <p><strong>Facts:</strong> P spent ₱300,000 on son L's law school tuition, and after L passed the bar, spent ₱200,000 buying him annotated law books and office furniture. Siblings demand collation of both. Rule.</p>
     <ul>
       <li><strong>Answer:</strong> The ₱300,000 tuition is <strong>exempt</strong>, but the ₱200,000 for law books and furniture <strong>must be collated</strong>.</li>
@@ -1577,13 +1600,13 @@ details.recall-item .recall-ans {
     </ul>
   </div>
 
-  <h4 id="mnemonic-bank">C. Master Memory Anchors &amp; Trigger Words Bank</h4>
+  <h4 id="mnemonic-bank">C. Collation Memory Anchors &amp; Trigger Words Bank</h4>
   <div class="table-scroll">
     <table class="ui-table">
       <thead><tr><th>Memory Anchor / Mnemonic</th><th>Source</th><th>Article &amp; Trigger Rule</th></tr></thead>
       <tbody>
         <tr><td><strong>"Advances on Legitime"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1061">Art. 1061</span> &mdash; Lifetime gifts to children are presumed advances on inheritance.</td></tr>
-        <tr><td><strong>C-I-R Chain</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Computation (Art. 908) &rarr; Imputation (Arts. 1061–1077) &rarr; Reduction (Arts. 911–912).</td></tr>
+        <tr><td><strong>C-I-R Chain</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Computation (<span class="art-ref" data-art="908">Art. 908</span>) &rarr; Imputation (<span class="art-ref" data-art="1061">Arts. 1061</span>–<span class="art-ref" data-art="1077">1077</span>) &rarr; Reduction (<span class="art-ref" data-art="911,912">Arts. 911–912</span>).</td></tr>
         <tr><td><strong>P-L-I-N</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><span class="art-ref" data-art="1061">Art. 1061</span> &mdash; Plurality, Lifetime liberality, Identity, No dispensation/inofficiousness.</td></tr>
         <tr><td><strong>"Presumption Reversed"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1062">Arts. 1062</span> vs. <span class="art-ref" data-art="1063">1063</span> &mdash; Donations presume Equality; Wills presume Preference.</td></tr>
         <tr><td><strong>D-R-W &rarr; Free</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Dispensation, Repudiation, and Will legacies/devises impute to the Free Portion.</td></tr>
@@ -1600,51 +1623,744 @@ details.recall-item .recall-ans {
     </table>
   </div>
 
-  <h4 id="active-recall">D. Consolidated Active Recall &amp; Recitation Questions (Tap to Reveal Model Answers)</h4>
+  <h4 id="active-recall">D. Collation Active Recall &amp; Recitation Questions (Tap to Reveal Model Answers)</h4>
 
   <details class="recall-item">
-    <summary>1. What are the three legal meanings of "collation" (Jurado/Rabuya), which meaning governs Arts. 1061–1077, and how does Paras frame "not collationable"?</summary>
-    <div class="recall-ans">The three meanings are (1) Mathematical Computation (Art. 908), (2) Imputation/Charging (Arts. 1061–1077 — the governing sense here), and (3) Actual Restitution/Reduction (Arts. 911–912). Paras frames "not collationable" in two nuances: either added to the estate but charged to the free portion (Art. 1062/1063), or not even added to the estate at all (Art. 1067).</div>
+    <summary>1. What are the three legal meanings of "collation" (Jurado/Rabuya), which meaning governs <span class="art-ref" data-art="1061-1077">Arts. 1061–1077</span>, and how does Paras frame "not collationable"?</summary>
+    <div class="recall-ans">The three meanings are (1) Mathematical Computation (<span class="art-ref" data-art="908">Art. 908</span>), (2) Imputation/Charging (<span class="art-ref" data-art="1061-1077">Arts. 1061–1077</span> — the governing sense here), and (3) Actual Restitution/Reduction (<span class="art-ref" data-art="911,912">Arts. 911–912</span>). Paras frames "not collationable" in two nuances: either added to the estate but charged to the free portion (<span class="art-ref" data-art="1062">Art. 1062</span>/<span class="art-ref" data-art="1063">1063</span>), or not even added to the estate at all (<span class="art-ref" data-art="1067">Art. 1067</span>).</div>
   </details>
 
   <details class="recall-item">
-    <summary>2. If a deed of donation specifies that the gift is "irrevocable," does this dispense with collation under Art. 1061?</summary>
+    <summary>2. If a deed of donation specifies that the gift is "irrevocable," does this dispense with collation under <span class="art-ref" data-art="1061">Art. 1061</span>?</summary>
     <div class="recall-ans"><strong>No.</strong> Under <em>Buhay De Roma v. CA</em> (L-46903), "irrevocable" merely reflects the nature of an <em>inter vivos</em> donation and does not constitute an express prohibition against collation.</div>
   </details>
 
   <details class="recall-item">
-    <summary>3. When a donor expressly dispenses with collation or a donee repudiates under Art. 1062, does the gift escape Art. 908 computation? Where is it charged?</summary>
-    <div class="recall-ans"><strong>No.</strong> It is still mathematically added to the net estate under Art. 908 to verify legitimes, but it is imputed against the <strong>disposable free portion</strong> (and reduced if inofficious).</div>
+    <summary>3. When a donor expressly dispenses with collation or a donee repudiates under <span class="art-ref" data-art="1062">Art. 1062</span>, does the gift escape <span class="art-ref" data-art="908">Art. 908</span> computation? Where is it charged?</summary>
+    <div class="recall-ans"><strong>No.</strong> It is still mathematically added to the net estate under <span class="art-ref" data-art="908">Art. 908</span> to verify legitimes, but it is imputed against the <strong>disposable free portion</strong> (and reduced if inofficious).</div>
   </details>
 
   <details class="recall-item">
-    <summary>4. Under Art. 1064, why must a grandchild collate a house given to his predeceased parent even if the parent sold it to a stranger before dying?</summary>
+    <summary>4. Under <span class="art-ref" data-art="1064">Art. 1064</span>, why must a grandchild collate a house given to his predeceased parent even if the parent sold it to a stranger before dying?</summary>
     <div class="recall-ans">Because a representative steps into the exact place, rights, and obligations of the person represented. Excusing collation would allow the representative branch to receive more than the parent could have claimed, destroying equality among branches.</div>
   </details>
 
   <details class="recall-item">
-    <summary>5. Under what circumstances are career/college expenses collated under Art. 1068, and what deduction applies under Adan v. Casili?</summary>
+    <summary>5. Under what circumstances are career/college expenses collated under <span class="art-ref" data-art="1068">Art. 1068</span>, and what deduction applies under <em>Adan v. Casili</em>?</summary>
     <div class="recall-ans">They are collated only if (1) the parents so provide, or (2) they impair the legitime. When collated, the sum the child would have spent living at home is deducted—presumptively <strong>50%</strong> under <em>Adan v. Casili</em> (76 Phil. 279).</div>
   </details>
 
   <details class="recall-item">
-    <summary>6. Why does a son whose debt was paid by his father as guarantor remain liable even if he repudiates the inheritance, unlike a son whose debt was paid out of parental pity (Art. 1069)?</summary>
-    <div class="recall-ans">When the father pays as guarantor (or lends expecting repayment), a <strong>debtor-creditor</strong> relationship exists, which survives repudiation. When paid out of pure liberality/pity, it is a collatable donation; upon repudiation under Art. 1062, the son is treated as a stranger and owes nothing unless the gift is inofficious.</div>
+    <summary>6. Why does a son whose debt was paid by his father as guarantor remain liable even if he repudiates the inheritance, unlike a son whose debt was paid out of parental pity (<span class="art-ref" data-art="1069">Art. 1069</span>)?</summary>
+    <div class="recall-ans">When the father pays as guarantor (or lends expecting repayment), a <strong>debtor-creditor</strong> relationship exists, which survives repudiation. When paid out of pure liberality/pity, it is a collatable donation; upon repudiation under <span class="art-ref" data-art="1062">Art. 1062</span>, the son is treated as a stranger and owes nothing unless the gift is inofficious.</div>
   </details>
 
   <details class="recall-item">
-    <summary>7. What is the exact formula for collating wedding gifts under Art. 1070?</summary>
+    <summary>7. What is the exact formula for collating wedding gifts under <span class="art-ref" data-art="1070">Art. 1070</span>?</summary>
     <div class="recall-ans">Compute the total estate base (net estate + donations), determine the <strong>disposable free portion</strong>, take <strong>1/10 of that free portion</strong> (exempt ceiling per child), and collate only the <strong>excess over 1/10</strong> as an advance against the child's legitime.</div>
   </details>
 
   <details class="recall-item">
-    <summary>8. If land donated at ₱500,000 in 2010 is worth ₱5,000,000 at death in 2024—or if a donated ₱500,000 car is totally destroyed in a typhoon—what amount is collated under Art. 1071?</summary>
-    <div class="recall-ans"><strong>₱500,000 in both cases.</strong> Under Art. 1071, only the value at the time of donation is collated; subsequent appreciation and fortuitous loss alike fall on the donee (<em>res perit domino</em>).</div>
+    <summary>8. If land donated at ₱500,000 in 2010 is worth ₱5,000,000 at death in 2024—or if a donated ₱500,000 car is totally destroyed in a typhoon—what amount is collated under <span class="art-ref" data-art="1071">Art. 1071</span>?</summary>
+    <div class="recall-ans"><strong>₱500,000 in both cases.</strong> Under <span class="art-ref" data-art="1071">Art. 1071</span>, only the value at the time of donation is collated; subsequent appreciation and fortuitous loss alike fall on the donee (<em>res perit domino</em>).</div>
   </details>
 
   <details class="recall-item">
-    <summary>9. Why did Justice J.B.L. Reyes criticize the text and placement of Art. 1076 regarding reimbursement for improvements?</summary>
-    <div class="recall-ans">Because Art. 1076 speaks of a donee who "collates in kind an immovable," whereas Art. 1071 abolished collation in kind in Philippine law. Physical return occurs only when a donation is revoked as completely inofficious under Art. 912, so Art. 1076 properly belongs in the chapter on legitimes (reduction of inofficious donations).</div>
+    <summary>9. Why did Justice J.B.L. Reyes criticize the text and placement of <span class="art-ref" data-art="1076">Art. 1076</span> regarding reimbursement for improvements?</summary>
+    <div class="recall-ans">Because <span class="art-ref" data-art="1076">Art. 1076</span> speaks of a donee who "collates in kind an immovable," whereas <span class="art-ref" data-art="1071">Art. 1071</span> abolished collation in kind in Philippine law. Physical return occurs only when a donation is revoked as completely inofficious under <span class="art-ref" data-art="912">Art. 912</span>, so <span class="art-ref" data-art="1076">Art. 1076</span> properly belongs in the chapter on legitimes (reduction of inofficious donations).</div>
+  </details>
+
+  <!-- ===================================================================== -->
+  <!--              SECTION 6: PARTITION AND DISTRIBUTION (1078-1105)        -->
+  <!-- ===================================================================== -->
+  <h2 class="module-banner" id="section-partition">Section 6: Partition and Distribution of the Estate (Articles 1078 to 1105)</h2>
+
+  <!-- ==================== PARTITION PART I ==================== -->
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      Section 5 (Collation: <span class="art-ref" data-art="1061-1077">Arts. 1061–1077</span>) &rarr; Section 6 (Partition) &rarr; <strong>[YOU ARE HERE: Part I — Arts. 1078 to 1082]</strong> &rarr; Part II (Right to Demand &amp; Prohibitions)
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, Book III, Title IV, Chapter 4, Section 6, <span class="art-ref" data-art="1078-1082">Articles 1078–1082</span>; in relation to <span class="art-ref" data-art="777">Art. 777</span>, <span class="art-ref" data-art="1347">Art. 1347</span>, &amp; Rules of Court (<span class="art-ref" data-art="ROC-69-1">Rule 69</span>, <span class="art-ref" data-art="ROC-74-1,ROC-74-2">Rule 74</span>, <span class="art-ref" data-art="ROC-90-1">Rule 90</span>).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Once collation determines each heir's net share, Section 6 governs how the interim co-ownership created at death is physically divided and converted into exclusive individual titles.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Balances prompt vesting of hereditary rights (<span class="art-ref" data-art="777">Art. 777</span>) with creditor protection, family enterprise continuity, and finality over nomenclature.</div>
+    </div>
+  </div>
+
+  <h3 id="part-p-i">I. General Concepts, Classifications, and Mechanics of Partition (Articles 1078 to 1082)</h3>
+
+  <h4 id="art-1078">Article 1078: Community Property / Co-Ownership Prior to Partition</h4>
+  <div class="codal-box">
+    <strong>Article 1078.</strong> Where there are two or more heirs, the whole estate of the decedent is, before its partition, owned in common by such heirs, subject to the payment of debts of the deceased. (n)
+  </div>
+
+  <h5>A. Big Picture &amp; Intuitive Foundation</h5>
+  <p>While successional rights are transmitted and vest at the precise moment of death (<span class="art-ref" data-art="777">Art. 777</span>), physical delivery and individual ownership of specific items cannot take place immediately. Outstanding debts, taxes, and administration expenses must first be settled. <span class="art-ref" data-art="1078">Article 1078</span> defines the legal condition of the estate during this interim interval: <mark class="hl">a community of co-ownership among all co-heirs over the collective hereditary mass</mark>.</p>
+  <p><strong>Simple Illustration:</strong> If a parent dies leaving three children and two parcels of land, Child A cannot immediately fence off Lot 1, nor can Child B claim exclusive title to Lot 2. Each child owns an undivided one-third (1/3) ideal interest across <strong>both</strong> lots and every asset of the estate until debts are paid and partition is executed.</p>
+
+  <h5>B. Operative Doctrines &amp; Jurisprudence Under Article 1078</h5>
+  <ul>
+    <li><strong>Immediate &amp; Retroactive Vesting (<span class="c-burgundy"><em>Ibarle v. Po</em></span>; <span class="c-burgundy"><em>Hacbang v. Alo</em></span>; <span class="c-burgundy"><em>Mendoza v. CA</em></span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-selected">Selected</span>:</strong>
+      <ol>
+        <li>Co-heirs become co-owners from the exact moment of death without need of a prior judicial declaration of heirship. Partition merely converts ideal shares into concrete physical portions, and its effects <mark class="hl">retroact to the date of death</mark>.</li>
+        <li>In <span class="c-burgundy"><em>Ibarle v. Po</em></span>, a widow's unauthorized sale of her minor children's inherited half to X was held <strong>null and void</strong> because title had already vested in the children upon the father's death.</li>
+        <li>In <span class="c-burgundy"><em>Mendoza v. CA</em></span>, co-ownership is extinguished only when the portions are concretely determined and technically described.</li>
+      </ol>
+    </li>
+    <li><strong>Subordination to Debts &amp; Administration (<span class="c-burgundy"><em>Lat v. CA</em></span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong> The co-ownership is subordinate to the payment of decedent's debts. An administrator is an officer of the court (not a mere alter ego of the heirs); distribution awaits payment of debts, expenses, and taxes, and prior to liquidation, heirs generally cannot interfere with administration.</li>
+    <li><strong>Sole Heir vs. Plural Heirs (<span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span>; <span class="c-burgundy"><em>Sanchez v. CA</em></span>) <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong>
+      <ol>
+        <li><strong>Sole Heir:</strong> Adjudicates the entire estate via an <strong>Affidavit of Self-Adjudication</strong> filed with the Register of Deeds.</li>
+        <li><strong>Two or More Heirs (Extrajudicial Settlement):</strong> Valid when (a) decedent died intestate, (b) left no debts or all debts are paid, (c) all heirs are of legal age or minors are represented by judicial/legal guardians, and (d) executed in a public instrument or affidavit filed with the Register of Deeds.</li>
+      </ol>
+    </li>
+    <li><strong>Sale of Undivided Share Before Liquidation (<span class="c-burgundy"><em>Mondonido v. De Roda</em></span>; <span class="c-burgundy"><em>Saturnino v. Paulino</em></span>) <span class="src-badge src-paras">Paras</span>:</strong> An heir may validly sell his undivided hereditary share even pending liquidation because the decedent is already dead (not a prohibited sale of future inheritance under <span class="art-ref" data-art="1347" data-para="2">Art. 1347</span>). A co-heir need not wait for termination of administration proceedings to assert rights or redeem.</li>
+    <li><strong>No Prescription While Recognizing Co-Ownership (<span class="c-burgundy"><em>Sebial v. Sebial</em></span>) <span class="src-badge src-paras">Paras</span>:</strong> Consistent with <span class="art-ref" data-art="494" data-para="5">Art. 494</span>, a co-heir cannot acquire co-heirs' shares by prescription so long as he expressly or impliedly recognizes the co-heirship.</li>
+  </ul>
+
+  <h4 id="art-1079">Article 1079: Definition, Classifications, and Procedural Modes of Partition</h4>
+  <div class="codal-box">
+    <strong>Article 1079.</strong> Partition, in general, is the separation, division and assignment of a thing held in common among those to whom it may belong. The thing itself may be divided, or its value. (n)
+  </div>
+
+  <ul>
+    <li><strong>Core Purpose (<span class="c-burgundy"><em>Villamor v. CA</em></span>; <span class="c-burgundy"><em>Confesor v. Pelayo</em></span>) <span class="src-badge src-selected">Selected</span>:</strong> Severs individual interests in common property, vesting each co-owner with a sole estate in specific property (or dividing its monetary proceeds).</li>
+    <li><strong>Manresa's Classifications of Partition <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-paras">Paras</span>:</strong>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Criterion</th><th>Classifications &amp; Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><strong>As to Extent</strong></td><td><strong>Total</strong> (all estate properties divided) vs. <strong>Partial</strong> (some divided, rest left in co-ownership).</td></tr>
+            <tr><td><strong>As to Duration / Finality</strong></td><td><strong>Provisional / Temporary</strong> (conditional, e.g. under <span class="art-ref" data-art="1084">Art. 1084</span>) vs. <strong>Definite / Permanent</strong> (absolute and final).</td></tr>
+            <tr><td><strong>As to Form / Method</strong></td><td><strong>Extrajudicial</strong> (by decedent under <span class="art-ref" data-art="1080">Art. 1080</span>, mandatary under <span class="art-ref" data-art="1081">Art. 1081</span>, or heirs under <span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span>) vs. <strong>Judicial</strong> (court-supervised under <span class="art-ref" data-art="ROC-69-1">Rule 69</span> or <span class="art-ref" data-art="ROC-90-1">Rule 90</span>).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li><strong>Four Procedural Methods &amp; Actors <span class="src-badge src-jurado">Jurado</span>:</strong>
+      <ol>
+        <li><strong>Procedural Methods (Rules of Court):</strong> (a) Extrajudicial settlement (<span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span>); (b) Ordinary action for partition (<span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span>; <span class="art-ref" data-art="ROC-69-1">Rule 69</span>); (c) Judicial summary settlement of estates of small value (<span class="art-ref" data-art="ROC-74-2">Rule 74, Sec. 2</span>); and (d) Administration proceedings (<span class="art-ref" data-art="ROC-90-1">Rule 90</span> / Rules 79–91).</li>
+        <li><strong>Who May Effect Partition:</strong> (a) The decedent himself (<span class="art-ref" data-art="1080">Art. 1080</span>); (b) A third-person mandatary (<span class="art-ref" data-art="1081">Art. 1081</span>); (c) The heirs themselves (<span class="art-ref" data-art="1083,1084">Arts. 1083–1084</span>); or (d) A competent probate court.</li>
+      </ol>
+    </li>
+    <li><strong>Judicial Partition Rules <span class="src-badge src-paras">Paras</span>:</strong>
+      <ol>
+        <li><strong>Probate Prerequisite (<span class="c-burgundy"><em>Ralla v. Untalan</em></span>):</strong> No valid partition under a will before probate, if covering properties embraced in the will.</li>
+        <li><strong>Project of Partition &amp; Advance Distribution (<span class="c-burgundy"><em>Recto Dia v. Castillo</em></span>; <span class="c-burgundy"><em>Gatmaitan v. Medina</em></span>):</strong> Distribution awaits court approval of the project of partition, though advance/partial distribution may be permitted if heirs post a <strong>bond or deposit</strong> to safeguard creditors (<span class="art-ref" data-art="ROC-90-1" data-para="3">Rule 90, Sec. 1</span>).</li>
+        <li><strong>Non-Parties Not Bound (<span class="c-burgundy"><em>Evangelista v. Bonilla</em></span>):</strong> A judicial partition does not bind excluded heirs, who may file an <em>accion reivindicatoria</em> within the prescriptive period.</li>
+      </ol>
+    </li>
+    <li><strong>Extrajudicial Partition Rules <span class="src-badge src-paras">Paras</span> <span class="src-badge src-jurado">Jurado</span>:</strong>
+      <ol>
+        <li><strong>Oral / Parol Partition Valid (<span class="c-burgundy"><em>Belen v. Belen</em></span>; <span class="c-burgundy"><em>Hernandez v. Andal</em></span>):</strong> Valid and enforceable if freely entered into; partition is a confirmation of ownership (not a conveyance), and the Statute of Frauds does not apply to completed or partially executed acts.</li>
+        <li><strong>Effect of Non-Registration (<span class="c-burgundy"><em>Ladisla v. Pestano</em></span>; <span class="c-burgundy"><em>Heirs of Joaquin Teves v. CA</em></span>):</strong> Binds the heirs intrinsically even if unregistered when no creditors are prejudiced, but registration is needed to bind third parties.</li>
+        <li><strong>Excluded Properties Void <em>Ab Initio</em> (<span class="c-burgundy"><em>Bautista v. CA</em></span>, <span class="c-teal">G.R. No. 79958, Oct. 28, 1988</span>):</strong> Extrajudicial partition dividing property belonging exclusively to the surviving husband as part of the deceased wife's estate is <span class="c-rust"><strong><u>void <em>ab initio</em></u></strong></span>; only estate property transmitted by succession can be partitioned.</li>
+        <li><strong>Future Inheritance Bar (<span class="art-ref" data-art="1347" data-para="2">Art. 1347, par. 2</span>):</strong> Heirs cannot partition property during the lifetime of its owner (except by the owner himself under <span class="art-ref" data-art="1080">Art. 1080</span>).</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="art-1080">Article 1080: Partition by Testator or Decedent &amp; Preserving Family Enterprises</h4>
+  <div class="codal-box">
+    <strong>Article 1080.</strong> Should a person make partition of his estate by an act inter vivos, or by will, such partition shall be respected, insofar as it does not prejudice the legitime of the compulsory heirs.<br><br>
+    A parent who, in the interest of his or her family, desires to keep any agricultural, industrial, or manufacturing enterprise intact, may avail himself of the right granted him in this article, by ordering that the legitime of the other children to whom the property is not assigned, be paid in cash. (1056a)
+  </div>
+
+  <ul>
+    <li><strong>Abrogation of <span class="c-burgundy"><em>Legasto v. Verzosa</em></span> (<span class="c-teal">54 Phil. 776</span>) <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-paras">Paras</span> <span class="src-badge src-selected">Selected</span>:</strong>
+      <ol>
+        <li><em>Old Civil Code (Art. 1056):</em> Used the word <strong>"testator"</strong>, leading <span class="c-burgundy"><em>Legasto v. Verzosa</em></span>, <span class="c-burgundy"><em>Alsua-Betts v. CA</em></span> (<span class="c-teal">92 SCRA 332</span>), and <span class="c-burgundy"><em>Dimayuga v. CA</em></span> (<span class="c-teal">129 SCRA 110</span>) to require a prior valid will for an <em>inter vivos</em> partition to stand.</li>
+        <li><em>New Civil Code (<span class="art-ref" data-art="1080">Art. 1080</span>):</em> Deliberately replaced "testator" with <mark class="hl"><strong>"person"</strong></mark>. Under controlling modern jurisprudence (<span class="c-burgundy"><em>Romero v. Villamor</em></span>; <span class="c-burgundy"><em>Dizon-Rivera v. Dizon</em></span>; <span class="c-burgundy"><em>Chavez v. IAC</em></span>; <span class="c-burgundy"><em>Zaragoza v. CA</em></span>; <span class="c-burgundy"><em>J.L.T. Agro, Inc. v. Balansag</em></span>), <span class="c-green"><strong><u>a person may make a valid partition <em>inter vivos</em> without need of a supporting will</u></strong></span>.</li>
+      </ol>
+    </li>
+    <li><strong>Nature, Formalities &amp; Justice Caguioa's Doctrinal Limits <span class="src-badge src-paras">Paras</span> <span class="src-badge src-selected">Selected</span>:</strong>
+      <ol>
+        <li><strong>Statutory Exception to <span class="art-ref" data-art="1347" data-para="2">Art. 1347</span>:</strong> An <em>inter vivos</em> partition by the owner is an express statutory exception to the ban on contracts over future inheritance. It is an instrument <em>sui generis</em>, revocable during life, taking effect <strong>only upon death</strong> (requiring neither will nor donation formalities; valid in a public instrument, private writing, or even orally).</li>
+        <li><strong>No Institution of Strangers (<span class="c-burgundy"><em>Justice Caguioa's Synthesis</em></span>):</strong> Partition determines physical allocation, not disposition. A person <span class="c-rust"><strong><u>cannot institute a stranger</u></strong></span> via an <em>inter vivos</em> partition without a will. Without a will, it is valid <mark class="hl">only if confined to legal/compulsory heirs following intestacy rules without impairing legitimes</mark>.</li>
+      </ol>
+    </li>
+    <li><strong>Preserving Family Enterprises (<span class="art-ref" data-art="1080" data-para="2">Art. 1080, par. 2</span>):</strong>
+      <ol>
+        <li><strong>Exception to <span class="art-ref" data-art="872">Arts. 872</span> &amp; <span class="art-ref" data-art="904">904</span>:</strong> Although legitimes cannot generally be burdened, a parent wishing to keep an agricultural, industrial, or manufacturing enterprise (or by extension, a professional office/library) intact may assign the entire enterprise to one child and order the other children's legitimes to be <strong>paid in cash</strong>.</li>
+        <li><strong>Mandatory Assignment Requirement (<span class="c-burgundy"><em>Bahanay, Jr. v. Martinez</em></span>, <span class="c-teal">64 SCRA 452</span>) <span class="src-badge src-paras">Paras</span>:</strong> Ordering cash payment of legitimes <em>without assigning the ownership or management of the enterprise to one or more heirs</em> is <span class="c-rust"><strong><u>void</u></strong></span> for violating <span class="art-ref" data-art="1080">Art. 1080</span>.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="art-1081-1082">Articles 1081 &amp; 1082: Third-Person Mandatary &amp; Constructive Partitions</h4>
+  <div class="codal-box">
+    <strong>Article 1081.</strong> A person may, by an act inter vivos or mortis causa, intrust the mere power to make the partition after his death to any person who is not one of the co-heirs.<br><br>
+    The provisions of this and of the preceding article shall be observed even should there be among the co-heirs a minor or a person subject to guardianship; but the mandatary, in such case, shall make an inventory of the property of the estate, after notifying the co-heirs, the creditors, and the legatees or devisees. (1057a)<br><br>
+    <strong>Article 1082.</strong> Every act which is intended to put an end to indivision among co-heirs and legatees or devisees is deemed to be a partition, although it should purport to be a sale, and exchange, a compromise, or any other transaction. (n)
+  </div>
+
+  <ul>
+    <li><strong>Mandatary to Partition (<span class="art-ref" data-art="1081">Art. 1081</span>):</strong>
+      <ol>
+        <li><strong>Strict Disqualification:</strong> The mandatary <span class="c-rust"><strong><u>must NOT be one of the co-heirs</u></strong></span> (<span class="c-burgundy"><em>Del Rosario v. Del Rosario</em></span>), ensuring impartiality.</li>
+        <li><strong>Distinction from Will-Making (<span class="art-ref" data-art="784">Art. 784</span>):</strong> Only the <em>physical apportionment</em> ("mere power to make the partition") may be delegated; the mandatary cannot alter testamentary shares or dispose of property.</li>
+        <li><strong>Mandatory Inventory for Minors/Wards:</strong> When a minor or person under guardianship is a co-heir, the mandatary <strong>must prepare an inventory</strong> after notifying co-heirs, creditors, and legatees/devisees.</li>
+      </ol>
+    </li>
+    <li><strong>Constructive Partitions (<span class="art-ref" data-art="1082">Art. 1082</span>):</strong> Substance controls over nomenclature. Any agreement intended to terminate co-ownership—whether labeled a sale, exchange, waiver, or compromise—is <mark class="hl">legally deemed a partition</mark> (<span class="c-burgundy"><em>Gabila v. Perez</em></span>: sale by all heirs ends co-ownership; <span class="c-burgundy"><em>Favor v. CA</em></span>: "Compromise Agreement" operated as a valid deed of partition).</li>
+  </ul>
+
+  <div class="summary-capstone" id="summary-part-p-i">
+    <div class="summary-hdr">
+      <h4>Partition Part I Summary Brief Reviewer &mdash; Concepts &amp; Mechanics (<span class="art-ref" data-art="1078-1082">Arts. 1078–1082</span>)</h4>
+      <span class="summary-pill">Partition Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li>Co-ownership upon death (<span class="art-ref" data-art="1078">Art. 1078</span>; <span class="art-ref" data-art="777">Art. 777</span>), classifications &amp; judicial/extrajudicial rules (<span class="art-ref" data-art="1079">Art. 1079</span>; <span class="art-ref" data-art="ROC-74-1,ROC-74-2">Rule 74</span>; <span class="art-ref" data-art="ROC-69-1">Rule 69</span>; <span class="art-ref" data-art="ROC-90-1">Rule 90</span>), <em>inter vivos</em> partition &amp; family enterprise cash-out (<span class="art-ref" data-art="1080">Art. 1080</span>), non-heir mandatary (<span class="art-ref" data-art="1081">Art. 1081</span>), and constructive partitions (<span class="art-ref" data-art="1082">Art. 1082</span>).</li>
+      </ul>
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"Person Replaced Testator"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1080">Art. 1080</span> abrogated <em>Legasto v. Verzosa</em>—<em>inter vivos</em> partition needs NO prior will (confined to legal heirs).</td></tr>
+            <tr><td><strong>I-D-A-P (EJS Requisites)</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span>: <strong>I</strong>ntestate, no <strong>D</strong>ebts, all of <strong>A</strong>ge/represented, <strong>P</strong>ublic instrument filed with RD.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li>An oral partition among heirs is valid and outside the Statute of Frauds (<span class="c-burgundy"><em>Hernandez v. Andal</em></span>).</li>
+        <li>A mandatary under <span class="art-ref" data-art="1081">Art. 1081</span> can NEVER be a co-heir and must make an inventory if a minor/ward is involved.</li>
+      </ul>
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Cash-Without-Assignment Trap:</strong> Ordering children's legitimes paid in cash under <span class="art-ref" data-art="1080">Art. 1080</span> without assigning the enterprise to an heir is <strong>void</strong> (<span class="c-burgundy"><em>Bahanay, Jr. v. Martinez</em></span>).</li>
+          <li><strong>Stranger via Inter Vivos Partition Trap:</strong> Without a will, a person cannot use an <em>inter vivos</em> partition to give property to a stranger (<span class="c-burgundy"><em>Caguioa</em></span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PARTITION PART II ==================== -->
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      Partition Part I (Concepts &amp; Mechanics) &rarr; <strong>[YOU ARE HERE: Part II — Arts. 1083 to 1087]</strong> &rarr; Part III (Legal Redemption)
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1083-1087">Articles 1083–1087</span>; <span class="art-ref" data-art="494">Art. 494</span>; <span class="art-ref" data-art="1830,1831">Arts. 1830–1831</span>; <span class="art-ref" data-art="FC-159">Family Code Art. 159</span>.</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Defines when co-heirs can compel division, when indivision must be respected, and how indivisible assets or pending conditions are handled.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Protects family homes and testator-mandated unity up to 20 years while ensuring qualitative equality and fair auction value for indivisible things.</div>
+    </div>
+  </div>
+
+  <h3 id="part-p-ii">II. Right to Demand Partition, Prohibitions, and Special Property (Articles 1083 to 1087)</h3>
+
+  <h4 id="art-1083">Article 1083: Right to Demand Partition &amp; Lawful Prohibitions</h4>
+  <div class="codal-box">
+    <strong>Article 1083.</strong> Every co-heir has a right to demand the division of the estate unless the testator should have expressly forbidden its partition, in which case the period of indivision shall not exceed twenty years as provided in article 494. This power of the testator to prohibit division applies to the legitime.<br><br>
+    Even though forbidden by the testator, the co-ownership terminates when any of the causes for which partnership is dissolved takes place, or when the court finds for compelling reasons that division should be ordered, upon petition of one of the co-heirs. (1051a)
+  </div>
+
+  <ul>
+    <li><strong>Who May Demand Partition <span class="src-badge src-jurado">Jurado</span>:</strong> (1) Any compulsory heir; (2) any voluntary heir; (3) any legatee or devisee; and (4) any person who has acquired an interest in the estate. Action does not prescribe while co-ownership is recognized, unless barred by <strong>open repudiation and adverse possession</strong> (<span class="c-burgundy"><em>Ramos v. Ramos</em></span> <span class="src-badge src-paras">Paras</span>).</li>
+    <li><strong>Five Grounds When Partition CANNOT Be Demanded (<span class="art-ref" data-art="1083">Art. 1083</span>, <span class="art-ref" data-art="494">Art. 494</span>, <span class="art-ref" data-art="FC-159">Art. 159 FC</span>):</strong>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Ground</th><th>Statutory Limit &amp; Rule</th><th>Key Qualification</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Testator's Prohibition</strong> (<span class="art-ref" data-art="1083">Art. 1083</span>)</td><td>Up to <strong>20 years</strong>.</td><td><mark class="hl">Binds even the legitime</mark> (the <em>only</em> burden besides <em>reserva troncal</em> <span class="src-badge src-paras">Paras</span>); excess over 20 years is void.</td></tr>
+            <tr><td><strong>2. Co-Heirs' Agreement</strong> (<span class="art-ref" data-art="494" data-para="2">Art. 494</span>)</td><td>Up to <strong>10 years</strong> (renewable by new agreement).</td><td>If all heirs later mutually agree to partition despite a prohibition, estoppel applies (<span class="c-burgundy"><em>Leaño v. Leaño</em></span> <span class="src-badge src-paras">Paras</span>).</td></tr>
+            <tr><td><strong>3. Family Home</strong> (<span class="art-ref" data-art="FC-159">Art. 159 FC</span>) <span class="src-badge src-selected">Selected</span></td><td><strong>10 years</strong> after death, or while a <strong>minor beneficiary</strong> resides therein.</td><td>Applies regardless of who owned/constituted the home, unless court finds compelling reasons.</td></tr>
+            <tr><td><strong>4. Prohibited by Law</strong> (<span class="art-ref" data-art="494" data-para="4">Art. 494</span>)</td><td>Statutory indivision (e.g., party walls).</td><td>Absolute statutory bar.</td></tr>
+            <tr><td><strong>5. Physical Unserviceability</strong></td><td>Division renders property unserviceable.</td><td>Handled via adjudication or sale under <span class="art-ref" data-art="1086">Art. 1086</span>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li><strong>Early Termination Despite Testator's Prohibition (<span class="art-ref" data-art="1083" data-para="2">Art. 1083, par. 2</span>):</strong> Ends early when: (1) any cause for <strong>partnership dissolution</strong> occurs (<span class="art-ref" data-art="1830,1831">Arts. 1830 &amp; 1831</span>); or (2) the court finds <strong>compelling reasons</strong> upon petition of a co-heir.</li>
+  </ul>
+
+  <h4 id="art-1084-1087">Articles 1084 to 1087: Conditional Heirs, Equality, Indivisibility &amp; Accounting</h4>
+  <div class="codal-box">
+    <strong>Article 1084.</strong> Voluntary heirs upon whom some condition has been imposed cannot demand a partition until the condition has been fulfilled; but the other co-heirs may demand it by giving sufficient security for the rights which the former may have in case the condition should be complied with, and until it is known that the condition has not been fulfilled or can never be complied with, the partition shall be understood to be provisional. (1054a)<br><br>
+    <strong>Article 1085.</strong> In the partition of the estate, equality shall be observed as far as possible, dividing the property into lots, or assigning to each of the co-heirs things of the same nature, quality and kind. (1061)<br><br>
+    <strong>Article 1086.</strong> Should a thing be indivisible, or would be much impaired by its being divided, it may be adjudicated to one of the heirs, provided he shall pay the others the excess in cash.<br><br>
+    Nevertheless, if any of the heirs should demand that the thing be sold at public auction and that strangers be allowed to bid, this must be done. (1062)<br><br>
+    <strong>Article 1087.</strong> In the partition the co-heirs shall reimburse one another for the income and fruits which each one of them may have received from any property of the estate, for any useful and necessary expenses made upon such property, and for any damage thereto through malice or neglect. (1063)
+  </div>
+
+  <ul>
+    <li><strong>Conditional Heirs (<span class="art-ref" data-art="1084">Art. 1084</span>):</strong> Voluntary heirs under a suspensive condition cannot demand partition until fulfillment. Unconditional co-heirs may demand partition by posting <strong>sufficient security</strong>; pending resolution, the partition is <strong>provisional</strong>.</li>
+    <li><strong>Equality in Kind (<span class="art-ref" data-art="1085">Art. 1085</span>):</strong> Assign things of the same nature, quality, and kind. Forcing heirs into a drawing of lots based on arbitrary valuation without a hearing violates due process (<span class="c-burgundy"><em>Cabaluna, Jr. v. Cordova</em></span> <span class="src-badge src-paras">Paras</span>).</li>
+    <li><strong>Indivisible Property &amp; Mandatory Public Auction (<span class="art-ref" data-art="1086">Art. 1086</span>):</strong> May be adjudicated to one heir who pays cash difference; <mark class="hl">however, if <strong>even one co-heir</strong> demands a public auction with strangers bidding, the auction MUST be held</mark>.</li>
+    <li><strong>Mutual Accounting (<span class="art-ref" data-art="1087">Art. 1087</span>):</strong> Co-heirs reimburse each other for (1) income and fruits received, (2) useful and necessary expenses incurred, and (3) damages caused by malice or neglect.</li>
+  </ul>
+
+  <div class="summary-capstone" id="summary-part-p-ii">
+    <div class="summary-hdr">
+      <h4>Partition Part II Summary Brief Reviewer &mdash; Demand, Prohibitions &amp; Special Property (<span class="art-ref" data-art="1083-1087">Arts. 1083–1087</span>)</h4>
+      <span class="summary-pill">Partition Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li>20-year testator prohibition (<span class="art-ref" data-art="1083">Art. 1083</span>), 10-year agreement (<span class="art-ref" data-art="494">Art. 494</span>), Family Home (<span class="art-ref" data-art="FC-159">Art. 159 FC</span>), conditional heirs (<span class="art-ref" data-art="1084">Art. 1084</span>), equality &amp; public auction (<span class="art-ref" data-art="1085,1086">Arts. 1085–1086</span>), and mutual accounting (<span class="art-ref" data-art="1087">Art. 1087</span>).</li>
+      </ul>
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"20-10-10 Indivision"</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><strong>20 yrs</strong> = Testator (<span class="art-ref" data-art="1083">Art. 1083</span>); <strong>10 yrs</strong> = Heirs' Agreement (<span class="art-ref" data-art="494">Art. 494</span>); <strong>10 yrs / Minor</strong> = Family Home (<span class="art-ref" data-art="FC-159">Art. 159 FC</span>).</td></tr>
+            <tr><td><strong>"One Voice Forces Auction"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1086">Art. 1086</span>: Even a single co-heir's demand compels a public auction with outside bidders.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li>Testator's 20-year prohibition binds even the legitime, subject to early dissolution for partnership causes or compelling reasons.</li>
+        <li>A conditional voluntary heir cannot force partition before fulfillment, though co-heirs can partition provisionally with security.</li>
+      </ul>
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Legitime Immunity Trap:</strong> Unlike most conditions/burdens (<span class="art-ref" data-art="904">Art. 904</span>), a testator's 20-year indivision order (<span class="art-ref" data-art="1083">Art. 1083</span>) <strong>validly binds the legitime</strong>.</li>
+          <li><strong>Prohibition Excess Trap:</strong> A 30-year prohibition is NOT totally void—only the excess over 20 years is void.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PARTITION PART III ==================== -->
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      Partition Part II (Demand &amp; Prohibitions) &rarr; <strong>[YOU ARE HERE: Part III — Art. 1088]</strong> &rarr; Part IV (Title Deeds)
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1088">Article 1088</span> (1067a); contrasted with <span class="art-ref" data-art="1620">Article 1620</span> (co-owner redemption).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Protects the interim co-ownership under <span class="art-ref" data-art="1078">Art. 1078</span> by letting co-heirs buy out any stranger who purchases an heir's undivided share before partition.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Prevents outside strangers from intruding into family estates and keeps the 30-day clock unambiguous via mandatory vendor-served written notice.</div>
+    </div>
+  </div>
+
+  <h3 id="part-p-iii">III. Right of Legal Redemption Among Co-Heirs (Article 1088)</h3>
+
+  <h4 id="art-1088">Article 1088: Redemption of Hereditary Rights &amp; The Written Notice Rule</h4>
+  <div class="codal-box">
+    <strong>Article 1088.</strong> Should any of the heirs sell his hereditary rights to a stranger before the partition, any or all of the co-heirs may be subrogated to the rights of the purchaser by reimbursing him for the price of the sale, provided they do so within the period of one month from the time they were notified in writing of the sale by the vendor. (1067a)
+  </div>
+
+  <div class="ui-box ui-workflow">
+    <div class="ui-step-plain">
+      <div class="ui-kicker">ARTICLE 1088 LEGAL REDEMPTION WORKFLOW</div>
+      <div class="ui-title">Five Cumulative Triggers (<span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-paras">Paras</span> <span class="src-badge src-selected">Selected</span>)</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">1. Plurality of Heirs + Sale of Undivided Hereditary Rights</div>
+      <div class="ui-sub">Heir sells ideal/undivided hereditary interest (not a post-partition determinate parcel).</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-card">
+      <div class="ui-title">2. Sale Is to a "Stranger" &amp; Executed BEFORE Partition</div>
+      <div class="ui-sub">Stranger = anyone not a co-heir in that succession (<span class="c-burgundy"><em>De Jesus v. Manglapus</em></span>). After partition, <span class="art-ref" data-art="1620">Art. 1620</span> governs (<span class="c-burgundy"><em>Castro v. Castro</em></span>).</div>
+    </div>
+    <div class="ui-connector">&darr;</div>
+    <div class="ui-step-outcome">
+      <div class="ui-title">3. Exercised Within 1 Month (30 Days) from WRITTEN NOTICE BY THE VENDOR + Price Reimbursement</div>
+      <div class="ui-sub">Notice by buyer or mere registration does NOT start the 30-day clock (<span class="c-burgundy"><em>Butte</em></span>; <span class="c-burgundy"><em>Garcia v. Calaliman</em></span>; <span class="c-burgundy"><em>Francisco v. Boiser</em></span>).</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Who Is a "Stranger" (<span class="c-burgundy"><em>De Jesus v. Manglapus</em></span>) <span class="src-badge src-paras">Paras</span>:</strong> Anyone who is not a co-heir in that specific succession—including creditors, legatees, devisees, and incapacitated/non-succeeding heirs. Sales between co-heirs trigger no redemption.</li>
+    <li><strong>Before Partition &amp; Court-Ordered Sales (<span class="c-burgundy"><em>Castro v. Castro</em></span>; <span class="c-burgundy"><em>Plan v. IAC</em></span>) <span class="src-badge src-paras">Paras</span>:</strong>
+      <ol>
+        <li>If the sale occurs <em>after</em> partition while property remains held in common, <span class="art-ref" data-art="1088">Art. 1088</span> does not apply; ordinary co-ownership redemption under <span class="art-ref" data-art="1620">Art. 1620</span> governs.</li>
+        <li><span class="art-ref" data-art="1088">Art. 1088</span> does not apply to sales ordered by a probate court to pay estate debts (<span class="c-burgundy"><em>Plan v. IAC</em></span>).</li>
+      </ol>
+    </li>
+    <li><strong>Mandatory Written Notice Served BY THE VENDOR (<span class="c-burgundy"><em>Butte v. Manuel Uy &amp; Sons, Inc.</em></span>, <span class="c-teal">4 SCRA 526</span>; <span class="c-burgundy"><em>Garcia v. Calaliman</em></span>; <span class="c-burgundy"><em>Francisco v. Boiser</em></span>, <span class="c-teal">332 SCRA 792</span>):</strong>
+      <ol>
+        <li><mark class="hl">Actual knowledge, verbal notice, notice served by the buyer, or Registry of Deeds registration does NOT start the 30-day period</mark>. Written notice must come from the <strong>selling co-heir (vendor)</strong> so there is no doubt that a definitive alienation occurred.</li>
+        <li><strong>Form (<span class="c-burgundy"><em>Conejero v. CA</em></span>):</strong> No rigid wording is required—furnishing a copy of the deed of sale by the vendor suffices.</li>
+        <li><strong>Narrow Equity Exception (<span class="c-burgundy"><em>Alonzo v. IAC</em></span>, <span class="c-teal">150 SCRA 259</span>):</strong> Where co-heirs lived inside the same inherited compound alongside the buyer for over a decade, equity treated indisputable long-standing actual knowledge as notice (strictly exceptional; <span class="c-burgundy"><em>Francisco v. Boiser</em></span> reaffirmed <span class="c-burgundy"><em>Butte</em></span>).</li>
+      </ol>
+    </li>
+    <li><strong>Reimbursement Price on Resale (<span class="c-burgundy"><em>Hernaez v. Hernaez</em></span>) <span class="src-badge src-paras">Paras</span>:</strong> If Heir A sells to Stranger X for ₱100,000 and X resells to Y for ₱200,000, Co-Heir B redeems from Y by paying <span class="c-green"><strong><u>only the original ₱100,000 price</u></strong></span>.</li>
+  </ul>
+
+  <div class="summary-capstone" id="summary-part-p-iii">
+    <div class="summary-hdr">
+      <h4>Partition Part III Summary Brief Reviewer &mdash; Legal Redemption (<span class="art-ref" data-art="1088">Art. 1088</span>)</h4>
+      <span class="summary-pill">Partition Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li>Legal redemption of hereditary rights sold to strangers prior to partition (<span class="art-ref" data-art="1088">Art. 1088</span> vs. <span class="art-ref" data-art="1620">Art. 1620</span>) and the vendor-written-notice jurisprudence (<span class="c-burgundy"><em>Butte</em></span>, <span class="c-burgundy"><em>Garcia</em></span>, <span class="c-burgundy"><em>Alonzo</em></span>, <span class="c-burgundy"><em>Francisco</em></span>).</li>
+      </ul>
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"Vendor's Pen Starts the 30"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1088">Art. 1088</span>: Only written notice from the <strong>vendor</strong> starts the 1-month (30-day) clock.</td></tr>
+            <tr><td><strong>1088 vs. 1620</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><strong>Before</strong> partition = <span class="art-ref" data-art="1088">Art. 1088</span> (co-heirs); <strong>After</strong> partition = <span class="art-ref" data-art="1620">Art. 1620</span> (co-owners).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li>Subsequent buyers take the property burdened by redemption at the <strong>original</strong> sale price (<span class="c-burgundy"><em>Hernaez v. Hernaez</em></span>).</li>
+        <li>Probate court-ordered sales to pay estate debts are not redeemable under <span class="art-ref" data-art="1088">Art. 1088</span> (<span class="c-burgundy"><em>Plan v. IAC</em></span>).</li>
+      </ul>
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Buyer-Notice Trap:</strong> A notarized deed served by the <em>buyer</em> (or RD registration) does NOT start the 30-day period—the vendor must send written notice!</li>
+          <li><strong>Legatee/Creditor Trap:</strong> Legatees, devisees, and estate creditors ARE "strangers" under <span class="art-ref" data-art="1088">Art. 1088</span> (<span class="c-burgundy"><em>De Jesus v. Manglapus</em></span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PARTITION PART IV & V ==================== -->
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      Partition Part III (Legal Redemption) &rarr; <strong>[YOU ARE HERE: Parts IV &amp; V — Arts. 1089 to 1096]</strong> &rarr; Part VI (Rescission &amp; Nullity)
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1089,1090">Articles 1089–1090</span> (Title Deeds) and <span class="art-ref" data-art="1091-1096">Articles 1091–1096</span> (Effects &amp; Warranties).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Specifies custody of title documents upon physical partition and establishes mutual warranties so no heir suffers silently from eviction, defects, or pre-existing debtor insolvency.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Finalizes exclusive ownership (<span class="art-ref" data-art="1091">Art. 1091</span>) while preserving post-partition parity through time-bounded reciprocal warranties.</div>
+    </div>
+  </div>
+
+  <h3 id="part-p-iv">IV. Delivery of Title Deeds (Articles 1089 &amp; 1090)</h3>
+  <div class="codal-box">
+    <strong>Article 1089.</strong> The titles of acquisition or ownership of each property shall be delivered to the co-heir to whom said property has been adjudicated. (1065a)<br><br>
+    <strong>Article 1090.</strong> When the title comprises two or more pieces of land which have been assigned to two or more co-heirs, or when it covers one piece of land which has been divided between two or more co-heirs, the title shall be delivered to the one having the largest interest, and authentic copies of the title shall be furnished to the other co-heirs at the expense of the estate. If the interest of each co-heir should be the same, the oldest shall have the title. (1066a)
+  </div>
+  <ul>
+    <li><strong>Individual Holdings (<span class="art-ref" data-art="1089">Art. 1089</span>):</strong> Delivered to the co-heir to whom that specific property was adjudicated.</li>
+    <li><strong>Shared Titles (<span class="art-ref" data-art="1090">Art. 1090</span>):</strong> (1) Delivered to the co-heir with the <strong>largest interest</strong>; (2) if equal, to the <strong>oldest co-heir</strong>; and (3) authentic copies furnished to the others at the <strong>expense of the estate</strong>.</li>
+  </ul>
+
+  <h3 id="part-p-v">V. Effects of Partition and Reciprocal Warranties (Articles 1091 to 1096)</h3>
+  <div class="codal-box">
+    <strong>Article 1091.</strong> A partition legally made confers upon each heir the exclusive ownership of the property adjudicated to him. (1068)<br><br>
+    <strong>Article 1092.</strong> After the partition has been made, the co-heirs shall be reciprocally bound to warrant the title to, and the quality of, each property adjudicated. (1069a)<br><br>
+    <strong>Article 1093.</strong> The reciprocal obligation of warranty referred to in the preceding article shall be proportionate to the respective hereditary shares of the co-heirs, but if any one of them should be insolvent, the other co-heirs shall be liable for his part in the same proportion, deducting the part corresponding to the one who should be indemnified.<br><br>
+    Those who pay for the insolvent heir shall have a right of action against him for reimbursement, should his financial condition improve. (1071)<br><br>
+    <strong>Article 1094.</strong> An action to enforce the warranty among heirs must be brought within ten years from the date the right of action accrues. (n)<br><br>
+    <strong>Article 1095.</strong> If a credit should be assigned as collectible, the co-heirs shall not be liable for the subsequent insolvency of the debtor of the estate, but only for his insolvency at the time the partition is made.<br><br>
+    The warranty of the solvency of the debtor can only be enforced during the five years following the partition.<br><br>
+    Co-heirs do not warrant bad debts, if so known to, and accepted by, the distributee. But if such debts are not assigned to a co-heir, and should be collected, in whole or in part, the amount collected shall be distributed proportionately among the heirs. (1072a)<br><br>
+    <strong>Article 1096.</strong> The obligation of warranty among co-heirs shall cease in the following cases:<br>
+    (1) When the testator himself has made the partition, unless it appears, or it may be reasonably presumed, that his intention was otherwise, but the legitime shall always remain unimpaired;<br>
+    (2) When it has been so expressly stipulated in the agreement of partition, unless there has been bad faith;<br>
+    (3) When the eviction is due to a cause subsequent to the partition, or has been caused by the fault of the distributee of the property. (1070a)
+  </div>
+
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Warranty Aspect</th>
+          <th>Operative Rule &amp; Article</th>
+          <th>Prescription / Key Exceptions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Exclusive Ownership</strong></td>
+          <td><span class="art-ref" data-art="1091">Art. 1091</span> &mdash; Ends co-ownership; confers exclusive title over adjudicated property.</td>
+          <td>Once carried out, the estate is finally settled.</td>
+        </tr>
+        <tr>
+          <td><strong>Title &amp; Quality</strong></td>
+          <td><span class="art-ref" data-art="1092">Arts. 1092</span>–<span class="art-ref" data-art="1094">1094</span> &mdash; Reciprocal warranty against eviction and hidden defects, borne <strong>proportionately</strong> (insolvent co-heir's part shared by others, with reimbursement right if solvency improves).</td>
+          <td><mark class="hl"><strong>10 years</strong></mark> from accrual of the right of action (<span class="art-ref" data-art="1094">Art. 1094</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>Assigned Credits</strong></td>
+          <td><span class="art-ref" data-art="1095">Art. 1095</span> &mdash; Warrants debtor's solvency strictly <strong>at the time of partition</strong> (NOT subsequent insolvency).</td>
+          <td><mark class="hl"><strong>5 years</strong></mark> from partition. Known &amp; accepted bad debts carry no warranty; unassigned bad debts collected later are split proportionately.</td>
+        </tr>
+        <tr>
+          <td><strong>Cessation of Warranty</strong></td>
+          <td><span class="art-ref" data-art="1096">Art. 1096</span> &mdash; Ceases if: (1) testator made partition (unless contrary intent / legitime impaired); (2) express waiver without bad faith; (3) post-partition cause or distributee's fault (e.g., letting third party acquire by prescription <span class="src-badge src-paras">Paras</span>).</td>
+          <td>Legitime remains inviolable under all exceptions.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="summary-capstone" id="summary-part-p-v">
+    <div class="summary-hdr">
+      <h4>Partition Parts IV–V Summary Brief Reviewer &mdash; Title Deeds &amp; Warranties (<span class="art-ref" data-art="1089-1096">Arts. 1089–1096</span>)</h4>
+      <span class="summary-pill">Partition Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li>Title deed custody (<span class="art-ref" data-art="1089,1090">Arts. 1089–1090</span>), exclusive ownership (<span class="art-ref" data-art="1091">Art. 1091</span>), reciprocal warranties &amp; solvency (<span class="art-ref" data-art="1092-1095">Arts. 1092–1095</span>), and warranty cessation (<span class="art-ref" data-art="1096">Art. 1096</span>).</li>
+      </ul>
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"Largest, then Oldest"</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><span class="art-ref" data-art="1090">Art. 1090</span>: Shared title goes to heir with <strong>largest</strong> interest; if equal, the <strong>oldest</strong>.</td></tr>
+            <tr><td><strong>"10 Eviction / 5 Solvency"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1094">Art. 1094</span> (<strong>10 yrs</strong> for title/quality warranty) vs. <span class="art-ref" data-art="1095">Art. 1095</span> (<strong>5 yrs</strong> for debtor solvency at partition).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li>If a co-heir is insolvent when warranty is enforced, the others shoulder his share proportionately (deducting the indemnified heir's own portion) with a reimbursement claim if his finances improve.</li>
+      </ul>
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong>Subsequent Insolvency Trap:</strong> Co-heirs NEVER warrant a debtor who became insolvent <em>after</em> partition—only insolvency existing <em>at</em> partition (<span class="art-ref" data-art="1095">Art. 1095</span>).</li>
+          <li><strong>Own-Fault Eviction Trap:</strong> An heir evicted because he slept on his rights and allowed adverse possession to ripen has NO warranty claim (<span class="art-ref" data-art="1096" data-para="3">Art. 1096[3]</span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PARTITION PART VI ==================== -->
+  <div class="context-compass">
+    <div class="context-breadcrumb">
+      Partition Parts IV–V (Titles &amp; Warranties) &rarr; <strong>[YOU ARE HERE: Part VI — Arts. 1097 to 1105]</strong> &rarr; Part VII (Partition Consolidation)
+    </div>
+    <div class="compass-grid">
+      <div><span class="compass-tag">STATUTORY ADDRESS</span> Civil Code, <span class="art-ref" data-art="1097-1105">Articles 1097–1105</span>; contrasted with <span class="art-ref" data-art="854">Article 854</span> (preterition in wills).</div>
+      <div><span class="compass-tag">CHAIN-OF-LOGIC BRIDGE</span> Establishes when a defective partition may be rescinded, modified, supplemented, or partially voided without collapsing settled distributions.</div>
+      <div><span class="compass-tag">WHY THE LAW CARES</span> Preserves partition stability whenever cash indemnity, supplementation, or partial voiding can cure defects without undoing the entire settlement.</div>
+    </div>
+  </div>
+
+  <h3 id="part-p-vi">VI. Rescission and Nullity of Partition (Articles 1097 to 1105)</h3>
+
+  <h4 id="art-1097">Article 1097: Contract Grounds — Nullity vs. Rescission</h4>
+  <div class="codal-box">
+    <strong>Article 1097.</strong> A partition may be rescinded or annulled for the same causes as contracts. (1073a)
+  </div>
+  <ul>
+    <li><strong>Nullity vs. Rescission (<span class="c-burgundy">Justices J.B.L. Reyes &amp; Ricardo C. Puno</span>) <span class="src-badge src-selected">Selected</span> <span class="src-badge src-paras">Paras</span>:</strong>
+      <ol>
+        <li><strong>Nullity / Annulment:</strong> Arises from lack of essential requisites or vices of consent (fraud, intimidation, mistake). A deed signed on behalf of an absent co-heir without a written special power of attorney is <strong>not binding</strong> absent ratification (<span class="c-burgundy"><em>Agolto v. CA</em></span>). Fraud annulment prescribes in <strong>4 years from discovery</strong>, reckoned from Register of Deeds registration as constructive notice (<span class="c-burgundy"><em>Gerona v. De Guzman</em></span>).</li>
+        <li><strong>Rescission:</strong> A subsidiary remedy presupposing a valid partition causing economic prejudice (lesion), often curable by cash indemnity.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 id="art-1098-1102">Articles 1098 to 1102: Rescission on Account of Lesion (1/4 Rule)</h4>
+  <div class="codal-box">
+    <strong>Article 1098.</strong> A partition, judicial or extra-judicial, may also be rescinded on account of lesion, when any one of the co-heirs received things whose value is less, by at least one-fourth, than the share to which he is entitled, considering the value of the things at the time they were adjudicated. (1074a)<br><br>
+    <strong>Article 1099.</strong> The partition made by the testator cannot be impugned on the ground of lesion, except when the legitime of the compulsory heirs is thereby prejudiced, or when it appears or may reasonably be presumed, that the intention of the testator was otherwise. (1075)<br><br>
+    <strong>Article 1100.</strong> The action for rescission on account of lesion shall prescribe after four years from the time the partition was made. (1076)<br><br>
+    <strong>Article 1101.</strong> The heir who is sued shall have the option of indemnifying the plaintiff for the loss, or consenting to a new partition.<br><br>
+    Indemnity may be made by payment in cash or by the delivery of a thing of the same kind and quality as that awarded to the plaintiff.<br><br>
+    If a new partition is made, it shall affect neither those who have not been prejudiced nor those have not received more than their just share. (1077a)<br><br>
+    <strong>Article 1102.</strong> An heir who has alienated the whole or a considerable part of the real property adjudicated to him cannot maintain an action for rescission on the ground of lesion, but he shall have a right to be indemnified in cash. (1078a)
+  </div>
+
+  <ul>
+    <li><strong>The One-Fourth (1/4) Lesion Threshold (<span class="art-ref" data-art="1098">Art. 1098</span>):</strong> Market value <strong>at adjudication</strong> controls. Rescission requires damage of <mark class="hl">at least 1/4 (25%)</mark>; if less than 1/4, the remedy is damages <span class="src-badge src-paras">Paras</span>.</li>
+    <li><strong>Testator's Partition Exempt (<span class="art-ref" data-art="1099">Art. 1099</span>):</strong> Cannot be impugned for lesion unless (1) legitimes are impaired, or (2) testator intended otherwise.</li>
+    <li><strong>Prescription (<span class="art-ref" data-art="1100">Art. 1100</span>):</strong> Prescribes in <strong>4 years</strong> from partition (or court approval in judicial partition).</li>
+    <li><strong>Defendant's Option (<span class="art-ref" data-art="1101">Art. 1101</span>):</strong> Sued heir chooses to <strong>indemnify</strong> (cash or same kind/quality) or consent to a <strong>new partition</strong> (affecting only prejudiced or over-allotted heirs).</li>
+    <li><strong>Bar by Alienation (<span class="art-ref" data-art="1102">Art. 1102</span>):</strong> An heir who alienated all or a considerable part of his realty cannot sue for rescission (mutual restitution impossible); restricted to <strong>cash indemnity</strong>.</li>
+  </ul>
+
+  <h4 id="art-1103-1105">Articles 1103 to 1105: The Omission, Preterition &amp; Non-Heir Triad</h4>
+  <div class="codal-box">
+    <strong>Article 1103.</strong> The omission of one or more objects or securities of the inheritance shall not cause the rescission of the partition on the ground of lesion, but the partition shall be completed by the distribution of the objects or securities which have been omitted. (1079a)<br><br>
+    <strong>Article 1104.</strong> A partition made with preterition of any of the compulsory heirs shall not be rescinded, unless it be proved that there was bad faith or fraud on the part of the other persons interested; but the latter shall be proportionately obliged to pay to the person omitted the share which belongs to him. (1080)<br><br>
+    <strong>Article 1105.</strong> A partition which includes a person believed to be an heir, but who is not, shall be void only with respect to such person. (1081a)
+  </div>
+
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead><tr><th>Situation</th><th>Codal Provision</th><th>Legal Consequence &amp; Jurisprudence</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Omission of Objects / Securities</strong></td><td><span class="art-ref" data-art="1103">Article 1103</span></td><td><strong>No rescission</strong>; partition is simply <strong>supplemented / completed</strong> by distributing omitted assets.</td></tr>
+        <tr><td><strong>Preterition of Compulsory Heir</strong></td><td><span class="art-ref" data-art="1104">Article 1104</span></td><td><strong>No rescission</strong> absent bad faith or fraud; included heirs must <strong>proportionately pay the omitted heir's share</strong> (<span class="c-burgundy"><em>Rebecca Viado Non v. CA</em></span>). Contrast <span class="art-ref" data-art="854">Art. 854</span> (preterition in a will annuls institution of heirs).</td></tr>
+        <tr><td><strong>Inclusion of Non-Heir (Intruder)</strong></td><td><span class="art-ref" data-art="1105">Article 1105</span></td><td><strong>Void ONLY as to the non-heir</strong>; rest stands, and intruder surrenders share to true heirs (<span class="c-burgundy"><em>De Torres v. De Torres</em></span>; <span class="c-burgundy"><em>Vda. de Marbella v. Kilayko</em></span>).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul>
+    <li><strong>Manresa's Three Scenarios Under <span class="art-ref" data-art="1105">Article 1105</span> <span class="src-badge src-jurado">Jurado</span>:</strong>
+      <ol>
+        <li><strong>Sole Heir with Intruders:</strong> Totally void because no new partition is possible; everything is surrendered to the sole heir.</li>
+        <li><strong>Multiple Heirs with an Intruder:</strong> Void only as to the intruder's share; remainder stands.</li>
+        <li><strong>Intruder Substituted for an Omitted True Heir:</strong> <span class="art-ref" data-art="1104">Arts. 1104</span> and <span class="art-ref" data-art="1105">1105</span> apply concurrently. Absent bad faith, partition is not rescinded; intruder's share is voided and delivered directly to the omitted heir, with co-heirs making up any deficit proportionally.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <div class="summary-capstone" id="summary-part-p-vi">
+    <div class="summary-hdr">
+      <h4>Partition Part VI Summary Brief Reviewer &mdash; Rescission &amp; Nullity (<span class="art-ref" data-art="1097-1105">Arts. 1097–1105</span>)</h4>
+      <span class="summary-pill">Partition Recap</span>
+    </div>
+    <div class="summary-body">
+      <div class="summary-subhdr">1. Topics Discussed &amp; Statutory Scope</div>
+      <ul>
+        <li>Nullity vs. rescission (<span class="art-ref" data-art="1097">Art. 1097</span>), 1/4 lesion &amp; 4-year prescription (<span class="art-ref" data-art="1098-1102">Arts. 1098–1102</span>), and the Omission / Preterition / Non-Heir Triad (<span class="art-ref" data-art="1103-1105">Arts. 1103–1105</span>).</li>
+      </ul>
+      <div class="summary-subhdr">2. Mnemonics Cheat Sheet</div>
+      <div class="table-scroll">
+        <table class="ui-table">
+          <thead><tr><th>Mnemonic</th><th>Source</th><th>Meaning / Operative Breakdown</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"1/4 Lesion in 4 Years"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1098">Art. 1098</span> (at least <strong>1/4</strong> lesion at adjudication) + <span class="art-ref" data-art="1100">Art. 1100</span> (prescribes in <strong>4 years</strong>).</td></tr>
+            <tr><td><strong>O-P-I Triad (1103–1105)</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><strong>O</strong>mission (<span class="art-ref" data-art="1103">1103</span>: Supplement) &bull; <strong>P</strong>reterition (<span class="art-ref" data-art="1104">1104</span>: Pay Share) &bull; <strong>I</strong>ntruder (<span class="art-ref" data-art="1105">1105</span>: Void as to Intruder Only).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="summary-subhdr">3. Important Concepts &amp; Operative Rules</div>
+      <ul>
+        <li>Defendant sued for lesion always holds the option to pay indemnity or consent to a new partition (<span class="art-ref" data-art="1101">Art. 1101</span>).</li>
+        <li>Preterition in a partition does NOT annul the partition unless fraud or bad faith is proved (<span class="art-ref" data-art="1104">Art. 1104</span>).</li>
+      </ul>
+      <div class="summary-trap-box">
+        <div class="summary-subhdr" style="margin-top:0; border-bottom-color:#FED7AA; color:#C2410C;">4. Top Quiz Traps to Avoid</div>
+        <ul>
+          <li><strong><span class="art-ref" data-art="854">Art. 854</span> vs. <span class="art-ref" data-art="1104">Art. 1104</span> Trap:</strong> Preterition in a <em>will</em> (<span class="art-ref" data-art="854">Art. 854</span>) annuls the institution of heirs; preterition in a <em>partition</em> (<span class="art-ref" data-art="1104">Art. 1104</span>) does NOT rescind the partition absent fraud/bad faith!</li>
+          <li><strong>Alienation Bar Trap:</strong> An heir who sold his allotted land cannot rescind for lesion—he is restricted to cash indemnity (<span class="art-ref" data-art="1102">Art. 1102</span>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ==================== PARTITION PART VII ==================== -->
+  <h3 id="part-p-vii">VII. Partition Master Consolidation: Jurisprudence, ALAC Drills, Mnemonics &amp; Active Recall</h3>
+
+  <h4 id="p-case-index">A. Master Partition Jurisprudence Index (Controlling Cases Across Jurado, Paras &amp; Selected Materials)</h4>
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead><tr><th>Case Title &amp; Citation</th><th>Article</th><th>Controlling Doctrine</th></tr></thead>
+      <tbody>
+        <tr><td><span class="c-burgundy"><em>Ibarle v. Po</em></span>; <span class="c-burgundy"><em>Mendoza v. CA</em></span>; <span class="c-burgundy"><em>Hacbang v. Alo</em></span></td><td><span class="art-ref" data-art="1078">Art. 1078</span></td><td>Co-ownership vests automatically at death; partition retroacts to death and extinguishes co-ownership only on concrete technical division.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Lat v. CA</em></span>; <span class="c-burgundy"><em>Mondonido v. De Roda</em></span>; <span class="c-burgundy"><em>Saturnino v. Paulino</em></span>; <span class="c-burgundy"><em>Sebial v. Sebial</em></span></td><td><span class="art-ref" data-art="1078">Art. 1078</span></td><td>Distribution awaits debt payment; heirs may sell undivided shares before liquidation; no prescription while recognizing co-heirship.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Bautista v. CA</em></span> (<span class="c-teal">G.R. No. 79958, 1988</span>); <span class="c-burgundy"><em>Ralla v. Untalan</em></span></td><td><span class="art-ref" data-art="1079">Art. 1079</span></td><td>Partition dividing non-estate property is void <em>ab initio</em>; probate is prerequisite to partition under a will.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Hernandez v. Andal</em></span>; <span class="c-burgundy"><em>Belen v. Belen</em></span>; <span class="c-burgundy"><em>Ladisla v. Pestano</em></span>; <span class="c-burgundy"><em>Evangelista v. Bonilla</em></span></td><td><span class="art-ref" data-art="1079">Art. 1079</span></td><td>Oral partition is valid (outside Statute of Frauds); non-registration binds heirs; excluded heirs not bound by judicial partition.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Chavez v. IAC</em></span>; <span class="c-burgundy"><em>Dizon-Rivera v. Dizon</em></span>; <span class="c-burgundy"><em>J.L.T. Agro v. Balansag</em></span>; <span class="c-burgundy"><em>Zaragoza v. CA</em></span></td><td><span class="art-ref" data-art="1080">Art. 1080</span></td><td>Replacement of "testator" with "person" abrogated <em>Legasto v. Verzosa</em>; <em>inter vivos</em> partition needs no prior will if confined to legal heirs without impairing legitimes.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Bahanay, Jr. v. Martinez</em></span> (<span class="c-teal">64 SCRA 452</span>)</td><td><span class="art-ref" data-art="1080">Art. 1080</span></td><td>Ordering cash legitimes without assigning the family enterprise to an heir is void.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Del Rosario v. Del Rosario</em></span>; <span class="c-burgundy"><em>Gabila v. Perez</em></span>; <span class="c-burgundy"><em>Favor v. CA</em></span></td><td><span class="art-ref" data-art="1081,1082">Arts. 1081–1082</span></td><td>Mandatary cannot be a co-heir; sale by all heirs or compromise agreement ending indivision operates as partition.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Ramos v. Ramos</em></span>; <span class="c-burgundy"><em>Leaño v. Leaño</em></span>; <span class="c-burgundy"><em>Cabaluna, Jr. v. Cordova</em></span></td><td><span class="art-ref" data-art="1083,1085">Arts. 1083, 1085</span></td><td>Open repudiation + adverse possession bars partition; mutual agreement stands by estoppel; arbitrary lot drawing without hearing violates due process.</td></tr>
+        <tr><td><span class="c-burgundy"><em>De Jesus v. Manglapus</em></span>; <span class="c-burgundy"><em>Castro v. Castro</em></span>; <span class="c-burgundy"><em>Plan v. IAC</em></span></td><td><span class="art-ref" data-art="1088">Art. 1088</span></td><td>Non-co-heirs are strangers; after partition <span class="art-ref" data-art="1620">Art. 1620</span> governs; inapplicable to probate court-ordered debt sales.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Butte v. Manuel Uy</em></span> (<span class="c-teal">4 SCRA 526</span>); <span class="c-burgundy"><em>Garcia v. Calaliman</em></span>; <span class="c-burgundy"><em>Francisco v. Boiser</em></span> (<span class="c-teal">332 SCRA 792</span>); <span class="c-burgundy"><em>Alonzo v. IAC</em></span> (<span class="c-teal">150 SCRA 259</span>); <span class="c-burgundy"><em>Conejero v. CA</em></span></td><td><span class="art-ref" data-art="1088">Art. 1088</span></td><td>Written notice <strong>by the vendor</strong> (copy of deed suffices) is indispensable to start the 30-day clock; actual knowledge/buyer notice fails (save rare equity compound case in <em>Alonzo</em>).</td></tr>
+        <tr><td><span class="c-burgundy"><em>Agolto v. CA</em></span>; <span class="c-burgundy"><em>Gerona v. De Guzman</em></span></td><td><span class="art-ref" data-art="1097">Art. 1097</span></td><td>Unauthorized signature without written SPA does not bind absent heir; fraud annulment prescribes 4 years from RD registration.</td></tr>
+        <tr><td><span class="c-burgundy"><em>Rebecca Viado Non v. CA</em></span>; <span class="c-burgundy"><em>De Torres v. De Torres</em></span>; <span class="c-burgundy"><em>Vda. de Marbella v. Kilayko</em></span></td><td><span class="art-ref" data-art="1104,1105">Arts. 1104–1105</span></td><td>Preterited heir paid proportionally without rescission absent fraud; non-heir inclusion void only as to intruder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 id="p-alac-drills">B. Partition Practical Problem-Solving Exercises (ALAC Method)</h4>
+
+  <div class="alac-card">
+    <div class="problem-title">ALAC Exercise 1: Preterition in a Will vs. Preterition in a Partition (<span class="art-ref" data-art="854">Art. 854</span> vs. <span class="art-ref" data-art="1104">Art. 1104</span>) <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-paras">Paras</span></div>
+    <p><strong>Facts:</strong> Testator T executed a will instituting sons A and B, completely omitting his legitimate daughter C. Later, A and B extrajudicially partitioned the estate without C. No fraud or bad faith was proved. C sued to annul the partition. Decide.</p>
+    <ul>
+      <li><strong>Answer:</strong> The institution of heirs in the will is annulled under <span class="art-ref" data-art="854">Art. 854</span>, but the physical partition itself is not rescinded; A and B must pay C her one-third share under <span class="art-ref" data-art="1104">Art. 1104</span>.</li>
+      <li><strong>Law:</strong> Under <span class="art-ref" data-art="854">Art. 854</span>, preterition of a compulsory heir in the direct line annuls the institution of heirs. Under <span class="art-ref" data-art="1104">Art. 1104</span>, a partition made with preterition of a compulsory heir shall not be rescinded unless bad faith or fraud is proved; the other heirs are proportionately obliged to pay the omitted heir the share belonging to him.</li>
+      <li><strong>Application:</strong> Omitting C from the will opens the estate to total intestacy. However, as to the physical partition, <span class="art-ref" data-art="1104">Art. 1104</span> controls to preserve stability. Since fraud was not proved, the partition stands, and A and B must each contribute proportionally from their shares to satisfy C's 1/3 intestate share.</li>
+      <li><strong>Conclusion:</strong> The partition is not rescinded; A and B must proportionately pay C her share.</li>
+    </ul>
+  </div>
+
+  <div class="alac-card">
+    <div class="problem-title">ALAC Exercise 2: Preterition of OFW Sister in Extrajudicial Partition (<span class="art-ref" data-art="1104">Art. 1104</span> Computation) <span class="src-badge src-selected">Selected</span></div>
+    <p><strong>Facts:</strong> Three legitimate brothers, A, B, and C, executed an extrajudicial partition dividing an estate worth ₱900,000 equally among themselves (₱300,000 each). They omitted their legitimate sister, D, who was working overseas, mistakenly believing without fraud or bad faith that D had already received her share via an earlier donation. D files an action to annul the entire partition. Rule.</p>
+    <ul>
+      <li><strong>Answer:</strong> The action to annul the entire partition will not prosper. D is entitled to receive her <strong>₱225,000</strong> share, paid proportionally by A, B, and C.</li>
+      <li><strong>Law:</strong> Under <span class="art-ref" data-art="1104">Art. 1104</span>, a partition made with preterition of a compulsory heir is not rescinded absent bad faith or fraud; the other heirs are proportionally obliged to pay the omitted heir her share.</li>
+      <li><strong>Application:</strong> In intestacy among four children, the ₱900,000 estate gives each child ₱225,000. Absent bad faith or fraud, the partition stands, and A, B, and C must each contribute <strong>₱75,000</strong> from their ₱300,000 allotment to pay D her ₱225,000 share.</li>
+      <li><strong>Conclusion:</strong> The partition is not rescinded; A, B, and C must proportionally pay D ₱225,000 (₱75,000 each).</li>
+    </ul>
+  </div>
+
+  <div class="alac-card">
+    <div class="problem-title">ALAC Exercise 3: Written Notice Served by Buyer vs. Vendor in Legal Redemption (<span class="art-ref" data-art="1088">Art. 1088</span>) <span class="src-badge src-jurado">Jurado</span> <span class="src-badge src-paras">Paras</span> <span class="src-badge src-selected">Selected</span></div>
+    <p><strong>Facts:</strong> Prior to partition, heir X sold his undivided hereditary share to stranger S. Buyer S personally served a notarized copy of the deed of sale upon co-heirs Y and Z. Forty days later, Y filed an action for legal redemption under <span class="art-ref" data-art="1088">Art. 1088</span>, tendering the purchase price. S opposed on the ground that the 30-day period had expired. Decide.</p>
+    <ul>
+      <li><strong>Answer:</strong> Y's action for legal redemption is timely and valid.</li>
+      <li><strong>Law:</strong> Under <span class="art-ref" data-art="1088">Art. 1088</span>, co-heirs may redeem within one month from written notification of the sale <strong>by the vendor</strong>. Under <span class="c-burgundy"><em>Butte v. Manuel Uy &amp; Sons, Inc.</em></span>, <span class="c-burgundy"><em>Garcia v. Calaliman</em></span>, and <span class="c-burgundy"><em>Francisco v. Boiser</em></span>, written notice must come from the selling co-heir (vendor), and notice from the buyer or actual knowledge does not start the 30-day period.</li>
+      <li><strong>Application:</strong> Notice was served exclusively by S (the purchaser), not X (the vendor). Because the vendor never served written notice, the statutory 30-day period never commenced to run against Y.</li>
+      <li><strong>Conclusion:</strong> Y is legally entitled to redeem the hereditary share.</li>
+    </ul>
+  </div>
+
+  <h4 id="p-mnemonic-bank">C. Partition Memory Anchors &amp; Trigger Words Bank</h4>
+  <div class="table-scroll">
+    <table class="ui-table">
+      <thead><tr><th>Memory Anchor / Mnemonic</th><th>Source</th><th>Article &amp; Trigger Rule</th></tr></thead>
+      <tbody>
+        <tr><td><strong>"Person Replaced Testator"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1080">Art. 1080</span> &mdash; Abrogated <em>Legasto v. Verzosa</em>; <em>inter vivos</em> partition needs no prior will (legal heirs only).</td></tr>
+        <tr><td><strong>I-D-A-P (EJS Requisites)</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><span class="art-ref" data-art="ROC-74-1">Rule 74, Sec. 1</span> &mdash; Intestate, no Debts, of Age/represented, Public instrument filed with RD.</td></tr>
+        <tr><td><strong>"20-10-10 Indivision"</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>20 yrs Testator (<span class="art-ref" data-art="1083">1083</span>); 10 yrs Agreement (<span class="art-ref" data-art="494">494</span>); 10 yrs / Minor Family Home (<span class="art-ref" data-art="FC-159">Art. 159 FC</span>).</td></tr>
+        <tr><td><strong>"One Voice Forces Auction"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1086">Art. 1086</span> &mdash; Any one heir demanding a public auction for an indivisible asset compels it.</td></tr>
+        <tr><td><strong>"Vendor's Pen Starts the 30"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1088">Art. 1088</span> &mdash; 1-month redemption runs strictly from written notice served by the vendor.</td></tr>
+        <tr><td><strong>"Largest, then Oldest"</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td><span class="art-ref" data-art="1090">Art. 1090</span> &mdash; Shared title delivered to largest interest; if equal, oldest co-heir.</td></tr>
+        <tr><td><strong>"10 Eviction / 5 Solvency"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1094">Art. 1094</span> (10 yrs title/quality warranty) vs. <span class="art-ref" data-art="1095">Art. 1095</span> (5 yrs debtor solvency at partition).</td></tr>
+        <tr><td><strong>"1/4 Lesion in 4 Years"</strong></td><td><span class="tag-mem-lec">Lecture</span></td><td><span class="art-ref" data-art="1098">Art. 1098</span> (at least 1/4 lesion at adjudication) + <span class="art-ref" data-art="1100">Art. 1100</span> (4-year prescription).</td></tr>
+        <tr><td><strong>O-P-I Triad (1103–1105)</strong></td><td><span class="tag-mem-add">Study Aid</span></td><td>Omission (<span class="art-ref" data-art="1103">1103</span>: Supplement) &bull; Preterition (<span class="art-ref" data-art="1104">1104</span>: Pay Share) &bull; Intruder (<span class="art-ref" data-art="1105">1105</span>: Void as to Intruder).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 id="p-active-recall">D. Partition Active Recall &amp; Recitation Questions (Tap to Reveal Model Answers)</h4>
+
+  <details class="recall-item">
+    <summary>1. Why is an oral/parol partition among heirs valid, and why does the Statute of Frauds not apply to it (<em>Hernandez v. Andal</em>)?</summary>
+    <div class="recall-ans">Because partition is not a conveyance transferring title from one person to another, but a mere confirmation and physical determination of pre-existing ownership (<span class="art-ref" data-art="777">Art. 777</span>); moreover, the Statute of Frauds does not apply to completed or partially executed agreements.</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>2. How did the replacement of "testator" with "person" in <span class="art-ref" data-art="1080">Art. 1080</span> abrogate <em>Legasto v. Verzosa</em>, and what are Justice Caguioa's limits on non-will <em>inter vivos</em> partitions?</summary>
+    <div class="recall-ans">Under the old Code's "testator," <em>Legasto v. Verzosa</em> required a prior valid will. Changing it to "person" allows a valid partition <em>inter vivos</em> without a supporting will (<em>Chavez v. IAC</em>; <em>J.L.T. Agro v. Balansag</em>). Per Justice Caguioa, however, without a will it cannot institute a stranger and must be confined to legal/compulsory heirs following intestacy rules without impairing legitimes.</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>3. Under <span class="art-ref" data-art="1083">Art. 1083</span>, what is the maximum period a testator may prohibit partition, does it bind the legitime, and what other laws impose indivision?</summary>
+    <div class="recall-ans">Up to <strong>20 years</strong>, and it <strong>validly binds even the legitime</strong> (terminating earlier only upon partnership dissolution causes under <span class="art-ref" data-art="1830,1831">Arts. 1830–1831</span> or compelling court reasons). Heirs may also agree up to <strong>10 years</strong> (<span class="art-ref" data-art="494">Art. 494</span>), and a family home continues for <strong>10 years</strong> or while a minor beneficiary resides (<span class="art-ref" data-art="FC-159">Art. 159 FC</span>).</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>4. If an indivisible estate property is assigned to one heir who offers to pay the cash difference, can another co-heir compel a public auction with outside bidders?</summary>
+    <div class="recall-ans"><strong>Yes.</strong> Under <span class="art-ref" data-art="1086" data-para="2">Art. 1086, par. 2</span>, if <em>any</em> of the heirs demands that the indivisible thing be sold at public auction and that strangers be allowed to bid, the public auction <strong>must be done</strong>.</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>5. What is the decisive difference between legal redemption under <span class="art-ref" data-art="1088">Art. 1088</span> and <span class="art-ref" data-art="1620">Art. 1620</span>, and why does buyer notice or actual knowledge fail to start the 30-day clock?</summary>
+    <div class="recall-ans"><span class="art-ref" data-art="1088">Art. 1088</span> governs sales of hereditary rights <strong>before partition</strong> (co-heirs); <span class="art-ref" data-art="1620">Art. 1620</span> governs sales of co-owned property <strong>after partition</strong> (<em>Castro v. Castro</em>). Under <em>Butte</em>, <em>Garcia v. Calaliman</em>, and <em>Francisco v. Boiser</em>, only written notice served <strong>by the vendor</strong> eliminates doubt over a definitive sale and starts the 1-month (30-day) clock (save the rare decade-long compound exception in <em>Alonzo v. IAC</em>).</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>6. What is the decisive difference between preterition in a will (<span class="art-ref" data-art="854">Art. 854</span>) and preterition in a partition (<span class="art-ref" data-art="1104">Art. 1104</span>)?</summary>
+    <div class="recall-ans">Preterition in a will (<span class="art-ref" data-art="854">Art. 854</span>) <strong>annuls the institution of heirs</strong>. Preterition in a partition (<span class="art-ref" data-art="1104">Art. 1104</span>) <strong>does NOT rescind the partition</strong> unless bad faith or fraud is proved; the included heirs are simply obliged to pay the omitted heir his rightful share proportionally.</div>
+  </details>
+
+  <details class="recall-item">
+    <summary>7. What is the legal effect if an extrajudicial partition (a) omits two parcels of land (<span class="art-ref" data-art="1103">Art. 1103</span>), or (b) mistakenly includes an intruder who is not an heir (<span class="art-ref" data-art="1105">Art. 1105</span>)?</summary>
+    <div class="recall-ans">(a) Omission of assets does <strong>not</strong> rescind the partition; it is simply <strong>completed</strong> by distributing the omitted parcels (<span class="art-ref" data-art="1103">Art. 1103</span>). (b) Inclusion of a non-heir makes the partition <strong>void only with respect to the intruder</strong> (unless a sole heir partitioned with intruders, which voids it totally per Manresa) (<span class="art-ref" data-art="1105">Art. 1105</span>).</div>
   </details>
 
 </div>
@@ -1662,7 +2378,20 @@ details.recall-item .recall-ans {
 (function () {
   const PRIMARY_SOURCE_LABEL = "Civil Code of the Philippines";
   const CODAL_PROVISIONS = {
-    "1058": "All matters relating to the appointment, powers and duties of executors and administrators and concerning the administration of estates of deceased persons shall be governed by the Rules of Court.",
+    "494": "No co-owner shall be obliged to remain in the co-ownership. Each co-owner may demand at any time the partition of the thing owned in common, insofar as his share is concerned.\nNevertheless, an agreement to keep the thing undivided for a certain period of time, not exceeding ten years, shall be valid. This term may be extended by a new agreement.\nA donor or testator may prohibit partition for a period which shall not exceed twenty years.\nNeither shall there be any partition when it is prohibited by law.\nNo prescription shall run in favor of a co-owner or co-heir against his co-owners or co-heirs so long as he expressly or impliedly recognizes the co-ownership. (400a)",
+    "777": "The rights to the succession are transmitted from the moment of the death of the decedent. (657a)",
+    "781": "The inheritance of a person includes not only the property and the transmissible rights and obligations existing at the time of his death, but also those which have accrued thereto since the opening of the succession. (n)",
+    "784": "The making of a will is a strictly personal act; it cannot be left in whole or in part to the discretion of a third person, or accomplished through the instrumentality of an agent or attorney. (670a)",
+    "854": "The preterition or omission of one, some, or all of the compulsory heirs in the direct line, whether living at the time of the execution of the will or born after the death of the testator, shall annul the institution of heir; but the devises and legacies shall be valid insofar as they are not inofficious.\nIf the omitted compulsory heirs should die before the testator, the institution shall be effectual, without prejudice to the right of representation. (814a)",
+    "872": "The testator cannot impose any charge, condition, or substitution whatsoever upon the legitimes prescribed in this Code. Should he do so, the same shall be considered as not imposed. (813a)",
+    "904": "The testator cannot deprive his compulsory heirs of their legitime, except in cases expressly specified by law.\nNeither can he impose upon the same any burden, encumbrance, condition, or substitution of any kind whatsoever. (813a)",
+    "908": "To determine the legitime, the value of the property left at the death of the testator shall be considered, deducting all debts and charges, which shall not include those imposed in the will.\nTo the net value of the hereditary estate, shall be added the value of all donations by the testator that are subject to collation, at the time he made them. (818a)",
+    "909": "Donations given to children shall be charged to their legitime.\nDonations made to strangers shall be charged to that part of the estate of which the testator could have disposed by his last will.\nInsofar as they may be inofficious or may exceed the disposable portion, they shall be reduced according to the rules established by this Code. (819a)",
+    "911": "After the legitime has been determined in accordance with the three preceding articles, the reduction shall be made as follows:\n(1) Donations shall be respected as long as the legitime can be covered, reducing or annulling, if necessary, the devises or legacies made in the will;\n(2) The reduction of the devises or legacies shall be pro rata, without any distinction whatever.\nIf the testator has directed that a certain devise or legacy be paid in preference to others, it shall not suffer any reduction until the latter have been applied in full to the payment of the legitime.\n(3) If the devise or legacy consists of a usufruct or life annuity, whose value may be considered greater than that of the disposable portion, the compulsory heirs may choose between complying with the testamentary provision and delivering to the devisee or legatee the part of the inheritance of which the testator could freely dispose. (820a)",
+    "912": "If the devise subject to reduction should consist of real property, which cannot be conveniently divided, it shall go to the devisee if the reduction does not absorb one-half of its value; and in a contrary case, to the compulsory heirs; but the former and the latter shall reimburse each other in cash for what respectively belongs to them.\nThe devisee who is entitled to a legitime may retain the entire property, provided its value does not exceed that of the disposable portion and of the share pertaining to him as legitime. (821)",
+    "1058": "All matters relating to the appointment, powers and duties of executors and administrators and concerning the administration of estates of deceased persons shall be governed by the Rules of Court. (n)",
+    "1059": "If the assets of the estate of a decedent which can be applied to the payment of debts are not sufficient for that purpose, the provisions of articles 2239 to 2251 on Preference of Credits shall be observed, provided that the expenses referred to in article 2244, No. 8, shall be those involved in the administration of the decedent's estate. (n)",
+    "1060": "A corporation or association authorized to conduct the business of a trust company in the Philippines may be appointed as an executor, administrator, guardian of an estate, or trustee, in like manner as an individual; but it shall not be appointed guardian of the person of a ward. (n)",
     "1061": "Every compulsory heir, who succeeds with other compulsory heirs, must bring into the mass of the estate any property or right which he may have received from the decedent, during the lifetime of the latter, by way of donation, or any other gratuitous title, in order that it may be computed in the determination of the legitime of each heir, and in the account of the partition. (1035a)",
     "1062": "Collation shall not take place among compulsory heirs if the donor should have so expressly provided, or if the donee should repudiate the inheritance, unless the donation should be reduced as inofficious. (1036)",
     "1063": "Property left by will is not deemed subject to collation, if the testator has not otherwise provided, but the legitime shall in any case remain unimpaired. (1037)",
@@ -1679,7 +2408,39 @@ details.recall-item .recall-ans {
     "1074": "Should the provisions of the preceding article be impracticable, if the property donated was immovable, the co-heirs shall be entitled to receive its equivalent in cash or securities, at the rate of quotation; and should there be neither cash nor marketable securities in the estate, so much of the other property as may be necessary shall be sold at public auction.\nIf the property donated was movable, the co-heirs shall only have a right to select an equivalent of other personal property of the inheritance at its just price. (1048)",
     "1075": "The fruits and interest of the property subject to collation shall not pertain to the estate except from the day on which the succession is opened.\nFor the purpose of ascertaining their amount, the fruits and interest of the property of the estate of the same kind and quality as that subject to collation shall be made the standard of assessment. (1049)",
     "1076": "The co-heirs are bound to reimburse to the donee the necessary expenses which he has incurred for the preservation of the property donated to him, though they may not have augmented its value.\nThe donee who collates in kind an immovable, which has been given to him, must be reimbursed by his co-heirs for the improvements which have increased the value of the property, and which exist at the time the partition is effected.\nAs to works made on the estate for the mere pleasure of the donee, no reimbursement is due him for them; he has, however, the right to remove them, if he can do so without injuring the estate. (n)",
-    "1077": "Should any question arise among the co-heirs upon the obligation to bring to collation or as to the things which are subject to collation, the distribution of the estate shall not be interrupted for this reason, provided adequate security is given. (1050)"
+    "1077": "Should any question arise among the co-heirs upon the obligation to bring to collation or as to the things which are subject to collation, the distribution of the estate shall not be interrupted for this reason, provided adequate security is given. (1050)",
+    "1078": "Where there are two or more heirs, the whole estate of the decedent is, before its partition, owned in common by such heirs, subject to the payment of debts of the deceased. (n)",
+    "1079": "Partition, in general, is the separation, division and assignment of a thing held in common among those to whom it may belong. The thing itself may be divided, or its value. (n)",
+    "1080": "Should a person make partition of his estate by an act inter vivos, or by will, such partition shall be respected, insofar as it does not prejudice the legitime of the compulsory heirs.\nA parent who, in the interest of his or her family, desires to keep any agricultural, industrial, or manufacturing enterprise intact, may avail himself of the right granted him in this article, by ordering that the legitime of the other children to whom the property is not assigned, be paid in cash. (1056a)",
+    "1081": "A person may, by an act inter vivos or mortis causa, intrust the mere power to make the partition after his death to any person who is not one of the co-heirs.\nThe provisions of this and of the preceding article shall be observed even should there be among the co-heirs a minor or a person subject to guardianship; but the mandatary, in such case, shall make an inventory of the property of the estate, after notifying the co-heirs, the creditors, and the legatees or devisees. (1057a)",
+    "1082": "Every act which is intended to put an end to indivision among co-heirs and legatees or devisees is deemed to be a partition, although it should purport to be a sale, and exchange, a compromise, or any other transaction. (n)",
+    "1083": "Every co-heir has a right to demand the division of the estate unless the testator should have expressly forbidden its partition, in which case the period of indivision shall not exceed twenty years as provided in article 494. This power of the testator to prohibit division applies to the legitime.\nEven though forbidden by the testator, the co-ownership terminates when any of the causes for which partnership is dissolved takes place, or when the court finds for compelling reasons that division should be ordered, upon petition of one of the co-heirs. (1051a)",
+    "1084": "Voluntary heirs upon whom some condition has been imposed cannot demand a partition until the condition has been fulfilled; but the other co-heirs may demand it by giving sufficient security for the rights which the former may have in case the condition should be complied with, and until it is known that the condition has not been fulfilled or can never be complied with, the partition shall be understood to be provisional. (1054a)",
+    "1085": "In the partition of the estate, equality shall be observed as far as possible, dividing the property into lots, or assigning to each of the co-heirs things of the same nature, quality and kind. (1061)",
+    "1086": "Should a thing be indivisible, or would be much impaired by its being divided, it may be adjudicated to one of the heirs, provided he shall pay the others the excess in cash.\nNevertheless, if any of the heirs should demand that the thing be sold at public auction and that strangers be allowed to bid, this must be done. (1062)",
+    "1087": "In the partition the co-heirs shall reimburse one another for the income and fruits which each one of them may have received from any property of the estate, for any useful and necessary expenses made upon such property, and for any damage thereto through malice or neglect. (1063)",
+    "1088": "Should any of the heirs sell his hereditary rights to a stranger before the partition, any or all of the co-heirs may be subrogated to the rights of the purchaser by reimbursing him for the price of the sale, provided they do so within the period of one month from the time they were notified in writing of the sale by the vendor. (1067a)",
+    "1089": "The titles of acquisition or ownership of each property shall be delivered to the co-heir to whom said property has been adjudicated. (1065a)",
+    "1090": "When the title comprises two or more pieces of land which have been assigned to two or more co-heirs, or when it covers one piece of land which has been divided between two or more co-heirs, the title shall be delivered to the one having the largest interest, and authentic copies of the title shall be furnished to the other co-heirs at the expense of the estate. If the interest of each co-heir should be the same, the oldest shall have the title. (1066a)",
+    "1091": "A partition legally made confers upon each heir the exclusive ownership of the property adjudicated to him. (1068)",
+    "1092": "After the partition has been made, the co-heirs shall be reciprocally bound to warrant the title to, and the quality of, each property adjudicated. (1069a)",
+    "1093": "The reciprocal obligation of warranty referred to in the preceding article shall be proportionate to the respective hereditary shares of the co-heirs, but if any one of them should be insolvent, the other co-heirs shall be liable for his part in the same proportion, deducting the part corresponding to the one who should be indemnified.\nThose who pay for the insolvent heir shall have a right of action against him for reimbursement, should his financial condition improve. (1071)",
+    "1094": "An action to enforce the warranty among heirs must be brought within ten years from the date the right of action accrues. (n)",
+    "1095": "If a credit should be assigned as collectible, the co-heirs shall not be liable for the subsequent insolvency of the debtor of the estate, but only for his insolvency at the time the partition is made.\nThe warranty of the solvency of the debtor can only be enforced during the five years following the partition.\nCo-heirs do not warrant bad debts, if so known to, and accepted by, the distributee. But if such debts are not assigned to a co-heir, and should be collected, in whole or in part, the amount collected shall be distributed proportionately among the heirs. (1072a)",
+    "1096": "The obligation of warranty among co-heirs shall cease in the following cases:\n(1) When the testator himself has made the partition, unless it appears, or it may be reasonably presumed, that his intention was otherwise, but the legitime shall always remain unimpaired;\n(2) When it has been so expressly stipulated in the agreement of partition, unless there has been bad faith;\n(3) When the eviction is due to a cause subsequent to the partition, or has been caused by the fault of the distributee of the property. (1070a)",
+    "1097": "A partition may be rescinded or annulled for the same causes as contracts. (1073a)",
+    "1098": "A partition, judicial or extra-judicial, may also be rescinded on account of lesion, when any one of the co-heirs received things whose value is less, by at least one-fourth, than the share to which he is entitled, considering the value of the things at the time they were adjudicated. (1074a)",
+    "1099": "The partition made by the testator cannot be impugned on the ground of lesion, except when the legitime of the compulsory heirs is thereby prejudiced, or when it appears or may reasonably be presumed, that the intention of the testator was otherwise. (1075)",
+    "1100": "The action for rescission on account of lesion shall prescribe after four years from the time the partition was made. (1076)",
+    "1101": "The heir who is sued shall have the option of indemnifying the plaintiff for the loss, or consenting to a new partition.\nIndemnity may be made by payment in cash or by the delivery of a thing of the same kind and quality as that awarded to the plaintiff.\nIf a new partition is made, it shall affect neither those who have not been prejudiced nor those have not received more than their just share. (1077a)",
+    "1102": "An heir who has alienated the whole or a considerable part of the real property adjudicated to him cannot maintain an action for rescission on the ground of lesion, but he shall have a right to be indemnified in cash. (1078a)",
+    "1103": "The omission of one or more objects or securities of the inheritance shall not cause the rescission of the partition on the ground of lesion, but the partition shall be completed by the distribution of the objects or securities which have been omitted. (1079a)",
+    "1104": "A partition made with preterition of any of the compulsory heirs shall not be rescinded, unless it be proved that there was bad faith or fraud on the part of the other persons interested; but the latter shall be proportionately obliged to pay to the person omitted the share which belongs to him. (1080)",
+    "1105": "A partition which includes a person believed to be an heir, but who is not, shall be void only with respect to such person. (1081a)",
+    "1347": "All things which are not outside the commerce of men, including future things, may be the object of a contract. All rights which are not intransmissible may also be the object of contracts.\nNo contract may be entered into upon future inheritance except in cases expressly authorized by law.\nAll services which are not contrary to law, morals, good customs, public order or public policy may likewise be the object of a contract. (1271a)",
+    "1620": "A co-owner of a thing may exercise the right of redemption in case the shares of all the other co-owners or of any of them, are sold to a third person. If the price of the alienation is grossly excessive, the redemptioner shall pay only a reasonable one.\nShould two or more co-owners desire to exercise the right of redemption, they may only do so in proportion to the share they may respectively have in the thing owned in common. (1522a)",
+    "1830": "Dissolution is caused:\n(1) Without violation of the agreement between the partners:\n(a) By the termination of the definite term or particular undertaking specified in the agreement;\n(b) By the express will of any partner, who must act in good faith, when no definite term or particular is specified;\n(c) By the express will of all the partners who have not assigned their interests or suffered them to be charged for their separate debts, either before or after the termination of any specified term or particular undertaking;\n(d) By the expulsion of any partner from the business bona fide in accordance with such a power conferred by the agreement between the partners;\n(2) In contravention of the agreement between the partners, where the circumstances do not permit a dissolution under any other provision of this article, by the express will of any partner at any time;\n(3) By any event which makes it unlawful for the business of the partnership to be carried on or for the members to carry it on in partnership;\n(4) When a specific thing which a partner had promised to contribute to the partnership, perishes before the delivery; in any case by the loss of the thing, when the partner who contributed it having reserved the ownership thereof, has only transferred to the partnership the use or enjoyment of the same; but the partnership shall not be dissolved by the loss of the thing when it occurs after the partnership has acquired the ownership thereof;\n(5) By the death of any partner;\n(6) By the insolvency of any partner or of the partnership;\n(7) By the civil interdiction of any partner;\n(8) By decree of court under the following article. (1700a and 1701a)",
+    "1831": "On application by or for a partner the court shall decree a dissolution whenever:\n(1) A partner has been declared insane in any judicial proceeding or is shown to be of unsound mind;\n(2) A partner becomes in any other way incapable of performing his part of the partnership contract;\n(3) A partner has been guilty of such conduct as tends to affect prejudicially the carrying on of the business;\n(4) A partner wilfully or persistently commits a breach of the partnership agreement, or otherwise so conducts himself in matters relating to the partnership business that it is not reasonably practicable to carry on the business in partnership with him;\n(5) The business of the partnership can only be carried on at a loss;\n(6) Other circumstances render a dissolution equitable.\nOn the application of the purchaser of a partner's interest under article 1813 or 1814:\n(1) After the termination of the specified term or particular undertaking;\n(2) At any time if the partnership was a partnership at will when the interest was assigned or when the charging order was issued. (n)"
   };
   const EXTERNAL_PROVISIONS = {
     "FC-87": {
@@ -1687,10 +2448,35 @@ details.recall-item .recall-ans {
       t: "Article 87",
       b: "Every donation or grant of gratuitous advantage, direct or indirect, between the spouses during the marriage shall be void, except moderate gifts which the spouses may give each other on the occasion of any family rejoicing. The prohibition shall also apply to persons living together as husband and wife without a valid marriage."
     },
+    "FC-159": {
+      s: "Family Code of the Philippines",
+      t: "Article 159",
+      b: "The family home shall continue despite the death of one or both spouses or of the unmarried head of the family for a period of ten years or for as long as there is a minor beneficiary, and the heirs cannot partition the same unless the court finds compelling reasons therefor. This rule shall apply regardless of whoever owns the property or constituted the family home. (238a)"
+    },
     "CC-1491-3": {
       s: "Civil Code of the Philippines",
       t: "Article 1491, No. 3",
       b: "The following persons cannot acquire by purchase, even at a public or judicial auction, either in person or through the mediation of another: ... (3) Executors and administrators, the property of the estate under administration."
+    },
+    "ROC-69-1": {
+      s: "Rules of Court",
+      t: "Rule 69, Section 1",
+      b: "Complaint in action for partition of real estate. — A person having the right to compel the partition of real estate may do so as provided in this Rule, setting forth in his complaint the nature and extent of his title and an adequate description of the real estate of which partition is demanded and joining as defendants all other persons interested in the property. (1a)"
+    },
+    "ROC-74-1": {
+      s: "Rules of Court",
+      t: "Rule 74, Section 1",
+      b: "Extrajudicial settlement by agreement between heirs. — If the decedent left no will and no debts and the heirs are all of age, or the minors are represented by their judicial or legal representatives duly authorized for the purpose, the parties may, without securing letters of administration, divide the estate among themselves as they see fit by means of a public instrument filed in the office of the register of deeds, and should they disagree, they may do so in an ordinary action of partition. If there is only one heir, he may adjudicate to himself the entire estate by means of an affidavit filed in the office of the register of deeds. The parties to an extrajudicial settlement, whether by public instrument or by stipulation in a pending action for partition, or the sole heir who adjudicates the entire estate to himself by means of an affidavit shall file, simultaneously with and as a condition precedent to the filing of the public instrument, or stipulation in the action for partition, or of the affidavit in the office of the register of deeds, a bond with the said register of deeds, in an amount equivalent to the value of the personal property involved as certified to under oath by the parties concerned and conditioned upon the payment of any just claim that may be filed under Section 4 of this rule. It shall be presumed that the decedent left no debts if no creditor files a petition for letters of administration within two (2) years after the death of the decedent.\nThe fact of the extrajudicial settlement or administration shall be published in a newspaper of general circulation in the manner provided in the next succeeding section; but no extrajudicial settlement shall be binding upon any person who has not participated therein or had no notice thereof."
+    },
+    "ROC-74-2": {
+      s: "Rules of Court",
+      t: "Rule 74, Section 2",
+      b: "Summary settlement of estates of small value. — Whenever the gross value of the estate of a deceased person, whether he died testate or intestate, does not exceed ten thousand pesos, and that fact is made to appear to the Court of First Instance having jurisdiction of the estate by the petition of an interested person and upon hearing, which shall be held not less than (1) month nor more than three (3) months from the date of the last publication of a notice which shall be published once a week for three (3) consecutive weeks in a newspaper of general circulation in the province, and after such other notice to interested persons as the court may direct, the court may proceed summarily, without the appointment of an executor or administrator, and without delay, to grant, if proper, allowance of the will, if any there be, to determine who are the persons legally entitled to participate in the estate, and to apportion and divide it among them after the payment of such debts of the estate as the court shall then find to be due; and such persons, in their own right, if they are of lawful age and legal capacity, or by their guardians or trustees legally appointed and qualified, if otherwise, shall thereupon be entitled to receive and enter into the possession of the portions of the estate so awarded to them respectively. The court shall make such order as may be just respecting the costs of the proceedings, and all orders and judgments made or rendered in the course thereof shall be recorded in the office of the clerk, and the order of partition or award, if it involves real estate, shall be recorded in the proper register's office."
+    },
+    "ROC-90-1": {
+      s: "Rules of Court",
+      t: "Rule 90, Section 1",
+      b: "When order for distribution of residue made. — When the debts, funeral charges, and expenses of administration, the allowance to the widow, and inheritance tax, if any, chargeable to the estate in accordance with law, have been paid, the court, on the application of the executor or administrator, or of a person interested in the estate, and after hearing upon notice, shall assign the residue of the estate to the persons entitled to the same, naming them and the proportions, or parts, to which each is entitled, and such person may demand and recover their respective shares from the executor or administrator, or any other person having the same in his possession.\nIf there is a controversy before the court as to who are the lawful heirs of the deceased person or as to the distributive shares to which each person is entitled under the law, the controversy shall be heard and decided as in ordinary cases.\nNo distribution shall be allowed until the payment of the obligations above mentioned has been made or provided for, unless the distributees, or any of them, give a bond, in a sum to be fixed by the court, conditioned for the payment of said obligations within such time as the court directs."
     },
     "ROC-90-2": {
       s: "Rules of Court",
@@ -1747,7 +2533,7 @@ details.recall-item .recall-ans {
   function positionPopover(target) {
     const rect = target.getBoundingClientRect();
     const pad = 12;
-    const popW = Math.min(450, window.innerWidth - pad * 2);
+    const popW = Math.min(460, window.innerWidth - pad * 2);
     pop.style.width = popW + "px";
     const popH = pop.offsetHeight || 220;
     let left = Math.max(pad, Math.min(rect.left, window.innerWidth - popW - pad));
